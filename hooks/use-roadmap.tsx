@@ -50,6 +50,7 @@ type Roadmap = {
   markRevised: (id: number) => void;
   note: (id: number, value: string) => void;
   search: (query: string) => Problem[];
+  setDailyGoal: (value: number) => void;
 };
 
 const RoadmapContext = createContext<Roadmap | null>(null);
@@ -197,6 +198,11 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
               .search(query)
               .map((result) => result.item)
           : problems,
+      setDailyGoal: (value: number) =>
+        setState((current) => ({
+          ...current,
+          dailyGoal: value,
+        })),
     }),
     [error, load, problems, ready, state],
   );

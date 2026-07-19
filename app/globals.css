@@ -516,4 +516,57 @@ textarea {
   }
 }
 
+.heatmap-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .heatmap-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.achievements-hero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .achievements-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+
+
+
+
 

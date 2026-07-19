@@ -54,6 +54,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const saved = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
     if (saved) setTheme(saved);
+
+    const handleThemeChange = () => {
+      const current = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
+      if (current) setTheme(current);
+    };
+    window.addEventListener("theme-change", handleThemeChange);
+    return () => window.removeEventListener("theme-change", handleThemeChange);
   }, []);
 
   // Update theme classes on document
