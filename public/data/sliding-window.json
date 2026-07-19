@@ -1,0 +1,688 @@
+[
+  {
+    "id": 594,
+    "title": "Longest Harmonious Subsequence",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "64.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Sliding Window", "Sorting", "Counting"],
+    "url": "https://leetcode.com/problems/longest-harmonious-subsequence/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 643,
+    "title": "Maximum Average Subarray I",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "48.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/maximum-average-subarray-i/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1176,
+    "title": "Diet Plan Performance",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "56.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/diet-plan-performance/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1652,
+    "title": "Defuse the Bomb",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "79.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/defuse-the-bomb/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1763,
+    "title": "Longest Nice Substring",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "64.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Divide and Conquer", "Bit Manipulation", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-nice-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1876,
+    "title": "Substrings of Size Three with Distinct Characters",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "76.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window", "Counting"],
+    "url": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1984,
+    "title": "Minimum Difference Between Highest and Lowest of K Scores",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "66.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window", "Sorting"],
+    "url": "https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 2269,
+    "title": "Find the K-Beauty of a Number",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "63.6%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/find-the-k-beauty-of-a-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 2379,
+    "title": "Minimum Recolors to Get K Consecutive Black Blocks",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "68.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 2760,
+    "title": "Longest Even Odd Subarray With Threshold",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "32.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-even-odd-subarray-with-threshold/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 413,
+    "title": "Arithmetic Slices",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "64.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Dynamic Programming", "Sliding Window"],
+    "url": "https://leetcode.com/problems/arithmetic-slices/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 487,
+    "title": "Max Consecutive Ones II",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "52.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Dynamic Programming", "Sliding Window"],
+    "url": "https://leetcode.com/problems/max-consecutive-ones-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 658,
+    "title": "Find K Closest Elements",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "49.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search",
+      "Sliding Window",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "url": "https://leetcode.com/problems/find-k-closest-elements/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 713,
+    "title": "Subarray Product Less Than K",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "54.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/subarray-product-less-than-k/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 718,
+    "title": "Maximum Length of Repeated Subarray",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "51.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function"
+    ],
+    "url": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 837,
+    "title": "New 21 Game",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "51.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "Dynamic Programming", "Sliding Window", "Probability and Statistics"],
+    "url": "https://leetcode.com/problems/new-21-game/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 904,
+    "title": "Fruit Into Baskets",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "51.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Sliding Window"],
+    "url": "https://leetcode.com/problems/fruit-into-baskets/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 930,
+    "title": "Binary Subarrays With Sum",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "69.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/binary-subarrays-with-sum/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 978,
+    "title": "Longest Turbulent Subarray",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "49.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Dynamic Programming", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-turbulent-subarray/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1004,
+    "title": "Max Consecutive Ones III",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "68.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1016,
+    "title": "Binary String With Substrings Representing 1 To N",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "58.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Bit Manipulation", "Sliding Window"],
+    "url": "https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1031,
+    "title": "Maximum Sum of Two Non-Overlapping Subarrays",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "61.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Dynamic Programming", "Sliding Window"],
+    "url": "https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1040,
+    "title": "Moving Stones Until Consecutive II",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "59.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Sliding Window", "Sorting"],
+    "url": "https://leetcode.com/problems/moving-stones-until-consecutive-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1052,
+    "title": "Grumpy Bookstore Owner",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "64.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/grumpy-bookstore-owner/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1100,
+    "title": "Find K-Length Substrings With No Repeated Characters",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "76.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1151,
+    "title": "Minimum Swaps to Group All 1's Together",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "61.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1156,
+    "title": "Swap For Longest Repeated Character Substring",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "44.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/swap-for-longest-repeated-character-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1208,
+    "title": "Get Equal Substrings Within Budget",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "59.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Binary Search", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/get-equal-substrings-within-budget/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1234,
+    "title": "Replace the Substring for Balanced String",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "41.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/replace-the-substring-for-balanced-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1248,
+    "title": "Count Number of Nice Subarrays",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "75.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1297,
+    "title": "Maximum Number of Occurrences of a Substring",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "54.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1343,
+    "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "73.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window"],
+    "url": "https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1358,
+    "title": "Number of Substrings Containing All Three Characters",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "74.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1423,
+    "title": "Maximum Points You Can Obtain from Cards",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "58.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Sliding Window", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1438,
+    "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "pattern": "Sliding Window",
+    "acceptance": "57.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Ordered Set",
+      "Monotonic Queue"
+    ],
+    "url": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]

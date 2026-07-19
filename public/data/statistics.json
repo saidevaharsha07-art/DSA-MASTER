@@ -1,0 +1,47 @@
+{
+  "totalProblems": 340,
+  "difficulty": {
+    "Easy": 106,
+    "Medium": 224,
+    "Hard": 10
+  },
+  "topics": {
+    "Arrays": 90,
+    "Strings": 60,
+    "Hashing": 35,
+    "Two Pointers": 40,
+    "Sliding Window": 35,
+    "Binary Search": 45,
+    "Prefix Sum": 35
+  },
+  "patterns": {
+    "Hash Map": 53,
+    "Traversal": 62,
+    "Two Pointers": 64,
+    "Binary Search": 64,
+    "Simulation": 6,
+    "Sliding Window": 45,
+    "Greedy": 6,
+    "Sorting": 5,
+    "Prefix Sum": 35
+  },
+  "companies": {
+    "Amazon": 0,
+    "Google": 0,
+    "Microsoft": 0,
+    "Meta": 0,
+    "Adobe": 0,
+    "Apple": 0,
+    "Netflix": 0,
+    "Uber": 0,
+    "Oracle": 0,
+    "Atlassian": 0,
+    "Goldman Sachs": 0,
+    "Bloomberg": 0,
+    "Visa": 0,
+    "PayPal": 0,
+    "Walmart": 0,
+    "Flipkart": 0,
+    "Intuit": 0
+  }
+}

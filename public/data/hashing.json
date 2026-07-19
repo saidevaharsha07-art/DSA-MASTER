@@ -1,0 +1,683 @@
+[
+  {
+    "id": 141,
+    "title": "Linked List Cycle",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Two Pointers",
+    "acceptance": "54.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/linked-list-cycle/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 160,
+    "title": "Intersection of Two Linked Lists",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Two Pointers",
+    "acceptance": "64.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 202,
+    "title": "Happy Number",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Two Pointers",
+    "acceptance": "59.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "Two Pointers"],
+    "url": "https://leetcode.com/problems/happy-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 268,
+    "title": "Missing Number",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Binary Search",
+    "acceptance": "72.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math", "Binary Search", "Bit Manipulation", "Sorting"],
+    "url": "https://leetcode.com/problems/missing-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 349,
+    "title": "Intersection of Two Arrays",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Binary Search",
+    "acceptance": "78.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 350,
+    "title": "Intersection of Two Arrays II",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Binary Search",
+    "acceptance": "60.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 359,
+    "title": "Logger Rate Limiter",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "76.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Design", "Data Stream"],
+    "url": "https://leetcode.com/problems/logger-rate-limiter/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 409,
+    "title": "Longest Palindrome",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "56.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Greedy"],
+    "url": "https://leetcode.com/problems/longest-palindrome/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 448,
+    "title": "Find All Numbers Disappeared in an Array",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "64.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table"],
+    "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 496,
+    "title": "Next Greater Element I",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "76.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Stack", "Monotonic Stack"],
+    "url": "https://leetcode.com/problems/next-greater-element-i/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 500,
+    "title": "Keyboard Row",
+    "difficulty": "Easy",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "74.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "String"],
+    "url": "https://leetcode.com/problems/keyboard-row/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 133,
+    "title": "Clone Graph",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "65.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Depth-First Search", "Breadth-First Search", "Graph Theory"],
+    "url": "https://leetcode.com/problems/clone-graph/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 138,
+    "title": "Copy List with Random Pointer",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "63.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List"],
+    "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 142,
+    "title": "Linked List Cycle II",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Two Pointers",
+    "acceptance": "58.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/linked-list-cycle-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 146,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "47.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
+    "url": "https://leetcode.com/problems/lru-cache/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 264,
+    "title": "Ugly Number II",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "49.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "Dynamic Programming", "Heap (Priority Queue)"],
+    "url": "https://leetcode.com/problems/ugly-number-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 311,
+    "title": "Sparse Matrix Multiplication",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "69.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Matrix"],
+    "url": "https://leetcode.com/problems/sparse-matrix-multiplication/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 314,
+    "title": "Binary Tree Vertical Order Traversal",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "57.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Sorting",
+      "Binary Tree"
+    ],
+    "url": "https://leetcode.com/problems/binary-tree-vertical-order-traversal/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 325,
+    "title": "Maximum Size Subarray Sum Equals k",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Prefix Sum",
+    "acceptance": "50.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 340,
+    "title": "Longest Substring with At Most K Distinct Characters",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Sliding Window",
+    "acceptance": "50.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 347,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "66.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Bucket Sort",
+      "Counting",
+      "Quickselect"
+    ],
+    "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 348,
+    "title": "Design Tic-Tac-Toe",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "58.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Design", "Matrix", "Simulation"],
+    "url": "https://leetcode.com/problems/design-tic-tac-toe/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 353,
+    "title": "Design Snake Game",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "40.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Design", "Queue", "Simulation"],
+    "url": "https://leetcode.com/problems/design-snake-game/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 355,
+    "title": "Design Twitter",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "45.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Linked List", "Design", "Heap (Priority Queue)"],
+    "url": "https://leetcode.com/problems/design-twitter/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 356,
+    "title": "Line Reflection",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "36.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math"],
+    "url": "https://leetcode.com/problems/line-reflection/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 379,
+    "title": "Design Phone Directory",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "53.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Linked List", "Design", "Queue"],
+    "url": "https://leetcode.com/problems/design-phone-directory/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 380,
+    "title": "Insert Delete GetRandom O(1)",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "55.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math", "Design", "Randomized"],
+    "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 395,
+    "title": "Longest Substring with At Least K Repeating Characters",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Sliding Window",
+    "acceptance": "46.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Divide and Conquer", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 398,
+    "title": "Random Pick Index",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "65.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "Reservoir Sampling", "Randomized"],
+    "url": "https://leetcode.com/problems/random-pick-index/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 421,
+    "title": "Maximum XOR of Two Numbers in an Array",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "53.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Bit Manipulation", "Trie"],
+    "url": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 423,
+    "title": "Reconstruct Original Digits from English",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "53.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "String"],
+    "url": "https://leetcode.com/problems/reconstruct-original-digits-from-english/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 424,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Sliding Window",
+    "acceptance": "60.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 433,
+    "title": "Minimum Genetic Mutation",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "56.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Breadth-First Search"],
+    "url": "https://leetcode.com/problems/minimum-genetic-mutation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 438,
+    "title": "Find All Anagrams in a String",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Sliding Window",
+    "acceptance": "54.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 442,
+    "title": "Find All Duplicates in an Array",
+    "difficulty": "Medium",
+    "topic": "Hashing",
+    "pattern": "Hash Map",
+    "acceptance": "77.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Sorting"],
+    "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]

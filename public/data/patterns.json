@@ -1,0 +1,56 @@
+{
+  "Hash Map": {
+    "description": "Practice Hash Map problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings", "Hashing"],
+    "recommendedOrder": 1
+  },
+  "Traversal": {
+    "description": "Practice Traversal problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings"],
+    "recommendedOrder": 2
+  },
+  "Two Pointers": {
+    "description": "Practice Two Pointers problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings", "Hashing", "Two Pointers"],
+    "recommendedOrder": 3
+  },
+  "Binary Search": {
+    "description": "Practice Binary Search problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Hashing", "Two Pointers", "Binary Search", "Prefix Sum"],
+    "recommendedOrder": 4
+  },
+  "Simulation": {
+    "description": "Practice Simulation problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings"],
+    "recommendedOrder": 5
+  },
+  "Sliding Window": {
+    "description": "Practice Sliding Window problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings", "Hashing", "Two Pointers", "Sliding Window"],
+    "recommendedOrder": 6
+  },
+  "Greedy": {
+    "description": "Practice Greedy problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Strings"],
+    "recommendedOrder": 7
+  },
+  "Sorting": {
+    "description": "Practice Sorting problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays"],
+    "recommendedOrder": 8
+  },
+  "Prefix Sum": {
+    "description": "Practice Prefix Sum problems in increasing difficulty.",
+    "difficulty": "Mixed",
+    "relatedTopics": ["Arrays", "Hashing", "Prefix Sum"],
+    "recommendedOrder": 9
+  }
+}

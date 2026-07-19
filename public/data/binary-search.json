@@ -1,0 +1,888 @@
+[
+  {
+    "id": 69,
+    "title": "Sqrt(x)",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "42.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "Binary Search"],
+    "url": "https://leetcode.com/problems/sqrtx/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 222,
+    "title": "Count Complete Tree Nodes",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "73.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Binary Search", "Bit Manipulation", "Tree", "Binary Tree"],
+    "url": "https://leetcode.com/problems/count-complete-tree-nodes/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 270,
+    "title": "Closest Binary Search Tree Value",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "49.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Binary Search", "Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"],
+    "url": "https://leetcode.com/problems/closest-binary-search-tree-value/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 278,
+    "title": "First Bad Version",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "47.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Binary Search", "Interactive"],
+    "url": "https://leetcode.com/problems/first-bad-version/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 367,
+    "title": "Valid Perfect Square",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "45.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "Binary Search"],
+    "url": "https://leetcode.com/problems/valid-perfect-square/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 374,
+    "title": "Guess Number Higher or Lower",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "57.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Binary Search", "Interactive"],
+    "url": "https://leetcode.com/problems/guess-number-higher-or-lower/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 441,
+    "title": "Arranging Coins",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "48.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "Binary Search"],
+    "url": "https://leetcode.com/problems/arranging-coins/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 704,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "61.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/binary-search/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 744,
+    "title": "Find Smallest Letter Greater Than Target",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "59.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/find-smallest-letter-greater-than-target/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 888,
+    "title": "Fair Candy Swap",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "65.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/fair-candy-swap/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1064,
+    "title": "Fixed Point",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "64.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/fixed-point/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1099,
+    "title": "Two Sum Less Than K",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "62.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/two-sum-less-than-k/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1150,
+    "title": "Check If a Number Is Majority Element in a Sorted Array",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "59.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1213,
+    "title": "Intersection of Three Sorted Arrays",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "80.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Binary Search", "Counting"],
+    "url": "https://leetcode.com/problems/intersection-of-three-sorted-arrays/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 275,
+    "title": "H-Index II",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "39.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/h-index-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 300,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "59.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 362,
+    "title": "Design Hit Counter",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "69.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Design", "Queue", "Data Stream"],
+    "url": "https://leetcode.com/problems/design-hit-counter/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 378,
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "64.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Sorting", "Heap (Priority Queue)", "Matrix"],
+    "url": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 400,
+    "title": "Nth Digit",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "38.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "Binary Search"],
+    "url": "https://leetcode.com/problems/nth-digit/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 436,
+    "title": "Find Right Interval",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "56.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/find-right-interval/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 456,
+    "title": "132 Pattern",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "34.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Stack", "Monotonic Stack", "Ordered Set"],
+    "url": "https://leetcode.com/problems/132-pattern/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 497,
+    "title": "Random Point in Non-overlapping Rectangles",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "40.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Math",
+      "Binary Search",
+      "Reservoir Sampling",
+      "Prefix Sum",
+      "Ordered Set",
+      "Randomized"
+    ],
+    "url": "https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 528,
+    "title": "Random Pick with Weight",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "49.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Binary Search", "Prefix Sum", "Randomized"],
+    "url": "https://leetcode.com/problems/random-pick-with-weight/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 540,
+    "title": "Single Element in a Sorted Array",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "59.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 611,
+    "title": "Valid Triangle Number",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "57.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
+    "url": "https://leetcode.com/problems/valid-triangle-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 633,
+    "title": "Sum of Square Numbers",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "36.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "Two Pointers", "Binary Search"],
+    "url": "https://leetcode.com/problems/sum-of-square-numbers/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 702,
+    "title": "Search in a Sorted Array of Unknown Size",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "73.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Interactive"],
+    "url": "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 729,
+    "title": "My Calendar I",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "58.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Design", "Segment Tree", "Ordered Set"],
+    "url": "https://leetcode.com/problems/my-calendar-i/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 731,
+    "title": "My Calendar II",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "63.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Design", "Segment Tree", "Prefix Sum", "Ordered Set"],
+    "url": "https://leetcode.com/problems/my-calendar-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 754,
+    "title": "Reach a Number",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "45.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "Binary Search"],
+    "url": "https://leetcode.com/problems/reach-a-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 786,
+    "title": "K-th Smallest Prime Fraction",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "69.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting", "Heap (Priority Queue)"],
+    "url": "https://leetcode.com/problems/k-th-smallest-prime-fraction/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 792,
+    "title": "Number of Matching Subsequences",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "50.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Binary Search",
+      "Dynamic Programming",
+      "Trie",
+      "Sorting"
+    ],
+    "url": "https://leetcode.com/problems/number-of-matching-subsequences/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 825,
+    "title": "Friends Of Appropriate Ages",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "49.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/friends-of-appropriate-ages/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 826,
+    "title": "Most Profit Assigning Work",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "56.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"],
+    "url": "https://leetcode.com/problems/most-profit-assigning-work/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 852,
+    "title": "Peak Index in a Mountain Array",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "66.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/peak-index-in-a-mountain-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 875,
+    "title": "Koko Eating Bananas",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "50.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/koko-eating-bananas/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 911,
+    "title": "Online Election",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "53.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Binary Search", "Design"],
+    "url": "https://leetcode.com/problems/online-election/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 981,
+    "title": "Time Based Key-Value Store",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "50.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Binary Search", "Design"],
+    "url": "https://leetcode.com/problems/time-based-key-value-store/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1011,
+    "title": "Capacity To Ship Packages Within D Days",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "74.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1027,
+    "title": "Longest Arithmetic Subsequence",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "50.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Binary Search", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/longest-arithmetic-subsequence/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1055,
+    "title": "Shortest Way to Form String",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "61.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "Binary Search", "Greedy"],
+    "url": "https://leetcode.com/problems/shortest-way-to-form-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1060,
+    "title": "Missing Element in Sorted Array",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "59.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/missing-element-in-sorted-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1062,
+    "title": "Longest Repeating Substring",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "63.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "String",
+      "Binary Search",
+      "Dynamic Programming",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "url": "https://leetcode.com/problems/longest-repeating-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1102,
+    "title": "Path With Maximum Minimum Value",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "54.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/path-with-maximum-minimum-value/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1146,
+    "title": "Snapshot Array",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "pattern": "Binary Search",
+    "acceptance": "36.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Binary Search", "Design"],
+    "url": "https://leetcode.com/problems/snapshot-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]

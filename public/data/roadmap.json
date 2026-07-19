@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "order": [
+    "Arrays",
+    "Strings",
+    "Hashing",
+    "Two Pointers",
+    "Sliding Window",
+    "Binary Search",
+    "Prefix Sum"
+  ],
+  "topics": [
+    {
+      "title": "Arrays",
+      "description": "Master arrays from basic traversal and simulation through advanced in-place techniques.",
+      "estimatedHours": 40,
+      "estimatedWeeks": 6,
+      "recommendedProblems": 90,
+      "difficultyDistribution": {
+        "Easy": 20,
+        "Medium": 60,
+        "Hard": 10
+      },
+      "patterns": [
+        "Hash Map",
+        "Traversal",
+        "Two Pointers",
+        "Binary Search",
+        "Simulation",
+        "Sliding Window",
+        "Greedy",
+        "Sorting",
+        "Prefix Sum"
+      ]
+    },
+    {
+      "title": "Strings",
+      "description": "Build reliable string manipulation, parsing, and matching skills.",
+      "estimatedHours": 30,
+      "estimatedWeeks": 4,
+      "recommendedProblems": 60,
+      "difficultyDistribution": {
+        "Easy": 22,
+        "Medium": 38,
+        "Hard": 0
+      },
+      "patterns": [
+        "Hash Map",
+        "Traversal",
+        "Two Pointers",
+        "Simulation",
+        "Sliding Window",
+        "Greedy"
+      ]
+    },
+    {
+      "title": "Hashing",
+      "description": "Use hash maps and sets to trade memory for fast lookup.",
+      "estimatedHours": 20,
+      "estimatedWeeks": 3,
+      "recommendedProblems": 35,
+      "difficultyDistribution": {
+        "Easy": 11,
+        "Medium": 24,
+        "Hard": 0
+      },
+      "patterns": ["Two Pointers", "Binary Search", "Hash Map", "Prefix Sum", "Sliding Window"]
+    },
+    {
+      "title": "Two Pointers",
+      "description": "Learn converging, partitioning, and fast/slow pointer techniques.",
+      "estimatedHours": 24,
+      "estimatedWeeks": 3,
+      "recommendedProblems": 40,
+      "difficultyDistribution": {
+        "Easy": 19,
+        "Medium": 21,
+        "Hard": 0
+      },
+      "patterns": ["Two Pointers", "Binary Search", "Sliding Window"]
+    },
+    {
+      "title": "Sliding Window",
+      "description": "Master fixed and variable window constraints.",
+      "estimatedHours": 22,
+      "estimatedWeeks": 3,
+      "recommendedProblems": 35,
+      "difficultyDistribution": {
+        "Easy": 10,
+        "Medium": 25,
+        "Hard": 0
+      },
+      "patterns": ["Sliding Window"]
+    },
+    {
+      "title": "Binary Search",
+      "description": "Search ordered spaces and monotonic answers.",
+      "estimatedHours": 28,
+      "estimatedWeeks": 4,
+      "recommendedProblems": 45,
+      "difficultyDistribution": {
+        "Easy": 14,
+        "Medium": 31,
+        "Hard": 0
+      },
+      "patterns": ["Binary Search"]
+    },
+    {
+      "title": "Prefix Sum",
+      "description": "Answer range queries efficiently with prefix and difference techniques.",
+      "estimatedHours": 20,
+      "estimatedWeeks": 3,
+      "recommendedProblems": 35,
+      "difficultyDistribution": {
+        "Easy": 10,
+        "Medium": 25,
+        "Hard": 0
+      },
+      "patterns": ["Prefix Sum", "Binary Search"]
+    }
+  ]
+}

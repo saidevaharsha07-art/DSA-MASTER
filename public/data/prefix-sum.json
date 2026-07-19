@@ -1,0 +1,667 @@
+[
+  {
+    "id": 303,
+    "title": "Range Sum Query - Immutable",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "72.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Design", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 724,
+    "title": "Find Pivot Index",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "63.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/find-pivot-index/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1413,
+    "title": "Minimum Value to Get Positive Step by Step Sum",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "64.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1422,
+    "title": "Maximum Score After Splitting a String",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "65.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-score-after-splitting-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1480,
+    "title": "Running Sum of 1d Array",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "87.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1588,
+    "title": "Sum of All Odd Length Subarrays",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "84.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1732,
+    "title": "Find the Highest Altitude",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "84.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/find-the-highest-altitude/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1854,
+    "title": "Maximum Population Year",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "64.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Counting", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-population-year/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1893,
+    "title": "Check if All the Integers in a Range Are Covered",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "51.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1991,
+    "title": "Find the Middle Index in Array",
+    "difficulty": "Easy",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "70.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/find-the-middle-index-in-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 304,
+    "title": "Range Sum Query 2D - Immutable",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "58.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Design", "Matrix", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/range-sum-query-2d-immutable/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 370,
+    "title": "Range Addition",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "73.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/range-addition/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 523,
+    "title": "Continuous Subarray Sum",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "31.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/continuous-subarray-sum/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 525,
+    "title": "Contiguous Array",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "51.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/contiguous-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 560,
+    "title": "Subarray Sum Equals K",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "47.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 813,
+    "title": "Largest Sum of Averages",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "55.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Dynamic Programming", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/largest-sum-of-averages/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 848,
+    "title": "Shifting Letters",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "46.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "String", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/shifting-letters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 974,
+    "title": "Subarray Sums Divisible by K",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "56.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1094,
+    "title": "Car Pooling",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "56.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Sorting", "Heap (Priority Queue)", "Simulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/car-pooling/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1109,
+    "title": "Corporate Flight Bookings",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "67.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/corporate-flight-bookings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1124,
+    "title": "Longest Well-Performing Interval",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "37.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Stack", "Monotonic Stack", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/longest-well-performing-interval/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1140,
+    "title": "Stone Game II",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "72.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Dynamic Programming", "Prefix Sum", "Game Theory"],
+    "url": "https://leetcode.com/problems/stone-game-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1177,
+    "title": "Can Make Palindrome from Substring",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "41.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/can-make-palindrome-from-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1292,
+    "title": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Binary Search",
+    "acceptance": "65.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Binary Search", "Matrix", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1310,
+    "title": "XOR Queries of a Subarray",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "78.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Bit Manipulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/xor-queries-of-a-subarray/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1314,
+    "title": "Matrix Block Sum",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "76.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Matrix", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/matrix-block-sum/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1352,
+    "title": "Product of the Last K Numbers",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "63.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Design", "Data Stream", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/product-of-the-last-k-numbers/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1371,
+    "title": "Find the Longest Substring Containing Vowels in Even Counts",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "75.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1442,
+    "title": "Count Triplets That Can Form Two Arrays of Equal XOR",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "84.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Math", "Bit Manipulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1508,
+    "title": "Range Sum of Sorted Subarray Sums",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Binary Search",
+    "acceptance": "63.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1524,
+    "title": "Number of Sub-arrays With Odd Sum",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "55.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Dynamic Programming", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1525,
+    "title": "Number of Good Ways to Split a String",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "68.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Dynamic Programming", "Bit Manipulation", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/number-of-good-ways-to-split-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1546,
+    "title": "Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "49.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Greedy", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1589,
+    "title": "Maximum Sum Obtained of Any Permutation",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "41.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Greedy", "Sorting", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 1590,
+    "title": "Make Sum Divisible by P",
+    "difficulty": "Medium",
+    "topic": "Prefix Sum",
+    "pattern": "Prefix Sum",
+    "acceptance": "42.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/make-sum-divisible-by-p/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]

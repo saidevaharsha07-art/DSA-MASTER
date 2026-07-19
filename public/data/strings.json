@@ -1,0 +1,1149 @@
+[
+  {
+    "id": 13,
+    "title": "Roman to Integer",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "66.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "String"],
+    "url": "https://leetcode.com/problems/roman-to-integer/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 20,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "44.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String", "Stack"],
+    "url": "https://leetcode.com/problems/valid-parentheses/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 28,
+    "title": "Find the Index of the First Occurrence in a String",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "46.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "String Matching"],
+    "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 58,
+    "title": "Length of Last Word",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "59.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String"],
+    "url": "https://leetcode.com/problems/length-of-last-word/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 67,
+    "title": "Add Binary",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Simulation",
+    "acceptance": "58.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Bit Manipulation", "Simulation"],
+    "url": "https://leetcode.com/problems/add-binary/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 125,
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "53.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/valid-palindrome/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 168,
+    "title": "Excel Sheet Column Title",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "47.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "String"],
+    "url": "https://leetcode.com/problems/excel-sheet-column-title/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 171,
+    "title": "Excel Sheet Column Number",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "68.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "String"],
+    "url": "https://leetcode.com/problems/excel-sheet-column-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 205,
+    "title": "Isomorphic Strings",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "48.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String"],
+    "url": "https://leetcode.com/problems/isomorphic-strings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 242,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "68.4%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sorting"],
+    "url": "https://leetcode.com/problems/valid-anagram/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 246,
+    "title": "Strobogrammatic Number",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "47.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/strobogrammatic-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 257,
+    "title": "Binary Tree Paths",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "69.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String", "Backtracking", "Tree", "Depth-First Search", "Binary Tree"],
+    "url": "https://leetcode.com/problems/binary-tree-paths/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 266,
+    "title": "Palindrome Permutation",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "68.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Bit Manipulation"],
+    "url": "https://leetcode.com/problems/palindrome-permutation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 290,
+    "title": "Word Pattern",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "44.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String"],
+    "url": "https://leetcode.com/problems/word-pattern/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 293,
+    "title": "Flip Game",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "65.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["String"],
+    "url": "https://leetcode.com/problems/flip-game/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 344,
+    "title": "Reverse String",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "81.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 345,
+    "title": "Reverse Vowels of a String",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "61.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-vowels-of-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 383,
+    "title": "Ransom Note",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "66.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Counting"],
+    "url": "https://leetcode.com/problems/ransom-note/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 387,
+    "title": "First Unique Character in a String",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "65.8%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Queue", "Counting"],
+    "url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 389,
+    "title": "Find the Difference",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "60.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Bit Manipulation", "Sorting"],
+    "url": "https://leetcode.com/problems/find-the-difference/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 392,
+    "title": "Is Subsequence",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "49.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/is-subsequence/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 405,
+    "title": "Convert a Number to Hexadecimal",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "54.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Bit Manipulation"],
+    "url": "https://leetcode.com/problems/convert-a-number-to-hexadecimal/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Sliding Window",
+    "acceptance": "39.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 5,
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "38.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 6,
+    "title": "Zigzag Conversion",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "54.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String"],
+    "url": "https://leetcode.com/problems/zigzag-conversion/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 8,
+    "title": "String to Integer (atoi)",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "21.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String"],
+    "url": "https://leetcode.com/problems/string-to-integer-atoi/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 12,
+    "title": "Integer to Roman",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "71.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "String"],
+    "url": "https://leetcode.com/problems/integer-to-roman/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 17,
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "66.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Backtracking"],
+    "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 22,
+    "title": "Generate Parentheses",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "78.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Dynamic Programming", "Backtracking"],
+    "url": "https://leetcode.com/problems/generate-parentheses/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 38,
+    "title": "Count and Say",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "63.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String"],
+    "url": "https://leetcode.com/problems/count-and-say/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 43,
+    "title": "Multiply Strings",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Simulation",
+    "acceptance": "44.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Simulation"],
+    "url": "https://leetcode.com/problems/multiply-strings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 71,
+    "title": "Simplify Path",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "50.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Stack"],
+    "url": "https://leetcode.com/problems/simplify-path/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 72,
+    "title": "Edit Distance",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "60.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/edit-distance/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 91,
+    "title": "Decode Ways",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "38.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/decode-ways/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 93,
+    "title": "Restore IP Addresses",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "56.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Backtracking"],
+    "url": "https://leetcode.com/problems/restore-ip-addresses/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 97,
+    "title": "Interleaving String",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "44.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/interleaving-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 131,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "74.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Dynamic Programming", "Backtracking"],
+    "url": "https://leetcode.com/problems/palindrome-partitioning/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 151,
+    "title": "Reverse Words in a String",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "57.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-words-in-a-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 159,
+    "title": "Longest Substring with At Most Two Distinct Characters",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Sliding Window",
+    "acceptance": "57.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 161,
+    "title": "One Edit Distance",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "34.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/one-edit-distance/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 165,
+    "title": "Compare Version Numbers",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "46.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/compare-version-numbers/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 166,
+    "title": "Fraction to Recurring Decimal",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "31.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Math", "String"],
+    "url": "https://leetcode.com/problems/fraction-to-recurring-decimal/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 186,
+    "title": "Reverse Words in a String II",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Two Pointers",
+    "acceptance": "56.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-words-in-a-string-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 187,
+    "title": "Repeated DNA Sequences",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Sliding Window",
+    "acceptance": "53.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": [
+      "Hash Table",
+      "String",
+      "Bit Manipulation",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function"
+    ],
+    "url": "https://leetcode.com/problems/repeated-dna-sequences/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 208,
+    "title": "Implement Trie (Prefix Tree)",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "69.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Design", "Trie"],
+    "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 211,
+    "title": "Design Add and Search Words Data Structure",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "48.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Depth-First Search", "Design", "Trie"],
+    "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 227,
+    "title": "Basic Calculator II",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "47.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Stack"],
+    "url": "https://leetcode.com/problems/basic-calculator-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 241,
+    "title": "Different Ways to Add Parentheses",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "73.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "String", "Dynamic Programming", "Recursion", "Memoization"],
+    "url": "https://leetcode.com/problems/different-ways-to-add-parentheses/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 245,
+    "title": "Shortest Word Distance III",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "59.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "String"],
+    "url": "https://leetcode.com/problems/shortest-word-distance-iii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 247,
+    "title": "Strobogrammatic Number II",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "53.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "String", "Recursion"],
+    "url": "https://leetcode.com/problems/strobogrammatic-number-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 249,
+    "title": "Group Shifted Strings",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "67.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "String"],
+    "url": "https://leetcode.com/problems/group-shifted-strings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 267,
+    "title": "Palindrome Permutation II",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "42.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Backtracking"],
+    "url": "https://leetcode.com/problems/palindrome-permutation-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 271,
+    "title": "Encode and Decode Strings",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "51.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "String", "Design"],
+    "url": "https://leetcode.com/problems/encode-and-decode-strings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 288,
+    "title": "Unique Word Abbreviation",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "27.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "String", "Design"],
+    "url": "https://leetcode.com/problems/unique-word-abbreviation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 291,
+    "title": "Word Pattern II",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "49.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Backtracking"],
+    "url": "https://leetcode.com/problems/word-pattern-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 299,
+    "title": "Bulls and Cows",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Hash Map",
+    "acceptance": "52.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "String", "Counting"],
+    "url": "https://leetcode.com/problems/bulls-and-cows/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 306,
+    "title": "Additive Number",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "34.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Backtracking"],
+    "url": "https://leetcode.com/problems/additive-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 316,
+    "title": "Remove Duplicate Letters",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Greedy",
+    "acceptance": "53.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Stack", "Greedy", "Monotonic Stack"],
+    "url": "https://leetcode.com/problems/remove-duplicate-letters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 318,
+    "title": "Maximum Product of Word Lengths",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "61.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "String", "Bit Manipulation"],
+    "url": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 320,
+    "title": "Generalized Abbreviation",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "pattern": "Traversal",
+    "acceptance": "60.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["String", "Backtracking", "Bit Manipulation"],
+    "url": "https://leetcode.com/problems/generalized-abbreviation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]

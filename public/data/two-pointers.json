@@ -1,0 +1,770 @@
+[
+  {
+    "id": 234,
+    "title": "Palindrome Linked List",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "58.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers", "Stack", "Recursion"],
+    "url": "https://leetcode.com/problems/palindrome-linked-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 283,
+    "title": "Move Zeroes",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "64.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers"],
+    "url": "https://leetcode.com/problems/move-zeroes/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 408,
+    "title": "Valid Word Abbreviation",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "37.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/valid-word-abbreviation/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 455,
+    "title": "Assign Cookies",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "55.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Greedy", "Sorting"],
+    "url": "https://leetcode.com/problems/assign-cookies/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 541,
+    "title": "Reverse String II",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "54.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-string-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 557,
+    "title": "Reverse Words in a String III",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "84.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-words-in-a-string-iii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 653,
+    "title": "Two Sum IV - Input is a BST",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "63.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": [
+      "Hash Table",
+      "Two Pointers",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "url": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 680,
+    "title": "Valid Palindrome II",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "44.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "Greedy"],
+    "url": "https://leetcode.com/problems/valid-palindrome-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 696,
+    "title": "Count Binary Substrings",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "70.5%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/count-binary-substrings/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 821,
+    "title": "Shortest Distance to a Character",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "72.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/shortest-distance-to-a-character/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 832,
+    "title": "Flipping an Image",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "83.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Bit Manipulation", "Matrix", "Simulation"],
+    "url": "https://leetcode.com/problems/flipping-an-image/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 844,
+    "title": "Backspace String Compare",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "50.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String", "Stack", "Simulation"],
+    "url": "https://leetcode.com/problems/backspace-string-compare/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 876,
+    "title": "Middle of the Linked List",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "82.1%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 905,
+    "title": "Sort Array By Parity",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "76.6%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Sorting"],
+    "url": "https://leetcode.com/problems/sort-array-by-parity/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 917,
+    "title": "Reverse Only Letters",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "68.7%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/reverse-only-letters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 922,
+    "title": "Sort Array By Parity II",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "71.3%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Sorting"],
+    "url": "https://leetcode.com/problems/sort-array-by-parity-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 925,
+    "title": "Long Pressed Name",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "33.0%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/long-pressed-name/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 942,
+    "title": "DI String Match",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "81.2%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "String", "Greedy"],
+    "url": "https://leetcode.com/problems/di-string-match/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 977,
+    "title": "Squares of a Sorted Array",
+    "difficulty": "Easy",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "73.9%",
+    "estimatedTime": "10 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Sorting"],
+    "url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 19,
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "52.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 61,
+    "title": "Rotate List",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "42.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/rotate-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 82,
+    "title": "Remove Duplicates from Sorted List II",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "52.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 86,
+    "title": "Partition List",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "61.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers"],
+    "url": "https://leetcode.com/problems/partition-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 143,
+    "title": "Reorder List",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "65.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers", "Stack", "Recursion"],
+    "url": "https://leetcode.com/problems/reorder-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 148,
+    "title": "Sort List",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "64.9%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Linked List", "Two Pointers", "Divide and Conquer", "Sorting", "Merge Sort"],
+    "url": "https://leetcode.com/problems/sort-list/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 251,
+    "title": "Flatten 2D Vector",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "50.5%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Design", "Iterator"],
+    "url": "https://leetcode.com/problems/flatten-2d-vector/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 253,
+    "title": "Meeting Rooms II",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "52.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Greedy", "Sorting", "Heap (Priority Queue)", "Prefix Sum"],
+    "url": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 259,
+    "title": "3Sum Smaller",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Binary Search",
+    "acceptance": "51.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/3sum-smaller/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 277,
+    "title": "Find the Celebrity",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "49.0%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "Graph Theory", "Interactive"],
+    "url": "https://leetcode.com/problems/find-the-celebrity/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 287,
+    "title": "Find the Duplicate Number",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Binary Search",
+    "acceptance": "64.6%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Bit Manipulation"],
+    "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 360,
+    "title": "Sort Transformed Array",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "58.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Math", "Two Pointers", "Sorting"],
+    "url": "https://leetcode.com/problems/sort-transformed-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 443,
+    "title": "String Compression",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "60.3%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/string-compression/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 457,
+    "title": "Circular Array Loop",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "37.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Two Pointers"],
+    "url": "https://leetcode.com/problems/circular-array-loop/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 475,
+    "title": "Heaters",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Binary Search",
+    "acceptance": "42.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/heaters/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 481,
+    "title": "Magical String",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "55.7%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/magical-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 522,
+    "title": "Longest Uncommon Subsequence II",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "45.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Two Pointers", "String", "Sorting"],
+    "url": "https://leetcode.com/problems/longest-uncommon-subsequence-ii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 524,
+    "title": "Longest Word in Dictionary through Deleting",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "52.8%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Two Pointers", "String", "Sorting"],
+    "url": "https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 532,
+    "title": "K-diff Pairs in an Array",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Binary Search",
+    "acceptance": "46.1%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/k-diff-pairs-in-an-array/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 556,
+    "title": "Next Greater Element III",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Two Pointers",
+    "acceptance": "35.4%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Math", "Two Pointers", "String"],
+    "url": "https://leetcode.com/problems/next-greater-element-iii/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  },
+  {
+    "id": 567,
+    "title": "Permutation in String",
+    "difficulty": "Medium",
+    "topic": "Two Pointers",
+    "pattern": "Sliding Window",
+    "acceptance": "49.2%",
+    "estimatedTime": "20 mins",
+    "companies": [],
+    "tags": ["Hash Table", "Two Pointers", "String", "Sliding Window"],
+    "url": "https://leetcode.com/problems/permutation-in-string/",
+    "resources": {
+      "official": "",
+      "neetcode": "",
+      "takeuforward": "",
+      "striver": "",
+      "youtube": ""
+    }
+  }
+]
