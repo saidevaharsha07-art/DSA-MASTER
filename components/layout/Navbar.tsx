@@ -2,6 +2,8 @@
 
 import { Sun, Moon, Laptop, Flame, Bell, Search, Menu } from "lucide-react";
 import Link from "next/link";
+import { colors, spacing, typography, radius, animations } from "@/src/design";
+import { Button } from "@/src/components/ui/Button";
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -23,25 +25,35 @@ export function Navbar({
   xp,
 }: NavbarProps) {
   return (
-    <header className="topbar">
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-        <button
-          className="button ghost"
-          style={{ padding: 8 }}
+    <header style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: `0 ${spacing.xl}`,
+      height: '64px',
+      backgroundColor: colors.background,
+      borderBottom: `1px solid ${colors.border}`,
+      zIndex: 40,
+    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: spacing.md }}>
+        <Button
+          variant="ghost"
+          size="icon"
           id="open-sidebar-btn"
           onClick={onMenuClick}
           aria-label="Open sidebar drawer"
+          style={{ display: 'flex' }} // Depending on responsive breakpoints, might hide on desktop later
         >
           <Menu size={20} />
-        </button>
+        </Button>
 
         <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
           <Search
             size={16}
             style={{
               position: "absolute",
-              left: 12,
-              color: "var(--muted)",
+              left: spacing.md,
+              color: colors.muted,
               pointerEvents: "none",
             }}
           />
@@ -51,31 +63,38 @@ export function Navbar({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             style={{
-              padding: "8px 12px 8px 36px",
-              borderRadius: "99px",
-              border: "1px solid var(--border)",
-              background: "var(--background)",
-              fontSize: 13,
+              padding: `${spacing.sm} ${spacing.md} ${spacing.sm} 36px`,
+              borderRadius: radius.full,
+              border: `1px solid ${colors.border}`,
+              background: colors.card,
+              color: colors.foreground,
+              fontFamily: typography.fontFamily.sans,
+              fontSize: typography.fontSize.caption,
               outline: "none",
               width: "240px",
+              transition: `all ${animations.transition.fast}`,
             }}
+            onFocus={(e) => { e.currentTarget.style.borderColor = colors.primary; e.currentTarget.style.boxShadow = `0 0 0 2px ${colors.primaryBg}` }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = colors.border; e.currentTarget.style.boxShadow = 'none' }}
           />
         </div>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: spacing.lg }}>
         {/* Streak Flame */}
         {streak > 0 && (
           <div
-            className="row font-mono"
             style={{
-              gap: 4,
-              fontSize: 13,
-              fontWeight: 700,
+              display: 'flex',
+              alignItems: 'center',
+              gap: spacing.xs,
+              fontSize: typography.fontSize.caption,
+              fontWeight: typography.fontWeight.bold,
               color: "#f89f1b",
               background: "rgba(248,159,27,0.1)",
-              padding: "4px 10px",
-              borderRadius: 99,
+              padding: `${spacing.xs} ${spacing.sm}`,
+              borderRadius: radius.full,
+              fontFamily: typography.fontFamily.mono,
             }}
             title="Combined solving daily streak"
           >
@@ -87,15 +106,16 @@ export function Navbar({
         {/* XP Counter */}
         <div
           style={{
-            fontSize: 12,
-            fontWeight: 700,
-            background: "var(--muted-bg)",
-            border: "1px solid var(--border)",
-            padding: "4px 10px",
-            borderRadius: 99,
+            fontSize: typography.fontSize.label,
+            fontWeight: typography.fontWeight.bold,
+            background: colors.mutedBg,
+            border: `1px solid ${colors.border}`,
+            padding: `${spacing.xs} ${spacing.sm}`,
+            borderRadius: radius.full,
+            color: colors.foreground,
           }}
         >
-          <span className="muted" style={{ fontWeight: 500, marginRight: 4 }}>
+          <span style={{ fontWeight: typography.fontWeight.medium, color: colors.muted, marginRight: spacing.xs }}>
             XP:
           </span>
           {xp}
@@ -105,10 +125,10 @@ export function Navbar({
         <div
           style={{
             display: "flex",
-            background: "var(--muted-bg)",
-            border: "1px solid var(--border)",
-            padding: 2,
-            borderRadius: 8,
+            background: colors.mutedBg,
+            border: `1px solid ${colors.border}`,
+            padding: spacing.xs,
+            borderRadius: radius.md,
           }}
         >
           {[
@@ -123,15 +143,16 @@ export function Navbar({
                 key={item.id}
                 onClick={() => onThemeChange(item.id as any)}
                 style={{
-                  background: active ? "var(--accent)" : "transparent",
-                  color: active ? "var(--accent-foreground)" : "var(--muted)",
+                  background: active ? colors.primaryBg : "transparent",
+                  color: active ? colors.primary : colors.muted,
                   border: "none",
-                  borderRadius: 6,
-                  padding: 4,
+                  borderRadius: radius.sm,
+                  padding: spacing.xs,
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  transition: `all ${animations.transition.fast}`,
                 }}
                 title={item.label}
                 aria-label={item.label}
@@ -143,38 +164,39 @@ export function Navbar({
         </div>
 
         {/* Notifications & Avatar */}
-        <button
-          className="button ghost"
-          style={{ padding: 6, borderRadius: "50%", position: "relative" }}
+        <Button
+          variant="ghost"
+          size="icon"
           aria-label="View notifications"
+          style={{ position: 'relative' }}
         >
           <Bell size={16} />
           <span
             style={{
               position: "absolute",
-              top: 2,
-              right: 2,
-              width: 6,
-              height: 6,
-              background: "#ef4444",
-              borderRadius: "50%",
+              top: '4px',
+              right: '4px',
+              width: '6px',
+              height: '6px',
+              background: colors.danger,
+              borderRadius: radius.full,
             }}
           />
-        </button>
+        </Button>
 
         <Link
           href="/profile"
           style={{
-            width: 28,
-            height: 28,
-            borderRadius: "50%",
-            background: "linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)",
+            width: '28px',
+            height: '28px',
+            borderRadius: radius.full,
+            background: `linear-gradient(135deg, ${colors.primary} 0%, #a855f7 100%)`,
             color: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontWeight: 700,
-            fontSize: 12,
+            fontWeight: typography.fontWeight.bold,
+            fontSize: typography.fontSize.label,
             textDecoration: "none",
           }}
           aria-label="View user profile"

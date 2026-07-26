@@ -1,0 +1,217 @@
+[
+  {
+    "id": "pattern.frequency-count",
+    "type": "Pattern",
+    "title": "Frequency Count",
+    "description": "A Prefix Sum is a technique where you precompute the cumulative sum of an array to answer range sum queries in O(1) time.",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "route": "/topic/frequency-count"
+  },
+  {
+    "id": "pattern.hash-map",
+    "type": "Pattern",
+    "title": "Hash Map",
+    "description": "A Prefix Sum is a technique where you precompute the cumulative sum of an array to answer range sum queries in O(1) time.",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "route": "/topic/hash-map"
+  },
+  {
+    "id": "pattern.prefix-sum",
+    "type": "Pattern",
+    "title": "Prefix Sum",
+    "description": "A Prefix Sum is a technique where you precompute the cumulative sum of an array to answer range sum queries in O(1) time.",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "route": "/topic/prefix-sum"
+  },
+  {
+    "id": "pattern.sliding-window",
+    "type": "Pattern",
+    "title": "Sliding Window",
+    "description": "A Prefix Sum is a technique where you precompute the cumulative sum of an array to answer range sum queries in O(1) time.",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "route": "/topic/sliding-window"
+  },
+  {
+    "id": "pattern.two-pointers",
+    "type": "Pattern",
+    "title": "Two Pointers",
+    "description": "A Prefix Sum is a technique where you precompute the cumulative sum of an array to answer range sum queries in O(1) time.",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "route": "/topic/two-pointers"
+  },
+  {
+    "id": "problem.lc-1",
+    "type": "Problem",
+    "title": "Two Sum",
+    "description": "LeetCode Easy - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/two-sum"
+  },
+  {
+    "id": "problem.lc-1074",
+    "type": "Problem",
+    "title": "Number of Submatrices That Sum to Target",
+    "description": "LeetCode Hard - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/number-of-submatrices-that-sum-to-target"
+  },
+  {
+    "id": "problem.lc-128",
+    "type": "Problem",
+    "title": "Longest Consecutive Sequence",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/longest-consecutive-sequence"
+  },
+  {
+    "id": "problem.lc-1480",
+    "type": "Problem",
+    "title": "Running Sum of 1d Array",
+    "description": "LeetCode Easy - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/running-sum-of-1d-array"
+  },
+  {
+    "id": "problem.lc-209",
+    "type": "Problem",
+    "title": "Minimum Size Subarray Sum",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/minimum-size-subarray-sum"
+  },
+  {
+    "id": "problem.lc-3",
+    "type": "Problem",
+    "title": "Longest Substring Without Repeating Characters",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/longest-substring-without-repeating-characters"
+  },
+  {
+    "id": "problem.lc-30",
+    "type": "Problem",
+    "title": "Substring with Concatenation of All Words",
+    "description": "LeetCode Hard - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/substring-with-concatenation-of-all-words"
+  },
+  {
+    "id": "problem.lc-303",
+    "type": "Problem",
+    "title": "Range Sum Query - Immutable",
+    "description": "LeetCode Easy - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/range-sum-query-immutable"
+  },
+  {
+    "id": "problem.lc-424",
+    "type": "Problem",
+    "title": "Longest Repeating Character Replacement",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/longest-repeating-character-replacement"
+  },
+  {
+    "id": "problem.lc-49",
+    "type": "Problem",
+    "title": "Group Anagrams",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/group-anagrams"
+  },
+  {
+    "id": "problem.lc-560",
+    "type": "Problem",
+    "title": "Subarray Sum Equals K",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/subarray-sum-equals-k"
+  },
+  {
+    "id": "problem.lc-643",
+    "type": "Problem",
+    "title": "Maximum Average Subarray I",
+    "description": "LeetCode Easy - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/maximum-average-subarray-i"
+  },
+  {
+    "id": "problem.lc-724",
+    "type": "Problem",
+    "title": "Find Pivot Index",
+    "description": "LeetCode Easy - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/find-pivot-index"
+  },
+  {
+    "id": "problem.lc-76",
+    "type": "Problem",
+    "title": "Minimum Window Substring",
+    "description": "LeetCode Hard - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/minimum-window-substring"
+  },
+  {
+    "id": "problem.lc-930",
+    "type": "Problem",
+    "title": "Binary Subarrays With Sum",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/binary-subarrays-with-sum"
+  },
+  {
+    "id": "problem.lc-974",
+    "type": "Problem",
+    "title": "Subarray Sums Divisible by K",
+    "description": "LeetCode Medium - Amazon, Google, Apple, Microsoft",
+    "tags": [
+      "arrays"
+    ],
+    "route": "/practice/subarray-sums-divisible-by-k"
+  }
+]

@@ -14,25 +14,28 @@ import {
   Trophy,
   Settings,
   UserRound,
+  Compass,
+  Sparkles,
 } from "lucide-react";
 import { useRoadmap } from "@/hooks/use-roadmap";
 import { useCodeforces } from "@/hooks/use-codeforces";
 import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { MobileNav } from "./MobileNav";
+import { ContextPanel } from "./ContextPanel";
+import { CommandPalette } from "./CommandPalette";
+import { layout } from "@/src/design";
 
 const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],
-  ["Problems", "/problems", Code2],
-  ["Roadmap", "/roadmap", Map],
-  ["Practice", "/practice", BookOpen],
+  ["Journey", "/journey", Compass],
+  ["Learn", "/learn", BookOpen],
+  ["Practice", "/practice", Code2],
   ["Revision", "/revision", RotateCcw],
-  ["Mock Test", "/mock-test", Timer],
-  ["Interview Mode", "/interview", Users],
-  ["Statistics", "/statistics", BarChart3],
-  ["Achievements", "/achievements", Trophy],
+  ["Knowledge", "/knowledge", Map],
+  ["Analytics", "/analytics", BarChart3],
+  ["AI Mentor", "/mentor", Sparkles],
   ["Settings", "/settings", Settings],
-  ["Profile", "/profile", UserRound],
 ] as const;
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -41,13 +44,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const { state: codeforcesState, ready: codeforcesReady } = useCodeforces();
 
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarMobileOpen, setSidebarMobileOpen] = useState(false);
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Initialize theme from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
-    if (saved) setTheme(saved);
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
+    if (savedTheme) setTheme(savedTheme);
+
+    const savedSidebar = localStorage.getItem("sidebarExpanded");
+    if (savedSidebar !== null) setSidebarExpanded(savedSidebar === "true");
 
     const handleThemeChange = () => {
       const current = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
@@ -57,7 +63,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("theme-change", handleThemeChange);
   }, []);
 
-  // Update theme classes on document
+  const toggleSidebarExpand = () => {
+    const nextState = !sidebarExpanded;
+    setSidebarExpanded(nextState);
+    localStorage.setItem("sidebarExpanded", String(nextState));
+  };
+
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const applyTheme = () => {
@@ -81,15 +92,18 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     }
   }, [theme]);
 
-  // Calculate streak based on completed problems
   const totalSolved = (roadmapState?.completed?.length ?? 0) + (codeforcesState?.completed?.length ?? 0);
   const streak = totalSolved > 0 ? Math.min(15, Math.max(1, Math.floor(totalSolved / 2.5))) : 0;
   const xp = roadmapState?.xp ?? 0;
 
   return (
-    <div className="shell">
-      {/* Mobile Drawer Overlay */}
-      {sidebarOpen && (
+    <div style={{
+      display: 'flex',
+      height: '100vh',
+      width: '100vw',
+      overflow: 'hidden',
+    }}>
+      {sidebarMobileOpen && (
         <div
           style={{
             position: "fixed",
@@ -98,23 +112,27 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             backdropFilter: "blur(4px)",
             zIndex: 45,
           }}
-          onClick={() => setSidebarOpen(false)}
+          onClick={() => setSidebarMobileOpen(false)}
         />
       )}
 
-      {/* Persistent Sidebar */}
       <Sidebar
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
+        isMobileOpen={sidebarMobileOpen}
+        onMobileClose={() => setSidebarMobileOpen(false)}
+        isExpanded={sidebarExpanded}
+        onToggleExpand={toggleSidebarExpand}
         pathname={pathname}
         nav={nav}
       />
 
-      {/* Main Content Area */}
-      <div className="main-content">
-        {/* Sticky Header Navbar */}
+      <div style={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+      }}>
         <Navbar
-          onMenuClick={() => setSidebarOpen(true)}
+          onMenuClick={() => setSidebarMobileOpen(true)}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
           theme={theme}
@@ -127,13 +145,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           xp={xp}
         />
 
-        {/* Dynamic page container */}
-        <main className="content" style={{ paddingBottom: 80 }}>
+        <main style={{
+          flex: 1,
+          overflowY: 'auto',
+          paddingBottom: '80px', // For mobile nav padding
+        }}>
           {children}
         </main>
       </div>
 
-      {/* Mobile Sticky Bottom Nav Bar */}
+      {!pathname.startsWith("/settings") && <ContextPanel />}
+      <CommandPalette />
       <MobileNav pathname={pathname} />
     </div>
   );

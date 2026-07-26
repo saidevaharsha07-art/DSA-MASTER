@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "id": "pattern.frequency-count",
+      "type": "pattern",
+      "label": "Frequency Count"
+    },
+    {
+      "id": "pattern.hash-map",
+      "type": "pattern",
+      "label": "Hash Map"
+    },
+    {
+      "id": "pattern.prefix-sum",
+      "type": "pattern",
+      "label": "Prefix Sum"
+    },
+    {
+      "id": "pattern.sliding-window",
+      "type": "pattern",
+      "label": "Sliding Window"
+    },
+    {
+      "id": "pattern.two-pointers",
+      "type": "pattern",
+      "label": "Two Pointers"
+    },
+    {
+      "id": "problem.lc-1",
+      "type": "problem",
+      "label": "Two Sum"
+    },
+    {
+      "id": "problem.lc-1074",
+      "type": "problem",
+      "label": "Number of Submatrices That Sum to Target"
+    },
+    {
+      "id": "problem.lc-128",
+      "type": "problem",
+      "label": "Longest Consecutive Sequence"
+    },
+    {
+      "id": "problem.lc-1480",
+      "type": "problem",
+      "label": "Running Sum of 1d Array"
+    },
+    {
+      "id": "problem.lc-209",
+      "type": "problem",
+      "label": "Minimum Size Subarray Sum"
+    },
+    {
+      "id": "problem.lc-3",
+      "type": "problem",
+      "label": "Longest Substring Without Repeating Characters"
+    },
+    {
+      "id": "problem.lc-30",
+      "type": "problem",
+      "label": "Substring with Concatenation of All Words"
+    },
+    {
+      "id": "problem.lc-303",
+      "type": "problem",
+      "label": "Range Sum Query - Immutable"
+    },
+    {
+      "id": "problem.lc-424",
+      "type": "problem",
+      "label": "Longest Repeating Character Replacement"
+    },
+    {
+      "id": "problem.lc-49",
+      "type": "problem",
+      "label": "Group Anagrams"
+    },
+    {
+      "id": "problem.lc-560",
+      "type": "problem",
+      "label": "Subarray Sum Equals K"
+    },
+    {
+      "id": "problem.lc-643",
+      "type": "problem",
+      "label": "Maximum Average Subarray I"
+    },
+    {
+      "id": "problem.lc-724",
+      "type": "problem",
+      "label": "Find Pivot Index"
+    },
+    {
+      "id": "problem.lc-76",
+      "type": "problem",
+      "label": "Minimum Window Substring"
+    },
+    {
+      "id": "problem.lc-930",
+      "type": "problem",
+      "label": "Binary Subarrays With Sum"
+    },
+    {
+      "id": "problem.lc-974",
+      "type": "problem",
+      "label": "Subarray Sums Divisible by K"
+    }
+  ],
+  "edges": [
+    {
+      "source": "pattern.frequency-count",
+      "target": "problem.lc-303",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "problem.lc-1480",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "problem.lc-724",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "problem.lc-560",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "problem.lc-974",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "pattern.sliding-window",
+      "type": "related"
+    },
+    {
+      "source": "pattern.frequency-count",
+      "target": "pattern.hash-map",
+      "type": "related"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "problem.lc-303",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "problem.lc-1480",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "problem.lc-724",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "problem.lc-560",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "problem.lc-974",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "pattern.sliding-window",
+      "type": "related"
+    },
+    {
+      "source": "pattern.hash-map",
+      "target": "pattern.hash-map",
+      "type": "related"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "problem.lc-303",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "problem.lc-1480",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "problem.lc-724",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "problem.lc-560",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "problem.lc-974",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "pattern.sliding-window",
+      "type": "related"
+    },
+    {
+      "source": "pattern.prefix-sum",
+      "target": "pattern.hash-map",
+      "type": "related"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "problem.lc-303",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "problem.lc-1480",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "problem.lc-724",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "problem.lc-560",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "problem.lc-974",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "pattern.sliding-window",
+      "type": "related"
+    },
+    {
+      "source": "pattern.sliding-window",
+      "target": "pattern.hash-map",
+      "type": "related"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "problem.lc-303",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "problem.lc-1480",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "problem.lc-724",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "problem.lc-560",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "problem.lc-974",
+      "type": "contains"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "pattern.sliding-window",
+      "type": "related"
+    },
+    {
+      "source": "pattern.two-pointers",
+      "target": "pattern.hash-map",
+      "type": "related"
+    }
+  ]
+}

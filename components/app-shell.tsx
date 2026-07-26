@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   BarChart3,
   BookOpen,
@@ -15,17 +16,19 @@ import {
   Trophy,
   UserRound,
   Users,
-  Sun,
-  Moon,
-  Laptop,
   Flame,
   Bell,
   Search,
   Menu,
   X,
+  Terminal,
+  Zap,
 } from "lucide-react";
 import { useRoadmap } from "@/hooks/use-roadmap";
 import { useCodeforces } from "@/hooks/use-codeforces";
+import { useSettings } from "@/src/context/SettingsContext";
+import { useToast } from "@/src/context/ToastContext";
+import { CommandPaletteModal } from "@/components/ui/CommandPaletteModal";
 
 const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],
@@ -43,55 +46,22 @@ const nav = [
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const { state: roadmapState, ready: roadmapReady, error, retry } = useRoadmap();
-  const { state: codeforcesState, ready: codeforcesReady } = useCodeforces();
+  const { ready: roadmapReady, error, retry } = useRoadmap();
+  const { ready: codeforcesReady } = useCodeforces();
+  const { settings, updateSetting } = useSettings();
+  const { toast } = useToast();
 
-  const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // Initialize theme from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
-    if (saved) setTheme(saved);
-
-    const handleThemeChange = () => {
-      const current = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
-      if (current) setTheme(current);
-    };
-    window.addEventListener("theme-change", handleThemeChange);
-    return () => window.removeEventListener("theme-change", handleThemeChange);
-  }, []);
-
-  // Update theme classes on document
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-    const applyTheme = () => {
-      let isDark = false;
-      if (theme === "dark") {
-        isDark = true;
-      } else if (theme === "system") {
-        isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      }
-      document.documentElement.classList.toggle("dark", isDark);
-    };
-    applyTheme();
-
-    if (theme === "system") {
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      const listener = () => {
-        document.documentElement.classList.toggle("dark", mediaQuery.matches);
-      };
-      mediaQuery.addEventListener("change", listener);
-      return () => mediaQuery.removeEventListener("change", listener);
-    }
-  }, [theme]);
-
-  // Calculate streak based on completed problems
-  const totalSolved = (roadmapState?.completed?.length ?? 0) + (codeforcesState?.completed?.length ?? 0);
-  const streak = totalSolved > 0 ? Math.min(15, Math.max(1, Math.floor(totalSolved / 2.5))) : 0;
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 
   const isReady = roadmapReady && codeforcesReady;
+  const currentTheme = settings.appearance.theme;
+  const developerMode = settings.advanced.developerMode;
+
+  const handleThemeChange = (t: any) => {
+    updateSetting("appearance", "theme", t);
+    toast(`Theme changed to ${t}`, "info");
+  };
 
   return (
     <div className="shell">
@@ -108,6 +78,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           onClick={() => setSidebarOpen(false)}
         />
       )}
+
+      {/* Command Palette Modal */}
+      <CommandPaletteModal isOpen={commandPaletteOpen} onClose={() => setCommandPaletteOpen(false)} />
 
       {/* Sidebar */}
       <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
@@ -173,105 +146,103 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Menu size={20} />
             </button>
 
-            <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
-              <Search
-                size={16}
-                style={{
-                  position: "absolute",
-                  left: 12,
-                  color: "var(--muted)",
-                  pointerEvents: "none",
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Quick search (e.g. Arrays, Two Pointers)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  padding: "8px 12px 8px 36px",
-                  borderRadius: "99px",
-                  border: "1px solid var(--border)",
-                  background: "var(--background)",
-                  fontSize: 13,
-                  outline: "none",
-                  width: "240px",
-                }}
-              />
-            </div>
+            {/* Quick Command Trigger */}
+            <button
+              type="button"
+              onClick={() => setCommandPaletteOpen(true)}
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "6px 14px",
+                borderRadius: "99px",
+                border: "1px solid var(--border)",
+                background: "var(--surface)",
+                color: "var(--text-secondary)",
+                fontSize: 12,
+                cursor: "pointer",
+                outline: "none",
+              }}
+            >
+              <Search size={14} style={{ color: "var(--primary)" }} />
+              <span>Search commands...</span>
+              <kbd style={{ fontSize: 10, background: "rgba(255,255,255,0.1)", padding: "2px 6px", borderRadius: 4, color: "var(--text-primary)" }}>⌘K</kbd>
+            </button>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            {/* Streak Counter */}
-            {isReady && streak > 0 && (
-              <div
-                title="Current active practice streak"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  background: "rgba(249, 115, 22, 0.1)",
-                  color: "rgb(249, 115, 22)",
-                  padding: "6px 12px",
-                  borderRadius: "99px",
-                  fontWeight: 600,
-                  fontSize: 13,
-                }}
-              >
-                <Flame size={16} fill="currentColor" />
-                <span>{streak}d Streak</span>
-              </div>
-            )}
+            {/* Daily Goal Streak Counter */}
+            <div
+              title="Daily Goal Target"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+                background: "var(--primary-soft)",
+                color: "var(--primary)",
+                padding: "6px 12px",
+                borderRadius: "99px",
+                fontWeight: 600,
+                fontSize: 13,
+              }}
+            >
+              <Flame size={16} fill="currentColor" />
+              <span>Target: {settings.goals.dailyTarget}/day</span>
+            </div>
 
-            {/* Theme Toggle dropdown */}
-            <div style={{ display: "flex", background: "var(--muted-bg)", padding: 3, borderRadius: 8 }}>
-              {(["light", "dark", "system"] as const).map((t) => {
-                const Icon = t === "light" ? Sun : t === "dark" ? Moon : Laptop;
-                const active = theme === t;
+            {/* Global Theme Selector */}
+            <div style={{ display: "flex", background: "var(--surface)", padding: 3, borderRadius: 8, border: "1px solid var(--border)" }}>
+              {(["dark", "midnight", "oled", "fantasy"] as const).map((t) => {
+                const active = currentTheme === t;
                 return (
                   <button
                     key={t}
-                    onClick={() => setTheme(t)}
+                    onClick={() => handleThemeChange(t)}
                     title={`Set theme to ${t}`}
                     style={{
-                      background: active ? "var(--card)" : "transparent",
+                      background: active ? "var(--primary)" : "transparent",
                       border: 0,
                       cursor: "pointer",
-                      padding: "6px 8px",
+                      padding: "4px 8px",
                       borderRadius: 6,
-                      color: active ? "var(--primary)" : "var(--muted)",
-                      display: "flex",
-                      alignItems: "center",
-                      transition: "var(--transition)",
+                      color: active ? "#FFFFFF" : "var(--text-secondary)",
+                      fontSize: "11px",
+                      fontWeight: 600,
+                      textTransform: "capitalize",
+                      transition: "var(--transition-speed)",
                     }}
                   >
-                    <Icon size={14} />
+                    {t}
                   </button>
                 );
               })}
             </div>
 
-            {/* Notifications Placeholder */}
-            <button
-              className="button ghost"
-              style={{ padding: 8, borderRadius: "50%", position: "relative" }}
-              title="Notifications"
-            >
-              <Bell size={16} />
-              <span
-                style={{
-                  position: "absolute",
-                  top: 6,
-                  right: 6,
-                  width: 6,
-                  height: 6,
-                  borderRadius: "50%",
-                  background: "var(--primary)",
-                }}
-              />
-            </button>
+            {/* Notifications Button */}
+            {settings.notifications.notificationChannels.inApp && (
+              <button
+                className="button ghost"
+                style={{ padding: 8, borderRadius: "50%", position: "relative" }}
+                title="Notifications Active"
+                onClick={() => toast("Notifications active & up to date", "info")}
+              >
+                <Bell size={16} />
+                <span
+                  style={{
+                    position: "absolute",
+                    top: 6,
+                    right: 6,
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: "var(--primary)",
+                  }}
+                />
+              </button>
+            )}
 
-            {/* Profile Placeholder */}
+            {/* Profile Avatar */}
             <Link
               href="/profile"
               style={{
@@ -286,7 +257,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   width: 32,
                   height: 32,
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)",
+                  background: "linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -301,7 +272,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
 
-        {/* Dynamic Page content */}
+        {/* Dynamic Page Content with Smooth Transition */}
         <main className="page">
           {!isReady ? (
             <div className="empty" style={{ minHeight: "60vh" }}>
@@ -328,9 +299,50 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </button>
             </div>
           ) : (
-            children
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={pathname}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.18, ease: "easeInOut" }}
+              >
+                {children}
+              </motion.div>
+            </AnimatePresence>
           )}
         </main>
+
+        {/* Developer Mode HUD Overlay */}
+        {developerMode && (
+          <div
+            style={{
+              position: "fixed",
+              bottom: 16,
+              right: 16,
+              zIndex: 999,
+              background: "rgba(10, 14, 26, 0.92)",
+              backdropFilter: "blur(12px)",
+              border: "1px solid var(--primary)",
+              borderRadius: 12,
+              padding: "8px 14px",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              fontSize: 11,
+              fontFamily: "monospace",
+              color: "var(--text-primary)",
+            }}
+          >
+            <Terminal size={14} style={{ color: "var(--primary)" }} />
+            <span><Zap size={10} style={{ color: "#10B981", display: "inline-block", verticalAlign: "middle" }} /> {settings.performance.fpsLimit} FPS</span>
+            <span>•</span>
+            <span>Theme: <strong>{currentTheme}</strong></span>
+            <span>•</span>
+            <span>Route: <strong>{pathname}</strong></span>
+          </div>
+        )}
       </div>
     </div>
   );

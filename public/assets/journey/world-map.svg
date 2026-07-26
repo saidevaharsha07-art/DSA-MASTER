@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="100%" height="100%">
+  <defs>
+    <!-- Deep Fantasy Space Gradient Base -->
+    <linearGradient id="fantasy-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020308" />
+      <stop offset="35%" stop-color="#070c1d" />
+      <stop offset="70%" stop-color="#0a1535" />
+      <stop offset="100%" stop-color="#010206" />
+    </linearGradient>
+
+    <!-- Starry overlay pattern -->
+    <pattern id="starfield" width="200" height="200" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="40" r="1.2" fill="#fff" opacity="0.3" />
+      <circle cx="85" cy="110" r="0.8" fill="#fff" opacity="0.2" />
+      <circle cx="155" cy="65" r="1.5" fill="#fff" opacity="0.45" />
+      <circle cx="55" cy="165" r="1" fill="#fff" opacity="0.25" />
+      <circle cx="125" cy="170" r="0.7" fill="#fff" opacity="0.1" />
+    </pattern>
+
+    <!-- Biome Glow Gradients to blend regions naturally -->
+    <radialGradient id="valley-aurora" cx="320" cy="230" r="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="forest-aurora" cx="680" cy="180" r="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="magic-aurora" cx="1130" cy="175" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="volcano-aurora" cx="420" cy="675" r="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#78350f" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="desert-aurora" cx="400" cy="915" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="cosmic-aurora" cx="1130" cy="1140" r="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6d28d9" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Realistic drop shadows for islands and cliffs -->
+    <filter id="island-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#000000" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <!-- 1. Ambient Sky Backdrop -->
+  <rect width="100%" height="100%" fill="url(#fantasy-bg)" />
+  <rect width="100%" height="100%" fill="url(#starfield)" />
+
+  <!-- 2. Regional Auroral Gradients (Blends biomes seamlessly) -->
+  <circle cx="320" cy="230" r="350" fill="url(#valley-aurora)" />
+  <circle cx="680" cy="180" r="350" fill="url(#forest-aurora)" />
+  <circle cx="1130" cy="175" r="380" fill="url(#magic-aurora)" />
+  <circle cx="420" cy="675" r="400" fill="url(#volcano-aurora)" />
+  <circle cx="400" cy="915" r="380" fill="url(#desert-aurora)" />
+  <circle cx="1130" cy="1140" r="450" fill="url(#cosmic-aurora)" />
+
+  <!-- 3. Painted Curving Roads (Designed in the background art) -->
+  <g fill="none" stroke-linecap="round" opacity="0.3">
+    <!-- Row 1: World 1 -> 2 -> 3 -> 4 -> 5 -->
+    <!-- Stone trail -->
+    <path d="M 320 230 C 410 230, 410 210, 500 210" stroke="#64748b" stroke-width="8" />
+    <!-- Forest path -->
+    <path d="M 500 210 C 590 210, 590 180, 680 180" stroke="#059669" stroke-width="6" stroke-dasharray="10,6" />
+    <!-- Bridge -->
+    <path d="M 680 180 C 820 180, 820 210, 960 210" stroke="#b45309" stroke-width="10" />
+    <path d="M 680 180 C 820 180, 820 210, 960 210" stroke="#d97706" stroke-width="2" stroke-dasharray="4,8" />
+    <!-- Mystic bridge -->
+    <path d="M 960 210 C 1045 210, 1045 175, 1130 175" stroke="#8b5cf6" stroke-width="6" />
+
+    <!-- Turn to Row 2: World 5 -> 10 -> 9 -> 8 -> 7 -> 6 -->
+    <!-- Vertical stone road -->
+    <path d="M 1130 175 C 1150 290, 1150 340, 1130 430" stroke="#475569" stroke-width="8" />
+    <!-- Mountain trail -->
+    <path d="M 1130 430 C 1060 430, 1060 505, 990 505" stroke="#94a3b8" stroke-width="6" stroke-dasharray="10,8" />
+    <!-- Rope bridge -->
+    <path d="M 990 505 C 890 505, 890 445, 790 445" stroke="#78350f" stroke-width="6" />
+    <!-- Grass trail -->
+    <path d="M 790 445 C 700 445, 700 405, 615 405" stroke="#059669" stroke-width="5" stroke-dasharray="8,6" />
+    <!-- River crossing bridge -->
+    <path d="M 615 405 C 515 405, 515 445, 415 445" stroke="#7c2d12" stroke-width="8" />
+
+    <!-- Turn to Row 3: World 6 -> 11 -> 12 -> 13 -> 14 -> 15 -->
+    <!-- Winding slope -->
+    <path d="M 415 445 C 300 445, 300 700, 200 700" stroke="#64748b" stroke-width="8" stroke-dasharray="12,12" />
+    <!-- Lake bridge -->
+    <path d="M 200 700 C 310 700, 310 675, 420 675" stroke="#78350f" stroke-width="10" />
+    <!-- Lava bridge -->
+    <path d="M 420 675 C 520 675, 520 700, 625 700" stroke="#ef4444" stroke-width="9" />
+    <!-- Forest roadway -->
+    <path d="M 625 700 C 725 700, 725 700, 830 700" stroke="#059669" stroke-width="6" stroke-dasharray="10,6" />
+    <!-- Castle portal road -->
+    <path d="M 830 700 C 980 700, 980 715, 1130 715" stroke="#a855f7" stroke-width="7" />
+
+    <!-- Turn to Row 4: World 15 -> 20 -> 19 -> 18 -> 17 -> 16 -->
+    <!-- Vertical castle pass -->
+    <path d="M 1130 715 C 1150 820, 1150 880, 1130 955" stroke="#475569" stroke-width="10" />
+    <!-- Jungle trail -->
+    <path d="M 1130 955 C 980 955, 980 980, 830 980" stroke="#047857" stroke-width="6" stroke-dasharray="10,8" />
+    <!-- Stone steps -->
+    <path d="M 830 980 C 720 980, 720 875, 615 875" stroke="#64748b" stroke-width="8" />
+    <!-- Desert road -->
+    <path d="M 615 875 C 500 875, 500 915, 400 915" stroke="#d97706" stroke-width="7" stroke-dasharray="12,6" />
+    <!-- Mine tracks -->
+    <path d="M 400 915 C 290 915, 290 945, 180 945" stroke="#4b5563" stroke-width="6" stroke-dasharray="14,14" />
+
+    <!-- Turn to Row 5: World 16 -> 21 -> 22 -> 23 -> 24 -> 25 -->
+    <!-- Cavern descent -->
+    <path d="M 180 945 C 150 1020, 300 1140, 400 1140" stroke="#6b7280" stroke-width="8" />
+    <!-- Citadel ramp -->
+    <path d="M 400 1140 C 475 1140, 475 1140, 550 1140" stroke="#3b82f6" stroke-width="10" />
+    <!-- Floating bridges -->
+    <path d="M 550 1140 C 630 1140, 630 1100, 715 1100" stroke="#b45309" stroke-width="7" stroke-dasharray="6,6" />
+    <!-- Arena stone road -->
+    <path d="M 715 1100 C 815 1100, 815 1170, 920 1170" stroke="#475569" stroke-width="10" />
+    <!-- Cosmic vortex road -->
+    <path d="M 920 1170 C 1025 1170, 1025 1140, 1130 1140" stroke="#ec4899" stroke-width="6" />
+  </g>
+
+  <!-- 4. Illustrated Landmarks -->
+  <!-- Top row: Valley, rolling hills, dense forest, Array Valley farm, Hash Forest tree -->
+  <!-- Valley of Origins (World 1) -->
+  <g transform="translate(320, 230)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="20" rx="110" ry="60" fill="#064e3b" opacity="0.8" />
+    <!-- Small windmill -->
+    <path d="M -40 10 L -33 -20 L -26 10 Z" fill="#475569" />
+    <path d="M -33 -20 L -48 -35 M -33 -20 L -18 -35 M -33 -20 L -48 -5 M -33 -20 L -18 -5" stroke="#94a3b8" stroke-width="2" />
+    <!-- Grass & flowers -->
+    <circle cx="20" cy="15" r="8" fill="#10b981" />
+    <circle cx="35" cy="5" r="6" fill="#10b981" />
+    <circle cx="25" cy="2" r="3" fill="#ef4444" />
+  </g>
+
+  <!-- Number Hills (World 2) -->
+  <g transform="translate(500, 210)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#1e3a8a" opacity="0.7" />
+    <!-- Math ruins -->
+    <rect x="-25" y="-15" width="8" height="25" fill="#475569" />
+    <rect x="20" y="-10" width="8" height="20" fill="#475569" />
+    <!-- Stone roadway lines -->
+    <path d="M -45 5 C 0 5, 0 15, 45 15" stroke="#94a3b8" stroke-width="2" fill="none" opacity="0.3" />
+  </g>
+
+  <!-- Recursion Forest (World 3) -->
+  <g transform="translate(680, 180)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="55" fill="#065f46" opacity="0.75" />
+    <!-- Tall spiral pines -->
+    <path d="M -15 -25 C -5 -60, 5 -60, 15 -25 Z" fill="#047857" />
+    <path d="M -35 -10 C -25 -40, -15 -40, -5 -10 Z" fill="#065f46" />
+    <path d="M 5 -15 C 15 -45, 25 -45, 35 -15 Z" fill="#065f46" />
+  </g>
+
+  <!-- Array Valley (World 4) -->
+  <g transform="translate(960, 210)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="55" fill="#14532d" opacity="0.7" />
+    <!-- Field crops rows -->
+    <polygon points="-60,5 -30,25 20,25 -10,5" fill="#15803d" />
+    <polygon points="-10,5 20,25 70,25 40,5" fill="#166534" />
+  </g>
+
+  <!-- Hash Forest BOSS (World 5) -->
+  <g transform="translate(1130, 175)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="20" rx="125" ry="65" fill="#4c1d95" opacity="0.8" />
+    <!-- Large purple magical tree canopy -->
+    <circle cx="0" cy="-45" r="32" fill="#7c3aed" opacity="0.85" filter="url(#glow)" />
+    <!-- Glowing mushrooms -->
+    <circle cx="-35" cy="15" r="4" fill="#a78bfa" />
+    <circle cx="35" cy="10" r="3" fill="#a78bfa" />
+  </g>
+
+  <!-- Second row: Sliding River, Two Pointer Mountains, Prefix Plains, Binary Search Canyon, String City BOSS -->
+  <!-- String City BOSS (World 10) -->
+  <g transform="translate(1130, 430)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="115" ry="55" fill="#18181b" opacity="0.8" />
+    <!-- Fortress wall outline -->
+    <rect x="-40" y="-15" width="20" height="40" fill="#27272a" />
+    <rect x="20" y="-15" width="20" height="40" fill="#27272a" />
+    <rect x="-20" y="5" width="40" height="20" fill="#27272a" />
+  </g>
+
+  <!-- Binary Search Canyon (World 9) -->
+  <g transform="translate(990, 505)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#451a03" opacity="0.65" />
+    <!-- Canyon fissure -->
+    <path d="M -80 5 Q 0 25, 80 5" stroke="#1c1917" stroke-width="12" fill="none" />
+  </g>
+
+  <!-- Prefix Plains (World 8) -->
+  <g transform="translate(790, 445)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="105" ry="50" fill="#15803d" opacity="0.65" />
+    <!-- Stone pillars -->
+    <rect x="-25" y="-10" width="8" height="25" fill="#4b5563" />
+    <rect x="15" y="-15" width="10" height="30" fill="#374151" />
+  </g>
+
+  <!-- Two Pointer Mountains (World 7) -->
+  <g transform="translate(615, 405)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#334155" opacity="0.7" />
+    <!-- Mountain Peak -->
+    <polygon points="-50,25 0,-35 50,25" fill="#475569" stroke="#1e293b" stroke-width="2" />
+    <polygon points="-12,-10 0,-35 12,-10" fill="#f8fafc" /> <!-- Snow cap -->
+  </g>
+
+  <!-- Sliding River (World 6) -->
+  <g transform="translate(415, 445)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="55" fill="#1d4ed8" opacity="0.5" />
+    <!-- Flowing waterfall representation -->
+    <path d="M -60 10 L 60 10" stroke="#38bdf8" stroke-width="6" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- Third row: Linked Lake, Stack Volcano, Queue Harbor, Tree Kingdom, BST Castle BOSS -->
+  <!-- Linked Lake (World 11) -->
+  <g transform="translate(200, 700)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="60" fill="#1e40af" opacity="0.6" />
+    <!-- Lake ripple waves -->
+    <path d="M -60 5 Q 0 15, 60 5" stroke="#3b82f6" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Stack Volcano (World 12) -->
+  <g transform="translate(420, 675)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="115" ry="60" fill="#7f1d1d" opacity="0.8" />
+    <!-- Volcano slopes -->
+    <polygon points="-65,40 0,-30 65,40" fill="#1e293b" />
+    <!-- Lava mouth -->
+    <ellipse cx="0" cy="-30" rx="15" ry="5" fill="#ef4444" />
+  </g>
+
+  <!-- Queue Harbor (World 13) -->
+  <g transform="translate(625, 700)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#0ea5e9" opacity="0.5" />
+    <!-- Dock planks -->
+    <rect x="-30" y="10" width="60" height="6" fill="#78350f" />
+  </g>
+
+  <!-- Tree Kingdom (World 14) -->
+  <g transform="translate(830, 700)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="105" ry="50" fill="#065f46" opacity="0.75" />
+    <circle cx="-20" cy="-10" r="22" fill="#047857" />
+    <circle cx="20" cy="-15" r="26" fill="#065f46" />
+  </g>
+
+  <!-- BST Castle BOSS (World 15) -->
+  <g transform="translate(1130, 715)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="20" rx="130" ry="65" fill="#27272a" opacity="0.8" />
+    <!-- Large castle keep -->
+    <rect x="-40" y="-20" width="80" height="50" fill="#3f3f46" />
+    <polygon points="-45,-20 0,-50 45,-20" fill="#991b1b" />
+  </g>
+
+  <!-- Fourth row: DP Temple BOSS, Backtracking Jungle, Graph Empire, Greedy Desert, Heap Mine -->
+  <!-- DP Temple BOSS (World 20) -->
+  <g transform="translate(1130, 955)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="20" rx="125" ry="65" fill="#991b1b" opacity="0.65" />
+    <!-- Temple Pagoda roofs -->
+    <path d="M -25 10 Q 0 -5, 25 10 L 20 20 Q 0 10, -20 20 Z" fill="#7f1d1d" />
+    <rect x="-12" y="-25" width="24" height="20" fill="#1e293b" />
+  </g>
+
+  <!-- Backtracking Jungle (World 19) -->
+  <g transform="translate(830, 980)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="50" fill="#022c22" opacity="0.75" />
+    <!-- Jungle trees canopy -->
+    <circle cx="-25" cy="-5" r="24" fill="#047857" />
+    <circle cx="20" cy="-10" r="28" fill="#065f46" />
+  </g>
+
+  <!-- Graph Empire (World 18) -->
+  <g transform="translate(615, 875)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#312e81" opacity="0.7" />
+    <!-- Floating cliffs spikes -->
+    <polygon points="-40,15 0,-15 40,15" fill="#1e1b4b" />
+  </g>
+
+  <!-- Greedy Desert (World 17) -->
+  <g transform="translate(400, 915)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="55" fill="#d97706" opacity="0.55" />
+    <!-- Dunes & Pyramids -->
+    <polygon points="-45,30 -15,-5 15,30" fill="#b45309" stroke="#78350f" stroke-width="1.5" />
+    <polygon points="-5,35 25,0 55,35" fill="#d97706" />
+  </g>
+
+  <!-- Heap Mine (World 16) -->
+  <g transform="translate(180, 945)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="105" ry="50" fill="#78350f" opacity="0.5" />
+    <!-- Cave entrance portal -->
+    <rect x="-20" y="-5" width="40" height="30" rx="2" fill="#1c1917" />
+    <path d="M -20 -5 L 20 -5" stroke="#78350f" stroke-width="3" />
+  </g>
+
+  <!-- Fifth row: Bit Caverns, Advanced Citadel, Algorithm Galaxy, Interview Arena, Grand Master Galaxy BOSS -->
+  <!-- Bit Caverns (World 21) -->
+  <g transform="translate(400, 1140)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="105" ry="50" fill="#115e59" opacity="0.6" />
+    <!-- Crystal clusters -->
+    <polygon points="-25,15 -15,-15 -5,15" fill="#14b8a6" />
+    <polygon points="5,15 15,-20 25,15" fill="#2dd4bf" />
+  </g>
+
+  <!-- Advanced Citadel (World 22) -->
+  <g transform="translate(550, 1140)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="100" ry="50" fill="#1e3a8a" opacity="0.65" />
+    <!-- Futuristic spires -->
+    <rect x="-30" y="-15" width="60" height="35" fill="#1e293b" rx="2" />
+    <line x1="-20" y1="10" x2="20" y2="10" stroke="#3b82f6" stroke-width="2" />
+  </g>
+
+  <!-- Algorithm Galaxy (World 23) -->
+  <g transform="translate(715, 1100)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="105" ry="50" fill="#581c87" opacity="0.6" />
+    <!-- Floating meteor shards -->
+    <polygon points="-40,-15 -25,-10 -35,5" fill="#a855f7" />
+    <polygon points="35,15 45,25 25,30" fill="#3b82f6" />
+  </g>
+
+  <!-- Interview Arena (World 24) -->
+  <g transform="translate(920, 1170)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="15" rx="110" ry="50" fill="#3f3f46" opacity="0.75" />
+    <!-- Coliseum circular wall -->
+    <ellipse cx="0" cy="10" rx="60" ry="25" fill="#18181b" stroke="#52525b" stroke-width="3" />
+  </g>
+
+  <!-- Grand Master Galaxy FINAL BOSS (World 25) -->
+  <g transform="translate(1130, 1140)" filter="url(#island-shadow)">
+    <ellipse cx="0" cy="20" rx="130" ry="70" fill="#6d28d9" opacity="0.8" />
+    <!-- Swirling cosmic vortex portal ring -->
+    <circle cx="0" cy="5" r="55" fill="none" stroke="#f59e0b" stroke-width="6" opacity="0.8" filter="url(#glow)" />
+    <circle cx="0" cy="5" r="32" fill="none" stroke="#c084fc" stroke-width="4" opacity="0.6" filter="url(#glow)" />
+  </g>
+</svg>
