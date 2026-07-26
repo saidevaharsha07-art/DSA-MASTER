@@ -1,7 +1,18 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LearnPage() {
-  // Redirect to the first pattern in the curriculum
-  // In a real app, this would query the memory engine for the user's current active pattern.
-  redirect('/topic/prefix-sum');
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/journey');
+  }, [router]);
+
+  return (
+    <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
+      Redirecting to Learning Journey...
+    </div>
+  );
 }

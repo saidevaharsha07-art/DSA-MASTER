@@ -1,143 +1,121 @@
 'use client';
 
-import React, { useState } from 'react';
-import { curriculumEngine } from '@/src/engines/curriculum';
-import { memoryEngine } from '@/src/engines/memory';
-import { Network, Book, FileText } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { BookOpen, FileText, Search } from 'lucide-react';
+import { CurriculumRepository } from '@/src/curriculum/repository';
 
-export default function KnowledgePage() {
-  const [activeTab, setActiveTab] = useState<'official' | 'my-notes'>('official');
-  const allPatterns = curriculumEngine.getAllPatterns();
-  
+// Import AAA Knowledge Components for Level 1 Kingdom Selection Screen
+import { KnowledgeHero } from '@/components/knowledge/KnowledgeHero';
+import { KingdomGrid } from '@/components/knowledge/KingdomGrid';
+import { KnowledgeGraphNodes } from '@/components/knowledge/KnowledgeGraphNodes';
+import { MyNotesEditor } from '@/components/knowledge/MyNotesEditor';
+
+export default function KnowledgeCodexPage() {
+  const [activeTab, setActiveTab] = useState<'kingdoms' | 'my-notes'>('kingdoms');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [bookmarkedPatternIds, setBookmarkedPatternIds] = useState<string[]>(['pattern.array-fundamentals', 'pattern.sliding-window']);
+
+  // Master Categories (All 25 Kingdoms)
+  const allCategories = useMemo(() => CurriculumRepository.getAllCategories(), []);
+
+  const handleToggleBookmark = (patternId: string) => {
+    if (bookmarkedPatternIds.includes(patternId)) {
+      setBookmarkedPatternIds(bookmarkedPatternIds.filter((id) => id !== patternId));
+    } else {
+      setBookmarkedPatternIds([...bookmarkedPatternIds, patternId]);
+    }
+  };
+
   return (
-    <div className="layout-stack" style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', height: 'calc(100vh - 140px)' }}>
-      <div className="layout-stack-sm">
-        <h1 className="title" style={{ fontSize: '36px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <Network style={{ color: '#c084fc' }} size={32} />
-          Knowledge Graph 2.0
-        </h1>
-        <p className="muted" style={{ fontSize: '16px' }}>
-          Your integrated Second Brain. Review official curriculum notes and your personal insights.
-        </p>
+    <div style={{ width: '100%', minHeight: '100vh', background: '#09090B', display: 'flex', flexDirection: 'column', gap: '28px', padding: '0 24px 40px 24px', fontFamily: 'var(--font-sans, sans-serif)' }}>
+      
+      {/* 1. AAA HERO SECTION */}
+      <KnowledgeHero />
+
+      {/* 2. TAB SELECTION BAR */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '12px' }}>
+        <button
+          type="button"
+          onClick={() => setActiveTab('kingdoms')}
+          style={{
+            padding: '10px 20px',
+            borderRadius: '12px',
+            background: activeTab === 'kingdoms' ? 'linear-gradient(135deg, #A855F7, #7E22CE)' : 'rgba(255,255,255,0.04)',
+            border: activeTab === 'kingdoms' ? 'none' : '1px solid rgba(255,255,255,0.08)',
+            color: activeTab === 'kingdoms' ? '#FFFFFF' : '#94A3B8',
+            fontSize: '13px',
+            fontWeight: 800,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            boxShadow: activeTab === 'kingdoms' ? '0 4px 16px rgba(168, 85, 247, 0.4)' : 'none',
+          }}
+        >
+          <BookOpen size={16} /> 25 Kingdoms Codex
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('my-notes')}
+          style={{
+            padding: '10px 20px',
+            borderRadius: '12px',
+            background: activeTab === 'my-notes' ? 'linear-gradient(135deg, #A855F7, #7E22CE)' : 'rgba(255,255,255,0.04)',
+            border: activeTab === 'my-notes' ? 'none' : '1px solid rgba(255,255,255,0.08)',
+            color: activeTab === 'my-notes' ? '#FFFFFF' : '#94A3B8',
+            fontSize: '13px',
+            fontWeight: 800,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            boxShadow: activeTab === 'my-notes' ? '0 4px 16px rgba(168, 85, 247, 0.4)' : 'none',
+          }}
+        >
+          <FileText size={16} /> My Personal Notes
+        </button>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: '1fr 400px', gap: '32px', flex: 1, minHeight: 0 }}>
-        {/* Left Column: Notes List */}
-        <div className="panel" style={{ padding: 0, display: 'flex', flexDirection: 'column' }}>
-          <div className="panel-header" style={{ padding: '24px 24px 0', marginBottom: '16px' }}>
-            <div className="layout-row" style={{ gap: '24px', borderBottom: '1px solid var(--border)', width: '100%', paddingBottom: '16px' }}>
-              <button 
-                onClick={() => setActiveTab('official')}
-                style={{ 
-                  background: 'none', border: 'none', color: activeTab === 'official' ? 'var(--foreground)' : 'var(--muted)', 
-                  fontWeight: activeTab === 'official' ? 600 : 400, fontSize: '14px', cursor: 'pointer',
-                  display: 'flex', alignItems: 'center', gap: '8px'
-                }}
-              >
-                <Book size={16} /> Official Notes
-              </button>
-              <button 
-                onClick={() => setActiveTab('my-notes')}
-                style={{ 
-                  background: 'none', border: 'none', color: activeTab === 'my-notes' ? 'var(--foreground)' : 'var(--muted)', 
-                  fontWeight: activeTab === 'my-notes' ? 600 : 400, fontSize: '14px', cursor: 'pointer',
-                  display: 'flex', alignItems: 'center', gap: '8px'
-                }}
-              >
-                <FileText size={16} /> My Notes
-              </button>
-            </div>
+      {activeTab === 'kingdoms' ? (
+        <>
+          {/* 3. SEARCH BAR */}
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <Search size={18} style={{ position: 'absolute', left: '16px', color: '#C084FC', pointerEvents: 'none' }} />
+            <input
+              type="text"
+              placeholder="Search topics, patterns, algorithms, or kingdoms (e.g. Array, Sliding Window, DP)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '14px 16px 14px 48px',
+                borderRadius: '16px',
+                border: '1px solid rgba(168, 85, 247, 0.3)',
+                background: '#11111A',
+                color: '#FFFFFF',
+                fontSize: '14px',
+                outline: 'none',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+              }}
+            />
           </div>
-          
-          <div style={{ padding: '0 24px 24px', overflowY: 'auto', flex: 1 }} className="layout-stack-sm">
-            {activeTab === 'official' ? (
-              allPatterns.map(pattern => (
-                <div key={pattern.id} className="card" style={{ padding: '20px' }}>
-                  <div className="layout-row-between" style={{ marginBottom: '12px' }}>
-                    <h3 className="title" style={{ fontSize: '18px', margin: 0 }}>{pattern.title}</h3>
-                    <Link href={`/topic/${pattern.slug}`} className="pill" style={{ color: 'var(--primary)' }}>Go to Topic</Link>
-                  </div>
-                  
-                  {pattern.resources.notes.markdownSections.map((section, idx) => (
-                     <div key={idx} style={{ marginBottom: '16px', background: 'var(--background)', padding: '16px', borderRadius: '8px' }}>
-                        <h4 style={{ margin: '0 0 8px 0', fontSize: '14px' }}>{section.title}</h4>
-                        <p className="muted" style={{ fontSize: '13px', margin: 0, lineHeight: 1.6 }}>{section.content}</p>
-                     </div>
-                  ))}
-                  
-                  {pattern.resources.notes.markdownSections.length === 0 && (
-                     <p className="muted" style={{ fontSize: '14px' }}>No official notes provided for this pattern yet.</p>
-                  )}
-                </div>
-              ))
-            ) : (
-              <div style={{ textAlign: 'center', padding: '48px', color: 'var(--muted)', fontSize: '14px' }}>
-                You have not saved any personal notes yet.
-              </div>
-            )}
-          </div>
-        </div>
 
-        {/* Right Column: Knowledge Graph Preview */}
-        <div className="panel" style={{ background: 'linear-gradient(to bottom, rgba(168,85,247,0.05), transparent)', borderColor: 'rgba(168,85,247,0.2)' }}>
-          <div className="panel-header">
-            <h3 className="panel-title"><Network size={16} style={{ color: '#c084fc' }} /> Graph Visualization</h3>
-          </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: '32px' }}>
-             
-             {/* Dynamic Graph rendering based on Memory Engine */}
-             <div style={{ position: 'relative', width: '300px', height: '300px' }}>
-               {/* Connections */}
-               <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-                  <line x1="150" y1="50" x2="80" y2="150" stroke="var(--border)" strokeWidth="2" />
-                  <line x1="150" y1="50" x2="220" y2="150" stroke="var(--border)" strokeWidth="2" />
-               </svg>
-               
-               {/* Nodes */}
-               {allPatterns.slice(0, 3).map((pattern, idx) => {
-                 const mastery = memoryEngine.getPatternMastery(pattern.id);
-                 let nodeColor = 'var(--border)';
-                 let label = 'Locked';
-                 
-                 if (mastery === 100) { nodeColor = '#10b981'; label = 'Mastered'; }
-                 else if (mastery > 0) { nodeColor = '#3b82f6'; label = 'Learning'; }
-                 
-                 const positions = [
-                   { top: '30px', left: '150px' },
-                   { top: '150px', left: '80px' },
-                   { top: '150px', left: '220px' }
-                 ];
+          {/* 4. LEVEL 1: 25 KINGDOMS GRID (5 Columns x 5 Rows) */}
+          <KingdomGrid
+            categories={allCategories}
+            searchQuery={searchQuery}
+          />
 
-                 return (
-                   <div key={pattern.id} style={{ 
-                     position: 'absolute', 
-                     top: positions[idx].top, 
-                     left: positions[idx].left, 
-                     transform: 'translate(-50%, -50%)',
-                     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px'
-                   }}>
-                     <div style={{
-                       width: '40px', height: '40px', borderRadius: '50%', background: 'var(--card)',
-                       border: `3px solid ${nodeColor}`, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                       boxShadow: mastery > 0 ? `0 0 15px ${nodeColor}40` : 'none'
-                     }}>
-                     </div>
-                     <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--foreground)' }}>{pattern.title}</span>
-                     <span className="pill" style={{ fontSize: '10px', background: `${nodeColor}20`, color: nodeColor, border: 'none' }}>
-                       {label}
-                     </span>
-                   </div>
-                 );
-               })}
-             </div>
-             
-             <p className="muted" style={{ fontSize: '14px', maxWidth: '250px', margin: 0 }}>
-               Your knowledge graph evolves dynamically as you learn.
-             </p>
-          </div>
-        </div>
-      </div>
+          {/* 5. CONNECTED KNOWLEDGE PROGRESSION PIPELINE */}
+          <KnowledgeGraphNodes />
+        </>
+      ) : (
+        /* MY PERSONAL NOTES TAB */
+        <MyNotesEditor />
+      )}
+
     </div>
   );
 }

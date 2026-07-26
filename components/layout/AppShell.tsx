@@ -154,7 +154,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </main>
       </div>
 
-      {!pathname.startsWith("/settings") && <ContextPanel />}
+      {!pathname.startsWith("/settings") && !pathname.startsWith("/practice") && !pathname.startsWith("/revision") && !pathname.startsWith("/knowledge") && <ContextPanel />}
       <CommandPalette />
       <MobileNav pathname={pathname} />
     </div>

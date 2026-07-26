@@ -1,84 +1,206 @@
 'use client';
 
-import React from 'react';
-import { memoryEngine } from '@/src/engines/memory';
-import { Clock, AlertCircle, Calendar, Play, Brain } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Activity, ShieldCheck, Zap, Flame, Play, AlertCircle } from 'lucide-react';
 import { useSettings } from '@/src/context/SettingsContext';
+import { useToast } from '@/src/context/ToastContext';
 
-export default function RevisionPage() {
+// Import Modular Revision Engine & Components
+import { revisionEngine } from '@/src/engines/revision';
+import { RevisionStatCards } from '@/components/revision/RevisionStatCards';
+import { RevisionQueueTable } from '@/components/revision/RevisionQueueTable';
+import { KingdomMasteryPanel } from '@/components/revision/KingdomMasteryPanel';
+import { RevisionCalendar } from '@/components/revision/RevisionCalendar';
+import { RevisionTimeline } from '@/components/revision/RevisionTimeline';
+
+export default function MemorySanctuaryPage() {
   const { settings } = useSettings();
-  const { revisionPerDay, memoryStrength, reviewAlgorithm, reviewOrder } = settings.revision;
+  const { toast } = useToast();
   const { masteryThreshold } = settings.learningEngine;
 
-  const dueRevisions = memoryEngine.getDueRevisions();
+  // Reactive state for review submissions & filters
+  const [refreshCount, setRefreshCount] = useState<number>(0);
+  const [selectedDateFilter, setSelectedDateFilter] = useState<string | null>(null);
+
+  // Fetch 100% Dynamic Engine Data
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const dueTodayProblems = useMemo(() => revisionEngine.getDueTodayProblems(), [refreshCount]);
+  const upcomingQueue = useMemo(() => {
+    const queue = revisionEngine.getUpcomingQueue();
+    if (selectedDateFilter) {
+      return queue.filter((p) => p.revisionData.nextReview && p.revisionData.nextReview.split('T')[0] === selectedDateFilter);
+    }
+    return queue;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [refreshCount, selectedDateFilter]);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const kingdoms = useMemo(() => revisionEngine.getKingdomMasteries(), [refreshCount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const streakStats = useMemo(() => revisionEngine.getStreakStats(), [refreshCount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const xpStats = useMemo(() => revisionEngine.getXpStats(), [refreshCount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const timelineStages = useMemo(() => revisionEngine.getTimelineStages(), [refreshCount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const rewards = useMemo(() => revisionEngine.getUnlockedRewards(), [refreshCount]);
+
+  const nextReward = useMemo(() => {
+    return rewards.find((r) => !r.unlocked) || rewards[rewards.length - 1];
+  }, [rewards]);
+
+  // Handle Review Completion
+  const handleReviewCompleted = (problemId: string, rating: 'easy' | 'medium' | 'hard') => {
+    const result = revisionEngine.recordReview(problemId, rating);
+    toast(`Review Recorded! +${result.xpEarned} XP awarded! Next review in ${result.updated.interval} days.`, 'success');
+    setRefreshCount((prev) => prev + 1);
+  };
+
+  const handleReviewNowClick = () => {
+    const el = document.getElementById('due-today-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <div className="layout-stack" style={{ maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
-      <div className="layout-stack-sm" style={{ marginBottom: '24px' }}>
-        <h1 className="title" style={{ fontSize: '36px', display: 'flex', alignItems: 'center', gap: '12px', color: "var(--text-primary)" }}>
-          <Clock style={{ color: 'var(--primary)' }} size={32} />
-          Revision Center
-        </h1>
-        <p className="muted" style={{ fontSize: '16px', color: "var(--text-secondary)" }}>
-          Spaced repetition for DSA. Algorithm: <strong style={{ color: "var(--primary)", textTransform: "capitalize" }}>{reviewAlgorithm}</strong> ({reviewOrder} order). Target mastery threshold: <strong>{masteryThreshold}%</strong>.
-        </p>
+    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '28px', padding: '0 24px 40px 24px', fontFamily: 'var(--font-sans, sans-serif)' }}>
+      
+      {/* ==================================================== */}
+      {/* 1. HERO SECTION (320px Height with Banner Artwork)   */}
+      {/* ==================================================== */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        style={{
+          position: 'relative',
+          height: '320px',
+          borderRadius: '24px',
+          overflow: 'hidden',
+          border: '1px solid rgba(168, 85, 247, 0.3)',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(168, 85, 247, 0.1)',
+          background: 'linear-gradient(135deg, rgba(13, 10, 25, 0.98) 0%, rgba(26, 16, 51, 0.95) 50%, rgba(13, 10, 25, 0.98) 100%)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        {/* Background Widescreen Concept Art Banner */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          width: '58%',
+          backgroundImage: 'url(/images/memory_sanctuary_banner.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center right',
+          opacity: 0.65,
+          maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)',
+          WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Hero Left Content Area */}
+        <div style={{ position: 'relative', zIndex: 10, padding: '36px 44px', maxWidth: '640px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+            <div style={{ padding: '8px', borderRadius: '12px', background: 'rgba(168, 85, 247, 0.2)', border: '1px solid rgba(168, 85, 247, 0.4)', boxShadow: '0 0 16px rgba(168, 85, 247, 0.3)' }}>
+              <Brain size={24} style={{ color: '#C084FC' }} />
+            </div>
+            <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#A855F7', background: 'rgba(168, 85, 247, 0.15)', padding: '4px 12px', borderRadius: '99px', border: '1px solid rgba(168, 85, 247, 0.3)' }}>
+              Spaced Repetition Protocol
+            </span>
+          </div>
+
+          <h1 style={{ margin: 0, fontSize: '38px', fontWeight: 900, color: '#FFFFFF', letterSpacing: '-0.02em', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
+            Revision Center
+          </h1>
+          <p style={{ margin: '8px 0 20px 0', fontSize: '14px', color: '#CBD5E1', lineHeight: '1.5' }}>
+            Strengthen your memory using spaced repetition. Consolidate DSA patterns before cognitive decay sets in.
+          </p>
+
+          {/* Dynamic Hero Stats Strip */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: 'rgba(20, 16, 38, 0.75)', backdropFilter: 'blur(12px)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <Flame size={15} style={{ color: '#EF4444' }} />
+              <div>
+                <span style={{ display: 'block', fontSize: '9px', textTransform: 'uppercase', color: '#94A3B8', fontWeight: 700 }}>Current Streak</span>
+                <span style={{ fontSize: '12px', fontWeight: 800, color: '#FCA5A5' }}>{streakStats.currentStreak} Days</span>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: 'rgba(20, 16, 38, 0.75)', backdropFilter: 'blur(12px)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <Zap size={15} style={{ color: '#F59E0B' }} />
+              <div>
+                <span style={{ display: 'block', fontSize: '9px', textTransform: 'uppercase', color: '#94A3B8', fontWeight: 700 }}>Total XP</span>
+                <span style={{ fontSize: '12px', fontWeight: 800, color: '#FDE68A' }}>{xpStats.totalXp} XP</span>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: 'rgba(20, 16, 38, 0.75)', backdropFilter: 'blur(12px)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <AlertCircle size={15} style={{ color: '#C084FC' }} />
+              <div>
+                <span style={{ display: 'block', fontSize: '9px', textTransform: 'uppercase', color: '#94A3B8', fontWeight: 700 }}>Due Today</span>
+                <span style={{ fontSize: '12px', fontWeight: 800, color: '#C084FC' }}>{dueTodayProblems.length} Items</span>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: 'rgba(20, 16, 38, 0.75)', backdropFilter: 'blur(12px)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <ShieldCheck size={15} style={{ color: '#38BDF8' }} />
+              <div>
+                <span style={{ display: 'block', fontSize: '9px', textTransform: 'uppercase', color: '#94A3B8', fontWeight: 700 }}>Current Level</span>
+                <span style={{ fontSize: '12px', fontWeight: 800, color: '#38BDF8' }}>Lvl {xpStats.currentLevel} ({xpStats.levelTitle})</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ==================================================== */}
+      {/* 2. DYNAMIC STAT CARDS (STREAK, XP, DUE TODAY, REWARD) */}
+      {/* ==================================================== */}
+      <RevisionStatCards
+        dueTodayCount={dueTodayProblems.length}
+        streakStats={streakStats}
+        xpStats={xpStats}
+        nextReward={nextReward}
+        onReviewClick={handleReviewNowClick}
+      />
+
+      {/* ==================================================== */}
+      {/* 3. MAIN DASHBOARD: REVISION QUEUE & KINGDOM MASTERY   */}
+      {/* ==================================================== */}
+      <div id="due-today-section" style={{ display: 'grid', gridTemplateColumns: '65% 35%', gap: '28px' }}>
+        
+        {/* LEFT (65%): DYNAMIC REVISION QUEUE */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <RevisionQueueTable
+            problems={upcomingQueue}
+            onReviewCompleted={handleReviewCompleted}
+            selectedDateFilter={selectedDateFilter}
+          />
+        </div>
+
+        {/* RIGHT (35%): DYNAMIC KINGDOM MASTERY PANEL (25 KINGDOMS) */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <KingdomMasteryPanel kingdoms={kingdoms} />
+        </div>
+
       </div>
 
-      <div className="dashboard-grid">
-         {/* Due Today Queue */}
-         <div className="layout-stack">
-            <div className="row" style={{ marginBottom: '12px' }}>
-               <h3 style={{ margin: 0, fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)' }}>
-                  <AlertCircle size={20} color="var(--primary)" />
-                  Due Today ({dueRevisions.length || revisionPerDay})
-               </h3>
-            </div>
-            
-            <div className="layout-stack-sm">
-               {dueRevisions.length === 0 ? (
-                  <div className="card" style={{ padding: '40px', textAlign: 'center', background: "var(--card)", border: "1px solid var(--border)" }}>
-                     <Brain size={32} style={{ color: "var(--primary)", margin: "0 auto 12px" }} />
-                     <h3 className="title" style={{ fontSize: '18px', marginBottom: '8px', color: "var(--text-primary)" }}>You are all caught up!</h3>
-                     <p className="muted" style={{ color: "var(--text-secondary)" }}>Memory strength target is currently <strong>{memoryStrength}%</strong>.</p>
-                  </div>
-               ) : (
-                  dueRevisions.map(pattern => (
-                     <div key={pattern.id} className="card layout-row-between" style={{ padding: '20px', background: "var(--card)", border: "1px solid var(--border)" }}>
-                        <div>
-                           <h3 className="title" style={{ fontSize: '18px', margin: '0 0 8px 0', color: "var(--text-primary)" }}>{pattern.title}</h3>
-                           <p className="muted" style={{ margin: 0, fontSize: '14px', color: "var(--text-secondary)" }}>Retention at {memoryStrength}%</p>
-                        </div>
-                        <Link href={`/topic/${pattern.slug}`} className="button ghost" style={{ color: "var(--primary)" }}>
-                           <Play size={16} style={{ marginRight: '8px' }} /> Review
-                        </Link>
-                     </div>
-                  ))
-               )}
-            </div>
-         </div>
+      {/* ==================================================== */}
+      {/* 4. DYNAMIC REVISION CALENDAR                         */}
+      {/* ==================================================== */}
+      <RevisionCalendar
+        selectedDateFilter={selectedDateFilter}
+        onSelectDateFilter={(dateIso) => setSelectedDateFilter(dateIso)}
+      />
 
-         {/* Upcoming Overview */}
-         <div className="layout-stack">
-            <div className="card layout-stack-sm" style={{ background: 'var(--card)', border: '1px solid var(--primary-soft)' }}>
-               <h3 className="title" style={{ fontSize: '18px', margin: '0 0 16px 0', display: 'flex', alignItems: 'center', gap: '8px', color: "var(--text-primary)" }}>
-                 <Calendar size={20} style={{ color: 'var(--primary)' }} /> Upcoming Schedule
-               </h3>
-               <div className="layout-row-between" style={{ padding: '12px', background: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                  <span className="muted" style={{ color: "var(--text-secondary)" }}>Tomorrow</span>
-                  <span className="pill" style={{ color: "var(--primary)" }}>{Math.ceil(revisionPerDay * 0.4)} patterns</span>
-               </div>
-               <div className="layout-row-between" style={{ padding: '12px', background: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                  <span className="muted" style={{ color: "var(--text-secondary)" }}>In 3 Days</span>
-                  <span className="pill" style={{ color: "var(--primary)" }}>{Math.ceil(revisionPerDay * 0.8)} patterns</span>
-               </div>
-               <div className="layout-row-between" style={{ padding: '12px', background: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                  <span className="muted" style={{ color: "var(--text-secondary)" }}>In 1 Week</span>
-                  <span className="pill" style={{ color: "var(--primary)" }}>{revisionPerDay * 2} patterns</span>
-               </div>
-            </div>
-         </div>
-      </div>
+      {/* ==================================================== */}
+      {/* 5. DYNAMIC EBBINGHAUS REVISION TIMELINE               */}
+      {/* ==================================================== */}
+      <RevisionTimeline stages={timelineStages} />
+
     </div>
   );
 }

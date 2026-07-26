@@ -1,0 +1,46 @@
+import { Achievement } from '../player/types';
+
+export const DEFAULT_ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 'ach_first_blood',
+    title: 'First Blood',
+    description: 'Solve your very first DSA problem in the Practice Arena.',
+    category: 'Problem Solving',
+    icon: '⚔️',
+    xpReward: 100,
+    coinReward: 25,
+    unlocked: true,
+    unlockedAt: '2026-07-01',
+  },
+  {
+    id: 'ach_array_master',
+    title: 'Array Master',
+    description: 'Complete all 25 patterns inside the Kingdom of Beginnings.',
+    category: 'Kingdom Completion',
+    icon: '🏰',
+    xpReward: 500,
+    coinReward: 100,
+    unlocked: false,
+  },
+  {
+    id: 'ach_dp_legend',
+    title: 'DP Legend',
+    description: 'Master all Dynamic Programming optimization patterns.',
+    category: 'Pattern Mastery',
+    icon: '🔮',
+    xpReward: 1000,
+    coinReward: 250,
+    unlocked: false,
+  },
+  {
+    id: 'ach_perfect_week',
+    title: 'Perfect Week',
+    description: 'Maintain a 7-day practice streak without missing a day.',
+    category: 'Daily Streak',
+    icon: '🔥',
+    xpReward: 300,
+    coinReward: 75,
+    unlocked: true,
+    unlockedAt: '2026-07-15',
+  },
+];
