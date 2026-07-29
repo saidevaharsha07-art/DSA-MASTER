@@ -5,15 +5,10 @@ import { useEffect, useState } from "react";
 import {
   LayoutDashboard,
   Code2,
-  Map,
   BookOpen,
   RotateCcw,
-  Timer,
-  Users,
   BarChart3,
-  Trophy,
   Settings,
-  UserRound,
   Compass,
   Sparkles,
 } from "lucide-react";
@@ -22,9 +17,8 @@ import { useCodeforces } from "@/hooks/use-codeforces";
 import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { MobileNav } from "./MobileNav";
-import { ContextPanel } from "./ContextPanel";
 import { CommandPalette } from "./CommandPalette";
-import { layout } from "@/src/design";
+import { OracleMentorModal } from "@/components/ai/oracle/OracleMentorModal";
 
 const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],
@@ -32,7 +26,6 @@ const nav = [
   ["Learn", "/learn", BookOpen],
   ["Practice", "/practice", Code2],
   ["Revision", "/revision", RotateCcw],
-  ["Knowledge", "/knowledge", Map],
   ["Analytics", "/analytics", BarChart3],
   ["AI Mentor", "/mentor", Sparkles],
   ["Settings", "/settings", Settings],
@@ -40,8 +33,8 @@ const nav = [
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const { state: roadmapState, ready: roadmapReady } = useRoadmap();
-  const { state: codeforcesState, ready: codeforcesReady } = useCodeforces();
+  const { state: roadmapState } = useRoadmap();
+  const { state: codeforcesState } = useCodeforces();
 
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
   const [sidebarMobileOpen, setSidebarMobileOpen] = useState(false);
@@ -148,14 +141,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <main style={{
           flex: 1,
           overflowY: 'auto',
-          paddingBottom: '80px', // For mobile nav padding
+          paddingBottom: '80px',
         }}>
           {children}
         </main>
       </div>
 
-      {!pathname.startsWith("/settings") && !pathname.startsWith("/practice") && !pathname.startsWith("/revision") && !pathname.startsWith("/knowledge") && <ContextPanel />}
       <CommandPalette />
+      <OracleMentorModal />
       <MobileNav pathname={pathname} />
     </div>
   );

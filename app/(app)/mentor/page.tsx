@@ -214,8 +214,8 @@ export default function MentorPage() {
         </div>
       </motion.div>
 
-      {/* Row 1: Observation (1fr) | Focus (1fr) | Coach Sidebar (340px) */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 340px", gap: "20px", alignItems: "stretch" }}>
+      {/* Row 1: Observation (1fr) | Focus (1fr) | Coach Sidebar (1fr) */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", alignItems: "stretch" }}>
         
         {/* Today's Observation */}
         <div style={{ padding: "18px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px" }}>

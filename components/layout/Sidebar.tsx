@@ -65,7 +65,7 @@ export function Sidebar({ isMobileOpen, onMobileClose, isExpanded, onToggleExpan
 
             <nav className="nav" style={{ padding: `0 ${spacing.sm}`, display: 'flex', flexDirection: 'column', gap: spacing.xs }}>
               {nav.map(([name, href, Icon]) => {
-                const active = pathname === href || pathname.startsWith(href + '/');
+                const active = pathname === href || (href !== '/' && pathname.startsWith(href + '/'));
                 return (
                   <div key={href} style={{ position: 'relative' }} className="group">
                     <Link

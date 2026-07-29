@@ -24,6 +24,7 @@ import { STRINGS_PROBLEMS } from './strings';
 import { MATRIX_PROBLEMS } from './matrix';
 import { MATH_NUMBER_THEORY_PROBLEMS } from './math-number-theory';
 import { ADVANCED_ALGORITHMS_PROBLEMS } from './advanced-algorithms';
+import { CODEFORCES_PROBLEMS } from './codeforces';
 
 export const ALL_PROBLEMS: ProblemModel[] = [
   ...BASIC_ARRAYS_PROBLEMS,
@@ -51,6 +52,7 @@ export const ALL_PROBLEMS: ProblemModel[] = [
   ...MATRIX_PROBLEMS,
   ...MATH_NUMBER_THEORY_PROBLEMS,
   ...ADVANCED_ALGORITHMS_PROBLEMS,
+  ...CODEFORCES_PROBLEMS,
 ].map((p, index) => ({
   ...p,
   order: p.order ?? index + 1,
