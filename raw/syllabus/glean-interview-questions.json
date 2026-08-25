@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "glean-interview-questions",
+  "name": "Glean Coding Interview Questions",
+  "title": "Glean Coding Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Glean online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/glean-interview-questions/GLEANCON01/problems/GLEAN01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Glean Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Glean Coding Questions",
+          "submodule_id": 9477,
+          "contest_code": "GLEANCON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/glean-interview-questions/GLEANCON01/problems/GLEAN01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "33557",
+              "code": "GLEAN01",
+              "name": "Chocolate Division",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN02",
+              "name": "Street Housing Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN03",
+              "name": "Valid Parentheses String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN04",
+              "name": "Fractional Knapsack",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN05",
+              "name": "Hamiltonian Path Detection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN06",
+              "name": "Nuts and Bolts Matching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN07",
+              "name": "Count Array Triplets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33557",
+              "code": "GLEAN08",
+              "name": "Round to Nearest Ten",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 8,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 454,
+  "path_review": {
+    "rating": 5,
+    "users": 3
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

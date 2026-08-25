@@ -1,0 +1,123 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMBDAY",
+  "contest_category": "6",
+  "problem_name": "Chota Mouse and his birthday cake",
+  "intended_contest_code": null,
+  "body": "<p>\nToday is <i>Chota Mouse's</i> birthday. He wants to celebrate it in a grand style. His brother <i>Mota Chuha</i> immediately contacted a nearby bakery for an online delivery of a cake. The cake is of rectangular shape with height <b>H</b> and width <b>W</b>. <i>Chota Mouse</i> has invited <b>F</b> of his friends to the party. So, he wants to make <b>F</b> vertical cuts at distinct positions on the cake, so that the cake will be divided into <b>F + 1</b> non-zero area parts (<b>F</b> for his friends and one for himself).\n</p>\n<p>\nLet us assume the cake is placed along the coordinate axis with its left end at <b>x</b> coordinate 0 and right end at <b>W</b>. Please see the image in the examples for details.<br />\nHe will make cuts at positions <b>P<sub>i</sub></b> such that <b>P<sub>i</sub></b> is strictly greater than zero and strictly less than <b>W</b>.<br />\nAlso note that, all the positions for cutting are distinct.\n</p>\n<p>\n<i>Chota Mouse</i> is a nice guy. So, he will be keeping the piece with the least area for himself and leave the other pieces for his friends to enjoy.<br />\n<i>Chota Mouse</i> is weak in mathematics, so can you please help him figure out the area of the piece he is going to have?\n</p>\n<h2>Input</h2>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>First line of each test case contains three space separated integers <b>F, H, W</b>.</p>\n<p>Second line of each test case contains <b>F</b> space separated integers, i-th of them denotes <b>P<sub>i</sub></b>.</p>\n<h2>Output</h2>\n<p>For each test case, print a single integer corresponding to the answer of the problem.</p>\n<h2>Constraints</h2>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>F</b> \u2264 <b>500</b></li>\n<li><b>1</b> \u2264 <b>H</b> \u2264 <b>10000</b></li>\n<li><b>F + 1</b> \u2264 <b>W</b> \u2264 <b>10000</b></li>\n<li><b>1</b> \u2264 <b>P<sub>i</sub></b> \u2264 <b>W - 1</b></li>\n</ul>\n<h2>Sample</h2>\n<h3>Input</h3>\n<pre>\n3\n1 1 2\n1\n1 4 5\n3\n2 3 9\n6 2\n</pre><h3>Output</h3>\n<pre>\n1\n8\n6\n</pre><h3>Explanation</h3>\n<p><b>In the first example</b>,<br />\nboth the pieces have same area (i.e. = 1). <br />\n<img height=\"400\" src=\"http://icpc.amrita.ac.in/images_2015/Slide1.jpg\" />\n</p>\n<p><b>In the second example</b>,<br />\nthere are two pieces. First piece has an area of 12, second has an area of 8. So, the answer will be 8. <br />\n<img height=\"400\" src=\"http://icpc.amrita.ac.in/images_2015/Slide2.jpg\" />\n</p>\n<p><b>In the third example</b>,<br />\nthere are three pieces. First piece has an area of 6, second 12, and third 9. So, the answer will be 6.\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **100**\n- **1** \u2264 **F** \u2264 **500**\n- **1** \u2264 **H** \u2264 **10000**\n- **F + 1** \u2264 **W** \u2264 **10000**\n- **1** \u2264 **P<sub>i</sub>** \u2264 **W - 1**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Today is *Chota Mouse's* birthday. He wants to celebrate it in a grand style. His brother *Mota Chuha* immediately contacted a nearby bakery for an online delivery of a cake. The cake is of rectangular shape with height **H** and width **W**. *Chota Mouse* has invited **F** of his friends to the party. So, he wants to make **F** vertical cuts at distinct positions on the cake, so that the cake will be divided into **F + 1** non-zero area parts (**F** for his friends and one for himself).\n\nLet us assume the cake is placed along the coordinate axis with its left end at **x** coordinate 0 and right end at **W**. Please see the image in the examples for details.  \nHe will make cuts at positions **P<sub>i</sub>** such that **P<sub>i</sub>** is strictly greater than zero and strictly less than **W**.  \nAlso note that, all the positions for cutting are distinct.\n\n*Chota Mouse* is a nice guy. So, he will be keeping the piece with the least area for himself and leave the other pieces for his friends to enjoy.  \n*Chota Mouse* is weak in mathematics, so can you please help him figure out the area of the piece he is going to have?\n",
+    "inputFormat": "The first line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nFirst line of each test case contains three space separated integers **F, H, W**.\n\nSecond line of each test case contains **F** space separated integers, i-th of them denotes **P<sub>i</sub>**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print a single integer corresponding to the answer of the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1 1 2\n1\n1 4 5\n3\n2 3 9\n6 2\n",
+        "output": "1\n8\n6\n",
+        "explanation": "**In the first example**,  \nboth the pieces have same area (i.e. = 1).  \n![Image](http://icpc.amrita.ac.in/images_2015/Slide1.jpg)\n\n**In the second example**,  \nthere are two pieces. First piece has an area of 12, second has an area of 8. So, the answer will be 8.  \n![Image](http://icpc.amrita.ac.in/images_2015/Slide2.jpg)\n\n**In the third example**,  \nthere are three pieces. First piece has an area of 6, second 12, and third 9. So, the answer will be 6.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "ad-hoc",
+    "admin2",
+    "greedy"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMBDAY",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

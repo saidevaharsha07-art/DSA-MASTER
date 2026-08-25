@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GENPERM",
+  "contest_category": "6",
+  "problem_name": "Generating A Permutation",
+  "intended_contest_code": null,
+  "body": "<p>For a permutation P = (p<sub>1</sub>, p<sub>2</sub>, ..., p<sub><b>N</b></sub>) of numbers [1, 2, ..., <b>N</b>], we define the function f(P) = max(p<sub>1</sub>, p<sub>2</sub>) + max(p<sub>2</sub>, p<sub>3</sub>) + ... + max(p<sub><b>N</b>-1</sub>, p<sub><b>N</b></sub>).</p>\r\n\r\n<p>You are given <b>N</b> and an integer <b>K</b>. Find and report a permutation P of [1, 2, ..., <b>N</b>] such that f(P) = <b>K</b>, if such a permutation exists.</p>\r\n\r\n<p>Note f([1]) = 0.</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\r\n<li>The only line of each test case consists of two space-separated integers <b>N, K</b> respectively.</li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, if a permutation satisfying the condition exists, output a single line containing <b>N</b> space-separated integers which denotes any such permutation. If no such permutation exists, output a single integer -1 instead.</p>\r\n<p>Use fast I/O methods since the size of the output is large.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 40</li>\r\n<li>1 \u2264 <b>N</b> \u2264 10<sup>5</sup></li>\r\n<li>Sum of <b>N</b> over all test cases in each file \u2264 10<sup>6</sup></li>\r\n<li>0 \u2264 <b>K</b> \u2264 2 * 10<sup>10</sup></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3\r\n4 12\r\n2 2\r\n5 14\r\n\r\n<b>Output:</b>\r\n-1\r\n1 2\r\n5 4 3 2 1\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example 1.</b> There doesn't exist any permutation of numbers [1, 2, 3, 4] that can have its f value equal to 4. Hence answer is -1.</p>\r\n\r\n<p><b>Example 2.</b> The permutations [1, 2] and [2, 1] both have their f values equal to 2. You can print any of these two permutations. </p>\r\n\r\n<p><b>Example 3.</b> The permutation [5, 4, 3, 2, 1]\r\n has f value = max(5, 4) + max(4, 3) + max(3, 2) + max(2, 1) = 5 + 4 + 3 + 2 = 14.</p>\r\n\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- \\( 1 \\leq T \\leq 40 \\)\n- \\( 1 \\leq N \\leq 10^5 \\)\n- Sum of \\( N \\) over all test cases in each file \\( \\leq 10^6 \\)\n- \\( 0 \\leq K \\leq 2 \\times 10^{10} \\)\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "For a permutation \\( P = (p_1, p_2, \\dots, p_N) \\) of numbers \\([1, 2, \\dots, N]\\), we define the function \\( f(P) = \\max(p_1, p_2) + \\max(p_2, p_3) + \\dots + \\max(p_{N-1}, p_N) \\).\n\nYou are given \\( N \\) and an integer \\( K \\). Find and report a permutation \\( P \\) of \\([1, 2, \\dots, N]\\) such that \\( f(P) = K \\), if such a permutation exists.\n\nNote \\( f([1]) = 0 \\).\n",
+    "inputFormat": "- The first line of the input contains an integer \\( T \\) denoting the number of test cases. The description of \\( T \\) test cases follows.\n- The only line of each test case consists of two space-separated integers \\( N, K \\) respectively.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, if a permutation satisfying the condition exists, output a single line containing \\( N \\) space-separated integers which denotes any such permutation. If no such permutation exists, output a single integer -1 instead.\n\nUse fast I/O methods since the size of the output is large.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4 12\n2 2\n5 14\n",
+        "output": "-1\n1 2\n5 4 3 2 1\n",
+        "explanation": "**Example 1.** There doesn't exist any permutation of numbers \\([1, 2, 3, 4]\\) that can have its \\( f \\) value equal to 4. Hence answer is -1.\n\n**Example 2.** The permutations \\([1, 2]\\) and \\([2, 1]\\) both have their \\( f \\) values equal to 2. You can print any of these two permutations.\n\n**Example 3.** The permutation \\([5, 4, 3, 2, 1]\\) has \\( f \\) value \\( = \\max(5, 4) + \\max(4, 3) + \\max(3, 2) + \\max(2, 1) = 5 + 4 + 3 + 2 = 14 \\).\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/GENPERM\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/KGP17ROL/problems/GENPERM\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/architk\" rel=\"nofollow noopener\">Archit Karandikar</a><br>\n<strong>Tester:</strong> <a href=\"https://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/wittyceaser\" rel=\"nofollow noopener\">Vaibhav Tulsyan</a></p>\n<h3>PROBLEM</h3>\n<p>For a permutation <span class=\"math\">P = (p_1, p_2, ..., p_N)</span> of numbers <span class=\"math\">[1, 2, ..., N]</span>, we define the function <span class=\"math\">f(P) = max(p_1, p_2) + max(p_2, p_3) + ... + max(p_{N-1}, p_N)</span>.</p>\n<p>You are given <span class=\"math\">N</span> and an integer <span class=\"math\">K</span>. Find and report a permutation <span class=\"math\">P</span> of <span class=\"math\">[1, 2, ..., N]</span> such that <span class=\"math\">f(P) = K</span>, if such a permutation exists otherwise print <span class=\"math\">-1</span>.</p>\n<p>Note <span class=\"math\">f([ 1 ]) = 0</span>.</p>\n<h4>Constraints:</h4>\n<p><span class=\"math\">1 \\le T \\le 40</span></p>\n<p><span class=\"math\">1 \\le N \\le 10^{5}</span></p>\n<p>Sum of <span class=\"math\">N</span> over all test cases in each file <span class=\"math\">\\le 10^{6}</span></p>\n<p><span class=\"math\">1 \\le K \\le 2.10^{10}</span></p>\n<h3>EXPLANATION</h3>\n<h4>What are the minimum and maximum values of <span class=\"math\">f(P)</span> that are possible?</h4>\n<p>The permutation that gives the minimum value of <span class=\"math\">f(P)</span> is <span class=\"math\">f(P_{min}): [1, 2, 3, ... , N]</span> and the permutation<br>\nthat gives the maximum value of <span class=\"math\">f(P)</span> is <span class=\"math\">f(P_{max}): [1, N, 2, (N - 1), ...]</span>.</p>\n<p><span class=\"math\">K</span> must lie between <span class=\"math\">f(P_{min})</span> and <span class=\"math\">f(P_{max})</span> for a valid permutation to exist.</p>\n<h4>Approach</h4>\n<p>Let\u2019s start from <span class=\"math\">P_{min}</span> and move towards <span class=\"math\">P_{max}</span> by modifying the permutation incrementally.</p>\n<p>Consider <span class=\"math\">f(P) = f(P_{min})</span>. If we swap <span class=\"math\">N</span> and <span class=\"math\">(N - 1)</span>, we get:</p>\n<p><span class=\"math\">P' = [1, 2, 3, ... , N, (N - 1)]</span></p>\n<p>Observe that <span class=\"math\">f(P') = f(P) + 1</span>.</p>\n<p>Similarly, if we swap <span class=\"math\">N</span> and <span class=\"math\">(N - 2)</span>, we get permutation <span class=\"math\">P\" = [1, 2, 3, ... , N, (N - 2), (N - 1)]</span>.</p>\n<p><span class=\"math\">f(P\") = f(P') + 1</span>.</p>\n<p>Hence, we can see that the value of <span class=\"math\">f</span> increases by <span class=\"math\">1</span> for every move that we do.<br>\nThe position of each number can be determined uniquely!</p>\n<h4>O(K) brute-force solution</h4>\n<p>We can keep performing swaps until we reach a permutation <span class=\"math\">P</span> with its <span class=\"math\">f(P)</span> equal to <span class=\"math\">K</span>.</p>\n<p>This approach would exceed the time-limit and hence we need to find a faster solution.</p>\n<h4>O(N) solution</h4>\n<p>The change in value (<span class=\"math\">\\Delta_1</span>) of <span class=\"math\">f(P)</span> for bringing <span class=\"math\">N</span> from index <span class=\"math\">N</span> to <span class=\"math\">2</span> is <span class=\"math\">(N - 2)</span>.<br>\nSimilarly, change in value (<span class=\"math\">\\Delta_2</span>) bringing <span class=\"math\">(N - 1)</span> to index <span class=\"math\">4</span> after that is <span class=\"math\">(N - 4)</span>.</p>\n<p><span class=\"math\">\\Delta_i = (N - 2.i)</span></p>\n<p>We keep constructing the permutation <span class=\"math\">[1, N, 2, (N - 1), ... , j, (N - j + 1), ...]</span> until <span class=\"math\">\\sum\\limits_{i=1}^j \\Delta_j \\le K</span>.</p>\n<p>Now, we need to append to the above, an arrangement of the numbers <span class=\"math\">[(j + 1), (j + 2), ... , (N - j)]</span>.<br>\nWe will need to keep moving <span class=\"math\">(N - j)</span> to a previous index if <span class=\"math\">K &gt; \\sum\\limits_{i=1}^j \\Delta_j</span>, because we still need to cover the remaining value which is <span class=\"math\">K - \\sum\\limits_{i=1}^j \\Delta_j</span>.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17KGP/Setter/GENPERM.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17KGP/Tester/GENPERM.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17807,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "architk",
+  "problem_display_authors": [
+    "architk"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/architk'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>architk</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "wittyceaser",
+  "date_added": "13-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm17kgp",
+    "architk",
+    "constructive",
+    "easy-medium",
+    "kgp17rol"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/GENPERM",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610853
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GENPERM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

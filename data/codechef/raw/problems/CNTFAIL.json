@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CNTFAIL",
+  "contest_category": "6",
+  "problem_name": "Magic School",
+  "intended_contest_code": null,
+  "body": "It's year 2018 and it's Christmas time! Before going for vacations, students of Hogwarts School of Witchcraft and Wizardry had their end semester exams.\r\n\r\n$N$ students attended the semester exam. Once the exam was over, their results were displayed as either \"Pass\" or \"Fail\" behind their magic jacket which they wore. A student cannot see his/her result but can see everyone else's results. Each of $N$ students count the number of passed students they can see.\r\n\r\nGiven the number of \"Pass\" verdicts that each of the $N$ students counted, we have to figure out conclusively, the number of students who failed, or report that there is some inconsistency or that we cannot be sure.\r\n\r\n###Input:\r\n- First line will contain $T$, number of testcases. Then the testcases follow. \r\n- The first line of each test case will contain $N$, representing the number of students who attended the exam.\r\n- Next line contains  $N$ spaced integers representing the number of \"Pass\" counted by each of the $N$ students.\r\n\r\n###Output:\r\n- For each test case, output the answer in a single line. \r\n- If the counts reported by the students are not consistent with each other or if it's not possible to predict the number of failed students from the given input, then print -1.\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 50$\r\n- $1 \\leq N \\leq 10^{5}$\r\n- $0 \\leq$ Count given by each Student $\\leq 10^{5}$\r\n\r\n###Sample Input:\r\n```\r\n1\r\n4\r\n3 2 2 2\r\n```\r\n\r\n###Sample Output:\r\n```\r\n1\r\n```\r\n\r\n###EXPLANATION:\r\nThere are 4 students, and they counted the number of passed students as 3,2,2,2. The first student can see that all others have passed, and all other students can see only 2 students who have passed. Hence, the first student must have failed, and others have all passed. Hence, the answer is 1.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 50$\n- $1 \\leq N \\leq 10^{5}$\n- $0 \\leq$ Count given by each Student $\\leq 10^{5}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "It's year 2018 and it's Christmas time! Before going for vacations, students of Hogwarts School of Witchcraft and Wizardry had their end semester exams.\n\n$N$ students attended the semester exam. Once the exam was over, their results were displayed as either \"Pass\" or \"Fail\" behind their magic jacket which they wore. A student cannot see his/her result but can see everyone else's results. Each of $N$ students count the number of passed students they can see.\n\nGiven the number of \"Pass\" verdicts that each of the $N$ students counted, we have to figure out conclusively, the number of students who failed, or report that there is some inconsistency or that we cannot be sure.\n",
+    "inputFormat": "- First line will contain $T$, number of testcases. Then the testcases follow. \n- The first line of each test case will contain $N$, representing the number of students who attended the exam.\n- Next line contains $N$ spaced integers representing the number of \"Pass\" counted by each of the $N$ students.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output the answer in a single line. \n- If the counts reported by the students are not consistent with each other or if it's not possible to predict the number of failed students from the given input, then print -1.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n4\n3 2 2 2\n",
+        "output": "1\n",
+        "explanation": "There are 4 students, and they counted the number of passed students as 3,2,2,2. The first student can see that all others have passed, and all other students can see only 2 students who have passed. Hence, the first student must have failed, and others have all passed. Hence, the answer is 1.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "bipin2",
+  "problem_display_authors": [
+    "bipin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/bipin2'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>bipin2</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610689
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CNTFAIL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

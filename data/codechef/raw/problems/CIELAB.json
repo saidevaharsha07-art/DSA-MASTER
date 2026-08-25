@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CIELAB",
+  "contest_category": "6",
+  "problem_name": "Ciel and A-B Problem",
+  "intended_contest_code": "COOK17",
+  "body": "<p>\r\nIn Ciel's restaurant, a waiter is training.\r\nSince the waiter isn't good at arithmetic, sometimes he gives guests wrong change.\r\nCiel gives him a simple problem.\r\nWhat is <strong>A</strong>-<strong>B</strong> (<strong>A</strong> minus <strong>B</strong>) ?\r\n</p>\r\n\r\n<p>\r\nSurprisingly, his answer is wrong.\r\nTo be more precise, his answer has exactly one wrong digit.\r\nCan you imagine this?\r\nCan you make the same mistake in this problem?\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>\r\nAn input contains 2 integers <strong>A</strong> and <strong>B</strong>.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>\r\nPrint a wrong answer of <strong>A</strong>-<strong>B</strong>.\r\nYour answer must be a <em>positive</em> integer containing the same number of digits as the correct answer, and exactly one digit must differ from the correct answer.\r\nLeading zeros are not allowed.\r\nIf there are multiple answers satisfying the above conditions, anyone will do.\r\n</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n1 \u2264 <strong>B</strong> &lt; <strong>A</strong> \u2264 10000\r\n</p>\r\n\r\n<h3>Sample Input</h3>\r\n<pre>5858 1234</pre>\r\n\r\n<h3>Sample Output</h3>\r\n<pre>1624</pre>\r\n\r\n<h3>Output details</h3>\r\n<p>\r\nThe correct answer of 5858-1234 is 4624.\r\nSo, for instance, 2624, 4324, 4623, 4604 and 4629 will be accepted, but 0624, 624, 5858, 4624 and 04624 will be rejected.\r\n</p>\r\n\r\n<h3>Notes</h3>\r\n<p>\r\nThe problem setter is also not good at arithmetic.\r\n</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\nIn Ciel's restaurant, a waiter is training.\nSince the waiter isn't good at arithmetic, sometimes he gives guests wrong change.\nCiel gives him a simple problem.\nWhat is <strong>A</strong>-<strong>B</strong> (<strong>A</strong> minus <strong>B</strong>) ?\n</p>\n\n<p>\nSurprisingly, his answer is wrong.\nTo be more precise, his answer has exactly one wrong digit.\nCan you imagine this?\nCan you make the same mistake in this problem?\n</p>\n\n<h3>Input</h3>\n<p>\nAn input contains 2 integers <strong>A</strong> and <strong>B</strong>.\n</p>\n\n<h3>Output</h3>\n<p>\nPrint a wrong answer of <strong>A</strong>-<strong>B</strong>.\nYour answer must be a <em>positive</em> integer containing the same number of digits as the correct answer, and exactly one digit must differ from the correct answer.\nLeading zeros are not allowed.\nIf there are multiple answers satisfying the above conditions, anyone will do.\n</p>\n\n<h3>Constraints</h3>\n<p>\n1 \u2264 <strong>B</strong> < <strong>A</strong> \u2264 10000\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5858 1234",
+        "output": "1624",
+        "explanation": "<p>\nThe correct answer of 5858-1234 is 4624.\nSo, for instance, 2624, 4324, 4623, 4604 and 4629 will be accepted, but 0624, 624, 5858, 4624 and 04624 will be rejected.\n</p>\n\n<h3>Notes</h3>\n<p>\nThe problem setter is also not good at arithmetic.\n</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 943,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.949579",
+  "source_sizelimit": "50000",
+  "problem_author": "hiroto_adm",
+  "problem_display_authors": [
+    "hiroto_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/hiroto_adm'>hiroto_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "shangjingbo"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/shangjingbo'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>shangjingbo</span></a></div>",
+  "problem_editorialist": "admin",
+  "date_added": "22-11-2011",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Arithmetic"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Basic Math"
+  ],
+  "difficulty_rating": "1136",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610683
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CIELAB",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 45,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

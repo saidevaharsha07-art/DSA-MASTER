@@ -1,0 +1,119 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BESTOFTENNIS",
+  "contest_category": "6",
+  "problem_name": "Best of N Sets",
+  "intended_contest_code": "START109",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10000$\n- $1 \\leq X \\leq 100$\n- $1 \\leq Y \\leq 100$\n- $X \u2260 Y$, since they would never stop when they have won the same number of sets.",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "Sonu and Titu are playing a tennis match. They are playing a \"best of $N$ sets\" match ($N$ is always odd). That means that they will play at most $N$ sets, and the person who has won most sets wins the match. But they are smart, and if they notice at any point that one of them has no chance of winning the match, they will stop the match right then, without playing out all the $N$ sets needlessly.\n\nFor example, suppose $N = 11$. And at some point, Sonu has won 5 sets, and Titu has won 4 sets. Sonu is leading now, but it is possible that Titu wins the two remaining sets and wins the whole match. So they will not stop right now.\n\nBut suppose Sonu wins the next set as well, and so now the score is $(6, 4)$. Now, even though there is one set remaining, there is no chance of Titu winning the whole match, since at best, even if he wins the next set, the score will become $(6, 5)$, and Sonu still wins. So, they will stop at a score of $(6, 4)$ and declare Sonu as the winner.\n\nAs another example, if $N=15$, and the score is currently $(8, 2)$, then they'll stop right now, since there is no way for Titu to win the match. Even if Titu wins all the $5$ remaining sets, Titu cannot win the match.\n\n---\n\nYou are watching the match, and you see that the match has ended with a score of $(X, Y)$. That is, Sonu has won $X$ sets, and Titu has won $Y$ sets. But you don't know what $N$ is. Can you find out $N$ from just knowing the final score?",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of a single line of input containing two space-separated integers $X$ and $Y$ where $X$ is the number of sets won by Sonu and $Y$ is the number of sets won by Titu.",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output on a new line the value of $N$.\n- Note that you should only output an odd integer.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n2 5\n8 10\n99 1\n4 8\n",
+        "output": "9\n19\n197\n15\n",
+        "explanation": "**Testcase 1:** Sonu has won 2 sets and Titu has won 5. They have played 7 sets and Titu has been decided to be the winner. \n\nSuppose $N = 11$, then 4 more sets are remaining and if Sonu wins them all, Sonu's score ($2 + 4 = 6$) will become greater than Titu's score of $5$. So at this point, they could not have stopped playing, and so $N$ cannot be $11$ or more.\n\nBut suppose $N = 9$, then 2 more sets are remaining and even if Sonu wins them all, he still cannot win, since $2 + 2 = 4$ is still $< 5$. So it makes sense that they stopped right now.\n\n$N$ can't be lower than $9$, since they would have stopped the match sooner.\n\nSo, the answer is $N = 9$.\n\n**Testcase 2:** Sonu has won 8 sets and Titu has won 10. They have played 18 sets and Titu has been decided to be the winner. \n\nSuppose $N = 21$, then 3 more sets are remaining and if Sonu wins them all, Sonu's score ($8 + 3 = 11$) will become greater than Titu's score of $10$. So at this point, they could not have stopped playing, and so $N$ cannot be $21$ or more.\n\nBut suppose $N = 19$, then 1 more set is remaining and even if Sonu wins that set, he still cannot win, since $8 + 1 = 9$ is still $< 10$. So it makes sense that they stopped right now.\n\n$N$ can't be lower than $19$, since they have played $18$ sets.\n\nSo, the answer is $N = 19$.\n\n**Testcase 3:** Sonu has won 99 sets and Titu has won 1. They have played 100 sets and Sonu has been decided to be the winner. \n\nSuppose $N = 199$, then 99 more sets are remaining and if Titu wins them all, Titu's score ($1 + 99 = 100$) will become greater than Titu's score of $99$. So at this point, they could not have stopped playing, and so $N$ cannot be $199$ or more.\n\nBut suppose $N = 197$, then 97 more sets are remaining and even if Titu wins that set, he still cannot win, since $1 + 97 = 98$ is still $< 9$. So it makes sense that they stopped right now.\n\n$N$ can't be lower than $197$, since they would have stopped the match sooner.\n\nSo, the answer is $N = 197$.\n\n**Testcase 4:** Sonu has won 4 sets and Titu has won 8. They have played 12 sets and Titu has been decided to be the winner. \n\nSuppose $N = 17$, then 5 more sets are remaining and if Sonu wins them all, Sonu's score ($4 + 5 = 9$) will become greater than Titu's score of $8$. So at this point, they could not have stopped playing, and so $N$ cannot be $17$ or more.\n\nBut suppose $N = 15$, then 3 more sets are remaining and even if Sonu wins them all, he still cannot win, since $4 + 3 = 7$ is still $< 8$. So it makes sense that they stopped right now.\n\n$N$ can't be lower than $15$, since they would have stopped the match sooner.\n\nSo, the answer is $N = 15$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "655e0bcc64cde54ad81ae6ee",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 114168,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "surajmsharma",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "8-11-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "start109",
+    "surajmsharma"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "830",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610636
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BESTOFTENNIS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 49,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

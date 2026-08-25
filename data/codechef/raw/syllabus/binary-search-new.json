@@ -1,0 +1,389 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "binary-search-new",
+  "name": "Practice Binary Search",
+  "title": "Practice Binary Search",
+  "level": "Intermediate",
+  "description": "Practice intermediate level Binary search with these curate problems",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/binary-search-new/BINARYSP07/problems/SHKNUM",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Binary Search",
+      "description": "Practice intermediate level problems using Binary Search",
+      "submodules": [
+        {
+          "name": "Practice",
+          "submodule_id": 25859,
+          "contest_code": "BINARYSP07",
+          "start_date": "2026-05-07 14:48:17",
+          "total_problems": 24,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/binary-search-new/BINARYSP07/problems/SHKNUM",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "55018",
+              "code": "SHKNUM",
+              "name": "Sheokand and Number",
+              "difficulty_rating": "1534",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "MINEAT",
+              "name": "Minion Chef and Bananas",
+              "difficulty_rating": "1781",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "SNAKEEAT",
+              "name": "Snake Eating",
+              "difficulty_rating": "1950",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BSEX01",
+              "name": "Search in a 2D Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BSEX03",
+              "name": "Painter Partition Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "MINROTSORTED",
+              "name": "Find minimum in a rotated sorted array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BSEX04",
+              "name": "Next Possible Event",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BSEX05",
+              "name": "Wildfire",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "FINDPEAK",
+              "name": "Find Peak Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BSEX06",
+              "name": "Garden",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "ROTATIONARAY",
+              "name": "Find how many times the array have been rotated",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "MINEATING",
+              "name": "Minimum Eating Speed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BOUQUEGARDEN",
+              "name": "Bouquet Garden",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "SMALLESTDIVI",
+              "name": "The Divisor Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "TRUCKDRIVER",
+              "name": "Truck Driver Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "KTHMISSING",
+              "name": "Kth missing positive",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "SPLITARRAY",
+              "name": "Split Array with Minimum Largest Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "BOOKALLOCATE",
+              "name": "Book Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "MEDIANOFSORT",
+              "name": "Median of 2 sorted arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "PAINTSHODOWN",
+              "name": "The Great Painting Showdown",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "KELMT2SORT",
+              "name": "Kth Element of Two Sorted Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "MATRIXMEDIAN",
+              "name": "Matrix Median",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "ROWMAXONE",
+              "name": "Row with Maximum 1s",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55018",
+              "code": "PEAKELEMENTS",
+              "name": "Find a Peak Element II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Pro Practice",
+          "submodule_id": 25860,
+          "contest_code": "BINARYSP08",
+          "start_date": "2026-05-07 14:48:17",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/binary-search-new/BINARYSP08/problems/SINGLESORTED",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "55019",
+              "code": "SINGLESORTED",
+              "name": "Lonely Element in Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "MINMAXARR",
+              "name": "Minimize the Maximum",
+              "difficulty_rating": "1689",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "CIRCINTE",
+              "name": "Circular Intervals",
+              "difficulty_rating": "1951",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "FORESTGA",
+              "name": "Forest Gathering",
+              "difficulty_rating": "1829",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "SQUIRREL",
+              "name": "Squirrel and chestnut",
+              "difficulty_rating": "1611",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "FLUSHOT",
+              "name": "Flu Shot Lineup",
+              "difficulty_rating": "1692",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55019",
+              "code": "KTHMISSING",
+              "name": "Kth missing positive",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 31
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 31,
+  "total_non_pro_problems": 24,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Algorithms",
+  "reviews": [],
+  "learners_count": 283,
+  "path_review": {
+    "rating": 5,
+    "users": 2
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

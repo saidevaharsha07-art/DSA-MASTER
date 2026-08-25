@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DEVPERF",
+  "contest_category": "6",
+  "problem_name": "Devu and Perfume",
+  "intended_contest_code": "JAN16",
+  "body": "<p>\r\nThere is a haunted town called HauntedLand. The structure of HauntedLand can be thought of as a grid of size <b>n * m</b>. There is a house in each cell of the grid. Some people have fled from their houses because they were haunted. '.' represents a haunted house whereas '*' represents a house in which people are living.\r\n</p>\r\n\r\n<p>\r\nOne day, Devu, the famous perfumer came to town with a perfume whose smell can hypnotize people. Devu can put the perfume in at most one of the houses. This takes Devu one second. Then, the perfume spreads from one house (need not be inhabited by people) to all its adjacent houses in one second, and the cycle continues. Two houses are said to be a adjacent to each other, if they share a corner or an edge, i.e., each house (except those on the boundaries) will have 8 adjacent houses.\r\n</p>\r\n\r\n<p>\r\nYou want to save people from Devu's dark perfumery by sending them a message to flee from the town. So, you need to estimate the minimum amount of time Devu needs to hypnotize all the people? Note that if there are no houses inhabited by people, Devu doesn't need to put perfume in any cell.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>First line of each test case contains two space separated integers <b>n, m</b> denoting the dimensions of the town.</p>\r\n<p>For each of next <b>n</b> lines, each line has <b>m</b> characters (without any space) denoting a row of houses of the town.</p>\r\n\r\n<h3>Output</h3>\r\nFor each test case, output a single integer corresponding to the answer of the problem.\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>20</b></li>\r\n</ul>\r\n<p>\r\n<b>Subtask #1:</b> (40 points) </br>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>n, m</b> \u2264 <b>100</b></li>\r\n</ul>\r\n\r\n<b>Subtask #2:</b> (60 points) </br>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>n, m</b> \u2264 <b>1000</b></li>\r\n</ul>\r\n</p>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n2 2\r\n<font face=\"monospace\">*.</font>\r\n<font face=\"monospace\">..</font>\r\n3 4\r\n<font face=\"monospace\">.*..</font>\r\n<font face=\"monospace\">***.</font>\r\n<font face=\"monospace\">.*..</font>\r\n\r\n<b>Output:</b>\r\n1\r\n2\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>In the first example</b>, it will take Devu one second for putting the perfume at the only house. So, the answer is 1.\r\n</p>\r\n\r\n<p><b>In the second example</b>, He will first put the perfume at the * at cell (1, 1) (assuming 0-based indexing).</br>\r\nNow, it will take Devu 1 secs to put perfume. In the next second, the perfume will spread to all of its adjacent cells, thus making each house haunted.\r\nSo, the answer is 2.\r\n</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\nThere is a haunted town called HauntedLand. The structure of HauntedLand can be thought of as a grid of size <b>n * m</b>. There is a house in each cell of the grid. Some people have fled from their houses because they were haunted. '.' represents a haunted house whereas '*' represents a house in which people are living.\n</p>\n\n<p>\nOne day, Devu, the famous perfumer came to town with a perfume whose smell can hypnotize people. Devu can put the perfume in at most one of the houses. This takes Devu one second. Then, the perfume spreads from one house (need not be inhabited by people) to all its adjacent houses in one second, and the cycle continues. Two houses are said to be a adjacent to each other, if they share a corner or an edge, i.e., each house (except those on the boundaries) will have 8 adjacent houses.\n</p>\n\n<p>\nYou want to save people from Devu's dark perfumery by sending them a message to flee from the town. So, you need to estimate the minimum amount of time Devu needs to hypnotize all the people? Note that if there are no houses inhabited by people, Devu doesn't need to put perfume in any cell.\n</p>\n\n<h3>Input</h3>\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>First line of each test case contains two space separated integers <b>n, m</b> denoting the dimensions of the town.</p>\n<p>For each of next <b>n</b> lines, each line has <b>m</b> characters (without any space) denoting a row of houses of the town.</p>\n\n<h3>Output</h3>\nFor each test case, output a single integer corresponding to the answer of the problem.\n\n<h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>20</b></li>\n</ul><p>\n<b>Subtask #1:</b> (40 points) \n</p><ul><li><b>1</b> \u2264 <b>n, m</b> \u2264 <b>100</b></li>\n</ul><b>Subtask #2:</b> (60 points) \n<ul><li><b>1</b> \u2264 <b>n, m</b> \u2264 <b>1000</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 2\n*.\n..\n3 4\n.*..\n***.\n.*..",
+        "output": "1\n2",
+        "explanation": "<p><b>In the first example</b>, it will take Devu one second for putting the perfume at the only house. So, the answer is 1.\n</p>\n\n<p><b>In the second example</b>, He will first put the perfume at the * at cell (1, 1) (assuming 0-based indexing).\nNow, it will take Devu 1 secs to put perfume. In the next second, the perfume will spread to all of its adjacent cells, thus making each house haunted.\nSo, the answer is 2.\n</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12044,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "mgch"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mgch'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>mgch</span></a></div>",
+  "problem_editorialist": "pushkarmishra",
+  "date_added": "20-12-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "2D Arrays"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays"
+  ],
+  "difficulty_rating": "1708",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610781
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DEVPERF",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

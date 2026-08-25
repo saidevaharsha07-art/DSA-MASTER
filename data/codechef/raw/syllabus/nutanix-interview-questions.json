@@ -1,0 +1,182 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "nutanix-interview-questions",
+  "name": "Nutanix Coding Interview Questions",
+  "title": "Nutanix Coding Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Nutanix online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:52",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/nutanix-interview-questions/NUTANIXCON01/problems/NUTANIX01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Nutanix Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Nutanix Coding Questions",
+          "submodule_id": 8208,
+          "contest_code": "NUTANIXCON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/nutanix-interview-questions/NUTANIXCON01/problems/NUTANIX01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX01",
+              "name": "String Anagrams",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX07",
+              "name": "Russian Peasant Multiplication",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX12",
+              "name": "Infix to Postfix Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX11",
+              "name": "String Split Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX02",
+              "name": "Rotting Oranges",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX03",
+              "name": "Water Jug Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX04",
+              "name": "Last Robot Standing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX05",
+              "name": "Friends Pairing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX08",
+              "name": "Time to publish comic books",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX09",
+              "name": "Maximum Loot",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX10",
+              "name": "Minimum Platforms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32189",
+              "code": "NUTANIX06",
+              "name": "Book Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 12,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1125,
+  "path_review": {
+    "rating": 4.6,
+    "users": 7
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

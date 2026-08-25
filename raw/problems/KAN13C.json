@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13C",
+  "contest_category": "6",
+  "problem_name": "Rich Rhyme",
+  "intended_contest_code": null,
+  "body": "<p>In the land of Rhyme, the King and his people always speak in rhymes. They are so accustomed in conversing using rhymes that at one point it became monotonous. So what was once a source of happiness and amusement is now creating a strange emotion within the heart of the people. The productivity of the people has become less and more importantly, the happiness index of the land has plummeted. The experts have investigated the whole matter and reported that speaking in rhyme is not the problem; it is the monotony of the same thing that is affecting the people. In fact they suggested changing the definition of rhyme slightly. One of their recommendations is to introduce a new concept of \"richness\" in a sentence.\n</p>\n<p>A sentence would be termed rich if it starts and ends with the same word! The King seems to like this definition. But he is finding it difficult to even say a simple meaningful sentence that is \"rich\".  The King became quite anxious. Your boss, King\u2019s ICT adviser, suggested that a competition among the general people should be thrown where the participants would have to submit a piece (story/poem/essay etc.) full of rich sentences. Then the richest pieces would be judged and be awarded.  The King made a decree accordingly. Your boss was ordered to formulate a judging scheme for the pieces and write a program immediately to do the judgment. And as usual he formulated something and asked you to implement that. What he has asked you to do is as follows. You will take as input a piece as a character array. And output another array where each position will give the richness of the piece up to that position.\n</p>\n<p>\u201cWhat is richness?\u201d You asked.\n</p>\n<p>Your boss replied, \u201cThe richness is the size of the identical proper substring which is present at the beginning and at the end of the piece. But, the complete string cannot be considered as its substring.\u201d\n</p>\n<p>\u201cBut you said to calculate the richness at each position\u201d! You inquired.\n</p>\n<p>\u201cYes, of course! When you calculate up to a position, you will have to assume that the piece ends at that position.\u201d Your boss smiled. He seemed to be quite happy in formulating this.\n</p>\n<p>You asked again, \"Don't I need to think about the word boundaries?\"\n</p>\n<p>\u201cNot now, my son. We will think about it later. Do it without considering word boundaries for now. You will consider the input character by character\u201d. He assured you. He seemed all the more content with his own formulation and probably was not seeing the possible pitfalls. He continued, \"And one other point; richness of the first position would always be 0.\"\n</p>\n<p>Meaningful, you thought. But you had to ask a final question. \u201cHow would you then finally compute the richness of the total piece using all these information? What will be the formula?\u201d\n</p>\n<p>Your boss seemed perplexed. He did not think this through, as it seemed. So, he said, \u201cYou need not worry about that. Do as I said. Just remember that the input size could be quite large.\u201d\n</p>\n<p>You knew that you have to stop asking and start coding now. \u201cYes, boss!\u201d you said. You also realized the implication of the last direction of your boss. Few years back there was another competition on literary works. And the size of some pieces was 4 million characters!\n</p>\n<h3>Input</h3>\n<p>Input consists of several lines. Each line contains a string of lowercase English letters. End of input is indicated by a line containing the string \u201cEnd\u201d. No output line should be produced for this line.\n</p>\n<h3>Output</h3>\n<p>For each input line, you must output a line containing several integers, separated by space. The number of integers must be same as the length of the input string. The Integer at a specific position must represent the richness of the input string up to that position. There must not be any trailing space in any output line.\n</p>\n<h3>Constraints</h3>\n<p>The total length of input is less than 4 * 10^6</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\noebmgoca\nbdblhc\njgojeqp\natofpgrwk\nfdcdd\nababbacdbacdbacd\ndacc\ncbda\naccb\ndcbb\ndacbbcbcbcbcdcbbbcbcbcbcbcbcdacbbcbcdcbbbcbcdcbbdcbb\nEnd\n\n\n<b>Output:</b>\n0 0 0 0 0 1 0 0\n0 0 1 0 0 0\n0 0 0 1 0 0 0\n0 0 0 0 0 0 0 0 0\n0 0 0 0 0\n0 0 1 2 0 1 0 0 0 1 0 0 0 1 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 3 4 5 6 7 8 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0\n</pre>\n<p><b>\n<p>Problem Setter : Dr. M Sohel Rahman</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "The total length of input is less than 4 * 10^6.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In the land of Rhyme, the King and his people always speak in rhymes. They are so accustomed to conversing using rhymes that it has become monotonous, leading to decreased productivity and a plummeting happiness index. Experts have suggested introducing a new concept of \"richness\" in a sentence to combat this monotony. A sentence is termed rich if it starts and ends with the same word. The King has decided to hold a competition where participants submit pieces (stories, poems, essays, etc.) full of rich sentences. The richest pieces will be judged and awarded.\n\nYour task is to implement a program that calculates the richness of a piece up to each position. The richness is defined as the size of the identical proper substring present at the beginning and end of the piece, but the complete string cannot be considered as its substring. The richness of the first position is always 0.\n",
+    "inputFormat": "Input consists of several lines. Each line contains a string of lowercase English letters. The end of input is indicated by a line containing the string \"End\". No output line should be produced for this line.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each input line, output a line containing several integers, separated by spaces. The number of integers must be the same as the length of the input string. The integer at a specific position represents the richness of the input string up to that position. There must not be any trailing space in any output line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "oebmgoca\nbdblhc\njgojeqp\natofpgrwk\nfdcdd\nababbacdbacdbacd\ndacc\ncbda\naccb\ndcbb\ndacbbcbcbcbcdcbbbcbcbcbcbcbcdacbbcbcdcbbbcbcdcbbdcbb\nEnd\n",
+        "output": "0 0 0 0 0 1 0 0\n0 0 1 0 0 0\n0 0 0 1 0 0 0\n0 0 0 0 0 0 0 0 0\n0 0 0 0 0\n0 0 1 2 0 1 0 0 0 1 0 0 0 1 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 3 4 5 6 7 8 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0\n",
+        "explanation": "The output represents the richness of the input string up to each position. For example, in the first input line \"oebmgoca\", the richness at position 6 is 1 because the substring \"o\" is present at the beginning and end of the string up to that position. The richness at other positions is 0 because no proper substring of length greater than 0 is present at both the beginning and end of the string up to those positions.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1.83714",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "3-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "jingbo_adm",
+    "kan13acm",
+    "knuth-morris-pratt-algorithm",
+    "medium"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Knuth Morris Pratt Algorithm",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610958
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13C",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

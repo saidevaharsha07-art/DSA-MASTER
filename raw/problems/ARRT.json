@@ -1,0 +1,121 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ARRT",
+  "contest_category": "6",
+  "problem_name": "Array Rotation Returns",
+  "intended_contest_code": "LTIME98",
+  "body": "\nYou are given a sequence $A_1, A_2, \\ldots, A_N$ which contains pairwise distinct elements and a sequence $B_1, B_2, \\ldots, B_N$, which also contains pairwise distinct elements (but not necessarily distinct from elements of $A$). For each valid $i$, $1 \\leq A_i, B_i \\leq 2 \\cdot N$.\n\nYou may rotate $B$ as many times as you want. A rotation consists of moving the first element of the sequence to the end. Afterwards, let's define a sequence $C_1, C_2, \\ldots, C_N$ as $C_i = (A_i + B_i) \\% N$ for each valid $i$.\n\nThere are $N$ possible sequences $C$. Find the lexicographically smallest of these sequences.\n\n**Note:** A sequence $x$ is lexicographically smaller than a different sequence $y$ if $x_i\u2009<\u2009y_i$, where $i$ is the smallest valid index where the sequences $x$ and $y$ differ.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $1 \\leq N \\leq 10^5$\n- $1 \\leq A_i, B_i \\leq 2 \\cdot N$ for each valid $i$\n- the sum of $N$ over all test cases does not exceed $2 \\cdot 10^5$\n",
+    "constraintsState": true,
+    "subtasks": "**Subtask #1 (100 points):** original constraints\n",
+    "subtasksState": true,
+    "statement": "\nYou are given a sequence $A_1, A_2, \\ldots, A_N$ which contains pairwise distinct elements and a sequence $B_1, B_2, \\ldots, B_N$, which also contains pairwise distinct elements (but not necessarily distinct from elements of $A$). For each valid $i$, $1 \\leq A_i, B_i \\leq 2 \\cdot N$.\n\nYou may rotate $B$ as many times as you want. A rotation consists of moving the first element of the sequence to the end. Afterwards, let's define a sequence $C_1, C_2, \\ldots, C_N$ as $C_i = (A_i + B_i) \\% N$ for each valid $i$.\n\nThere are $N$ possible sequences $C$. Find the lexicographically smallest of these sequences.\n\n**Note:** A sequence $x$ is lexicographically smaller than a different sequence $y$ if $x_i\u2009<\u2009y_i$, where $i$ is the smallest valid index where the sequences $x$ and $y$ differ.\n",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$. \n- The third line contains $N$ space-separated integers $B_1, B_2, \\ldots, B_N$. \n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print a single line containing $N$ space-separated integers $C_1, C_2, \\ldots, C_N$ denoting the lexicographically smallest sequence.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n3\n1 4 5\n1 3 4",
+        "output": "1 2 0",
+        "explanation": "**Example case 1:** After rotating $B$ once, it becomes $(3,4,1)$. Now $C = (1,2,0)$. This is the lexicographically smallest of all possible sequences $C$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 92940,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "prasant21",
+  "problem_display_authors": [
+    "prasant21"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/prasant21'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>prasant21</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "29-07-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1818",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610629
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ARRT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

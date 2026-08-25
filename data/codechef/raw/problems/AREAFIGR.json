@@ -1,0 +1,118 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AREAFIGR",
+  "contest_category": "6",
+  "problem_name": "Area of an amazing figure",
+  "intended_contest_code": "",
+  "body": "<p>There is an equilateral triangle ABC with side length <b>2*a</b>. The coordinates of the triangle's vertices are A = <b>(-a, 0)</b>, B = <b>(a, 0)</b> and C = <b>(0, sqrt(3) * a)</b>. Next, there are three circles with centers at the midpoints of sides AB, BC and AC respectively and radii <b>r<sub>1</sub></b>, <b>r<sub>2</sub></b> and <b>r<sub>3</sub></b> respectively. Compute the area of the intersection of the triangle and the three circles.</p>\n\n<h3>Input</h3>\n<p><ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first and only line of each test case contains four space-separated integers <b>a, r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub></b>.</li>\n</ul></p>\n\n<h3>Output</h3>\n<p>For each test case, print a single line containing one real number corresponding to the area of the intersection. Your answer will be considered correct if it has an absolute or relative error \u2264 5 * 10<sup>-2</sup>.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 20</li>\n<li>1 \u2264 <b>a</b> \u2264 50</li>\n<li>1 \u2264 <b>r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub></b> \u2264 200</li> \n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n\n5\n10 5 5 5\n10 6 6 7\n10 12 13 14\n10 15 15 15\n10 19 20 18\n\n<b>Output</b>\n\n0.0000000\n1.417303000\n138.1789\n163.712\n173.2064190\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 2:</b> The black colored area shown in the figure is the intersection between the triangle and the three circles. </p>\n\n<p><img height=\"450\" src=\"https://discuss.codechef.com/upfiles/triangle_semi_circles.png\"/></p>\n\t\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>There is an equilateral triangle ABC with side length <b>2*a</b>. The coordinates of the triangle's vertices are A = <b>(-a, 0)</b>, B = <b>(a, 0)</b> and C = <b>(0, sqrt(3) * a)</b>. Next, there are three circles with centers at the midpoints of sides AB, BC and AC respectively and radii <b>r<sub>1</sub></b>, <b>r<sub>2</sub></b> and <b>r<sub>3</sub></b> respectively. Compute the area of the intersection of the triangle and the three circles.</p>\n\n<h3>Input</h3>\n<p><ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first and only line of each test case contains four space-separated integers <b>a, r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub></b>.</li>\n</ul></p>\n\n<h3>Output</h3>\n<p>For each test case, print a single line containing one real number corresponding to the area of the intersection. Your answer will be considered correct if it has an absolute or relative error \u2264 5 * 10<sup>-2</sup>.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 20</li>\n<li>1 \u2264 <b>a</b> \u2264 50</li>\n<li>1 \u2264 <b>r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub></b> \u2264 200</li> \n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n\n5\n10 5 5 5\n10 6 6 7\n10 12 13 14\n10 15 15 15\n10 19 20 18\n\n<b>Output</b>\n\n0.0000000\n1.417303000\n138.1789\n163.712\n173.2064190\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 2:</b> The black colored area shown in the figure is the intersection between the triangle and the three circles. </p>\n\n<p><img height=\"450\" src=\"https://discuss.codechef.com/upfiles/triangle_semi_circles.png\"/></p>\n\t",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/AREAFIGR\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACM17CHN/problems/AREAFIGR\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<p><strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>There is an equilateral triangle <span class=\"math\">ABC</span> with side length <span class=\"math\">2 \\cdot a</span>. The coordinates of the triangle\u2019s vertices are <span class=\"math\">A = (-a, 0), B = (a, 0), C = (0, \\sqrt{3} \\cdot a)</span>. Next, there are three circles with centers at the midpoints of sides <span class=\"math\">AB</span>, <span class=\"math\">BC</span> and <span class=\"math\">AC</span> and radii <span class=\"math\">r_1</span>, <span class=\"math\">r_2</span> and <span class=\"math\">r_3</span> respectively. Compute the area of the intersection of the triangle and the three circles. The absolute or relative error should be atmost <span class=\"math\">0.05</span> and <span class=\"math\">a \\le 50</span>.</p>\n<h3>EXPLANATION</h3>\n<p>First, we note that the desired accuracy for this problem isn\u2019t as high as typical geometry problems. Additionally, <span class=\"math\">a</span><br>\nis quite small as well. This suggests that we can use a monte-carlo or sampling based solution to approximate the answer with reasonable accuracy. Indeed, it turns out that this is one of the easiest ways to solve this problem.</p>\n<h2>Solution One: Breaking into Rectangles</h2>\n<p>The first solution (and probably the simplest) would be to partition the triangle into a bunch of really tiny rectangles<br>\nwhose areas sum up to give a good enough approximation of the area of the triangle. We can then iterate over each such<br>\ntiny rectangle and check whether it lies within the three circles, and if so, add up that area. It turns out that using<br>\n<span class=\"math\">0.01 \\times 0.01</span> rectangles gives a good enough approximation for this problem.</p>\n<p>To implement this, we can use the most brute force method possible. Since the area is bounded by <span class=\"math\">4400</span> units, we won\u2019t<br>\nneed more than <span class=\"math\">4400 \\cdot 10^4 = 4.4 \\times 10^7</span> rectangles. Further, checking if a rectangle is valid can be done in<br>\n<span class=\"math\">O(1)</span> since we just need to check if a point lies inside three circles. Thus overall, this method is fast enough.</p>\n<h2>Solution Two: Monte Carlo Based Simulation</h2>\n<p>Monte Carlo based solution Uniformly sample the points inside a triangle and check whether they belong to the three given circles. You need around <span class=\"math\">10^7</span> (or <span class=\"math\">5 * 10^6</span>) samples to get the desired accuracy.</p>\n<p>For checking how to uniformly sample the points in an equilateral triangle, see the <a>http://mathworld.wolfram.com/TrianglePointPicking.html</a>. The basic idea is as follows. Let OAB be the triangle where O is at the origin. Now, consider the vector OA and OB. Generate two numbers a, b in the range <span class=\"math\">[0, 1]</span> and the OC be the vector <span class=\"math\">a * OA + b * OB</span>. Note that point C is uniformly generated in the parallelogram made by OABD (where point D is such that BD is parallel to OA). If the point C doesn\u2019t lie in the parallelogram, then we reflect it across the diagonal AB. This way, the point C will be a uniformly random point inside the triangle.</p>\n<p>Another possible way could be sampling from a disk whose radius can be found as follows. Find the centroid D of the triangle. Find the radius R that is the distance between D and any of the vertices A, B, C. Now, randomly sample from a disc of radius R and check whether the point lies in each of the circles and the triangle. This method requires around <span class=\"math\">10^6</span> or more queries to get a good enough accuracy.</p>\n<h4>Solution three: Misha\u2019s deterministic solution</h4>\n<p>There is a deterministic sweep line solution where you can move across the intersecting points and get the corresponding areas by using simple formulas.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Setter/AREAFIGR.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Tester/AREAFIGR.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17704,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "25-11-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Areas",
+    "Sweep line Algorithm",
+    "Rectangles"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Computational Geometry",
+    "Polygons"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AREAFIGR",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610608
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AREAFIGR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

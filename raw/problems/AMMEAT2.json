@@ -1,0 +1,127 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMMEAT2",
+  "contest_category": "6",
+  "problem_name": "Andrew and the Meatballs again",
+  "intended_contest_code": "COOK33",
+  "body": "<p>Andrew likes meatballs very much as you know.</p>\n<p>He has <b>N</b> plates of meatballs, here the <b>i</b><sup>th</sup> plate contains exactly <b>i</b> meatballs. Andrew wants to take exactly <b>K</b> plates to his trip to Las Vegas.</p>\n<p>On this occasion, he wants to choose the <b>K</b> plates by a strange way: if both <b>i</b><sup>th</sup> and <b>j</b><sup>th</sup> plates are chosen, then <b>i</b> and <b>j</b> must not be <a href=\"http://en.wikipedia.org/wiki/Coprime_integers\">relative prime</a>, for all <b>1 \u2264 i &lt; j \u2264 N</b>.</p>\n<p>Please help him to choose <b>K</b> plates. Output one of the possible choices.</p>\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b>, denoting the number of test cases. The description of <b>T</b> test cases follows. The first line and only line of each test case contains two space-separated integers <b>N</b> and <b>K</b>.</p>\n<h3>Output</h3>\n<p>For each test case, output <b>K</b> distinct integers, denoting the number of selected plates, where the plates are numbered from <b>1</b> to <b>N</b>. If there are multiple solutions, any one will do. If it is impossible to choose <b>K</b> plates, print only one integer <b>-1</b>.</p>\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>7</b></li>\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>N</b> \u2264 <b>777</b></li>\n</ul>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n100 3\n100 100\n\n<b>Output:</b>\n45 63 35\n-1\n</pre><h3>Explanation</h3>\n<p><b>Example case 1</b>: One of the possible choices is that he takes <b>45</b><sup>th</sup> plate, <b>63</b><sup>rd</sup> plate, and <b>35</b><sup>th</sup> plate. Because<br /><b>GCD(45, 63) = 9</b>,<br /><b>GCD(45, 35) = 5</b>,<br /><b>GCD(63, 35) = 7</b>.<br /></p>\n<p><b>Example case 2</b>: He must choose all <b>N = K</b> plates in this case. But, for example, the pair of <b>3</b><sup>rd</sup> plate and <b>5</b><sup>th</sup> plate does not satisfy his desire. So it is impossible to choose <b>K</b> plates.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Andrew likes meatballs very much as you know.</p>\n<p>He has <b>N</b> plates of meatballs, here the <b>i</b><sup>th</sup> plate contains exactly <b>i</b> meatballs. Andrew wants to take exactly <b>K</b> plates to his trip to Las Vegas.</p>\n<p>On this occasion, he wants to choose the <b>K</b> plates by a strange way: if both <b>i</b><sup>th</sup> and <b>j</b><sup>th</sup> plates are chosen, then <b>i</b> and <b>j</b> must not be <a href=\"http://en.wikipedia.org/wiki/Coprime_integers\" rel=\"nofollow\">relative prime</a>, for all <b>1 \u2264 i < j \u2264 N</b>.</p>\n<p>Please help him to choose <b>K</b> plates. Output one of the possible choices.</p>\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b>, denoting the number of test cases. The description of <b>T</b> test cases follows. The first line and only line of each test case contains two space-separated integers <b>N</b> and <b>K</b>.</p>\n<h3>Output</h3>\n<p>For each test case, output <b>K</b> distinct integers, denoting the number of selected plates, where the plates are numbered from <b>1</b> to <b>N</b>. If there are multiple solutions, any one will do. If it is impossible to choose <b>K</b> plates, print only one integer <b>-1</b>.</p>\n<h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>7</b></li>\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>N</b> \u2264 <b>777</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n100 3\n100 100",
+        "output": "45 63 35\n-1",
+        "explanation": "<p><b>Example case 1</b>: One of the possible choices is that he takes <b>45</b><sup>th</sup> plate, <b>63</b><sup>rd</sup> plate, and <b>35</b><sup>th</sup> plate. Because<br /><b>GCD(45, 63) = 9</b>,<br /><b>GCD(45, 35) = 5</b>,<br /><b>GCD(63, 35) = 7</b>.<br /></p>\n<p><b>Example case 2</b>: He must choose all <b>N = K</b> plates in this case. But, for example, the pair of <b>3</b><sup>rd</sup> plate and <b>5</b><sup>th</sup> plate does not satisfy his desire. So it is impossible to choose <b>K</b> plates.</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1950,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "witaliy_adm",
+  "problem_display_authors": [
+    "witaliy_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/witaliy_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>witaliy_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "laycurse"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/laycurse'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>laycurse</span></a></div>",
+  "problem_editorialist": "pragrame",
+  "date_added": "21-04-2013",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "GCD",
+    "Pigeonhole Principle"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory",
+    "Set Theory"
+  ],
+  "difficulty_rating": "1597",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610598
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMMEAT2",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

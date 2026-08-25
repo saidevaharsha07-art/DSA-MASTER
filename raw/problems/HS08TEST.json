@@ -1,0 +1,137 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HS08TEST",
+  "contest_category": "6",
+  "problem_name": "ATM",
+  "intended_contest_code": null,
+  "body": "<p>Pooja would like to withdraw <tt>X</tt> $US from an ATM. The cash machine will only accept the transaction if <tt>X</tt> is a multiple of 5, and Pooja's account balance has enough cash to perform the withdrawal transaction (including bank charges).  For each successful withdrawal the bank charges 0.50 $US.\r\n\r\nCalculate Pooja's account balance after an attempted transaction.  \r\n\r\n<h3>Input</h3>\r\n<p> Positive integer 0 < <tt>X</tt> <= 2000 - the amount of cash which Pooja wishes to withdraw.\r\n<p> Nonnegative number 0<= <tt>Y</tt> <= 2000 with two digits of precision - Pooja's initial account balance.\r\n\r\n<h3>Output</h3>\r\n<p>Output the account balance after the attempted transaction, given as a number with two digits of precision.  If there is not enough money in the account to complete the transaction, output the current bank balance.\r\n\r\n<h3>Example - Successful Transaction</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n30 120.00\r\n\r\n<b>Output:</b>\r\n89.50\r\n</pre>\r\n\r\n<h3>Example - Incorrect Withdrawal Amount (not multiple of 5)</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n42 120.00\r\n\r\n<b>Output:</b>\r\n120.00\r\n</pre>\r\n\r\n<h3>Example - Insufficient Funds</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n300 120.00\r\n\r\n<b>Output:</b>\r\n120.00\r\n</pre>\r\n\r\n\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $0 \\lt X \\leq 2000$ - the amount of cash which Pooja wishes to withdraw.\n- $0 \\leq Y \\leq 2000$ with two digits of precision - Pooja's initial account balance.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Pooja would like to withdraw <tt>X</tt> US Dollar from an ATM. The cash machine will only accept the transaction if <tt>X</tt> is a multiple of 5, and Pooja's account balance has enough cash to perform the withdrawal transaction (including bank charges).  For each successful withdrawal the bank charges 0.50 US Dollar.\n\nCalculate Pooja's account balance after an attempted transaction.  \n",
+    "inputFormat": "Each input contains 2 numbers $X$ and $Y$. \\\n$X$ is the amount of cash which Pooja wishes to withdraw. \\\n$Y$ is Pooja's initial account balance.",
+    "inputFormatState": true,
+    "outputFormat": "Output the account balance after the attempted transaction, given as a number with two digits of precision.  If there is not enough money in the account to complete the transaction, output the current bank balance.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "30 120.00",
+        "output": "89.50",
+        "explanation": "Example - Successful Transaction",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "42 120.00\n",
+        "output": "120.00",
+        "explanation": "Example - Incorrect Withdrawal Amount (not multiple of 5)",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "300 120.00",
+        "output": "120.00",
+        "explanation": "Example - Insufficient Funds",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 8655,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.2",
+  "source_sizelimit": "50000",
+  "problem_author": "u_admin_codechef_pw",
+  "problem_display_authors": [
+    "u_admin_codechef_pw"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/u_admin_codechef_pw'>u_admin_codechef_pw</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "sushant96",
+  "date_added": "1-12-2008",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements",
+    "Data Types"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "410",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610872
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HS08TEST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 8,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 499,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

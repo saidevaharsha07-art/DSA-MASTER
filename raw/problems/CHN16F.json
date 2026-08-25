@@ -1,0 +1,120 @@
+{
+  "category_name": "white",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16F",
+  "contest_category": "6",
+  "problem_name": "ACM ICPC World Finals Accommodation",
+  "intended_contest_code": null,
+  "body": "<p>It's time of ACM ICPC World Finals. A lot of teams from all over the world have gathered to compete. Their stay has been planed at a grand hotel. As the organizers want people to interact with each other, they accommodated all the people in a single floor of the hotel. There are a total <b>n</b> * <b>m</b> rooms in the floor, which are arranged in <b>n</b> rows, with each row containing <b>m</b> rooms. </p>\r\n\r\n<p>Teams have come from various countries. There are a total of <b>C</b> such countries, and each country has <b>c<sub>i</sub></b> teams. Total number of teams are <b>n * m</b>, so each team will stay in a separate room. The director knows that people have traveled a lot of distance to come to the site, and will feel bored and homesick if they are unable to communicate with each and every person of their country. Communication of competitive programmers is usually discussion of problems, which they really like. There is a small window in each of the four walls of the rooms. Teams can talk to each other through the window. Teams are usually suspicious and very apprehensive of discussing problems with teams of other countries. So, two teams from different countries don't discuss problems at all.</p>\r\n\r\n<p>Two teams of same country can communicate with each other, If\r\n<ul>\r\n<li>Either, the two rooms share a wall with each other. Then they will communicate through the small window on that wall.</li>\r\n<li>Or, they can communicate with each other indirectly by communicating through other teams of the same country. \r\nThat is, take 2 teams: Team A and Team B from the same country. They can communicate with each other indirectly, if there is a sequence of teams (Team A, Team X<sub>1</sub>, Team X<sub>2</sub>, .., Team X<sub>k</sub>, Team B), where all of them are from the same country, and every adjacent pair of teams in this sequence are in rooms which share a wall.</li>\r\n</ul>\r\n</p>\r\n\r\n<p>The director wants to provide accommodation to the teams in such a way that teams from the same country are able to communicate among themselves. But he doesn't know whether he can arrange the teams in such a way or not, so he requires your help in this task. Can you please tell him whether it is possible to do so, If yes, then also output which country's team should occupy each room.</p>\r\n\r\n<h3>Input</h3>\r\n<p>First line of the input contains <b>T</b> - number of test cases. <b>T</b> test cases follows.</p>\r\n<p>First line of each test case contains three space separated integers <b>n, m, C</b>, denoting the number of rows, number of columns, and number of countries participating.</p>\r\n<p>Second line of each test case contains <b>C</b> space separated <b>c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>C</sub></b>, denoting that there are <b>c<sub>i</sub></b> teams of <b>i</b>-th country.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output -1 in a separate line if it is not possible to arrange the teams in the desired way. Otherwise print <b>n</b> rows, each containing <b>m</b> space separated integers, where <b>j</b>-th element in the <b>i</b>-th row should be an integer from <b>1</b> to <b>C</b> denoting which country's team is provided accommodation in the room <b>(i, j)</b>. If there are more than one possible ways of accommodation of teams satisfying the above conditions, you can output any of them.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T, n, m</b> \u2264 <b>50</b></li>\r\n<li><b>1</b> \u2264 <b>C</b> \u2264 <b>n * m</b></li>\r\n<li><b>1</b> \u2264 <b>c<sub>i</sub></b> \u2264 <b>n * m</b></li>\r\n<li><b>c<sub>1</sub></b> + <b>c<sub>2</sub></b> + ... + <b>c<sub>C</sub></b> = <b>n * m</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n2 2 2\r\n2 2\r\n2 2 1\r\n4\r\n<b>Output:</b>\r\n1 2\r\n1 2\r\n1 1\r\n1 1\r\n</pre>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> Teams from country 1 and country 2, both can discuss problems among themselves. </p>\r\n<p>Note that the below given arrangement of teams is not a valid one, as the teams from same countries can't discuss problems with each other.\r\n<pre>\r\n1 2\r\n2 1\r\n</pre>\r\n</p>\r\n<p><b>Example case 2.</b> Teams are only from country 1. You can see that all the teams able to communicate with each other.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T, n, m \\leq 50$\n- $1 \\leq C \\leq n \\times m$\n- $1 \\leq c_i \\leq n \\times m$\n- $c_1 + c_2 + \\dots + c_C = n \\times m$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "It's time of ACM ICPC World Finals. A lot of teams from all over the world have gathered to compete. Their stay has been planned at a grand hotel. As the organizers want people to interact with each other, they accommodated all the people in a single floor of the hotel. There are a total $n \\times m$ rooms in the floor, which are arranged in $n$ rows, with each row containing $m$ rooms.\n\nTeams have come from various countries. There are a total of $C$ such countries, and each country has $c_i$ teams. The total number of teams is $n \\times m$, so each team will stay in a separate room. The director knows that people have traveled a lot of distance to come to the site, and will feel bored and homesick if they are unable to communicate with each and every person of their country. Communication of competitive programmers is usually discussion of problems, which they really like. There is a small window in each of the four walls of the rooms. Teams can talk to each other through the window. Teams are usually suspicious and very apprehensive of discussing problems with teams of other countries. So, two teams from different countries don't discuss problems at all.\n\nTwo teams of the same country can communicate with each other if:\n- Either, the two rooms share a wall with each other. Then they will communicate through the small window on that wall.\n- Or, they can communicate with each other indirectly by communicating through other teams of the same country. That is, take 2 teams: Team A and Team B from the same country. They can communicate with each other indirectly if there is a sequence of teams (Team A, Team X\u2081, Team X\u2082, ..., Team X\u2096, Team B), where all of them are from the same country, and every adjacent pair of teams in this sequence are in rooms which share a wall.\n\nThe director wants to provide accommodation to the teams in such a way that teams from the same country are able to communicate among themselves. But he doesn't know whether he can arrange the teams in such a way or not, so he requires your help in this task. Can you please tell him whether it is possible to do so? If yes, then also output which country's team should occupy each room.\n",
+    "inputFormat": "First line of the input contains $T$ - number of test cases. $T$ test cases follow.\n\nFirst line of each test case contains three space-separated integers $n$, $m$, $C$, denoting the number of rows, number of columns, and number of countries participating.\n\nSecond line of each test case contains $C$ space-separated integers $c_1, c_2, \\dots, c_C$, denoting that there are $c_i$ teams of the $i$-th country.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output $-1$ in a separate line if it is not possible to arrange the teams in the desired way. Otherwise, print $n$ rows, each containing $m$ space-separated integers, where the $j$-th element in the $i$-th row should be an integer from $1$ to $C$ denoting which country's team is provided accommodation in the room $(i, j)$. If there are more than one possible ways of accommodation of teams satisfying the above conditions, you can output any of them.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 2 2\n2 2\n2 2 1\n4\n",
+        "output": "1 2\n1 2\n1 1\n1 1\n",
+        "explanation": "**Example case 1.** Teams from country 1 and country 2, both can discuss problems among themselves.\n\nNote that the below given arrangement of teams is not a valid one, as the teams from same countries can't discuss problems with each other.\n```\n1 2\n2 1\n```\n\n**Example case 2.** Teams are only from country 1. You can see that all the teams able to communicate with each other.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610681
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

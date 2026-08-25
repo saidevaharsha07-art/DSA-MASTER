@@ -1,0 +1,3046 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "dsa-challenges",
+  "name": "Monday Munch - DSA Challenge practice series",
+  "title": "Monday Munch - DSA Challenge practice series",
+  "level": "Intermediate",
+  "description": "Participate in the previous DSA Challenges",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY01P/problems/SEARCHINARR",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 01/09/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Sliding Window & Two Pointers, Trees & Binary Trees",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 01",
+          "submodule_id": 14957,
+          "contest_code": "DSAMONDAY01P",
+          "start_date": "2025-09-04 15:45:03",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY01P/problems/SEARCHINARR",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "40216",
+              "code": "SEARCHINARR",
+              "name": "Search an element in an array",
+              "difficulty_rating": "600",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40216",
+              "code": "MERGESORTED",
+              "name": "Merge two sorted arrays",
+              "difficulty_rating": "1050",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40216",
+              "code": "DSCPPAS276",
+              "name": "Check Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40216",
+              "code": "SLDW0102",
+              "name": "Maximum Sum of K Elements",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40216",
+              "code": "BTZIGZAG",
+              "name": "ZigZag Traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40216",
+              "code": "TREEDIAMETER",
+              "name": "Diameter of the tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 08/09/25",
+      "description": "This DSA challenge contains problems from the following topics: Bit manipulation, Binary Search, Recursion, Linked List",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA challenge 02",
+          "submodule_id": 15189,
+          "contest_code": "DSAMONDAY02P",
+          "start_date": "2025-09-09 08:44:45",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY02P/problems/BITMEDU5",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "40491",
+              "code": "BITMEDU5",
+              "name": "Count of set bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40491",
+              "code": "PREP58",
+              "name": "Cycle in a linked list",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40491",
+              "code": "LINK02P09",
+              "name": "Practice - Josephus Problem",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40491",
+              "code": "DSAPROB18",
+              "name": "Chef Square Tile Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40491",
+              "code": "BSEX01",
+              "name": "Search in a 2D Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40491",
+              "code": "DIVNUMB",
+              "name": "Good Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 16/09/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Heaps, Prefix-Suffix and Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 03",
+          "submodule_id": 15354,
+          "contest_code": "DSAMONDAY03P",
+          "start_date": "2025-09-16 09:50:11",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY03P/problems/UWCOI20A",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "40657",
+              "code": "UWCOI20A",
+              "name": "Find maximum in an Array",
+              "difficulty_rating": "650",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40657",
+              "code": "HEAPEDU3",
+              "name": "Insertion and deletion together in a Heap",
+              "difficulty_rating": "400",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40657",
+              "code": "SUBINC",
+              "name": "Count Subarrays",
+              "difficulty_rating": "1478",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40657",
+              "code": "TOPOSORTCS",
+              "name": "Find Course Schedule",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40657",
+              "code": "RKS",
+              "name": "Rooks",
+              "difficulty_rating": "1624",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "40657",
+              "code": "SEGFAULT",
+              "name": "Segmentation Fault",
+              "difficulty_rating": "1815",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 22/09/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Number Theory, Binary Tree, Bit Manipulation and Graphs.\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 04",
+          "submodule_id": 15786,
+          "contest_code": "DSAMONDAY04P",
+          "start_date": "2025-09-23 06:50:38",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY04P/problems/REMAINDER10",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "41141",
+              "code": "REMAINDER10",
+              "name": "Find Remainder ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41141",
+              "code": "APPLESORANGE",
+              "name": "Apples and oranges",
+              "difficulty_rating": "1040",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41141",
+              "code": "ARRAYSORTED",
+              "name": "Check if the array is sorted",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41141",
+              "code": "BITMEDU4",
+              "name": "Least significant bit, and most significant bit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41141",
+              "code": "MIRRORTREE",
+              "name": "Mirror Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41141",
+              "code": "GALACTICNW",
+              "name": "Galactic Network",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 29/09/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, 2D Matrix, Dynamic Programming.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 05",
+          "submodule_id": 15800,
+          "contest_code": "DSAMONDAY05P",
+          "start_date": "2025-09-29 21:47:22",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY05P/problems/VOWELORNOT",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "41232",
+              "code": "VOWELORNOT",
+              "name": "Vowels or Not",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41232",
+              "code": "DSAPROB20",
+              "name": "Largest Common Element in Two Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41232",
+              "code": "COUNTSUBARAY",
+              "name": "Count subarrays with given sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41232",
+              "code": "MAXSC",
+              "name": "Maximum Score",
+              "difficulty_rating": "1561",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41232",
+              "code": "MERGEINTER",
+              "name": "Merge Overlapping intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41232",
+              "code": "COUNTPAL",
+              "name": "Count palindromes",
+              "difficulty_rating": "1631",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 06/10/25",
+      "description": "Description: This DSA Challenge contains problems from the following topics: Arrays, \nLinked List, Hashing, Binary Tree.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 06",
+          "submodule_id": 16175,
+          "contest_code": "DSAMONDAY06P",
+          "start_date": "2025-10-06 21:41:32",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY06P/problems/GRADETHEMARK",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "41651",
+              "code": "GRADETHEMARK",
+              "name": "What is your grade",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41651",
+              "code": "SINGLENUM",
+              "name": "Single number in multiple numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41651",
+              "code": "LINKLP",
+              "name": "Count loop length in Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41651",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41651",
+              "code": "BSTKTHMAX",
+              "name": "Kth Largest Node in BST",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41651",
+              "code": "HASHP02",
+              "name": "Length of Longest Palindrome",
+              "difficulty_rating": "1696",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 13/10/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Binary Search, Dynamic Programming.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 07",
+          "submodule_id": 16875,
+          "contest_code": "DSAMONDAY07P",
+          "start_date": "2025-10-13 21:16:31",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY07P/problems/CENTURY",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "42411",
+              "code": "CENTURY",
+              "name": "Is that a century",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42411",
+              "code": "DISCOUNTT",
+              "name": "Take discount or Not",
+              "difficulty_rating": "700",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42411",
+              "code": "SPIRALMATRIX",
+              "name": "Spiral Matrix Traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42411",
+              "code": "KTHMISSING",
+              "name": "Kth missing positive",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42411",
+              "code": "EXPSTP",
+              "name": "Expensive Steps ",
+              "difficulty_rating": "1310",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42411",
+              "code": "BINARYSUB",
+              "name": "Binary Substituition",
+              "difficulty_rating": "1630",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 20/10/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Matrix, Greedy, Dynamic Programming.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 08",
+          "submodule_id": 17038,
+          "contest_code": "DSAMONDAY08P",
+          "start_date": "2025-10-21 10:03:44",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY08P/problems/ODDOREVEN",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "42614",
+              "code": "ODDOREVEN",
+              "name": "Odd or even",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42614",
+              "code": "OPMIN",
+              "name": "MIN To MAX",
+              "difficulty_rating": "838",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42614",
+              "code": "MATSETZERO",
+              "name": "Set Matrix Zeroes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42614",
+              "code": "CONSECUTIVE",
+              "name": "Longest Consecutive Numbers in an Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42614",
+              "code": "KLIP",
+              "name": "K-Flip",
+              "difficulty_rating": "1757",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42614",
+              "code": "MAXLCS",
+              "name": "Maximizing LCS",
+              "difficulty_rating": "1567",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 27/10/25",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Recursion, Bit Manipulation, Graph.\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 09",
+          "submodule_id": 17041,
+          "contest_code": "DSAMONDAY09P",
+          "start_date": "2025-10-28 11:18:30",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY09P/problems/DIVISIBLEBY5",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "42657",
+              "code": "DIVISIBLEBY5",
+              "name": "Is the number divisible by 5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42657",
+              "code": "RECUR07",
+              "name": "Print Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42657",
+              "code": "ANDOR",
+              "name": "AND Plus OR",
+              "difficulty_rating": "1151",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42657",
+              "code": "SUBARRAYSUM",
+              "name": "Largest Subarray with Sum 0",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42657",
+              "code": "DSAPROB8",
+              "name": "Search Word",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42657",
+              "code": "GETANCESTORS",
+              "name": "Get all ancestors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 03/11/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Combinatorics Prefix sum & Number theory.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 10",
+          "submodule_id": 17082,
+          "contest_code": "DSAMONDAY10P",
+          "start_date": "2025-11-04 11:45:56",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY10P/problems/MINUS100X",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "42747",
+              "code": "MINUS100X",
+              "name": "How much you lack",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42747",
+              "code": "ODDSUMPAIR",
+              "name": "Odd Sum Pair",
+              "difficulty_rating": "506",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42747",
+              "code": "BOOKPAGES",
+              "name": "Divide Pages",
+              "difficulty_rating": "500",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42747",
+              "code": "PREFPRO3",
+              "name": "Good subarrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42747",
+              "code": "TRIPLETMIN",
+              "name": "Triplets Min",
+              "difficulty_rating": "1868",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "42747",
+              "code": "MOVES",
+              "name": "Robot Movings",
+              "difficulty_rating": "1668",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 10/11/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Two Pointers, Sliding Window.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 11",
+          "submodule_id": 17624,
+          "contest_code": "DSAMONDAY11P",
+          "start_date": "2025-11-11 11:21:13",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY11P/problems/SQUAREOFN",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "43373",
+              "code": "SQUAREOFN",
+              "name": "What is the square",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43373",
+              "code": "LARGESECOND",
+              "name": "Largest and Second Largest",
+              "difficulty_rating": "928",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43373",
+              "code": "CNTINVERSION",
+              "name": "Count Inversions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43373",
+              "code": "THREESUM",
+              "name": "Zero Sum Triplets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43373",
+              "code": "MAXSEGMP",
+              "name": "Maximum Unique Segment",
+              "difficulty_rating": "1791",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43373",
+              "code": "SLDW0104",
+              "name": "Special Substring",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 17/11/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Bit Manipulation, Stings, and Greedy",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 12",
+          "submodule_id": 17699,
+          "contest_code": "DSAMONDAY12P",
+          "start_date": "2025-11-18 10:18:05",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY12P/problems/MAKE2DIGITS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "43531",
+              "code": "MAKE2DIGITS",
+              "name": "Make 2 digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43531",
+              "code": "SORTARRAYS",
+              "name": "Color Sorting Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43531",
+              "code": "DSCPPAS261",
+              "name": "Intersecting arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43531",
+              "code": "XYSTRPP",
+              "name": "Chef and String",
+              "difficulty_rating": "1124",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43531",
+              "code": "HXORP",
+              "name": "Hail XOR",
+              "difficulty_rating": "1786",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "43531",
+              "code": "ZCO15003P",
+              "name": "Covering",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 24/11/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Trees and Binary Trees, Recursion",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 13",
+          "submodule_id": 17995,
+          "contest_code": "DSAMONDAY13P",
+          "start_date": "2025-11-25 09:09:29",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY13P/problems/LESSTHAN10",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "44015",
+              "code": "LESSTHAN10",
+              "name": "Less than 10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44015",
+              "code": "KITCHENCOST",
+              "name": "Cost of Groceries",
+              "difficulty_rating": "799",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44015",
+              "code": "MAXCOUNT",
+              "name": "Count of Maximum",
+              "difficulty_rating": "1180",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44015",
+              "code": "DSAPROB7",
+              "name": "Generate All Possible Pairs of Balanced Parenthese",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44015",
+              "code": "RECUR22",
+              "name": "All Possible Subsets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44015",
+              "code": "BSTRECOVER",
+              "name": "Recover the BST",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 01/12/25",
+      "description": "This DSA Challenge contains problems from the following topics: Strings, Linked List, Bit Manipulation, Mathematics.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 14",
+          "submodule_id": 18090,
+          "contest_code": "DSAMONDAY14P",
+          "start_date": "2025-12-01 22:54:52",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY14P/problems/RESOLUTIONCP",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "44236",
+              "code": "RESOLUTIONCP",
+              "name": "Complete the resolution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44236",
+              "code": "DNASTORAGEP",
+              "name": "DNA Storage",
+              "difficulty_rating": "801",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44236",
+              "code": "NESTEDPARAN",
+              "name": "Chef and Nested Parentheses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44236",
+              "code": "REVSEG",
+              "name": "Reverse the Segment",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44236",
+              "code": "DELDOUBLY",
+              "name": "Delete All Occurrences of a Key in a Doubly Linked",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44236",
+              "code": "LARGESTYP",
+              "name": "Largest Y",
+              "difficulty_rating": "1823",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 08/12/25",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, String, Binary Trees.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 15",
+          "submodule_id": 18106,
+          "contest_code": "DSAMONDAY15P",
+          "start_date": "2025-12-09 09:42:52",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY15P/problems/CHRISTMASVIS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "44399",
+              "code": "CHRISTMASVIS",
+              "name": "Christmas visits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44399",
+              "code": "REMOVEPAREN",
+              "name": "Remove Outermost Parentheses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44399",
+              "code": "LONGGIVENSUM",
+              "name": "Longest subarray with a given sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44399",
+              "code": "BSTITERATOR",
+              "name": "Binary Search Tree Iterator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44399",
+              "code": "TREEPATHSUM",
+              "name": "Tree Path Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44399",
+              "code": "RIGTHSIDE",
+              "name": "Right side view of Binary tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 15/12/25",
+      "description": "This DSA Challenge contains problems from the following topics: Array, String, 2D Matrix, Recursion.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 16",
+          "submodule_id": 18630,
+          "contest_code": "DSAMONDAY16P",
+          "start_date": "2025-12-16 10:41:40",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY16P/problems/BIRTHDAYCHOC",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "44865",
+              "code": "BIRTHDAYCHOC",
+              "name": "Birthday Chocolates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44865",
+              "code": "MAXCONSECU",
+              "name": "Chef and Consecutive Ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44865",
+              "code": "MATROTATE",
+              "name": "Matrix Rotations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44865",
+              "code": "SLDW0103",
+              "name": "Longest Substring Without Repeating Characters",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44865",
+              "code": "DSCPPAS267",
+              "name": "Unique Subset",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "44865",
+              "code": "SPSBTR",
+              "name": "Special Substring",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 22/12/25",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Combinatorics, Graphs, Binary Search Tree.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 17",
+          "submodule_id": 19085,
+          "contest_code": "DSAMONDAY17P",
+          "start_date": "2025-12-23 09:48:10",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY17P/problems/CHEFPROFIT",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "45473",
+              "code": "CHEFPROFIT",
+              "name": "Chefs profits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45473",
+              "code": "LASTZERO",
+              "name": "Move all the zeros to the last",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45473",
+              "code": "TWOSUMM",
+              "name": "Chef and Pair of Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45473",
+              "code": "BSTCHECK",
+              "name": "Check for BST",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45473",
+              "code": "WCOUNT",
+              "name": "Word Counting",
+              "difficulty_rating": "1640",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45473",
+              "code": "CHEFSERVER",
+              "name": "Chef Shortest Route",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 29/12/25",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Strings, Binary Search, Dynamic Programming, Recursion.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 18",
+          "submodule_id": 19496,
+          "contest_code": "DSAMONDAY18P",
+          "start_date": "2025-12-30 10:36:30",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY18P/problems/CHEFANDGIFTS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "45865",
+              "code": "CHEFANDGIFTS",
+              "name": "Chef and New Year Gifts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45865",
+              "code": "CHEFROMAN",
+              "name": "Chef and Roman Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45865",
+              "code": "STRINGTOINT",
+              "name": "Chef and String to Integer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45865",
+              "code": "PAINTSHODOWN",
+              "name": "The Great Painting Showdown",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45865",
+              "code": "RECUR25",
+              "name": "Pascal Triangle Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "45865",
+              "code": "MAXCROSSP",
+              "name": "Maximal crosses",
+              "difficulty_rating": "1570",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 05/01/26",
+      "description": "This DSA Challenge contains problems from the following topics: Array\nStrings, Binary Search, Recursion.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 19",
+          "submodule_id": 19702,
+          "contest_code": "DSAMONDAY19P",
+          "start_date": "2026-01-06 09:19:12",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY19P/problems/CHEFSOFFICE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "46225",
+              "code": "CHEFSOFFICE",
+              "name": "Chef shifting office",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "46225",
+              "code": "LONGESPREFIX",
+              "name": "Longest Common Prefix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "46225",
+              "code": "VALIDANAGRAM",
+              "name": "Valid Anagram",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "46225",
+              "code": "ROTATIONARAY",
+              "name": "Find how many times the array have been rotated",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "46225",
+              "code": "WEXLT01",
+              "name": "Chef Solves Palindrome Partitioning",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "46225",
+              "code": "VERTEXCOLOR",
+              "name": "Vertex Colouring Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 12/01/26",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Binary Search, Bit Manipulation, Recursion.\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 20",
+          "submodule_id": 20722,
+          "contest_code": "DSAMONDAY20P",
+          "start_date": "2026-01-13 10:04:43",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY20P/problems/CRICKETPRO",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "47604",
+              "code": "CRICKETPRO",
+              "name": "Cricket tournament profits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "47604",
+              "code": "REMOVEDUPLIC",
+              "name": "Remove Duplicates from Sorted Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "47604",
+              "code": "FIRSTNDLAST",
+              "name": "First and last occurrence of a given number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "47604",
+              "code": "XORRANGE",
+              "name": "XOR of numbers in a range",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "47604",
+              "code": "PRIMENUMBERS",
+              "name": "Prime factorisation of numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "47604",
+              "code": "RATMAZE",
+              "name": "Rat In Maze",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 19/01/26",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Heaps, Binary Search Trees, Sliding Window, and Two Pointers.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 21",
+          "submodule_id": 22262,
+          "contest_code": "DSAMONDAY21P",
+          "start_date": "2026-01-20 10:39:36",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY21P/problems/FINALMATCH",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "49127",
+              "code": "FINALMATCH",
+              "name": "Chef and Final match",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49127",
+              "code": "MAJORELEM",
+              "name": "Find the majority element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49127",
+              "code": "FRUITBASKET",
+              "name": "Put fruits into basket",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49127",
+              "code": "PREORDER",
+              "name": "Construct a BST from a preorder traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49127",
+              "code": "INORDERPOST",
+              "name": "Construct binary tree from Inorder and Postorder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49127",
+              "code": "CONSECARDS",
+              "name": "Consecutive Card Grouping",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 26/01/26",
+      "description": "This DSA Challenge contains problems from the following topics: Arrays, Binary Search, Bit Manipulation, Graphs.\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 22",
+          "submodule_id": 22641,
+          "contest_code": "DSAMONDAY22P",
+          "start_date": "2026-01-27 10:48:34",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY22P/problems/LADOOSPECIAL",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "49550",
+              "code": "LADOOSPECIAL",
+              "name": "Republic day ladoos",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49550",
+              "code": "MISSNDREPEAT",
+              "name": "Find the repeating and missing number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49550",
+              "code": "SWAPTWONUMS",
+              "name": "Swap two numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49550",
+              "code": "SINGLESORTED",
+              "name": "Lonely Element in Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49550",
+              "code": "HYBDD01",
+              "name": "Chef Solves Course Schedule II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "49550",
+              "code": "SZICS01",
+              "name": "Chef Counts Enclaves",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 02/02/26",
+      "description": "This DSA challenge contains problems from the topics: Array,Strings, Greedy Algorithm & Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 23",
+          "submodule_id": 23024,
+          "contest_code": "DSAMONDAY23P",
+          "start_date": "2026-02-03 10:36:08",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY23P/problems/TENNISMATCH",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "50007",
+              "code": "TENNISMATCH",
+              "name": "Tennis Match",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50007",
+              "code": "MISSINPERM",
+              "name": "Missing number in permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50007",
+              "code": "REVERSEWORD",
+              "name": "Reverse Words in a String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50007",
+              "code": "COOKIEDIST",
+              "name": "Cookie distribution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50007",
+              "code": "COUNTSUBSETS",
+              "name": "Count subsets with sum K",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50007",
+              "code": "CHEFANDTWOFR",
+              "name": "Chef and His Two Friends",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 09/02/26",
+      "description": "This DSA challenge contains problems from the topics: Array, Greedy Algorithm & Bit Manipulation",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 24",
+          "submodule_id": 23332,
+          "contest_code": "DSAMONDAY24P",
+          "start_date": "2026-02-09 21:59:18",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY24P/problems/FPTYY01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "50503",
+              "code": "FPTYY01",
+              "name": "Chef Counts Primes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50503",
+              "code": "ROTATEARRAY",
+              "name": "Rotate the array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50503",
+              "code": "XORRANGE",
+              "name": "XOR of numbers in a range",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50503",
+              "code": "STOCKSPROFIT",
+              "name": "Chef and Stock Profits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50503",
+              "code": "GBHHA01",
+              "name": "Chef Combines Intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50503",
+              "code": "COCRZ01",
+              "name": "Chef Removes Overlapping Intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 16/02/26",
+      "description": "This DSA challenge contains problems from the topics: String, Stack & Queue",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 25",
+          "submodule_id": 23576,
+          "contest_code": "DSAMONDAY25P",
+          "start_date": "2026-02-17 11:27:17",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY25P/problems/PALINDRCHECK",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "50753",
+              "code": "PALINDRCHECK",
+              "name": "Reverse Words in a String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50753",
+              "code": "PPMUH01",
+              "name": "Chef Builds Queue Using Stacks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50753",
+              "code": "NFXON01",
+              "name": "Chef Circular Search",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50753",
+              "code": "DRKTZ01",
+              "name": "Chef Solves Asteroid Collision",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50753",
+              "code": "MEXOPERATION",
+              "name": "Maximum Possible MEX After Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "50753",
+              "code": "IEIJT01",
+              "name": "Chef Solves LRU Cache",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 23/02/26",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Graphs & Heaps.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 25",
+          "submodule_id": 23801,
+          "contest_code": "DSAMONDAY26P",
+          "start_date": "2026-02-24 13:14:05",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY26P/problems/REVERSEPAIRS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "51099",
+              "code": "REVERSEPAIRS",
+              "name": "Count Reverse Pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51099",
+              "code": "MAXPROSUBARR",
+              "name": "Chef and the Magical Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51099",
+              "code": "HBJRG01",
+              "name": "Chef Counts Provinces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51099",
+              "code": "MERGEKSORTED",
+              "name": "Merge K sorted lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51099",
+              "code": "SZICS01",
+              "name": "Chef Counts Enclaves",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51099",
+              "code": "CONSECARDS",
+              "name": "Consecutive Card Grouping",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 02/03/26",
+      "description": "This DSA challenge contains problems from the following topics: Array, Recursion and Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 27",
+          "submodule_id": 23829,
+          "contest_code": "DSAMONDAY27P",
+          "start_date": "2026-03-03 10:40:50",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY27P/problems/ALTNUMS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "51245",
+              "code": "ALTNUMS",
+              "name": "Alternating Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51245",
+              "code": "PRINTSUBARAY",
+              "name": "Print subarray with maximum subarray sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51245",
+              "code": "BWFPF01",
+              "name": "Chef Builds Subsets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51245",
+              "code": "VYYCI01",
+              "name": "Chef Solves Combination Sum III",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51245",
+              "code": "NINJATRAIN",
+              "name": "Ninja Training",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51245",
+              "code": "VUUDN01",
+              "name": "Chef Calculates Edit Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 09/03/2026",
+      "description": "This DSA Challenge contains problems from the following topics: Array, Graphs and Binary Search Trees\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 28",
+          "submodule_id": 24133,
+          "contest_code": "DSAMONDAY28P",
+          "start_date": "2026-03-10 09:40:52",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY28P/problems/ALTNUMS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "51819",
+              "code": "ALTNUMS",
+              "name": "Alternating Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51819",
+              "code": "MAXPROSUBARR",
+              "name": "Chef and the Magical Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51819",
+              "code": "LARGESTBST",
+              "name": "Largest bst in binary tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51819",
+              "code": "BSTITERATOR",
+              "name": "Binary Search Tree Iterator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51819",
+              "code": "EKMPU01",
+              "name": "Chef Finds Cheapest Flights",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "51819",
+              "code": "SZICS01",
+              "name": "Chef Counts Enclaves",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 16/03/2026",
+      "description": "This DSA Challenge contains problems from the following topics: Linked List, bitwise & stack and queue",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 29",
+          "submodule_id": 24398,
+          "contest_code": "DSAMONDAY29P",
+          "start_date": "2026-03-17 13:01:34",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY29P/problems/LLCYCLE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "52232",
+              "code": "LLCYCLE",
+              "name": "Detect Start of Cycle in Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52232",
+              "code": "ADDONELL",
+              "name": "Linked List Increment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52232",
+              "code": "HSUON01",
+              "name": "Chef Finds Next Greater Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52232",
+              "code": "JQJTY01",
+              "name": "Chef Calculates Subarray Minimums",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52232",
+              "code": "ZCIBE01",
+              "name": "Chef Finds Single Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52232",
+              "code": "TWOUNIQUE",
+              "name": "Find the Two Unique Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 23/03/26",
+      "description": "This DSA challenge contains problems from the following topics: Binary search, trees & binary search trees.",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 30",
+          "submodule_id": 24524,
+          "contest_code": "DSAMONDAY30P",
+          "start_date": "2026-03-24 11:51:49",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY30P/problems/INSERTPOS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "52470",
+              "code": "INSERTPOS",
+              "name": "Find the insert position",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52470",
+              "code": "MINEATING",
+              "name": "Minimum Eating Speed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52470",
+              "code": "BOTTOMBINARY",
+              "name": "Bottom view of binary tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52470",
+              "code": "SYMMETRICTRE",
+              "name": "Symmetric binary tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52470",
+              "code": "BURNBT",
+              "name": "Minimum time take to burn a BT from a given node",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "52470",
+              "code": "ITERATIVEPRE",
+              "name": "Iterative Preorder Traversal of Binary Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 30/3/26",
+      "description": "This DSA challenge contains problems from the following topics: Binary Search Tree, Graph & Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 31",
+          "submodule_id": 25118,
+          "contest_code": "DSAMONDAY31P",
+          "start_date": "2026-03-31 00:29:03",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY31P/problems/MAXPATHSUM",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "53196",
+              "code": "MAXPATHSUM",
+              "name": "Maximum Path Sum in a Binary Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53196",
+              "code": "XGWUY01",
+              "name": "Chef Finds Safe States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53196",
+              "code": "VERTICALTRAV",
+              "name": "Vertical Order Traversal of Binary Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53196",
+              "code": "TXBCN01",
+              "name": "Chef Solves Word Break",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53196",
+              "code": "DEQCN01",
+              "name": "Chef Swims Rising Water",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53196",
+              "code": "EIHKO01",
+              "name": "Chef Counts Unique Paths",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 06/04/26",
+      "description": "This DSA challenge contains problems from the following topics: Binary Search Tree, Graph & Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 32",
+          "submodule_id": 25395,
+          "contest_code": "DSAMONDAY32P",
+          "start_date": "2026-04-07 13:00:39",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY32P/problems/PREINPOST",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "53649",
+              "code": "PREINPOST",
+              "name": "Preorder, Inorder, and Postorder Traversal in one ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53649",
+              "code": "NASTA01",
+              "name": "Chef Maximizes Stock Profit - 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53649",
+              "code": "INSERTBST",
+              "name": "Insert a node in BST",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53649",
+              "code": "MPYSW01",
+              "name": "Chef Builds Island",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53649",
+              "code": "IUAIS01",
+              "name": "Chef Merges Accounts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53649",
+              "code": "NZRYT01",
+              "name": "Chef Finds Stock Profit - 3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 13/04/26",
+      "description": "This DSA challenge contains problem from the following topics: Array, Hashing, Recursion and Greedy",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 33",
+          "submodule_id": 25422,
+          "contest_code": "DSAMONDAY33P",
+          "start_date": "2026-04-14 10:45:45",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY33P/problems/HASHP03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "53908",
+              "code": "HASHP03",
+              "name": "Subarray Sum equals k",
+              "difficulty_rating": "1696",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53908",
+              "code": "MAXSUBARR",
+              "name": "Maximum Subarray ",
+              "difficulty_rating": "1613",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53908",
+              "code": "NEXTPERM",
+              "name": "Next Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53908",
+              "code": "PREP39",
+              "name": "Binary Search - Power Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53908",
+              "code": "VISA02",
+              "name": "Jump Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "53908",
+              "code": "PREP31",
+              "name": "Dynamic Programming - Minimum Jumps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 20/4/26",
+      "description": "This DSA challenge contains problem from the following topics: Array, Hashing, Recursion and Greedy",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 34",
+          "submodule_id": 25519,
+          "contest_code": "DSAMONDAY34P",
+          "start_date": "2026-04-21 09:11:57",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY34P/problems/RATINGPEPS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "54246",
+              "code": "RATINGPEPS",
+              "name": "Rating people",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54246",
+              "code": "RECUR07",
+              "name": "Print Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54246",
+              "code": "DSAAGP36",
+              "name": "Frequency of elements using Hashing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54246",
+              "code": "PREP51",
+              "name": "Hashing - Minimum Window Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54246",
+              "code": "RECUR31",
+              "name": "Interleaving String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54246",
+              "code": "CANDYDIST",
+              "name": "Candy Distribution",
+              "difficulty_rating": "668",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "DSA Challenge - 27/4/26",
+      "description": "This DSA challenge contains problem from the following topics: Arrays, binary search and Graphs\n",
+      "submodules": [
+        {
+          "name": "Monday Munch - DSA Challenge 35",
+          "submodule_id": 25535,
+          "contest_code": "DSAMONDAY35P",
+          "start_date": "2026-04-28 09:18:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/dsa-challenges/DSAMONDAY35P/problems/CHESSTOUR",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "54446",
+              "code": "CHESSTOUR",
+              "name": "Chess tournament",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54446",
+              "code": "RUNCOMPARE",
+              "name": "Running Comparison",
+              "difficulty_rating": "899",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54446",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54446",
+              "code": "DSAAGP1098",
+              "name": "Aggressive Cows",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54446",
+              "code": "PREP35",
+              "name": "Graphs - Capture Regions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54446",
+              "code": "KXTUW01",
+              "name": "Chef Calculates Network Delay",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 210,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [],
+  "learners_count": 16527,
+  "path_review": {
+    "rating": 4.8,
+    "users": 204
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

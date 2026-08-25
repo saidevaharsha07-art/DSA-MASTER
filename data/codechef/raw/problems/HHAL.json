@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HHAL",
+  "contest_category": "6",
+  "problem_name": "Harrenhal",
+  "intended_contest_code": "LTIME15",
+  "body": "<p><i>Harrenhal is the largest castle in the Seven Kingdoms and is the seat of House Whent in the Riverlands, on the north shore of the Gods Eye lake. Since the War of Conquest, however, it has become a dark and ruinous place.</i></p>\n<p align=\"right\">(c) A Wiki of Ice and Fire</p>\n\n<p><img src=\"https://codechef_shared.s3.amazonaws.com/download/LTIME15/harrenhal.jpg\" height=\"250\"></p>\n\n<p>Now Harrenhal is too dangerous since it's a nice place for bandits to hide, or even for rebels to start planning overthrowing of the king. So, the current Lord of the Seven Kingdoms has decided, that it's time to completely ruin the castle. For that puposes, he's planning to send some military troops.</p>\n\n<p>In this problem we assume, that Harrenhal can be described as a string <b>H</b>, which consists only of symbols <i>'a'</i> and <i>'b'</i>. Harrenhal is completely ruined if and only if the length of <b>H</b> is equal to zero.</p>\n\n<p>So, how to make <b>H</b> empty? Send a military troop! When a military troop of the king reach the castle, they delete some palindromic subsequence <b>S</b> of <b>H</b>. For example, let <b>H</b> = <i>'abbabaab'</i>. Then the current military troop can choose <b>S</b> = <i>'ababa'</i>(Let's make symbols of <b>S</b> bold in <b>H</b>: <i>'<b>ab</b>b<b>ab</b>a<b>a</b>b'</i>). After deleting <b>S</b>, <b>H</b> will be equal to <i>'bab'</i>. Military troops are free to choose any possible palindromic subsequence of <b>H</b>.</p>\n\n<p>Your task is pretty simple: determine the minimal number of military troops, that the Lord of the Seven Kingdoms has to send in order to ruin Harrenhal.</p>\n\n<h3>Note</h3>\n<p>\nMaybe, some of you aren't familiar with definitions from the statement. Here're some articles that could help you to understand the problem correctly:\n<ul>\n    <li>Subsequence: <a href=\"http://en.wikipedia.org/wiki/Subsequence\">http://en.wikipedia.org/wiki/Subsequence</a></li>\n    <li>Palindrome: <a href=\"http://en.wikipedia.org/wiki/Palindrome\">http://en.wikipedia.org/wiki/Palindrome</a></li>\n</ul>\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b>, denoting the number of test cases.</p>\n<p>The next <b>T</b> lines contain a string <b>H</b> each, denoting the string, that describes the current state of Harrenhal for the corresponding test cases.</p>\n<p>It's guaranteed, that each <b>H</b> consists only of symbols <i>'a'</i> and <i>'b'</i>.</p>\n\n<h3>Output</h3>\n<p>The output should contain exactly <b>T</b> lines. <b>i</b>'th line of the output should contain the only integer: the minimal number of military troops, that the Lord of the Seven Kingdoms has to send in order to ruin Harrenhal for the corresponding test cases.</p>\n\n<h3>Constraints</h3>\n\n<ul>\n<li>1 \u2264 <b>|H|</b> \u2264 100000, for each <b>H</b>.</li>\n<li>Subtask 1(30 points): each <b>H</b> in the input is a palindrome, 1 \u2264 <b>T</b> \u2264 6;</li>\n<li>Subtask 2(70 points): 1 \u2264 <b>T</b> \u2264 9.</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n1\nabbabaab\n\n<b>Output:</b>\n2\n</pre>\n\n<h3>Explanation</h3>\n<p>There're multiple ways to ruin Harrenhal in the example test. Let's consider one of them.</p>\n<p>The first troop can delete <b>S</b> = <i>'ababa'</i>(<i>'<b>ab</b>b<b>ab</b>a<b>a</b>b'</i>). After that, <b>H</b> = <i>'bab'</i>.</p>\n<p>The second troop can delete <b>S</b> = <i>'bab'</i>(<i>'<b>bab</b>'</i>). After that, <b>H</b> is empty and that's it.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p><i>Harrenhal is the largest castle in the Seven Kingdoms and is the seat of House Whent in the Riverlands, on the north shore of the Gods Eye lake. Since the War of Conquest, however, it has become a dark and ruinous place.</i></p>\n<p align=\"right\">(c) A Wiki of Ice and Fire</p>\n\n<p><img src=\"https://codechef_shared.s3.amazonaws.com/download/LTIME15/harrenhal.jpg\" height=\"250\" alt=\"harrenhal.jpg\" /></p>\n\n<p>Now Harrenhal is too dangerous since it's a nice place for bandits to hide, or even for rebels to start planning overthrowing of the king. So, the current Lord of the Seven Kingdoms has decided, that it's time to completely ruin the castle. For that puposes, he's planning to send some military troops.</p>\n\n<p>In this problem we assume, that Harrenhal can be described as a string <b>H</b>, which consists only of symbols <i>'a'</i> and <i>'b'</i>. Harrenhal is completely ruined if and only if the length of <b>H</b> is equal to zero.</p>\n\n<p>So, how to make <b>H</b> empty? Send a military troop! When a military troop of the king reach the castle, they delete some palindromic subsequence <b>S</b> of <b>H</b>. For example, let <b>H</b> = <i>'abbabaab'</i>. Then the current military troop can choose <b>S</b> = <i>'ababa'</i>(Let's make symbols of <b>S</b> bold in <b>H</b>: <i>'<b>ab</b>b<b>ab</b>a<b>a</b>b'</i>). After deleting <b>S</b>, <b>H</b> will be equal to <i>'bab'</i>. Military troops are free to choose any possible palindromic subsequence of <b>H</b>.</p>\n\n<p>Your task is pretty simple: determine the minimal number of military troops, that the Lord of the Seven Kingdoms has to send in order to ruin Harrenhal.</p>\n\n<h3>Note</h3>\n<p>\nMaybe, some of you aren't familiar with definitions from the statement. Here're some articles that could help you to understand the problem correctly:\n</p><ul><li>Subsequence: <a href=\"http://en.wikipedia.org/wiki/Subsequence\" rel=\"nofollow\">http://en.wikipedia.org/wiki/Subsequence</a></li>\n    <li>Palindrome: <a href=\"http://en.wikipedia.org/wiki/Palindrome\" rel=\"nofollow\">http://en.wikipedia.org/wiki/Palindrome</a></li>\n</ul><h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b>, denoting the number of test cases.</p>\n<p>The next <b>T</b> lines contain a string <b>H</b> each, denoting the string, that describes the current state of Harrenhal for the corresponding test cases.</p>\n<p>It's guaranteed, that each <b>H</b> consists only of symbols <i>'a'</i> and <i>'b'</i>.</p>\n\n<h3>Output</h3>\n<p>The output should contain exactly <b>T</b> lines. <b>i</b>'th line of the output should contain the only integer: the minimal number of military troops, that the Lord of the Seven Kingdoms has to send in order to ruin Harrenhal for the corresponding test cases.</p>\n\n<h3>Constraints</h3>\n\n<ul><li>1 \u2264 <b>|H|</b> \u2264 100000, for each <b>H</b>.</li>\n<li>Subtask 1(30 points): each <b>H</b> in the input is a palindrome, 1 \u2264 <b>T</b> \u2264 6;</li>\n<li>Subtask 2(70 points): 1 \u2264 <b>T</b> \u2264 9.</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\nabbabaab",
+        "output": "2",
+        "explanation": "<p>There're multiple ways to ruin Harrenhal in the example test. Let's consider one of them.</p>\n<p>The first troop can delete <b>S</b> = <i>'ababa'</i>(<i>'<b>ab</b>b<b>ab</b>a<b>a</b>b'</i>). After that, <b>H</b> = <i>'bab'</i>.</p>\n<p>The second troop can delete <b>S</b> = <i>'bab'</i>(<i>'<b>bab</b>'</i>). After that, <b>H</b> is empty and that's it.</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 6971,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kostya_by",
+  "problem_display_authors": [
+    "kostya_by"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kostya_by'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>kostya_by</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "stzgd"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/stzgd'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>stzgd</span></a></div>",
+  "problem_editorialist": "darkshadows",
+  "date_added": "27-07-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1495",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610868
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HHAL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 11,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

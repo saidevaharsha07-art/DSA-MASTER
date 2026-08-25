@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COMPEXP",
+  "contest_category": "6",
+  "problem_name": "Compression Algorithm",
+  "intended_contest_code": null,
+  "body": "<p>Mr. X has come up with a new string compression algorithm. Consider a string of length <b>N</b> which contains up to <b>K</b> distinct characters. The compression algorithm works as follows: Replace each maximal contiguous substring containing only one distinct character (repeated an arbitrary number of times) and replace it by 2 values: the character and the length of the substring.</p>\r\n<p>For example, the string \"aabbaaa\" will be compressed to \"a, 2, b, 2, a, 3\". Thus the length of the compressed string is 6.</p>\r\n<p>\r\n\r\n<p>\r\nSince Mr. X is living in advanced times, the length of any integer is considered to be 1. For example, if a string is compressed to \"a, 111, b, 13\", then its length after compression is considered to be 4.\r\n</p>\r\n\r\n<p>\r\nTo test his algorithm, he needs to know the expected length of the compressed string for given <b>N</b> and <b>K</b> if the input string is randomly uniformly chosen from all possibilities. He wants to run this experiment multiple times for different <b>N, K</b> and needs your help.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of queries. The description of <b>T</b> test cases follows.</p>\r\n<p>The first and only line of each test case contains two integers <b>N</b> and <b>K</b> denoting the number of letters in the input string and the maximum number of distinct characters that can be present in the string.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>\r\n    For each test case, output a single line containing the expected length of the compressed string. \r\n    Your answer will be considered correct if the absolute error is less than <b>10<sup>-2</sup></b>\r\n</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 10<sup>5</sup></b></li>\r\n<li><b>1 \u2264 N, K \u2264 10<sup>9</sup></b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n3 1\r\n3 2\r\n<b>Output:</b>\r\n2.0\r\n4.0\r\n\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<b>Example case 1:</b>\r\n<p>\r\nThere is only one string: aaa with compressed string = a, 3. Therefore length = 2\r\n</p>\r\n\r\n<b>Example case 2</b>\r\n<p>\r\nInput strings:<br>\r\n\"aaa\": \"a, 3\". Length = 2<br/>\r\n\"aab\": \"a, 2, b, 1\". Length = 4 <br/>\r\n\"aba\": \"a, 1, b, 1, a, 1\". Length = 6<br/>\r\n\"abb\": \"a, 1, b, 2\". Length = 4<br/>\r\n\"baa\": \"b, 1, a, 2\". Length = 4<br/>\r\n\"bab\": \"b, 1, a, 1, b, 1\". Length = 6<br/>\r\n\"bba\": \"b, 2, a, 1\". Length = 4<br/>\r\n\"bbb\": \"b, 3\". Length = 2<br/>\r\n\r\nExpected value = <b>(2+4+6+4+4+6+4+2)/8 = 32/8 = 4 </b>\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Mr. X has come up with a new string compression algorithm. Consider a string of length <b>N</b> which contains up to <b>K</b> distinct characters. The compression algorithm works as follows: Replace each maximal contiguous substring containing only one distinct character (repeated an arbitrary number of times) and replace it by 2 values: the character and the length of the substring.</p>\n<p>For example, the string \"aabbaaa\" will be compressed to \"a, 2, b, 2, a, 3\". Thus the length of the compressed string is 6.</p>\n<p>\n\n<p>\nSince Mr. X is living in advanced times, the length of any integer is considered to be 1. For example, if a string is compressed to \"a, 111, b, 13\", then its length after compression is considered to be 4.\n</p>\n\n<p>\nTo test his algorithm, he needs to know the expected length of the compressed string for given <b>N</b> and <b>K</b> if the input string is randomly uniformly chosen from all possibilities. He wants to run this experiment multiple times for different <b>N, K</b> and needs your help.</p>\n\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of queries. The description of <b>T</b> test cases follows.</p>\n<p>The first and only line of each test case contains two integers <b>N</b> and <b>K</b> denoting the number of letters in the input string and the maximum number of distinct characters that can be present in the string.\n</p>\n\n<h3>Output</h3>\n<p>\n    For each test case, output a single line containing the expected length of the compressed string. \n    Your answer will be considered correct if the absolute error is less than <b>10<sup>-2</sup></b>\n</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 T \u2264 10<sup>5</sup></b></li>\n<li><b>1 \u2264 N, K \u2264 10<sup>9</sup></b></li>\n</ul>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 1\n3 2",
+        "output": "2.0\n4.0",
+        "explanation": "<b>Example case 1:</b>\n<p>\nThere is only one string: aaa with compressed string = a, 3. Therefore length = 2\n</p>\n\n<b>Example case 2</b>\n<p>\nInput strings:<br>\n\"aaa\": \"a, 3\". Length = 2<br/>\n\"aab\": \"a, 2, b, 1\". Length = 4 <br/>\n\"aba\": \"a, 1, b, 1, a, 1\". Length = 6<br/>\n\"abb\": \"a, 1, b, 2\". Length = 4<br/>\n\"baa\": \"b, 1, a, 2\". Length = 4<br/>\n\"bab\": \"b, 1, a, 1, b, 1\". Length = 6<br/>\n\"bba\": \"b, 2, a, 1\". Length = 4<br/>\n\"bbb\": \"b, 3\". Length = 2<br/>\n\nExpected value = <b>(2+4+6+4+4+6+4+2)/8 = 32/8 = 4 </b>\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/bZ-RK8zHZVU",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/COMPEXP\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACMIND17/problems/COMPEXP\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/usaxena95\" rel=\"nofollow noopener\">Utkarsh Saxena</a><br>\n<strong>Testers:</strong> <a href=\"https://www.codechef.com/users/xellos0\" rel=\"nofollow noopener\">Jakub Safin</a><br>\n<strong>Editorialist:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<h3>DIFFICULTY:</h3>\n<p>easy-medium</p>\n<h3>PREREQUISITES:</h3>\n<p>probability, expected value</p>\n<h3>PROBLEM:</h3>\n<p>Consider a string s = \u201caaabbaa\u201d. Let us call maximal sequence of continuous ones as a group. You have to find expected the number of groups in a string of length <span class=\"math\">N</span> and alphabet size <span class=\"math\">K</span>. The final output required in the problem was twice of this value.</p>\n<h3>SOLUTION</h3>\n<h3>Satyaki\u2019s solution.</h3>\n<p>Let <span class=\"math\">E(N, K)</span> be the answer for given <span class=\"math\">N</span> and <span class=\"math\">K</span>.</p>\n<p>The recurrence is -</p>\n<div class=\"math\">\nE(1, K) = 1\n</div>\n<p>We can keep the <span class=\"math\">N</span>-th character same as <span class=\"math\">N-1</span>-th character with probability <span class=\"math\">\\frac{1}{K}</span>, in this case, the <span class=\"math\">E(N, K)</span> remains same as of <span class=\"math\">E(N-1, K)</span>. In the other case when the <span class=\"math\">N</span>-th character is different than the <span class=\"math\">N-1</span>-th character, the number of groups will be 1 more.</p>\n<div class=\"math\">\nE(N, K) = \\frac{1}{K} E(N-1, K) \\, + \\, (1 - \\frac{1}{K}) (1 + E(N-1, K))\n</div>\n<div class=\"math\">\n= E(N-1, K) + (1 - \\frac{1}{K})\n</div>\n<div class=\"math\">\n= E(1, K) + (1 - \\frac{1}{K}) * (N-1)\n</div>\n<div class=\"math\">\n= N - \\frac{N-1}{K}\n</div>\n<h3>Linearty of expectation based solution</h3>\n<p>The number of maximal groups is 1 + the number of character changes. The probability of each of change is <span class=\"math\">\\frac{K-1}{K}</span>. By linearity of expectation, the number of groups will be <span class=\"math\">(N-1) \\frac{K-1}{K}</span>.</p>\n<p>So, the answer will be <span class=\"math\">1 + (N-1) \\frac{K-1}{K}</span>.</p>\n<h3>Combintorics based solution</h3>\n<p>The number of strings for which the number of groups is <span class=\"math\">g</span> is given by <span class=\"math\">K * (K - 1)^{g - 1} * \\binom{N - 1}{g - 1}</span>. The combination <span class=\"math\">\\binom{N - 1}{g - 1}</span> denotes the selection of <span class=\"math\">g-1</span> places where the character will change. The character of the first group can be selected in <span class=\"math\">K</span> ways, then the second group in <span class=\"math\">K-1</span> ways, third <span class=\"math\">K-1</span> ways, and so on till the <span class=\"math\">g</span>-th group.</p>\n<p>So, the expected number of groups will be</p>\n<div class=\"math\">\n\\sum\\limits_{g = 1}^{N} {g \\cdot \\frac{K * (K - 1)^{g - 1} * \\binom{N - 1}{g - 1}}{K^N}}\n</div>\n<div class=\"math\">\n\\frac{1}{K^{N-1}} \\sum\\limits_{g = 1}^{N} {g * (K - 1)^{g - 1} * \\binom{N - 1}{g - 1}}\n</div>\n<p>By change of variable <span class=\"math\">g \\rightarrow g + 1</span></p>\n<div class=\"math\">\n\\frac{1}{K^{N-1}} \\sum\\limits_{g = 0}^{N - 1} {(g + 1) * (K - 1)^{g} * \\binom{N - 1}{g}}\n</div>\n<p>The term</p>\n<div class=\"math\">\n\\sum\\limits_{g = 0}^{N - 1} {(g + 1) * (K - 1)^{g} * \\binom{N - 1}{g}} = \\sum\\limits_{g = 0}^{N - 1} {g * (K - 1)^{g} * \\binom{N - 1}{g}} + \\sum\\limits_{g = 0}^{N - 1} {(K - 1)^{g} * \\binom{N - 1}{g}}\n</div>\n<p>Binomial theorem states</p>\n<div class=\"math\">\n(1 + x)^n = \\sum\\limits_{r = 0}^{n} \\binom{n}{r} x^r\n</div>\n<p>In this formula, if we replace <span class=\"math\">x</span> by <span class=\"math\">K-1</span>, and <span class=\"math\">n</span> by <span class=\"math\">N-1</span>, we get the second term of the above summation. So, the second term becomes <span class=\"math\">K^{N-1}</span>.</p>\n<p>Let us see how to calculate the first term.<br>\nBy differentiating the binomial theorem by both the sides, we get.</p>\n<div class=\"math\">\nn (1 + x)^{n-1} = \\sum\\limits_{r = 1}^{n} \\binom{n}{r} r x^{r-1}\n</div>\n<p>Multiplying both the sides by <span class=\"math\">x</span>, we get</p>\n<div class=\"math\">\nn x (1 + x)^{n-1} = \\sum\\limits_{r = 1}^{n} \\binom{n}{r} r x^r\n</div>\n<div class=\"math\">\nn x (1 + x)^{n-1} = \\sum\\limits_{r = 0}^{n} \\binom{n}{r} r x^r\n</div>\n<p>So, by replacing <span class=\"math\">x</span> with <span class=\"math\">K-1</span> and <span class=\"math\">n</span> by <span class=\"math\">N-1</span> again, we get the first term of the summation</p>\n<div class=\"math\">\n(N-1) \\cdot (K-1) \\cdot K^{N-2}\n</div>\n<p>So, the expected number of groups turn out to be</p>\n<div class=\"math\">\n1 + (N - 1) \\frac{K-1}{K}\n</div>\n<p>.</p>\n<h3>Setters and Tester Solution Codes</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/17192440\" rel=\"nofollow noopener\">Setter\u2019s solution</a><br>\n<a href=\"https://www.codechef.com/viewsolution/17192438\" rel=\"nofollow noopener\">Tester\u2019s solution</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17957,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "usaxena95",
+  "problem_display_authors": [
+    "usaxena95"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/usaxena95'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>usaxena95</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "30-10-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Expected Value"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Probability"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/COMPEXP",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610695
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COMPEXP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -38,27 +38,40 @@ import {
 import { CAMPAIGN_KINGDOMS } from '@/src/features/learn/data/campaignKingdoms';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { useRoadmap } from '@/hooks/use-roadmap';
+import { DashboardAdapterService, DashboardSummary } from '@/src/features/dashboard/services/dashboard-adapter.service';
+import { useActiveUser } from '@/src/hooks/useActiveUser';
 
 export function CommandCenterView() {
   const { state: roadmapState } = useRoadmap();
+  const { userId } = useActiveUser();
   const [hudSearch, setHudSearch] = useState('');
 
-  // Dynamic user metrics from roadmapState
-  const solvedCount = roadmapState?.completed?.length ?? 120;
-  const xp = roadmapState?.xp ?? (solvedCount * 50);
-  const streak = 18; // Active learning streak
-  const level = Math.floor(xp / 500) + 1;
-  const currentLevelXp = xp % 500;
-  const nextLevelXp = 500;
-  const levelPct = Math.round((currentLevelXp / nextLevelXp) * 100);
+  const [summary, setSummary] = useState<DashboardSummary>(() =>
+    DashboardAdapterService.getDashboardSummary(userId)
+  );
 
-  // Active Kingdom Data
-  const allCategories = CurriculumRepository.getAllCategories();
-  const activeKingdom = allCategories[0]; // Kingdom of Beginnings
-  const activeKingdomProblems = CurriculumRepository.filterProblems({ categorySlug: activeKingdom?.slug }, []);
-  const activeSolved = activeKingdomProblems.filter((p) => roadmapState?.completed?.includes(p.leetcodeNumber)).length;
-  const activeTotal = activeKingdomProblems.length;
-  const activePct = activeTotal > 0 ? Math.round((activeSolved / activeTotal) * 100) : 0;
+  useEffect(() => {
+    const fresh = DashboardAdapterService.getDashboardSummary(userId);
+    setSummary(fresh);
+  }, [roadmapState, userId]);
+
+  // Extract Player HUD metrics
+  const { totalXp: xp, level, currentLevelXp, nextLevelXp, levelPct, currentStreak: streak, solvedCount } = summary.playerHud;
+  const { targetTitle, currentSolves, targetSolves, percentage: activePct, recommendedFocus } = summary.dailyQuest;
+  const { topStrength, primaryWeakness, summaryReasoning, confidenceScore } = summary.oracleInsights;
+  const { revisionDueCount } = summary.srsMemory;
+
+  // Active Kingdom Data from dynamic summary
+  const activeKingdom = summary.kingdomProgression[0] || {
+    slug: 'beginnings',
+    title: 'Kingdom of Beginnings',
+    solvedCount: 0,
+    totalCount: 20,
+    percentage: 0,
+  };
+
+  const activeSolved = activeKingdom.solvedCount;
+  const activeTotal = activeKingdom.totalCount;
 
   return (
     <div
@@ -124,7 +137,7 @@ export function CommandCenterView() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#C084FC' }}>
-            <Trophy size={16} /> <span>Rank #14</span>
+            <Trophy size={16} /> <span>Rank #{solvedCount > 0 ? Math.max(1, 100 - solvedCount) : 'Unranked'}</span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#10B981' }}>
@@ -224,11 +237,11 @@ export function CommandCenterView() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>
               <span>
-                Current Realm: <strong style={{ color: '#38BDF8' }}>{activeKingdom?.kingdomTitle ?? 'Kingdom of Beginnings'}</strong>
+                Current Realm: <strong style={{ color: '#38BDF8' }}>{activeKingdom.title}</strong>
               </span>
               <span>•</span>
               <span>
-                Pattern: <strong style={{ color: '#C084FC' }}>Array Fundamentals</strong>
+                Pattern: <strong style={{ color: '#C084FC' }}>{recommendedFocus}</strong>
               </span>
             </div>
 
@@ -257,7 +270,7 @@ export function CommandCenterView() {
           <div style={hudTileSt('rgba(168, 85, 247, 0.16)', 'rgba(168, 85, 247, 0.4)', 'rgba(168, 85, 247, 0.2)')}>
             <Trophy size={22} style={{ color: '#C084FC' }} />
             <div>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#FFF', display: 'block', lineHeight: 1.1 }}>#14 Global</span>
+              <span style={{ fontSize: '18px', fontWeight: 900, color: '#FFF', display: 'block', lineHeight: 1.1 }}>#{solvedCount > 0 ? Math.max(1, 100 - solvedCount) : 'Unranked'}</span>
               <span style={{ fontSize: '10px', color: '#C084FC', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Grandmaster Rank</span>
             </div>
           </div>
@@ -327,11 +340,11 @@ export function CommandCenterView() {
           </div>
 
           <h2 style={{ margin: '0 0 8px 0', fontSize: '28px', fontWeight: 900, color: '#FFF', letterSpacing: '-0.01em' }}>
-            🏰 {activeKingdom?.kingdomTitle ?? 'Kingdom of Beginnings'}
+            🏰 {activeKingdom.title}
           </h2>
 
           <p style={{ margin: '0 0 18px 0', fontSize: '14px', color: '#CBD5E1', lineHeight: '1.6' }}>
-            Objective: <strong>Array Fundamentals & Subarray Framing</strong>. Master variable lens bounds and sliding window logic to unlock the Array Titan Castle.
+            Objective: <strong>{targetTitle}</strong>. Master variable lens bounds and sliding window logic to unlock algorithm mastery.
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '22px', fontSize: '13px', color: '#94A3B8', fontWeight: 700 }}>
@@ -389,13 +402,13 @@ export function CommandCenterView() {
 
         {/* Kingdom Nodes Horizontal Grid */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', overflowX: 'auto', paddingBottom: '12px' }}>
-          {CAMPAIGN_KINGDOMS.map((k) => {
-            const isMastered = k.status === 'mastered';
-            const isCurrent = k.id === 1;
+          {summary.kingdomProgression.map((k, idx) => {
+            const isMastered = k.percentage >= 100;
+            const isCurrent = idx === 0;
 
             return (
               <div
-                key={k.id}
+                key={k.slug}
                 style={{
                   minWidth: '46px',
                   height: '46px',
@@ -425,9 +438,9 @@ export function CommandCenterView() {
                   flexShrink: 0,
                   transition: 'all 0.2s ease',
                 }}
-                title={`${k.id}. ${k.title}`}
+                title={`${idx + 1}. ${k.title} (${k.solvedCount}/${k.totalCount})`}
               >
-                {k.id}
+                {idx + 1}
               </div>
             );
           })}
@@ -441,7 +454,7 @@ export function CommandCenterView() {
             <Target size={20} style={{ color: '#F59E0B' }} /> DAILY MISSIONS & TACTICAL QUEST LOG
           </h3>
           <span style={{ fontSize: '11px', color: '#10B981', fontWeight: 900, background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.35)', borderRadius: '10px', padding: '4px 10px' }}>
-            Resets in 6h 24m
+            {currentSolves} / {targetSolves} Solved Today
           </span>
         </div>
 
@@ -449,9 +462,9 @@ export function CommandCenterView() {
           {/* Mission 1 */}
           <div style={{ padding: '18px 22px', borderRadius: '18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.09)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <CheckCircle2 size={22} style={{ color: '#10B981' }} />
+              <CheckCircle2 size={22} style={{ color: currentSolves >= targetSolves ? '#10B981' : '#94A3B8' }} />
               <div>
-                <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>Solve 2 Array Problems</h4>
+                <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>{targetTitle}</h4>
                 <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>Daily Campaign Quest</span>
               </div>
             </div>
@@ -464,7 +477,7 @@ export function CommandCenterView() {
               <RefreshCw size={22} style={{ color: '#38BDF8' }} />
               <div>
                 <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>Complete Memory Cleanse</h4>
-                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>Spaced Repetition</span>
+                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>{revisionDueCount} Overdue SRS Items</span>
               </div>
             </div>
             <span style={{ fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>+200 XP</span>
@@ -476,7 +489,7 @@ export function CommandCenterView() {
               <Brain size={22} style={{ color: '#C084FC' }} />
               <div>
                 <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>Review 1 Weak Topic</h4>
-                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>Dynamic Programming</span>
+                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>{primaryWeakness}</span>
               </div>
             </div>
             <span style={{ fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>+150 XP</span>
@@ -516,7 +529,7 @@ export function CommandCenterView() {
                 <Sparkles size={12} /> ORACLE AI RECOMMENDATION ENGINE
               </span>
               <h3 style={{ margin: '4px 0 0 0', fontSize: '20px', fontWeight: 900, color: '#FFF' }}>
-                Target: Binary Search on Monotonic Spaces
+                Target: {recommendedFocus}
               </h3>
             </div>
           </div>
@@ -551,10 +564,10 @@ export function CommandCenterView() {
           <Lightbulb size={20} style={{ color: '#FDE047', flexShrink: 0, marginTop: '2px' }} />
           <div>
             <span style={{ fontSize: '11px', fontWeight: 900, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '4px' }}>
-              ORACLE TACTICAL REASONING
+              ORACLE TACTICAL REASONING ({typeof confidenceScore === 'number' ? `Score: ${confidenceScore}` : confidenceScore})
             </span>
             <p style={{ margin: 0, fontSize: '13px', color: '#CBD5E1', lineHeight: '1.6' }}>
-              &quot;Based on your <strong>98% accuracy in Array Fundamentals</strong>, your strongest cognitive path is mastering logarithmic search bounds. Transitioning to <strong>Binary Search on Monotonic Spaces</strong> next will boost your technical interview readiness index by <strong>+15%</strong>.&quot;
+              &quot;{summaryReasoning}&quot;
             </p>
           </div>
         </div>
@@ -581,11 +594,11 @@ export function CommandCenterView() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '8px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#94A3B8', fontWeight: 900 }}>
-              <span>EVOLUTION LEVEL 12</span>
-              <span>Phase 2 / 4</span>
+              <span>EVOLUTION LEVEL {level}</span>
+              <span>Phase {Math.min(4, Math.floor(level / 3) + 1)} / 4</span>
             </div>
             <div style={{ width: '100%', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,0.08)', overflow: 'hidden' }}>
-              <div style={{ width: '60%', height: '100%', background: 'linear-gradient(90deg, #10B981, #34D399)', boxShadow: '0 0 10px rgba(16, 185, 129, 0.6)' }} />
+              <div style={{ width: `${levelPct}%`, height: '100%', background: 'linear-gradient(90deg, #10B981, #34D399)', boxShadow: '0 0 10px rgba(16, 185, 129, 0.6)' }} />
             </div>
           </div>
         </div>
@@ -599,19 +612,19 @@ export function CommandCenterView() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: '#94A3B8', fontWeight: 600 }}>Strongest:</span>
-              <strong style={{ color: '#10B981', fontWeight: 800 }}>Arrays (98%)</strong>
+              <strong style={{ color: '#10B981', fontWeight: 800 }}>{topStrength}</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: '#94A3B8', fontWeight: 600 }}>Weakest:</span>
-              <strong style={{ color: '#EF4444', fontWeight: 800 }}>DP (42%)</strong>
+              <strong style={{ color: '#EF4444', fontWeight: 800 }}>{primaryWeakness}</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Velocity:</span>
-              <strong style={{ color: '#FFF', fontWeight: 800 }}>4.2 Probs / Day</strong>
+              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Solved Count:</span>
+              <strong style={{ color: '#FFF', fontWeight: 800 }}>{solvedCount} Probs</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: '#94A3B8', fontWeight: 600 }}>Contest Index:</span>
-              <strong style={{ color: '#F59E0B', fontWeight: 800 }}>85% (Grandmaster)</strong>
+              <strong style={{ color: '#F59E0B', fontWeight: 800 }}>{solvedCount > 0 ? 'Top 15%' : 'Unrated'}</strong>
             </div>
           </div>
         </div>
@@ -633,7 +646,7 @@ export function CommandCenterView() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Flame size={16} style={{ color: '#F97316', flexShrink: 0 }} />
-              <span>Streak Titan: <strong style={{ color: '#FFF' }}>18 Days Active</strong></span>
+              <span>Streak Titan: <strong style={{ color: '#FFF' }}>{streak} Days Active</strong></span>
             </div>
           </div>
         </div>

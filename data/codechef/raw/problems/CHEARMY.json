@@ -1,0 +1,129 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEARMY",
+  "contest_category": "6",
+  "problem_name": "Chef And The Hiring Event",
+  "intended_contest_code": "JUNE16",
+  "body": "<p>\r\nThe Head Chef is receiving a lot of orders for cooking the best of the problems lately. For this, he organized an hiring event to hire some talented Chefs. He gave the following problem to test the skills of the participating Chefs. Can you solve this problem and be eligible for getting hired by Head Chef.\r\n</p>\r\n\r\n<p>\r\nA non-negative number <b>n</b> is said to be <em>magical</em> if it satisfies the following property. Let <b>S</b> denote the multi-set of numbers corresponding to the non-empty subsequences of the digits of the number <b>n</b> in decimal representation. Please note that the numbers in the set <b>S</b> can have <b>leading zeros</b>. Let us take an element <b>s</b> of the multi-set <b>S</b>, <b>prod(s)</b> denotes the product of all the digits of number <b>s</b> in decimal representation. \r\nThe number <b>n</b> will be called magical if sum of <b>prod(s)</b> for all elements <b>s</b> in <b>S</b>, is even. </p>\r\n\r\n<p>\r\nFor example, consider a number 246, its all possible non-empty subsequence will be <b>S = {2, 4, 6, 24, 46, 26, 246}</b>. Products of digits of these subsequences will be <b>{prod(2) = 2, prod(4) = 4, prod(6) = 6, prod(24) = 8, prod(46) = 24, prod(26) = 12, prod(246) = 48</b>, i.e. <b>{2, 4, 6, 8, 24, 12, 48}</b>. Sum of all of these is 104, which is even. Hence 246 is a <em>magical</em> number.\r\n</p>\r\n\r\n<p>Please note that multi-set <b>S</b> can contain repeated elements, e.g. if number is 55, then <b>S = {5, 5, 55}</b>. Products of digits of these subsequences will be <b>{prod(5) = 5, prod(5) = 5, prod(55) = 25}</b>, i.e. <b>{5, 5, 25}</b>. Sum of all of these is 35 which is odd. Hence 55 is not a \r\n <em>magical</em> number.\r\n</p>\r\n\r\n<p>Consider a number 204, then <b>S = {2, 0, 4, 20, 04, 24, 204}</b>. Products of digits of these subsequences will be <b>{2, 0, 4, 0, 0, 8, 0}</b>. Sum of all these elements will be 14 which is even. So 204 is a <em>magical</em> number.\r\n</p>\r\n\r\n<p>\r\nThe task was to simply find the <b>K<sup>th</sup></b> <em>magical</em> number.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>First line of the input contains an integer <b>T</b> denoting the number of test cases.</li>\r\n<li>Each of the next <b>T</b> lines contains a single integer <b>K</b>.</li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, print a single integer corresponding to the <b>K<sup>th</sup></b> magical number.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>10<sup>12</sup></b>.</li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<p>\r\n<b>Subtask #1 : (20 points)</b>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\r\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>10<sup>4</sup></b>.</li>\r\n</ul>\r\n</p>\r\n\r\n<p>\r\n<b>Subtask 2 : (80 points) </b>\r\n<ul>Original Constraints</ul>\r\n</p>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n2\r\n5\r\n\r\n<b>Output:</b>\r\n2\r\n8\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b>\r\n2 is the 2<sup>nd</sup> magical number, since it satisfies the property of the magical number. The first magical number will be of course 0.\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\r\nThe Head Chef is receiving a lot of orders for cooking the best of the problems lately. For this, he organized an hiring event to hire some talented Chefs. He gave the following problem to test the skills of the participating Chefs. Can you solve this problem and be eligible for getting hired by Head Chef.\r\n</p>\r\n\r\n<p>\r\nA non-negative number <b>n</b> is said to be <em>magical</em> if it satisfies the following property. Let <b>S</b> denote the multi-set of numbers corresponding to the non-empty subsequences of the digits of the number <b>n</b> in decimal representation. Please note that the numbers in the set <b>S</b> can have <b>leading zeros</b>. Let us take an element <b>s</b> of the multi-set <b>S</b>, <b>prod(s)</b> denotes the product of all the digits of number <b>s</b> in decimal representation. \r\nThe number <b>n</b> will be called magical if sum of <b>prod(s)</b> for all elements <b>s</b> in <b>S</b>, is even. </p>\r\n\r\n<p>\r\nFor example, consider a number 246, its all possible non-empty subsequence will be <b>S = {2, 4, 6, 24, 46, 26, 246}</b>. Products of digits of these subsequences will be <b>{prod(2) = 2, prod(4) = 4, prod(6) = 6, prod(24) = 8, prod(46) = 24, prod(26) = 12, prod(246) = 48</b>, i.e. <b>{2, 4, 6, 8, 24, 12, 48}</b>. Sum of all of these is 104, which is even. Hence 246 is a <em>magical</em> number.\r\n</p>\r\n\r\n<p>Please note that multi-set <b>S</b> can contain repeated elements, e.g. if number is 55, then <b>S = {5, 5, 55}</b>. Products of digits of these subsequences will be <b>{prod(5) = 5, prod(5) = 5, prod(55) = 25}</b>, i.e. <b>{5, 5, 25}</b>. Sum of all of these is 35 which is odd. Hence 55 is not a \r\n <em>magical</em> number.\r\n</p>\r\n\r\n<p>Consider a number 204, then <b>S = {2, 0, 4, 20, 04, 24, 204}</b>. Products of digits of these subsequences will be <b>{2, 0, 4, 0, 0, 8, 0}</b>. Sum of all these elements will be 14 which is even. So 204 is a <em>magical</em> number.\r\n</p>\r\n\r\n<p>\r\nThe task was to simply find the <b>K<sup>th</sup></b> <em>magical</em> number.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>First line of the input contains an integer <b>T</b> denoting the number of test cases.</li>\r\n<li>Each of the next <b>T</b> lines contains a single integer <b>K</b>.</li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, print a single integer corresponding to the <b>K<sup>th</sup></b> magical number.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>10<sup>12</sup></b>.</li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<p>\r\n<b>Subtask #1 : (20 points)</b>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\r\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>10<sup>4</sup></b>.</li>\r\n</ul>\r\n</p>\r\n\r\n<p>\r\n<b>Subtask 2 : (80 points) </b>\r\n<ul>Original Constraints</ul>\r\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n2\r\n5",
+        "output": "2\r\n8",
+        "explanation": "<p><b>Example case 1.</b>\r\n2 is the 2<sup>nd</sup> magical number, since it satisfies the property of the magical number. The first magical number will be of course 0.\r\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12658,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "prateekg603",
+  "problem_display_authors": [
+    "prateekg603"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/prateekg603'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>prateekg603</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "iscsi"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/iscsi'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>iscsi</span></a></div>",
+  "problem_editorialist": "dpraveen",
+  "date_added": "16-07-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Number System",
+    "Basic Math",
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1613",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610663
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEARMY",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 18,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

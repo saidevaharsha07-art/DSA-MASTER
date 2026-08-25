@@ -1,0 +1,193 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "strings-new",
+  "name": "Practice Strings",
+  "title": "Practice Strings",
+  "level": "Beginner",
+  "description": "Solve these beginner level questions on Strings and prepare yourself for handling text based data.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/strings-new/STRINGSP01/problems/WCC",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Strings",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Strings basic",
+          "submodule_id": 25802,
+          "contest_code": "STRINGSP01",
+          "start_date": "2026-05-05 12:21:43",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/strings-new/STRINGSP01/problems/WCC",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "54860",
+              "code": "WCC",
+              "name": "World Chess Championship",
+              "difficulty_rating": "935",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "DDMMORMMDD",
+              "name": "DDMM or MMDD",
+              "difficulty_rating": "992",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "LARGODDSTRIN",
+              "name": "Largest Odd Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "TITLECASE",
+              "name": "Convert String to Title Case",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "ALPHABET",
+              "name": "Studying Alphabet",
+              "difficulty_rating": "1123",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "CHN09",
+              "name": "Malvika is peculiar about color of balloons",
+              "difficulty_rating": "988",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "ON_OFF",
+              "name": "N Buttons 1 Bulb",
+              "difficulty_rating": "977",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "PLAYPIAN",
+              "name": "Play Piano",
+              "difficulty_rating": "980",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54860",
+              "code": "ERROR",
+              "name": "Chef and Feedback",
+              "difficulty_rating": "1199",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 9,
+  "total_non_pro_problems": 9,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Beginner DSA",
+  "reviews": [
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "khn1025",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 90748,
+  "path_review": {
+    "rating": 4.5,
+    "users": 1016
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

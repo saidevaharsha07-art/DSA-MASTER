@@ -1,0 +1,642 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "pandas",
+  "name": "Pandas - Practice problems",
+  "title": "Pandas - Practice problems",
+  "level": "Intermediate",
+  "description": "Unlock the power of data with by solving our Pandas practice problems for Beginners! Perfect for aspiring data scientists, this practice path covers Pandas, Series, DataFrames, data cleaning, preprocessing, and analysis. Learn via coding exercises.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/pandas/LJFQTZ/problems/YAZFDJ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Pandas series",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Pandas series",
+          "submodule_id": 9853,
+          "contest_code": "LJFQTZ",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/LJFQTZ/problems/YAZFDJ01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34509",
+              "code": "YAZFDJ01",
+              "name": "\nCreate Series from List\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34509",
+              "code": "YAZFDJ02",
+              "name": "\nCreate Series from mixed list\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34509",
+              "code": "YAZFDJ03",
+              "name": "\nAccessing a Series Element\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Introduction to dataframes",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Introduction to dataframes",
+          "submodule_id": 9854,
+          "contest_code": "QQANUP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/QQANUP/problems/WEFWTL01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34510",
+              "code": "WEFWTL01",
+              "name": "\nCreate DataFrame from Dictionary of Series\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34510",
+              "code": "WEFWTL02",
+              "name": "\nCreate DataFrame from Dictionary of Lists\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34510",
+              "code": "WEFWTL03",
+              "name": "\nCreate DataFrame from dictionary\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "View, access and manipulate rows",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "View, access and manipulate rows",
+          "submodule_id": 9855,
+          "contest_code": "TVJTPY",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/TVJTPY/problems/XZYZQE01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34511",
+              "code": "XZYZQE01",
+              "name": "\nSelect rows by index label\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34511",
+              "code": "XZYZQE02",
+              "name": "\nAccess row by integer position\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34511",
+              "code": "XZYZQE03",
+              "name": "\nAccessing a Row by Index Name\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Handling missing data",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Handling missing data",
+          "submodule_id": 9856,
+          "contest_code": "KZWUPQ",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/KZWUPQ/problems/NHWUBU01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34512",
+              "code": "NHWUBU01",
+              "name": "\nFill missing scores with average\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34512",
+              "code": "NHWUBU02",
+              "name": "\nFill missing values with median\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34512",
+              "code": "NHWUBU03",
+              "name": "\nCount Missing Values\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Data type conversion",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Data type conversion",
+          "submodule_id": 9857,
+          "contest_code": "IAPAUJ",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 2,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/IAPAUJ/problems/LHZKML01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 2,
+          "problems_with_status": [
+            {
+              "contest_id": "34513",
+              "code": "LHZKML01",
+              "name": "\nConvert String Numbers to Integers\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34513",
+              "code": "LHZKML02",
+              "name": "\nConvert String Prices to Numeric\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 2
+    },
+    {
+      "assessment": null,
+      "name": "Renaming and reordering columns",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Renaming and reordering columns",
+          "submodule_id": 9858,
+          "contest_code": "HXVDNX",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/HXVDNX/problems/XJPJKI03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34514",
+              "code": "XJPJKI03",
+              "name": "\nRename and Reorder Two Columns\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34514",
+              "code": "XJPJKI01",
+              "name": "\nRename and Reorder Basic DataFrame\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34514",
+              "code": "XJPJKI02",
+              "name": "\nRename and Reorder Simple DataFrame Columns\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Handling duplicates",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Handling duplicates",
+          "submodule_id": 9859,
+          "contest_code": "VNQFQS",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/VNQFQS/problems/CAICFV03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34515",
+              "code": "CAICFV03",
+              "name": "\nDropping all duplicate rows\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34515",
+              "code": "CAICFV01",
+              "name": "\nRemove duplicate rows\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34515",
+              "code": "CAICFV02",
+              "name": "\nRemove duplicates based on a specific column\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Grouping and aggregation",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Grouping and aggregation",
+          "submodule_id": 9860,
+          "contest_code": "UNVNGO",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/UNVNGO/problems/JDAELJ03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34516",
+              "code": "JDAELJ03",
+              "name": "\nCount products per category\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34516",
+              "code": "JDAELJ01",
+              "name": "\nCalculate Average Salary by Department\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34516",
+              "code": "JDAELJ02",
+              "name": "\nAverage Price by Category\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Merging and joining dataframes",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Merging and joining dataframes",
+          "submodule_id": 9861,
+          "contest_code": "SGFZRD",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/SGFZRD/problems/GKLGAP03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34517",
+              "code": "GKLGAP03",
+              "name": "\nBasic DataFrame Merge\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34517",
+              "code": "GKLGAP01",
+              "name": "\nMerge Customer Data with Order Details\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34517",
+              "code": "GKLGAP02",
+              "name": "\nMerge two DataFrames on a single column\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "labs",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Reshaping data",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Reshaping data",
+          "submodule_id": 9862,
+          "contest_code": "LGNWDE",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/LGNWDE/problems/LWEECH03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34518",
+              "code": "LWEECH03",
+              "name": "\nReshape Sales Data\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34518",
+              "code": "LWEECH01",
+              "name": "\nReshape Student Grades\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34518",
+              "code": "LWEECH02",
+              "name": "\nReshape Employee Role Data\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Time series basics in pandas",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Time series basics in pandas",
+          "submodule_id": 9863,
+          "contest_code": "IFAJBI",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/pandas/IFAJBI/problems/JTGJPW03",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34519",
+              "code": "JTGJPW03",
+              "name": "\nAccessing a specific date in a time series\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34519",
+              "code": "JTGJPW01",
+              "name": "\nCreate Time Series from List\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34519",
+              "code": "JTGJPW02",
+              "name": "\nCreate time series with daily data\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 32,
+  "total_non_pro_problems": 6,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Other Practice Paths",
+  "reviews": [],
+  "learners_count": 2825,
+  "path_review": {
+    "rating": 4.7,
+    "users": 542
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-analysis-using-python",
+  "roadmap_title": "Data analysis using Python"
+}

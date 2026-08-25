@@ -1,0 +1,447 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "arrays-new",
+  "name": "Practice Arrays",
+  "title": "Practice Arrays",
+  "level": "Beginner",
+  "description": "Solve Arrays coding problems to start learning data structures and algorithms.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/arrays-new/ARRAYSP01/problems/SEARCHINARR",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Arrays",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Basic arrays",
+          "submodule_id": 25799,
+          "contest_code": "ARRAYSP01",
+          "start_date": "2026-05-05 11:47:02",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/arrays-new/ARRAYSP01/problems/SEARCHINARR",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "54854",
+              "code": "SEARCHINARR",
+              "name": "Search an element in an array",
+              "difficulty_rating": "600",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "UWCOI20A",
+              "name": "Find maximum in an Array",
+              "difficulty_rating": "650",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "LARGESECOND",
+              "name": "Largest and Second Largest",
+              "difficulty_rating": "928",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "OPMIN",
+              "name": "MIN To MAX",
+              "difficulty_rating": "838",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "NCOPIES",
+              "name": "Copy and Paste",
+              "difficulty_rating": "1745",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "DOLL",
+              "name": "Red Light, Green Light",
+              "difficulty_rating": "984",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "COMPRESSVD",
+              "name": "Compress the Video",
+              "difficulty_rating": "940",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "RATINGINPRAC",
+              "name": "Difficulty Rating Order",
+              "difficulty_rating": "930",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "SQUIDRULE",
+              "name": "The Squid Game",
+              "difficulty_rating": "970",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "MAXCONSECU",
+              "name": "Chef and Consecutive Ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54854",
+              "code": "CS2023_STK",
+              "name": "CodeChef Streak",
+              "difficulty_rating": "1009",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 25800,
+          "contest_code": "ARRAYSP02",
+          "start_date": "2026-05-05 11:47:02",
+          "total_problems": 15,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/arrays-new/ARRAYSP02/problems/SNAPCHAT",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 15,
+          "problems_with_status": [
+            {
+              "contest_id": "54855",
+              "code": "SNAPCHAT",
+              "name": "Snapchat",
+              "difficulty_rating": "965",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "KITCHENCOST",
+              "name": "Cost of Groceries",
+              "difficulty_rating": "799",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "DISCOUNTT",
+              "name": "Take discount or Not",
+              "difficulty_rating": "700",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "RUNCOMPARE",
+              "name": "Running Comparison",
+              "difficulty_rating": "899",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "SMLSUM",
+              "name": "Sum of Smaller Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "CHEFWORK",
+              "name": "Workers",
+              "difficulty_rating": "1146",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "BOMBTHEBASE",
+              "name": "Bomb the base",
+              "difficulty_rating": "982",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "KTTABLE",
+              "name": "Kitchen Timetable",
+              "difficulty_rating": "997",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "COPS",
+              "name": "Cops and the Thief Devu",
+              "difficulty_rating": "1242",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "PEAKINARRAY",
+              "name": "Find the peak elements in an array",
+              "difficulty_rating": "950",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "MAXCOUNT",
+              "name": "Count of Maximum",
+              "difficulty_rating": "1180",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "CNDY",
+              "name": "Candies",
+              "difficulty_rating": "1018",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "MISSINPERM",
+              "name": "Missing number in permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "SINGLENUM",
+              "name": "Single number in multiple numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54855",
+              "code": "PREP01",
+              "name": "Array - Pascals or Khayyams triangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Prefix sums",
+          "submodule_id": 25801,
+          "contest_code": "ARRAYSP03",
+          "start_date": "2026-05-05 12:01:16",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/arrays-new/ARRAYSP03/problems/PREFPRO1",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "54856",
+              "code": "PREFPRO1",
+              "name": "Creating Prefix Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54856",
+              "code": "PREFPRO2",
+              "name": "Optimization Using Prefix Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54856",
+              "code": "NUM239",
+              "name": "Counting Pretty Numbers",
+              "difficulty_rating": "873",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54856",
+              "code": "CHEFSUM",
+              "name": "Little Chef and Sums",
+              "difficulty_rating": "1252",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54856",
+              "code": "PREFPRO5",
+              "name": "Suffix Arrays",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 31
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 31,
+  "total_non_pro_problems": 11,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Beginner DSA",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 207982,
+  "path_review": {
+    "rating": 4.5,
+    "users": 3210
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

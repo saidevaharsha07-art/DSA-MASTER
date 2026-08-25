@@ -1,0 +1,126 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COCONUT",
+  "contest_category": "6",
+  "problem_name": "Summer Heat",
+  "intended_contest_code": "JUNE21",
+  "body": "### Read problem statements in [Vietnamese](https://www.codechef.com/download/translated/JUNE21/vietnamese/COCONUT.pdf),\r\n\r\nChefland has $2$ different types of coconut, type $A$ and type $B$. Type $A$ contains only $x_a$ milliliters of coconut water and type $B$ contains only $x_b$ grams of coconut pulp. Chef's nutritionist has advised him to consume $X_a$ milliliters of coconut water and $X_b$ grams of coconut pulp every week in the summer. Find the total number of coconuts (type $A$ + type $B$) that Chef should buy each week to keep himself active in the hot weather.\r\n\r\n###Input\r\n\r\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \r\n- Each test case contains a single line of input, four integers $x_a$, $x_b$, $X_a$, $X_b$.\r\n\r\n###Output\r\nFor each test case, output in a single line the answer to the problem.\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 15000$\r\n- $100 \\leq x_a \\leq 200$\r\n- $400 \\leq x_b \\leq 500$\r\n- $1000 \\leq X_a \\leq 1200$\r\n- $1000 \\leq X_b \\leq 1500$\r\n- $x_a$ divides $X_a$.\r\n- $x_b$ divides $X_b$.\r\n\r\n###Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n###Sample Input\r\n```\r\n3\r\n100 400 1000 1200\r\n100 450 1000 1350\r\n150 400 1200 1200\r\n```\r\n\r\n###Sample Output\r\n```\r\n13\r\n13\r\n11\r\n```\r\n\t\r\n###Explanation\r\n**TestCase $1$:** \r\nNumber of coconuts of Type $A$ required = $\\frac{1000}{100} = 10$ and number of coconuts of Type $B$ required = $\\frac{1200}{400} = 3$.  So the total number of coconuts required is $10 + 3 = 13$.\r\n\r\n**TestCase $2$:** \r\nNumber of coconuts of Type $A$ required = $\\frac{1000}{100} = 10$ and number of coconuts of Type $B$ required = $\\frac{1350}{450} = 3$.  So the total number of coconuts required is $10 + 3 = 13$.\r\n\r\n**TestCase $3$:** \r\nNumber of coconuts of Type $A$ required = $\\frac{1200}{150} = 8$ and number of coconuts of Type $B$ required = $\\frac{1200}{400} = 3$.  So the total number of coconuts required is $8 + 3 = 11$.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 15000$\n- $100 \\leq x_a \\leq 200$\n- $400 \\leq x_b \\leq 500$\n- $1000 \\leq X_a \\leq 1200$\n- $1000 \\leq X_b \\leq 1500$\n- $x_a$ divides $X_a$.\n- $x_b$ divides $X_b$.\n",
+    "constraintsState": true,
+    "subtasks": "**Subtask #1 (100 points):** original constraints",
+    "subtasksState": true,
+    "statement": "### Read problem statements in [Vietnamese](https://www.codechef.com/download/translated/JUNE21/vietnamese/COCONUT.pdf),\n\nChefland has $2$ different types of coconut, type $A$ and type $B$. Type $A$ contains only $x_a$ milliliters of coconut water and type $B$ contains only $x_b$ grams of coconut pulp. Chef's nutritionist has advised him to consume $X_a$ milliliters of coconut water and $X_b$ grams of coconut pulp every week in the summer. Find the total number of coconuts (type $A$ + type $B$) that Chef should buy each week to keep himself active in the hot weather.\n",
+    "inputFormat": "- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \n- Each test case contains a single line of input, four integers $x_a$, $x_b$, $X_a$, $X_b$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output in a single line the answer to the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n100 400 1000 1200\n100 450 1000 1350\n150 400 1200 1200",
+        "output": "13\n13\n11",
+        "explanation": "**TestCase $1$:** \nNumber of coconuts of Type $A$ required = $\\frac{1000}{100} = 10$ and number of coconuts of Type $B$ required = $\\frac{1200}{400} = 3$.  So the total number of coconuts required is $10 + 3 = 13$.\n\n**TestCase $2$:** \nNumber of coconuts of Type $A$ required = $\\frac{1000}{100} = 10$ and number of coconuts of Type $B$ required = $\\frac{1350}{450} = 3$.  So the total number of coconuts required is $10 + 3 = 13$.\n\n**TestCase $3$:** \nNumber of coconuts of Type $A$ required = $\\frac{1200}{150} = 8$ and number of coconuts of Type $B$ required = $\\frac{1200}{400} = 3$.  So the total number of coconuts required is $8 + 3 = 11$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 91058,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "iscsi"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/iscsi'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>iscsi</span></a></div>",
+  "problem_editorialist": "taran_1407",
+  "date_added": "31-05-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Integer Division",
+    "Arithmetic"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Basic Math"
+  ],
+  "difficulty_rating": "852",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610692
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COCONUT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 21,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

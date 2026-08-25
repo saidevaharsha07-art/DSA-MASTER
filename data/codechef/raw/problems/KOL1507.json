@@ -1,0 +1,130 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1507",
+  "contest_category": "6",
+  "problem_name": "The Christmas Cookies",
+  "intended_contest_code": null,
+  "body": "<p>CodeChef has prepared christmas cookies for everyone in the town. He gives the responsibility of distributing the cookies to Samosa Bhai.</p><p>\r\nThere are <b>N</b> houses and <b>E</b> roads in the town. Each road starts from one house and ends at another and there are no other houses on the road. <b>There can be more than one direct road between two houses</b>. Each road has some road tax. Once you have paid the road tax for a road, you can travel on that road any number of times. The problem is, a Christmas tree has to be installed in the town. It can only be installed on one of the roads resulting in that road being blocked. As a result, Samosa Bhai will not be able to use that road for travelling.</p>\r\n<p>Now, <b>for each road</b>, Samosa Bhai wants to know the minimum amount of road tax he will have to pay to distribute candies in all the houses, if the Christmas tree were to be placed on that road. Samosa Bhai can start his journey from any of the houses.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains <b>T</b>, the number of test cases to follow.</p>\r\n<p>The first line of each test case contains the integers <b>N</b> and <b>E</b> separated by a space.</p>\r\n<p>Next, <b>E</b> lines follow. Each line contains three space-separated integers &mdash; <b>x</b>, <b>y</b>, and the road tax of a direct road between house <b>x</b> and house <b>y</b>.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each road (in the <b>same order as input</b>), output the value of the minimum road tax paid if the christmas tree is placed on that road and it is still possible to distribute cookies in all houses, otherwise output <b>-1</b>.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>1000</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>E</b> \u2264 <b>2*10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Sum of E over all cases</b> \u2264 <b>2*10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Sum of N over all cases</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Road Tax</b> \u2264 <b>10<sup>8</sup></b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n1\r\n5 7\r\n1 2 2\r\n1 4 4\r\n2 3 6\r\n2 5 8\r\n3 5 10\r\n4 3 12\r\n1 5 14\r\n\r\n<b>Output:</b>\r\n30\r\n28\r\n24\r\n22\r\n20\r\n20\r\n20\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1</b>\r\n<ul>\r\n<li>Road from House 1 to House 2 (i.e Road 1) is blocked: <br>\r\nUse Roads 2, 3, 4 and 6. Total Tax paid = 30\r\n</li>\r\n<br>\r\n<li>Road from House 1 to House 4 (i.e Road 2) is blocked: <br>\r\nUse Roads 1, 3, 4 and 6. Total Tax paid = 28\r\n</li>\r\n<br>\r\n</li>\r\n<li>Road from House 2 to House 3 (i.e Road 3) is blocked: <br>\r\nUse Roads 1, 2, 4 and 5. Total Tax paid = 24\r\n</li>\r\n<br>\r\n</ul></p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **1000**\n- **1** \u2264 **N** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **E** \u2264 **2*10<sup>5</sup>**\n- **1** \u2264 **Sum of E over all cases** \u2264 **2*10<sup>5</sup>**\n- **1** \u2264 **Sum of N over all cases** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **Road Tax** \u2264 **10<sup>8</sup>**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "CodeChef has prepared Christmas cookies for everyone in the town. He gives the responsibility of distributing the cookies to Samosa Bhai.\n\nThere are **N** houses and **E** roads in the town. Each road starts from one house and ends at another, and there are no other houses on the road. **There can be more than one direct road between two houses**. Each road has some road tax. Once you have paid the road tax for a road, you can travel on that road any number of times. The problem is, a Christmas tree has to be installed in the town. It can only be installed on one of the roads, resulting in that road being blocked. As a result, Samosa Bhai will not be able to use that road for traveling.\n\nNow, **for each road**, Samosa Bhai wants to know the minimum amount of road tax he will have to pay to distribute candies in all the houses, if the Christmas tree were to be placed on that road. Samosa Bhai can start his journey from any of the houses.\n",
+    "inputFormat": "The first line contains **T**, the number of test cases to follow.\n\nThe first line of each test case contains the integers **N** and **E** separated by a space.\n\nNext, **E** lines follow. Each line contains three space-separated integers \u2014 **x**, **y**, and the road tax of a direct road between house **x** and house **y**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each road (in the **same order as input**), output the value of the minimum road tax paid if the Christmas tree is placed on that road and it is still possible to distribute cookies in all houses, otherwise output **-1**.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 7\n1 2 2\n1 4 4\n2 3 6\n2 5 8\n3 5 10\n4 3 12\n1 5 14\n",
+        "output": "30\n28\n24\n22\n20\n20\n20\n",
+        "explanation": "**Example case 1**\n\n- Road from House 1 to House 2 (i.e Road 1) is blocked:  \n  Use Roads 2, 3, 4 and 6. Total Tax paid = 30\n\n- Road from House 1 to House 4 (i.e Road 2) is blocked:  \n  Use Roads 1, 3, 4 and 6. Total Tax paid = 28\n\n- Road from House 2 to House 3 (i.e Road 3) is blocked:  \n  Use Roads 1, 2, 4 and 5. Total Tax paid = 24\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1507\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1507\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/devuy11\" rel=\"nofollow noopener\">Devendra Agarwal</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Heavy-light decomposition, Minimum spanning tree, range queries</p>\n<h3>PROBLEM:</h3>\n<p>You\u2019re given a weighted undirected graph. For each edge, output the minimum spanning tree such that the edge is removed. If removing the edge disconnects the graph, output <span class=\"math\">-1</span>.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Find an MST <span class=\"math\">T</span>. For every edge <span class=\"math\">e</span> not in <span class=\"math\">T</span>, the answer is just the cost of <span class=\"math\">T</span>. For every edge <span class=\"math\">e</span> in <span class=\"math\">T</span>, let <span class=\"math\">R[e]</span> be a pointer to another edge, initially null.</p>\n<p>Compute the heavy-light decomposition of <span class=\"math\">T</span>, and in each heavy path, set up a segment tree which can perform the following operation quickly:</p>\n<p><strong>Given an edge <span class=\"math\">e' = (u,v)</span>, set <span class=\"math\">R[e]:=e'</span> for all edges <span class=\"math\">e</span> in the path from <span class=\"math\">u</span> to <span class=\"math\">v</span>.</strong></p>\n<p>The answer for every edge <span class=\"math\">e</span> in <span class=\"math\">T</span> is <span class=\"math\">w(T) - w(e) + w(R[e])</span>, but if <span class=\"math\">R[e]</span> is null, then it is <span class=\"math\">-1</span>.</p>\n<h3>EXPLANATION:</h3>\n<p>Let\u2019s write the weight function of the graph <span class=\"math\">G</span> as <span class=\"math\">w</span>, so <span class=\"math\">w(e)</span> is the weight of the edge <span class=\"math\">e</span>. Being very loose with notation, if <span class=\"math\">E'</span> is a set of edges of <span class=\"math\">G</span>, then we write <span class=\"math\">w(E')</span> as the sum of the weights of the edges in <span class=\"math\">E'</span>, and if <span class=\"math\">G'</span> is a subgraph of <span class=\"math\">G'</span>, then we write <span class=\"math\">w(G')</span> as the sum of the weights of the edges in <span class=\"math\">G'</span>.</p>\n<p>Let\u2019s find any minimum spanning tree (MST) first (for example, using Kruskal\u2019s algorithm), say <span class=\"math\">T</span>. Now, if an edge doesn\u2019t belong to <span class=\"math\">T</span>, then answer is just the cost of <span class=\"math\">T</span>, because this is the best MST we can create. Thus, we only need to answer the query for each edge in <span class=\"math\">T</span>.</p>\n<p>When an edge is removed from <span class=\"math\">T</span>, two subtrees are created. In order to create a new spanning tree, we must connect these two subtrees again with a node. Since we want the minimum spanning tree, we must use the edge with the lowest weight. Thus, we have the following (trial) algorithm for finding a minimum spanning tree that doesn\u2019t include some edge <span class=\"math\">e</span> (assuming it is in <span class=\"math\">T</span>):</p>\n<ul>\n<li>Remove <span class=\"math\">e</span> edge, so <span class=\"math\">T</span> is disconnected into two components.</li>\n<li>Find the lowest-weight edge <span class=\"math\">e'</span> connecting the two components back. The new MST is now the weight of <span class=\"math\">e'</span> plus the weight of the remaining edges of <span class=\"math\">T</span>. If no such edge <span class=\"math\">e'</span> exists, the answer is <span class=\"math\">-1</span>.</li>\n</ul>\n<p>This is a greedy choice, so the new spanning tree we get isn\u2019t necessarily the minimum spanning tree. There might be another spanning tree that can be acquired with another method. So, is this greedy choice correct? If you\u2019re familiar with how the usual MST algorithms (Prim, Kruskal) work, then this might be intuitive enough for you. If not, you can see a proof <a href=\"http://www.cs.uu.nl/docs/vakken/al/WerkC/UpdatingSpanningTrees.pdf\" rel=\"nofollow noopener\">here</a>. (Or you can try proving it yourself.)</p>\n<p>So the answer for edge <span class=\"math\">e</span> is now: <span class=\"math\">w(T)</span> if <span class=\"math\">e</span> is not in <span class=\"math\">T</span>, and <span class=\"math\">w(T) - w(e) + w(e')</span> if <span class=\"math\">e</span> is in <span class=\"math\">T</span>. Thus after computing <span class=\"math\">T</span> and <span class=\"math\">w(T)</span>, we only need to compute <span class=\"math\">e'</span> for each <span class=\"math\">e</span>. Let\u2019s call the edge <span class=\"math\">e'</span> the <strong>lowest-weight replacement edge</strong> of <span class=\"math\">e</span>, where we define a <strong>replacement edge</strong> as <strong>an edge connecting the two subtrees generated when <span class=\"math\">e</span> is removed from <span class=\"math\">T</span>.</strong></p>\n<p>For an edge <span class=\"math\">e</span> in <span class=\"math\">T</span>, let\u2019s try to compute its lowest-weight replacement edge <span class=\"math\">e'</span>. One way to do it is with an equivalent characterization of the replacement edge, which we derive as follows. Removing the edge <span class=\"math\">e</span> separates <span class=\"math\">T</span> into two trees <span class=\"math\">T_1</span> and <span class=\"math\">T_2</span>. The only way to travel from <span class=\"math\">T_1</span> to <span class=\"math\">T_2</span> in <span class=\"math\">T</span> is through the only bridge between them, which is <span class=\"math\">e</span>. So, if <span class=\"math\">(u,v)</span> is an edge such that <span class=\"math\">u \\in T_1</span> and <span class=\"math\">v \\in T_2</span>, then the unique path from <span class=\"math\">u</span> to <span class=\"math\">v</span> in <span class=\"math\">T</span> must pass through <span class=\"math\">e</span>. Thus, an alternative characterization of a replacement edge is the following: <strong>an edge <span class=\"math\">(u,v)</span> such that the path from <span class=\"math\">u</span> to <span class=\"math\">v</span> in <span class=\"math\">T</span> passes through <span class=\"math\">e</span>.</strong></p>\n<p>So to find the lowest-weight replacement edge, we must somehow figure out for each edge <span class=\"math\">(u,v)</span> whether the path from <span class=\"math\">u</span> to <span class=\"math\">v</span> in <span class=\"math\">T</span> passes through <span class=\"math\">e</span>. Now only that, we must find the minimum-weighted such edge. We also need to do this <strong>for all edges <span class=\"math\">e</span> in <span class=\"math\">T</span></strong>. One way to do this quickly is to \u201cinvert\u201d the operation. Instead of computing the lowest-weight replacement edge <span class=\"math\">e'</span> for each edge <span class=\"math\">e</span> in <span class=\"math\">T</span>, we compute for each edge <span class=\"math\">e'</span> not in <span class=\"math\">T</span> all the edges <span class=\"math\">e</span> in <span class=\"math\">T</span> whose lowest-weight replacement edge is <span class=\"math\">e'</span>. This can be done as follows:</p>\n<ul>\n<li>For each edge <span class=\"math\">e</span> in <span class=\"math\">T</span>, we write <span class=\"math\">R[e]</span> as the <strong>best replacement edge</strong> of <span class=\"math\">e</span> so far, initialized to be null.</li>\n<li>Sort all edges <span class=\"math\">e'</span> not in <span class=\"math\">T</span> in decreasing order of weight, and iterate through them. For each edge <span class=\"math\">e' = (u,v)</span>, we set <span class=\"math\">R[e] := e'</span> for all edges <span class=\"math\">e</span> in the path from <span class=\"math\">u</span> to <span class=\"math\">v</span>.</li>\n<li>After this, <span class=\"math\">R[e]</span> is now the lowest-weight replacement edge of <span class=\"math\">e</span> for every <span class=\"math\">e</span> in <span class=\"math\">T</span>.</li>\n</ul>\n<p>This algorithm is correct because we are iterating through all the $e\u2019$s in decreasing order of weight, which means the final value written at <span class=\"math\">R[e]</span> is the lowest-weight replacement edge. It is also clear that for each edge <span class=\"math\">e</span>, all its replacement edges occupy <span class=\"math\">R[e]</span> at least once.</p>\n<p>Thus, to solve the problem within the time limit, we must be able to perform the following operation quickly in a tree <span class=\"math\">T</span>, where each edge <span class=\"math\">e</span> has a value <span class=\"math\">R[e]</span> associated with it:</p>\n<p><strong>Given two nodes <span class=\"math\">(u,v)</span> and some object <span class=\"math\">e'</span>, set <span class=\"math\">R[e] := e'</span> for all edges <span class=\"math\">e</span> in the path from <span class=\"math\">u</span> to <span class=\"math\">v</span>.</strong></p>\n<p>How can we do this quickly? This is easy to do with a <a href=\"https://discuss.codechef.com/questions/38770/lazy-propagation\"><em>segment tree with lazy propagation</em></a> if <span class=\"math\">T</span> is just a <a href=\"https://en.wikipedia.org/wiki/Path_graph\" rel=\"nofollow noopener\">path graph</a>, and each operation will take <span class=\"math\">O(\\log N)</span> time. But if <span class=\"math\">T</span> is not a path graph, there\u2019s a way to partition the edges into paths such that <strong>every simple path through <span class=\"math\">T</span> passes through at most <span class=\"math\">O(\\log N)</span> paths in the partition</strong>. The <a href=\"http://wcipeg.com/wiki/Heavy-light_decomposition\" rel=\"nofollow noopener\">heavy-light decomposition</a> is one such example.</p>\n<p>With such a partition, we can set up a segment tree for each path in the partition, and split a query <span class=\"math\">(u,v)</span> into <span class=\"math\">O(\\log N)</span> separate queries in the segment trees, so each operation takes <span class=\"math\">O(\\log N)\\cdot O(\\log N) = O(\\log^2 N)</span>.</p>\n<p>In fact, since we perform the queries <em>offline</em> (because we can compute all queries to each path before processing any of them), we actually don\u2019t need a segment tree with lazy propagation for each path to process all queries to it! One way to do so using only tree sets is implemented in the tester\u2019s solution.</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(E \\log^2 N)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1507.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1507.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12033,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "devuy11",
+  "problem_display_authors": [
+    "devuy11"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/devuy11'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>devuy11</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "10-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "HLD",
+    "Minimum Spanning Trees",
+    "Range Queries",
+    "Offline Queries"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Advanced Graph Algos",
+    "Algorithms",
+    "Graph Algos",
+    "Tree Algos",
+    "Queries"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1507",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610971
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1507",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

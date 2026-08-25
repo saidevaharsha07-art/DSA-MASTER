@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "visa-interview-questions",
+  "name": "Visa Interview Questions",
+  "title": "Visa Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Visae online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/visa-interview-questions/VISACON01/problems/VISA04",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Visa Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Visa Coding Questions",
+          "submodule_id": 8211,
+          "contest_code": "VISACON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/visa-interview-questions/VISACON01/problems/VISA04",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "32242",
+              "code": "VISA04",
+              "name": "Second Most Frequent Word",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA05",
+              "name": "Merge Sorted Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA07",
+              "name": "Minimum Coins Needed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA08",
+              "name": "Circular Robot Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA01",
+              "name": "Longest Common Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA02",
+              "name": "Jump Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA03",
+              "name": "Maximum A Using Special Keyboard",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA06",
+              "name": "Longest Palindromic Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA09",
+              "name": "Minimum Coins",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32242",
+              "code": "VISA10",
+              "name": "Sum of Consecutive Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 10,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1545,
+  "path_review": {
+    "rating": 4.9,
+    "users": 7
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

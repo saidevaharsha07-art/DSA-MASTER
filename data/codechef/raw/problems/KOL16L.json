@@ -1,0 +1,127 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16L",
+  "contest_category": "6",
+  "problem_name": "Optimal BST Revisited",
+  "intended_contest_code": null,
+  "body": "<p>\nA rooted binary tree is a rooted tree such that each node has atmost 2 children. A Binary Search Tree (BST) is a rooted binary tree, which has values stored in each of its nodes. We are interested only in distinct values. A BST has to satisfy the property that, for every node, its value must be greater than the value of every node on its left sub-tree, if it exists. Also, for every node, its value must be lesser than the value of every node on its right sub-tree, if it exists.\n</p>\n\n<p>Thunk is bored with the classical problem of finding an optimal BST. He decides to spice it up, and changes the cost function. The problem he is considering is as follows:\nGiven a BST with <b>N</b> nodes, called <b>T</b>, which store the values <b>{1,2,..,N}</b>, and a sequence of Searches <b>S = (s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>m</sub>)</b>, he puts his finger on the root of <b>T</b>, and then traces the path to the node containing <b>s<sub>1</sub></b>, and then from there, to the node containing <b>s<sub>2</sub></b>, ..., and he finally traces the path from <b>s<sub>m-1</sub></b> to <b>s<sub>m</sub></b>. Note that during this process, he might have passed through, or even searched for the same element/node multiple times, if the Search sequence was so given. And he defines the <b>Cost</b> to be the total distance (or the number of edges) that he has passed through. \n</p>\n\n<p>Formally, <b>Cost(T,S) = Depth(s<sub>1</sub>) + Distance(s<sub>1</sub>, s<sub>2</sub>) + Distance(s<sub>2</sub>, s<sub>3</sub>) + ... + Distance(s<sub>m-1</sub>, s<sub>m</sub>)</b>.\n</p>\n\n<p><b>Depth(u)</b> is defined to be the number of edges on the unique path from the root of the BST to the node conatining the value <b>u</b>.\n\n<b>Distance(u,v)</b> is defined to be the number of edges on the unique path from the node containing the value <b>u</b> to the node containing the value <b>v</b>.\n</p>\n\n<p>Thunk has to hurry to finish his The Art of Competitive Programming series of books, and so doesn't want to waste too much time on this. So, given the sequence of Searches, <b>S = (s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>m</sub>)</b>, help him find the minimum <b>Cost</b>, over all valid BSTs on <b>{1,2,..,N}</b>. That is, find the minimum of <b>Cost(T,S)</b>, over all valid <b>T</b>s.\n</p>\n\n\n<h3>Input</h3>\n<p>The first line contains two integers <b>N, M</b>, denoting the number of nodes to be present in the BST, and the length of the search sequence <b>S</b>.</p>\n<p>The next line contains <b>M</b> integers ,separated by single spaces: <b>s<sub>1</sub>, s<sub>2</sub>, .., s<sub>M</sub></b>, denoting search sequence <b>S</b>.</p>\n\n\n<h3>Output</h3>\n<p>Output a single line containing the answer, which is the minimum Cost over all valid BSTs.</p>\n\n<p> </p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 N \u2264 500</b></li>\n<li><b>1 \u2264 M \u2264 10<sup>6</sup></b></li>\n<li><b>1 \u2264 S<sub>i</sub> \u2264 N</b></li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>3 5\n1 3 2 1 2</tt>\n<b>Output:</b>\n<tt>5</tt>\n</pre>\n\n<h3>Explanation</h3>\nFor <b>N</b> = 3, there are 5 valid BSTs possible:\n\n<pre>\n<b>T<sub>1</sub></b>:\n       2\n      /  \\\n    1    3\n\n\n\n<b>T<sub>2</sub></b>:\n    1\n      \\\n       2\n         \\\n          3\n\n\n\n<b>T<sub>3</sub></b>:\n        3\n       /\n    2\n   /\n 1\n\n\n<b>T<sub>4</sub></b>:\n       1\n         \\\n          3\n         /\n       2   \n\n\n\n<b>T<sub>5</sub></b>:\n        3\n       /\n     1\n       \\\n         2\n\n<b>S = (1, 3, 2, 1, 2)</b>\n\n<b>Cost(T<sub>1</sub>, S) = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)\n                     = 1 + 2 + 1 + 1 + 1 = 6\n\nCost(T<sub>2</sub>, S) = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)\n                     = 0 + 2 + 1 + 1 + 1 = 5\n\nCost(T<sub>3</sub>, S) = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)\n                     = 2 + 2 + 1 + 1 + 1 = 7\n\nCost(T<sub>4</sub>, S) = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)\n                     = 0 + 1 + 1 + 2 + 2 = 6\n\nCost(T<sub>5</sub>, S) = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)\n                     = 1 + 1 + 2 + 1 + 1 = 6</b>\n</pre>\n\nWe see that the minimum <b>Cost</b> is attained by <b>T<sub>2</sub></b>, and it is <b>5</b>. Hence the answer is <b>5</b>.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N \\leq 500$\n- $1 \\leq M \\leq 10^6$\n- $1 \\leq S_i \\leq N$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A rooted binary tree is a rooted tree such that each node has at most 2 children. A Binary Search Tree (BST) is a rooted binary tree, which has values stored in each of its nodes. We are interested only in distinct values. A BST has to satisfy the property that, for every node, its value must be greater than the value of every node on its left sub-tree, if it exists. Also, for every node, its value must be lesser than the value of every node on its right sub-tree, if it exists.\n\nThunk is bored with the classical problem of finding an optimal BST. He decides to spice it up, and changes the cost function. The problem he is considering is as follows:\n\nGiven a BST with $N$ nodes, called $T$, which store the values $\\{1,2,..,N\\}$, and a sequence of Searches $S = (s_1, s_2, ..., s_m)$, he puts his finger on the root of $T$, and then traces the path to the node containing $s_1$, and then from there, to the node containing $s_2$, ..., and he finally traces the path from $s_{m-1}$ to $s_m$. Note that during this process, he might have passed through, or even searched for the same element/node multiple times, if the Search sequence was so given. And he defines the **Cost** to be the total distance (or the number of edges) that he has passed through.\n\nFormally, \n\n$$\n\\text{Cost}(T,S) = \\text{Depth}(s_1) + \\text{Distance}(s_1, s_2) + \\text{Distance}(s_2, s_3) + \\dots + \\text{Distance}(s_{m-1}, s_m)\n$$\n\n- **Depth(u)** is defined to be the number of edges on the unique path from the root of the BST to the node containing the value $u$.\n- **Distance(u,v)** is defined to be the number of edges on the unique path from the node containing the value $u$ to the node containing the value $v$.\n\nThunk has to hurry to finish his *The Art of Competitive Programming* series of books, and so doesn't want to waste too much time on this. So, given the sequence of Searches, $S = (s_1, s_2, ..., s_m)$, help him find the minimum **Cost**, over all valid BSTs on $\\{1,2,..,N\\}$. That is, find the minimum of $\\text{Cost}(T,S)$, over all valid $T$s.\n",
+    "inputFormat": "The first line contains two integers $N, M$, denoting the number of nodes to be present in the BST, and the length of the search sequence $S$.\n\nThe next line contains $M$ integers, separated by single spaces: $s_1, s_2, \\dots, s_M$, denoting search sequence $S$.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output a single line containing the answer, which is the minimum Cost over all valid BSTs.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3 5\n1 3 2 1 2\n",
+        "output": "5\n",
+        "explanation": "For $N = 3$, there are 5 valid BSTs possible:\n\n**$T_1$**:\n```\n       2\n      /  \\\n    1    3\n```\n\n**$T_2$**:\n```\n    1\n      \\\n       2\n         \\\n          3\n```\n\n**$T_3$**:\n```\n        3\n       /\n    2\n   /\n 1\n```\n\n**$T_4$**:\n```\n       1\n         \\\n          3\n         /\n       2   \n```\n\n**$T_5$**:\n```\n        3\n       /\n     1\n       \\\n         2\n```\n\nGiven $S = (1, 3, 2, 1, 2)$, the costs for each BST are calculated as follows:\n\n- **Cost($T_1$, S)** = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)  \n  $= 1 + 2 + 1 + 1 + 1 = 6$\n\n- **Cost($T_2$, S)** = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)  \n  $= 0 + 2 + 1 + 1 + 1 = 5$\n\n- **Cost($T_3$, S)** = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)  \n  $= 2 + 2 + 1 + 1 + 1 = 7$\n\n- **Cost($T_4$, S)** = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)  \n  $= 0 + 1 + 1 + 2 + 2 = 6$\n\n- **Cost($T_5$, S)** = Depth(1) + Distance(1, 3) + Distance(3, 2) + Distance(2, 1) + Distance(1, 2)  \n  $= 1 + 1 + 2 + 1 + 1 = 6$\n\nWe see that the minimum **Cost** is attained by $T_2$, and it is **5**. Hence the answer is **5**.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16L\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16L\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>MEDIUM</p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic programming</p>\n<h3>PROBLEM:</h3>\n<p>Given the numbers <span class=\"math\">[1..N]</span> to be put in a binary search tree and a sequence of <span class=\"math\">m</span> searches <span class=\"math\">(s_1, s_2,...,s_m)</span>, solve the optimal BST problem with the cost as the sum of the distances between every two consecutive searches <span class=\"math\">s_i</span> and <span class=\"math\">s_{i+1}</span> on the BST.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Solve for the general case where cost is total distance of given of paths using dynamic programming similar to the original optimal BST problem.</p>\n<h3>EXPLANATION:</h3>\n<p>It helps to be familiar with the classical optimal BST problem, but it is not necessary. A detailed article on the classical optimal BST problem can be found <a href=\"https://alg12.wikischolars.columbia.edu/file/view/OPTIMALBST.pdf\">here</a>.</p>\n<p>In the given problem the total cost is the sum of distances between each <span class=\"math\">s_i</span> and <span class=\"math\">s_{i+1}</span> on the tree. However the problem can be solved for the general case of <span class=\"math\">m</span> paths, each from some vertex <span class=\"math\">x</span> to another vertex <span class=\"math\">y</span>. Note that the first path, which is from the root to <span class=\"math\">s_1</span> has no fixed starting vertex, but we can handle this by assuming the starting vertex is <span class=\"math\">N+1</span> for reasons which will be clear after understanding the approach.</p>\n<p>Consider a vertex <span class=\"math\">u</span> and the edge connecting it to its parent <span class=\"math\">e_u</span>. The contribution of <span class=\"math\">e_u</span> to the cost is the number of times any path passes through it. And the number of paths that pass through it are simply the number of paths that enter or exit the subtree rooted at <span class=\"math\">u</span>. Since this is a binary search tree, the subtree at <span class=\"math\">u</span> will contain values in a particular continuous range. Let this range be <span class=\"math\">[l..r]</span>. Then the number of paths that go out of <span class=\"math\">u</span>'s subtree is the number of paths from <span class=\"math\">x</span> to <span class=\"math\">y</span> such that <span class=\"math\">l \\le x \\le r</span> and <span class=\"math\">1 \\le y &lt; l</span> or <span class=\"math\">r &lt; y \\le N</span>. Which is also the total number of paths that start in <span class=\"math\">[l..r]</span> minus the number of paths that start in <span class=\"math\">[l..r]</span> and end in <span class=\"math\">[l..r]</span>.</p>\n<p>Let <span class=\"math\">c(l_1, r_1, l_2, r_2)</span> denote the number of paths that start in <span class=\"math\">[l_1..r_1]</span> and end in <span class=\"math\">[l_2..r_2]</span>. Then the number of paths going out of <span class=\"math\">u</span>'s subtree are <span class=\"math\">c(l, r, 1, N) - c(l, r, l, r)</span>. Similarly, the number of paths entering are <span class=\"math\">c(1, N, l, r) - c(l, r, l, r)</span>.<br>\nSo finally, the total contribution of the edge <span class=\"math\">e_u</span> to the cost is <span class=\"math\">c(l, r, 1, N) + c(1, N, l, r) - 2c(l, r, l, r)</span>. As you can see this actually depends not on <span class=\"math\">u</span>, but on the range in <span class=\"math\">u</span>'s subtree. Let us call this <span class=\"math\">cost(l,r)</span>.</p>\n<p>Let us define the cost of building up the range of numbers <span class=\"math\">[l..r]</span> into a subtree as <span class=\"math\">f(l,r)</span>. If we choose <span class=\"math\">u</span> as the root of this subtree the cost will be  <span class=\"math\">f(l, u-1) + cost(l,r) + f(u+1, r)</span>. This is what we need to minimize using dynamic programming.</p>\n<div class=\"math\">\n\\begin{aligned}\nf(l,r) &amp;= \\min_{l \\le u \\le r} \\{f(l, u-1) + cost(l,r) + f(u+1, r)\\}  \\\\\n&amp;= cost(l,r) + \\min_{l \\le u \\le r} \\{f(l, u-1) + f(u+1, r) \\}\n\\end{aligned}\n\n</div>\n<p>To compute <span class=\"math\">c(l_1, r_1, l_2, r_2)</span> efficiently, we can make a table where cell <span class=\"math\">(x, y)</span> contains the number of paths from <span class=\"math\">x</span> to <span class=\"math\">y</span>. Then <span class=\"math\">c(l_1, r_1, l_2, r_2)</span> is just a subrectangle sum query which can be done using a 2D prefix sum table. So <span class=\"math\">cost(l, r)</span> can be computed in <span class=\"math\">\\mathcal{O}(1)</span>.<br>\nTotal complexity is <span class=\"math\">\\mathcal{O}(N^3)</span>.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16L.cpp\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17236,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "26-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Binary Search Tree",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Tree Data Structure",
+    "Algorithms",
+    "Simple Algos"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16L",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610972
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16L",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

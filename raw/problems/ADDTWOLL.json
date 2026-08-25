@@ -1,0 +1,125 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ADDTWOLL",
+  "contest_category": "6",
+  "problem_name": "Add Two Numbers (Linked List)",
+  "intended_contest_code": "DSAMONDAY003",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le N1,\\ N2 \\le 10^{5}$\n- $0 \\le \\text{Node.val} \\le 9$\n",
+    "constraintsState": false,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "You are given two linked lists that represent two non-negative numbers.\\\nEach number\u2019s digits are stored in **reverse order**, and every node contains **a single digit**.\n\nYou need to **add both numbers** and print the **resulting linked list** (also in reverse order).\n\n**Leading zeros are considered as the nodes because the node's data value can be 0.**\n\n### Function Declaration\n\n### Function Name\n$addTwoNumbers$ \u2013 This function adds two non-negative integers represented by two singly linked lists.  \nEach linked list stores digits in **reverse order**, where each node contains a single digit (0\u20139).\n\nThe function must compute the sum and return the resulting linked list, also in reverse order.\n\n### Parameters\n\n* $l1$ : A pointer to the head of the first linked list.\n* $l2$ : A pointer to the head of the second linked list.\n\n### Return Value\n\n* Returns the head of a new linked list representing the sum of the two numbers.\n* Each node contains a single digit.\n* If there is a carry after the last digit, an extra node is appended.\n\n## Constraints\n\n- The number of nodes in each linked list is in the range $[1, 100]$.\n- $0 \\leq \\text{Node.data} \\leq 9$\n\n",
+    "inputFormat": "- The first line contains an integer $N1$ \u2014 the number of nodes in the first linked list.\n- The second line contains $N1$ space-separated integers representing the digits of the first number (in reverse order).\n- The third line contains an integer $N2$ \u2014 the number of nodes in the second linked list.\n- The fourth line contains $N2$ space-separated integers representing the digits of the second number (in reverse order).\n",
+    "inputFormatState": true,
+    "outputFormat": "- Print the resulting linked list representing the sum, with digits separated by spaces.\n- The output list must also be in reverse order.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n5 9 9 9\n3\n5 0 0\n",
+        "output": "0 0 0 0 1\n",
+        "explanation": "First number $\\rightarrow$ 9995\\\nSecond number $\\rightarrow$ 5 0 0 $\\rightarrow$ 005 \\\nSum = 9995 + 5 = 10000\\\nIn reverse order $\\rightarrow$ `0 0 0 0 1`",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "2\n9 9\n3\n1 0 1\n",
+        "output": "0 0 2\n",
+        "explanation": "First number $\\rightarrow$ 99\\\nSecond number $\\rightarrow$ 101\\\nSum = 200\\\nReverse $\\rightarrow$ `0 0 2`",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "# Problem Understanding\n\nWe are given two singly linked lists, where each node contains a single digit (0\u20139).\\\nBoth linked lists represent two non-negative integers, but the digits are stored in **reverse order**.\n\nExample:\\\nList: 2 \u2192 4 \u2192 3 represents the number **342**\\\nList: 5 \u2192 6 \u2192 4 represents the number **465**\n\nOur task is to **add both numbers** and output the resulting linked list, also in reverse order.\n\nThis means the addition will happen like normal arithmetic, starting from the least significant digit, which is conveniently the head of the linked list.\n\n---  \n\n# Intuition\n\nBecause the digits are stored in reverse order, the linked list already allows us to perform addition naturally:\n- Start from the head (least significant digit)\n- Add corresponding digits along with carry\n- Move forward as in standard digit-by-digit addition\n\nWe maintain:\n- sum = digit1 + digit2 + carry\n- new digit = sum % 10\n- new carry = sum / 10\n\nWe continue until:\n- both lists are fully processed\n- and carry becomes 0\n\nIf carry remains after finishing the lists (e.g., 999 + 1 = 1000), we must create a new node.\n\nThis method works for all cases, such as:\n- 243 + 564 \u2192 807\n- 999 + 1 \u2192 0001 \u2192 reverse-order list: 1 \u2192 0 \u2192 0 \u2192 0\n- 0 + 0 \u2192 0\n\n---  \n\n# Algorithm\n\nCreate a dummy node to simplify list building.\n\nInitialize carry = 0.\n\nWhile either list has nodes OR carry > 0:\n- sum = carry\n- If l1 exists: add l1.data to sum and move l1\n- If l2 exists: add l2.data to sum and move l2\n- Set carry = sum / 10\n- Create a new node with value = sum % 10\n- Append the new node to the result list\n\nReturn dummy.next (the start of the actual result list).\n\nThis construction ensures digits remain in reverse order.\n\n---  \n\n# Complexity Analysis\n\n**Time Complexity: O(max(N1, N2))**\\\nWe traverse both lists once.\n\n**Space Complexity: O(max(N1, N2))**\\\nThe result list must store all digits of the sum.\n\n---  \n\n# Key Takeaways\n\nThe problem becomes straightforward because the numbers are already stored in reverse order.\n\nDigit addition proceeds exactly like normal arithmetic from right to left.\n\nMaintaining a carry ensures the solution works even for long carry chains (e.g., 9999 + 1 \u2192 00001).\n\nUsing a dummy node simplifies result list construction.\n\nNo reversal is needed because input format already matches addition order.",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, CAML",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mayank_pardhi",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-09-2025",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "mayank_pardhi"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1779118200,
+    "submit_start_date": 1779118200,
+    "visible_start_date": 1779118200,
+    "end_date": 1893436200,
+    "current": 1785610572
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ADDTWOLL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,135 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DOUBLERENT",
+  "contest_category": "6",
+  "problem_name": "Double Rent",
+  "intended_contest_code": "START104",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq X \\leq 10$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chefina decided to move into Chef's apartment.  \nChef was initially paying a rent of $X$ rupees. Since Chefina is moving in, the owner decided to **double** the rent.\n\nFind the final rent Chef needs to pay.",
+    "inputFormat": "The input consists of a single integer $X$, denoting the rent Chef was initially paying. ",
+    "inputFormatState": true,
+    "outputFormat": "Output on a new line, the final rent Chef needs to pay.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2",
+        "output": "4",
+        "explanation": "Chef was initially paying $2$ rupees. After Chefina moves in, he needs to pay $2\\cdot 2 = 4$ rupees.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "3",
+        "output": "6",
+        "explanation": "Chef was initially paying $3$ rupees. After Chefina moves in, he needs to pay $2\\cdot 3 = 6$ rupees.",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "10",
+        "output": "20",
+        "explanation": "Chef was initially paying $10$ rupees. After Chefina moves in, he needs to pay $2\\cdot 10 = 20$ rupees.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 113320,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "notsoloud",
+  "problem_display_authors": [
+    "notsoloud"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/notsoloud'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>notsoloud</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-10-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "notsoloud",
+    "start104"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "234",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610790
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DOUBLERENT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 134,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

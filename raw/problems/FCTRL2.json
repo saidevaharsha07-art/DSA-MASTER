@@ -1,0 +1,129 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FCTRL2",
+  "contest_category": "6",
+  "problem_name": "Small factorials",
+  "intended_contest_code": null,
+  "body": "<h3>A tutorial for this problem is now available on our blog. Click <a href = \"http://blog.codechef.com/2009/07/02/tutorial-for-small-factorials/\">here</a> to read it. </h3>\r\n<P align=justify>\r\nYou are asked to calculate factorials of some small positive integers.\r\n</p>\r\n<H3>Input</h3>\r\n<P align=justify>\r\nAn integer t, 1<=t<=100, denoting the number of testcases, followed by t lines, each containing a single integer n, 1<=n<=100.</p>\r\n<H3>Output</h3>\r\n<P align=justify>\r\nFor each integer n given at input, display a line with the value of n!</p>\r\n<H3>Example</h3>\r\n<div align=left>\r\nSample input:\r\n<pre>\r\n4\r\n1\r\n2\r\n5\r\n3\r\n</pre>\r\n<p>\r\nSample output:\r\n<pre>\r\n1\r\n2\r\n120\r\n6\r\n</pre>\r\n</div>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are asked to calculate factorials of some small positive integers.\n</p>\n<h3>Input</h3>\n<p align=\"justify\">\nAn integer t, 1<=t<=100, denoting the number of testcases, followed by t lines, each containing a single integer n, 1 <= n <= 100</p>\n<h3>Output</h3>\n<p align=\"justify\">\nFor each integer n given at input, display a line with the value of n!</p>\n\n\n**Note:** For larger numbers, their factorial can overflows any available numeric data type in C.\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n1\n2\n5\n3",
+        "output": "1\n2\n120\n6",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121164,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.235294",
+  "source_sizelimit": "2000",
+  "problem_author": "u_admin_codechef_pw",
+  "problem_display_authors": [
+    "u_admin_codechef_pw"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/u_admin_codechef_pw'>u_admin_codechef_pw</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "1-12-2008",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "1D Arrays",
+    "Modular Arithmetic",
+    "Basic Math",
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "648",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610820
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FCTRL2",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 27,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 643,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

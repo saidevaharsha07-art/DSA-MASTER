@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHSQR",
+  "contest_category": "6",
+  "problem_name": "Chef and squares",
+  "intended_contest_code": "NOV16",
+  "body": "<p>\u00a0</p>\n<p>\nChef has finished his freshman year in college. As a present, his parents gave him a new problem to solve:<br>\n</p>\n\n<p>\nChef has to fill a <b>K x K</b> square grid of integers in a certain way. Let us say that such a grid is <i>valid</i> if:\n<ul>\n   <li>Each cell contains an integer from <b>1</b> and <b>K</b> (inclusive). </li>\n   <li>No integer appears twice in the same row or the same column.</li>\n</ul>\n</p>\n\n<p>\nLet <b>F(K)</b> be maximum possible distance between the center of the square and the closest cell that contains <b>1</b>, among all possible squares with the side length <b>K</b>.\n</p>\n\n<p>\nHere, we use the following notions:\n<ul>\n  <li> The distance between cell <b>(x, y)</b> and <b>(i, j)</b> is equal to <b>|x-i|+|y-j|</b>. </li>\n  <li> The center of a <b>K x K</b> square is cell <b>((K+1)/2, (K+1)/2)</b> for odd <b>K</b>. </li>\n</ul>\n</p>\n\n\n<h3>Input</h3>\n<p>\nThe first line of input contains a single integer <b>T</b> denoting the number of test cases.<br>\nEach test case consists of a single line containing a single odd integer <b>K</b>.\n</p>\n\n<p>\u00a0</p>\n\n<h3>Output</h3>\nFor each test case, print <b>K</b> lines each consisting of <b>K</b> space separated integers giving some square grid where the distance from the center of the grid to the nearest <b>1</b> is exactly <b>F(K)</b>. If there's more than 1 possible answer output any of them.\n\n<p>\u00a0</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>K<sub>i</sub></b> is odd.</li>\n</ul>\n<b>Subtask <b>#1</b> (10 points) </b> :\n<ul> \n<li> <b>1</b> \u2264 <b>T</b> \u2264 <b>50</b>  </li>\n<li> <b>1</b> \u2264 <b>K<sub>i</sub></b>\u2264 <b>5</b> </li> \n</ul>\n<b>Subtask <b>#1</b> (90 points) </b> :\n<ul> \n<li> <b>1</b> \u2264 <b>T</b> \u2264 <b>10</b>  </li>\n<li> <b>1</b> \u2264 <b>K<sub>i</sub></b> < <b>400</b> </li> \n</ul>\n\n\n\n<p>\u00a0</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>2\n1\n3</tt>\n<b>Output:</b>\n<tt>1\n3 2 1\n1 3 2\n2 1 3</tt>\n\n</pre>\n<p>\u00a0</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\u00a0</p>\n<p>\nChef has finished his freshman year in college. As a present, his parents gave him a new problem to solve:<br /></p>\n\n<p>\nChef has to fill a <b>K x K</b> square grid of integers in a certain way. Let us say that such a grid is <i>valid</i> if:\n</p><ul><li>Each cell contains an integer from <b>1</b> and <b>K</b> (inclusive). </li>\n   <li>No integer appears twice in the same row or the same column.</li>\n</ul><p>\nLet <b>F(K)</b> be maximum possible distance between the center of the square and the closest cell that contains <b>1</b>, among all possible squares with the side length <b>K</b>.\n</p>\n\n<p>\nHere, we use the following notions:\n</p><ul><li> The distance between cell <b>(x, y)</b> and <b>(i, j)</b> is equal to <b>|x-i|+|y-j|</b>. </li>\n  <li> The center of a <b>K x K</b> square is cell <b>((K+1)/2, (K+1)/2)</b> for odd <b>K</b>. </li>\n</ul><h3>Input</h3>\n<p>\nThe first line of input contains a single integer <b>T</b> denoting the number of test cases.<br />\nEach test case consists of a single line containing a single odd integer <b>K</b>.\n</p>\n\n<p>\u00a0</p>\n\n<h3>Output</h3>\nFor each test case, print <b>K</b> lines each consisting of <b>K</b> space separated integers giving some square grid where the distance from the center of the grid to the nearest <b>1</b> is exactly <b>F(K)</b>. If there's more than 1 possible answer output any of them.\n\n<p>\u00a0</p>\n\n<h3>Constraints</h3>\n<ul><li><b>K<sub>i</sub></b> is odd.</li>\n</ul><b>Subtask <b>#1</b> (10 points) </b> :\n<ul><li> <b>1</b> \u2264 <b>T</b> \u2264 <b>50</b>  </li>\n<li> <b>1</b> \u2264 <b>K<sub>i</sub></b>\u2264 <b>5</b> </li> \n</ul><b>Subtask <b>#1</b> (90 points) </b> :\n<ul><li> <b>1</b> \u2264 <b>T</b> \u2264 <b>10</b>  </li>\n<li> <b>1</b> \u2264 <b>K<sub>i</sub></b> < <b>400</b> </li> \n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1\n3",
+        "output": "1\n3 2 1\n1 3 2\n2 1 3",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 13317,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "fiter",
+  "problem_display_authors": [
+    "fiter"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/fiter'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>fiter</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "xcwgf666"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/xcwgf666'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>xcwgf666</span></a></div>",
+  "problem_editorialist": "kingofnumbers",
+  "date_added": "11-07-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1576",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610683
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHSQR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 8,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

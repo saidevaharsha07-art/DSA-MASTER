@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFRUN",
+  "contest_category": "6",
+  "problem_name": "Secret Recipe",
+  "intended_contest_code": "COOK94",
+  "body": "Chef and his competitor Kefa own two restaurants located at a straight road. The position of Chef's restaurant is $X_1$, the position of Kefa's restaurant is $X_2$.\r\n\r\nChef and Kefa found out at the same time that a bottle with a secret recipe is located on the road between their restaurants. The position of the bottle is $X_3$.\r\n\r\nThe cooks immediately started to run to the bottle. Chef runs with speed $V_1$, Kefa with speed $V_2$.\r\n\r\nYour task is to figure out who reaches the bottle first and gets the secret recipe (of course, it is possible that both cooks reach the bottle at the same time).\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains five space-separated integers $X_1$, $X_2$, $X_3$, $V_1$ and $V_2$. \r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Chef\"` if Chef reaches the bottle first, `\"Kefa\"` if Kefa reaches the bottle first or `\"Draw\"` if Chef and Kefa reach the bottle at the same time (without quotes). \r\n\r\n### Constraints \r\n- $1 \\le T \\le 10^5$\r\n- $|X_1|, |X_2|, |X_3| \\le 10^5$\r\n- $X_1 \\lt X_3 \\lt X_2$\r\n- $1 \\le V_1 \\le 10^5$\r\n- $1 \\le V_2 \\le 10^5$\r\n\r\n### Example Input\r\n```\r\n3\r\n1 3 2 1 2\r\n1 5 2 1 2\r\n1 5 3 2 2\r\n```\r\n\r\n### Example Output\r\n```\r\nKefa\r\nChef\r\nDraw\r\n```\r\n\r\n### Explanation\r\n\r\n**Example case 1.** Chef and Kefa are on the same distance from the bottle, but Kefa has speed $2$, while Chef has speed $1$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef and his competitor Kefa own two restaurants located at a straight road. The position of Chef's restaurant is $X_1$, the position of Kefa's restaurant is $X_2$.\r\n\r\nChef and Kefa found out at the same time that a bottle with a secret recipe is located on the road between their restaurants. The position of the bottle is $X_3$.\r\n\r\nThe cooks immediately started to run to the bottle. Chef runs with speed $V_1$, Kefa with speed $V_2$.\r\n\r\nYour task is to figure out who reaches the bottle first and gets the secret recipe (of course, it is possible that both cooks reach the bottle at the same time).\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains five space-separated integers $X_1$, $X_2$, $X_3$, $V_1$ and $V_2$. \r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Chef\"` if Chef reaches the bottle first, `\"Kefa\"` if Kefa reaches the bottle first or `\"Draw\"` if Chef and Kefa reach the bottle at the same time (without quotes). \r\n\r\n### Constraints \r\n- $1 \\le T \\le 10^5$\r\n- $|X_1|, |X_2|, |X_3| \\le 10^5$\r\n- $X_1 \\lt X_3 \\lt X_2$\r\n- $1 \\le V_1 \\le 10^5$\r\n- $1 \\le V_2 \\le 10^5$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n1 3 2 1 2\r\n1 5 2 1 2\r\n1 5 3 2 2",
+        "output": "Kefa\r\nChef\r\nDraw",
+        "explanation": "**Example case 1.** Chef and Kefa are on the same distance from the bottle, but Kefa has speed $2$, while Chef has speed $1$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 18669,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "hloya_ygrt",
+  "problem_display_authors": [
+    "hloya_ygrt"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/hloya_ygrt'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>hloya_ygrt</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "hloya_ygrt",
+  "date_added": "15-05-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Physics"
+  ],
+  "computed_tags": [
+    "Special"
+  ],
+  "difficulty_rating": "888",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610668
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFRUN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 34,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,127 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFADV",
+  "contest_category": "6",
+  "problem_name": "Chef and Adventures",
+  "intended_contest_code": "SEPT18",
+  "body": "\r\n\r\nMysterious Chefland... Recently, Chef realised that Discuss, the educational system of Chefland, is out of date. Therefore, he is trying to find ways to update the infrastructure in the country. One possible way is to move all materials from Discuss to Discourse.\r\n\r\nChef will have access to Discourse if his *knowledge* and *power* become exactly equal to $N$ and $M$ respectively. Initially, he has power $1$ and knowledge $1$.\r\n\r\nChef can perform actions of the following types to improve his skills:\r\n- solve a problem \u2014 increase his knowledge by $X$\r\n- do a push-up \u2014 increase his power by $Y$\r\n- install ShareChat to keep in touch with friends \u2014 increase both knowledge and power by $1$\r\n\r\nChef can only install ShareChat at most once. The remaining actions may be performed any number of times and the actions may be performed in any order.\r\n\r\nHelp Chef find out whether it is possible to move from Discuss to Discourse.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains four space-separated integers $N$, $M$, $X$ and $Y$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Chefirnemo\"` if it is possible to reach the required knowledge and power or `\"Pofik\"` if it is impossible.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N, M, X, Y \\le 10^9$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\le N, M, X, Y \\le 100$\r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n5\r\n2 2 1 2\r\n11 10 5 9\r\n11 11 5 9\r\n12 11 5 9\r\n1 2 1 100\r\n```\r\n\r\n### Example Output\r\n```\r\nChefirnemo\r\nChefirnemo\r\nPofik\r\nChefirnemo\r\nPofik\r\n```\r\n\r\n### Explanation\r\n**Example case 2:** We add $Y=9$ once to the power to get power $10$. We add $X=5$ twice to the knowledge to get knowledge $11$.\r\n\r\n**Example case 3:** We can see that it is impossible to reach power $M=11$ no matter which or how many operations we do. Note that the ShareChat operation will increase both knowledge and power by $1$, and hence it will still be impossible to attain the given values of knowledge and power at the same time.\r\n\r\n**Example case 4:** We can reach knowledge $11$ and power $10$ like in example case 2, the only difference is that we also use the ShareChat operation to increase both by $1$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\n\r\nMysterious Chefland... Recently, Chef realised that Discuss, the educational system of Chefland, is out of date. Therefore, he is trying to find ways to update the infrastructure in the country. One possible way is to move all materials from Discuss to Discourse.\r\n\r\nChef will have access to Discourse if his *knowledge* and *power* become exactly equal to $N$ and $M$ respectively. Initially, he has power $1$ and knowledge $1$.\r\n\r\nChef can perform actions of the following types to improve his skills:\r\n- solve a problem \u2014 increase his knowledge by $X$\r\n- do a push-up \u2014 increase his power by $Y$\r\n- install ShareChat to keep in touch with friends \u2014 increase both knowledge and power by $1$\r\n\r\nChef can only install ShareChat at most once. The remaining actions may be performed any number of times and the actions may be performed in any order.\r\n\r\nHelp Chef find out whether it is possible to move from Discuss to Discourse.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains four space-separated integers $N$, $M$, $X$ and $Y$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Chefirnemo\"` if it is possible to reach the required knowledge and power or `\"Pofik\"` if it is impossible.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N, M, X, Y \\le 10^9$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\le N, M, X, Y \\le 100$\r\n\r\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\r\n2 2 1 2\r\n11 10 5 9\r\n11 11 5 9\r\n12 11 5 9\r\n1 2 1 100",
+        "output": "Chefirnemo\r\nChefirnemo\r\nPofik\r\nChefirnemo\r\nPofik",
+        "explanation": "**Example case 2:** We add $Y=9$ once to the power to get power $10$. We add $X=5$ twice to the knowledge to get knowledge $11$.\r\n\r\n**Example case 3:** We can see that it is impossible to reach power $M=11$ no matter which or how many operations we do. Note that the ShareChat operation will increase both knowledge and power by $1$, and hence it will still be impossible to attain the given values of knowledge and power at the same time.\r\n\r\n**Example case 4:** We can reach knowledge $11$ and power $10$ like in example case 2, the only difference is that we also use the ShareChat operation to increase both by $1$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 19978,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "mgch",
+  "problem_display_authors": [
+    "mgch"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mgch'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>mgch</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "27-08-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Divisibility",
+    "Linear Algebra",
+    "Arithmetic"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Modular Arithmetic",
+    "Algebra",
+    "Basic Math"
+  ],
+  "difficulty_rating": "1462",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610663
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFADV",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 10,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

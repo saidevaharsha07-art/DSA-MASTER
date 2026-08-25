@@ -1,0 +1,122 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MINDIST",
+  "contest_category": "6",
+  "problem_name": "Minimize the Distance",
+  "intended_contest_code": "",
+  "body": "You are given two line segments $\\mathsf{AB}$ and $\\mathsf{CD}$ in $N$-dimensional space. Find the minimum distance between them, i.e. the minimum distance $\\mathsf{|PQ|}$ over all points $\\mathsf{P} \\in \\mathsf{AB}$ and $\\mathsf{Q} \\in \\mathsf{CD}$.\r\n\r\n**Note**: Because of large I/O, please use fast I/O methods.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $a_1, a_2, \\ldots, a_N$ denoting the coordinates of the point $\\mathsf{A}$.\r\n- The third line contains $N$ space-separated integers $b_1, b_2, \\ldots, b_N$ denoting the coordinates of the point $\\mathsf{B}$.\r\n- The fourth line contains $N$ space-separated integers $c_1, c_2, \\ldots, c_N$ denoting the coordinates of the point $\\mathsf{C}$.\r\n- The fifth line contains $N$ space-separated integers $d_1, d_2, \\ldots, d_N$ denoting the coordinates of the point $\\mathsf{D}$.\r\n\r\n### Output\r\nFor each query, print a single line containing one real number - the minimum distance between the line segments. Your output will be considered correct if the absolute or relative error does not exceed $10^{-12}$.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $3 \\le N \\le 10^5$\r\n- $0 \\le a_i, b_i, c_i, d_i \\le 1,000$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $10^6$\r\n\r\n### Example Input\r\n```\r\n2\r\n3\r\n879 130 645\r\n214 801 973\r\n487 518 681\r\n186 74 684\r\n3\r\n810 702 731\r\n598 325 737\r\n158 871 316\r\n336 999 983\r\n```\r\n\r\n### Example Output\r\n```\r\n146.899739355990\r\n587.980716360221\r\n```\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $3 \\le N \\le 10^5$\n- $0 \\le a_i, b_i, c_i, d_i \\le 1,000$ for each valid $i$\n- The sum of $N$ over all test cases does not exceed $10^6$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given two line segments $\\mathsf{AB}$ and $\\mathsf{CD}$ in $N$-dimensional space. Find the minimum distance between them, i.e. the minimum distance $\\mathsf{|PQ|}$ over all points $\\mathsf{P} \\in \\mathsf{AB}$ and $\\mathsf{Q} \\in \\mathsf{CD}$.\n\n**Note**: Because of large I/O, please use fast I/O methods.\n",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains $N$ space-separated integers $a_1, a_2, \\ldots, a_N$ denoting the coordinates of the point $\\mathsf{A}$.\n- The third line contains $N$ space-separated integers $b_1, b_2, \\ldots, b_N$ denoting the coordinates of the point $\\mathsf{B}$.\n- The fourth line contains $N$ space-separated integers $c_1, c_2, \\ldots, c_N$ denoting the coordinates of the point $\\mathsf{C}$.\n- The fifth line contains $N$ space-separated integers $d_1, d_2, \\ldots, d_N$ denoting the coordinates of the point $\\mathsf{D}$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each query, print a single line containing one real number - the minimum distance between the line segments. Your output will be considered correct if the absolute or relative error does not exceed $10^{-12}$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n879 130 645\n214 801 973\n487 518 681\n186 74 684\n3\n810 702 731\n598 325 737\n158 871 316\n336 999 983\n",
+        "output": "146.899739355990\n587.980716360221\n",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "msi_cse_buet",
+  "problem_display_authors": [
+    "msi_cse_buet"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/msi_cse_buet'>msi_cse_buet</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "28-11-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Computational Geometry"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611078
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MINDIST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

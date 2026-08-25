@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MININV",
+  "contest_category": "6",
+  "problem_name": "Minimal Inversions",
+  "intended_contest_code": "START74",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $1 \\le N \\le 10^5$\n- $1 \\le A_i \\le N$\n- Sum of $N$ over all test cases does not exceed $2 \\cdot 10^5$. ",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "Initially, Chef had an array $A$ of length $N$. Chef performs the following operation on $A$ **at most** once:\n- Select $L$ and $R$ such that $1 \\le L \\le R \\le N$ and set $A_i := A_i + 1$ for all $L \\le i \\le R$.\n\nDetermine the **maximum** number of *inversions* Chef can decrease from the array $A$ by applying the operation **at most** once.  \nMore formally, let the final array obtained after applying the operation **at most** once be $B$. You need to determine the **maximum** value of $inv(A) - inv(B)$ (where $inv(X)$ denotes the number of *inversions* in array $X$).\n\n**Note:** The number of *inversions* in an array $X$ is the number of pairs $(i, j)$ such that $1 \\le i \\lt j \\le N$ and $X_i \\gt X_j$.\n",
+    "inputFormat": "- The first line contains a single integer $T$ \u2014 the number of test cases. Then the test cases follow.\n- The first line of each test case contains an integer $N$ \u2014 the size of the array $A$.\n- The second line of each test case contains $N$ space-separated integers $A_1, A_2, \\dots, A_N$ denoting the array $A$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the **maximum** value of $inv(A) - inv(B)$ which can be obtained after applying at most one operation.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n5\n4 2 3 1 5\n6\n1 2 3 4 5 6\n4\n2 1 1 1\n",
+        "output": "2\n0\n3\n",
+        "explanation": "**Test case $1$:** The initial array $A$ is $[4, 2, 3, 1, 5]$ which has $5$ inversions. We can perform operation on $L = 3, R = 4$. The resultant array will be $[4, 2, 4, 2, 5]$ which has $3$ inversions. Therefore we reduce the number of inversion by $2$ which is the maximum decrement possible.\n\n**Test case $2$:** The initial array $A$ is $[1, 2, 3, 4, 5, 6]$ which has $0$ inversions. In this case, we do not need to apply any operation and the final array $B$ will be same as the initial array $A$. Therefore the maximum possible decrement in inversions is $0$.\n\n**Test case $3$:** The initial array $A$ is $[2, 1, 1, 1]$ which has $3$ inversions. We can perform operation on $L = 2, R = 4$. The resultant array will be $[2, 2, 2, 2]$ which has $0$ inversions. Therefore we reduce the number of inversion by $3$ which is the maximum decrement possible.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 104921,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "jeevan_adm",
+  "problem_display_authors": [
+    "jeevanjyot"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jeevanjyot'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>jeevanjyot</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "16-01-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1918",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611078
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MININV",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 71,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

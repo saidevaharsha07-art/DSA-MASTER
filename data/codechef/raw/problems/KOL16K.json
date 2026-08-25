@@ -1,0 +1,129 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16K",
+  "contest_category": "6",
+  "problem_name": "Chef and Points",
+  "intended_contest_code": null,
+  "body": "<p>Today, you finally have a chance to compete with a famous coder like Chef and prove your mettle.</p>\n<p>Chef has <b>n</b> distinct points in 2-D plane, i.e. there are never two points with both <b>x</b> and <b>y</b> coordinate equal and there are no two points with same <b>x</b> coordinate. Consider a subset of above <b>n</b> points which can be arranged as a sequence <b>p<sub>1</sub></b>,..<b>p<sub>k</sub></b>, such that <b>x<sub>p<sub>1</sub></sub></b>< <b>x<sub>p<sub>2</sub></sub></b> < ...< <b>x<sub>p<sub>k</sub></sub></b> and each point <b>p<sub>i</sub></b>, where <b>i</b> is in range between 3 and <b>k</b> (both inclusive) lies below or on the line passing between points <b>p<sub>i-1</sub></b> and <b>p<sub>i-2</sub></b>. Chef likes these kind of subsets. So he wants to find the size of largest of such subsets. </p>\n\n<h3>Input</h3>\n<p>First line of the input contains one integer <b>T</b> - number of tests. <b>T</b> tests follows.</p>\n<p>First line of each test contains one integer <b>N</b> - number of points.</p>\n<p>The next <b>N</b> lines of each test case contain integer point coordinates <b>x<sub>i</sub></b>, <b>y<sub>i</sub></b>.</p>\n\n<h3>Output</h3>\n<p>For a each test case, output a single integer in separate line corresponding to the largest subset size.</p>\n\n<h3>Constraints</h3>\n<ul>\n <li>1 \u2264 <b>T, N</b>, sum over all <b>N</b> over all test cases \u2264 2000</li> \n <li>1 \u2264 <b>x<sub>i</sub></b>, <b>y<sub>i</sub></b> \u2264 10<sup>9</sup></li> \n</ul>\n\n<h3>Example</h3>\n<pre>\n <b>Input:</b>\n 3\n 3\n 1 1\n 4 2\n 9 3\n 4\n 1 1\n 4 2\n 5 2\n 9 3\n 4\n 2 3\n 4 1\n 1 2\n 3 2\n\n <b>Output:</b>\n 3\n 3\n 4\n</pre>\n<h3>Explanation</h3>\n<p><b>Explanation case 1.</b></p> We can get sequence (1, 1) - (4, 2) - (9, 3), point (9, 3) lies below line between point (1, 1) and (4, 2).</p>\n<p><b>Explanation case 2.</b></p> We can get (1, 1) -(4, 2) - (9, 3)</p>\n<p><b>Explanation case 3.</b></p> We can get (1, 2) -(2, 3) - (3, 2) - (4, 1)</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T, N$, sum over all $N$ over all test cases $\\leq 2000$\n- $1 \\leq x_i, y_i \\leq 10^9$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Today, you finally have a chance to compete with a famous coder like Chef and prove your mettle.\n\nChef has $n$ distinct points in 2-D plane, i.e. there are never two points with both $x$ and $y$ coordinate equal and there are no two points with the same $x$ coordinate. Consider a subset of the above $n$ points which can be arranged as a sequence $p_1, \\dots, p_k$, such that $x_{p_1} < x_{p_2} < \\dots < x_{p_k}$ and each point $p_i$, where $i$ is in the range between 3 and $k$ (both inclusive), lies below or on the line passing between points $p_{i-1}$ and $p_{i-2}$. Chef likes these kinds of subsets. So he wants to find the size of the largest of such subsets.\n",
+    "inputFormat": "First line of the input contains one integer $T$ - number of tests. $T$ tests follow.\n\nFirst line of each test contains one integer $N$ - number of points.\n\nThe next $N$ lines of each test case contain integer point coordinates $x_i$, $y_i$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single integer in a separate line corresponding to the largest subset size.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n3\n1 1\n4 2\n9 3\n4\n1 1\n4 2\n5 2\n9 3\n4\n2 3\n4 1\n1 2\n3 2\n",
+        "output": "3\n3\n4\n",
+        "explanation": "**Explanation case 1:** We can get the sequence (1, 1) - (4, 2) - (9, 3), where point (9, 3) lies below the line between points (1, 1) and (4, 2).\n\n**Explanation case 2:** We can get the sequence (1, 1) - (4, 2) - (9, 3).\n\n**Explanation case 3:** We can get the sequence (1, 2) - (2, 3) - (3, 2) - (4, 1).\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16K\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16K\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>MEDIUM</p>\n<h3>PREREQUISITES:</h3>\n<p>2D geometry, Dynamic programming, Sorting, Binary search</p>\n<h3>PROBLEM:</h3>\n<p>Given a list of <span class=\"math\">n</span> points on a 2D plane such that no two have the same <span class=\"math\">x</span>-coordinate, find the length of the longest sequence of points <span class=\"math\">p_1, p_2, ... p_k</span> such that <span class=\"math\">x_{p_1}, x_{p_2}, ... x_{p_k}</span> is in increasing order and each point <span class=\"math\">p_i</span> for <span class=\"math\">3 \\le i \\le k</span> lies below or on the line joining points <span class=\"math\">p_{i-1}</span> and <span class=\"math\">p_{i-2}</span>.</p>\n<h3>EXPLANATION:</h3>\n<p>First let us sort the points by their <span class=\"math\">x</span>-coordinate since the sequence as required by the problem must be in increasing order of <span class=\"math\">x</span>-coordinate. We are also considering 0-based indexing. Now suppose we are at the <span class=\"math\">i^{th}</span> point <span class=\"math\">P_i</span> which is the last point in some sequence as required by the problem. At <span class=\"math\">P_i</span>, we can choose any <span class=\"math\">P_j</span> given <span class=\"math\">j &lt; i</span> to be the second last point. However, the third last point <span class=\"math\">P_k</span> must be such that <span class=\"math\">P_i</span> lies below the line joining <span class=\"math\">P_j</span> and <span class=\"math\">P_k</span>. Take a look at the situation below.</p>\n<p><img src=\"https://discuss.codechef.com/upfiles/lines.png\" alt=\"lines\" width=\"\" height=\"\"></p>\n<p><span class=\"math\">P_b</span> and <span class=\"math\">P_c</span> cannot be chosen as <span class=\"math\">P_k</span>, but <span class=\"math\">P_a, P_d, P_e</span> are valid choices for <span class=\"math\">P_k</span>.</p>\n<p>Let <span class=\"math\">f(i, j)</span> be the largest sequence as required by the problem, whose last point is <span class=\"math\">P_i</span> and the second last is <span class=\"math\">P_j</span>. Of course <span class=\"math\">0 \\le i, j &lt; n</span> and <span class=\"math\">j &lt; i</span>. Then,</p>\n<div class=\"math\">\nf(i, j) = \\max \\{ f(j, k) + 1 \\} \\ \\text{over all} \\ k \\ \\text{with} \\ slope(P_j, P_k) \\ge slope(P_i, P_j) \n</div>\n<p>Comparing the slopes is a simple way to determine whether <span class=\"math\">P_i</span> lies below or on the point joining <span class=\"math\">P_j</span> and <span class=\"math\">P_k</span>. The answer will be the maximum <span class=\"math\">f(i, j)</span> over all <span class=\"math\">i, j</span>. So now we have a correct <span class=\"math\">\\mathcal{O}(n^3)</span> solution. However this is not fast enough, and we must improve it.</p>\n<p>Notice that we are choosing all <span class=\"math\">k</span> such that some parameter that depends on <span class=\"math\">k</span> is greater than a threshold value. Along with some <span class=\"math\">dp[j][k]</span> which stores <span class=\"math\">f(j, k)</span>, let\u2019s have another structure <span class=\"math\">C</span> where <span class=\"math\">C[j]</span> is a list of pairs of values <span class=\"math\">(k, f(j, k))</span>. Now if the pairs in <span class=\"math\">C[j]</span> are sorted by <span class=\"math\">slope(P_j, P_k)</span>, then from point <span class=\"math\">i</span> we can use <em>binary search</em> get some index in <span class=\"math\">C[j]</span> beyond which all are valid choices of the third last point! Let this index be <span class=\"math\">b</span>, then we only need to choose the max of all values <span class=\"math\">f(j, k)</span> from each pair in <span class=\"math\">C[j]</span> from index <span class=\"math\">b</span> to the end of <span class=\"math\">C[j]</span>. We can use a <em>suffix max array</em> <span class=\"math\">S[j]</span> to precalculate these max values from any index till the end. The complexity has been reduced to <span class=\"math\">\\mathcal{O}(n^2 \\log n)</span>.</p>\n<p>Some things to note:</p>\n<ol>\n<li>The <span class=\"math\">dp</span> table is now redundant, just using <span class=\"math\">C</span> is enough.</li>\n<li>Instead of storing <span class=\"math\">(k, f(j, k))</span> pairs we can store <span class=\"math\">(slope(P_j, P_k), f(j, k))</span> pairs for convenience, especially in C++ which has built-in support for ordering pairs (Python does too but sadly it is too slow to clear the given time limit).</li>\n<li>We can add a sentinel pair <span class=\"math\">(\\infty, 1)</span> to each <span class=\"math\">C[j]</span> to denote the sequence with the point <span class=\"math\">P_j</span> by itself. Without this, we would have to separately handle empty binary search results.</li>\n</ol>\n<p>Refer to the editorialist\u2019s solution for better understanding.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"https://www.codechef.com/viewsolution/15423617\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17235,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "mgch",
+  "problem_display_authors": [
+    "mgch"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mgch'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>mgch</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "26-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Pre processing",
+    "Geometry",
+    "Dynamic Programming",
+    "Sorting",
+    "Binary Search"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Mathematics",
+    "Algorithms",
+    "Searching"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16K",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610974
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16K",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

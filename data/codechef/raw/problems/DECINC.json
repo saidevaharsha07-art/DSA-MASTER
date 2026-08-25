@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DECINC",
+  "contest_category": "6",
+  "problem_name": "Decrement OR Increment",
+  "intended_contest_code": null,
+  "body": "Write a program to obtain a number $N$ and increment its value by 1 if the number is divisible by 4 $otherwise$ decrement its value by 1.\r\n\r\n###Input:\r\n\r\n- First line will contain a number $N$.\r\n\r\n###Output:\r\nOutput a single line, the new value of the number.\r\n\r\n###Constraints \r\n- $0 \\leq N \\leq 1000$\r\n\r\n\r\n###Sample Input:\r\n\t5\r\n\r\n###Sample Output:\r\n\t4\r\n\t\r\n###EXPLANATION:\r\nSince 5 is not divisible by 4 hence, its value is decreased by 1.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $0 \\leq N \\leq 1000$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Write a program to obtain a number $N$ and increment its value by 1 if the number is divisible by 4 $otherwise$ decrement its value by 1.\n",
+    "inputFormat": "First line will contain a number $N$.",
+    "inputFormatState": true,
+    "outputFormat": "Output a single line, the new value of the number.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5",
+        "output": "4",
+        "explanation": "Since 5 is not divisible by 4 hence, its value is decreased by 1.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121175,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "tanmay28",
+  "problem_display_authors": [
+    "tanmay28"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/tanmay28'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>tanmay28</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "2-06-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "722",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610779
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DECINC",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 152,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

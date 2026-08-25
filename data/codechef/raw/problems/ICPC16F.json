@@ -1,0 +1,128 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ICPC16F",
+  "contest_category": "6",
+  "problem_name": "Chef and Bipartite Graphs",
+  "intended_contest_code": "",
+  "body": "<p>Chef is very interested in studying biparite graphs. Today he wants to construct a bipartite graph with <b>n</b> vertices each, on the two parts, and with total number of edges equal to <b>m</b>. The vertices on the left are numbered from <b>1</b> to <b>n</b>. And the vertices on the right are also numbered from <b>1</b> to <b>n</b>. He also wants the degree of every vertex to be greater than or equal to <b>d</b>, and to be lesser than or equal to <b>D</b>. ie. for all <b>v</b>, <b>d</b> \u2264 <b>deg(v)</b> \u2264 <b>D</b>\r\n</p>\r\n\r\n<p>Given four integers, <b>n, m, d, D</b>, you have to help Chef in constructing some bipartite graph satisfying this property. If there does not exist any such graph, output -1</p>.\r\n\r\n<h3>Input</h3>\r\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\r\n<p>The only line of each test case contains four space separated integers <b>n, m, d, D</b>. </p>\r\n\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output <b>-1</b> if there is no bipartite graph satisfying this property. Otherwise output <b>m</b> lines, each of the lines should contain two integers <b>u, v</b> denoting that there is an edge between vertex <b>u</b> on the left part and vertex <b>v</b> on the right part. If there can be multiple possible answers, you can print any. Note that the bipartite graph should not have multi-edges.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1 \u2264 T, n \u2264 100</b></li>\r\n<li><b>1 \u2264 d \u2264 D \u2264 n</b></li>\r\n<li><b>0 \u2264 m \u2264 n * n</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input</b>\r\n2\r\n2 3 1 2\r\n2 3 1 1    \r\n\r\n<b>Output:</b>\r\n1 1\r\n2 2\r\n1 2\r\n-1\r\n</pre>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef is very interested in studying biparite graphs. Today he wants to construct a bipartite graph with <b>n</b> vertices each, on the two parts, and with total number of edges equal to <b>m</b>. The vertices on the left are numbered from <b>1</b> to <b>n</b>. And the vertices on the right are also numbered from <b>1</b> to <b>n</b>. He also wants the degree of every vertex to be greater than or equal to <b>d</b>, and to be lesser than or equal to <b>D</b>. ie. for all <b>v</b>, <b>d</b> \u2264 <b>deg(v)</b> \u2264 <b>D</b>\n</p>\n\n<p>Given four integers, <b>n, m, d, D</b>, you have to help Chef in constructing some bipartite graph satisfying this property. If there does not exist any such graph, output -1</p>.\n\n<h3>Input</h3>\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>The only line of each test case contains four space separated integers <b>n, m, d, D</b>. </p>\n\n\n<h3>Output</h3>\n<p>For each test case, output <b>-1</b> if there is no bipartite graph satisfying this property. Otherwise output <b>m</b> lines, each of the lines should contain two integers <b>u, v</b> denoting that there is an edge between vertex <b>u</b> on the left part and vertex <b>v</b> on the right part. If there can be multiple possible answers, you can print any. Note that the bipartite graph should not have multi-edges.</p>\n\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 T, n \u2264 100</b></li>\n<li><b>1 \u2264 d \u2264 D \u2264 n</b></li>\n<li><b>0 \u2264 m \u2264 n * n</b></li>\n</ul>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 3 1 2\n2 3 1 1",
+        "output": "1 1\n2 2\n1 2\n-1",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS, GO",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-10-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bipartite Graphs",
+    "DP Approach",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Graphs",
+    "Algorithms",
+    "Dynamic Programming",
+    "Constructive"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610874
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ICPC16F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

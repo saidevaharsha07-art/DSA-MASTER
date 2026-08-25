@@ -1,0 +1,129 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1503",
+  "contest_category": "6",
+  "problem_name": "The Parenthesis Tree",
+  "intended_contest_code": null,
+  "body": "<p>\r\nSamosa Bhai and Jalebi Bai are taking cooking classes from CodeChef. CodeChef, as the name suggests, is also a coding enthusiast. So he decides to get his pupils interested in coding.</p>\r\n<p>\r\nFor this, he takes them both to a strange tree made up of <b>N</b> nodes. Each of these nodes is of one of the following two types \u2014 nodes containing open parenthesis <b>\u2018(\u2019</b> and nodes containing closed parenthesis <b>\u2018)\u2019</b>. CodeChef asks the students <b>Q</b> queries, where in each query they have to find out if the path between two given nodes is a balanced parentheses string or not. If they solve all the queries, they will get to eat the special Christmas cake made by CodeChef.\r\n</p>\r\n<p>\r\nSamosa Bhai and Jalebi Bai are lazy kids, but they also want to eat the cake. So they ask you for help. \r\n</p>\r\n<b>Note:</b> A balanced parentheses string means that each opening parenthesis has a corresponding closing parenthesis and the pairs of parentheses are properly nested.\r\n\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains <b>T</b>, the number of test cases to follow.</p>\r\n<p>Each test case begins with <b>N</b> and <b>Q</b>, the number of nodes in the tree and the number of queries to follow.</p>\r\n<p><b>N-1</b> lines follow. Each line contains 2 space-separated integers, <b>x</b> and <b>y</b>, which denotes that there is an edge between them.</p>\r\n<p>The next line contains <b>N</b> space-separated parentheses. The <b>ith</b> parenthesis denotes the value on the <b>ith</b> node.</p>\r\n<p>The <b>Q</b> queries follow. Each query contains two space-separated integers <b>u</b> and <b>v</b>.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each query, output \"<b>Yes</b>\" [without quotes] if the path from <b>u</b> to <b>v</b> is a balanced parentheses string and \"<b>No</b>\" [without quotes] if the path from <b>u</b> to <b>v</b> is not a balanced parentheses string.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>1000</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Q</b> \u2264 <b>3*10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Sum of N over all cases</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Sum of Q over all cases</b> \u2264 <b>3*10<sup>5</sup></b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n1\r\n6 4\r\n1 2\r\n2 5\r\n1 3\r\n3 6\r\n3 4\r\n) ( ) ) ( (\r\n5 3\r\n3 5\r\n2 4\r\n6 2\r\n\r\n<b>Output:</b>\r\nYes\r\nNo\r\nNo\r\nNo\r\n\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> \r\n<ul>\r\n<li><b>Query 1:</b> The path contains (()).</li>\r\n<li><b>Query 2:</b> The path contains ))((.</li>\r\n<li><b>Query 3:</b> The path contains ())).</li>\r\n<li><b>Query 4:</b> The path contains ())(.</li>\r\n</ul></p>\r\n<br>\r\n<b>NOTE:</b> Input files can be large. Please use fast input methods (E.g. scanf in C / C++, BufferedReader in Java)\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **1000**\n- **1** \u2264 **N** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **Q** \u2264 **3*10<sup>5</sup>**\n- **1** \u2264 **Sum of N over all cases** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **Sum of Q over all cases** \u2264 **3*10<sup>5</sup>**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Samosa Bhai and Jalebi Bai are taking cooking classes from CodeChef. CodeChef, as the name suggests, is also a coding enthusiast. So he decides to get his pupils interested in coding.\n\nFor this, he takes them both to a strange tree made up of **N** nodes. Each of these nodes is of one of the following two types \u2014 nodes containing open parenthesis **(** and nodes containing closed parenthesis **)**. CodeChef asks the students **Q** queries, where in each query they have to find out if the path between two given nodes is a balanced parentheses string or not. If they solve all the queries, they will get to eat the special Christmas cake made by CodeChef.\n\nSamosa Bhai and Jalebi Bai are lazy kids, but they also want to eat the cake. So they ask you for help.\n\n**Note:** A balanced parentheses string means that each opening parenthesis has a corresponding closing parenthesis and the pairs of parentheses are properly nested.\n",
+    "inputFormat": "The first line contains **T**, the number of test cases to follow.\n\nEach test case begins with **N** and **Q**, the number of nodes in the tree and the number of queries to follow.\n\n**N-1** lines follow. Each line contains 2 space-separated integers, **x** and **y**, which denotes that there is an edge between them.\n\nThe next line contains **N** space-separated parentheses. The **ith** parenthesis denotes the value on the **ith** node.\n\nThe **Q** queries follow. Each query contains two space-separated integers **u** and **v**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each query, output \"**Yes**\" [without quotes] if the path from **u** to **v** is a balanced parentheses string and \"**No**\" [without quotes] if the path from **u** to **v** is not a balanced parentheses string.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n6 4\n1 2\n2 5\n1 3\n3 6\n3 4\n) ( ) ) ( (\n5 3\n3 5\n2 4\n6 2\n",
+        "output": "Yes\nNo\nNo\nNo\n",
+        "explanation": "**Example case 1.**\n\n- **Query 1:** The path contains `(())`.\n- **Query 2:** The path contains `))((`.\n- **Query 3:** The path contains `()))`.\n- **Query 4:** The path contains `())(`.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1503\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1503\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/devuy11\" rel=\"nofollow noopener\">Devendra Agarwal</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Lowest common ancestors, balanced parentheses</p>\n<h3>PROBLEM:</h3>\n<p>Given a tree with <span class=\"math\">N</span> nodes, each node containing a parenthesis\u2014<code>)</code> or <code>(</code>\u2014, answer <span class=\"math\">Q</span> queries of the following kind:</p>\n<ul>\n<li>Given two nodes <span class=\"math\">u</span> and <span class=\"math\">v</span>, consider the string obtained by taking all parenthesis characters from every node in the path from <span class=\"math\">u</span> to <span class=\"math\">v</span>. Output <code>Yes</code> if this string is a balanced string of parentheses, otherwise print <code>No</code>.</li>\n</ul>\n<h3>QUICK EXPLANATION:</h3>\n<p>Root the tree. A path from <span class=\"math\">a</span> to <span class=\"math\">b</span> consists of two parts: A path from nodes <span class=\"math\">a</span> to <span class=\"math\">b</span> consists of two parts: the path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> and from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span>. Take care that the node <span class=\"math\">\\text{LCA}(a,b)</span> is counted only once. By convention, let\u2019s say this node belongs at the first part of the path.</p>\n<p>The string in the path from <span class=\"math\">a</span> to <span class=\"math\">b</span> is a valid parenthesization iff the following hold:</p>\n<ul>\n<li>The path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> is a prefix of a valid parenthesization.</li>\n<li>The path from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span> is a suffix of a valid parenthesization.</li>\n<li>The number of unmatched open parentheses from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> is equal to the number of unmatched closed parentheses from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span>.</li>\n</ul>\n<p>To check these conditions, we must be able to perform the following operations:</p>\n<ul>\n<li>Given some path from some node to one of its ancestors, it is a prefix of a valid parenthesization?</li>\n<li>Given some path from some node to one of its ancestors, it is a suffix of a valid parenthesization?</li>\n<li>Given some node <span class=\"math\">x</span> and one of its ancestors <span class=\"math\">y</span>, where the path from <span class=\"math\">x</span> and <span class=\"math\">y</span> is a <em>prefix</em> of a valid parenthesization, how many unmatched open parentheses are there?</li>\n<li>Given some node <span class=\"math\">x</span> and one of its ancestors <span class=\"math\">y</span>, where the path from <span class=\"math\">y</span> and <span class=\"math\">x</span> is a <em>suffix</em> of a valid parenthesization, how many unmatched closed parentheses are there?</li>\n</ul>\n<p>The latter two can be done by precomputing <span class=\"math\">f(x)</span> for each node <span class=\"math\">x</span>, where <span class=\"math\">f(x)</span> is the number of open parentheses minus the number of closed parentheses from <span class=\"math\">x</span> to the root. It can be computed using the recurrence:</p>\n<div class=\"math\">\nf(x) = \\begin{cases}\nf(\\text{parent}(x)) + 1 &amp; \\text{If the parenthesis at node $x$ is open} \\\\\\\nf(\\text{parent}(x)) - 1 &amp; \\text{If the parenthesis at node $x$ is closed}\n\\end{cases}\n</div>\n<p>The former two can be done by precomputing <span class=\"math\">\\text{pre}(x)</span> and <span class=\"math\">\\text{suf}(x)</span> for each node <span class=\"math\">x</span>, which are defined as the lengths of the longest path from <span class=\"math\">x</span> to the root that is a valid parenthesization <em>prefix</em> and <em>suffix</em>, respectively.</p>\n<h3>EXPLANATION:</h3>\n<p>As with many problems involving an undirected tree, the natural first step is to root it. This usually helps. So let\u2019s say the tree is rooted at node <span class=\"math\">1</span>.</p>\n<p>A path from nodes <span class=\"math\">a</span> to <span class=\"math\">b</span> consists of two parts: the path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> and from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span> (where <span class=\"math\">\\text{LCA}(a,b)</span> is the <a href=\"https://en.wikipedia.org/wiki/Lowest_common_ancestor\" rel=\"nofollow noopener\">lowest common ancestor</a> of <span class=\"math\">a</span> and <span class=\"math\">b</span>). But since the parentheses are on the nodes, not edges, so we need to ensure we count <span class=\"math\">\\text{LCA}(a,b)</span> only once. By convention, let\u2019s say this node belongs at the first part of the path, i.e. from the path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span>, and when we say the \"<em>path from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span></em>\", the node <span class=\"math\">\\text{LCA}(a,b)</span> isn\u2019t actually included.</p>\n<p>Obviously, the string of parentheses in the path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> must be a valid <em>prefix</em> of some valid parenthesization. Similarly the string from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span> must be valid <em>suffix</em>. These are necessary conditions. However, they\u2019re not sufficient. For example, <code>((((</code> is a valid prefix and <code>))</code> is a valid suffix but combining them, <code>(((())</code>, doesn\u2019t yield a valid parenthesization. Obviously, we\u2019re missing a condition: <strong>the number of <em>unmatched parentheses</em> in both strings must be equal</strong>. It\u2019s easy to see that these are sufficient conditions, i.e. the path from <span class=\"math\">a</span> to <span class=\"math\">b</span> contains a valid parenthesization iff the following conditions hold:</p>\n<ul>\n<li>The path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> is a prefix of a valid parenthesization.</li>\n<li>The path from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span> is a suffix of a valid parenthesization.</li>\n<li>The number of unmatched open parentheses from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span> is equal to the number of unmatched closed parentheses from <span class=\"math\">\\text{LCA}(a,b)</span> to <span class=\"math\">b</span>.</li>\n</ul>\n<p>(Remember the convention that <span class=\"math\">\\text{LCA}(a,b)</span> only belongs to the path from <span class=\"math\">a</span> to <span class=\"math\">\\text{LCA}(a,b)</span>.)</p>\n<p>So we want perform the following operations quickly:</p>\n<ul>\n<li>Given some path from some node to one of its ancestors, it is a prefix of a valid parenthesization?</li>\n<li>Given some path from some node to one of its ancestors, it is a suffix of a valid parenthesization?</li>\n<li>Given some node <span class=\"math\">x</span> and one of its ancestors <span class=\"math\">y</span>, where the path from <span class=\"math\">x</span> and <span class=\"math\">y</span> is a <em>prefix</em> of a valid parenthesization, how many unmatched open parentheses are there?</li>\n<li>Given some node <span class=\"math\">x</span> and one of its ancestors <span class=\"math\">y</span>, where the path from <span class=\"math\">y</span> and <span class=\"math\">x</span> is a <em>suffix</em> of a valid parenthesization, how many unmatched closed parentheses are there?</li>\n</ul>\n<p>But the latter two can be computed with the following: Let <span class=\"math\">f(x)</span> be the number of open parentheses minus the number of closed parentheses from <span class=\"math\">x</span> to the root (node <span class=\"math\">1</span>). Then:</p>\n<ul>\n<li>The number of unmatched parentheses from <span class=\"math\">x</span> to <span class=\"math\">y</span> is just <span class=\"math\">|f(x) - f(\\text{parent}(y))|</span>. (If <span class=\"math\">y = 1</span>, then we say <span class=\"math\">f(\\text{parent}(y)) = 0</span> by convention.)</li>\n<li>Also, these unmatched parentheses are open parentheses if <span class=\"math\">f(x) &gt; f(\\text{parent}(y))</span>, otherwise they\u2019re closed parentheses.</li>\n</ul>\n<p>Thus, having the <span class=\"math\">f(x)</span> values allows us to perform the operations above. Additionally, the $f(x)$s can be precomputed in linear time with a single traversal of the tree, using the following:</p>\n<ul>\n<li>If the parenthesis at node <span class=\"math\">x</span> is <code>(</code>, then <span class=\"math\">f(x) = f(\\text{parent}(x)) + 1</span>. Otherwise, <span class=\"math\">f(x) = f(\\text{parent}(x)) - 1</span>.</li>\n</ul>\n<p>The precomputation runs in linear time. What remains is to efficiently answer the following queries:</p>\n<ul>\n<li>Given some path from some node to one of its ancestors, it is a prefix of a valid parenthesization?</li>\n<li>Given some path from some node to one of its ancestors, it is a suffix of a valid parenthesization?</li>\n</ul>\n<p>These two operations are very similar, so we will just describe one of them, say the first one. To perform this query, we use the following characterization of a valid parenthesization prefix:</p>\n<p><strong>A string is a prefix of a valid parenthesization if every prefix of it contains at least as many open parentheses as there are closed parentheses.</strong></p>\n<p>In terms of our tree, this is equivalent to saying that:</p>\n<p><strong>If <span class=\"math\">y</span> is an ancestor of <span class=\"math\">x</span>, then the path from <span class=\"math\">x</span> to <span class=\"math\">y</span> forms a prefix of a valid parenthesization if and only if <span class=\"math\">f(x) \\ge f(\\text{parent}(z))</span> for every node <span class=\"math\">z</span> in the path.</strong></p>\n<p>That this is true can be seen from the meaning of the inequality <span class=\"math\">f(x) \\ge f(\\text{parent}(z))</span>. Note that <span class=\"math\">f(x) - f(\\text{parent}(z))</span> is the number of unmatched open parentheses from <span class=\"math\">x</span> to <span class=\"math\">z</span>, so if this is <span class=\"math\">\\ge 0</span>, for every node <span class=\"math\">z</span> in the path, then the condition for being a valid parenthesization prefix is satisfied.</p>\n<p>For every node <span class=\"math\">x</span>, we define <span class=\"math\">\\text{pre}(x)</span> as the length of the longest path from <span class=\"math\">x</span> to the root that is a valid parenthesization prefix (in terms of the number of nodes). Using the property above, the path from <span class=\"math\">x</span> to its ancestor <span class=\"math\">y</span> is a valid parenthesization prefix if and only if <span class=\"math\">\\text{depth}(x) - \\text{depth}(y) &lt; \\text{pre}(x)</span>. So we can answer the queries if we have <span class=\"math\">\\text{depth}(x)</span> and <span class=\"math\">\\text{pre}(x)</span> for all nodes <span class=\"math\">x</span>. Precomputing the depths of nodes can be done with a single traversal, so what remains is to compute <span class=\"math\">\\text{pre}(x)</span> for all nodes <span class=\"math\">x</span>.</p>\n<p>We will also compute the $\\text{pre}(x)$s with a single traversal. Let <span class=\"math\">z</span> be the $\\text{pre}(x)$th ancestor of <span class=\"math\">x</span>. If <span class=\"math\">z</span> is not the root, then let <span class=\"math\">y = \\text{parent}(z)</span>. Then <span class=\"math\">y</span> is the <em>first</em> node such that <span class=\"math\">f(x) &lt; f(y)</span>. Since the <span class=\"math\">f</span> s only differ by one between adjacent nodes, this means that <span class=\"math\">f(z)</span> must be equal to <span class=\"math\">f(x)</span>, and <span class=\"math\">f(y)</span> must be equal to <span class=\"math\">f(x) + 1</span>. So <span class=\"math\">\\text{pre}(x)</span> is just the distance of <span class=\"math\">x</span> to its nearest ancestor <span class=\"math\">y</span> whose <span class=\"math\">f(y)</span> is <span class=\"math\">f(x) + 1</span>. (And if no such <span class=\"math\">y</span> s exist, then <span class=\"math\">\\text{pre}(x)</span> is just <span class=\"math\">\\text{depth}(x)+1</span>.) Obviously, if the parenthesis at <span class=\"math\">x</span> is <code>)</code>, then <span class=\"math\">\\text{pre}(x)</span> is automatically <span class=\"math\">0</span>.</p>\n<p>Thus, as we traverse the tree, we must be able to answer the following query quickly:</p>\n<ul>\n<li>Given <span class=\"math\">v</span>, find the nearest ancestor <span class=\"math\">y</span> of the current node such that <span class=\"math\">f(y) = v</span>.</li>\n</ul>\n<p>This can be done by maintaining a <em>map of lists</em>, which lists for each <span class=\"math\">v</span> the nodes <span class=\"math\">y</span> along the path to the root whose <span class=\"math\">f(y) = v</span>. The following pseudocode illustrates it better:</p>\n<pre><code>// arrays are initialized to zero\nf = array[0...N]\nparent = array[1...N]\ndepth = array[0...N]\npre = array[1...N]\nm = {}\n\ndef PUSH(x,d):\n    if d is not a key of m:\n        m[d] = new empty list()\n\n    add x at the end of m[d]\n\ndef GET(d):\n    if d is not a key of m:\n        return 0\n    else:\n        return the last element of m[d]\n\ndef POP(x,d):\n    remove x from the end of m[d]\n    if m[d] is empty:\n        delete the key d from m\n\ndef traverse(x):\n\n    // compute f[x]\n    if parenthesis(x) == '(':\n        f[x] = f[parent[x]] + 1\n    else:\n        f[x] = f[parent[x]] - 1\n    \n    // compute depth[x]\n    depth[x] = depth[parent[x]] + 1\n    \n    // compute pre[x]\n    if parenthesis(x) == ')':\n        pre[x] = 0\n    else:\n        y = GET(f[x] + 1)\n        pre[x] = depth[x] - depth[y]\n\n    // add x\n    PUSH(x, f[x])\n\n    for j in adj[x]:\n        if j != parent[x]:\n            parent[j] = x\n            traverse(j)\n\n    // remove x\n    POP(x, f[x])\n\n// initial call is traverse(1)\n</code></pre>\n<p>A similar algorithm can be done to compute <span class=\"math\">\\text{suf}(x)</span> for all nodes <span class=\"math\">x</span>, which is defined as the length of the longest path from <span class=\"math\">x</span> to the root that is a valid parenthesization <em>suffix</em>. Using <span class=\"math\">\\text{pre}(x)</span> and <span class=\"math\">\\text{suf}(x)</span>, one can now answer the queries above in <span class=\"math\">O(1)</span> time!</p>\n<p>By precomputing <span class=\"math\">f(x)</span>, <span class=\"math\">\\text{pre}(x)</span> and <span class=\"math\">\\text{suf}(x)</span> for all nodes <span class=\"math\">x</span>, each query can be answered in <span class=\"math\">O(\\log N)</span> time (because we\u2019re taking the LCA of the two nodes.)</p>\n<p><em>Note:</em> If you find the number of unmatched parentheses in this document a bit disturbing, <a href=\"https://xkcd.com/859/\" rel=\"nofollow noopener\">here\u2019s something</a> that can make it worse.</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O((N + Q)\\log N)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1503.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1503.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12026,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "devuy11",
+  "problem_display_authors": [
+    "devuy11"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/devuy11'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>devuy11</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "8-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Trees",
+    "DFS",
+    "Binary lifting"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Graphs",
+    "Algorithms",
+    "Graph Algos",
+    "Traversals",
+    "Lowest Common Ancestor"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1503",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610967
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1503",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

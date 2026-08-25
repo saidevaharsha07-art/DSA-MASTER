@@ -1,0 +1,349 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "linked-lists-new",
+  "name": "Practice Linked Lists",
+  "title": "Practice Linked Lists",
+  "level": "Intermediate",
+  "description": "These linked list coding questions range from easy to hard difficulty and will prepare you to tackle any linked list question in future.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/linked-lists-new/LINKEDP04/problems/PREP55",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Linked List",
+      "description": "Practice educational problems on Linked lists",
+      "submodules": [
+        {
+          "name": "LinkedList",
+          "submodule_id": 25837,
+          "contest_code": "LINKEDP04",
+          "start_date": "2026-05-05 16:48:25",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/linked-lists-new/LINKEDP04/problems/PREP55",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "54915",
+              "code": "PREP55",
+              "name": "Remove Duplicates from Sorted List",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54915",
+              "code": "CRITLIST",
+              "name": "Critical points in a Linked List",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54915",
+              "code": "PREP58",
+              "name": "Cycle in a linked list",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54915",
+              "code": "LINKLEN",
+              "name": "Find the Length of the Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54915",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54915",
+              "code": "SEARCHLL",
+              "name": "Remove Nodes with a Given Key",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 25838,
+          "contest_code": "LINKEDP05",
+          "start_date": "2026-05-05 16:48:25",
+          "total_problems": 21,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/linked-lists-new/LINKEDP05/problems/LLCYCLE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 21,
+          "problems_with_status": [
+            {
+              "contest_id": "54916",
+              "code": "LLCYCLE",
+              "name": "Detect Start of Cycle in Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "REVDBL",
+              "name": "Reverse a Doubly Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "LINKLP",
+              "name": "Count loop length in Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "INSDELDLL",
+              "name": "Insert and Delete in Doubly Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "PALINLIST",
+              "name": "Check if Linked List is Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "SEGEO",
+              "name": "Separate Even and Odd values in a linked list",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "DSCPPAS273",
+              "name": "Find Intersection of two linked lists",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "ROTLIST",
+              "name": "Rotate the List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "REVSEG",
+              "name": "Reverse the Segment",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "SORTLL012",
+              "name": "Sort a Linked List of 0s, 1s, and 2s",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "NSELL",
+              "name": "Find Next Smaller value in Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "DELMIDLL",
+              "name": "Delete the Middle Node of a Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "ADDONELL",
+              "name": "Linked List Increment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "KGRPREV",
+              "name": "Reverse m size groups",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "ADDTWOLL",
+              "name": "Add Two Numbers (Linked List)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "SRTLL",
+              "name": "Sort a linked list",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "DELDOUBLY",
+              "name": "Delete All Occurrences of a Key in a Doubly Linked",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "PAIRSUMDLL",
+              "name": "Find Pairs with Given Sum in Doubly Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54916",
+              "code": "LLCOPY",
+              "name": "Copy List with Random Pointer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 27
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 27,
+  "total_non_pro_problems": 6,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [],
+  "learners_count": 1247,
+  "path_review": {
+    "rating": 4.6,
+    "users": 24
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

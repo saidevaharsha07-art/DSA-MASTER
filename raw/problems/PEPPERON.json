@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PEPPERON",
+  "contest_category": "6",
+  "problem_name": "Chef and Pepperoni Pizza",
+  "intended_contest_code": "COOK109",
+  "body": "\r\nChef has a pepperoni pizza in the shape of a $N \\times N$ grid; both its rows and columns are numbered $1$ through $N$. Some cells of this grid have pepperoni on them, while some do not. Chef wants to cut the pizza vertically in half and give the two halves to two of his friends. Formally, one friend should get everything in the columns $1$ through $N/2$ and the other friend should get everything in the columns $N/2+1$ through $N$.\r\n\r\nBefore doing that, if Chef wants to, he may choose one row of the grid and reverse it, i.e. swap the contents of the cells in the $i$-th and $N+1-i$-th column in this row for each $i$ ($1 \\le i \\le N/2$).\r\n\r\nAfter the pizza is cut, let's denote the number of cells containing pepperonis in one half by $p_1$ and their number in the other half by $p_2$. Chef wants to minimise their absolute difference. What is the minimum value of $|p_1-p_2|$?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a string with length $N$ describing the $i$-th row of the grid; this string contains only characters '1' (denoting a cell with pepperonis) and '0' (denoting a cell without pepperonis).\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2014 the minimum absolute difference between the number of cells with pepperonis in the half-pizzas given to Chef's friends.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $2 \\le N \\le 1,000$\r\n- $N$ is even\r\n- the sum of $N \\cdot N$ over all test cases does not exceed $2 \\cdot 10^6$\r\n\r\n### Example Input\r\n```\r\n2\r\n6\r\n100000\r\n100000\r\n100000\r\n100000\r\n010010\r\n001100\r\n4\r\n0011\r\n1100\r\n1110\r\n0001\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n0\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** Initially, $|p_1-p_2| = 4$, but if Chef reverses any one of the first four rows from \"100000\" to \"000001\", $|p_1-p_2|$ becomes $2$.\r\n\r\n**Example case 2:** Initially, $|p_1-p_2| = 0$. We cannot make that smaller by reversing any row.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef has a pepperoni pizza in the shape of a $N \\times N$ grid; both its rows and columns are numbered $1$ through $N$. Some cells of this grid have pepperoni on them, while some do not. Chef wants to cut the pizza vertically in half and give the two halves to two of his friends. Formally, one friend should get everything in the columns $1$ through $N/2$ and the other friend should get everything in the columns $N/2+1$ through $N$.\r\n\r\nBefore doing that, if Chef wants to, he may choose one row of the grid and reverse it, i.e. swap the contents of the cells in the $i$-th and $N+1-i$-th column in this row for each $i$ ($1 \\le i \\le N/2$).\r\n\r\nAfter the pizza is cut, let's denote the number of cells containing pepperonis in one half by $p_1$ and their number in the other half by $p_2$. Chef wants to minimise their absolute difference. What is the minimum value of $|p_1-p_2|$?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a string with length $N$ describing the $i$-th row of the grid; this string contains only characters '1' (denoting a cell with pepperonis) and '0' (denoting a cell without pepperonis).\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2014 the minimum absolute difference between the number of cells with pepperonis in the half-pizzas given to Chef's friends.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $2 \\le N \\le 1,000$\r\n- $N$ is even\r\n- the sum of $N \\cdot N$ over all test cases does not exceed $2 \\cdot 10^6$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n6\r\n100000\r\n100000\r\n100000\r\n100000\r\n010010\r\n001100\r\n4\r\n0011\r\n1100\r\n1110\r\n0001",
+        "output": "2\r\n0",
+        "explanation": "**Example case 1:** Initially, $|p_1-p_2| = 4$, but if Chef reverses any one of the first four rows from \"100000\" to \"000001\", $|p_1-p_2|$ becomes $2$.\r\n\r\n**Example case 2:** Initially, $|p_1-p_2| = 0$. We cannot make that smaller by reversing any row.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 35170,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "erfaniaa",
+  "problem_display_authors": [
+    "erfaniaa"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/erfaniaa'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>erfaniaa</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "16-08-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1810",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611161
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PEPPERON",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

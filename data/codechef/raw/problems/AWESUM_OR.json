@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AWESUM_OR",
+  "contest_category": "6",
+  "problem_name": "SUM OR",
+  "intended_contest_code": "START84",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $1 \\le N \\lt 2^{60}$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "You are given a positive integer $N$.  \nFind the number of triples $(X, Y, Z)$ such that:\n- $0\\lt X, Y, Z \\lt N$;\n- $X+Y+Z=N$;\n- $X$ $|$ $Y$ $|$ $Z=N,$ where $|$ represents the [bitwise OR operation](https://en.wikipedia.org/wiki/Bitwise_operation#OR).\n\nSince the number of triples can be huge, print them modulo $10^9+7$.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of a single integer $N$, as mentioned in the statement.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a new line, the number of triples satisfying the condition, modulo $10^9 + 7$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n7",
+        "output": "0\n6",
+        "explanation": "**Test case $1$:** There are no triples $(X, Y, Z)$ satisfying the given conditions.\n\n**Test case $2$:** The following $6$ tuples satisfy the conditions: $\\{(1, 2, 4), (1, 4, 2), (2, 1, 4), (2, 4, 1), (4, 1, 2), (4, 2, 1)\\}$.\n\nFor example, in the tuple $(1, 2, 4)$, $1+2+4 = 7$ and $1$ $|$ $2$ $|$ $4 = 7$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "642db303cc21a55eb47497bb",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 105734,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "shauryabhalla0",
+  "problem_display_authors": [
+    "shauryabhalla0"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/shauryabhalla0'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>shauryabhalla0</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "1-04-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation",
+    "Combinatorics",
+    "Precomputation"
+  ],
+  "computed_tags": [
+    "Special",
+    "Mathematics"
+  ],
+  "difficulty_rating": "2152",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610634
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AWESUM_OR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 45,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

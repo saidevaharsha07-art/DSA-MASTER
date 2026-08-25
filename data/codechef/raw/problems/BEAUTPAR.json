@@ -1,0 +1,126 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BEAUTPAR",
+  "contest_category": "6",
+  "problem_name": "Beautiful Partitions",
+  "intended_contest_code": null,
+  "body": "Sidaga calls a sequence *beautiful* if the sum of elements of this sequence is strictly positive.\r\n\r\nKaspers gave Sidaga a sequence $A_1, A_2, \\ldots, A_N$ and asked him to partition it into exactly $K$ non-empty **contiguous** subsequences such that each element of $A$ belongs to exactly one subsequence and all $K$ subsequences are beautiful.\r\n\r\nSidaga is getting ready for his wedding - he is busy learning how to dance, so he cannot solve this problem. Can you help him?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $K$.\r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"YES\"` if it is possible to partition $A$ into $K$ contiguous subsequences or `\"NO\"` otherwise.\r\n\r\nIf it is possible to partition $A$, print a second line containing $K$ space-separated integers $B_1, B_2, \\ldots, B_K$ denoting the sizes of the subsequences, where $1 \\le B_i$ for each valid $i$ and $B_1 + B_2 + \\ldots + B_K = N$. The first $B_1$ elements of $A$ belong to the first subsequence, the next $B_2$ elements belong to the second subsequence and so on.\r\n\r\nIf there is more than one solution, you may print any one.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le K \\le N \\le 5 \\cdot 10^5$\r\n- $0 \\le |A_i| \\le 10^9$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $5 \\cdot 10^5$ \r\n\r\n### Example Input\r\n```\r\n2\r\n4 2\r\n2 -1 1 3 \r\n2 2\r\n1 -1\r\n```\r\n\r\n### Example Output\r\n```\r\nYES\r\n1 3\r\nNO\r\n```\r\n\r\n### Explanation\r\n**Example case 1:**\r\n\r\nIn first case, there are more than one options. Another such valid option is {2,2}.\r\n\r\nIn second case, it is not possible.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Sidaga calls a sequence *beautiful* if the sum of elements of this sequence is strictly positive.\n\nKaspers gave Sidaga a sequence $A_1, A_2, \\ldots, A_N$ and asked him to partition it into exactly $K$ non-empty **contiguous** subsequences such that each element of $A$ belongs to exactly one subsequence and all $K$ subsequences are beautiful.\n\nSidaga is getting ready for his wedding - he is busy learning how to dance, so he cannot solve this problem. Can you help him?\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $K$.\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\n\n### Output\nFor each test case, print a single line containing the string `\"YES\"` if it is possible to partition $A$ into $K$ contiguous subsequences or `\"NO\"` otherwise.\n\nIf it is possible to partition $A$, print a second line containing $K$ space-separated integers $B_1, B_2, \\ldots, B_K$ denoting the sizes of the subsequences, where $1 \\le B_i$ for each valid $i$ and $B_1 + B_2 + \\ldots + B_K = N$. The first $B_1$ elements of $A$ belong to the first subsequence, the next $B_2$ elements belong to the second subsequence and so on.\n\nIf there is more than one solution, you may print any one.\n\n### Constraints\n- $1 \\le T \\le 1,000$\n- $1 \\le K \\le N \\le 5 \\cdot 10^5$\n- $0 \\le |A_i| \\le 10^9$ for each valid $i$\n- the sum of $N$ over all test cases does not exceed $5 \\cdot 10^5$ \n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4 2\n2 -1 1 3 \n2 2\n1 -1",
+        "output": "YES\n1 3\nNO",
+        "explanation": "**Example case 1:**\n\nIn first case, there are more than one options. Another such valid option is {2,2}.\n\nIn second case, it is not possible.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "teja349",
+  "problem_display_authors": [
+    "teja349"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/teja349'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>teja349</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "12-10-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Longest Increasing Subsequence",
+    "Prefix Sum"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Dynamic Programming",
+    "DP on sequences",
+    "Simple Algos"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610637
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BEAUTPAR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EATTWICE",
+  "contest_category": "6",
+  "problem_name": "Eat Twice",
+  "intended_contest_code": "COOK107",
+  "body": "\nHasan has recently heard about Chef's restaurant, which serves the tastiest dishes. The restaurant has published a list of $N$ dishes (numbered $1$ through $N$) that will be served in the next $M$ days. For each valid $i$, the $i$-th dish will be served only on the $D_i$-th day. Hasan has investigated their tastiness and he knows that for each valid $i$, the $i$-th dish has tastiness $V_i$.\n\nHasan's budget is only large enough to try two dishes. He wants to choose these two dishes in such a way that their total (summed up) tastiness is as large as possible. However, he cannot try 2 dishes on the same day.\n\nHelp Hasan and calculate the maximum possible total tastiness of the dishes he should try.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $M$.\n- $N$ lines follow. For each valid $i$, the $i$-th of these lines contains two space-separated integers $D_i$ and $V_i$.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the maximum total tastiness.\n\n### Constraints \n- $1 \\le T \\le 1,000$\n- $2 \\le N, M \\le 10^5$\n- $1 \\le D_i \\le M$ for each valid $i$\n- $1 \\le V_i \\le 10^9$ for each valid $i$\n- there are at least two dishes that are served on different days\n- the sum of $N$ over all test cases does not exceed $10^6$\n- the sum of $M$ over all test cases does not exceed $10^6$\n\n### Example Input\n```\n2\n3 6\n5 7\n1 9\n2 5\n3 7\n5 8\n2 5\n5 10\n```\n\n### Example Output\n```\n16\n15\n```\n\n### Explanation\n**Example case 1:** The optimal solution is to try dishes $1$ and $2$.\n\n**Example case 2:** The optimal solution is to try dishes $2$ and $3$.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nHasan has recently heard about Chef's restaurant, which serves the tastiest dishes. The restaurant has published a list of $N$ dishes (numbered $1$ through $N$) that will be served in the next $M$ days. For each valid $i$, the $i$-th dish will be served only on the $D_i$-th day. Hasan has investigated their tastiness and he knows that for each valid $i$, the $i$-th dish has tastiness $V_i$.\n\nHasan's budget is only large enough to try two dishes. He wants to choose these two dishes in such a way that their total (summed up) tastiness is as large as possible. However, he cannot try 2 dishes on the same day.\n\nHelp Hasan and calculate the maximum possible total tastiness of the dishes he should try.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $M$.\n- $N$ lines follow. For each valid $i$, the $i$-th of these lines contains two space-separated integers $D_i$ and $V_i$.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the maximum total tastiness.\n\n### Constraints \n- $1 \\le T \\le 1,000$\n- $2 \\le N, M \\le 10^5$\n- $1 \\le D_i \\le M$ for each valid $i$\n- $1 \\le V_i \\le 10^9$ for each valid $i$\n- there are at least two dishes that are served on different days\n- the sum of $N$ over all test cases does not exceed $10^6$\n- the sum of $M$ over all test cases does not exceed $10^6$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 6\n5 7\n1 9\n2 5\n3 7\n5 8\n2 5\n5 10",
+        "output": "16\n15",
+        "explanation": "**Example case 1:** The optimal solution is to try dishes $1$ and $2$.\n\n**Example case 2:** The optimal solution is to try dishes $2$ and $3$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 28577,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "kingofnumbers",
+  "problem_display_authors": [
+    "kingofnumbers"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kingofnumbers'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>kingofnumbers</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "teja349",
+  "date_added": "19-06-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Greedy",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1370",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610805
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EATTWICE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 10,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

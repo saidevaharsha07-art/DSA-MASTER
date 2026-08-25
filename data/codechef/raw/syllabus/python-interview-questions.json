@@ -1,0 +1,1586 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "python-interview-questions",
+  "name": "Python Interview Questions",
+  "title": "Python Interview Questions",
+  "level": "Beginner",
+  "description": "Practice these 118 Python Interview Questions and prepare for freshers interviews. Use the detailed explanations for MCQs whose answer you don't know.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:47",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/python-interview-questions/PYPREP02/problems/PYMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic Python syntax and data types",
+      "description": "Fundamental building blocks of Python programming. Covers core concepts like variables, data types, and basic operations.",
+      "submodules": [
+        {
+          "name": "Basic Python syntax and data types",
+          "submodule_id": 6109,
+          "contest_code": "PYPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP02/problems/PYMCQ01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ01",
+              "name": "Variable Assignment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ02",
+              "name": "Numeric Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ03",
+              "name": "String Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ04",
+              "name": "Boolean Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ05",
+              "name": "Type Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ06",
+              "name": "String Concatenation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ07",
+              "name": "Multiple Assignment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ08",
+              "name": "Type Checking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ09",
+              "name": "String Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29623",
+              "code": "PYMCQ10",
+              "name": "Numeric Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Control flow",
+      "description": "Mechanisms for directing the flow of program execution. Includes conditional statements and different types of loops.",
+      "submodules": [
+        {
+          "name": "Control flow",
+          "submodule_id": 6110,
+          "contest_code": "PYPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP03/problems/PYMCQ11",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ11",
+              "name": "Conditional Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ12",
+              "name": "For Loop Iteration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ13",
+              "name": "While Loop Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ14",
+              "name": "Break Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ15",
+              "name": "Continue Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ16",
+              "name": "Range Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ17",
+              "name": "Nested Loops",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ18",
+              "name": "Loop with Else",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ19",
+              "name": "Conditional Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29624",
+              "code": "PYMCQ20",
+              "name": "While Loop with Break",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "String manipulation",
+      "description": "Techniques for working with and modifying text data. Covers string methods, formatting, and basic pattern matching.",
+      "submodules": [
+        {
+          "name": "String manipulation",
+          "submodule_id": 6111,
+          "contest_code": "PYPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP04/problems/PYMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ21",
+              "name": "String Slicing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ22",
+              "name": "String Method - split()",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ23",
+              "name": "String Method - join()",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ24",
+              "name": "String Method - replace()",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ25",
+              "name": "F-string Formatting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ26",
+              "name": "String Formatting with .format()",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ27",
+              "name": "Regular Expressions - Basic Matching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ28",
+              "name": "String Indexing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ29",
+              "name": "String Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29625",
+              "code": "PYMCQ30",
+              "name": "String Method Chaining",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Lists, tuples, and dictionaries",
+      "description": "Key data structures for storing collections of items. Explores the properties and methods of these versatile data types.",
+      "submodules": [
+        {
+          "name": "Lists, tuples, and dictionaries",
+          "submodule_id": 6112,
+          "contest_code": "PYPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP05/problems/PYMCQ31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ31",
+              "name": "List Modification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ32",
+              "name": "Tuple Packing and Unpacking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ33",
+              "name": "Dictionary Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ34",
+              "name": "Set Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ35",
+              "name": "List Comprehension",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ36",
+              "name": "Dictionary Comprehension",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ37",
+              "name": "Tuple Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ38",
+              "name": "Set Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ39",
+              "name": "List Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29626",
+              "code": "PYMCQ40",
+              "name": "Dictionary Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Functions and lambda expressions",
+      "description": "Tools for code organization and reusability. Covers defining and using functions, including compact lambda expressions.",
+      "submodules": [
+        {
+          "name": "Functions and lambda expressions",
+          "submodule_id": 6113,
+          "contest_code": "PYPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP06/problems/PYMCQ41",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ41",
+              "name": "Function Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ42",
+              "name": "Function Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ44",
+              "name": "Lambda Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ45",
+              "name": "Map Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ46",
+              "name": "Filter Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ47",
+              "name": "Reduce Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ48",
+              "name": "Function Arguments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ49",
+              "name": "Nested Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29627",
+              "code": "PYMCQ50",
+              "name": "Function Attributes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "File I/O operations",
+      "description": "Methods for reading from and writing to files. Includes working with different file formats and using context managers.",
+      "submodules": [
+        {
+          "name": "File I/O operations",
+          "submodule_id": 6114,
+          "contest_code": "PYPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP07/problems/PYMCQ51",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ51",
+              "name": "File Opening Modes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ52",
+              "name": "Reading File Content",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ53",
+              "name": "File Writing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ54",
+              "name": "CSV File Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ55",
+              "name": "Context Managers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ56",
+              "name": "File Position",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ57",
+              "name": "File Modes Combination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ58",
+              "name": "Binary File Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ59",
+              "name": "File Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29628",
+              "code": "PYMCQ60",
+              "name": "File Writing Modes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Modules and packages",
+      "description": "Techniques for organizing and reusing code across files. Covers importing, creating modules, and understanding package structure.",
+      "submodules": [
+        {
+          "name": "Modules and packages",
+          "submodule_id": 6115,
+          "contest_code": "PYPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP08/problems/PYMCQ61",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ61",
+              "name": "Module Import Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ62",
+              "name": "Importing Specific Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ63",
+              "name": "Creating Custom Modules",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ64",
+              "name": "Package Structure",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ65",
+              "name": "Relative Imports",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ66",
+              "name": "OS Module Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ67",
+              "name": "Sys Module Functionality",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ68",
+              "name": "Module Reloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ69",
+              "name": "Package Initialization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29629",
+              "code": "PYMCQ70",
+              "name": "Circular Imports",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Exception handling",
+      "description": "Mechanisms for handling and managing errors in code. Includes try-except blocks and creating custom exceptions.",
+      "submodules": [
+        {
+          "name": "Exception handling",
+          "submodule_id": 6116,
+          "contest_code": "PYPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP09/problems/PYMCQ71",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ71",
+              "name": "Basic Exception Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ72",
+              "name": "Multiple Exception Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ73",
+              "name": "Raising Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ74",
+              "name": "Custom Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ75",
+              "name": "Finally Clause",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ76",
+              "name": "Exception Hierarchy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ77",
+              "name": "Bare Except",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ78",
+              "name": "Exception Object",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ79",
+              "name": "Nested Try-Except",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29630",
+              "code": "PYMCQ80",
+              "name": "Else Clause in Try-Except",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Python standard library",
+      "description": "Overview of built-in modules for common tasks. Includes working with dates, random numbers, and mathematical operations.",
+      "submodules": [
+        {
+          "name": "Python standard library",
+          "submodule_id": 6118,
+          "contest_code": "PYPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP11/problems/PYMCQ89",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ89",
+              "name": "Timedelta Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ90",
+              "name": "Random Sampling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ91",
+              "name": "Math Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ92",
+              "name": "Collections Counter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ93",
+              "name": "Datetime Formatting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ94",
+              "name": "Random Seed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ95",
+              "name": "Math Constants",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ96",
+              "name": "Collections deque",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29632",
+              "code": "PYMCQ97",
+              "name": "Datetime Timezones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Object-oriented programming concepts",
+      "description": "Paradigm for structuring code around objects and classes. Covers core OOP principles and their implementation in Python.",
+      "submodules": [
+        {
+          "name": "Object-oriented programming concepts",
+          "submodule_id": 6119,
+          "contest_code": "PYPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP12/problems/PYMCQ99",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ99",
+              "name": "Class Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ100",
+              "name": "Object Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ101",
+              "name": "Inheritance Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ102",
+              "name": "Encapsulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ103",
+              "name": "Polymorphism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ104",
+              "name": "Magic Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ105",
+              "name": "Method Overriding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ106",
+              "name": "Self Parameter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ107",
+              "name": "Class Variables vs Instance Variables",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29633",
+              "code": "PYMCQ108",
+              "name": "Property Decorator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Virtual environments",
+      "description": "Tools for isolating project dependencies. Covers creating and managing separate environments for different projects.",
+      "submodules": [
+        {
+          "name": "Virtual environments",
+          "submodule_id": 6120,
+          "contest_code": "PYPREP13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP13/problems/PYMCQ109",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ109",
+              "name": "Virtual Environment Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ110",
+              "name": "Activating Virtual Environment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ111",
+              "name": "Package Installation in Virtual Environment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ112",
+              "name": "Purpose of requirements.txt",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ113",
+              "name": "Generating requirements.txt",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ114",
+              "name": "Virtual Environment Location",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ115",
+              "name": "Deactivating Virtual Environment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ116",
+              "name": "Upgrading pip in Virtual Environment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ117",
+              "name": "Virtual Environment and Global Packages",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29634",
+              "code": "PYMCQ118",
+              "name": "Managing Multiple Python Versions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Basic understanding of PEP 8",
+      "description": "Guidelines for writing consistent, readable Python code. Covers key style recommendations from the official style guide.",
+      "submodules": [
+        {
+          "name": "Basic understanding of PEP 8",
+          "submodule_id": 6121,
+          "contest_code": "PYPREP14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-interview-questions/PYPREP14/problems/PYMCQ119",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ119",
+              "name": "Indentation Rule",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ120",
+              "name": "Naming Convention for Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ121",
+              "name": "Maximum Line Length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ122",
+              "name": "Import Statement Formatting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ123",
+              "name": "Class Naming Convention",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ124",
+              "name": "Variable Naming Convention",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ125",
+              "name": "Whitespace in Expressions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ126",
+              "name": "Comment Formatting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ127",
+              "name": "Function Argument Formatting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29635",
+              "code": "PYMCQ128",
+              "name": "Module Level Dunder Names",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 118,
+  "total_non_pro_problems": 20,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "45",
+    "name": "Learn Python Programming",
+    "title": "Learn Python Programming",
+    "slug": "python",
+    "description": "Learn Python 3 programming language within a month using our practical course. Understand the basic syntax of Python using our online tutorial. Prepare for a future in data science, AI and ML.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 88941
+    },
+    "learners_count": 418995,
+    "lessons_count": 37
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 7901,
+  "path_review": {
+    "rating": 4.6,
+    "users": 1209
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

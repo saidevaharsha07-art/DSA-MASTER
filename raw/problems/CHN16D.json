@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16D",
+  "contest_category": "6",
+  "problem_name": "ATM Queue",
+  "intended_contest_code": null,
+  "body": "<p>\r\nAn entire class of students has gone to the ATM to withdraw cash. Let's name them <b>{S<sub>1</sub>, S<sub>2</sub>, .., S<sub>N</sub>}</b>. Obviously they have to stand in a queue. They want to do so, such that close friends are standing not too far from each other. Specifically, if <b>S<sub>i</sub></b> and <b>S<sub>j</sub></b> are close friends, then there should not be more than 2 other students standing in between them. Given the close-friendship information, you need to tell whether it is possible to form such a queue, or not.\r\n</p>\r\n\r\n<p>\r\n\r\nFormally, you should state whether there exists a permutation <b>(S<sub>p1</sub>, S<sub>p2</sub>, .., S<sub>pN</sub>)</b> of <b>{S<sub>1</sub>, S<sub>2</sub>, .., S<sub>N</sub>}</b>, such that for all pairs <b>(S<sub>pi</sub>, S<sub>pj</sub>)</b> where <b>S<sub>pi</sub></b> and <b>S<sub>pj</sub></b> are close friends,  <b>|i-j| \u2264 3</b> holds true.\r\n</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The first line contains two integers <b>N, M</b>, denoting the number of students, and the number of close-friendship pairs, respectively.</p>\r\n<p>The next <b>M</b> lines contain two integers each, separated by single spaces: <b>i j</b>, denoting that <b>S<sub>i</sub></b> and <b>S<sub>j</sub></b> are close friends.</p>\r\n\r\n\r\n<h3>Output</h3>\r\n<p>Output a single line for each testcase, containing the answer, which should be <b>1</b>, if such a queue is possible, and <b>0</b> otherwise.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 3</b></li>\r\n<li><b>1 \u2264 N \u2264 30</b></li>\r\n<li><b>1 \u2264 M \u2264 200</b></li>\r\n</ul>\r\n\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>1\r\n5 6\r\n1 2\r\n3 1\r\n4 1\r\n2 5\r\n2 4\r\n5 4\r\n</tt>\r\n<b>Output:</b>\r\n<tt>1</tt>\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\nConsider the permutation <b>(S<sub>1</sub>, S<sub>3</sub>, S<sub>2</sub>, S<sub>4</sub>, S<sub>5</sub>)</b>. No pair of close friends have more than 2 students between them. So this is a valid queue, and hence the answer is <b>1</b>.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 3$\n- $1 \\leq N \\leq 30$\n- $1 \\leq M \\leq 200$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "An entire class of students has gone to the ATM to withdraw cash. Let's name them $\\{S_1, S_2, \\dots, S_N\\}$. Obviously, they have to stand in a queue. They want to do so, such that close friends are standing not too far from each other. Specifically, if $S_i$ and $S_j$ are close friends, then there should not be more than 2 other students standing in between them. Given the close-friendship information, you need to tell whether it is possible to form such a queue, or not.\n\nFormally, you should state whether there exists a permutation $(S_{p1}, S_{p2}, \\dots, S_{pN})$ of $\\{S_1, S_2, \\dots, S_N\\}$, such that for all pairs $(S_{pi}, S_{pj})$ where $S_{pi}$ and $S_{pj}$ are close friends, $|i-j| \\leq 3$ holds true.\n",
+    "inputFormat": "The first line of input contains an integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n\nThe first line contains two integers $N, M$, denoting the number of students, and the number of close-friendship pairs, respectively.\n\nThe next $M$ lines contain two integers each, separated by single spaces: $i\\ j$, denoting that $S_i$ and $S_j$ are close friends.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output a single line for each test case, containing the answer, which should be $1$, if such a queue is possible, and $0$ otherwise.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 6\n1 2\n3 1\n4 1\n2 5\n2 4\n5 4\n",
+        "output": "1\n",
+        "explanation": "Consider the permutation $(S_1, S_3, S_2, S_4, S_5)$. No pair of close friends have more than 2 students between them. So this is a valid queue, and hence the answer is $1$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610680
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16D",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

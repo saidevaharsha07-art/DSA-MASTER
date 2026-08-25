@@ -1,0 +1,668 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "dynamic-programming",
+  "name": "Dynamic programming",
+  "title": "Dynamic programming",
+  "level": "Intermediate",
+  "description": "Practice these 21 problems on Dynamic Programming to understand the pattern of questions and the different ways in which you can implement the solution. Practice concepts like Iterative DP, Recursive DP, 1D and 2D DP, Digit DP etc. ",
+  "time_to_complete": null,
+  "difficulty_range": "1000 - 1600",
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/dynamic-programming/INTDP01/problems/ALTARAY",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic dynamic programming",
+      "description": "Practice intermediate level problems using Dynamic programming",
+      "submodules": [
+        {
+          "name": "Practice",
+          "submodule_id": 1246,
+          "contest_code": "INTDP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/dynamic-programming/INTDP01/problems/ALTARAY",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 18,
+          "problems_with_status": [
+            {
+              "contest_id": "24276",
+              "code": "ALTARAY",
+              "name": "Alternating subarray prefix",
+              "difficulty_rating": "1408",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "SUBINC",
+              "name": "Count Subarrays",
+              "difficulty_rating": "1478",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "SUMTRIAN",
+              "name": "Sums in a Triangle",
+              "difficulty_rating": "869",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "DPFIBONACCI",
+              "name": "Fibonacci Series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "MAXCOMP",
+              "name": "Event Organizer",
+              "difficulty_rating": "1611",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "BINARYSUB",
+              "name": "Binary Substituition",
+              "difficulty_rating": "1630",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "MTSQO01",
+              "name": "Chef robs House II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "MGCRNK",
+              "name": "Magic Rankings",
+              "difficulty_rating": "1540",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "ZCO14002",
+              "name": "SUPW",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "EIHKO01",
+              "name": "Chef Counts Unique Paths",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "ZCO14004",
+              "name": "IPL",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "BGJOM01",
+              "name": "Chef Finds Minimum Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "ZCO15001",
+              "name": "Break Up",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "YMISN01",
+              "name": "Chef Solves Climbing Stairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "ZJIHK01",
+              "name": "Chef Counts Unique Paths",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "NPTAS01",
+              "name": "Chef Finds Falling Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "HBSBE01",
+              "name": "Chef Assign Cookies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24276",
+              "code": "WGBUW01",
+              "name": "Chef Finds Stock Profit - 1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Pro Practice",
+          "submodule_id": 1247,
+          "contest_code": "INTDP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 33,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/dynamic-programming/INTDP02/problems/SUBSETTARGET",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 33,
+          "problems_with_status": [
+            {
+              "contest_id": "24277",
+              "code": "SUBSETTARGET",
+              "name": "Subset with target sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "MAXCROSS",
+              "name": "Maximal crosses",
+              "difficulty_rating": "1570",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "COUNTSUBSETS",
+              "name": "Count subsets with sum K",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "E1",
+              "name": "The White Knight",
+              "difficulty_rating": "1530",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "VYISQ01",
+              "name": "Chef Verifies Equal Subset Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "MAXLCS",
+              "name": "Maximizing LCS",
+              "difficulty_rating": "1567",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "DORKL01",
+              "name": "Chef Solves Coin Change II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "TXBCN01",
+              "name": "Chef Solves Word Break",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "CAOS2",
+              "name": "CAO Stage-2",
+              "difficulty_rating": "1676",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "NINJATRAIN",
+              "name": "Ninja Training",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "DISHDIS",
+              "name": "Dish Distribution",
+              "difficulty_rating": "1596",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "TNGUI01",
+              "name": "Chef Counts Subsequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "COUNTPAL",
+              "name": "Count palindromes",
+              "difficulty_rating": "1631",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "NASTA01",
+              "name": "Chef Maximizes Stock Profit - 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "FCBARCA",
+              "name": "Barcelona Gameplay Tactics",
+              "difficulty_rating": "1658",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "ZCO16002",
+              "name": "Bamboo Art",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "INOI1301",
+              "name": "Calvins Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "PEC005",
+              "name": "Longest Increasing Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "TILE",
+              "name": "Easy Tiling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "ZCO13002",
+              "name": "Little Red Riding Hood",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "VUUDN01",
+              "name": "Chef Calculates Edit Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "ZGXXI01",
+              "name": "Chef Validates Wildcard",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "URERF01",
+              "name": "Chef Counts Increasing Subsequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "UAAIW01",
+              "name": "Chef Finds Divisible Subset",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "ZGXNF01",
+              "name": "Chef Builds String Chain",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "NZRYT01",
+              "name": "Chef Finds Stock Profit - 3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "YHPHV01",
+              "name": "Chef Maximizes Stock Profit - 4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "MLONT01",
+              "name": "Chef Calculates Stock Profit - 5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "JKPLU01",
+              "name": "Chef Calculates Stock Profit - 6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "OIWPE01",
+              "name": "Chef Finds Common Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "RXYOO01",
+              "name": "Chef Finds Palindromic Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "NGEXK01",
+              "name": "Chef Calculates Palindrome Insertions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24277",
+              "code": "CHEFANDTWOFR",
+              "name": "Chef and His Two Friends",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 51
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 51,
+  "total_non_pro_problems": 18,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "980",
+    "name": "Dynamic programming",
+    "title": "Dynamic programming",
+    "slug": "dynamic-programming-new",
+    "description": "Learn how to apply Dynamic Programming algorithm to solve optimization problems. This course will equip you with the fundamentals required to identify and solve a Dynamic Programming problem.",
+    "highlight_color": "#FFFFFF",
+    "level": "Advanced",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.4,
+      "users": 362
+    },
+    "learners_count": 5910,
+    "lessons_count": 6
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 9317,
+  "path_review": {
+    "rating": 4.5,
+    "users": 61
+  },
+  "faqs": [
+    {
+      "question": "What is dynamic programming and how does it differ from other problem-solving techniques?",
+      "answer": "Dynamic programming is an algorithmic paradigm that solves complex problems by breaking them down into simpler subproblems. Unlike greedy algorithms, which make locally optimal choices, dynamic programming considers all possible solutions to find the globally optimal one. It's especially useful for optimization problems and can significantly improve efficiency in solving certain types of computational challenges.",
+      "faq_order": "1"
+    },
+    {
+      "question": "What types of problems will I learn to solve using dynamic programming?",
+      "answer": "The course covers a range of dynamic programming problem types, including:\n<ol style=\"margin-left: 24px\">\n<li>Maximum sum subarray</li>\n<li>Longest increasing subsequence</li>\n<li>Cut ribbon optimization</li>\n<li>Triangle sum problems</li>\n<li>Magic rankings</li>\n<li>These problems help you understand various applications of dynamic programming in real-world scenarios.</li>\n</ol>",
+      "faq_order": "2"
+    },
+    {
+      "question": "Are there any prerequisites I should know before starting to learn dynamic programming?",
+      "answer": "Before diving into dynamic programming, it's helpful to have a solid foundation in:\n<ol style=\"margin-left: 24px\">\n<li>Basic programming concepts and at least one programming language</li>\n<li>Data structures (arrays, linked lists, trees, graphs)</li>\n<li>Algorithms (sorting, searching)</li>\n<li>Recursion</li>\n<li>Time and space complexity analysis</li>\n<li>Basic math and logical thinking skills</li>\n</ol>",
+      "faq_order": "3"
+    },
+    {
+      "question": "What are the key components of a dynamic programming solution?",
+      "answer": "A dynamic programming solution typically consists of three main components:\n<ol style=\"margin-left: 24px\">\n<li>Optimal substructure: The problem can be broken down into smaller, similar subproblems.</li>\n<li>Overlapping subproblems: The same subproblems are solved multiple times.</li>\n<li>Memoization or tabulation: Storing solutions to subproblems to avoid redundant calculations.</li>\n</ol>",
+      "faq_order": "4"
+    }
+  ],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

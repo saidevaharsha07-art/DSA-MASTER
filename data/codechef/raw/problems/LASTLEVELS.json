@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LASTLEVELS",
+  "contest_category": "6",
+  "problem_name": "The Last Levels",
+  "intended_contest_code": "LTIME110",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $1 \\leq X \\leq 100$\n- $5 \\leq Y \\leq 100$\n- $5 \\leq Z \\leq 15$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef is playing a videogame, and is getting close to the end. He decides to finish the rest of the game in a single session.\n\nThere are $X$ levels remaining in the game, and each level takes Chef $Y$ minutes to complete. To protect against eye strain, Chef also decides that every time he completes $3$ levels, he will take a $Z$ minute break from playing. Note that there is no need to take this break if the game has been completed.\n\nHow much time (in minutes) will it take Chef to complete the game?\n\n",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- The first and only line of input will contain three space-separated integers $X$, $Y$, and $Z$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a new line the answer \u2014 the length of Chef's gaming session.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n2 12 10\n3 12 10\n7 20 8\n24 45 15\n",
+        "output": "24\n36\n156\n1185",
+        "explanation": "**Test case 1: 2 12 10**\n- X = 2 (2 levels remain)\n- Y = 12 (each level takes 12 minutes)\n- Z = 10 (Chef would take a 10-minute break every 3 levels, but since there are only 2 levels, no break is needed) \n\nSince there are only 2 levels, and no break is needed (because Chef takes a break only after every 3 levels).\n \nThe total time = X \u00d7 Y = 2 \u00d7 12 = 24\u00a0minutes.\n\n\n\n**Test case 3: 7 20 8**\n- X = 7 (7 levels remain)\n- Y = 20 (each level takes 20 minutes)\n- Z = 8  (Chef takes an 8-minute break after every 3 levels)\n\nNow, let's break this down: \\\nChef completes the first 3 levels: 3 x 20 = 60 minutes.\\\nAfter completing these 3 levels, Chef takes an 8-minute break.\\\nChef completes another 3 levels: 3 x 20 = 60 minutes. \\\nAfter completing these 3 levels, Chef takes another 8-minute break.\\\nNow, Chef completes the remaining 1 level: 1 x 20 = 20 minutes.\n\nSo, the total time = 60 + 8 + 60 + 8 + 20 = 156  minutes.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 102237,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "iceknight1093",
+  "problem_display_authors": [
+    "iceknight1093"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/iceknight1093'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>iceknight1093</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-07-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Loops",
+    "Basic Math"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Mathematics"
+  ],
+  "difficulty_rating": "679",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610979
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LASTLEVELS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 446,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

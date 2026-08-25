@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CLFIBD",
+  "contest_category": "6",
+  "problem_name": "Fibonacci String",
+  "intended_contest_code": "COLE2018",
+  "body": "  \r\n\r\nFor a string $S$ let the unique set of characters that occur in it one or more times be $C$. Consider a permutation of the elements of $C$ as $(c_1, c_2, c_3 ... )$. Let $f(c)$ be the number of times $c$ occurs in $S$.\r\n\r\nIf any such permutation of the elements of $C$ satisfies $f(c_i) = f(c_{i-1}) + f(c_{i-2})$ for all $i \\ge 3$, the string is said to be a **dynamic string**.\r\n\r\nMr Bancroft is given the task to check if the string is dynamic, but he is busy playing with sandpaper. Would you help him in such a state?\r\n\r\nNote that if the number of distinct characters in the string is less than 3, i.e. if $|C| < 3$, then the string is always dynamic.\r\n\r\n###Input:\r\n- First line will contain $T$, number of testcases. Then the testcases follow. \r\n- Each testcase contains of a single line of input, a string $S$.\r\n\r\n###Output:\r\nFor each testcase, output in a single line \"**Dynamic**\" if the given string is dynamic, otherwise print \"**Not**\". (Note that the judge is case sensitive)\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 10$\r\n- $1 \\leq |S| \\leq 10^5$\r\n- $S$ contains only lower case alphabets: $a$, $b$, ..., $z$\r\n\r\n###Sample Input:\r\n    3\r\n    aaaabccc\r\n    aabbcc\r\n    ppppmmnnoooopp\r\n\r\n###Sample Output:\r\n    Dynamic\r\n    Not\r\n    Dynamic\r\n\r\n###Explanation:\r\n- **Testase 1:** For the given string, $C = \\{a, b, c\\}$ and $f(a)=4, f(b)=1, f(c)=3$. $f(a) = f(c) + f(b)$ so the permutation $(b, c, a)$ satisfies the requirement.\r\n- **Testcase 2:** Here too $C = \\{a, b, c\\}$ but no permutation satisfies the requirement of a dynamic string.\r\n- **Testcase 3:** Here $C = \\{m, n, o, p\\}$ and $(m, n, o, p)$ is a permutation that makes it a dynamic string.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "  \n\nFor a string $S$ let the unique set of characters that occur in it one or more times be $C$. Consider a permutation of the elements of $C$ as $(c_1, c_2, c_3 ... )$. Let $f(c)$ be the number of times $c$ occurs in $S$.\n\nIf any such permutation of the elements of $C$ satisfies $f(c_i) = f(c_{i-1}) + f(c_{i-2})$ for all $i \\ge 3$, the string is said to be a **dynamic string**.\n\nMr Bancroft is given the task to check if the string is dynamic, but he is busy playing with sandpaper. Would you help him in such a state?\n\nNote that if the number of distinct characters in the string is less than 3, i.e. if $|C| < 3$, then the string is always dynamic.\n\n###Input:\n- First line will contain $T$, number of testcases. Then the testcases follow. \n- Each testcase contains of a single line of input, a string $S$.\n\n###Output:\nFor each testcase, output in a single line \"**Dynamic**\" if the given string is dynamic, otherwise print \"**Not**\". (Note that the judge is case sensitive)\n\n###Constraints \n- $1 \\leq T \\leq 10$\n- $1 \\leq |S| \\leq 10^5$\n- $S$ contains only lower case alphabets: $a$, $b$, ..., $z$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\naaaabccc\naabbcc\nppppmmnnoooopp",
+        "output": "Dynamic\nNot\nDynamic",
+        "explanation": "- **Testase 1:** For the given string, $C = \\{a, b, c\\}$ and $f(a)=4, f(b)=1, f(c)=3$. $f(a) = f(c) + f(b)$ so the permutation $(b, c, a)$ satisfies the requirement.\n- **Testcase 2:** Here too $C = \\{a, b, c\\}$ but no permutation satisfies the requirement of a dynamic string.\n- **Testcase 3:** Here $C = \\{m, n, o, p\\}$ and $(m, n, o, p)$ is a permutation that makes it a dynamic string.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 18450,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "avijit_agarwal",
+  "problem_display_authors": [
+    "avijit_agarwal"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/avijit_agarwal'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>avijit_agarwal</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "31-03-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Data Structures",
+    "String",
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1819",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610689
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CLFIBD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

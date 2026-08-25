@@ -1,0 +1,124 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMCOP",
+  "contest_category": "6",
+  "problem_name": "COPRIMES",
+  "intended_contest_code": null,
+  "body": "<p><html><br />\n<head><br />\n    <title>COPRIMES</title><br />\n</head><br />\n<body></body></html></p>\n<p>\n        <i>Motherboard</i>, the evil mother of our <i>Farzi coder</i> has gifted him an Array <b>A[]</b> of size <b>N</b>. She wanted to test the coding skills of her son. So she asked him <b>Q</b> questions of the form: given three integers (<b>L, R, K</b>), find number of special subsets of size <b>K</b> of the subarray <b>A[L], A[L+1], .... A[R]</b>. A set is special, if the greatest number which can divide all the elements of the set is 1.\n    </p>\n<p>\n        Please help our <i>Farzi Coder</i> in solving the task. As the answer can be large, print it modulo <b>10^9+7</b>.\n    </p>\n<h2>Input</h2>\n<p>\n\t\tThe first line of each file has the integer <b>N</b> denoting the size of array.\n\t</p>\n<p>\n\t\tNext line contains <b>N</b> space separated integers.\n\t</p>\n<p>\n\t\tNext line contains one integer <b>Q</b> denoting the number of queries on the array.\n\t</p>\n<p>\n\t\tNext <b>Q</b> lines contain 3 space separated integers each, \"<b>L R K</b>\" (without quotes).\n\t</p>\n<h2>Output</h2>\n<p>\n\t\tFor each query, print the required answer.\n\t</p>\n<h2>Constraints</h2>\n<p><b>1 \u2264 N \u2264 50000</b></p>\n<p><b>1 \u2264 L \u2264 R \u2264 N</b></p>\n<p><b>1 \u2264 Q \u2264 50000</b></p>\n<p><b>1 \u2264 A[i] \u2264 100000</b></p>\n<p><b>1 \u2264 K \u2264 R - L + 1</b></p>\n<h2>Sample</h2>\n<h3>Input</h3>\n<pre>\n10 \n1 2 3 4 5 6 7 8 9 10\n3\n1 5 2\n1 10 3\n1 10 4\n\t</pre><h3>Output</h3>\n<pre>\n9\n109\n205\n\t</pre><h3>Explanation</h3>\n<p>For query 1, the special sets of size 2 between the indices 1 and 5 are: {1, 2} {1, 3} {1, 4} {1, 5} {2, 3} {2, 5} {3, 4} {3, 5} {4, 5}</p>\n<p><br />\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 N \u2264 50000**\n- **1 \u2264 L \u2264 R \u2264 N**\n- **1 \u2264 Q \u2264 50000**\n- **1 \u2264 A[i] \u2264 100000**\n- **1 \u2264 K \u2264 R - L + 1**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*Motherboard*, the evil mother of our *Farzi coder* has gifted him an Array **A[]** of size **N**. She wanted to test the coding skills of her son. So she asked him **Q** questions of the form: given three integers (**L, R, K**), find the number of special subsets of size **K** of the subarray **A[L], A[L+1], .... A[R]**. A set is special if the greatest number which can divide all the elements of the set is 1.\n\nPlease help our *Farzi Coder* in solving the task. As the answer can be large, print it modulo **10^9+7**.\n",
+    "inputFormat": "- The first line of each file has the integer **N** denoting the size of the array.\n- The next line contains **N** space-separated integers.\n- The next line contains one integer **Q** denoting the number of queries on the array.\n- The next **Q** lines contain 3 space-separated integers each, **L R K** (without quotes).\n",
+    "inputFormatState": true,
+    "outputFormat": "For each query, print the required answer.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "10 \n1 2 3 4 5 6 7 8 9 10\n3\n1 5 2\n1 10 3\n1 10 4\n",
+        "output": "9\n109\n205\n",
+        "explanation": "For query 1, the special sets of size 2 between the indices 1 and 5 are: {1, 2}, {1, 3}, {1, 4}, {1, 5}, {2, 3}, {2, 5}, {3, 4}, {3, 5}, {4, 5}.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1 - 4",
+  "source_sizelimit": "50000",
+  "problem_author": "surya_adm",
+  "problem_display_authors": [
+    "surya_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/surya_adm'>surya_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "21-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "math",
+    "mobius-function",
+    "mos-algorithm",
+    "surya_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Mobius Function",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMCOP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

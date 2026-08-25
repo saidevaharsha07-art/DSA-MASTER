@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LOSTMAX",
+  "contest_category": "6",
+  "problem_name": "Find the Maximum Value",
+  "intended_contest_code": "LTIME50",
+  "body": "<p>The Chef had a box with <b>N</b> numbers arranged inside it: <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b>. He also had the number <b>N</b> at the front, so that he knows how many numbers are in it. That is, the box actually contains <b>N</b>+1 numbers. But in his excitement due the ongoing <a href = \"http://ioi2017.org/\">IOI</a>, he started dancing with the box in his pocket, and the <b>N</b>+1 numbers got jumbled up. So now, he no longer knows which of the <b>N</b>+1 numbers is <b>N</b>, and which the actual numbers are.<p>\r\n\r\n<p>He wants to find the largest of the <b>N</b> numbers. Help him find this.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line of the input contains an integer <b>T</b>, denoting the number of test cases. The description of each testcase follows.</li>\r\n<li>Each of the next <b>T</b> lines will contain <b>N</b> and <b>N</b> numbers, but it is not guaranteed that <b>N</b> is the first number. </li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<p> For each test case, output a single line containing the maximum value of the <b>N</b> numbers in that testcase.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 100</li>\r\n<li>1 \u2264 <b>N</b> \u2264  50 </li>\r\n<li>1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>9</sup> </li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3\r\n1 2 1\r\n3 1 2 8\r\n1 5 1 4 3 2\r\n\r\n<b>Output:</b>\r\n1\r\n8\r\n4\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Test case 1:</b> </p>\r\n<p>\r\n<b> N</b> = 2 and the numbers are {1, 1}. The maximum among these 2 numbers is 1, and hence the output is 1. </p>\r\n\r\n\r\n<p><b>Test case 2:</b></p>\r\n<p>\r\n<b> N</b> = 3 and the numbers are {1, 2, 8}. The maximum among these 3 numbers is 8, and hence the output is 8. </p>\r\n\r\n\r\n<p><b>Test case 3:</b></p>\r\n<p>\r\n<b> N</b> = 5 and the numbers are {1, 1, 4, 3, 2}. The maximum among these 5 numbers is 4, and hence the output is 4.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>The Chef had a box with <b>N</b> numbers arranged inside it: <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b>. He also had the number <b>N</b> at the front, so that he knows how many numbers are in it. That is, the box actually contains <b>N</b>+1 numbers. But in his excitement due the ongoing <a href = \"http://ioi2017.org/\">IOI</a>, he started dancing with the box in his pocket, and the <b>N</b>+1 numbers got jumbled up. So now, he no longer knows which of the <b>N</b>+1 numbers is <b>N</b>, and which the actual numbers are.<p>\r\n\r\n<p>He wants to find the largest of the <b>N</b> numbers. Help him find this.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line of the input contains an integer <b>T</b>, denoting the number of test cases. The description of each testcase follows.</li>\r\n<li>Each of the next <b>T</b> lines will contain <b>N</b> and <b>N</b> numbers, but it is not guaranteed that <b>N</b> is the first number. </li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<p> For each test case, output a single line containing the maximum value of the <b>N</b> numbers in that testcase.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 100</li>\r\n<li>1 \u2264 <b>N</b> \u2264  50 </li>\r\n<li>1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>9</sup> </li>\r\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n1 2 1\r\n3 1 2 8\r\n1 5 1 4 3 2",
+        "output": "1\r\n8\r\n4",
+        "explanation": "<p><b>Test case 1:</b> </p>\r\n<p>\r\n<b> N</b> = 2 and the numbers are {1, 1}. The maximum among these 2 numbers is 1, and hence the output is 1. </p>\r\n\r\n\r\n<p><b>Test case 2:</b></p>\r\n<p>\r\n<b> N</b> = 3 and the numbers are {1, 2, 8}. The maximum among these 3 numbers is 8, and hence the output is 8. </p>\r\n\r\n\r\n<p><b>Test case 3:</b></p>\r\n<p>\r\n<b> N</b> = 5 and the numbers are {1, 1, 4, 3, 2}. The maximum among these 5 numbers is 4, and hence the output is 4.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 15794,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "arpa",
+  "problem_display_authors": [
+    "arpa"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/arpa'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>arpa</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "arpa",
+  "date_added": "28-07-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Data Structures",
+    "ad-hoc",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1392",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611022
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LOSTMAX",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

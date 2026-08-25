@@ -1,0 +1,435 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "arrays-intermediate",
+  "name": "Intermediate Arrays and 2D Arrays",
+  "title": "Intermediate Arrays and 2D Arrays",
+  "level": "Intermediate",
+  "description": "Solve Intermediate Arrays and 2D arrays coding problems to continue learning data structures and algorithms.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/arrays-intermediate/ARRAYSP04/problems/ARRAYSORTED",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Intermediate Arrays",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 25830,
+          "contest_code": "ARRAYSP04",
+          "start_date": "2026-05-05 15:43:39",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/arrays-intermediate/ARRAYSP04/problems/ARRAYSORTED",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "54905",
+              "code": "ARRAYSORTED",
+              "name": "Check if the array is sorted",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "ROTATEARRAY",
+              "name": "Rotate the array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "REMOVEDUPLIC",
+              "name": "Remove Duplicates from Sorted Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "LASTZERO",
+              "name": "Move all the zeros to the last",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "MERGESORTED",
+              "name": "Merge two sorted arrays",
+              "difficulty_rating": "1050",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "DSCPPAS261",
+              "name": "Intersecting arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "TWOSUMM",
+              "name": "Chef and Pair of Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "MAJORELEM",
+              "name": "Find the majority element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "MAJORELE2",
+              "name": "Superstar Dishes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "STOCKSPROFIT",
+              "name": "Chef and Stock Profits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "LEADERINARAY",
+              "name": "Leaders in an array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54905",
+              "code": "SORTARRAYS",
+              "name": "Color Sorting Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "2D Array / Matrices",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Basic concepts",
+          "submodule_id": 25831,
+          "contest_code": "MATRIXP01",
+          "start_date": "2026-05-05 16:07:06",
+          "total_problems": 2,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/arrays-intermediate/MATRIXP01/problems/MATDEF",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "54906",
+              "code": "MATDEF",
+              "name": "Basic Concepts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54906",
+              "code": "MATTYPES",
+              "name": "Matrix Types and Applications",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54906",
+              "code": "MATREP",
+              "name": "Matrix Representation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54906",
+              "code": "MATMCQ1",
+              "name": "Matrix Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Practice problems",
+          "submodule_id": 25832,
+          "contest_code": "MATRIXP02",
+          "start_date": "2026-05-05 16:08:13",
+          "total_problems": 17,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/arrays-intermediate/MATRIXP02/problems/MATADD",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 17,
+          "problems_with_status": [
+            {
+              "contest_id": "54907",
+              "code": "MATADD",
+              "name": "Add Two Matrices",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATZIGZAG",
+              "name": "Zig-zag traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATTREVERSE",
+              "name": "Upside Down Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATDIAGSUM",
+              "name": "Sum of Diagonals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATNEGCOUNT",
+              "name": "Count Negative Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATMULTIPLIC",
+              "name": "Brute Force- Multiplication of Two Matrices",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "DSCPPAS263",
+              "name": "Valid Matrix Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATSORTDIAG",
+              "name": "Sort Matrix Diagonally",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATSETZERO",
+              "name": "Set Matrix Zeroes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATROTATE",
+              "name": "Matrix Rotations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATMAXROW",
+              "name": "Row With Maximum Ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATEQRC",
+              "name": "Equal Rows and Columns",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATMINPATH",
+              "name": "Path With Minimum Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATSPIRAL",
+              "name": "Print Matrix In Spiral Fashion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATMAXISLAND",
+              "name": "Maximum Area Island",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "MATSEARCH",
+              "name": "Search In Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54907",
+              "code": "DSCPPAS264",
+              "name": "Spiral rotation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 19
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 31,
+  "total_non_pro_problems": 12,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [],
+  "learners_count": 459,
+  "path_review": {
+    "rating": 4.8,
+    "users": 8
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

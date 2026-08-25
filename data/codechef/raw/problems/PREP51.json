@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PREP51",
+  "contest_category": "6",
+  "problem_name": "Hashing - Minimum Window Substring",
+  "intended_contest_code": "",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $1 \\leq N, M \\leq 10^5$\n- The sum of $N$ over all test cases won't exceed $2\\cdot 10^5$.\n- The sum of $M$ over all test cases won't exceed $2\\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "You are given a string $S$ of length $N$ and a string $T$ of length $M$ consisting of lowercase english characters.\n\nFind the **shortest** substring of $S$ which contains all characters present in $T$ (in any order including duplicates). If there are multiple such substring, return the first occurring **shortest** substring.\n\nIf there is no substring in $S$ that contains all characters of $T$, print $-1$ instead.\n\nNote that a substring is obtained by deleting some (possible zero) characters from the beginning and some (possibly zero) characters from the end of the string.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of multiple lines of input.\n    - The first line of each test case contains two space-separated integers $N$ and $M$ \u2014 the lengths of strings $S$ and $T$ respectively.\n    - The second line of each test case contains a string with $N$ lowercase english alphabets \u2014 the string $S$.\n    - The third line of each test case contains a string with $M$ lowercase english alphabets \u2014 the string $T$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a new line, the **shortest** substring of $S$ which contains all characters present in $T$ (in any order including duplicates). If there is no substring in $S$ that contains all characters of $T$, print $-1$ instead.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n8 4\nbaccaccb\nacbc\n3 2\nbac\nac\n1 1\nc\na\n",
+        "output": "bacc\nac\n-1",
+        "explanation": "**Test case $1$:** The substring $S[1:4] = bacc$ and $S[5:8] = accb$ both will be the smallest substring in $S$ contains all characters of the string $T$ but $S[1:4] = bacc$ occurs first. \n\n**Test case $2$:** The substring $S[2:3] = ac$ will be shortest substring that contains all characters in $T$.\n\n**Test case $3$:** No substring present in $S$ that contains all characters in $T$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "\n# Minimum Window Substring Problem Editorial\n\nIn this lesson, we explore the Minimum Window Substring problem. We are given two strings $S$ and $T$, and our goal is to find the shortest substring in $S$ that contains all characters from $T$ (including duplicates). If no such substring exists, we return $-1$. This problem is classic in interviews and helps develop skills in efficient string manipulation using the sliding window technique.\n\n---\n\n## Approaches to the Problem\n\nBelow are two efficient approaches to solve this problem:\n\n---\n\n### 1. Sliding Window Approach\n\n#### **Idea:**\n\nThis approach uses the two-pointer (sliding window) technique to efficiently expand and contract a window over string $S$ so that it contains all the characters from $T$.\n\n- **Methodology:**\n  - **Expand Window:** Use a `right` pointer to add characters into the current window until it satisfies the condition of having all characters from $T$.\n  - **Shrink Window:** Once the window is valid, move the `left` pointer to contract the window and update the smallest valid window found.\n  - **Frequency Counts:** Use a hash map (or dictionary) to track the frequency of characters in $T$ and the current window.\n\n- **Time Complexity:**  \n  $$O(N)$$ in most cases, making it suitable for large inputs.\n\n#### **Code Implementation:**\n\n**C++:**\n```cpp\n#include <iostream>\n#include <string>\n#include <unordered_map>\n#include <climits>\nusing namespace std;\n\nstring slidingWindowMinWindow(const string &S, const string &T) {\n    unordered_map<char, int> targetCount, windowCount;\n    for(char c : T) targetCount[c]++;\n    \n    int left = 0, count = 0;\n    int minLen = INT_MAX, start = 0;\n    \n    for (int right = 0; right < S.size(); right++) {\n        if (targetCount[S[right]] > 0) {\n            windowCount[S[right]]++;\n            if (windowCount[S[right]] <= targetCount[S[right]])\n                count++;\n        }\n        \n        while (count == T.size()) {\n            if (right - left + 1 < minLen) {\n                minLen = right - left + 1;\n                start = left;\n            }\n            if (targetCount[S[left]] > 0) {\n                windowCount[S[left]]--;\n                if (windowCount[S[left]] < targetCount[S[left]])\n                    count--;\n            }\n            left++;\n        }\n    }\n    return (minLen == INT_MAX ? \"-1\" : S.substr(start, minLen));\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    \n    int testCases;\n    cin >> testCases;\n    while(testCases--){\n        int N, M;\n        cin >> N >> M;\n        string S, T;\n        cin >> S >> T;\n        cout << slidingWindowMinWindow(S, T) << \"\\n\";\n    }\n    return 0;\n}\n```\n\n**Python:**\n```python\ndef sliding_window_min_window(S, T):\n    from collections import defaultdict\n    \n    targetCount = defaultdict(int)\n    for c in T:\n        targetCount[c] += 1\n        \n    windowCount = defaultdict(int)\n    left = 0\n    count = 0\n    min_len = float('inf')\n    start = 0\n    \n    for right, c in enumerate(S):\n        if c in targetCount:\n            windowCount[c] += 1\n            if windowCount[c] <= targetCount[c]:\n                count += 1\n        \n        while count == len(T):\n            if right - left + 1 < min_len:\n                min_len = right - left + 1\n                start = left\n            if S[left] in targetCount:\n                windowCount[S[left]] -= 1\n                if windowCount[S[left]] < targetCount[S[left]]:\n                    count -= 1\n            left += 1\n    \n    return S[start:start + min_len] if min_len != float('inf') else \"-1\"\n\nif __name__ == \"__main__\":\n    test_cases = int(input())\n    for _ in range(test_cases):\n        N, M = map(int, input().split())\n        S = input().strip()\n        T = input().strip()\n        print(sliding_window_min_window(S, T))\n```\n\n---\n\n### 2. Optimized Sliding Window with Filtered Characters\n\n#### **Idea:**\n\nThis variant enhances the standard sliding window approach by filtering out characters from $S$ that are not present in $T$. By processing only the relevant characters, the algorithm can reduce unnecessary iterations and improve performance.\n\n- **Methodology:**\n  - **Filter $S$:** Generate a filtered list of pairs (index, character) containing only characters from $S$ that also exist in $T$.\n  - **Two-Pointer Technique:** Apply the sliding window strategy on this filtered list to identify the minimum valid window.\n  - **Frequency Counts:** Maintain frequency maps for characters in the window and the required counts from $T$.\n\n- **Time Complexity:**  \n  $$O(N)$$ in the worst-case scenario, often faster in practice.\n\n#### **Code Implementation:**\n\n**C++:**\n```cpp\n#include <iostream>\n#include <vector>\n#include <string>\n#include <unordered_map>\n#include <climits>\nusing namespace std;\n\nstring filteredSlidingWindow(const string &S, const string &T) {\n    unordered_map<char, int> targetCount;\n    for (char c : T) {\n        targetCount[c]++;\n    }\n    \n    // Store only the characters in S that are also in T\n    vector<pair<int, char>> filteredS;\n    for (int i = 0; i < S.size(); i++) {\n        if (targetCount.find(S[i]) != targetCount.end())\n            filteredS.push_back({i, S[i]});\n    }\n    \n    int left = 0, count = 0;\n    int minLen = INT_MAX, start = 0;\n    unordered_map<char, int> windowCount;\n    \n    for (int right = 0; right < filteredS.size(); right++) {\n        char c = filteredS[right].second;\n        windowCount[c]++;\n        if (windowCount[c] <= targetCount[c])\n            count++;\n        \n        while (count == T.size()) {\n            int windowStart = filteredS[left].first;\n            int windowEnd = filteredS[right].first;\n            if (windowEnd - windowStart + 1 < minLen) {\n                minLen = windowEnd - windowStart + 1;\n                start = windowStart;\n            }\n            char leftChar = filteredS[left].second;\n            windowCount[leftChar]--;\n            if (windowCount[leftChar] < targetCount[leftChar])\n                count--;\n            left++;\n        }\n    }\n    return (minLen == INT_MAX ? \"-1\" : S.substr(start, minLen));\n}\n\nint main(){\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    \n    int testCases;\n    cin >> testCases;\n    while(testCases--){\n        int N, M;\n        cin >> N >> M;\n        string S, T;\n        cin >> S >> T;\n        cout << filteredSlidingWindow(S, T) << \"\\n\";\n    }\n    return 0;\n}\n```\n\n**Python:**\n```python\ndef filtered_sliding_window(S, T):\n    from collections import defaultdict\n    targetCount = defaultdict(int)\n    for c in T:\n        targetCount[c] += 1\n        \n    # Filter S to include only the characters in T with their indices\n    filtered_S = [(i, c) for i, c in enumerate(S) if c in targetCount]\n    \n    windowCount = defaultdict(int)\n    left = 0\n    count = 0\n    min_len = float('inf')\n    start = 0\n    \n    for right in range(len(filtered_S)):\n        i, c = filtered_S[right]\n        windowCount[c] += 1\n        if windowCount[c] <= targetCount[c]:\n            count += 1\n        \n        while count == len(T):\n            window_start = filtered_S[left][0]\n            window_end = filtered_S[right][0]\n            if window_end - window_start + 1 < min_len:\n                min_len = window_end - window_start + 1\n                start = window_start\n            left_c = filtered_S[left][1]\n            windowCount[left_c] -= 1\n            if windowCount[left_c] < targetCount[left_c]:\n                count -= 1\n            left += 1\n            \n    return S[start:start + min_len] if min_len != float('inf') else \"-1\"\n\nif __name__ == \"__main__\":\n    test_cases = int(input())\n    for _ in range(test_cases):\n        N, M = map(int, input().split())\n        S = input().strip()\n        T = input().strip()\n        print(filtered_sliding_window(S, T))\n```\n\n---\n\n## Conclusion\n\n- The **Sliding Window Approach** utilizes two pointers and hash maps to efficiently manage the window boundaries and character frequencies, providing an effective solution even for large inputs.\n- The **Optimized Sliding Window** approach further refines this method by processing only the relevant characters in $S$, potentially reducing runtime in practice.\n\nThese methods provide robust strategies for solving the Minimum Window Substring problem, illustrating key techniques that are highly valuable in technical interviews.\n",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, CS2, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "souradeep1999"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/souradeep1999'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>souradeep1999</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "2-01-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1776699000,
+    "submit_start_date": 1776699000,
+    "visible_start_date": 1776699000,
+    "end_date": 1893436200,
+    "current": 1785611287
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PREP51",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

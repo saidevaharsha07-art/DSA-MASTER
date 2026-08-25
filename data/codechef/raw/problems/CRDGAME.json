@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CRDGAME",
+  "contest_category": "6",
+  "problem_name": "Chef and Card Game",
+  "intended_contest_code": "JULY20",
+  "body": "\r\nChef is playing a card game with his friend Morty Smith. \r\n\r\nThe rules of the game are as follows:\r\n - There are two piles of cards, pile $A$ and pile $B$, each with $N$ cards in it. Pile $A$ belongs to Chef and pile $B$ belongs to Morty.\r\n - Each card has one positive integer on it\r\n - The \u2018power\u2019 of a card is defined as the sum of digits of the integer on that card\r\n - The game consists of $N$ rounds\r\n - In each round, both players simultaneously draw one card each from the top of their piles and the player who draws the card with higher power wins this round and gets a point. If the powers of both players' cards are equal then they get $1$ point each. \r\n - The winner of the game is the player who has more points at the end of $N$ rounds. If both players have equal number of points then the game ends in a draw.\r\n\r\nThe game is now over and Chef has told Morty to find the winner. Unfortunately, this task is too complex for him. Help Morty find the winner. \r\n\r\n### Input:\r\n\r\n- First line will contain $T$, number of testcases.\r\n- The first line of each test case will contain $N$, the number of rounds played.\r\n- The $i^{th}$ of the next $N$ lines of each test case will contain $A_i$ and $B_i$, the number on the card drawn by Chef and Morty respectively in round $i$.\r\n\r\n### Output:\r\nFor each test case, output two space separated integers on a new line:      \r\nOutput      \r\n - $0$ if Chef wins,             \r\n - $1$ if Morty wins,     \r\n - $2$ if it is a draw,     \r\nfollowed by the number of points the winner had.     \r\n(If it is a draw then output either player\u2019s points).\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 1000$\r\n- $1 \\leq N \\leq 100$\r\n- $1 \\leq A_i, B_i \\leq 10^9$\r\n\r\n### Subtasks\r\n- $100$ points : No additional constraints\r\n\r\n### Sample Input:\r\n```\r\n2\r\n3\r\n10 4\r\n8 12\r\n7 6\r\n2\r\n5 10\r\n3 4\r\n```\r\n\r\n### Sample Output:\r\n```\r\n0 2\r\n2 1\r\n```\r\n\t\r\n### Explanation:\r\n\r\n**Test Case** $1$:\r\n\r\n**Round** $1$: \r\n\r\nChef\u2019s card has power $1+0$ = $1$,     \r\nMorty\u2019s card has power $4$.      \r\nTherefore, Morty wins the round.        \r\n\r\n**Round** $2$: \r\n\r\nChef\u2019s card has power $8$,        \r\nMorty\u2019s card has power $1 + 2$ = $3$.       \r\nTherefore, Chef wins the round.     \r\n\r\n**Round** $3$: \r\n\r\nChef\u2019s card has power $7$,      \r\nMorty\u2019s card has power $6$.      \r\nTherefore, Chef wins the round.         \r\n\r\nTherefore, Chef wins the game with $2$ points (Morty has $1$ point).  \r\n\r\n**Test Case** $2$:\r\n\r\n**Round** $1$: \r\n\r\nChef\u2019s card has power $5$,     \r\nMorty\u2019s card has power $1 + 0 = 1$.      \r\nTherefore, Chef wins the round.        \r\n\r\n**Round** $2$: \r\n\r\nChef\u2019s card has power $3$,        \r\nMorty\u2019s card has power $4$.       \r\nTherefore, Morty wins the round.     \r\n\r\nTherefore, the game ends in a draw and both players have $1$ point each.\r\n\r\n     \n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef is playing a card game with his friend Morty Smith. \r\n\r\nThe rules of the game are as follows:\r\n - There are two piles of cards, pile $A$ and pile $B$, each with $N$ cards in it. Pile $A$ belongs to Chef and pile $B$ belongs to Morty.\r\n - Each card has one positive integer on it\r\n - The \u2018power\u2019 of a card is defined as the sum of digits of the integer on that card\r\n - The game consists of $N$ rounds\r\n - In each round, both players simultaneously draw one card each from the top of their piles and the player who draws the card with higher power wins this round and gets a point. If the powers of both players' cards are equal then they get $1$ point each. \r\n - The winner of the game is the player who has more points at the end of $N$ rounds. If both players have equal number of points then the game ends in a draw.\r\n\r\nThe game is now over and Chef has told Morty to find the winner. Unfortunately, this task is too complex for him. Help Morty find the winner. \r\n\r\n### Input:\r\n\r\n- First line will contain $T$, number of testcases.\r\n- The first line of each test case will contain $N$, the number of rounds played.\r\n- The $i^{th}$ of the next $N$ lines of each test case will contain $A_i$ and $B_i$, the number on the card drawn by Chef and Morty respectively in round $i$.\r\n\r\n### Output:\r\nFor each test case, output two space separated integers on a new line:      \r\nOutput      \r\n - $0$ if Chef wins,             \r\n - $1$ if Morty wins,     \r\n - $2$ if it is a draw,     \r\nfollowed by the number of points the winner had.     \r\n(If it is a draw then output either player\u2019s points).\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 1000$\r\n- $1 \\leq N \\leq 100$\r\n- $1 \\leq A_i, B_i \\leq 10^9$\r\n\r\n### Subtasks\r\n- $100$ points : No additional constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n3\r\n10 4\r\n8 12\r\n7 6\r\n2\r\n5 10\r\n3 4",
+        "output": "0 2\r\n2 1",
+        "explanation": "**Test Case** $1$:\r\n\r\n**Round** $1$: \r\n\r\nChef\u2019s card has power $1+0$ = $1$,     \r\nMorty\u2019s card has power $4$.      \r\nTherefore, Morty wins the round.        \r\n\r\n**Round** $2$: \r\n\r\nChef\u2019s card has power $8$,        \r\nMorty\u2019s card has power $1 + 2$ = $3$.       \r\nTherefore, Chef wins the round.     \r\n\r\n**Round** $3$: \r\n\r\nChef\u2019s card has power $7$,      \r\nMorty\u2019s card has power $6$.      \r\nTherefore, Chef wins the round.         \r\n\r\nTherefore, Chef wins the game with $2$ points (Morty has $1$ point).  \r\n\r\n**Test Case** $2$:\r\n\r\n**Round** $1$: \r\n\r\nChef\u2019s card has power $5$,     \r\nMorty\u2019s card has power $1 + 0 = 1$.      \r\nTherefore, Chef wins the round.        \r\n\r\n**Round** $2$: \r\n\r\nChef\u2019s card has power $3$,        \r\nMorty\u2019s card has power $4$.       \r\nTherefore, Morty wins the round.     \r\n\r\nTherefore, the game ends in a draw and both players have $1$ point each.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 71651,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "aryanag_adm",
+  "problem_display_authors": [
+    "aryanag_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/aryanag_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>aryanag_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "rajarshi_basu",
+  "date_added": "2-07-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1125",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610772
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CRDGAME",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

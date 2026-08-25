@@ -4,6 +4,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import Fuse from "fuse.js";
 import { z } from "zod";
 import type { Problem, UserState } from "@/types";
+import { progressService } from "@/src/services/progress/progress.service";
+import { EventBus } from "@/src/core/events/event-bus";
 
 const empty: UserState = {
   completed: [],
@@ -97,9 +99,13 @@ function stateFromStorage(raw: string | null, validIds: Set<number>): UserState 
 
 export function RoadmapProvider({ children }: { children: React.ReactNode }) {
   const [problems, setProblems] = useState<Problem[]>([]);
-  const [state, setState] = useState(empty);
+  const [state, setState] = useState<UserState>(() => progressService.getState());
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const syncStateFromService = useCallback(() => {
+    setState(progressService.getState());
+  }, []);
 
   const load = useCallback(async () => {
     setReady(false);
@@ -116,29 +122,26 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
         throw new Error("The problem catalogue has an invalid format.");
       }
 
-      const validIds = new Set(result.data.map((problem) => problem.id));
       setProblems(result.data);
-      setState(stateFromStorage(localStorage.getItem("dsa-state"), validIds));
+      syncStateFromService();
     } catch (cause) {
       setProblems([]);
-      setState(empty);
+      syncStateFromService();
       setError(
         cause instanceof Error ? cause.message : "The problem catalogue could not be loaded.",
       );
     } finally {
       setReady(true);
     }
-  }, []);
+  }, [syncStateFromService]);
 
   useEffect(() => {
     void load();
-  }, [load]);
-
-  useEffect(() => {
-    if (ready && !error) {
-      localStorage.setItem("dsa-state", JSON.stringify(state));
-    }
-  }, [state, ready, error]);
+    const unsub = EventBus.subscribe('ProblemSolved', () => {
+      syncStateFromService();
+    });
+    return () => unsub();
+  }, [load, syncStateFromService]);
 
   const value = useMemo(
     () => ({
@@ -147,48 +150,22 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
       ready,
       error,
       retry: load,
-      toggle: (key: "completed" | "favorites", id: number) =>
-        setState((current) => {
-          const items = current[key];
-          const hasItem = items.includes(id);
-
-          if (key === "favorites") {
-            return {
-              ...current,
-              favorites: hasItem ? items.filter((item) => item !== id) : [...items, id],
-            };
-          }
-
-          if (hasItem) {
-            return { ...current, completed: items.filter((item) => item !== id) };
-          }
-
-          const firstCompletion = !current.awardedXp.includes(id);
-          return {
-            ...current,
-            completed: [...items, id],
-            awardedXp: firstCompletion ? [...current.awardedXp, id] : current.awardedXp,
-            xp: firstCompletion ? current.xp + 10 : current.xp,
-          };
-        }),
-      schedule: (id: number, days: number) =>
-        setState((current) => ({
-          ...current,
-          revision: {
-            ...current.revision,
-            [id]: new Date(Date.now() + days * 86_400_000).toISOString(),
-          },
-        })),
-      markRevised: (id: number) =>
-        setState((current) => {
-          const { [id]: _, ...revision } = current.revision;
-          return { ...current, revision };
-        }),
-      note: (id: number, value: string) =>
-        setState((current) => ({
-          ...current,
-          notes: { ...current.notes, [id]: value },
-        })),
+      toggle: (key: "completed" | "favorites", id: number) => {
+        const next = progressService.toggle(key, id);
+        setState(next);
+      },
+      schedule: (id: number, days: number) => {
+        const next = progressService.schedule(id, days);
+        setState(next);
+      },
+      markRevised: (id: number) => {
+        const next = progressService.markRevised(id);
+        setState(next);
+      },
+      note: (id: number, value: string) => {
+        const next = progressService.note(id, value);
+        setState(next);
+      },
       search: (query: string) =>
         query
           ? new Fuse(problems, {
@@ -198,11 +175,10 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
               .search(query)
               .map((result) => result.item)
           : problems,
-      setDailyGoal: (value: number) =>
-        setState((current) => ({
-          ...current,
-          dailyGoal: value,
-        })),
+      setDailyGoal: (value: number) => {
+        const next = progressService.setDailyGoal(value);
+        setState(next);
+      },
     }),
     [error, load, problems, ready, state],
   );

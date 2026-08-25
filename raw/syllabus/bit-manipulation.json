@@ -1,0 +1,588 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "bit-manipulation",
+  "name": "Bit manipulation",
+  "title": "Bit manipulation",
+  "level": "Intermediate",
+  "description": "Learn bitwise operations, practice with 35+ problems, and improve your DSA skills. Explore our guide to bit manipulation in various programming languages.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:45",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/bit-manipulation/BITMF/problems/BITMEDU1",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Bit manipulation",
+      "description": "Problems",
+      "submodules": [
+        {
+          "name": "Educational problems",
+          "submodule_id": 2923,
+          "contest_code": "BITMF",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/bit-manipulation/BITMF/problems/BITMEDU1",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU1",
+              "name": "And, OR, XOR",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU6",
+              "name": "Decimal to binary",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU3",
+              "name": "Left shift, Right shift",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU4",
+              "name": "Least significant bit, and most significant bit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU7",
+              "name": "Finding least significant, most significant bit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU2",
+              "name": "How to set, unset, flip a bit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "BITMEDU5",
+              "name": "Count of set bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "ITHBITSET",
+              "name": "Is the i-th bit set",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "PREP46",
+              "name": "Bit Manipulation - Reverse Bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "XHHAP01",
+              "name": "Chef Checks Power",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25734",
+              "code": "PREP45",
+              "name": "Bit Manipulation - Single Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Bit manipulation practice",
+          "submodule_id": 2924,
+          "contest_code": "BITMP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 32,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/bit-manipulation/BITMP/problems/XORPAL",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 32,
+          "problems_with_status": [
+            {
+              "contest_id": "25735",
+              "code": "XORPAL",
+              "name": "Xor Palindrome",
+              "difficulty_rating": "1339",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "CCWFS01",
+              "name": "Chef Finds Minimum Bit Flips to Convert Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XORAGN",
+              "name": "Xor Again",
+              "difficulty_rating": "1334",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "FIZZBUZZ2304",
+              "name": "Playing with OR",
+              "difficulty_rating": "1365",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "ANDOR",
+              "name": "AND Plus OR",
+              "difficulty_rating": "1151",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "CIELRCPT",
+              "name": "Ciel and Receipt",
+              "difficulty_rating": "936",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "AXNODR",
+              "name": "Dazzling AXNODR Challenge ",
+              "difficulty_rating": "1246",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XORRANGE",
+              "name": "XOR of numbers in a range",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "CENS20D",
+              "name": "Priya and AND",
+              "difficulty_rating": "1143",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XOREQUAL",
+              "name": "Xor Equality",
+              "difficulty_rating": "1405",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "UNCHANGEDOR",
+              "name": "The Unchanging OR",
+              "difficulty_rating": "1389",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "ANDSUBAR",
+              "name": "Longest AND Subarray",
+              "difficulty_rating": "1502",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "PREP16",
+              "name": "Bit Manipulation - Sum of Bits",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XORNUBER",
+              "name": "Chef and the XORed Number ",
+              "difficulty_rating": "1661",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XORAND",
+              "name": "XOR and AND",
+              "difficulty_rating": "1625",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "CVDMX01",
+              "name": "Chef Builds Subsets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "APPENDOR",
+              "name": "Append for OR",
+              "difficulty_rating": "1201",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "MAKEZERO",
+              "name": "Make them Zero",
+              "difficulty_rating": "1320",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "CS2023_PON",
+              "name": "Possible or Not",
+              "difficulty_rating": "1578",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "SIMPLE_XOR",
+              "name": "Simple XOR",
+              "difficulty_rating": "1362",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "BITEQU",
+              "name": "Bitwise Equation",
+              "difficulty_rating": "1679",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "TWOUNIQUE",
+              "name": "Find the Two Unique Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "EBQZC01",
+              "name": "Chef Solves Pow",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "LARGESTY",
+              "name": "Largest Y",
+              "difficulty_rating": "1823",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "PRIME_XOR",
+              "name": "Prime Xor",
+              "difficulty_rating": "1519",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "XORABC",
+              "name": "Pairwise Xors",
+              "difficulty_rating": "1609",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "NBONACCI",
+              "name": "XOR N-bonacci Sequence",
+              "difficulty_rating": "1552",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "ANDORUNI",
+              "name": "And Or Union",
+              "difficulty_rating": "1728",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "ORTHODOX",
+              "name": "OR-thodox Distinction",
+              "difficulty_rating": "1658",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "HXOR",
+              "name": "Hail XOR",
+              "difficulty_rating": "1786",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "BINSHFFL",
+              "name": "Binary Shuffle",
+              "difficulty_rating": "1747",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25735",
+              "code": "PMLYR01",
+              "name": "Chef Divides Integers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 43
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 43,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "263",
+    "name": "Bit Manipulation",
+    "title": "Bit Manipulation",
+    "slug": "bit-manipulation",
+    "description": "Bit manipulation is a fundamental programming technique that involves operating on individual bits within data. This course covers basic bitwise operators (AND, OR, XOR, NOT), shift operations, and their properties. It then progresses to practical applications, including array operations, problem-solving using XOR properties, and advanced bit manipulation techniques for algorithmic efficiency.",
+    "highlight_color": "#ffffff",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 199
+    },
+    "learners_count": 3278,
+    "lessons_count": 5
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 17460,
+  "path_review": {
+    "rating": 4.6,
+    "users": 93
+  },
+  "faqs": [
+    {
+      "question": "What is bit manipulation and why is it important in programming?",
+      "answer": "Bit manipulation is a technique that involves working with individual bits in binary representations of numbers. It's important in programming because it allows for efficient operations on data, optimizes memory usage, and is crucial in various algorithms and data structures. Mastering bit manipulation can significantly improve your problem-solving skills and code efficiency.",
+      "faq_order": "1"
+    },
+    {
+      "question": "How can I practice bit manipulation?",
+      "answer": "To practice bit manipulation, you can start with our Bit Manipulation course. It offers 35 problems of varying difficulty levels, from beginner to advanced. The course covers topics like AND, OR, XOR operations, bit shifting, and counting set bits. Regular practice with these problems will help you master bitwise operations and their applications in algorithmic challenges.",
+      "faq_order": "2"
+    },
+    {
+      "question": "What are some common bit manipulation techniques used in coding interviews?",
+      "answer": "Common bit manipulation techniques used in coding interviews include:\n<ol style=\"margin-left: 24px\">\n<li>Using XOR for finding unique elements</li>\n<li>Bit shifting for efficient multiplication and division</li>\n<li>Setting, unsetting, and flipping individual bits</li>\n<li>Finding the least significant and most significant bits</li>\n<li>Converting decimal to binary and vice versa</li>\n<li>Familiarizing yourself with these techniques can give you an edge in technical interviews.</li>\n</ol>",
+      "faq_order": "3"
+    },
+    {
+      "question": "How does bit manipulation in C++ differ from bit manipulation in Python?",
+      "answer": "Bit manipulation in C++ and Python have some key differences:\n<ol style=\"margin-left: 24px\">\n<li>C++ uses bitwise operators like &, |, ^, ~, <<, and >> directly on integer types</li>\n<li>Python has similar operators but treats integers as objects with unlimited precision</li>\n<li>C++ allows direct manipulation of bits in memory, which can be more efficient</li>\n<li>Python offers more built-in functions for bit manipulation, like bin() and int.bit_length()</li>\n<li>Understanding these differences is crucial when working with bit manipulation across different programming languages.</li>\n</ol>",
+      "faq_order": "4"
+    }
+  ],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

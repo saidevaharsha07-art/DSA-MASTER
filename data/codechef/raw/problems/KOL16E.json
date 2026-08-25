@@ -1,0 +1,124 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16E",
+  "contest_category": "6",
+  "problem_name": "Divide Me Please",
+  "intended_contest_code": null,
+  "body": "<p>There are some short-cut ways to check divisibility of numbers in base 10. Here are some examples:</p>\n<ol>\n\t<li>Remember divisibility testing of 3 in base 10? It was simple, right? We need to add all the digits and then check if it is divisible by 3. Call this method <b>\"1-sum\"</b>.</li>\n\t<li>In case of testing of 11, we need to add all digits by alternating their signs. For example,\u20281354379988104 = 11*123125453464 and (4-0+1-8+8-9+9-7+3-4+5-3+1) = 0, which is divisible by 11 (0 = 0*11).  Lets call this method <b>\"1-altersum\"</b>.</li>\n    <li>In case of 7, we need to add all 3-digit-groups by alternating their signs. For example,\u2028 <b>8</b>618<b>727</b>529<b>993</b> = 7*1231246789999 and (<b>993</b>-529+<b>727</b>-618+<b>8</b>) = 581, which is divisible by 7 (581 = 7*83). Similarly, we call this method <b>\"3-altersum\"</b>.</li>\t\n\t<li>In similar Manner, 13\u2019s checking is <b>\"3-altersum\"</b>.</li>\n</ol>\n\n<p>In this problem, we are interested to see divisibility checking of <b>only</b> prime numbers in base 10. For a prime <b>P</b>, you need to find the smallest positive integer <b>N</b> such that <b>P\u2019s divisibility testing</b> is <b>\"N-sum\"</b> or <b>\"N-altersum\"</b>.</p>\n\n<h3>Input</h3>\n\n<p>At first you will be given <b>T (T \u2264 1000)</b>, the number of test cases. Then <b>T</b> lines will follow. In each line there will be single integer <b>P (P \u2264 2<sup>31</sup>-1 = 2147483647)</b>, the prime number (<b>P</b> is a prime number <b>NOT</b> equal to <b>2</b> or <b>5</b>).</p>\n\n<h3>Output</h3>\n<p>For each line of input, produce exactly one line of output like either \"Case &lt;test-case>: &lt;N>-sum\" or \"Case &lt;test-case>: &lt;N>-altersum\". Please see sample input and output for details.</p>\n<h3>Sample</h3> <pre><b>Input</b>\n<p>4\n3\n7\n11\n13</p>\n<b>Output</b>\n<p>Case 1: 1-sum\nCase 2: 3-altersum\nCase 3: 1-altersum\nCase 4: 3-altersum</p>\n</pre>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **T \u2264 1000**\n- **P \u2264 2<sup>31</sup>-1 = 2147483647**\n- **P** is a prime number **NOT** equal to **2** or **5**.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "There are some short-cut ways to check divisibility of numbers in base 10. Here are some examples:\n\n1. Remember divisibility testing of 3 in base 10? It was simple, right? We need to add all the digits and then check if it is divisible by 3. Call this method **\"1-sum\"**.\n2. In case of testing of 11, we need to add all digits by alternating their signs. For example,\u20281354379988104 = 11*123125453464 and (4-0+1-8+8-9+9-7+3-4+5-3+1) = 0, which is divisible by 11 (0 = 0*11). Lets call this method **\"1-altersum\"**.\n3. In case of 7, we need to add all 3-digit-groups by alternating their signs. For example,\u2028 **8**618**727**529**993** = 7*1231246789999 and (**993**-529+**727**-618+**8**) = 581, which is divisible by 7 (581 = 7*83). Similarly, we call this method **\"3-altersum\"**.\n4. In similar Manner, 13\u2019s checking is **\"3-altersum\"**.\n\nIn this problem, we are interested to see divisibility checking of **only** prime numbers in base 10. For a prime **P**, you need to find the smallest positive integer **N** such that **P\u2019s divisibility testing** is **\"N-sum\"** or **\"N-altersum\"**.\n",
+    "inputFormat": "At first you will be given **T (T \u2264 1000)**, the number of test cases. Then **T** lines will follow. In each line there will be single integer **P (P \u2264 2<sup>31</sup>-1 = 2147483647)**, the prime number (**P** is a prime number **NOT** equal to **2** or **5**).\n",
+    "inputFormatState": true,
+    "outputFormat": "For each line of input, produce exactly one line of output like either \"Case <test-case>: <N>-sum\" or \"Case <test-case>: <N>-altersum\". Please see sample input and output for details.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n3\n7\n11\n13\n",
+        "output": "Case 1: 1-sum\nCase 2: 3-altersum\nCase 3: 1-altersum\nCase 4: 3-altersum\n",
+        "explanation": "The sample input and output demonstrate the expected format and results for the given test cases. Each test case corresponds to a prime number, and the output specifies the smallest positive integer **N** and the method (**\"N-sum\"** or **\"N-altersum\"**) used for divisibility testing.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16E\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16E\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>MEDIUM</p>\n<h3>PREREQUISITES:</h3>\n<p>Modular arithmetic, Fermat\u2019s little theorem, Multiplicative order</p>\n<h3>PROBLEM:</h3>\n<p>Given a prime <span class=\"math\">P</span> (excluding 2 and 5), find the divisiblity test for <span class=\"math\">P</span> in terms of sums or alternate sums of groups of digits of minimum size.<br>\nProblem reduces to finding the smallest <span class=\"math\">k</span> for which <span class=\"math\">10^k \\bmod P</span> is either <span class=\"math\">1</span> or <span class=\"math\">-1</span>.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>The answer is guaranteed to be among the divisors of <span class=\"math\">P-1</span>.</p>\n<h3>EXPLANATION:</h3>\n<h4>Finding the real problem</h4>\n<p>The first step is to determine what the problem is in mathematical terms. Consider the example of <span class=\"math\">P=3</span> with a <span class=\"math\">n</span> digit number <span class=\"math\">N</span>. The number can be written in terms of its digits <span class=\"math\">d_0, d_1, ..., d_{n-1}</span> as</p>\n<div class=\"math\">\n\\begin{aligned}\nN &amp;= d_{n-1} \\cdot 10^{n-1} + d_{n-2} \\cdot 10^{n-2} + ... + d_1 \\cdot 10^1 + d_0 \\cdot 10^0 \\\\\n\\therefore N \\bmod 3 &amp;= (d_{n-1} \\cdot 10^{n-1} + ... + d_1 \\cdot 10^1 + d_0 \\cdot 10^0) \\bmod 3 \\\\\n&amp;= (d_{n-1} \\bmod 3) (10^{n-1} \\bmod 3) + ... + (d_1 \\bmod3) (10^1 \\bmod 3) + (d_0 \\bmod 3) (10^0 \\bmod 3)\n\\end{aligned}\n</div>\n<p>Now <span class=\"math\">10 \\bmod 3 = 1</span>, which implies that <span class=\"math\">10^x \\bmod 3 = (10 \\bmod 3)^x = 1^x = 1</span> for all <span class=\"math\">x\\ge 1</span>. So the above equation reduces to</p>\n<div class=\"math\">\n\\begin{aligned}\nN \\bmod 3 &amp;= (d_{n-1} \\bmod 3) + ... + (d_1 \\bmod3) + (d_0 \\bmod 3) \\\\\n\\therefore N \\bmod 3 &amp;= (d_{n-1} + ... + d_1 + d_0) \\bmod 3\n\\end{aligned}\n</div>\n<p>\u2026which is exactly what the 3-sum divisibility test is!</p>\n<p>Let\u2019s try another example with <span class=\"math\">P = 7</span>. If we try to split the number digit-wise as above, it will not work out like before because <span class=\"math\">10 \\bmod 7 \\ne 1</span>. If we try groups of 2 digits, that will also fail. We will strike gold with groups of 3 digits. Let the number <span class=\"math\">N</span> have <span class=\"math\">n</span> such groups <span class=\"math\">g_0, g_1, ... , g_{n-1}</span>. Then as before,</p>\n<div class=\"math\">\n\\begin{aligned}\nN &amp;= g_{n-1} \\cdot 1000^{n-1} + g_{n-2} \\cdot 1000^{n-2} + ... + g_1 \\cdot 1000^1 + g_0 \\cdot 1000^0 \\\\\n\\therefore N \\bmod 7 &amp;= (g_{n-1} \\cdot 1000^{n-1} + ... + g_1 \\cdot 1000^1 + g_0 \\cdot 1000^0) \\bmod 7 \\\\\n&amp;= (g_{n-1} \\bmod 7) (1000^{n-1} \\bmod 7) + ... + (g_1 \\bmod 7) (1000^1 \\bmod 7) + (g_0 \\bmod 7) (1000^0 \\bmod 7)\n\\end{aligned}\n</div>\n<p>Here <span class=\"math\">1000 \\bmod 7 = -1</span>, so <span class=\"math\">1000^x \\bmod 7 = (1000 \\bmod 7)^x = (-1)^x</span></p>\n<div class=\"math\">\n\\begin{aligned}\nN \\bmod 7 &amp;= (g_{n-1} \\bmod 7)(-1)^{n-1} + ... + (g_1 \\bmod 7)(-1)^{1} + (g_0 \\bmod 3)(-1)^0 \\\\\n\\therefore N \\bmod 7 &amp;= ((-1)^{n-1}g_{n-1} + ... -g_3 + g_2 - g_1 + g_0) \\bmod 7\n\\end{aligned}\n</div>\n<p>\u2026which is once again the divisibility test of <span class=\"math\">7</span>.<br>\nFeel free to try out the same for other primes such as <span class=\"math\">11</span> or <span class=\"math\">13</span> on paper.</p>\n<p>So the problem reduces to finding the smallest <span class=\"math\">k</span> for which <span class=\"math\">10^k \\bmod P</span> is either <span class=\"math\">1</span> or <span class=\"math\">-1</span>. If we find <span class=\"math\">k</span> for which <span class=\"math\">10^k \\bmod P = 1</span> then the test is <strong>\u201ck-sum\u201d</strong> otherwise it is <strong>\u201ck-altersum\u201d</strong>.</p>\n<h4>Solving the problem</h4>\n<p>There is actually a term for the smallest <span class=\"math\">k</span> such that <span class=\"math\">a^k \\bmod P = 1</span>.<br>\nIt is termed the <a href=\"https://en.wikipedia.org/wiki/Multiplicative_order\">multiplicative order</a> of <span class=\"math\">a</span> modulo <span class=\"math\">P</span>, denoted as <span class=\"math\">ord_P(a)</span>.<br>\nFrom <a href=\"https://en.wikipedia.org/wiki/Fermat%27s_little_theorem\">Fermat\u2019s little theorem</a>, we know that <span class=\"math\">a^{P-1} \\bmod P = 1</span>.<br>\nHence, <span class=\"math\">1 \\le ord_P(a) \\le P-1</span>.<br>\nBut here, <span class=\"math\">P \\le 2^{31}-1</span>, so we cannot just iterate over all integers upto <span class=\"math\">P</span> to find the answer.</p>\n<p>It can be proved that <span class=\"math\">a^n \\bmod P = 1</span> if and only if <span class=\"math\">ord_P(a) \\mid n</span>. Refer to Theorem 6.1 of this <a href=\"https://artofproblemsolving.com/articles/files/SatoNT.pdf\">excellent paper</a> for proof.<br>\nSince we know that <span class=\"math\">a^{P-1} \\bmod P = 1</span>, then <span class=\"math\">ord_P(a) \\mid (P-1)</span>.<br>\nNow the problem is greatly reduced, the order can only be found among the divisors of <span class=\"math\">P</span>, which can be enumerated in <span class=\"math\">\\mathcal{O}(\\sqrt{P})</span>.</p>\n<p>This solves the problem for the <strong>\u201ck-sum\u201d</strong> case, but what about <strong>\u201ck-altersum\u201d</strong>?<br>\nIf <span class=\"math\">a^x \\bmod P = -1</span>, then clearly <span class=\"math\">a^{2x} \\bmod P = 1</span>.<br>\nFor the smallest such <span class=\"math\">k</span>, <span class=\"math\">2k = ord_P(a)</span>, hence <span class=\"math\">k = ord_P(a)/2</span>.<br>\nSo for the altersum case, it is easy enough to check whether <span class=\"math\">10^{ord_P(10)/2} \\bmod P = -1</span>.  However it is not necessary.<br>\nLet <span class=\"math\">ord_P(a) = 2x</span>. Then</p>\n<div class=\"math\">\na^{2x} \\bmod P = 1 \\\\\n(a^{2x}-1) \\bmod P = 0 \\\\\n(a^x+1)(a^x-1) \\bmod P = 0 \\\\\n</div>\n<p>This implies that either <span class=\"math\">a^x \\bmod P = -1</span> or <span class=\"math\">a^x \\bmod P = 1</span>.<br>\nBut <span class=\"math\">a^x \\bmod P \\ne 1</span> since <span class=\"math\">ord_P(a) = 2x</span>.<br>\nHence it is proved that if <span class=\"math\">ord_P(a)</span> is even, <span class=\"math\">a^{ord_P(a)/2} \\bmod P</span> is guaranteed to be <span class=\"math\">-1</span>.</p>\n<p><strong>Bonus fact:</strong> This problem is the subject of Exercise 1.38 of the book <em>Algorithms</em> by S. Dasgupta, C. Papadimitriou, and U. Vazirani.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16E.py\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17229,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1 - 2",
+  "source_sizelimit": "40000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Fermat's Little Theorem",
+    "Modulo Multiplicative Inverse"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Modular Arithmetic"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16E",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610969
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16E",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

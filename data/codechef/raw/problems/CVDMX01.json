@@ -1,0 +1,120 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CVDMX01",
+  "contest_category": "6",
+  "problem_name": "Chef Builds Subsets",
+  "intended_contest_code": "DSAMONDAY002",
+  "body": "Chef has a list of unique integers and wants to explore all possible subsets of this list, including the empty subset. Chef aims to generate the complete power set without any duplicates, regardless of the order in which the subsets appear. Help Chef by writing a function that returns all these subsets for the given list of integers.\n\n## Function Declaration\n\n### Function Name\n`findSubsets` - This function generates all possible subsets (the power set) of a given list of integers.\n\n### Parameters\n- `inputNumbers` (`vector<int>&`): A reference to a vector containing the input integers. The vector may be empty and contains distinct integers.\n\n### Return Value\n- Returns a `vector<vector<int>>` representing all unique subsets of the input numbers.\n- Each inner vector is a subset of the input.\n- The output includes the empty subset and all other subsets in any order.\n\n## Input Format\n- The first line contains a single integer $T$ \u2014 the number of test cases.\n- For each test case:\n  - The first line contains an integer $N$ \u2014 the size of Chef's number array.\n  - The second line contains $N$ space-separated integers representing Chef's number array.\n\n## Output Format\n- For each test case, print all subsets of the given array.\n- Each subset should be printed on a separate line with its elements separated by spaces.\n- Print the empty subset as an empty line.\n\n## Constraints\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq N \\leq 10$\n- $-10 \\leq \\text{inputNumbers}[i] \\leq 10$\n- All elements in `inputNumbers` are unique.\n\nHelp Chef find every possible subset so he can master the art of combinations!\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": " ",
+    "constraintsState": false,
+    "subtasks": " ",
+    "subtasksState": false,
+    "statement": "Chef has a list of unique integers $inputNumbers$ and wants to explore all possible subsets of this list, including the empty subset. Chef aims to generate the complete power set without any duplicates, regardless of the order in which the subsets appear. \\\nHelp Chef by writing a function that returns all these subsets for the given list of integers.\n\n## Function Declaration\n\n### Function Name\n$findSubsets$ - This function generates all possible subsets (the power set) of a given list of integers.\n\n### Parameters\n- $inputNumbers$: A reference to an array containing the input integers. The array may be empty and contains distinct integers.\n\n### Return Value\n- Returns an array of arrays representing all unique subsets of the input numbers.\n- Each inner array is a subset of the input.\n- The output includes the empty subset and all other subsets in any order.\n\n## Constraints\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq N \\leq 10$\n- $-10 \\leq \\text{inputNumbers}[i] \\leq 10$\n- All elements in $inputNumbers$ are unique.",
+    "inputFormat": "- The first line contains a single integer $T$ \u2014 the number of test cases.\n- For each test case:\n  - The first line contains an integer $N$ \u2014 the size of Chef's number array.\n  - The second line contains $N$ space-separated integers representing Chef's number array.",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, print all subsets of the given array.\n- Each subset should be printed on a separate line with its elements separated by spaces.\n- Print the empty subset as an empty brackets.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n4 7\n4\n-1 0 1 2",
+        "output": "[]\n[4]\n[7]\n[4 7]\n[]\n[-1]\n[0]\n[-1 0]\n[1]\n[-1 1]\n[0 1]\n[-1 0 1]\n[2]\n[-1 2]\n[0 2]\n[-1 0 2]\n[1 2]\n[-1 1 2]\n[0 1 2]\n[-1 0 1 2]",
+        "explanation": "- **For the first test case** with elements **[4, 7]**, the complete power set is generated.  \n  This includes:\n  - The **empty subset**: `[]`  \n  - All **single-element subsets**: `[4]`, `[7]`  \n  - The **full subset** containing all elements: `[4, 7]`  \n  Together forming the full set of combinations:  \n  `[], [4], [7], [4,7]`\n\n- **For the second test case** with elements **[-1, 0, 1, 2]**, every possible subset is generated:  \n  - The **empty subset**  \n  - All **4 single-element subsets**  \n  - All **6 two-element combinations**  \n  - All **4 three-element combinations**  \n  - The **full four-element subset**: `[-1, 0, 1, 2]`  \n  Ensuring the output includes **all 2? = 16 subsets**, covering the power set completely.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "## 1. Problem Breakdown\n\nThe problem asks us to find **all possible subsets** of a given list of integers, which is also known as the *power set*. A subset can have any number of elements, from zero (empty subset) up to the full length of the input list. \n\nFor example, if the input list `inputNumbers` is `[1, 2]`, the subsets are:\n- `[]` (empty subset)\n- `[1]`\n- `[2]`\n- `[1, 2]`\n\nOur goal is to generate every such subset without missing any and without duplicates.\n\n---\n\n## 2. Approach 1 \u2014 Brute Force\n\n### Idea\n\nStart with the simplest subset: the empty subset `[]`. Then, for each element in the input list `inputNumbers`, add it to all existing subsets to create new subsets. This way, we \"cascade\" through the list, expanding the set of subsets step by step.\n\n### Step-by-step explanation\n\n1. Begin with a list of subsets containing only the empty subset: `findSubsets = [[]]`.\n2. Take the first element from `inputNumbers`.\n3. For each subset already in `findSubsets`, create a new subset by adding the current element.\n4. Add all these new subsets to `findSubsets`.\n5. Repeat steps 2-4 for every element in `inputNumbers`.\n\n### Dry-run example\n\nSuppose `inputNumbers = [1, 2]`:\n\n- Start: `findSubsets = [[]]`\n- Take `1`:\n  - Add `1` to every subset in `findSubsets`:\n    - `[] + [1] = [1]`\n  - Update `findSubsets = [[], [1]]`\n- Take `2`:\n  - Add `2` to every subset in `findSubsets`:\n    - `[] + [2] = [2]`\n    - `[1] + [2] = [1, 2]`\n  - Update `findSubsets = [[], [1], [2], [1, 2]]`\n\nNow, `findSubsets` contains all subsets.\n\n### When to use\n\nThis method is straightforward and easy to understand. It works well for small to medium-sized inputs.\n\n### Complexity\n\n- **Time complexity:** For each of the `N` elements, you double the number of subsets (because each element can be either included or excluded). So, total subsets are `2^N`. For each subset, copying elements takes up to `N` time. Hence, the total time complexity is roughly **O(N \u00d7 2^N)**.\n- **Space complexity:** You store all subsets, so the space needed is also **O(N \u00d7 2^N)**.\n\n---\n\n## 3. Approach 2 \u2014 Better Approach: Backtracking\n\n### Idea\n\nInstead of building subsets iteratively, use a *backtracking* method to explore all possible subsets by deciding for each element whether to include it or not.\n\n### How it works\n\n- Think of the problem as choosing elements one by one.\n- At each step, you have two choices:\n  - Include the current element in the subset.\n  - Exclude the current element.\n- Recursively explore both choices.\n- When you reach the end of the list, record the current subset.\n\n### Why is this better?\n\n- It explores the solution space systematically.\n- You can control the order in which subsets are generated.\n- It\u2019s easy to modify if you want subsets of a certain size or with other constraints.\n\n### Dry-run example\n\nFor `inputNumbers = [1, 2]`:\n\n- Start with empty subset `curr = []`.\n- At index 0 (element 1):\n  - Include `1`: `curr = [1]`\n    - At index 1 (element 2):\n      - Include `2`: `curr = [1, 2]` \u2192 add to output\n      - Exclude `2`: `curr = [1]` \u2192 add to output\n  - Exclude `1`: `curr = []`\n    - At index 1 (element 2):\n      - Include `2`: `curr = [2]` \u2192 add to output\n      - Exclude `2`: `curr = []` \u2192 add to output\n\nAll subsets are generated.\n\n### Complexity\n\n- **Time complexity:** Still **O(N \u00d7 2^N)** because every element has two choices.\n- **Space complexity:** The recursion stack can go as deep as `N`, and output space is **O(N \u00d7 2^N)**.\n\n---\n\n## 4. Approach 3 \u2014 Most Efficient Solution: Bitmasking\n\n### Explanation\n\nEach subset can be represented by a binary number (bitmask) of length `N`, where `N` is the number of elements in `inputNumbers`. The bit at position `i` indicates whether the element at index `i` is included (`1`) or excluded (`0`).\n\nFor example, if `inputNumbers = [a, b, c]`, the bitmask `101` (binary) means the subset includes `a` and `c` but not `b`.\n\n### How it works\n\n- There are `2^N` possible bitmasks from `0` to `2^N - 1`.\n- For each bitmask:\n  - Check each bit.\n  - If the bit is set, include the corresponding element in the current subset.\n- Collect all subsets generated this way.\n\n### Why it works\n\n- It directly maps the subsets to numbers, simplifying generation.\n- No recursion or complex logic needed.\n- It naturally generates subsets in lexicographical order if `inputNumbers` is sorted.\n\n### When it might not be suitable\n\n- For very large `N`, generating `2^N` subsets is inherently expensive and may not be feasible.\n- Bit operations are fast but require understanding binary manipulation.\n\n### Complexity\n\n- **Time complexity:** You iterate over `2^N` bitmasks, and for each bitmask, you check up to `N` bits \u2192 **O(N \u00d7 2^N)**.\n- **Space complexity:** You store all subsets \u2192 **O(N \u00d7 2^N)**.\n\n---\n\n# Summary\n\n| Approach               | Time Complexity | Space Complexity | When to Use                            |\n|------------------------|-----------------|------------------|-------------------------------------|\n| Brute Force (Cascading)| O(N \u00d7 2^N)      | O(N \u00d7 2^N)       | Simple, easy to implement            |\n| Backtracking           | O(N \u00d7 2^N)      | O(N \u00d7 2^N)       | When you want controlled exploration |\n| Bitmasking             | O(N \u00d7 2^N)      | O(N \u00d7 2^N)       | Efficient, clean, lexicographically sorted output |\n\nAll approaches generate the full power set, but bitmasking is often preferred for its elegance and simplicity once you are comfortable with binary operations.",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "nonameetcetc",
+  "problem_display_authors": [
+    "nonameetcetc"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/nonameetcetc'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>nonameetcetc</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "2-12-2025",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "nonameetcetc"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1778513400,
+    "submit_start_date": 1778513400,
+    "visible_start_date": 1778513400,
+    "end_date": 1893436200,
+    "current": 1785610778
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CVDMX01",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 10,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

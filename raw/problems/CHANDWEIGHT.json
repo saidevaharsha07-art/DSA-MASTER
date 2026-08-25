@@ -1,0 +1,119 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHANDWEIGHT",
+  "contest_category": "6",
+  "problem_name": "Chandelier",
+  "intended_contest_code": "START103",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^4$\n- $1 \\leq N \\leq 3\\cdot 10^5$\n- $1 \\leq W_i \\lt A_i \\leq 10^9$\n- The sum of $N$ over all test cases does not exceed $3\\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A linear chandelier is held up by $N$ supports. The $i^{th}$ support initially holds up a weight $W_i$, and will collapse if the weight on it is **more than or equal to** $A_i$. Note that initially, $W_i \\lt A_i$ for all $1 \\le i \\le N$.\n\nWhenever $W_i\\ge A_i$ for some support, the following happens:\n\n- The $i^{th}$ support is destroyed;\n- Let $x$ and $y$ be uniformly random non-negative integers such that $x+y=W_i$.  \nAdd $x$ to $W_{i-1}$ and add $y$ to $W_{i+1}$.\n\nNote that:\n- If either one of the neighbours do not exist, all the weight is added to the remaining neighbour.\n- If both neighbours do not exist, the weight dissipates.\n\nFor all $1 \\le i \\le N$, find the **minimum** weight you need to add to $W_i$, so that there is a nonzero chance all supports end up destroyed.\n",
+    "inputFormat": "- The first line of input contains a single integer $T$, denoting the number of test cases.\n- The first line of each test case contains $N$, the number of supports.\n- The second line of each test case contains $N$ integers $W_1, W_2, \\ldots, W_N$, denoting initial weight on  each support.\n- The third line of each test case contains $N$ integers $A_1, A_2, \\ldots, A_N$, denoting the minimum load at which a support destroys.",
+    "inputFormatState": true,
+    "outputFormat": "For each test, output $N$ space-separated integers. The $i^{th}$ of these should be the **minimum weight** you need to add to the $i^{th}$ chandelier, so that there is a nonzero chance that all supports end up destroyed.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n3\n1 1 1\n2 2 2\n1\n1\n1000000000\n2\n1 1234\n2 5678\n7\n122 179 269 184 250 104 455\n398 203 318 340 312 489 464\n",
+        "output": "1 1 1\n999999999\n4443 4444\n276 146 49 156 291 385 9\n",
+        "explanation": "**Test case $1$:** The following is possible if we add weight $1$ to support $2$:\n- Support $2$ collapses, since $W_2=2\\ge 2$. A weight $x=1$ gets added to $W_1$, and a weight $y=1$ gets added to $W_3$.\n- Support $1$ collapses, since $W_1=2\\ge 2$.\n- Support $3$ collapses, since $W_3=2\\ge 2$.\n\nIf we add zero weight, then nothing would happen and all supports would stay standing. So the answer for $i=2$ is $1$.\n\n**Test case $2$:** We have to add $999999999$ weight to the only support to make it collapse.\n\n**Test case $3$:** Note that we could add a weight of $1$ to support $1$ to make it collapse, but then, there would be no way to make the second support collapse. We can show that we have to add at least $4443$ weight to support $1$ to make it possible for both supports to end up destroyed.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "65269a9bbbadca15cc61b0fb",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 113144,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "bucketpotato",
+  "problem_display_authors": [
+    "bucketpotato"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/bucketpotato'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>bucketpotato</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "8-10-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "bucketpotato",
+    "start103"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "2368",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610660
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHANDWEIGHT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

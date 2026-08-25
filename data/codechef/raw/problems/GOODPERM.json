@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GOODPERM",
+  "contest_category": "6",
+  "problem_name": "Good Permutations",
+  "intended_contest_code": "COOK95",
+  "body": "You have a sequence $a$ with length $N$ created by removing some elements (possibly zero) from a permutation of numbers $(1, 2, \\dots, N)$. When an element is removed, the length of the sequence doesn't change, but there is an empty spot left where the removed element was. You also have an integer $K$.\n\nLet's call a permutation $p_1, p_2, \\dots, p_N$ *good* if:\n- it is possible replace empty spots in $a$ by numbers in such a way that we obtain the permutation $p$\n- the number of positions $i$ ($1 \\lt i \\le N$) such that $p_i \\gt p_{i-1}$ is equal to $K$\n\nYour task is to find the number of good permutations.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $K$.\n- The second line contains $N$ space-separated integers $a_1, a_2, \\dots, a_N$. Each element of this sequence is either $0$ (indicating an empty spot previously occupied by a removed element) or an integer between $1$ and $N$ inclusive.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the number of good permutations.\n\n### Constraints \n- $1 \\le T \\le 300$\n- $0 \\le K \\lt N \\le 8$\n- each integer between $1$ and $N$ inclusive appears in $a$ at most once\n\n### Example Input\n```\n1\n3 1\n2 0 0\n```\n\n### Example Output\n```\n2\n```\n\n### Explanation\n**Example case 1:** The two possible good permutations are $(2,3,1)$ and $(2,1,3)$.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You have a sequence $a$ with length $N$ created by removing some elements (possibly zero) from a permutation of numbers $(1, 2, \\dots, N)$. When an element is removed, the length of the sequence doesn't change, but there is an empty spot left where the removed element was. You also have an integer $K$.\n\nLet's call a permutation $p_1, p_2, \\dots, p_N$ *good* if:\n- it is possible replace empty spots in $a$ by numbers in such a way that we obtain the permutation $p$\n- the number of positions $i$ ($1 \\lt i \\le N$) such that $p_i \\gt p_{i-1}$ is equal to $K$\n\nYour task is to find the number of good permutations.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $K$.\n- The second line contains $N$ space-separated integers $a_1, a_2, \\dots, a_N$. Each element of this sequence is either $0$ (indicating an empty spot previously occupied by a removed element) or an integer between $1$ and $N$ inclusive.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the number of good permutations.\n\n### Constraints \n- $1 \\le T \\le 300$\n- $0 \\le K \\lt N \\le 8$\n- each integer between $1$ and $N$ inclusive appears in $a$ at most once",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n3 1\n2 0 0",
+        "output": "2",
+        "explanation": "**Example case 1:** The two possible good permutations are $(2,3,1)$ and $(2,1,3)$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 19077,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "barenuz",
+  "problem_display_authors": [
+    "barenuz"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/barenuz'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>barenuz</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "16-06-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1823",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610857
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GOODPERM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

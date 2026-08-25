@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "texas-interview-questions",
+  "name": "Texas Instruments Coding Interview Questions",
+  "title": "Texas Instruments Coding Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Texas Instruments online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/texas-interview-questions/TXSINSTCON01/problems/TXSINST02",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Texas Instruments Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Texas Instruments Coding Questions",
+          "submodule_id": 9476,
+          "contest_code": "TXSINSTCON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/texas-interview-questions/TXSINSTCON01/problems/TXSINST02",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "32733",
+              "code": "TXSINST02",
+              "name": "Josephus Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST01",
+              "name": "XOR Query Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST04",
+              "name": "Minimum Conference Rooms (Stark Industry)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST05",
+              "name": "Maximum Sum Rectangle in Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST06",
+              "name": " Reverse Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST07",
+              "name": "Reverse Bits for Concert Ticket",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST03",
+              "name": "Largest Rectangle in Histogram",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32733",
+              "code": "TXSINST08",
+              "name": "N Stacks in Single Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 8,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 828,
+  "path_review": {
+    "rating": 4.3,
+    "users": 6
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

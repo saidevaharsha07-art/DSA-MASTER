@@ -1,0 +1,125 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP16J",
+  "contest_category": "6",
+  "problem_name": "Bus Routes",
+  "intended_contest_code": null,
+  "body": "<p>\nThe Kingdom of Kharagpur has <b>N</b> cities, which are numbered from <b>1</b> to <b>N</b>. There are many bus routes which go directly from one city to another. A bus route from <b>City i</b> to <b>City j</b> does not mean that there is a route from <b>City j</b> to <b>City i</b>.\n</p>\n\n<p>\nYesterday, the King had a dream, and he has decided that for the country to become prosperous, in every city, the number of bus routes coming in should be equal to the number of bus routes going out of that city. He called his transport minister and directed him to implement this. The minister realized that he cannot add any new bus routes, because of financial constraints. So, he can only cancel some of the existing routes. But he also knows that some of these routes are Vital, and hence he cannot cancel them. So, he also wants to cancel as few non-Vital routes as possible. Help the minister find the minimum number of non-Vital routes that he has to cancel, so as to satisfy the King's condition.\n</p>\n\n\n<h3>Input</h3>\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case contains three integers <b>N, V, W</b>, denoting the number of cities, the number of existing Vital routes and the number of existing non-Vital routes, respectively.</p>\n<p>The next <b>V</b> lines contain two integers each, separated by single spaces: <b>i j</b>, denoting that there is a Vital route from <b>City i</b> to <b>City j</b>.</p>\n<p>The next <b>W</b> lines contain two integers each, separated by single spaces: <b>i j</b>, denoting that there is a non-Vital route from <b>City i</b> to <b>City j</b>.</p>\n\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing the answer, which is the minimum number of non-Vital routes to be cancelled so as to satisfy the King's condition.</p>\n<p>If the King's condition cannot be satisfied, output -1.</p>\n\n\n<h3>Constraints</h3>\n\n<ul>\n<li><b>1 \u2264 T \u2264 5</b></li>\n<li><b>1 \u2264 N \u2264 100</b></li>\n<li><b>1 \u2264 V, W \u2264 1000</b></li>\n</ul>\n\n<p>For all <b>i, j</b>, there is atmost 1 route which goes from <b>City i</b> to <b>City j</b>. Also, a route always goes from a city to a different city. Not to the same city.</p>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>1\n4 2 4\n1 3\n4 1\n2 1\n3 4\n1 2\n3 2</tt>\n\n<b>Output:</b>\n<tt>1</tt>\n</pre>\n\n<h3>Explanation</h3>\nIn the existing network of bus routes:\n<li>The number of routes going out of <b>City 1</b> is 2 , and the number of routes coming in is 2.</li>\n<li>The number of routes going out of <b>City 2</b> is 1 , and the number of routes coming in is 2.</li>\n<li>The number of routes going out of <b>City 3</b> is 2 , and the number of routes coming in is 1.</li>\n<li>The number of routes going out of <b>City 4</b> is 1 , and the number of routes coming in is 1.\n</li>\n\n\n<p>This does not satisfy the King's condition, because in <b>Cities 2</b> and <b>3</b>, number of incoming routes does not equal number of outgoing routes.\n</p>\n\n<p>But we can cancel the route which goes from <b>City 3</b> to <b>City 2</b> (which is a non-Vital route), and after this change, in the new network:\n</p>\n<li>The number of routes going out of <b>City 1</b> is 2 , and the number of routes coming in is 2.</li>\n<li>The number of routes going out of <b>City 2</b> is 1 , and the number of routes coming in is 1.</li>\n<li>The number of routes going out of <b>City 3</b> is 1 , and the number of routes coming in is 1.</li>\n<li>The number of routes going out of <b>City 4</b> is 1 , and the number of routes coming in is 1.</li>\n<p>This satisfy's the King's condition, and 1 is the minimum that we can do. Hence the answer is 1.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 5**\n- **1 \u2264 N \u2264 100**\n- **1 \u2264 V, W \u2264 1000**\n\nFor all **i, j**, there is at most 1 route which goes from **City i** to **City j**. Also, a route always goes from a city to a different city. Not to the same city.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "The Kingdom of Kharagpur has **N** cities, which are numbered from **1** to **N**. There are many bus routes which go directly from one city to another. A bus route from **City i** to **City j** does not mean that there is a route from **City j** to **City i**.\n\nYesterday, the King had a dream, and he has decided that for the country to become prosperous, in every city, the number of bus routes coming in should be equal to the number of bus routes going out of that city. He called his transport minister and directed him to implement this. The minister realized that he cannot add any new bus routes, because of financial constraints. So, he can only cancel some of the existing routes. But he also knows that some of these routes are Vital, and hence he cannot cancel them. So, he also wants to cancel as few non-Vital routes as possible. Help the minister find the minimum number of non-Vital routes that he has to cancel, so as to satisfy the King's condition.\n",
+    "inputFormat": "The first line of input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nThe first line of each test case contains three integers **N, V, W**, denoting the number of cities, the number of existing Vital routes and the number of existing non-Vital routes, respectively.\n\nThe next **V** lines contain two integers each, separated by single spaces: **i j**, denoting that there is a Vital route from **City i** to **City j**.\n\nThe next **W** lines contain two integers each, separated by single spaces: **i j**, denoting that there is a non-Vital route from **City i** to **City j**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing the answer, which is the minimum number of non-Vital routes to be cancelled so as to satisfy the King's condition.\n\nIf the King's condition cannot be satisfied, output -1.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n4 2 4\n1 3\n4 1\n2 1\n3 4\n1 2\n3 2\n",
+        "output": "1\n",
+        "explanation": "In the existing network of bus routes:\n- The number of routes going out of **City 1** is 2, and the number of routes coming in is 2.\n- The number of routes going out of **City 2** is 1, and the number of routes coming in is 2.\n- The number of routes going out of **City 3** is 2, and the number of routes coming in is 1.\n- The number of routes going out of **City 4** is 1, and the number of routes coming in is 1.\n\nThis does not satisfy the King's condition, because in **Cities 2** and **3**, the number of incoming routes does not equal the number of outgoing routes.\n\nBut we can cancel the route which goes from **City 3** to **City 2** (which is a non-Vital route), and after this change, in the new network:\n- The number of routes going out of **City 1** is 2, and the number of routes coming in is 2.\n- The number of routes going out of **City 2** is 1, and the number of routes coming in is 1.\n- The number of routes going out of **City 3** is 1, and the number of routes coming in is 1.\n- The number of routes going out of **City 4** is 1, and the number of routes coming in is 1.\n\nThis satisfies the King's condition, and 1 is the minimum that we can do. Hence the answer is 1.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/KGP16MOS/problems/KGP16J\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"https://www.codechef.com/problems/KGP16J\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Setter-</strong>  <a href=\"https://www.codechef.com/users/arjunarul\" rel=\"nofollow noopener\">Arjun Arul</a> <code>_/\\_</code><br>\n<strong>Tester-</strong> <a href=\"https://www.codechef.com/users/arjunarul\" rel=\"nofollow noopener\">Arjun Arul</a> <code>_/\\_</code> , <a href=\"https://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a><br>\n<strong>Editorialist-</strong> <a href=\"https://www.codechef.com/users/vijju123\" rel=\"nofollow noopener\">Abhishek Pandey</a></p>\n<h3>DIFFICULTY:</h3>\n<p>MEDIUM-HARD</p>\n<h3>PRE-REQUISITES:</h3>\n<p><a href=\"https://brilliant.org/wiki/max-flow-min-cut-algorithm/\" rel=\"nofollow noopener\">Mincut-Maxflow Algorithm</a> (especially <a href=\"https://www.hackerearth.com/practice/algorithms/graphs/minimum-cost-maximum-flow/tutorial/\" rel=\"nofollow noopener\">Cycle Cancelling Algorithm</a> ), <a href=\"https://www.thedailyprogrammer.com/2015/07/bellman-ford-algorithm.html\" rel=\"nofollow noopener\">Bellman Ford Algorithm</a></p>\n<p>These pre-requisites are the basic requirements which must be sufficed before proceeding next. Hence, make sure you have an idea about what above mentioned things are :).</p>\n<h3>PROBLEM:</h3>\n<p>For a directed graph of <span class=\"math\">N</span> nodes, you can remove some edges. For each node, you must make outdegree-indegree=0. (i.e. Outdegree should be equal to indegree for each node.)</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>The most important step to solve this problem is to identify it to be a min-cut max-flow problem. Once you do so, we will construct our graph in this fashion-</p>\n<ol>\n<li>Since we can do nothing about vital edges, we note their effect on degree and discard them. We then take input about non-vital edges in similar fashion, but we dont discard them.</li>\n<li>For each node with Outdegree&gt;Indegree, we give an edge from source to that node with capacity= OutDegree-Indegree ,cost=0.</li>\n<li>For each node with Indegree&gt;Outdegree, we give an edge from that node to sink with capacity=Indegree-Outdegree, cost=0.</li>\n<li>We make graph out of non-vital edges. Each such edge has cost=capacity=1.</li>\n<li>Now we apply the standard min-cut max-flow algorithms, with maximum flow =(OutDegree+Indegree)/2 [Outdegree=Excess OutDegree, Indegree= Excess Indegree]</li>\n<li>If maximum flow is achievable, we print the cost, which is edges cut, else  we print -1.</li>\n</ol>\n<h3>EXPLANATION:</h3>\n<p>I first hope that you guys went through the pre-requisite links. If not, please do so, its not too late yet. <img src=\"https://discuss.codechef.com/images/emoji/apple/slight_smile.png?v=9\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\"> . At any step, if you feel lost, or have any doubt related to implementation, please open editorialist\u2019s solution in another tab and have a look there as well <img src=\"https://discuss.codechef.com/images/emoji/apple/slight_smile.png?v=9\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\"> .</p>\n<p>The editorial is divided into following sections-</p>\n<ol>\n<li>Identifying this is a MinCut-MaxFlow question</li>\n<li>Constructing the Graph</li>\n<li>Deriving answer from it</li>\n</ol>\n<p><strong>1. Identifying this is a MinCut-MaxFlow question-</strong></p>\n<p>The following points should guide you in identifying such questions-</p>\n<ol>\n<li>Low constraints so that a <span class=\"math\">O(VE)</span> or <span class=\"math\">O(V{E}^{2})</span> &amp;etc. algorithm passes.</li>\n<li>Take \u201cExcess Indegree/Outdegree\u201d as required flow which must pass through a node, Combined with need of minimum cuts/removal of edges, we can see it as a MinCut-MaxFlow algorithm.</li>\n</ol>\n<p><strong>2. Constructing the Graph-</strong></p>\n<p>This section will take a good portion of editorial, as this part is not intuitive and hence deserves explanation.</p>\n<p><strong>a. Are Vital edges really vital for the solution?</strong></p>\n<p>First, we must analyze the input carefully. We see that the vital edges are not important to us. Why? To answer that, we must see what exactly are we taking as \u201cflow\u201d. I took flow to be \u201cedges cut in a path to satisfy Outdegree=Indegree relation\u201d . In this sense, we can really not have a \u201cflow\u201d through vital edges as we cannot cut them. (The algorithm in our solution \u201ccuts\u201d the edges in path where flow is happening.)   <strong>Hence, we do nothing but note the effect of vital edges on degree of nodes.</strong></p>\n<p><strong>b. What about non-vital edges?</strong></p>\n<p>We can cut the non-vital edges. Each edge cut will reduce outdegree of one node and indegree of another by 1. Hence, cost and capacity of these edges should be <span class=\"math\">1</span>. We follow typical steps to make a graph from them.</p>\n<p><strong>c. What about source and sink?</strong></p>\n<p>We add our own <span class=\"math\">2</span> nodes as Source and Sink. My solution follows 1-based indexing, hence I used Node 0 and Node (N+1) as source and sink respectively. We used the convention that nodes will have \u201cPositive Outdegree and Negative Indegree\u201d [Outgoing edges contribute +1, incoming contribute -1] . You can use your own convention, but make sure to change other things accordingly!</p>\n<p>For each <span class=\"math\">Node</span> <span class=\"math\">i</span> with excess OutDegree, we add an edge from source to that <span class=\"math\">Node</span> <span class=\"math\">i</span>, with cost=0 [Since this edge should not affect answer] and capacity= <span class=\"math\">|Excess Degree|</span>. For each <span class=\"math\">Node</span> <span class=\"math\">i</span> with excess indegree, we add an edge from that <span class=\"math\">Node</span> <span class=\"math\">i</span> to sink, with cost=0 and capacity= <span class=\"math\">|Excess Degree|</span>.</p>\n<p><strong>3. Deriving the answer from this graph-</strong></p>\n<p>Before proceeding further, make sure to be well versed with the reverse graph theory in the MinCut-MaxFlow link I provided.</p>\n<p><strong>a. When will answer exist?</strong><br>\nFirstly, it should be intuitive that for a valid solution, Total amount of Excess Outdegree = Total Amount of Excess Indegree. If this is not the case, the answer is <span class=\"math\">-1</span>. Why is this happening though?</p>\n<details>\n<summary>\nClick to view</summary>\n<p>This is because we cannot \u201cCreate\u201d any flow, but direct it from excess (outdegree) to deficit (indegree). Each edge will change outdegree of one node and indegree of another, so if their excesses are unequal, we cannot balance them.</p>\n</details>\n<p><strong>b. What is the value of MaxFlow?</strong></p>\n<p>Follow the reasoning above. Since all we are doing is directing flow from \u201cexcess to deficit\u201d. (A very good analogy is to take Excess Outdegree nodes having positive potential, Excess Indegree nodes with negative potential, and flow as current.)</p>\n<p>Each edge has capacity 1, will satisfy outdegree of one node and indegree of another. Hence the required flow will be <strong>Flow=(|Excess Outdegree|+|Excess Indegree|)/2</strong> .</p>\n<p><strong>Q- Can you use my inference in part a. to simply the above equation?</strong></p>\n<p><strong>c. What do we actually do?</strong></p>\n<p>We need to have flow in our network equal to maxflow. If this cannot be achieved, then the answer does not exist. Recall from the reverse graph section of pre-requisites, that in condition of maxflow, source will not be connected to sink. (In real graph terms, it means there is no path with flow capacity&gt;0 connecting sink and source. i.e. all paths are being used to their fullest). We will use this later.</p>\n<p>While we dont get our flow equal to required maxflow , we find an augmenting path from source to sink and allow \u201cflow\u201d through the path. (i.e. we deduct flow-occuring through path from capacity of each involved edge) and compute cost. If we can reach the maxflow, we break out and give the current cost (i.e. edges cut) as the answer.</p>\n<p><strong>But\u2026What if we cannot find a path from source to sink?</strong></p>\n<p>(Answer is in tab below, try to answer on your own first).</p>\n<details>\n<summary>\nClick to view</summary>\n<p>Recall from reverse graph section (in pre-requsites,mincut maxcut algorithm) that in condition of maximum flow through network, source is disconnected from sink. Meaning, there is no path which can carry any more flow to sink from source.</p>\n<p>If this is not equal to maxflow needed, it means that we cannot achieve it by just removing non-vital edges, we will need to remove vital edges as well, which is not allowed. Hence, answer is <span class=\"math\">-1</span> for such cases.</p>\n</details>\n<p>Once we get final flow through the network, and the cost, we can easily see what the answer is.</p>\n<h3>SOLUTION:</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/17855508\" rel=\"nofollow noopener\">Editorialist\u2019s</a></p>\n<h3>CHEF VIJJU\u2019S CORNER:</h3>\n<p>1.We used Bellman Ford because of possible negative weight (cost) in edges. Can we use Dijkstra\u2019s algorithm here? Some people used both! \u201cIf no negative edge, use Dijkstra, else Bellman Ford\u201d.<br>\n2.A very common question is <strong>\u201cFor graphs with negative edges, we just add a positive constant <span class=\"math\">K</span> to all weights and apply Dijkstra and then subtract similarly from answer.\u201d</strong> . Is this procedure correct? How does it interact with the negative cycle anomaly in such graphs?<br>\n3.Is Dijkstra completely inapplicable to all graphs with any negative weight edges?<br>\n4.After going through editorialist\u2019s solution, how many of you want to kill and burn him on a stake for not making a function/constructor to make/add edges? <img src=\"https://discuss.codechef.com/images/emoji/apple/stuck_out_tongue.png?v=9\" title=\":stuck_out_tongue:\" class=\"emoji\" alt=\":stuck_out_tongue:\"></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 18259,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm16kol",
+    "admin3",
+    "bellman-ford",
+    "graphs",
+    "kgp16",
+    "mincut-maxflow"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Bellman Ford",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP16J",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610965
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP16J",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

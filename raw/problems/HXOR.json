@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HXOR",
+  "contest_category": "6",
+  "problem_name": "Hail XOR",
+  "intended_contest_code": "DEC20",
+  "body": "\r\nYou are given a sequence $A_1, A_2, \\ldots, A_N$ and you have to perform the following operation exactly $X$ times:\r\n- Choose two integers $i$ and $j$ such that $1 \\le i \\lt j \\le N$.\r\n- Choose a non-negative integer $p$.\r\n- Change $A_i$ to $A_i \\oplus 2^p$, and change $A_j$ to $A_j \\oplus 2^p$, where $\\oplus$ denotes [bitwise XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR).\r\n\r\nFind the lexicographically smallest sequence which can be obtained by performing this operation exactly $X$ times.\r\n\r\nA sequence $B_1, B_2, \\ldots, B_N$ is said to be lexicographically smaller than a sequence $C_1, C_2, \\ldots, C_N$ if there is an index $i$ such that $B_i \\lt C_i$ and for each valid $j \\lt i$, $B_j = C_j$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $X$. \r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing $N$ space-separated integers \u2015 the lexicographically smallest obtainable sequence.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10$\r\n- $2 \\le N \\le 10^5$\r\n- $1 \\le X \\le 10^9$\r\n- $1 \\le A_i \\le 10^9$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $N \\le 100$\r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n1\r\n3 3\r\n2 2 3\r\n```\r\n\r\n### Example Output\r\n```\r\n0 0 3\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The original sequence is $(2, 2, 3)$. Consider the following three operations:\r\n- Choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes from $2$ to $2 \\oplus 2^1 = 0$ and similarly, $A_2$ changes from $2$ to $2 \\oplus 2^1 = 0$. Now the sequence is $(0, 0, 3)$.\r\n- Next, choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes to $0 \\oplus 2^1 = 2$ and $A_2$ changes to $0 \\oplus 2^1 = 2$. The sequence is $(2, 2, 3)$.\r\n- Next, again choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes to $2 \\oplus 2^1 = 0$ and $A_2$ changes to $2 \\oplus 2^1 = 0$. The sequence is $(0, 0, 3)$ again.\r\n\r\nWe can check that after exactly 3 operations, this is the lexicographically smallest sequence we can obtain.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou are given a sequence $A_1, A_2, \\ldots, A_N$ and you have to perform the following operation exactly $X$ times:\r\n- Choose two integers $i$ and $j$ such that $1 \\le i \\lt j \\le N$.\r\n- Choose a non-negative integer $p$.\r\n- Change $A_i$ to $A_i \\oplus 2^p$, and change $A_j$ to $A_j \\oplus 2^p$, where $\\oplus$ denotes [bitwise XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR).\r\n\r\nFind the lexicographically smallest sequence which can be obtained by performing this operation exactly $X$ times.\r\n\r\nA sequence $B_1, B_2, \\ldots, B_N$ is said to be lexicographically smaller than a sequence $C_1, C_2, \\ldots, C_N$ if there is an index $i$ such that $B_i \\lt C_i$ and for each valid $j \\lt i$, $B_j = C_j$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $X$. \r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing $N$ space-separated integers \u2015 the lexicographically smallest obtainable sequence.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10$\r\n- $2 \\le N \\le 10^5$\r\n- $1 \\le X \\le 10^9$\r\n- $1 \\le A_i \\le 10^9$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $N \\le 100$\r\n\r\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\r\n3 3\r\n2 2 3",
+        "output": "0 0 3",
+        "explanation": "**Example case 1:** The original sequence is $(2, 2, 3)$. Consider the following three operations:\r\n- Choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes from $2$ to $2 \\oplus 2^1 = 0$ and similarly, $A_2$ changes from $2$ to $2 \\oplus 2^1 = 0$. Now the sequence is $(0, 0, 3)$.\r\n- Next, choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes to $0 \\oplus 2^1 = 2$ and $A_2$ changes to $0 \\oplus 2^1 = 2$. The sequence is $(2, 2, 3)$.\r\n- Next, again choose $i = 1$, $j = 2$ and $p = 1$. Then, $A_1$ changes to $2 \\oplus 2^1 = 0$ and $A_2$ changes to $2 \\oplus 2^1 = 0$. The sequence is $(0, 0, 3)$ again.\r\n\r\nWe can check that after exactly 3 operations, this is the lexicographically smallest sequence we can obtain.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 82105,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "fiction1729"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/fiction1729'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>fiction1729</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "ajit123q",
+  "date_added": "1-10-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "1786",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610868
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HXOR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

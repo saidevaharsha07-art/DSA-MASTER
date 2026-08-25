@@ -1,0 +1,120 @@
+{
+  "category_name": "green",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16G",
+  "contest_category": "6",
+  "problem_name": "Voting Fraud",
+  "intended_contest_code": null,
+  "body": "<p>In Trump University, the students' council election were held on December 15th. The election results were supposed to be published on 18th.\r\nBefore the counting was about to start, officials got a news that there were some malpractices done during the voting. More specifically, some people have voted more than once. The officials were not sure about this news. So they decided to check this matter. They admitted that there was not much security precautions that was taken during the election process-this must have caused the flaw, they thought.</p>\r\n\r\n<p>There are <b>N</b> students who took part in the voting. Each student has a student ID using that they will vote. Help the officials to find out if any one has voted more than once, by giving them the total number of fraud votes. Each student is supposed to cast at most one vote only.\u00a0So, if a students has cast more than one vote, all votes except one vote will be fraud votes.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>First line contains <b>T</b> the number of test cases. <b>T</b> test cases follow.</p>\r\n<p>First line of the each test case contains an integer <b>N</b> - the total number of students who took part in the election.</p>\r\n<p>Next line of each test case contains <b>N</b> space separated integers <b>A<sub>1</sub>,A<sub>2</sub>....A<sub>N</sub></b>, denoting the student ID for which the vote was registered.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single integer corresponding the the number of fake votes that has been cast.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>100</b></li>\r\n<li><b>1</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>100</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n4\r\n1 2 3 2\r\n4\r\n1 2 2 2\r\n\r\n<b>Output:</b>\r\n1\r\n2\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> In the first test case student with ID 2 have voted 2 times. So 1 fake vote is done in that case. </p>\r\n<p><b>Example case 2.</b> Student with ID 2, have voted thrice, i.e. 2 of his votes are fake.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **100**\n- **1** \u2264 **N** \u2264 **100**\n- **1** \u2264 **A<sub>i</sub>** \u2264 **100**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In Trump University, the students' council election was held on December 15th. The election results were supposed to be published on the 18th. Before the counting was about to start, officials got news that there were some malpractices done during the voting. More specifically, some people have voted more than once. The officials were not sure about this news. So they decided to check this matter. They admitted that there was not much security precautions that were taken during the election process\u2014this must have caused the flaw, they thought.\n\nThere are **N** students who took part in the voting. Each student has a student ID using that they will vote. Help the officials to find out if anyone has voted more than once, by giving them the total number of fraud votes. Each student is supposed to cast at most one vote only. So, if a student has cast more than one vote, all votes except one vote will be fraud votes.\n",
+    "inputFormat": "First line contains **T** the number of test cases. **T** test cases follow.\n\nFirst line of each test case contains an integer **N** - the total number of students who took part in the election.\n\nNext line of each test case contains **N** space-separated integers **A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>N</sub>**, denoting the student ID for which the vote was registered.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single integer corresponding to the number of fake votes that have been cast.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4\n1 2 3 2\n4\n1 2 2 2\n",
+        "output": "1\n2\n",
+        "explanation": "**Example case 1.** In the first test case, the student with ID 2 has voted 2 times. So 1 fake vote is done in that case.\n\n**Example case 2.** The student with ID 2 has voted thrice, i.e., 2 of his votes are fake.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610681
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16G",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

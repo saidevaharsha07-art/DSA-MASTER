@@ -1,0 +1,128 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "IRSTXOR",
+  "contest_category": "6",
+  "problem_name": "Interesting XOR!",
+  "intended_contest_code": "MARCH21",
+  "body": "\r\nYou are given an integer $C$. Let $d$ be the smallest integer such that $2^d$ is strictly greater than $C$.\r\n\r\nConsider all pairs of non-negative integers $(A,B)$ such that $A,B \\lt 2^d$ and $A \\oplus B = C$ ($\\oplus$ denotes the bitwise XOR operation). Find the maximum value of $A \\cdot B$ over all these pairs.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $C$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the maximum possible product $A \\cdot B$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq C \\leq 10^9$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\leq C \\leq 10^3$\r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n2\r\n13\r\n10\r\n```\r\n\r\n### Example Output\r\n```\r\n70\r\n91\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The binary representation of $13$ is \"1101\". We can use $A = 10$ (\"1010\" in binary) and $B = 7$ (\"0111\" in binary). This gives us the product $70$. No other valid pair $(A, B)$ can give us a larger product.\r\n\r\n**Example case 2:** The binary representation of $10$ is \"1010\". We can use $A = 13$ (\"1101\") and $B = 7$ (\"0111\"). This gives us the maximum product $91$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou are given an integer $C$. Let $d$ be the smallest integer such that $2^d$ is strictly greater than $C$.\r\n\r\nConsider all pairs of non-negative integers $(A,B)$ such that $A,B \\lt 2^d$ and $A \\oplus B = C$ ($\\oplus$ denotes the bitwise XOR operation). Find the maximum value of $A \\cdot B$ over all these pairs.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $C$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the maximum possible product $A \\cdot B$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq C \\leq 10^9$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\leq C \\leq 10^3$\r\n\r\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n13\r\n10",
+        "output": "70\r\n91",
+        "explanation": "**Example case 1:** The binary representation of $13$ is \"1101\". We can use $A = 10$ (\"1010\" in binary) and $B = 7$ (\"0111\" in binary). This gives us the product $70$. No other valid pair $(A, B)$ can give us a larger product.\r\n\r\n**Example case 2:** The binary representation of $10$ is \"1010\". We can use $A = 13$ (\"1101\") and $B = 7$ (\"0111\"). This gives us the maximum product $91$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 86676,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "semal10",
+  "problem_display_authors": [
+    "semal10"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/semal10'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>semal10</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "semal10",
+  "date_added": "28-11-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bitwise Operation",
+    "Greedy",
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Bit Manipulation",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1487",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610886
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=IRSTXOR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 26,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

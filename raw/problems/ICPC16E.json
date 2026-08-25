@@ -1,0 +1,120 @@
+{
+  "category_name": "Orange",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ICPC16E",
+  "contest_category": "6",
+  "problem_name": "Colorful Grids",
+  "intended_contest_code": null,
+  "body": "<p>You are given five <b>N</b> x <b>N</b> grids, where each grid consists of <b>N<sup>2</sup></b> unit squares. These grids have been placed in the form of a plus sign(+). For example, image below shows the figure for <b>N</b> = 2.</p>\r\n\r\n<p><img src=\"http://i.imgur.com/FObP43z.jpg\"></p>\r\n\r\n<p>Your aim is to count total distinct ways to color all <b>5*N<sup>2</sup></b> unit squares with <b>C</b> colors. Two ways are counted as same if one figure can be rotated in the two dimensional plane to obtain the other one.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. Each test case contains two space separated integers <b>N</b> and <b>C</b>, in one line.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing the required answer modulo <b>10<sup>9</sup> + 7</b>.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10000</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>18</sup></b></li>\r\n<li><b>1</b> \u2264 <b>C</b> \u2264 <b>10<sup>9</sup></b></li>\r\n</ul>\r\n<p>\u00a0</p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n1 1\r\n1 2\r\n\r\n<b>Output:</b>\r\n1\r\n12\r\n\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> The only way is to fill all cells with same color.<br/>\r\n<b>Example case 2.</b> Assume that the two colors are 1 and 2. The 12 distinct ways are:<br/>\r\n<br/>\r\n<pre>\r\n\r\n     2     \r\n  2 2 2  \r\n     2     \r\n_______\r\n\r\n     1     \r\n  2 2 2  \r\n     2     \r\n_______\r\n\r\n     2     \r\n  2 1 2  \r\n     2     \r\n_______\r\n\r\n     2     \r\n  1 2 1  \r\n     2     \r\n_______\r\n\r\n     1     \r\n  2 2 1  \r\n     2     \r\n_______\r\n\r\n     1     \r\n  2 1 2  \r\n     2     \r\n_______\r\n\r\n     1     \r\n  2 1 2  \r\n     1     \r\n_______\r\n\r\n     1     \r\n  2 1 1  \r\n     2     \r\n_______\r\n\r\n     1     \r\n  2 2 1  \r\n     1     \r\n_______\r\n\r\n     1     \r\n  2 1 1  \r\n     1     \r\n_______\r\n\r\n     1     \r\n  1 2 1  \r\n     1     \r\n_______\r\n\r\n     1     \r\n  1 1 1  \r\n     1     \r\n\r\n</pre></p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>You are given five <b>N</b> x <b>N</b> grids, where each grid consists of <b>N<sup>2</sup></b> unit squares. These grids have been placed in the form of a plus sign(+). For example, image below shows the figure for <b>N</b> = 2.</p>\n\n<p><img src=\"http://i.imgur.com/FObP43z.jpg\"></p>\n\n<p>Your aim is to count total distinct ways to color all <b>5*N<sup>2</sup></b> unit squares with <b>C</b> colors. Two ways are counted as same if one figure can be rotated in the two dimensional plane to obtain the other one.</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. Each test case contains two space separated integers <b>N</b> and <b>C</b>, in one line.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing the required answer modulo <b>10<sup>9</sup> + 7</b>.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10000</b></li>\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>18</sup></b></li>\n<li><b>1</b> \u2264 <b>C</b> \u2264 <b>10<sup>9</sup></b></li>\n</ul>\n<p>\u00a0</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 1\n1 2\n",
+        "output": "1\n12",
+        "explanation": "<p><b>Example case 1.</b> The only way is to fill all cells with same color.<br/>\n<b>Example case 2.</b> Assume that the two colors are 1 and 2. The 12 distinct ways are:<br/>\n<br/>\n<pre>\n\n     2     \n  2 2 2  \n     2     \n_______\n\n     1     \n  2 2 2  \n     2     \n_______\n\n     2     \n  2 1 2  \n     2     \n_______\n\n     2     \n  1 2 1  \n     2     \n_______\n\n     1     \n  2 2 1  \n     2     \n_______\n\n     1     \n  2 1 2  \n     2     \n_______\n\n     1     \n  2 1 2  \n     1     \n_______\n\n     1     \n  2 1 1  \n     2     \n_______\n\n     1     \n  2 2 1  \n     1     \n_______\n\n     1     \n  2 1 1  \n     1     \n_______\n\n     1     \n  1 2 1  \n     1     \n_______\n\n     1     \n  1 1 1  \n     1     \n\n</pre></p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-10-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610873
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ICPC16E",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

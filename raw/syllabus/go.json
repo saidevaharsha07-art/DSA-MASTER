@@ -1,0 +1,596 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "go",
+  "name": "Practice Go",
+  "title": "Practice Go",
+  "level": "Beginner",
+  "description": "Learn the basics of Go programming with ease in this interactive and practical course. This course will provide a good base to building real world applications in go.",
+  "time_to_complete": null,
+  "difficulty_range": "0-500",
+  "current_date": "2026-08-02 00:25:50",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/go/PGOL01/problems/GOPRACMCQ1",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Input, Output and Arithmetic",
+      "description": "Practice simple problems on input, output and basic math",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 1995,
+          "contest_code": "PGOL01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL01/problems/GOPRACMCQ1",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "24764",
+              "code": "GOPRACMCQ1",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "START01",
+              "name": "Number Mirror",
+              "difficulty_rating": "200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "GOPRACREARR1",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "GOPRACREAR1A",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "INSTNOODLE",
+              "name": "Chef and Instant Noodles",
+              "difficulty_rating": "456",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "GOPRACMCQ4",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24764",
+              "code": "CCLEARN",
+              "name": "CodeChef Learn Problem Solving",
+              "difficulty_rating": "287",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 1996,
+          "contest_code": "PGOL02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL02/problems/GOPRACMCQ2",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "24765",
+              "code": "GOPRACMCQ2",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24765",
+              "code": "LEARNSQL",
+              "name": "Learning SQL",
+              "difficulty_rating": "339",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24765",
+              "code": "GOPRACMCQ3",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24765",
+              "code": "PARKINGCHARG",
+              "name": "Parking Charges",
+              "difficulty_rating": "416",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Conditionals",
+      "description": "A notch higher - lets introduce conditional statements",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 1997,
+          "contest_code": "PGOL03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL03/problems/GOPRACMCQ5",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24766",
+              "code": "GOPRACMCQ5",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24766",
+              "code": "CBSPEED",
+              "name": "Chef and Brain Speed",
+              "difficulty_rating": "288",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24766",
+              "code": "GOPRACMCQ6",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24766",
+              "code": "MARKSTW",
+              "name": "Alice and Marks",
+              "difficulty_rating": "362",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24766",
+              "code": "GOPRACMCQ9",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24766",
+              "code": "ONEFULPAIRS",
+              "name": "Oneful Pairs",
+              "difficulty_rating": "374",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 1998,
+          "contest_code": "PGOL04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL04/problems/GOPRACREARR2",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24767",
+              "code": "GOPRACREARR2",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24767",
+              "code": "MY1STCONTEST",
+              "name": "My very 1st contest!",
+              "difficulty_rating": "284",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24767",
+              "code": "GOPRACMCQ8",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24767",
+              "code": "BLACKCEL",
+              "name": "Black cells in a chessboard",
+              "difficulty_rating": "746",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24767",
+              "code": "GOPRACMCQ7",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24767",
+              "code": "ABDIFF",
+              "name": "AB Difference",
+              "difficulty_rating": "347",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Loops",
+      "description": "Another notch higher - lets introduce Loops",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 1999,
+          "contest_code": "PGOL05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL05/problems/GOPRACREARR3",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24768",
+              "code": "GOPRACREARR3",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24768",
+              "code": "FLOW001",
+              "name": "Add Two Numbers",
+              "difficulty_rating": "242",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24768",
+              "code": "GOPRACMCQ11",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24768",
+              "code": "GDTURN",
+              "name": "Good Turn",
+              "difficulty_rating": "238",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24768",
+              "code": "GOPRACMCQ10",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24768",
+              "code": "WATERCONS",
+              "name": "Water Consumption",
+              "difficulty_rating": "254",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 2000,
+          "contest_code": "PGOL06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/go/PGOL06/problems/GOPRACMCQ12",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "24769",
+              "code": "GOPRACMCQ12",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24769",
+              "code": "AGELIMIT",
+              "name": "Age Limit",
+              "difficulty_rating": "245",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24769",
+              "code": "GOPRACMCQ13",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24769",
+              "code": "SQUATS",
+              "name": "Squats",
+              "difficulty_rating": "249",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 33,
+  "total_non_pro_problems": 33,
+  "up_next": [
+    {
+      "name": "Practice Basic Math",
+      "title": "Practice Basic Math",
+      "slug": "basic-math",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 85304,
+      "review": {
+        "rating": 4.5,
+        "users": 2233
+      },
+      "course_count": 2,
+      "description": "Basic Math includes problems on topics like arithmetic, sequences, and counting, which are fundamental to proper understanding of algorithmic logic."
+    },
+    {
+      "name": "Practice Strings",
+      "title": "Practice Strings",
+      "slug": "strings",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 89133,
+      "review": {
+        "rating": 4.5,
+        "users": 1133
+      },
+      "course_count": 2,
+      "description": "Practice String problems in C, C++, Python, Java and 10+ other languages. Solve these questions on Strings and prepare yourself for handling text based data."
+    },
+    {
+      "name": "500 to 1000 difficulty rating",
+      "title": "500 to 1000 difficulty problems",
+      "slug": "logical-problems",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 153886,
+      "review": {
+        "rating": 4.6,
+        "users": 2578
+      },
+      "course_count": 2,
+      "description": "Practice the easy logical problems available on CodeChef. The problems are in the difficulty range of 500 to 1000."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "79",
+    "name": "Learn Go",
+    "title": "Learn Go",
+    "slug": "go",
+    "description": "Learn the basics of Go programming with ease in this interactive and practical course. This course will provide a good base to building real world applications in go.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 469
+    },
+    "learners_count": 3140,
+    "lessons_count": 22
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Other Practice Paths",
+  "reviews": [
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 4822,
+  "path_review": {
+    "rating": 4.5,
+    "users": 477
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/go-dsa",
+  "roadmap_title": "Go with Problem Solving"
+}

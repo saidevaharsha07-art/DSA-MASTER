@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PERFCONT",
+  "contest_category": "6",
+  "problem_name": "A Balanced Contest",
+  "intended_contest_code": "OCT17",
+  "body": "<p>Chef wants to organize a contest. Predicting difficulty levels of the problems can be a daunting task. Chef wants his contests to be balanced in terms of difficulty levels of the problems.</p>\r\n\r\n<p>Assume a contest had total <b>P</b> participants. A problem that was solved by at least half of the participants (i.e. <b>P / 2</b> (integer division)) is said to be cakewalk difficulty. A problem solved by at max <b>P / 10</b> (integer division) participants is categorized to be a hard difficulty.</p>\r\n\r\n<p>Chef wants the contest to be balanced. According to him, a balanced contest must have exactly 1 cakewalk and exactly 2 hard problems. You are given the description of <b>N</b> problems and the number of participants solving those problems. Can you tell whether the contest was balanced or not?</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.</p>\r\n<p>The first line of each test case contains two space separated integers, <b>N, P</b> denoting the number of problems, number of participants respectively.</p>\r\n<p>The second line contains <b>N</b> space separated integers, <b>i</b>-th of which denotes number of participants solving the <b>i</b>-th problem.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output \"yes\" or \"no\" (without quotes) denoting whether the contest is balanced or not.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T, N</b> \u2264 500 </li>\r\n<li>1 \u2264 <b>P</b> \u2264 10<sup>8</sup> </li>\r\n<li>1 \u2264 Number of participants solving a problem \u2264 <b>P</b></li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<ul>\r\n<li><b>Subtask #1</b> (40 points): <b>P</b> is a multiple of 10</li>\r\n<li><b>Subtask #2</b> (60 points): Original constraints</li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input</b>\r\n6\r\n3 100\r\n10 1 100\r\n3 100\r\n11 1 100\r\n3 100\r\n10 1 10\r\n3 100\r\n10 1 50\r\n4 100\r\n50 50 50 50\r\n4 100\r\n1 1 1 1\r\n\r\n<b>Output</b>\r\nyes\r\nno\r\nno\r\nyes\r\nno\r\nno\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b>: The problems are of hard, hard and cakewalk difficulty. There is 1 cakewalk and 2 hard problems, so the contest is balanced.</p>\r\n<p><b>Example case 2.</b>: The second problem is hard and the third is cakewalk. There is 1 cakewalk and 1 hard problem, so the contest is not balanced.</p>\r\n<p><b>Example case 3.</b>: All the three problems are hard. So the contest is not balanced.</p>\r\n<p><b>Example case 4.</b>: The problems are of hard, hard, cakewalk difficulty. The contest is balanced.</p>\r\n<p><b>Example case 5.</b>: All the problems are cakewalk. The contest is not balanced.</p>\r\n<p><b>Example case 6.</b>: All the problems are hard. The contest is not balanced.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef wants to organize a contest. Predicting difficulty levels of the problems can be a daunting task. Chef wants his contests to be balanced in terms of difficulty levels of the problems.</p>\r\n\r\n<p>Assume a contest had total <b>P</b> participants. A problem that was solved by at least half of the participants (i.e. <b>P / 2</b> (integer division)) is said to be cakewalk difficulty. A problem solved by at max <b>P / 10</b> (integer division) participants is categorized to be a hard difficulty.</p>\r\n\r\n<p>Chef wants the contest to be balanced. According to him, a balanced contest must have exactly 1 cakewalk and exactly 2 hard problems. You are given the description of <b>N</b> problems and the number of participants solving those problems. Can you tell whether the contest was balanced or not?</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.</p>\r\n<p>The first line of each test case contains two space separated integers, <b>N, P</b> denoting the number of problems, number of participants respectively.</p>\r\n<p>The second line contains <b>N</b> space separated integers, <b>i</b>-th of which denotes number of participants solving the <b>i</b>-th problem.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output \"yes\" or \"no\" (without quotes) denoting whether the contest is balanced or not.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T, N</b> \u2264 500 </li>\r\n<li>1 \u2264 <b>P</b> \u2264 10<sup>8</sup> </li>\r\n<li>1 \u2264 Number of participants solving a problem \u2264 <b>P</b></li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<ul>\r\n<li><b>Subtask #1</b> (40 points): <b>P</b> is a multiple of 10</li>\r\n<li><b>Subtask #2</b> (60 points): Original constraints</li>\r\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "6\r\n3 100\r\n10 1 100\r\n3 100\r\n11 1 100\r\n3 100\r\n10 1 10\r\n3 100\r\n10 1 50\r\n4 100\r\n50 50 50 50\r\n4 100\r\n1 1 1 1",
+        "output": "yes\r\nno\r\nno\r\nyes\r\nno\r\nno",
+        "explanation": "<p><b>Example case 1.</b>: The problems are of hard, hard and cakewalk difficulty. There is 1 cakewalk and 2 hard problems, so the contest is balanced.</p>\r\n<p><b>Example case 2.</b>: The second problem is hard and the third is cakewalk. There is 1 cakewalk and 1 hard problem, so the contest is not balanced.</p>\r\n<p><b>Example case 3.</b>: All the three problems are hard. So the contest is not balanced.</p>\r\n<p><b>Example case 4.</b>: The problems are of hard, hard, cakewalk difficulty. The contest is balanced.</p>\r\n<p><b>Example case 5.</b>: All the problems are cakewalk. The contest is not balanced.</p>\r\n<p><b>Example case 6.</b>: All the problems are hard. The contest is not balanced.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 16968,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "alex_2oo8"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/alex_2oo8'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>alex_2oo8</span></a></div>",
+  "problem_editorialist": "xellos0",
+  "date_added": "9-09-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1184",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611159
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PERFCONT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 12,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

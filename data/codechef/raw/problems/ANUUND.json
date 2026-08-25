@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ANUUND",
+  "contest_category": "6",
+  "problem_name": "Ups and Downs",
+  "intended_contest_code": "COOK46",
+  "body": "<h3>Problem description</h3>\r\n<p>You will be given a zero-indexed array <b>A</b>. You need to rearrange its elements in such a way that the following conditions are satisfied:\r\n\r\n<ul><li><b>A[i] \u2264 A[i+1]</b> if <b>i</b> is even.</li>\r\n<li><b>A[i] \u2265 A[i+1]</b> if <b>i</b> is odd.</li></ul>\r\nIn other words the following inequality should hold: <b>A[0] \u2264 A[1] \u2265 A[2] \u2264 A[3] \u2265 A[4]</b>, and so on. Operations <b>\u2264</b> and <b>\u2265</b> should alter.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains a single integer <b>T</b> denoting the number of test cases. The first line of each test case contains an integer <b>N</b>, that is the size of the array <b>A</b>. The second line of each test case contains the elements of array <b>A</b></p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing <b>N</b> space separated integers, which are the elements of <b>A</b> arranged in the required order. If there are more than one valid arrangements, you can output any of them.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>100000</b></li>\r\n<li><b>Sum of N in one test file</b> \u2264 <b>600000</b></li>\r\n<li><b>1</b> \u2264 <b>A[i]</b> \u2264 <b>10^9</b></li>\r\n</ul>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n2\r\n3 2\r\n3\r\n10 5 2\r\n\r\n<b>Output:</b>\r\n2 3\r\n2 10 5\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b><br/>\r\n<b>A[0]</b> \u2264 <b>A[1]</b> is satisfied, 2 \u2264 3.<br/>\r\n<p><b>Example case 2.</b><br/>\r\n<b>A[0]</b> \u2264 <b>A[1]</b> is satisfied, 2 \u2264 10.<br/>\r\n<b>A[1]</b> \u2265 <b>A[2]</b> is satisfied, 10 \u2265 5.<br/>\r\n<b>Note:</b> 5 10 2 is also valid answer.<br/>\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<h3>Problem description</h3>\n<p>You will be given a zero-indexed array <b>A</b>. You need to rearrange its elements in such a way that the following conditions are satisfied:\n\n</p><ul><li><b>A[i] \u2264 A[i+1]</b> if <b>i</b> is even.</li>\n<li><b>A[i] \u2265 A[i+1]</b> if <b>i</b> is odd.</li></ul>\nIn other words the following inequality should hold: <b>A[0] \u2264 A[1] \u2265 A[2] \u2264 A[3] \u2265 A[4]</b>, and so on. Operations <b>\u2264</b> and <b>\u2265</b> should alter.\n\n<h3>Input</h3>\n<p>The first line contains a single integer <b>T</b> denoting the number of test cases. The first line of each test case contains an integer <b>N</b>, that is the size of the array <b>A</b>. The second line of each test case contains the elements of array <b>A</b></p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing <b>N</b> space separated integers, which are the elements of <b>A</b> arranged in the required order. If there are more than one valid arrangements, you can output any of them.</p>\n\n<h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>N</b> \u2264 <b>100000</b></li>\n<li><b>Sum of N in one test file</b> \u2264 <b>600000</b></li>\n<li><b>1</b> \u2264 <b>A[i]</b> \u2264 <b>10^9</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n3 2\n3\n10 5 2",
+        "output": "2 3\n2 10 5",
+        "explanation": "<p><b>Example case 1.</b><br /><b>A[0]</b> ? <b>A[1]</b> is satisfied, 2 ? 3.<br /></p><p><b>Example case 2.</b><br /><b>A[0]</b> ? <b>A[1]</b> is satisfied, 2 ? 10.<br /><b>A[1]</b> ? <b>A[2]</b> is satisfied, 10 ? 5.<br /><b>Note:</b> 5 10 2 is also valid answer.<br /></p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 5472,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1 - 3",
+  "source_sizelimit": "50000",
+  "problem_author": "anudeep2011",
+  "problem_display_authors": [
+    "anudeep2011"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anudeep2011'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>anudeep2011</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "dpraveen",
+  "date_added": "13-04-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc",
+    "anudeep2011",
+    "cook46",
+    "easy",
+    "sorting"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1198",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610606
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ANUUND",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 76,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

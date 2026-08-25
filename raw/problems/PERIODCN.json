@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PERIODCN",
+  "contest_category": "6",
+  "problem_name": "Count Periodic Numbers",
+  "intended_contest_code": null,
+  "body": "A positive integer $n$ is said to be periodic if satisfies the following property:\r\n\r\nTake the binary representation of $n$ without leading zeros. Then create an array which contains the length of consecutive runs of equal bits in this binary representation. All the elements of this array should be equal. If there are two unequal elements in this array, then $n$ is not periodic.\r\n\r\nFor example:\r\n\r\nSuppose $n = 3$. Its binary representation is 11. And the array created would be {2}, which corresponds to the fact that there are two equal bits in the beginning. This is periodic.\r\n\r\nSuppose $n = 51$. Its binary representation is 110011. And the array created would be {2, 2, 2}, which corresponds to the fact that there are two equal bits are the beginning, then the next two are equal, and then the next two are equal. This is also periodic.\r\n\r\nSuppose $n = 103$. Its binary representation is 1100111. And the array created would be {2, 2, 3}, which corresponds to the fact that there are two equal bits are the beginning, then the next two are equal, and then the next three are equal. This is not periodic because the array contains two different values (2 and 3).\r\n\r\nYou are given two integers $L, R$. Find the number of integers in the range $[L, R]$ (both inclusive) that are periodic.\r\n\r\n### Input\r\n- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\r\n- The first line of each test case contains two space-separated integers $L, R$.\r\n\r\n### Output\r\nFor each test case, output a single line containing an integer corresponding to the number of periodic numbers in the range $[L, R]$.\r\n\r\n###Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $1 \\le L, R \\leq 10^9$\r\n\r\n### Example Input\r\n```\r\n2\r\n3 3\r\n1 10\r\n```\r\n\r\n### Example Output\r\n```\r\n1\r\n6\r\n```\r\n\r\n###Explanation\r\n**Testcase 1**: The only number between $L$ and $R$ is 3, which is periodic. Hence the answer is 1.\r\n\r\n**Testcase 2**: The periodic numbers between 1 and 10 are 1, 2, 3, 5, 7, 10. Since there are six of them, then answer is 6.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $1 \\le L, R \\leq 10^9$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A positive integer $n$ is said to be periodic if it satisfies the following property:\n\nTake the binary representation of $n$ without leading zeros. Then create an array which contains the length of consecutive runs of equal bits in this binary representation. All the elements of this array should be equal. If there are two unequal elements in this array, then $n$ is not periodic.\n\nFor example:\n\n- Suppose $n = 3$. Its binary representation is `11`. And the array created would be `{2}`, which corresponds to the fact that there are two equal bits in the beginning. This is periodic.\n- Suppose $n = 51$. Its binary representation is `110011`. And the array created would be `{2, 2, 2}`, which corresponds to the fact that there are two equal bits at the beginning, then the next two are equal, and then the next two are equal. This is also periodic.\n- Suppose $n = 103$. Its binary representation is `1100111`. And the array created would be `{2, 2, 3}`, which corresponds to the fact that there are two equal bits at the beginning, then the next two are equal, and then the next three are equal. This is not periodic because the array contains two different values (2 and 3).\n\nYou are given two integers $L, R$. Find the number of integers in the range $[L, R]$ (both inclusive) that are periodic.\n",
+    "inputFormat": "- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains two space-separated integers $L, R$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing an integer corresponding to the number of periodic numbers in the range $[L, R]$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 3\n1 10\n",
+        "output": "1\n6\n",
+        "explanation": "**Testcase 1**: The only number between $L$ and $R$ is 3, which is periodic. Hence the answer is 1.\n\n**Testcase 2**: The periodic numbers between 1 and 10 are 1, 2, 3, 5, 7, 10. Since there are six of them, the answer is 6.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "12-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611161
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PERIODCN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

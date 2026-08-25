@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MAXCOMP",
+  "contest_category": "6",
+  "problem_name": "Event Organizer",
+  "intended_contest_code": "OCT12",
+  "body": "<p style=\"text-align:justify\">\r\nChef Po has given an online advertisement to provide <b>Event organizing services</b>. Chef got a huge response for his advertisement. He got various orders to conduct the events from different organizations. In turn, Chef will receive a compensation depend upon the type of event and the total numbers of persons in the event. Chef has received <b>N</b> orders for conducting events in this weekend in all. As weekend consists of two days all events will take place during the period of <b>48</b> hours. For the <b>i</b>-th order the corresponding event will start at <b>S<sub>i</sub></b> hours, ends at <b>E<sub>i</sub></b> hours and Chef will receive a compensation <b>C<sub>i</sub></b> for this event. For example, if <b>S<sub>i</sub> = 17</b> and <b>E<sub>i</sub> = 22</b> then duration of event is <b>22 &ndash; 17 = 5</b> hours and its time period is <b>17:00 &ndash; 22:00</b> of Saturday. Hours of Sunday are numbered by numbers from <b>24</b> to <b>48</b>. So, for example, <b>10:00</b> of Sunday will be represented as <b>10 + 24 = 34</b>. Because Chef is a newbie, the organizations had put a condition that Chef will receive a compensation for the event if and only if he is available for the entire duration of the event. It means that he can not choose overlapping events. Note, however, that if some event starts just in the moment another event has finished the Chef can safely conduct them both.\r\n</p>\r\n\r\n<p style=\"text-align:justify\">\r\nIn general Chef will obey the orders on first come first serve basis. But on weekends Chef will select the orders in such a way that the total compensation for all the events he will conduct will be the maximal. Now your task is to help Chef and find this maximal total compensation.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n\r\n<p style=\"text-align:justify\">\r\nThe first line of the input contains an integer <b>T</b>, the number of test cases. <b>T</b> test cases follow. The first line of each test case contains an integer <b>N</b>, the number of received orders for conducting events. Each of the next <b>N</b> lines contains three space separated integers <b>S<sub>i</sub></b>, <b>E<sub>i</sub></b>, <b>C<sub>i</sub></b>, the parameters of the <b>i</b>-th event described in the problem statement.\r\n</p>\r\n\r\n<h3>Constraints</h3>\r\n\r\n<p style=\"text-align:justify\">\r\n<b>1 &le; T &le; 10</b><br>\r\n<b>1 &le; N &le; 2000</b><br>\r\n<b>0 &le; S<sub>i</sub> < E<sub>i</sub> &le; 48</b><br>\r\n<b>0 &le; C<sub>i</sub> &le; 10<sup>6</sup></b>\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p style=\"text-align:justify\">\r\nOutput for each test case should contain a single integer in a separate line, the maximal compensation Chef Po can get.\r\n</p>\r\n\r\n<h3>Example</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n2\r\n4\r\n1 2 100\r\n2 3 200\r\n3 4 1600\r\n1 3 2100\r\n3\r\n1 10 2000\r\n2 5 100\r\n6 9 400\r\n\r\n<b>Output:</b>\r\n3700\r\n2000\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n\r\n<p style=\"text-align:justify\">\r\n<b>Case 1.</b> The best choice here is to conduct <b>3</b>rd and <b>4</b>th events. The total compensation is equal to <b>1600 + 2100 = 3700</b>. These events do not overlap since <b>3</b>rd event starts just after the finish of the <b>4</b>th one. Alternatively we can conduct first three events that also do not overlap. But in this case compensation will be only <b>100 + 200 + 1600 = 1900</b>.\r\n</p>\r\n\r\n<p style=\"text-align:justify\">\r\n<b>Case 2.</b> Note that first event overlaps with both second and third events, while the last two events do not overlap. Hence there are two reasonable choices available for Chef. One is to take just the first order with total compensation <b>2000</b> and the second one is to take the last two orders with total compensation <b>100 + 400 = 500</b>. Clearly the first choice is better. Hence the answer is <b>2000</b>.\r\n</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p style=\"text-align:justify;\">\nChef Po has given an online advertisement to provide <b>Event organizing services</b>. Chef got a huge response for his advertisement. He got various orders to conduct the events from different organizations. In turn, Chef will receive a compensation depend upon the type of event and the total numbers of persons in the event. Chef has received <b>N</b> orders for conducting events in this weekend in all. As weekend consists of two days all events will take place during the period of <b>48</b> hours. For the <b>i</b>-th order the corresponding event will start at <b>S<sub>i</sub></b> hours, ends at <b>E<sub>i</sub></b> hours and Chef will receive a compensation <b>C<sub>i</sub></b> for this event. For example, if <b>S<sub>i</sub> = 17</b> and <b>E<sub>i</sub> = 22</b> then duration of event is <b>22 \u2013 17 = 5</b> hours and its time period is <b>17:00 \u2013 22:00</b> of Saturday. Hours of Sunday are numbered by numbers from <b>24</b> to <b>48</b>. So, for example, <b>10:00</b> of Sunday will be represented as <b>10 + 24 = 34</b>. Because Chef is a newbie, the organizations had put a condition that Chef will receive a compensation for the event if and only if he is available for the entire duration of the event. It means that he can not choose overlapping events. Note, however, that if some event starts just in the moment another event has finished the Chef can safely conduct them both.\n</p>\n\n<p style=\"text-align:justify;\">\nIn general Chef will obey the orders on first come first serve basis. But on weekends Chef will select the orders in such a way that the total compensation for all the events he will conduct will be the maximal. Now your task is to help Chef and find this maximal total compensation.\n</p>\n\n<h3>Input</h3>\n\n<p style=\"text-align:justify;\">\nThe first line of the input contains an integer <b>T</b>, the number of test cases. <b>T</b> test cases follow. The first line of each test case contains an integer <b>N</b>, the number of received orders for conducting events. Each of the next <b>N</b> lines contains three space separated integers <b>S<sub>i</sub></b>, <b>E<sub>i</sub></b>, <b>C<sub>i</sub></b>, the parameters of the <b>i</b>-th event described in the problem statement.\n</p>\n\n<h3>Constraints</h3>\n\n<p style=\"text-align:justify;\">\n<b>1 \u2264 T \u2264 10</b><br /><b>1 \u2264 N \u2264 2000</b><br /><b>0 \u2264 S<sub>i</sub> < E<sub>i</sub> \u2264 48</b><br /><b>0 \u2264 C<sub>i</sub> \u2264 10<sup>6</sup></b>\n</p>\n\n<h3>Output</h3>\n<p style=\"text-align:justify;\">\nOutput for each test case should contain a single integer in a separate line, the maximal compensation Chef Po can get.\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4\n1 2 100\n2 3 200\n3 4 1600\n1 3 2100\n3\n1 10 2000\n2 5 100\n6 9 400",
+        "output": "3700\n2000",
+        "explanation": "<p style=\"text-align:justify;\">\n<b>Case 1.</b> The best choice here is to conduct <b>3</b>rd and <b>4</b>th events. The total compensation is equal to <b>1600 + 2100 = 3700</b>. These events do not overlap since <b>3</b>rd event starts just after the finish of the <b>4</b>th one. Alternatively we can conduct first three events that also do not overlap. But in this case compensation will be only <b>100 + 200 + 1600 = 1900</b>.\n</p>\n\n<p style=\"text-align:justify;\">\n<b>Case 2.</b> Note that first event overlaps with both second and third events, while the last two events do not overlap. Hence there are two reasonable choices available for Chef. One is to take just the first order with total compensation <b>2000</b> and the second one is to take the last two orders with total compensation <b>100 + 400 = 500</b>. Clearly the first choice is better. Hence the answer is <b>2000</b>.\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 703,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "khad_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/khad_adm'>khad_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "anton_lunyov"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anton_lunyov'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>anton_lunyov</span></a></div>",
+  "problem_editorialist": "anton_lunyov",
+  "date_added": "31-05-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Dynamic Programming",
+    "Sorting",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1611",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611066
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MAXCOMP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 42,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,127 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EOOPR",
+  "contest_category": "6",
+  "problem_name": "The One Who Knocks!",
+  "intended_contest_code": "INFY20",
+  "body": "*\u201cI am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No! I am the one who knocks!\u201d*\r\n\r\nSkyler fears Walter and ponders escaping to Colorado. Walter wants to clean his lab as soon as possible and then go back home to his wife. \r\n\r\nIn order clean his lab, he has to achieve cleaning level of lab as $Y$. The current cleaning level of the lab is $X$. \r\n\r\nHe must choose one positive **odd** integer $a$ and one positive **even** integer $b$. Note that, he cannot change $a$ or $b$ once he starts cleaning.\r\n\r\nHe can perform any one of the following operations for one round of cleaning:  \r\n\u00a0\u00a01. Replace $X$ with $X+a$.  \r\n\u00a0\u00a02. Replace $X$ with $X-b$.\r\n\r\nFind minimum number of rounds (possibly zero) to make lab clean.\r\n\r\n###Input:\r\n\r\n- First line will contain $T$, number of test cases. $T$ testcases follow :  \r\n- Each test case contains two space separated integers $X, Y$. \r\n\r\n###Output:\r\nFor each test case, output an integer denoting minimum number of rounds to clean the lab.\r\n###Constraints \r\n- $1 \\leq T \\leq 10^5$\r\n- $ |X|,|Y| \\leq 10^9$\r\n\r\n###Sample Input:\r\n\t3\r\n\t0 5\r\n\t4 -5\r\n\t0 10000001\r\n\r\n###Sample Output:\r\n\t1\r\n\t2\r\n\t1\r\n\t\r\n###EXPLANATION:\r\n- For the first testcase, you can convert $X$ to $Y$  by choosing $a=5$ and $b=2$.   \r\nIt will cost minimum of $1$ cleaning round. You can select any other combination of $a, b$ satisfying above condition but will take minimum of $1$ cleaning round in any case.\r\n\r\n- For the second testcase, you can convert $X$ to $Y$ by choosing $a=1$ and $b=10$. In first round they will replace $X$ to $X+a$ and then in second round replace to $X-b$. You can perform only one operation in one round.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*\u201cI am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No! I am the one who knocks!\u201d*\n\nSkyler fears Walter and ponders escaping to Colorado. Walter wants to clean his lab as soon as possible and then go back home to his wife. \n\nIn order clean his lab, he has to achieve cleaning level of lab as $Y$. The current cleaning level of the lab is $X$. \n\nHe must choose one positive **odd** integer $a$ and one positive **even** integer $b$. Note that, he cannot change $a$ or $b$ once he starts cleaning.\n\nHe can perform any one of the following operations for one round of cleaning:  \n\u00a0\u00a01. Replace $X$ with $X+a$.  \n\u00a0\u00a02. Replace $X$ with $X-b$.\n\nFind minimum number of rounds (possibly zero) to make lab clean.\n\n###Input:\n\n- First line will contain $T$, number of test cases. $T$ testcases follow :  \n- Each test case contains two space separated integers $X, Y$. \n\n###Output:\nFor each test case, output an integer denoting minimum number of rounds to clean the lab.\n###Constraints \n- $1 \\leq T \\leq 10^5$\n- $ |X|,|Y| \\leq 10^9$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n0 5\n4 -5\n0 10000001",
+        "output": "1\n2\n1",
+        "explanation": "- For the first testcase, you can convert $X$ to $Y$  by choosing $a=5$ and $b=2$.   \nIt will cost minimum of $1$ cleaning round. You can select any other combination of $a, b$ satisfying above condition but will take minimum of $1$ cleaning round in any case.\n\n- For the second testcase, you can convert $X$ to $Y$ by choosing $a=1$ and $b=10$. In first round they will replace $X$ to $X+a$ and then in second round replace to $X-b$. You can perform only one operation in one round.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 80731,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "aman1108",
+  "problem_display_authors": [
+    "aman1108"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/aman1108'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>aman1108</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "aman1108",
+  "date_added": "12-10-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Case work",
+    "Conditional Statements",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Special",
+    "Basic Programming Concepts",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1749",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610806
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EOOPR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

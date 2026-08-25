@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BIN_OD",
+  "contest_category": "6",
+  "problem_name": "Binod",
+  "intended_contest_code": "START65",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 5 \\cdot 10^4$\n- $2 \\leq N \\leq 10^5$\n- $1 \\leq Q \\leq 5\\cdot 10^5$\n- $0 \\leq A_i \\lt 2^{60}$\n- $1 \\leq L_1 \\leq R_1 \\lt L_2 \\leq R_2 \\leq N$.\n- $0 \\leq k \\lt 60$\n- The sum of $N$ and $Q$ over all test cases won't exceed $10^5$ and $5\\cdot 10^5$ respectively.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*A Binod is a person who is very good with bitwise operations. Help Alice solve the following problem and become a Binod.*\n\nYou are given an array $A$ of $N$ elements. Process $Q$ queries on this array, of the following form:\n- Each query contains $5$ integers $k, L_1, R_1, L_2, R_2$. It is guaranteed that $L_1 \\leq R_1 \\lt L_2 \\leq R_2$.\n- The answer to a query is the number of pairs $(i, j)$ such that:\n    - $L_1 \\leq i \\leq R_1$ and $L_2 \\leq j \\leq R_2$\n    - $A_i \\oplus A_j$ has its $k$-th bit set. Here $\\oplus$ denotes the [bitwise XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) operation.\n\n**Note:** An integer $x$ is said to have its $k$-th bit set if the (unique) binary representation of $x$ contains $2^k$. For example, $5 = 101_2 = 2^0 + 2^2$ has its zeroth and second bits set but not the first, while $16 = 10000_2 = 2^4$ has only its fourth bit set.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of multiple lines of input.\n    - The first line of each test case contains two space-separated integers $N$ and $Q$ \u2014 the number of elements in array and number of queries, respectively.\n    - The second line of each test case contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\n    - The next $Q$ lines describe queries. The $i$-th of these $Q$ lines contains $5$ space-separated integers $k, L_1, R_1, L_2, R_2$ \u2014 the parameters described in the statement.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output $Q$ lines.The $i$-th of these lines should be the answer to the $i$-th query.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n5 2\n1 2 4 3 2\n1 1 3 5 5\n2 1 2 3 5\n6 2\n3 5 6 13 12 20\n1 1 4 5 6\n3 2 3 4 6\n",
+        "output": "2\n2\n4\n4",
+        "explanation": "**Test case $1$:** The array is $A = [1, 2, 4, 3, 2]$.\n- Query $1$: the ranges are $[1, 3]$ and $[5, 5]$, and $k = 1$. There are three pairs of $(i, j)$: $(1, 5), (2, 5), (3, 5)$.\n    - $A_1 \\oplus A_5 = 1 \\oplus 2 = 3 = 11_2$ has its first bit set\n    - $A_2 \\oplus A_5 = 2 \\oplus 2 = 0 = 0_2$ doesn't have its first bit set\n    - $A_3 \\oplus A_5 = 4 \\oplus 2 = 6 = 110_2$ has its first bit set\n    - So, the answer is $2$.\n- Query $2$: the ranges are $[1, 2]$ and $[3, 5]$, and now $k = 2$. This time, there are $6$ pairs of indices. Of them, it can be verified that $(1, 3)$ and $(2, 3)$ are the ones that satisfy the given condition.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 104088,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "2.5",
+  "source_sizelimit": "50000",
+  "problem_author": "still_me",
+  "problem_display_authors": [
+    "still_me"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/still_me'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>still_me</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "8-11-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bitwise Operation",
+    "Prefix Sum"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Bit Manipulation",
+    "Algorithms",
+    "Simple Algos"
+  ],
+  "difficulty_rating": "1776",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610642
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BIN_OD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

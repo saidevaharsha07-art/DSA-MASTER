@@ -1,0 +1,126 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "NOKIA",
+  "contest_category": "6",
+  "problem_name": "Connecting Soldiers",
+  "intended_contest_code": "COOK23",
+  "body": "<p align=\"justify\">\r\nTo protect people from evil, \r\na long and tall wall was constructed a few years ago. \r\nBut just a wall is not safe, there should also be soldiers on it, \r\nalways keeping vigil. \r\nThe wall is very long and connects the left and the right towers. \r\nThere are exactly <b>N</b> spots (numbered 1 to <b>N</b>) on the wall for soldiers. \r\nThe <i>K</i><sup>th</sup> spot is <i>K</i> miles far from the left tower and (<b>N</b>+1-<i>K</i>) miles from the right tower.\r\n\r\n<p align=\"justify\">\r\nGiven a permutation of spots <i>P</i> of {1, 2, ..., <b>N</b>}, soldiers occupy the <b>N</b> spots in that order. \r\nThe <i>P</i>[<i>i</i>]<sup>th</sup> spot is occupied before the <i>P</i>[<i>i</i>+1]<sup>th</sup> spot. \r\nWhen a soldier occupies a spot, he is connected to his nearest soldier already placed to his left. \r\nIf there is no soldier to his left, he is connected to the left tower. The same is the case with right side. \r\nA connection between two spots requires a wire of length equal to the distance between the two.\r\n\r\n<p align=\"justify\">\r\nThe realm has already purchased a wire of <b>M</b> miles long from Nokia, \r\npossibly the wire will be cut into smaller length wires. \r\nAs we can observe, the total length of the used wire depends on the permutation of the spots <i>P</i>. Help the realm in minimizing the length of the unused wire. If there is not enough wire, output -1.\r\n\r\n<h3>Input</h3>\r\n<p align=\"justify\">First line contains an integer <b>T</b> (number of test cases, 1 \u2264 <b>T</b> \u2264 10 ). Each of the next <b>T</b> lines contains two integers <b>N M</b>, as explained in the problem statement (1 \u2264 <b>N</b> \u2264 30 , 1 \u2264 <b>M</b> \u2264 1000).\r\n\r\n<h3>Output</h3>\r\n<p align=\"justify\">For each test case, output the minimum length of the unused wire, or -1 if the the wire is not sufficient.\r\n\r\n<h3>Example</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n4\r\n3 8\r\n3 9\r\n2 4\r\n5 25\r\n\r\n<b>Output:</b>\r\n0\r\n0\r\n-1\r\n5\r\n</pre>\r\n<br/><br/>\r\n<b>Explanation:</b><br/>\r\nIn the 1st case, for example, the permutation <i>P</i> = {2, 1, 3} will use the exact 8 miles wires in total.<br/><br/>\r\nIn the 2nd case, for example, the permutation <i>P</i> = {1, 3, 2} will use the exact 9 miles wires in total.<br/><br/>\r\nTo understand the first two cases, you can see the following figures:<br/>\r\n<img src=\"https://www.codechef.com/download/NOKIA1.png\" width=\"500\" height=\"683\"><br/>\r\n<br/><br/>\r\n<img src=\"https://www.codechef.com/download/NOKIA2.png\" width=\"500\" height=\"692\"><br/>\r\n<br/><br/>\r\nIn the 3rd case, the minimum length of wire required is 5, for any of the permutations {1,2} or {2,1}, so length 4 is not sufficient.<br/><br/>\r\nIn the 4th case, for the permutation {1, 2, 3, 4, 5} we need the maximum length of the wire = 20. So minimum possible unused wire length = 25 - 20 = 5.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p align=\"justify\">\nTo protect people from evil, \na long and tall wall was constructed a few years ago. \nBut just a wall is not safe, there should also be soldiers on it, \nalways keeping vigil. \nThe wall is very long and connects the left and the right towers. \nThere are exactly <b>N</b> spots (numbered 1 to <b>N</b>) on the wall for soldiers. \nThe <i>K</i><sup>th</sup> spot is <i>K</i> miles far from the left tower and (<b>N</b>+1-<i>K</i>) miles from the right tower.\n\n</p><p align=\"justify\">\nGiven a permutation of spots <i>P</i> of {1, 2, ..., <b>N</b>}, soldiers occupy the <b>N</b> spots in that order. \nThe <i>P</i>[<i>i</i>]<sup>th</sup> spot is occupied before the <i>P</i>[<i>i</i>+1]<sup>th</sup> spot. \nWhen a soldier occupies a spot, he is connected to his nearest soldier already placed to his left. \nIf there is no soldier to his left, he is connected to the left tower. The same is the case with right side. \nA connection between two spots requires a wire of length equal to the distance between the two.\n\n</p><p align=\"justify\">\nThe realm has already purchased a wire of <b>M</b> miles long from Nokia, \npossibly the wire will be cut into smaller length wires. \nAs we can observe, the total length of the used wire depends on the permutation of the spots <i>P</i>. Help the realm in minimizing the length of the unused wire. If there is not enough wire, output -1.\n\n</p><h3>Input</h3>\n<p align=\"justify\">First line contains an integer <b>T</b> (number of test cases, 1 \u2264 <b>T</b> \u2264 10 ). Each of the next <b>T</b> lines contains two integers <b>N M</b>, as explained in the problem statement (1 \u2264 <b>N</b> \u2264 30 , 1 \u2264 <b>M</b> \u2264 1000).\n\n</p><h3>Output</h3>\n<p align=\"justify\">For each test case, output the minimum length of the unused wire, or -1 if the the wire is not sufficient.\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n3 8\n3 9\n2 4\n5 25",
+        "output": "0\n0\n-1\n5",
+        "explanation": "In the 1st case, for example, the permutation <i>P</i> = {2, 1, 3} will use the exact 8 miles wires in total.<br /><br />\nIn the 2nd case, for example, the permutation <i>P</i> = {1, 3, 2} will use the exact 9 miles wires in total.<br /><br />\nTo understand the first two cases, you can see the following figures:<br /><img src=\"https://www.codechef.com/download/NOKIA1.png\" width=\"500\" height=\"683\" alt=\"NOKIA1.png\" /><br /><br /><br /><img src=\"https://www.codechef.com/download/NOKIA2.png\" width=\"500\" height=\"692\" alt=\"NOKIA2.png\" /><br /><br /><br />\nIn the 3rd case, the minimum length of wire required is 5, for any of the permutations {1,2} or {2,1}, so length 4 is not sufficient.<br /><br />\nIn the 4th case, for the permutation {1, 2, 3, 4, 5} we need the maximum length of the wire = 20. So minimum possible unused wire length = 25 - 20 = 5.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 314,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "anil_adm",
+  "problem_display_authors": [
+    "anil_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anil_adm'>anil_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "laycurse"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/laycurse'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>laycurse</span></a></div>",
+  "problem_editorialist": "flying_ant",
+  "date_added": "7-06-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bitmasking",
+    "Divide and Conquer"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Bit Manipulation",
+    "Algorithms",
+    "Recursion"
+  ],
+  "difficulty_rating": "1831",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611113
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=NOKIA",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 21,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

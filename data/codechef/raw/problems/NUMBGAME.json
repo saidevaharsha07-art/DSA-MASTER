@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "NUMBGAME",
+  "contest_category": "6",
+  "problem_name": "Number Game",
+  "intended_contest_code": null,
+  "body": "<p>You are playing a game with a robot. The game starts with two integers: <b>A</b> and <b>M</b>. The robot makes exactly one move in the entire game, and it does so at the very beginning - it will remove exactly 1 digit from <b>A</b> and output it as the starting value (say <i>X</i>). Note that the value <b>A</b> remains intact. It is not changed by the robot. After the robot makes its moves, it is your turn. You can make an unlimited number of moves. In each move, you must remove exactly 1 digit from A and append it to <i>X</i> (to the right side of X). Again note that none of your moves change the value of <b>A</b>. You win if you can eventually make X a multiple of M (i.e. X mod M = 0). How many possible starting moves bot can make such that you are guaranteed to win assuming you play optimally?</p>\r\n<p>\r\nHere is an example of a game:\r\nSuppose the numbers are <b>A</b> = 1003, <b>M</b> = 4. The robot can make four possible starting moves: 003 by removing 1st digit, 103 by removing 2nd or 3rd digit (both count as a separate possibilities even though the starting X will be same) or 100 by removing the 4th digit.\r\nLet us say the robot chooses 003 as the starting move. Then you can win by appending 100 (by removing the 4th digit) making X = 003100 which is divisible by 4.\r\n</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows</li>\r\n<li>The only line of each test case contains 2 integers <b>A</b> and <b>M</b>.</li>\r\n</ul>\r\n\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n<li>For each test case, output a single line containing the number of possible first moves that the robot can make such that you can force a win.</li>\r\n</ul>\r\n\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\r\n<li><b>10</b> \u2264 <b>A</b> &lt; <b>10<sup>10<sup>6</sup></sup></b> (i.e. The number of digits in <b>A</b> can be upto 10<sup>6</sup>) </li>\r\n<li><b>1</b> \u2264 <b>M</b> \u2264 <b>1000</b></li>\r\n<li>The sum of number of digits of <b>A</b> over all test cases will not exceed <b>5 * 10^6</b>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n5\r\n1003 4\r\n11 4\r\n2004 3\r\n123 1\r\n100000 27\r\n\r\n<b>Output:</b>\r\n4\r\n0\r\n4\r\n3\r\n6\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Testcase 1:</b> Whatever the robot's starting move is, you can win by appending 100</p>\r\n<p><b>Testcase 2:</b> It is not possible to win, whatever the starting move of the robot </p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $10 \\leq A < 10^{10^6}$ (i.e. The number of digits in **A** can be upto $10^6$)\n- $1 \\leq M \\leq 1000$\n- The sum of number of digits of **A** over all test cases will not exceed $5 \\times 10^6$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are playing a game with a robot. The game starts with two integers: **A** and **M**. The robot makes exactly one move in the entire game, and it does so at the very beginning - it will remove exactly 1 digit from **A** and output it as the starting value (say *X*). Note that the value **A** remains intact. It is not changed by the robot. After the robot makes its moves, it is your turn. You can make an unlimited number of moves. In each move, you must remove exactly 1 digit from A and append it to *X* (to the right side of X). Again note that none of your moves change the value of **A**. You win if you can eventually make X a multiple of M (i.e. $X \\mod M = 0$). How many possible starting moves bot can make such that you are guaranteed to win assuming you play optimally?\n\nHere is an example of a game:\nSuppose the numbers are **A** = 1003, **M** = 4. The robot can make four possible starting moves: 003 by removing 1st digit, 103 by removing 2nd or 3rd digit (both count as a separate possibilities even though the starting X will be same) or 100 by removing the 4th digit.\nLet us say the robot chooses 003 as the starting move. Then you can win by appending 100 (by removing the 4th digit) making X = 003100 which is divisible by 4.\n",
+    "inputFormat": "- The first line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n- The only line of each test case contains 2 integers **A** and **M**.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output a single line containing the number of possible first moves that the robot can make such that you can force a win.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n1003 4\n11 4\n2004 3\n123 1\n100000 27\n",
+        "output": "4\n0\n4\n3\n6\n",
+        "explanation": "**Testcase 1:** Whatever the robot's starting move is, you can win by appending 100.\n\n**Testcase 2:** It is not possible to win, whatever the starting move of the robot.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/NUMBGAME\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"https://www.codechef.com/KGP17ROL/problems/NUMBGAME\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/balajiganapath\" rel=\"nofollow noopener\">Balajiganapathi S</a></p>\n<p><strong>Tester:</strong> <a href=\"https://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/usaxena95\" rel=\"nofollow noopener\">Utkarsh Saxena</a></p>\n<h3>PROBLEM</h3>\n<p>Given 2 integers <span class=\"math\">A</span> and <span class=\"math\">M</span>. Construct a set <span class=\"math\">S</span> of all integers that can be obtained by<br>\ndeleting exactly one digit of <span class=\"math\">A</span>.<br>\nFind number of integers in <span class=\"math\">S</span> such that<br>\nconcatenating zero or more integers from <span class=\"math\">S</span> to the right of it will give a multiple of <span class=\"math\">M</span>.</p>\n<p>Constraints: <span class=\"math\">1 \\le A \\le 10^{10^6}</span>, <span class=\"math\">1\\leq M\\leq 10^3</span></p>\n<h3>EXPLANATION</h3>\n<p>Let the number of digits in <span class=\"math\">A</span> be <span class=\"math\">D</span>.<br>\nThe number of elements in the set <span class=\"math\">S</span> will be <span class=\"math\">D</span> (repetitions are allowed).<br>\nSince the final aim is to make a number <span class=\"math\">X</span> such that <span class=\"math\">X\\equiv0\\space mod\\space M</span>,<br>\nit is better to calculate each operation <span class=\"math\">mod\\space M</span>.</p>\n<p><span class=\"math\">\\therefore</span> Total number of distinct integers <span class=\"math\">mod\\space M</span> in <span class=\"math\">S</span> can be atmost <span class=\"math\">M</span>.<br>\nWe can find the integer <span class=\"math\">mod\\space M</span> made by deleting <span class=\"math\">i^{th}</span> digit of <span class=\"math\">A</span> as<br>\n<span class=\"math\">P_{i-1}*10^{N-i}*S_{i+1} mod\\space M</span>.</p>\n<p>Here <span class=\"math\">P_i</span> = integer <span class=\"math\">mod\\space M</span> represented by <span class=\"math\">A[1..i]</span>,<br>\n<span class=\"math\">S_i</span> = integer <span class=\"math\">mod\\space M</span> represented by <span class=\"math\">A[i..N]</span></p>\n<p>Denote <span class=\"math\">S^\\prime</span> = The set of distinct integers <span class=\"math\">mod\\space M</span> in <span class=\"math\">S</span>.<br>\nAssume we have concatenated some elements of <span class=\"math\">S</span> to form an integer <span class=\"math\">\\equiv X\\space mod\\space M</span>.<br>\nAdding one more integer <span class=\"math\">Y \\in S</span> to the right of <span class=\"math\">X</span>.<br>\nThe new integer thus formed <span class=\"math\">Z = X * 10^{N-1} + Y \\space mod\\space M</span>.</p>\n<p>Thus for a given remainder <span class=\"math\">X</span> we can convert it to another integer with remainder <span class=\"math\">Z</span> by the above formula.</p>\n<p>We can make a graph of <span class=\"math\">M</span> vertices for these transitions.<br>\nThe <span class=\"math\">i^{th}</span> node denotes that there exists a set of integers in <span class=\"math\">S</span> when concatenated together given <span class=\"math\">i\\space mod\\space M</span>.<br>\nThere is a directed edge form node <span class=\"math\">X</span> to node <span class=\"math\">Z</span> if there exists a <span class=\"math\">Y</span> in <span class=\"math\">S^\\prime</span><br>\nsuch that <span class=\"math\">Z = X * 10^{N-1} + Y \\space mod\\space M</span>.</p>\n<p>To answer the problem we need to find those nodes from which there is a path to node <span class=\"math\">0</span><br>\nand also are present in <span class=\"math\">S^\\prime</span>.<br>\nThis is equivalent to finding all those nodes that are reachable from <span class=\"math\">0</span> in the reverse<br>\ngraph (direction of edges reversed).</p>\n<h3>Time Complexity</h3>\n<p>Array <span class=\"math\">P_i</span>, Array <span class=\"math\">S_i</span> and Set <span class=\"math\">S^\\prime</span> can be calculated in <span class=\"math\">O(N)</span></p>\n<p>Graph can be developed in <span class=\"math\">O(M^2)</span> time and space.<br>\nFinding all reachable nodes from <span class=\"math\">0</span> will take another <span class=\"math\">O(M^2)</span> time for bfs.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17KGP/Setter/NUMBGAME.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17KGP/Tester/NUMBGAME.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17813,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "usaxena95",
+  "date_added": "13-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm17kgp",
+    "balajiganapath",
+    "depth-first-search",
+    "graphs",
+    "kgp17rol",
+    "medium",
+    "number-theory"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Number Theory",
+  "editorial_url": "https://discuss.codechef.com/problems/NUMBGAME",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611116
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=NUMBGAME",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

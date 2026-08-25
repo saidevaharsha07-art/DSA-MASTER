@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ALIENINV",
+  "contest_category": "6",
+  "problem_name": "Alien Invasion",
+  "intended_contest_code": "",
+  "body": "Evil aliens from Alpha Centauri are planning to invade the Earth. They thought of invading New York City first, but that is a pretty popular target, and their colleagues from Proxima Centauri are already invading it. Thus, Alpha Centauriens had to figure out another target and the country of Treeland was their choice.\r\n\r\nThe country of Treeland consists of $n$ cities connected with $n - 1$ bidirectional roads in such a way that there exists exactly one path between any pair of cities. The cities are numbered from 1 to $n$. The aliens will start the invasion by randomly assigning each of the cities some random **real** value $p_i$ taken between $0$ and $1$ with uniform distribution. They call these values **priorities**. Then, $n$ steps of invasion will take place. Each step is done as follows.\r\n- Aliens consider all the cities that are not yet invaded.\r\n- Out of these cities they select all the cities that have no more than one uninvaded neighbor. Recall that two cities are called neighbors iff they are connected by a direct road. One can show that there will always be at least one such city.\r\n- Among all cities, selected in the second step, aliens pick the one with the minimum value of $p_i$. Though the probability for two cities being assigned the same priority is zero, they agreed to pick the one with minimum index among all cities with minimum priority.\r\n- Finally, aliens invade the city selected at the step three. You may assume it is now removed from Treeland's map and is no longer considered by the aliens.\r\n\r\nThe government works hard to save its citizens and asks you to find out how much time they have. For each city, compute the expected number of the step during which this city will be invaded. Steps are numbered starting with $1$. \r\n\r\n\r\n###Input:\r\n- The first line of the input contains a single integer $t$: the number of test cases in this input. Then follow $t$ test cases description.\r\n- The first line of each test case description starts with a single integer $n$:  the number of cities in Treeland. \r\n- Then follow $n - 1$ lines containing two integers $u_i$ and $v_i$ each. These are the indexes of cities connected by a corresponding road and are guaranteed to describe a correct Treeland road map.\r\n\r\n###Output:\r\nFor each of $t$ test cases print $n$ real values in a single line. The $i$-th real value should correspond to the expected number of step, that will result in the $i$-th city's invasion by aliens. Your answer will be considered correct if its absolute or relative error will be no greater than $10^{-6}$.\r\n\r\n###Constraints \r\n* $1 \\leq t \\leq 500$\r\n* $1 \\leq n \\leq 5000$\r\n* $1 \\leq u_i, v_i \\leq n$\r\n* It is guaranteed that **the total number of cities** in all test cases won't exceed $5000$.\r\n\r\n###Sample Input:\r\n\t3\r\n\t1\r\n\t2\r\n\t1 2\r\n\t3\r\n\t1 2\r\n\t2 3\r\n\r\n###Sample Output:\r\n\t1.0000000000\r\n\t1.5000000000 1.5000000000\r\n\t1.8333333333 2.3333333333 1.8333333333\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq t \\leq 500$\n- $1 \\leq n \\leq 5000$\n- $1 \\leq u_i, v_i \\leq n$\n- It is guaranteed that **the total number of cities** in all test cases won't exceed $5000$.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Evil aliens from Alpha Centauri are planning to invade the Earth. They thought of invading New York City first, but that is a pretty popular target, and their colleagues from Proxima Centauri are already invading it. Thus, Alpha Centauriens had to figure out another target and the country of Treeland was their choice.\n\nThe country of Treeland consists of $n$ cities connected with $n - 1$ bidirectional roads in such a way that there exists exactly one path between any pair of cities. The cities are numbered from 1 to $n$. The aliens will start the invasion by randomly assigning each of the cities some random **real** value $p_i$ taken between $0$ and $1$ with uniform distribution. They call these values **priorities**. Then, $n$ steps of invasion will take place. Each step is done as follows:\n\n- Aliens consider all the cities that are not yet invaded.\n- Out of these cities they select all the cities that have no more than one uninvaded neighbor. Recall that two cities are called neighbors iff they are connected by a direct road. One can show that there will always be at least one such city.\n- Among all cities, selected in the second step, aliens pick the one with the minimum value of $p_i$. Though the probability for two cities being assigned the same priority is zero, they agreed to pick the one with minimum index among all cities with minimum priority.\n- Finally, aliens invade the city selected at the step three. You may assume it is now removed from Treeland's map and is no longer considered by the aliens.\n\nThe government works hard to save its citizens and asks you to find out how much time they have. For each city, compute the expected number of the step during which this city will be invaded. Steps are numbered starting with $1$.\n",
+    "inputFormat": "- The first line of the input contains a single integer $t$: the number of test cases in this input. Then follow $t$ test cases description.\n- The first line of each test case description starts with a single integer $n$: the number of cities in Treeland.\n- Then follow $n - 1$ lines containing two integers $u_i$ and $v_i$ each. These are the indexes of cities connected by a corresponding road and are guaranteed to describe a correct Treeland road map.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each of $t$ test cases print $n$ real values in a single line. The $i$-th real value should correspond to the expected number of step, that will result in the $i$-th city's invasion by aliens. Your answer will be considered correct if its absolute or relative error will be no greater than $10^{-6}$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1\n2\n1 2\n3\n1 2\n2 3\n",
+        "output": "1.0000000000\n1.5000000000 1.5000000000\n1.8333333333 2.3333333333 1.8333333333\n",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "25-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "balajiganapath"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610591
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ALIENINV",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,126 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFSLP",
+  "contest_category": "6",
+  "problem_name": "Chef and Pairing Slippers",
+  "intended_contest_code": "COOK134",
+  "body": "\nChef has $N$ slippers, $L$ of which are left slippers and the rest are right slippers. Slippers must always be sold in pairs, where each pair contains one left and one right slipper. If each pair of slippers cost $X$ rupees, what is the maximum amount of rupees that Chef can get for these slippers? \n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^3$\n- $0 \\leq L \\leq N \\leq 10^3$\n- $0 \\leq X \\leq 10^3$",
+    "constraintsState": true,
+    "subtasks": "- 30 points : $1 \\leq R \\leq 10000$\n- 70 points : $1 \\leq R \\leq 10^9$\n",
+    "subtasksState": false,
+    "statement": "\nChef has $N$ slippers, $L$ of which are left slippers and the rest are right slippers. Slippers must always be sold in pairs, where each pair contains one left and one right slipper. If each pair of slippers cost $X$ rupees, what is the maximum amount of rupees that Chef can get for these slippers? ",
+    "inputFormat": "- The first line contains $T$ - the number of test cases. Then the test cases follow.\n- The first line of each test case contains three space-separated integers $N$, $L$, and $X$ - the total number of slippers, the number of left slippers, and the price of a pair of slippers in rupees.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on one line the maximum amount of rupees that Chef can get by selling the slippers that are available.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n0 0 100\n10 1 0\n1000 10 1000\n10 7 1\n",
+        "output": "0\n0\n10000\n3",
+        "explanation": "- **Test case $1$:** Chef has no pairs to sell, so the amount obtained is $0$.\n- **Test case $2$:** The amount earned by selling a pair is $0$, so the total amount obtained is $0$.\n- **Test case $3$:** Chef can sell $10$ pairs of slippers, each giving $1000$ rupees, so the total amount earned is $1000 \\cdot 10 = 10000$.\n- **Test case $4$:** Chef has $10$ slippers of which $7$ are left and $3$ are right. Therefore Chef can sell a maximum of $3$ pairs and in total can get at most $3 \\cdot 1 = 3$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 95740,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "srikkanth_adm",
+  "problem_display_authors": [
+    "srikkanth_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/srikkanth_adm'>srikkanth_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-10-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "930",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610671
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFSLP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 13,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

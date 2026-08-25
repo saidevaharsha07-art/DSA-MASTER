@@ -1,0 +1,213 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "google-interview-questions",
+  "name": "Google Interview Questions",
+  "title": "Google Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Google online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/google-interview-questions/GOOGLEPREP/problems/SUBASUM",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Google Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Practice Problem",
+          "submodule_id": 6188,
+          "contest_code": "GOOGLEPREP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/google-interview-questions/GOOGLEPREP/problems/SUBASUM",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "27876",
+              "code": "SUBASUM",
+              "name": "Sub-array Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PTRLP",
+              "name": "Petrol ki Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "MAXREC",
+              "name": "Maximum Area",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "CNTND",
+              "name": "Counting Nodes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP19",
+              "name": "Trapping Rainwater",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP32",
+              "name": "Dynamic Programming - String Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP36",
+              "name": "Graphs - Word Ladder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP37",
+              "name": "Graphs - Red Blue Lakes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP48",
+              "name": "Maximum Product Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27876",
+              "code": "PREP41",
+              "name": "Backtracking - Find Valid Parenthesis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 11,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 3501,
+  "path_review": {
+    "rating": 4.7,
+    "users": 25
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

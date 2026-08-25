@@ -1,0 +1,1254 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "javascript-interview-questions",
+  "name": "Top JavaScript Interview Questions",
+  "title": "Top JavaScript Interview Questions",
+  "level": "Beginner",
+  "description": "Revise all the important JavaScript concepts by answering these JavaScript Interview Questions. All questions contain detailed explanation so that you can learn the topics you don't know fully.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:47",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/javascript-interview-questions/JSPREP01/problems/JSMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Data types and type coercion",
+      "description": "JavaScript's fundamental data types and how they're automatically converted.\nIncludes understanding of primitive vs. object types and implicit/explicit type conversion.",
+      "submodules": [
+        {
+          "name": "Data types and type coercion",
+          "submodule_id": 5921,
+          "contest_code": "JSPREP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP01/problems/JSMCQ01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29383",
+              "code": "JSMCQ01",
+              "name": "Type Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29383",
+              "code": "JSMCQ02",
+              "name": "Equality Comparison",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29383",
+              "code": "JSMCQ03",
+              "name": "Truthy and Falsy Values",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29383",
+              "code": "JSMCQ04",
+              "name": "Numeric Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29383",
+              "code": "JSMCQ05",
+              "name": "Type Checking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "ES6+ features (let/const, arrow functions, destructuring, etc.)",
+      "description": "Modern JavaScript syntax and capabilities introduced from ECMAScript 2015 onwards.\nIncludes features like let/const, arrow functions, destructuring, and modules.",
+      "submodules": [
+        {
+          "name": "ES6 features",
+          "submodule_id": 5922,
+          "contest_code": "JSPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP02/problems/JSMCQ06",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29385",
+              "code": "JSMCQ06",
+              "name": "Variable Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29385",
+              "code": "JSMCQ07",
+              "name": "Arrow Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29385",
+              "code": "JSMCQ08",
+              "name": "Destructuring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29385",
+              "code": "JSMCQ09",
+              "name": "Template Literals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29385",
+              "code": "JSMCQ10",
+              "name": "Spread Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Array methods (map, reduce, filter, etc.)",
+      "description": "Built-in functions for manipulating and transforming arrays in JavaScript.\nIncludes methods like map(), reduce(), filter(), and forEach().",
+      "submodules": [
+        {
+          "name": "Array Methods",
+          "submodule_id": 5923,
+          "contest_code": "JSPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP03/problems/JSMCQ11",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29387",
+              "code": "JSMCQ11",
+              "name": "Array Transformation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29387",
+              "code": "JSMCQ12",
+              "name": "Reduce Method",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29387",
+              "code": "JSMCQ13",
+              "name": "Array Method Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29387",
+              "code": "JSMCQ14",
+              "name": "Filter Method Application",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29387",
+              "code": "JSMCQ15",
+              "name": "Callback Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "DOM manipulation and events",
+      "description": "Interacting with and modifying the Document Object Model (DOM) in web browsers.\nIncludes selecting elements, changing content, and handling user interactions.",
+      "submodules": [
+        {
+          "name": "DOM manipulation and events",
+          "submodule_id": 5924,
+          "contest_code": "JSPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP04/problems/JSMCQ16",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29388",
+              "code": "JSMCQ16",
+              "name": "Event Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29388",
+              "code": "JSMCQ17",
+              "name": "DOM Traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29388",
+              "code": "JSMCQ18",
+              "name": "DOM Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29388",
+              "code": "JSMCQ19",
+              "name": "Event Object",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29388",
+              "code": "JSMCQ20",
+              "name": "DOM Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Error handling (try/catch)",
+      "description": "Techniques for catching and managing runtime errors in JavaScript code.\nPrimarily involves using try/catch blocks and throwing custom errors.",
+      "submodules": [
+        {
+          "name": "Error Handling",
+          "submodule_id": 5925,
+          "contest_code": "JSPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP05/problems/JSMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29389",
+              "code": "JSMCQ21",
+              "name": "Exception Handling Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29389",
+              "code": "JSMCQ22",
+              "name": "Catch Block Parameter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29389",
+              "code": "JSMCQ23",
+              "name": "Finally Block Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29389",
+              "code": "JSMCQ24",
+              "name": "Error Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29389",
+              "code": "JSMCQ25",
+              "name": "Throwing Custom Errors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Hoisting",
+      "description": "JavaScript's behavior of moving declarations to the top of their scope.\nAffects how variables and functions can be used before they're declared in the code.",
+      "submodules": [
+        {
+          "name": "Hoisting",
+          "submodule_id": 5926,
+          "contest_code": "JSPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP06/problems/JSMCQ26",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29390",
+              "code": "JSMCQ26",
+              "name": "Variable Declaration Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29390",
+              "code": "JSMCQ27",
+              "name": "Function Declaration Hoisting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29390",
+              "code": "JSMCQ28",
+              "name": "Let and Const Hoisting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29390",
+              "code": "JSMCQ29",
+              "name": "Function Expression Hoisting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29390",
+              "code": "JSMCQ30",
+              "name": "Hoisting Priority",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Scope and this keyword",
+      "description": "How variable accessibility is determined and the context of function execution.\nIncludes understanding global vs. local scope and how 'this' changes in different contexts.",
+      "submodules": [
+        {
+          "name": "Scope and this keyword",
+          "submodule_id": 5927,
+          "contest_code": "JSPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP07/problems/JSMCQ31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ31",
+              "name": "Variable Accessibility",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ32",
+              "name": "this in Global Context",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ33",
+              "name": "Function Context",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ34",
+              "name": "Arrow Function and this",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ35",
+              "name": "Block Scope",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29391",
+              "code": "JSMCQ36",
+              "name": "Function Scope",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "Higher-order functions and callbacks",
+      "description": "Functions that can accept other functions as arguments or return them.\nFundamental to functional programming in JavaScript and async operations.",
+      "submodules": [
+        {
+          "name": "Higher-order functions and callbacks",
+          "submodule_id": 5928,
+          "contest_code": "JSPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP08/problems/JSMCQ37",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "29392",
+              "code": "JSMCQ37",
+              "name": "Function as Parameter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29392",
+              "code": "JSMCQ38",
+              "name": "Callback Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29392",
+              "code": "JSMCQ39",
+              "name": "Array Method Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29392",
+              "code": "JSMCQ40",
+              "name": "Multiple Callbacks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "Object-oriented programming in JavaScript",
+      "description": "Creating and working with objects, including methods and properties.\nCovers both prototype-based and class-based approaches in JavaScript.",
+      "submodules": [
+        {
+          "name": "Object-oriented programming in JavaScript",
+          "submodule_id": 5929,
+          "contest_code": "JSPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP09/problems/JSMCQ42",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ42",
+              "name": "Class Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ43",
+              "name": "Constructor Method",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ44",
+              "name": "Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ45",
+              "name": "Encapsulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ46",
+              "name": "Method Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29393",
+              "code": "JSMCQ47",
+              "name": "Static Members",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "Closures",
+      "description": "Functions that remember and access variables from their outer scope.\nCrucial for data privacy and creating function factories.",
+      "submodules": [
+        {
+          "name": "Closures",
+          "submodule_id": 5930,
+          "contest_code": "JSPREP10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP10/problems/JSMCQ48",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29394",
+              "code": "JSMCQ48",
+              "name": "Closure Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29394",
+              "code": "JSMCQ49",
+              "name": "Closure Lifetime",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29394",
+              "code": "JSMCQ50",
+              "name": "Closure Scope Chain",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29394",
+              "code": "JSMCQ51",
+              "name": "Closure Memory Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29394",
+              "code": "JSMCQ52",
+              "name": "Practical Use of Closures",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Prototypes and inheritance",
+      "description": "JavaScript's mechanism for object inheritance and property lookup.\nIncludes understanding the prototype chain and implementing inheritance patterns.",
+      "submodules": [
+        {
+          "name": "Prototypes and inheritance",
+          "submodule_id": 5931,
+          "contest_code": "JSPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP11/problems/JSMCQ53",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29395",
+              "code": "JSMCQ53",
+              "name": "Object Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29395",
+              "code": "JSMCQ54",
+              "name": "Prototype Chain",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29395",
+              "code": "JSMCQ55",
+              "name": "Constructor Property",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29395",
+              "code": "JSMCQ56",
+              "name": "Prototype Modification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29395",
+              "code": "JSMCQ57",
+              "name": "Inheritance and this",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Asynchronous JavaScript (Promises, async/await)",
+      "description": "Handling operations that don't complete immediately, like API calls.\nIncludes working with callbacks, Promises, and async/await syntax.",
+      "submodules": [
+        {
+          "name": "Asynchronous JavaScript (Promises, async/await)",
+          "submodule_id": 5932,
+          "contest_code": "JSPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP12/problems/JSMCQ58",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29396",
+              "code": "JSMCQ58",
+              "name": "Promise States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29396",
+              "code": "JSMCQ59",
+              "name": "Async Function Return",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29396",
+              "code": "JSMCQ60",
+              "name": "Await Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29396",
+              "code": "JSMCQ61",
+              "name": "Promise Chaining",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29396",
+              "code": "JSMCQ62",
+              "name": "Error Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Event loop and concurrency",
+      "description": "How JavaScript handles multiple tasks in a single-threaded environment.\nExplains the mechanics behind JavaScript's non-blocking I/O model.",
+      "submodules": [
+        {
+          "name": "Event loop and concurrency",
+          "submodule_id": 5933,
+          "contest_code": "JSPREP13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP13/problems/JSMCQ63",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ63",
+              "name": "Event Loop Functionality",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ64",
+              "name": "Microtasks vs Macrotasks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ65",
+              "name": "Call Stack and Event Loop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ66",
+              "name": "Blocking the Event Loop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ67",
+              "name": "Concurrency in JavaScript",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29397",
+              "code": "JSMCQ68",
+              "name": "Zero Delay setTimeout",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    },
+    {
+      "assessment": null,
+      "name": "Functional programming concepts",
+      "description": "Programming paradigm that treats computation as the evaluation of mathematical functions.\nIncludes concepts like pure functions, immutability, and function composition.",
+      "submodules": [
+        {
+          "name": "Functional programming",
+          "submodule_id": 5934,
+          "contest_code": "JSPREP14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP14/problems/JSMCQ70",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "29398",
+              "code": "JSMCQ70",
+              "name": "Pure Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29398",
+              "code": "JSMCQ71",
+              "name": "Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29398",
+              "code": "JSMCQ73",
+              "name": "Functional Composition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29398",
+              "code": "JSMCQ74",
+              "name": "Currying",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "Performance optimization",
+      "description": "Techniques to improve the speed and efficiency of JavaScript code.\nIncludes topics like efficient DOM manipulation, memory management, and algorithm optimization.",
+      "submodules": [
+        {
+          "name": "Performance optimization",
+          "submodule_id": 5935,
+          "contest_code": "JSPREP15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/javascript-interview-questions/JSPREP15/problems/JSMCQ75",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ75",
+              "name": "Efficient Loop Iteration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ76",
+              "name": "Memory Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ77",
+              "name": "DOM Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ78",
+              "name": "Function Optimization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ79",
+              "name": "Asynchronous Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29399",
+              "code": "JSMCQ80",
+              "name": "Data Structure Choice",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 77,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "265",
+    "name": "Learn JavaScript",
+    "title": "Learn JavaScript",
+    "slug": "javascript",
+    "description": "Learn JavaScript with small interactive exercises. Get ready for Web development with this practical JavaScript course and solve over 130 challenges.",
+    "highlight_color": "#FFFFFF",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 15062
+    },
+    "learners_count": 57018,
+    "lessons_count": 30
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2720,
+  "path_review": {
+    "rating": 4.7,
+    "users": 352
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/javascript-dsa",
+  "roadmap_title": "JavaScript with Beginner DSA"
+}

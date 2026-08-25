@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DSTAPLS",
+  "contest_category": "6",
+  "problem_name": "Distribute Apples",
+  "intended_contest_code": "AUG19",
+  "body": "\nYesterday, Chef found $K$ empty boxes in the cooler and decided to fill them with apples. He ordered $N$ apples, where $N$ is a multiple of $K$. Now, he just needs to hire someone who will distribute the apples into the boxes with professional passion. \n\nOnly two candidates passed all the interviews for the box filling job. In one minute, each candidate can put $K$ apples into boxes, but they do it in different ways: the first candidate puts exactly one apple in each box, while the second one chooses a random box with the smallest number of apples and puts $K$ apples in it.\n\nChef is wondering if the final distribution of apples can even depend on which candidate he hires. Can you answer that question?\n\nNote: The boxes are distinguishable (labeled), while the apples are not. Therefore, two distributions of apples are different if there is a box such that the number of apples in it when the first candidate finishes working can be different from the number of apples in it when the second candidate finishes working.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains two space-separated integers $N$ and $K$. \n\n### Output\nFor each test case, print a single line containing the string `\"YES\"` if the final distributions of apples can be different or `\"NO\"` if they will be the same (without quotes).\n\n### Constraints\n- $1 \\le T \\le 250$\n- $1 \\le N, K \\le 10^{18}$\n- $N$ is divisible by $K$\n\n### Subtasks\n**Subtask #1 (30 points):** $1 \\le N, K \\le 10^5$\n\n**Subtask #2 (70 points):** original constraints\n\n### Example Input\n```\n3\n5 1\n4 2\n10 10\n```\n\n### Example Output\n```\nNO\nNO\nYES\n```\n\n### Explanation\n**Example case 1:** No matter who is hired, all apples will be in the only box at the end.\n\n**Example case 2:** At the end, there will be two apples in each box.\n\n**Example case 3:** If we hire the first candidate, there will be one apple in each box, but if we hire the second one, there will be $10$ apples in one box and none in all other boxes.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nYesterday, Chef found $K$ empty boxes in the cooler and decided to fill them with apples. He ordered $N$ apples, where $N$ is a multiple of $K$. Now, he just needs to hire someone who will distribute the apples into the boxes with professional passion. \n\nOnly two candidates passed all the interviews for the box filling job. In one minute, each candidate can put $K$ apples into boxes, but they do it in different ways: the first candidate puts exactly one apple in each box, while the second one chooses a random box with the smallest number of apples and puts $K$ apples in it.\n\nChef is wondering if the final distribution of apples can even depend on which candidate he hires. Can you answer that question?\n\nNote: The boxes are distinguishable (labeled), while the apples are not. Therefore, two distributions of apples are different if there is a box such that the number of apples in it when the first candidate finishes working can be different from the number of apples in it when the second candidate finishes working.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains two space-separated integers $N$ and $K$. \n\n### Output\nFor each test case, print a single line containing the string `\"YES\"` if the final distributions of apples can be different or `\"NO\"` if they will be the same (without quotes).\n\n### Constraints\n- $1 \\le T \\le 250$\n- $1 \\le N, K \\le 10^{18}$\n- $N$ is divisible by $K$\n\n### Subtasks\n**Subtask #1 (30 points):** $1 \\le N, K \\le 10^5$\n\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n5 1\n4 2\n10 10",
+        "output": "NO\nNO\nYES",
+        "explanation": "**Example case 1:** No matter who is hired, all apples will be in the only box at the end.\n\n**Example case 2:** At the end, there will be two apples in each box.\n\n**Example case 3:** If we hire the first candidate, there will be one apple in each box, but if we hire the second one, there will be $10$ apples in one box and none in all other boxes.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 33993,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "y__y",
+  "problem_display_authors": [
+    "y__y"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/y__y'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>y__y</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "5-07-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1374",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610805
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DSTAPLS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

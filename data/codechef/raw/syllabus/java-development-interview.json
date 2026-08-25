@@ -1,0 +1,1136 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "java-development-interview",
+  "name": "Java Developer Interview Preparation",
+  "title": "Java Developer Interview Preparation",
+  "level": "Beginner",
+  "description": "Prepare for freshers interviews for Java developer roles. Practice your responses for commonly asked Interview questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:49",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/java-development-interview/JVPREPFND/problems/JVASHRTA05",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Java Fundamentals",
+      "description": "Covers the core Java concepts like data types, control flow, and OOP basics.",
+      "submodules": [
+        {
+          "name": "Java Fundamentals",
+          "submodule_id": 9798,
+          "contest_code": "JVPREPFND",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPFND/problems/JVASHRTA05",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA05",
+              "name": "\nComment Identity Crisis\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA06",
+              "name": "\nStatic Greeting\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA07",
+              "name": "\nFinal Variable Reassignment\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA08",
+              "name": "\nInfinite Loop\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA09",
+              "name": "\nStringConcatenation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA10",
+              "name": "\nStringEquality\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA11",
+              "name": "\nNullPointerException\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA12",
+              "name": "\nScannerGotcha\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA13",
+              "name": "\nString Concatenation Performance\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA14",
+              "name": "\nStaticHiding\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA15",
+              "name": "\nSuperCallOrder\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34411",
+              "code": "JVASHRTA16",
+              "name": "\nJava Keyword Enforcement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Object-Oriented Programming",
+      "description": "Covers key OOP concepts like inheritance, encapsulation, polymorphism, and abstraction.\nFocuses on applying OOP principles to solve real-world interview problems.",
+      "submodules": [
+        {
+          "name": "Object-Oriented Programming",
+          "submodule_id": 9799,
+          "contest_code": "JVPREPOOP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPOOP/problems/JVASHRTA16",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA16",
+              "name": "\nJava Keyword Enforcement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVPREPOOP01",
+              "name": "Build an OOP-Based Calculator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA17",
+              "name": "\nOOP Pillars Illustrated\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVPREPOOP02",
+              "name": "Model a Simple Banking System Using OOP",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA18",
+              "name": "\nAbstract Class vs. Interface\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVPREPOOP03",
+              "name": "Shape It Up",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA19",
+              "name": "\nComposition vs. Inheritance\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVPREPOOP04",
+              "name": "Build a Student Management System Using OOP",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA20",
+              "name": "\nPolymorphism\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVPREPOOP05",
+              "name": "Simple Inventory Management System",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34386",
+              "code": "JVASHRTA21",
+              "name": "\nBankAccountEncapsulation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Data Structures and Algorithms",
+      "description": "Covers essential data structures like arrays, lists, stacks, queues, and trees.\nIntroduces key algorithms and problem-solving techniques for coding interviews.",
+      "submodules": [
+        {
+          "name": "Data Structures and Algorithms",
+          "submodule_id": 9800,
+          "contest_code": "JVPREPDSA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPDSA/problems/TRICOIN",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "34412",
+              "code": "TRICOIN",
+              "name": "Coins And Triangle",
+              "difficulty_rating": "1075",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "STACK03",
+              "name": "Implement Stack using Arrays",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "HBBTREE",
+              "name": "Height Balanced Binary Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "SESO44",
+              "name": "Complete the implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "VISA06",
+              "name": "Longest Palindromic Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "ACCOLITE04",
+              "name": "Top K Frequent Numbers After Each Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "DSAAGP96",
+              "name": "Count loop length in Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "DSAAGP105",
+              "name": "Trapping Rainwater",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34412",
+              "code": "SAVEKONO",
+              "name": "Save Konoha",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Java Collections Framework",
+      "description": "Practice questions on Lists, Sets, Maps, and Queues from the Java Collections Framework.\nSharpen your ability to pick and use the right collection in real-world scenarios.",
+      "submodules": [
+        {
+          "name": "Java Collections Framework",
+          "submodule_id": 9801,
+          "contest_code": "JVPREPJCF",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPJCF/problems/JVASHRTA22",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "34385",
+              "code": "JVASHRTA22",
+              "name": "\nPlaylistPerformance\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVPREPJCF01",
+              "name": "Sort the Super Squad",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVASHRTA23",
+              "name": "\nConcurrent Sessions\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVPREPJCF02",
+              "name": "No Double Trouble",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVASHRTA24",
+              "name": "\nHashMapIteration\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVPREPJCF03",
+              "name": "Word Frequency Counter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVASHRTA25",
+              "name": "\nUniqueTags\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVPREPJCF04",
+              "name": "Build Your Own ArrayList",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVASHRTA26",
+              "name": "\nTreeMapSort\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34385",
+              "code": "JVPREPJCF05",
+              "name": "Sort a Map by Values",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Exception Handling and File I/O",
+      "description": "Practice questions on Java\u2019s exception handling and file I/O mechanisms.\nBuild confidence in handling errors and reading/writing files in interview scenarios.",
+      "submodules": [
+        {
+          "name": "Exception Handling and File I/O",
+          "submodule_id": 9802,
+          "contest_code": "JVPREPEXP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPEXP/problems/JVASHRTA28",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "34389",
+              "code": "JVASHRTA28",
+              "name": "\nFileWriterCloseSafety\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVPREPEXEP01",
+              "name": "Word Frequency Counter from a File",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "labs",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVASHRTA29",
+              "name": "\nTry-with-Resources Explained\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVPREPEXEP02",
+              "name": "Implement and Use a Custom Exception",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVASHRTA30",
+              "name": "\nThrow vs Throws\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVPREPEXEP03",
+              "name": "Build a Simple File Backup Tool",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "labs",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34389",
+              "code": "JVASHRTA31",
+              "name": "\nExceptionWrappingRationale\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Advanced Java Concepts",
+      "description": "Strengthen your grasp of advanced topics often tested in interviews.",
+      "submodules": [
+        {
+          "name": "Advanced Java Concepts",
+          "submodule_id": 9803,
+          "contest_code": "JVPREPADV",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPADV/problems/JVASHRTA32",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA32",
+              "name": "\nRaceCondition\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA33",
+              "name": "\nSquareFunction\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA34",
+              "name": "\nMethod Reference Print\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA36",
+              "name": "\nGarbageCollectionCall\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA60",
+              "name": "Java Reflection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA61",
+              "name": "Schedule Tasks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34413",
+              "code": "JVASHRTA62",
+              "name": "Web Crawler",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Design Patterns and Architecture",
+      "description": "Practice applying common design patterns and architectural principles in Java.\nFocus on real-world scenarios to test design thinking and code organization.",
+      "submodules": [
+        {
+          "name": "Design Patterns and Architecture",
+          "submodule_id": 9804,
+          "contest_code": "JVPREPDPA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPDPA/problems/JVASHRTA37",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA37",
+              "name": "\nSingle Responsibility Violation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA38",
+              "name": "\nFactory Pattern for Notification Service\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA39",
+              "name": "\nTight Coupling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA40",
+              "name": "\nMonolith to Microservices\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA63",
+              "name": "Shopping App",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA64",
+              "name": "Reporting Tool",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34414",
+              "code": "JVASHRTA65",
+              "name": "Game Engine",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Spring Framework and Web Development",
+      "description": "Test your understanding of core Spring concepts like DI, MVC, and REST APIs.",
+      "submodules": [
+        {
+          "name": "Spring Framework and Web Development",
+          "submodule_id": 9805,
+          "contest_code": "JVPREPSPF",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPSPF/problems/JVASHRTA41",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "34415",
+              "code": "JVASHRTA41",
+              "name": "Spring Framework",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34415",
+              "code": "JVASHRTA43",
+              "name": "\nDI Decoupling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34415",
+              "code": "JVASHRTA44",
+              "name": "\nAOP Authentication\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34415",
+              "code": "JVASHRTA45",
+              "name": "\nSpring Bean Scopes and Lifecycles\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34415",
+              "code": "JVASHRTA46",
+              "name": "\nSpring Stereotype Annotations\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Database and ORM",
+      "description": "Practice questions on JDBC, SQL, and ORM frameworks like Hibernate.\nTest your skills in interacting with databases and mapping objects to tables.",
+      "submodules": [
+        {
+          "name": "Database and ORM",
+          "submodule_id": 9806,
+          "contest_code": "JVPREPDBRM",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPDBRM/problems/JVASHRTA47",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA47",
+              "name": "\nSQL vs. NoSQL Database Choice\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA48",
+              "name": "\nThe N+1 Query Problem\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA49",
+              "name": "\nData Redundancy in Students Table\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA51",
+              "name": "\nIndexing for Product Name Search\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA52",
+              "name": "\nBanking ACID Test\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA66",
+              "name": "Product Catalog",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA67",
+              "name": "Customer Dashboard",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JVASHRTA68",
+              "name": "Performance Issue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JDBCPROB0033",
+              "name": "Retrieve Book Details from Library\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "labs",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34416",
+              "code": "JDBCPROB0042",
+              "name": "Display Course Names\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "labs",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Testing and DevOps",
+      "description": "Test your understanding of basics of CI/CD and build tools. Focus on writing testable code and understanding Java\u2019s role in DevOps pipelines.",
+      "submodules": [
+        {
+          "name": "Testing and DevOps",
+          "submodule_id": 9807,
+          "contest_code": "JVPREPTST",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-development-interview/JVPREPTST/problems/JVASHRTA53",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "34417",
+              "code": "JVASHRTA53",
+              "name": "\nUnit vs. Integration Testing\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34417",
+              "code": "JVASHRTA54",
+              "name": "\nTDD Login Test First\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34417",
+              "code": "JVASHRTA55",
+              "name": "\nDeployment Hell\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34417",
+              "code": "JVASHRTA56",
+              "name": "\nContainers vs VMs: A Quick Comparison\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34417",
+              "code": "JVASHRTA57",
+              "name": "\nInfrastructure as Code (IaC)\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 84,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Interview Questions",
+  "reviews": [],
+  "learners_count": 2109,
+  "path_review": {
+    "rating": 5,
+    "users": 32
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/java-development",
+  "roadmap_title": "Java Backend Developer"
+}

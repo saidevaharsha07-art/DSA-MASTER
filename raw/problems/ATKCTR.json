@@ -1,0 +1,121 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ATKCTR",
+  "contest_category": "6",
+  "problem_name": "Gandalf vs the Balrog",
+  "intended_contest_code": null,
+  "body": "<p><html> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Gandalf vs the Balrog<br /> </h2>\n<p> <i>'We fought far under the living earth, where time is not counted. Ever he clutched me, and ever I hewed him, till at last he fled into dark tunnels.     Ever up now we went, until we came to the Endless Stair. Out he sprang, and even as I came behind, he burst into new flame.     Those that looked up from afar thought that the mountain was crowned with storm.     Thunder they heard, and lightning, they said, smote upon Celebdil, and leaped back broken into tongues of fire.'</i> - Gandalf, describing his fight against the Balrog.<br /> <br /> Although Gandalf would not go into the details of his battle, they can be summarized into the following simplified form: both Gandalf and the Balrog have a set of <b>N</b> attacks they can use (spells, swords, brute-force strength etc.). These attacks are numbered from 1 to <b>N</b> in increasing order of Power. When each has chosen an attack, in general, the one with the higher power wins. However, there are a few (\"<b>M</b>\") anomalous pairs of attacks, in which the lesser-powered attack wins.<br /> <br /> Initially, Gandalf picks an attack. Then the Balrog counters it with one of the remaining attacks. If the Balrog's counter does not defeat Gandalf's, then we say Gandalf receives a score of 2. If however it does, then Gandalf has exactly one more opportunity to pick an attack that will defeat the Balrog's. If he manages to defeat him now, his score will be 1, whereas if he is still unable to defeat him, his score will be 0.<br /> <br /> Your task is to determine, given N and the M anomalous pairs of attacks, what will be Gandalf's score, given that both play optimally. Further, in case Gandalf gets a score of 2, you must also determine which attack he could have chosen as his first choice.<br /> <br /> Note 1: The Balrog can choose only one attack, whereas Gandalf can choose upto two.<br /> Note 2: The relation A defeats B is not transitive within the attacks. For example, attack A can defeat attack B, attack B can defeat attack C, and attack C can defeat attack A.<br /> Note 3: Between any two attacks A and B, either attack A defeats attack B or attack B defeats attack A.<br /> <br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line will consist of the integer <b>T</b>, the number of test-cases.<br /> Each test case begins with a single line containing two integers <b>N</b> and <b>M</b>.<br /> This is followed by <b>M</b> lines consisting of 2 integers each <b>x</b> and <b>y</b>, denoting that <b>x</b> and <b>y</b> are an anomalous pair.<br /> <br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> For each test-case, output a single line either<br /> 2 <b>A</b>, if Gandalf can defeat any attack the Balrog chooses if he picks attack <b>A</b>,<br /> 1, if Gandalf can choose an attack such that even if the Balrog chooses an attack to defeat him, he can choose an attack to defeat the Balrog's chosen one,<br /> 0, if none of the above two options are possible for all possible choices of Gandalf's attack(s).<br /> Between successive test cases, there should not be any blank lines in the output.<br /> <br /><br />\n<h3>Constraints:</h3>\n</p><p><b> 1 &lt;= T &lt;= 15<br /> 3 &lt;= N &lt;= 1,000,000<br /> 0 &lt;= M &lt;= min(N(N-1)/2, 300,000)<br /> 1 &lt;= x &lt; y &lt;= N for all the anomalous pairs (x,y)<br /> The sum of M over all test-cases will not exceed 300,000.</b><br /> <br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> 3 0<br /> 3 1<br /> 1 3 </span><br /><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2 3<br /> 1<br /> </span><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> In the first case, attack 3 can beat both attacks 1 and 2. So Gandalf just chooses attack 3.<br /> In the second case, attack 1 beats 3 which beats 2 which beats 1. No matter which attack Gandalf chooses, the Balrog can pick the one which defeats his, but then he can pick the remaining attack and defeat the Balrog's.<br /> <br /> </p></body> </html></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 <= T <= 15**\n- **3 <= N <= 1,000,000**\n- **0 <= M <= min(N(N-1)/2, 300,000)**\n- **1 <= x < y <= N** for all the anomalous pairs (x,y)\n- The sum of M over all test-cases will not exceed 300,000.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "# Gandalf vs the Balrog\n\n*'We fought far under the living earth, where time is not counted. Ever he clutched me, and ever I hewed him, till at last he fled into dark tunnels. Ever up now we went, until we came to the Endless Stair. Out he sprang, and even as I came behind, he burst into new flame. Those that looked up from afar thought that the mountain was crowned with storm. Thunder they heard, and lightning, they said, smote upon Celebdil, and leaped back broken into tongues of fire.'* - Gandalf, describing his fight against the Balrog.\n\nAlthough Gandalf would not go into the details of his battle, they can be summarized into the following simplified form: both Gandalf and the Balrog have a set of **N** attacks they can use (spells, swords, brute-force strength etc.). These attacks are numbered from 1 to **N** in increasing order of Power. When each has chosen an attack, in general, the one with the higher power wins. However, there are a few (\"**M**\") anomalous pairs of attacks, in which the lesser-powered attack wins.\n\nInitially, Gandalf picks an attack. Then the Balrog counters it with one of the remaining attacks. If the Balrog's counter does not defeat Gandalf's, then we say Gandalf receives a score of 2. If however it does, then Gandalf has exactly one more opportunity to pick an attack that will defeat the Balrog's. If he manages to defeat him now, his score will be 1, whereas if he is still unable to defeat him, his score will be 0.\n\nYour task is to determine, given N and the M anomalous pairs of attacks, what will be Gandalf's score, given that both play optimally. Further, in case Gandalf gets a score of 2, you must also determine which attack he could have chosen as his first choice.\n\n**Note 1:** The Balrog can choose only one attack, whereas Gandalf can choose up to two.\n\n**Note 2:** The relation A defeats B is not transitive within the attacks. For example, attack A can defeat attack B, attack B can defeat attack C, and attack C can defeat attack A.\n\n**Note 3:** Between any two attacks A and B, either attack A defeats attack B or attack B defeats attack A.\n",
+    "inputFormat": "The first line will consist of the integer **T**, the number of test-cases.\n\nEach test case begins with a single line containing two integers **N** and **M**.\n\nThis is followed by **M** lines consisting of 2 integers each **x** and **y**, denoting that **x** and **y** are an anomalous pair.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test-case, output a single line either:\n\n- `2 A`, if Gandalf can defeat any attack the Balrog chooses if he picks attack **A**,\n- `1`, if Gandalf can choose an attack such that even if the Balrog chooses an attack to defeat him, he can choose an attack to defeat the Balrog's chosen one,\n- `0`, if none of the above two options are possible for all possible choices of Gandalf's attack(s).\n\nBetween successive test cases, there should not be any blank lines in the output.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 0\n3 1\n1 3\n",
+        "output": "2 3\n1\n",
+        "explanation": "In the first case, attack 3 can beat both attacks 1 and 2. So Gandalf just chooses attack 3.\n\nIn the second case, attack 1 beats 3 which beats 2 which beats 1. No matter which attack Gandalf chooses, the Balrog can pick the one which defeats his, but then he can pick the remaining attack and defeat the Balrog's.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h2>PROBLEM LINKS</h2>\n<p><a href=\"http://www.codechef.com/problems/ATKCTR\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACMAMR12/problems/ATKCTR\" rel=\"nofollow noopener\">Contest</a></p>\n<h2>Editorial Can be found here <a href=\"http://codechef.com/download/editorials/ACMAMR12/ATKCTR.pdf\" rel=\"nofollow noopener\">here</a>\n</h2>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1478,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1 - 4",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "20-01-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acmamr12",
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/ATKCTR",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610630
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ATKCTR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

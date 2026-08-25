@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFHAM",
+  "contest_category": "6",
+  "problem_name": "Chef and Hamming Distance of arrays",
+  "intended_contest_code": "DEC17",
+  "body": "<h3>Read problems statements in <a target=\"_blank\" \r\nhref=\"https://www.codechef.com/download/translated/DEC17/vietnamese/CHEFHAM.pdf\">Vietnamese</a> </h3>.\r\n\r\n<p>Chef likes to work with arrays a lot. Today he has an array <b>A</b> of length <b>N</b> consisting of positive integers. Chef's little brother likes to follow his elder brother, so he thought of creating an array <b>B</b> of length <b>N</b>. The little brother is too small to think of new numbers himself, so he decided to use all the elements of array <b>A</b> to create the array <b>B</b>. In other words, array <b>B</b> is obtained by shuffling the elements of array <b>A</b>.</p>\r\n\r\n<p>The little brother doesn't want Chef to know that he has copied the elements of his array <b>A</b>. Therefore, he wants to create the array <b>B</b> in such a way that the <i>Hamming distance</i> between the two arrays <b>A</b> and <b>B</b> is maximized. The Hamming distance between <b>A</b> and <b>B</b> is the number of indices <b>i</b> (1 \u2264 <b>i</b> \u2264 <b>N</b>) such that <b>A<sub>i</sub> \u2260 B<sub>i</sub></b>.</p>\r\n\r\n<p>The brother needs your help in finding any such array <b>B</b>. Can you please find one such array for him?</p>\r\n\r\n<p>Note that it's guaranteed that no element in <b>A</b> appears more than twice, i.e. frequency of each element is at most 2.</p>\r\n\r\n<h3>Input</h3>\r\n<p><ul>\r\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\r\n<li>The first line of each test case contains an integer <b>N</b> denoting the length of the array <b>A</b>.</li>\r\n<li>The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub>, A<sub>2</sub> ... A<sub>N</sub></b>.</li>\r\n</ul></p>\r\n\r\n<h3>Output</h3>\r\n<p><ul>\r\n<li>For each test case, print two lines.</li>\r\n<li>The first line should contain the maximum possible Hamming distance that array <b>B</b> can have from array <b>A</b>.</li>\r\n<li>The second line should contain <b>N</b> space-separated integers denoting the array <b>B</b>; the <b>i</b>-th integer should denote the value of <b>B<sub>i</sub></b>. Note that <b>B</b> should be an array obtained after shuffling the elements of <b>A</b>.</li>\r\n</ul></p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 10</li>\r\n<li>1 \u2264 <b>N</b> \u2264 10<sup>5</sup></li>\r\n<li>1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>5</sup></li>\r\n<li>The frequency of each integer in the array <b>A</b> will be at most 2.</li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n\r\n<p>\r\n<b>Subtask #1 (30 points):</b> all elements in the array <b>A</b> are unique\r\n</p>\r\n\r\n<p>\r\n<b>Subtask #2 (30 points):</b> 5 \u2264 <b>N</b> \u2264 10<sup>5</sup>\r\n</p>\r\n\r\n<p>\r\n<b>Subtask #3 (40 points):</b> original constraints\r\n</p>\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input</b>\r\n\r\n3\r\n2\r\n1 2\r\n3\r\n1 2 1\r\n4\r\n2 6 5 2\r\n\r\n<b>Output</b>\r\n\r\n2\r\n2 1\r\n2\r\n2 1 1\r\n4\r\n6 2 2 5\r\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<h3>Read problems statements in <a target=\"_blank\" \r\nhref=\"https://www.codechef.com/download/translated/DEC17/vietnamese/CHEFHAM.pdf\">Vietnamese</a> </h3>.\r\n\r\n<p>Chef likes to work with arrays a lot. Today he has an array <b>A</b> of length <b>N</b> consisting of positive integers. Chef's little brother likes to follow his elder brother, so he thought of creating an array <b>B</b> of length <b>N</b>. The little brother is too small to think of new numbers himself, so he decided to use all the elements of array <b>A</b> to create the array <b>B</b>. In other words, array <b>B</b> is obtained by shuffling the elements of array <b>A</b>.</p>\r\n\r\n<p>The little brother doesn't want Chef to know that he has copied the elements of his array <b>A</b>. Therefore, he wants to create the array <b>B</b> in such a way that the <i>Hamming distance</i> between the two arrays <b>A</b> and <b>B</b> is maximized. The Hamming distance between <b>A</b> and <b>B</b> is the number of indices <b>i</b> (1 \u2264 <b>i</b> \u2264 <b>N</b>) such that <b>A<sub>i</sub> \u2260 B<sub>i</sub></b>.</p>\r\n\r\n<p>The brother needs your help in finding any such array <b>B</b>. Can you please find one such array for him?</p>\r\n\r\n<p>Note that it's guaranteed that no element in <b>A</b> appears more than twice, i.e. frequency of each element is at most 2.</p>\r\n\r\n<h3>Input</h3>\r\n<p><ul>\r\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\r\n<li>The first line of each test case contains an integer <b>N</b> denoting the length of the array <b>A</b>.</li>\r\n<li>The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub>, A<sub>2</sub> ... A<sub>N</sub></b>.</li>\r\n</ul></p>\r\n\r\n<h3>Output</h3>\r\n<p><ul>\r\n<li>For each test case, print two lines.</li>\r\n<li>The first line should contain the maximum possible Hamming distance that array <b>B</b> can have from array <b>A</b>.</li>\r\n<li>The second line should contain <b>N</b> space-separated integers denoting the array <b>B</b>; the <b>i</b>-th integer should denote the value of <b>B<sub>i</sub></b>. Note that <b>B</b> should be an array obtained after shuffling the elements of <b>A</b>.</li>\r\n</ul></p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 10</li>\r\n<li>1 \u2264 <b>N</b> \u2264 10<sup>5</sup></li>\r\n<li>1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>5</sup></li>\r\n<li>The frequency of each integer in the array <b>A</b> will be at most 2.</li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n\r\n<p>\r\n<b>Subtask #1 (30 points):</b> all elements in the array <b>A</b> are unique\r\n</p>\r\n\r\n<p>\r\n<b>Subtask #2 (30 points):</b> 5 \u2264 <b>N</b> \u2264 10<sup>5</sup>\r\n</p>\r\n\r\n<p>\r\n<b>Subtask #3 (40 points):</b> original constraints\r\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n2\r\n1 2\r\n3\r\n1 2 1\r\n4\r\n2 6 5 2",
+        "output": "2\r\n2 1\r\n2\r\n2 1 1\r\n4\r\n6 2 2 5",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17615,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kefaa",
+  "date_added": "1-12-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "1D Arrays",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1790",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610667
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFHAM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

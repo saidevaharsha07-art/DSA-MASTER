@@ -1,0 +1,127 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CANDY123",
+  "contest_category": "6",
+  "problem_name": "Bear and Candies 123",
+  "intended_contest_code": "COOK81",
+  "body": "<p>Bears love candies and games involving eating them. Limak and Bob play the following game. Limak eats 1 candy, then Bob eats 2 candies, then Limak eats 3 candies, then Bob eats 4 candies, and so on. Once someone can't eat what he is supposed to eat, he loses.</p>\n\n<p>Limak can eat at most <b>A</b> candies in total (otherwise he would become sick), while Bob can eat at most <b>B</b> candies in total.\nWho will win the game?\nPrint \"Limak\" or \"Bob\" accordingly.</p>\n\n\n<h3>Input</h3>\n\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n\n<p>The only line of each test case contains two integers <b>A</b> and <b>B</b> denoting the maximum possible number of candies Limak can eat and the maximum possible number of candies Bob can eat respectively.</p>\n\n\n\n<h3>Output</h3>\n\n<p>For each test case, output a single line containing one string \u2014 the name of the winner (\"Limak\" or \"Bob\" without the quotes).</p>\n\n\n\n<h3>Constraints</h3>\n\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 1000</li>\n<li>1 \u2264 <b>A, B</b> \u2264 1000</li>\n</ul>\n\n\n\n<h3>Example</h3>\n\n<pre><b>Input:</b>\n10\n3 2\n4 2\n1 1\n1 2\n1 3\n9 3\n9 11\n9 12\n9 1000\n8 11\n\n<b>Output:</b>\nBob\nLimak\nLimak\nBob\nBob\nLimak\nLimak\nBob\nBob\nBob\n</pre>\n\n\n\n<h3>Explanation</h3>\n\n<p><b>Test case 1.</b> We have <b>A</b> = 3 and <b>B</b> = 2. Limak eats 1 candy first, and then Bob eats 2 candies. Then Limak is supposed to eat 3 candies but that would mean 1 + 3 = 4 candies in total. It's impossible because he can eat at most <b>A</b> candies, so he loses. Bob wins, and so we print \"Bob\".</p>\n\n<p><b>Test case 2.</b> Now we have <b>A</b> = 4 and <b>B</b> = 2. Limak eats 1 candy first, and then Bob eats 2 candies, then Limak eats 3 candies (he has 1 + 3 = 4 candies in total, which is allowed because it doesn't exceed <b>A</b>). Now Bob should eat 4 candies but he can't eat even a single one (he already ate 2 candies). Bob loses and Limak is the winner.</p>\n\n<p><b>Test case 8.</b> We have <b>A</b> = 9 and <b>B</b> = 12. The game looks as follows:</p>\n\n<ul>\n<li>Limak eats 1 candy.</li>\n<li>Bob eats 2 candies.</li>\n<li>Limak eats 3 candies (4 in total).</li>\n<li>Bob eats 4 candies (6 in total).</li>\n<li>Limak eats 5 candies (9 in total).</li>\n<li>Bob eats 6 candies (12 in total).</li>\n<li>Limak is supposed to eat 7 candies but he can't \u2014 that would exceed <b>A</b>. Bob wins.</li>\n</ul>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Bears love candies and games involving eating them. Limak and Bob play the following game. Limak eats 1 candy, then Bob eats 2 candies, then Limak eats 3 candies, then Bob eats 4 candies, and so on. Once someone can't eat what he is supposed to eat, he loses.</p>\n\n<p>Limak can eat at most <b>A</b> candies in total (otherwise he would become sick), while Bob can eat at most <b>B</b> candies in total.\nWho will win the game?\nPrint \"Limak\" or \"Bob\" accordingly.</p>\n\n\n<h3>Input</h3>\n\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n\n<p>The only line of each test case contains two integers <b>A</b> and <b>B</b> denoting the maximum possible number of candies Limak can eat and the maximum possible number of candies Bob can eat respectively.</p>\n\n\n\n<h3>Output</h3>\n\n<p>For each test case, output a single line containing one string \u2014 the name of the winner (\"Limak\" or \"Bob\" without the quotes).</p>\n\n\n\n<h3>Constraints</h3>\n\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 1000</li>\n<li>1 \u2264 <b>A, B</b> \u2264 1000</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "10\n3 2\n4 2\n1 1\n1 2\n1 3\n9 3\n9 11\n9 12\n9 1000\n8 11",
+        "output": "Bob\nLimak\nLimak\nBob\nBob\nLimak\nLimak\nBob\nBob\nBob",
+        "explanation": "<p><b>Test case 1.</b> We have <b>A</b> = 3 and <b>B</b> = 2. Limak eats 1 candy first, and then Bob eats 2 candies. Then Limak is supposed to eat 3 candies but that would mean 1 + 3 = 4 candies in total. It's impossible because he can eat at most <b>A</b> candies, so he loses. Bob wins, and so we print \"Bob\".</p>\n\n<p><b>Test case 2.</b> Now we have <b>A</b> = 4 and <b>B</b> = 2. Limak eats 1 candy first, and then Bob eats 2 candies, then Limak eats 3 candies (he has 1 + 3 = 4 candies in total, which is allowed because it doesn't exceed <b>A</b>). Now Bob should eat 4 candies but he can't eat even a single one (he already ate 2 candies). Bob loses and Limak is the winner.</p>\n\n<p><b>Test case 8.</b> We have <b>A</b> = 9 and <b>B</b> = 12. The game looks as follows:</p>\n\n<ul>\n<li>Limak eats 1 candy.</li>\n<li>Bob eats 2 candies.</li>\n<li>Limak eats 3 candies (4 in total).</li>\n<li>Bob eats 4 candies (6 in total).</li>\n<li>Limak eats 5 candies (9 in total).</li>\n<li>Bob eats 6 candies (12 in total).</li>\n<li>Limak is supposed to eat 7 candies but he can't \u2014 that would exceed <b>A</b>. Bob wins.</li>\n</ul>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 14478,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "errichto",
+  "problem_display_authors": [
+    "errichto"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/errichto'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>errichto</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "mnbvmar"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mnbvmar'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>mnbvmar</span></a></div>",
+  "problem_editorialist": "dpraveen",
+  "date_added": "22-04-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements",
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1028",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610654
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CANDY123",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 101,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

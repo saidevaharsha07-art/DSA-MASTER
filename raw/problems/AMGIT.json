@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMGIT",
+  "contest_category": "6",
+  "problem_name": "git",
+  "intended_contest_code": null,
+  "body": "<p>\n    <i>Farzi Coder</i> has been assigned an important coding assignment by his boss <i>Programmer Bhai</i>. Now, <i>Farzi Coder</i> has done coding his project and has to submit it to a central git repository.<br />\n    In git, before committing we have to add the files which we want to commit to the stage. We can add (stage) or remove (unstage) files to/from the stage. Initially the stage is empty.<br />\n    <i>Programmer Bhai</i> is very particular about what goes into the repository and what doesn't. He has given a list of files alongwith whether he wants the file in the stage or not.<br />\n    e.g.\n    </p>\n<pre>    stage /code/lib/acpp\n    stage /code/lib/bcpp\n    unstage /code/lib/aout\n    </pre><p>\n    This means we want <code>/code/lib/acpp</code> and <code>/code/lib/bcpp</code> to be in the stage while <code>/code/lib/aout</code> should not be in the stage.<br />\n    There are 2 git commands to control staging:</p>\n<pre>    git add <i>&lt;path></i>\n    git remove <i>&lt;path></i>\n    </pre><p>\n    The path here can be a path to a file or a path to a directory. If the path is to a directory, the command applies to all the files and subdirectories inside that directory recursively.</p>\n<p>    <i>Farzi Coder</i> wants to commit the code <i>asap</i>.<br />\n    What is the minimum number of git commands needed to add all the required files to stage <b><i>while making sure none of the unstage files are in the stage.</i></b> </p>\n<h2>Input</h2>\n<p>    The first line of the input has the number <b>T</b> denoting the number of test cases.\n</p><p>\n    The first line of each test case has the number <b>N</b> denoting the number of files in this case.</p>\n<p>\n    Each of the next <b>N</b> lines contains a word denoting whether the following file should be on the stage or not followed by the path to the file.</p>\n<p>\n    i.e. the 2 types of input will be <code>stage <i>&lt;path></i></code> and <code>unstage <i>&lt;path></i></code>. </p>\n\n<h2>Output</h2>\n<p>\n    For each test case, output the number of minimum git commands needed.\n   </p>\n<h2>Constraints</h2>\n<ul>\n<li><b>1 \u2264 T \u2264 10</b></li>\n<li><b>1 \u2264 N \u2264 100</b></li>\n<li><b>The length of each path doesn't exceed 100</b></li>\n<li><b>Each path is a valid path to a file. Each path input follows these rules:</b></li>\n<ul>\n<li>It doesn't end with a forward slash (/)</li>\n<li>Each path starts from the root directory (/)</li>\n<li>There are no two consecutive forward slashes</li>\n<li>Each file or directory name consists only of lowercase alphabets</li>\n<li>All paths in a test case are distinct</li>\n<li>There will be no file - directory conflict. e.g. consider /a/b/c and /a/b. Here b is both a file and a directory.</li>\n</ul>\n</ul>\n<h2>Sample</h2>\n<h3>Input</h3>\n<pre>3\n3\nstage /code/lib/acpp\nstage /code/lib/bcpp\nunstage /code/lib/aout\n2\nunstage /code/lib/acpp\nunstage /code/lib/bcpp\n3\nstage /code/lib/acpp\nstage /code/lib/bcpp\nstage /code/lib/aout\n    </pre><h3>Output</h3>\n<pre>2\n0\n1\n    </pre><h3>Explanation</h3>\n<p>    <b>Case 1:</b> The following 2 commands are enough:</p>\n<pre>    git add /\n    git remove /code/lib/aout\n    </pre><p>    The first command adds the entire project to the stage while the second command removes aout from the stage as required.<br /><br />\n    <br /><br />\n    <b>Case 2:</b> As initially there are no files in the stage, no commands are necassary.<br /><br />\n    <br /><br />\n    <b>Case 3:</b> We add all the files to stage using <code><b>git add /</b></code> or <code><b>git add /code/lib/</b></code></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 10**\n- **1 \u2264 N \u2264 100**\n- The length of each path doesn't exceed 100.\n- Each path is a valid path to a file. Each path input follows these rules:\n  - It doesn't end with a forward slash (/).\n  - Each path starts from the root directory (/).\n  - There are no two consecutive forward slashes.\n  - Each file or directory name consists only of lowercase alphabets.\n  - All paths in a test case are distinct.\n  - There will be no file - directory conflict. e.g. consider `/a/b/c` and `/a/b`. Here `b` is both a file and a directory.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*Farzi Coder* has been assigned an important coding assignment by his boss *Programmer Bhai*. Now, *Farzi Coder* has done coding his project and has to submit it to a central git repository.  \nIn git, before committing we have to add the files which we want to commit to the stage. We can add (stage) or remove (unstage) files to/from the stage. Initially, the stage is empty.  \n*Programmer Bhai* is very particular about what goes into the repository and what doesn't. He has given a list of files along with whether he wants the file in the stage or not.  \ne.g.\n```\nstage /code/lib/acpp\nstage /code/lib/bcpp\nunstage /code/lib/aout\n```\nThis means we want `/code/lib/acpp` and `/code/lib/bcpp` to be in the stage while `/code/lib/aout` should not be in the stage.  \nThere are 2 git commands to control staging:\n```\ngit add <path>\ngit remove <path>\n```\nThe path here can be a path to a file or a path to a directory. If the path is to a directory, the command applies to all the files and subdirectories inside that directory recursively.  \n\n*Farzi Coder* wants to commit the code *asap*.  \nWhat is the minimum number of git commands needed to add all the required files to stage **while making sure none of the unstage files are in the stage.**\n",
+    "inputFormat": "The first line of the input has the number **T** denoting the number of test cases.  \nThe first line of each test case has the number **N** denoting the number of files in this case.  \nEach of the next **N** lines contains a word denoting whether the following file should be on the stage or not followed by the path to the file.  \ni.e. the 2 types of input will be `stage <path>` and `unstage <path>`.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the number of minimum git commands needed.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n3\nstage /code/lib/acpp\nstage /code/lib/bcpp\nunstage /code/lib/aout\n2\nunstage /code/lib/acpp\nunstage /code/lib/bcpp\n3\nstage /code/lib/acpp\nstage /code/lib/bcpp\nstage /code/lib/aout\n",
+        "output": "2\n0\n1\n",
+        "explanation": "**Case 1:** The following 2 commands are enough:\n```\ngit add /\ngit remove /code/lib/aout\n```\nThe first command adds the entire project to the stage while the second command removes `aout` from the stage as required.  \n\n**Case 2:** As initially there are no files in the stage, no commands are necessary.  \n\n**Case 3:** We add all the files to stage using `git add /` or `git add /code/lib/`.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>Problem link:</h3>\n<p><a href=\"https://www.codechef.com/ACM15AMR/problems/AMGIT\" rel=\"nofollow noopener\">Contest</a></p>\n<p><a href=\"https://www.codechef.com/problems/AMGIT\" rel=\"nofollow noopener\">Practice</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic Programming</p>\n<h3>PROBLEM:</h3>\n<p>We have a Project containing some files present over various directories on our system. We need to upload(push) the Project to Git. For each file it is given whether it must be present on the cloud or not. For this purpose we first put the files on a stage. The files are the finally pushed from stage to the git. To acheive our aim we are allowed to modify the stage by <b>2</b> commands:</p>\n<ul>\n<li>\n<p>git <b>push</b> path: This copies files specified by path  from our system to the stage.</p>\n</li>\n<li>\n<p>git <b>remove</b> path: This deletes the files specified by path from the stage. Note that there is no deletion on our system.</p>\n</li>\n</ul>\n<p>If this path is a directory, the command is applied recursively  to the contents of this directory.<br>\nNote that no modification is done to files on our computer system.</p>\n<h3>EXPLANATION:</h3>\n<p>As we are given a valid file directory system, we can assume that all the files and directories can be arranged in a tree. Any directory/file is represented a node of the tree. Node <strong>C</strong> is the child of Node <strong>P</strong> if <b>C</b> is a directory/file present in directory <b>P</b>. All the files are represented as unique leaves of this tree.</p>\n<p>For each file (? all leaves) we are given whether this file should be present (<b>STAGE</b>) or absent(<b>UNSTAGE</b>) in the final stage of the project.</p>\n<p>Formally in this problem we have been given a <b>tree</b>. We have to modify the tree that represents the file system. For each <b>leaf</b> of the tree we have been given whether it must be present in the final configuration or not. We are allowed to do <b>2</b> modifications.</p>\n<p>-Delete the subtree rooted at <strong>v</strong> from the current configuration.</p>\n<p>-Add to the current tree the whole subtree rooted at v ( in the original tree).</p>\n<p>We need to answer the <b>minimum</b> number of commands required to transform the tree to the final desired configuration.</p>\n<p>Let us define <b>dp[v][0]</b> and <b>dp[v][1]</b> to achieve the optimal result.</p>\n<p><b>dp[v][0]</b> = minimum number of commands required to achieve the <strong>desired state</strong> of all the nodes present in the subtree rooted at <b>v</b> <strong>assuming</strong> that <strong>no </strong>node from the subtree is present on the stage.</p>\n<p><b>dp[v][1]</b> = minimum number of commands required to achieve the <strong>desired state</strong> of all the nodes present in the subtree rooted at <b>v</b> <strong>assuming</strong> that <strong>every</strong> node from the subtree is present on the stage.</p>\n<p>Let <b>c<sub>i</sub>\u2019s</b> be children of node <b>v</b>.</p>\n<p>Let <b>sum0</b> denote the sum of <b>dp[c<sub>i</sub>][0]</b></p>\n<p>Let <b>sum1</b> denote the sum of <b>dp[c<sub>i</sub>][1]</b></p>\n<p>While calculating <b>dp[v][1]</b> state of node <b>v</b>, assume that the whole subtree rooted at <b>v</b> is present on stage. This could have happened by git push \u201csome ancestor of <b>v</b>\u201d.</p>\n<p>Now we have <b>two</b> options</p>\n<p>-perform no command for <b>v</b> and deal with the children : As the whole subtree rooted at <b>v</b> is present on stage, we just need to add the corresponding cost of children of <b>v</b>. =&gt; Cost = <b>sum1</b></p>\n<p>-perform an unstage of node <b>v</b>: This removes all the nodes present in the subtree of <b>v</b> from the stage. Since none of the children are now present on stage, cost = <b>sum0 + 1</b>. 1 is added as we used a remove(unstage) command here.</p>\n<p><b>dp[v][1] = min(sum1, 1 + sum0)</b></p>\n<p>While calculating <b>dp[v][0]</b> state of node <b>v</b>, assume that the none of the nodes present in subtree rooted at <b>v</b> is present on stage. This could have happened by git remove \u201csome ancestor of <b>v</b>\u201d or no command was used on any of the ancestors of <b>v</b>.</p>\n<p>Now we have two options</p>\n<p>-perform no command for <b>v</b> and deal with the children : As there is no node present in subtree rooted at <b>v</b> on stage, we just need to add the corresponding cost of children of <b>v</b>. =&gt; Cost = <b>sum0</b></p>\n<p>-perform an stage of node v: This adds all the nodes present in the subtree of v to the stage. Since now the whole subtree is present on stage, cost = <b>sum1 + 1</b>. 1 is added as we used a remove(unstage) command here.</p>\n<p><b>dp[v][0] = min(sum0, 1 + sum1)</b></p>\n<p>For base cases when v is leaf:</p>\n<p><b>dp[v][0]</b> = 1 if v needs to be present on final stage, otherwise 0.</p>\n<p><b>dp[v][1]</b> = 1 if v should not be present on final stage, otherwise 0.</p>\n<p>Contrsuction of the tree can be done in linear time. For a given path, traverse the corresponding path in the tree. Create nodes when a node corresponding to a file/directory does not exist. Need to take special care when two files/diectiories share the same name but does ot share the same parent directory.</p>\n<p>Time Complexity <b>O(N + L)</b> per test case</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12179,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "usaxena95",
+  "date_added": "20-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "balajiganapath",
+    "dynamic-programming",
+    "hashing",
+    "strings",
+    "trees"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "https://discuss.codechef.com/problems/AMGIT",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMGIT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

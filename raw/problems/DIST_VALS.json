@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DIST_VALS",
+  "contest_category": "6",
+  "problem_name": "Distinct Values",
+  "intended_contest_code": "START74",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^{4}$\n- $2 \\leq N \\leq 2 \\cdot 10^{5}$\n- $1 \\leq A_i \\leq 10^{9}$\n- Sum of $N$ over all test cases does not exceed $2 \\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "The *beauty* value of an array is defined as the difference between the largest and second largest elements of the array. Note that the largest and second largest elements can have the same value in case of duplicates.\n\nFor example, *beauty* value of $[2, 5, 3, 1] = 5 - 3 = 2$ and *beauty* value of $[7, 6, 7] = 7 - 7 = 0$ \n\nYou are given an array $A$ of length $N$. Your task is to find the total number of **distinct** *beauty* values among all *subarrays* of $A$ having length greater than $1$.\n\nNote that, a subarray is obtained by deleting some (possibly zero) elements from the beginning and some (possibly zero) elements from the end of the array.\n",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of two lines of input.\n    - The first line of each test case contains a single integer $N$ \u2014 the size of the array.\n    - The second line contains $N$ space-separated numbers - $A_{1}, A_{2},\\ldots ,A_{N}$, the elements of the array.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line, the total number of **distinct** beauty among all *subarrays* of $A$ having length greater than $1$.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n2\n1 1\n3\n4 2 1\n4\n8 1 7 2\n5\n6 9 4 2 1\n",
+        "output": "1\n2\n4\n4\n\n",
+        "explanation": "**Test case $1$:** The only subarray is $[1,1]$ whose beauty is $0$. Thus, there is only $1$ distinct value of beauty.\n\n**Test case $2$:** The subarrays are $[4,2], [2,1],$ and $[4,2,1]$ having beauty $2, 1,$ and $2$ respectively. There are $2$ distinct values of beauty.\n\n**Test case $3$:** The unique values of beauty are $7,1,6,$ and $5$.\n\n**Test case $4$:** The unique values of beauty are $3,5,2,$ and $1$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "63c7fd8b16d371ec19171118",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 104930,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "ayu_19",
+  "problem_display_authors": [
+    "ayu_19"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/ayu_19'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>ayu_19</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-01-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Stacks",
+    "Arrays",
+    "Sets",
+    "Next Greater Element"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms",
+    "Simple Algos"
+  ],
+  "difficulty_rating": "2236",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610789
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DIST_VALS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 37,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

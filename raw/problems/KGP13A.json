@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13A",
+  "contest_category": "6",
+  "problem_name": "Election Campaign",
+  "intended_contest_code": null,
+  "body": "<p>A district in a state has <b>K</b> villages (numbered from 1 to <b>K</b>). In order to provide better road connectivity in the district, the government has connected all the villages with two-lane paved roads, However, to reduce costs, the roads are constructed such that while it is possible to go from any village to any other village using the paved roads, there is exactly one route between any two villages. In addition, <b>M</b> of these villages are also connected to the district headquarter directly using two-lane roads.</p>\n<p>Elections are round the corner and a leader of a political party wishes to hold road shows in the villages. Since he does not have time to visit all the villages, he decides to go from the district headquarter to one of the villages that is connected to it, and then follow a path using the roads between the villages only, holding one road show at each village in the path as and when he reaches that village. Since he has to return to the district headquarter, he wishes to hold the last road show in a village that is again connected to the district headquarter. To save time, he also does not want to go through any village more than once.</p>\n<p>Obviously, he cannot go through all the villages. To ensure that people in other villages (not on the path) are not deterred from coming to his road shows, he asks his assistant to chalk a route such that the sum total of the distances of any village from its closest village in the path is  minimized. The road show being still a week off, he asks his assistant to take all the time he wants, but make sure that he finds the correct path.</p>\n<p>The assistant sets off to do this, trying to write a program to try out one-by-one all the different paths the leader can take and calculating the total distances people have to travel if a person in a village goes to the road show nearest to his village. Help him write this program.</p>\n<h3>Input</h3>\n<p>The first line contains the number of test cases <b>N</b>. </p>\n<p>For each test case, the first line contains the number of villages <b>K</b>. This is followed by <b>K</b> lines, with the j-th line containing the information about village j. The information for each village consists of (in this order): an integer <b>F</b> (0 if the village is not connected to the district headquarter, 1 if it is), an integer <b>D</b> indicating the number of other villages this village is directly linked to by road, followed by <b>D</b> pairs of integers (total 2D integers), with each pair containing the id (from 1 to <b>K</b>) of a village it is connected to and the distance (positive integer) from that village.</p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the sum total of distance of all the villages from their closest village in the path chosen.</p>\n<h3>Constraints</h3>\n<p>0 &lt; N \u2264 3</p>\n<p>0 &lt; K \u2264 50</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n5\n0 3 2 10 3 8 4 15\n1 1 1 10\n1 1 1 8\n1 2 1 15 5 12\n0 1 4 12\n7\n0 2 2 5 6 20\n0 3 1 5 4 10 5 5\n1 1 6 3\n1 1 2 10\n0 1 2 5\n1 3 1 20 7 10 3 3\n1 1 6 10\n\n<b>Output:</b>\nCase 1: 20\nCase 2: 8\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < N \u2264 3\n- 0 < K \u2264 50\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A district in a state has **K** villages (numbered from 1 to **K**). In order to provide better road connectivity in the district, the government has connected all the villages with two-lane paved roads. However, to reduce costs, the roads are constructed such that while it is possible to go from any village to any other village using the paved roads, there is exactly one route between any two villages. In addition, **M** of these villages are also connected to the district headquarter directly using two-lane roads.\n\nElections are round the corner and a leader of a political party wishes to hold road shows in the villages. Since he does not have time to visit all the villages, he decides to go from the district headquarter to one of the villages that is connected to it, and then follow a path using the roads between the villages only, holding one road show at each village in the path as and when he reaches that village. Since he has to return to the district headquarter, he wishes to hold the last road show in a village that is again connected to the district headquarter. To save time, he also does not want to go through any village more than once.\n\nObviously, he cannot go through all the villages. To ensure that people in other villages (not on the path) are not deterred from coming to his road shows, he asks his assistant to chalk a route such that the sum total of the distances of any village from its closest village in the path is minimized. The road show being still a week off, he asks his assistant to take all the time he wants, but make sure that he finds the correct path.\n\nThe assistant sets off to do this, trying to write a program to try out one-by-one all the different paths the leader can take and calculating the total distances people have to travel if a person in a village goes to the road show nearest to his village. Help him write this program.\n",
+    "inputFormat": "The first line contains the number of test cases **N**. \n\nFor each test case, the first line contains the number of villages **K**. This is followed by **K** lines, with the j-th line containing the information about village j. The information for each village consists of (in this order): an integer **F** (0 if the village is not connected to the district headquarter, 1 if it is), an integer **D** indicating the number of other villages this village is directly linked to by road, followed by **D** pairs of integers (total 2D integers), with each pair containing the id (from 1 to **K**) of a village it is connected to and the distance (positive integer) from that village.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the sum total of distance of all the villages from their closest village in the path chosen.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n5\n0 3 2 10 3 8 4 15\n1 1 1 10\n1 1 1 8\n1 2 1 15 5 12\n0 1 4 12\n7\n0 2 2 5 6 20\n0 3 1 5 4 10 5 5\n1 1 6 3\n1 1 2 10\n0 1 2 5\n1 3 1 20 7 10 3 3\n1 1 6 10\n",
+        "output": "Case 1: 20\nCase 2: 8\n",
+        "explanation": "The sample input and output demonstrate the expected format and results for the given problem. The assistant's program should calculate the sum total of distances of all villages from their closest village in the chosen path, and the output should match the provided examples.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13A\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13A\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy</p>\n<h3>PREREQUISITES:</h3>\n<p>Tree, Enumeration, BFS, DFS, Floyd-Warshall</p>\n<h3>PROBLEM:</h3>\n<p>Given a <b>K</b>-node tree, define the cost of a path is the maximum distance from all <b>K</b>-nodes to this node. Considering all paths between <b>M</b>-special nodes, find the minimum cost path from them.</p>\n<h3>EXPLANATION:</h3>\n<p>First of all, given the tree, we can calculate the distance between all nodes (<b>dist[][]</b>). For the simplicity, we can adopt <a href=\"http://en.wikipedia.org/wiki/Floyd_algorithm\">Floyd\u2013Warshall</a> algorithm, which is O(<strong>K</strong>^3) but easy to implement. Also, you can try <a href=\"http://en.wikipedia.org/wiki/Breadth-first_search\">BFS</a> or <a href=\"http://en.wikipedia.org/wiki/Depth-first_search\">DFS</a> starting from all nodes, which takes only O(<b>K</b>^2).</p>\n<p>Second, we need to find all nodes on the path between two nodes <b>u</b> and <b>v</b>. One possible solution is using BFS or DFS again. But it will be much easier to implement as following, by checking the distance (this is based on the edge costs are all positive and thus the distance on tree is actually the shortest path):</p>\n<pre><code>if (dist[u][i] + dist[i][v] == dist[u][v]):\n    node i is on the path between u and v.\n</code></pre>\n<p>After we know the nodes on the path, it is easy to find the distant node by enumerating, since we have <b>dist[][]</b> already.</p>\n<p>In summary, the algorithm can be divided into following steps:</p>\n<ol>\n<li>Calculate the distance between all nodes (<b>dist[][]</b>), O(<b>K</b>^3) if Floyd;</li>\n<li>Enumerate possible paths between <b>M</b> special nodes. O(<b>M</b>^2);</li>\n<li>For each possible path, get all nodes on the path and find the distant one. O(<b>K</b>^2) if brute-force.</li>\n<li>Take the minimum.</li>\n</ol>\n<p>Therefore, the total time complexity is O(<b>K</b>^3 + <b>M</b>^2<b>K</b>^2).</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4042,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.943333",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "floyd-warshall",
+    "jingbo_adm",
+    "kgp13acm",
+    "trees"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Floyd Warshall",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13A",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610962
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

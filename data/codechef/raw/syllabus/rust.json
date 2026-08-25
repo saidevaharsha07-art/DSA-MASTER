@@ -1,0 +1,596 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "rust",
+  "name": "Practice Rust",
+  "title": "Practice Rust",
+  "level": "Beginner",
+  "description": "Get hands-on experience in Rust language with this interactive and practical course. Master the basic syntax of the language and develop real-world applications with confidence.",
+  "time_to_complete": null,
+  "difficulty_range": "0-500",
+  "current_date": "2026-08-02 00:25:50",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/rust/PRSL01/problems/RSPRACMCQ1",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Input, Output and Arithmetic",
+      "description": "Practice simple problems on input, output and basic math",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 2001,
+          "contest_code": "PRSL01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL01/problems/RSPRACMCQ1",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "24758",
+              "code": "RSPRACMCQ1",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "START01",
+              "name": "Number Mirror",
+              "difficulty_rating": "200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "RSPRACREARR1",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "RSPRACREAR1A",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "INSTNOODLE",
+              "name": "Chef and Instant Noodles",
+              "difficulty_rating": "456",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "RSPRACMCQ4",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24758",
+              "code": "CCLEARN",
+              "name": "CodeChef Learn Problem Solving",
+              "difficulty_rating": "287",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 2002,
+          "contest_code": "PRSL02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL02/problems/RSPRACMCQ2",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "24759",
+              "code": "RSPRACMCQ2",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24759",
+              "code": "LEARNSQL",
+              "name": "Learning SQL",
+              "difficulty_rating": "339",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24759",
+              "code": "RSPRACMCQ3",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24759",
+              "code": "PARKINGCHARG",
+              "name": "Parking Charges",
+              "difficulty_rating": "416",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Conditionals",
+      "description": "A notch higher - lets introduce conditional statements",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 2003,
+          "contest_code": "PRSL03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL03/problems/RSPRACMCQ5",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24760",
+              "code": "RSPRACMCQ5",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24760",
+              "code": "CBSPEED",
+              "name": "Chef and Brain Speed",
+              "difficulty_rating": "288",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24760",
+              "code": "RSPRACMCQ6",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24760",
+              "code": "MARKSTW",
+              "name": "Alice and Marks",
+              "difficulty_rating": "362",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24760",
+              "code": "RSPRACMCQ9",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24760",
+              "code": "ONEFULPAIRS",
+              "name": "Oneful Pairs",
+              "difficulty_rating": "374",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 2004,
+          "contest_code": "PRSL04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL04/problems/RSPRACREARR2",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24761",
+              "code": "RSPRACREARR2",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24761",
+              "code": "MY1STCONTEST",
+              "name": "My very 1st contest!",
+              "difficulty_rating": "284",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24761",
+              "code": "RSPRACMCQ8",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24761",
+              "code": "BLACKCEL",
+              "name": "Black cells in a chessboard",
+              "difficulty_rating": "746",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24761",
+              "code": "RSPRACMCQ7",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24761",
+              "code": "ABDIFF",
+              "name": "AB Difference",
+              "difficulty_rating": "347",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Loops",
+      "description": "Another notch higher - lets introduce Loops",
+      "submodules": [
+        {
+          "name": "Concept & Practice",
+          "submodule_id": 2005,
+          "contest_code": "PRSL05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL05/problems/RSPRACREARR3",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24762",
+              "code": "RSPRACREARR3",
+              "name": "Rearrange Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24762",
+              "code": "FLOW001",
+              "name": "Add Two Numbers",
+              "difficulty_rating": "242",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24762",
+              "code": "RSPRACMCQ11",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24762",
+              "code": "GDTURN",
+              "name": "Good Turn",
+              "difficulty_rating": "238",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24762",
+              "code": "RSPRACMCQ10",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24762",
+              "code": "WATERCONS",
+              "name": "Water Consumption",
+              "difficulty_rating": "254",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Additional practice",
+          "submodule_id": 2006,
+          "contest_code": "PRSL06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/rust/PRSL06/problems/RSPRACMCQ12",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "24763",
+              "code": "RSPRACMCQ12",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24763",
+              "code": "AGELIMIT",
+              "name": "Age Limit",
+              "difficulty_rating": "245",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24763",
+              "code": "RSPRACMCQ13",
+              "name": "Multiple Choice Question",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24763",
+              "code": "SQUATS",
+              "name": "Squats",
+              "difficulty_rating": "249",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 33,
+  "total_non_pro_problems": 33,
+  "up_next": [
+    {
+      "name": "Practice Basic Math",
+      "title": "Practice Basic Math",
+      "slug": "basic-math",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 85304,
+      "review": {
+        "rating": 4.5,
+        "users": 2233
+      },
+      "course_count": 2,
+      "description": "Basic Math includes problems on topics like arithmetic, sequences, and counting, which are fundamental to proper understanding of algorithmic logic."
+    },
+    {
+      "name": "Practice Strings",
+      "title": "Practice Strings",
+      "slug": "strings",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 89133,
+      "review": {
+        "rating": 4.5,
+        "users": 1133
+      },
+      "course_count": 2,
+      "description": "Practice String problems in C, C++, Python, Java and 10+ other languages. Solve these questions on Strings and prepare yourself for handling text based data."
+    },
+    {
+      "name": "500 to 1000 difficulty rating",
+      "title": "500 to 1000 difficulty problems",
+      "slug": "logical-problems",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 153886,
+      "review": {
+        "rating": 4.6,
+        "users": 2578
+      },
+      "course_count": 2,
+      "description": "Practice the easy logical problems available on CodeChef. The problems are in the difficulty range of 500 to 1000."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "63",
+    "name": "Learn Rust",
+    "title": "Learn Rust",
+    "slug": "rust",
+    "description": "Get hands-on experience in Rust language with this interactive and practical course. Master the basic syntax of the language and develop real-world applications with confidence.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 347
+    },
+    "learners_count": 2628,
+    "lessons_count": 23
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Other Practice Paths",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 1965,
+  "path_review": {
+    "rating": 4.6,
+    "users": 134
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/rust-dsa",
+  "roadmap_title": "Rust with Problem Solving"
+}

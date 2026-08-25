@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ICL1901",
+  "contest_category": "6",
+  "problem_name": "A Weird Device",
+  "intended_contest_code": "ICL2019",
+  "body": "You were strolling outside the restaurant at the end of the universe. On a metaspiral path you stumble upon a weird device which takes a three-digit number as input and processes it. The Hitchhiker's guide to the galaxy explains that it processes the input in the following manner: \n\n- Multiplies it with 13, followed by 11 and then 7          \n- Outputs all the distinct three-digit numbers possible from the digits of the new number (each digit can only be used once)          \n\nYour friend Zaphod is in a playful mood, and does the following with the device-           \n- Given a three-digit positive number $K$, he feeds it to the device for processing.          \n- He then takes the numbers it gives as output, and send each of them through the device and again collect all the numbers sent out.          \n- Repeats the above step $N$ times.          \n\nTo test your wit, he challenges you to find the number of distinct 3-digit numbers which the device outputs over the $N$ steps. Can you?\n\n###Input:\n\n- First line will contain $T$, number of testcases. Then the testcases follow.\n- Each testcase contains of a single line of input, two integers $K, N$.\n\n###Output:\nFor each testcase, output a single integer denoting the number of distinct 3-digit numbers which the device outputs over the $N$ steps.\n\n###Constraints\n- $1 \\leq T \\leq 1000$          \n- $5 \\leq N \\leq 10^9$          \n- Each digit of $K$ is non-zero           \n\n###Sample Input:\n1          \n123 5         \n\n###Sample Output:\n 27         \n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You were strolling outside the restaurant at the end of the universe. On a metaspiral path you stumble upon a weird device which takes a three-digit number as input and processes it. The Hitchhiker's guide to the galaxy explains that it processes the input in the following manner: \n\n- Multiplies it with 13, followed by 11 and then 7          \n- Outputs all the distinct three-digit numbers possible from the digits of the new number (each digit can only be used once)          \n\nYour friend Zaphod is in a playful mood, and does the following with the device-           \n- Given a three-digit positive number $K$, he feeds it to the device for processing.          \n- He then takes the numbers it gives as output, and send each of them through the device and again collect all the numbers sent out.          \n- Repeats the above step $N$ times.          \n\nTo test your wit, he challenges you to find the number of distinct 3-digit numbers which the device outputs over the $N$ steps. Can you?\n\n### Input:\n\n- First line will contain $T$, number of testcases. Then the testcases follow.\n- Each testcase contains of a single line of input, two integers $K, N$.\n\n### Output:\nFor each testcase, output a single integer denoting the number of distinct 3-digit numbers which the device outputs over the $N$ steps.\n\n### Constraints\n- $1 \\leq T \\leq 1000$          \n- $5 \\leq N \\leq 10^9$          \n- Each digit of $K$ is non-zero           \n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n123 5",
+        "output": "27",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 23058,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "la_flame_",
+  "problem_display_authors": [
+    "la_flame_"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/la_flame_'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>la_flame_</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "yashdeepgupta",
+  "date_added": "20-03-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1810",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610873
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ICL1901",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 11,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,124 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13G",
+  "contest_category": "6",
+  "problem_name": "Message Coding",
+  "intended_contest_code": null,
+  "body": "<p>You have a mini number pad which allows you a shortcut mode of typing messages using the digits 0 to 9. Each digit represents a subset of English letters (lowercase only). No letter is represented by more than one digit. An example keypad is given below along with the corresponding letters. Unfortunately there is no representation for blank or any other separator for words.</p>\n<p class=MsoNormal style='margin-left:.5in;text-align:justify'><span lang=PT-BR style='font-family:Calibri'>0:\u00a0a\u00a0 e\u00a0 u\u00a0\u00a0\u00a0\u00a0\u00a0 \u00a0\u00a0 5: \u00a0f p z</span></p>\n<p class=MsoNormal style='margin-left:.5in;text-align:justify'><span lang=PT-BR style='font-family:Calibri'>1: b\u00a0 l\u00a0 v\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 6: \u00a0g q</span></p>\n<p class=MsoNormal style='margin-left:.5in;text-align:justify'><span lang=PT-BR style='font-family:Calibri'>2:\u00a0c\u00a0 m w \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 7: \u00a0h r</span></p>\n<p class=MsoNormal style='margin-left:.5in;text-align:justify><span lang=PT-BR style='font-family:Calibri'>3:\u00a0d\u00a0 n x\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 8:\u00a0 k s\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 </span></p>\n<p class=MsoNormal style='margin-left:.5in;text-align:justify><span style='font-family:Calibri'>4:\u00a0i o y\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a09:\u00a0 j t</span></p>\n<p>You have a complete dictionary of words <span style='color:black'>(with lowercase letters only).</span> You may use the keyboard to type a sequence of words. For example, the words \u201ccode competition final\u201d is entered as \u201c2 4 3 0 2 4 2 5 0 9 4 9 4 4 3 5 4 3 0 1\u201d. This sequence may correspond to several different word sequences. Some digit sequences may not correspond fully to any word sequence.</p>\n<p>\nYou are required to print the minimum number of words in sequence from the dictionary that <span style='color:black'>covers</span><span style='color:red'> </span>the given input. If the given digit sequence does not correspond to any complete word sequence in the dictionary, output -1.\n</p>\n<h3>Input</h3>\n<p>The first line contains the number of test cases, <b>N </b><span style='font-family:Calibri'>.</span></p>\n<p>For each test case, first line contains an integer <b>K</b> indicating the number of words in the dictionary. Second line contains <b>K</b> words, each with length less than 20. This is followed by 10 lines, with each line containing the following: a digit <b>d</b>, followed by an integer <b>m</b>, followed by <b>m</b> lowercase alphabets (with one space between two characters) indicating the English alphabets represented by the digit <b>d</b>. This is followed by a single line containing an integer <b>n </b>, followed by <b>n</b> integers (each within 0 and 9) denoting an n-digit input sequence to check.</p>\n<h3>Output</h3>\n<p>For each test case,\u00a0in the first line, print the case number, followed by a colon, followed by a single space, followed by a single integer representing the minimum number of words in the dictionary that can cover the given digit sequence (the integer should be -1 if the given digit sequence does not correspond to any complete word sequence).</p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> &#8804; 3</p>\n<p>0 &lt; <b>K</b> &#8804; 10000</p>\n<p>0 &#8804; <b>d</b> &#8804; 9</p>\n<p>0 &lt; <b>m</b> &#8804; 15</p>\n<p>0 &lt; <b>n</b> &#8804; 1000</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n18\nam axe exam boy colour dam dot donkey fox new prim prime primeval pry the this theory van\n0 3 a b c\n1 3 d e f\n2 2 g h\n3 3 i j y\n4 3 l m n\n5 3 o p q\n6 2 r s\n7 2 t u\n8 3 v w x\n9 2 k z\n11 7 2 1 5 6 3 4 1 8 0 4\n20\nam ant axe boy colour dam dot donkey exam exact fox new prim prime primeval pry the this theory van\n0 3 a b c\n1 3 d e f\n2 2 g h\n3 3 i j y\n4 3 l m n\n5 3 o p q\n6 2 r s\n7 2 t u\n8 3 v w x\n9 2 k z\n5 2 4 3 0 2\n\n<b>Output:</b>\nCase 1: 2\nCase 2: -1\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < **N** \u2264 3\n- 0 < **K** \u2264 10000\n- 0 \u2264 **d** \u2264 9\n- 0 < **m** \u2264 15\n- 0 < **n** \u2264 1000\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You have a mini number pad which allows you a shortcut mode of typing messages using the digits 0 to 9. Each digit represents a subset of English letters (lowercase only). No letter is represented by more than one digit. An example keypad is given below along with the corresponding letters. Unfortunately, there is no representation for blank or any other separator for words.\n\n```\n0: a e u      5: f p z\n1: b l v      6: g q\n2: c m w      7: h r\n3: d n x      8: k s\n4: i o y      9: j t\n```\n\nYou have a complete dictionary of words (with lowercase letters only). You may use the keyboard to type a sequence of words. For example, the words \"code competition final\" is entered as \"2 4 3 0 2 4 2 5 0 9 4 9 4 4 3 5 4 3 0 1\". This sequence may correspond to several different word sequences. Some digit sequences may not correspond fully to any word sequence.\n\nYou are required to print the minimum number of words in sequence from the dictionary that covers the given input. If the given digit sequence does not correspond to any complete word sequence in the dictionary, output -1.\n",
+    "inputFormat": "The first line contains the number of test cases, **N**.\n\nFor each test case, the first line contains an integer **K** indicating the number of words in the dictionary. The second line contains **K** words, each with length less than 20. This is followed by 10 lines, with each line containing the following: a digit **d**, followed by an integer **m**, followed by **m** lowercase alphabets (with one space between two characters) indicating the English alphabets represented by the digit **d**. This is followed by a single line containing an integer **n**, followed by **n** integers (each within 0 and 9) denoting an n-digit input sequence to check.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, in the first line, print the case number, followed by a colon, followed by a single space, followed by a single integer representing the minimum number of words in the dictionary that can cover the given digit sequence (the integer should be -1 if the given digit sequence does not correspond to any complete word sequence).\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n18\nam axe exam boy colour dam dot donkey fox new prim prime primeval pry the this theory van\n0 3 a b c\n1 3 d e f\n2 2 g h\n3 3 i j y\n4 3 l m n\n5 3 o p q\n6 2 r s\n7 2 t u\n8 3 v w x\n9 2 k z\n11 7 2 1 5 6 3 4 1 8 0 4\n20\nam ant axe boy colour dam dot donkey exam exact fox new prim prime primeval pry the this theory van\n0 3 a b c\n1 3 d e f\n2 2 g h\n3 3 i j y\n4 3 l m n\n5 3 o p q\n6 2 r s\n7 2 t u\n8 3 v w x\n9 2 k z\n5 2 4 3 0 2\n",
+        "output": "Case 1: 2\nCase 2: -1\n",
+        "explanation": "In the first test case, the digit sequence \"7 2 1 5 6 3 4 1 8 0 4\" corresponds to the words \"the\" and \"theory\", which are in the dictionary. The minimum number of words required to cover the sequence is 2.\n\nIn the second test case, the digit sequence \"2 4 3 0 2\" does not correspond to any complete word sequence in the dictionary, so the output is -1.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13G\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13G\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy - Medium</p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic Programming, Trie</p>\n<h3>PROBLEM:</h3>\n<p>Given <b>K</b> words <b>W[1\u2026K]</b>, determine the minimum number of words need to exact cover (without any overlaps) a given string <b>S[1\u2026n]</b>.</p>\n<h3>EXPLANATION:</h3>\n<p>It is worth to note that although the number corresponds many characters, each character is only mapped to one number. Therefore, we can translate the characters to numbers.</p>\n<p>After that, we can further observe that the exact cover can be performed in order such that each time the covered part is the prefix of the string. That is, given any possible solutions, we can always arrange the order of words to make sure that the covered part is always a prefix of the string. This gives us the opportunity of dynamic programming.</p>\n<p>Use <b>f[i]</b> to stand for the minimum number of words needed to cover <b>S[1\u2026i]</b>. Then we can get the recursion:</p>\n<pre><code>f[0] = 0;\nf[i] = min{ f[j] + 1 };  for all 0 &lt;= j &lt; i and S[j+1 .. i] is a word.\n</code></pre>\n<p>This dynamic programming is O(<b>nKL</b>) if we implement by trying all words. Here <b>L</b> is the maximum length of words. We can improve this situation by building a <a href=\"http://en.wikipedia.org/wiki/Trie\" rel=\"nofollow noopener\">Trie</a> for the word list. With Trie, the time complexity can be improved to O(<b>nL</b>), because we do not perform any extra matching between the string and words.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4051,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.1",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "jingbo_adm",
+    "kgp13acm",
+    "trie"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13G",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610963
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13G",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

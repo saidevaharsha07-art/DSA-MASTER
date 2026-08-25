@@ -1,0 +1,126 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CODIE",
+  "contest_category": "6",
+  "problem_name": "Codie Bird",
+  "intended_contest_code": null,
+  "body": "Codie is a super intelligent bird stuck inside a flappy bird simulation. The game is simple: if the position of the bird is denoted by $(x, y)$, then the bird can move in the following directions in one step:\r\n\r\n- right \u2014 to $(x + 1, y)$,\r\n- up-right \u2014 to $(x + 1, y + 1)$,\r\n- down-right \u2014 to $(x + 1, y - 1)$.\r\n\r\nThe screen has width $K$ and you are not allowed to move outside of the screen, i.e. the position of the bird must satisfy $1 \\leq y \\leq K$ at each moment.\r\n<img src = \"https://discuss.codechef.com/upfiles/giphy.gif\" alt = \"Animation for flappy bird game\">\r\n\r\nCodie is moving from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$. However, there is exactly one obstacle in the simulation. This obstacle occurs at a random $x$-coordinate between $2$ and $N - 1$ (both inclusive), where each $x$ has equal probability. The obstacle is composed of two vertical pipes. One of them is at the top and covers all $y$-coordinates between $b$ and $K$ (both inclusive). The other one is at the bottom and covers all $y$-coordinates between $1$ and $a$ (both inclusive). The pipes only allow Codie to move through $y$-coordinates that are $\\geq a+1$ and $\\leq b-1$ at this particular $x$-coordinate.\r\n\r\nCodie, being a super smart and geeky bird, is interested in finding the expected number of paths from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$. Help Codie find the answer!\r\n\r\nSpecifically, let's assume that the expected number of paths is a fraction of the form $\\frac{P}{Q}$, where $P$ and $Q$ are coprime. Let $Q^{-1}$ be the multiplicative inverse of $Q$ modulo $10^{9} + 7$. Compute $P \\cdot Q^{-1}$ modulo $10^{9} + 7$.\r\n\r\n### Input\r\n- The only line of the input contains four space-separated integers $N$, $K$, $a$ and $b$ denoting the final $x$-coordinate, the width of the screen, the highest coordinate blocked by the bottom pipe and the lowest coordinate blocked by the top pipe.\r\n\r\n### Output\r\nPrint a single line containing one integer \u2014 the expected number of paths from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$ modulo $10^{9} + 7$.\r\n\r\n### Constraints\r\n- $3 \\leq N \\leq 10^{9}$\r\n- $2 \\leq K \\leq 50$\r\n- K is even\r\n- $1 \\leq a < b \\leq K$\r\n\r\n\r\n### Example Input\r\n```\r\n5 4 1 3\r\n```\r\n\r\n### Output:\r\n```\r\n666666679\r\n```\r\n\r\n### Explanation\r\nLet $X$ denote the starting and ending coordinate, and $B$ denote the cells blocked by pipes.\r\n<img src = \"https://discuss.codechef.com/upfiles/codie_explain_RFTTQft.png\"\r\n width = \"600\">\r\nThe expected value is $(7 \\cdot \\frac{1}{3}) + (9 \\cdot \\frac{1}{3}) + (7 \\cdot \\frac{1}{3}) = \\frac{23}{3} = 666666679$ (modulo $10^{9} + 7$).\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $3 \\leq N \\leq 10^{9}$\n- $2 \\leq K \\leq 50$\n- $K$ is even\n- $1 \\leq a < b \\leq K$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Codie is a super intelligent bird stuck inside a flappy bird simulation. The game is simple: if the position of the bird is denoted by $(x, y)$, then the bird can move in the following directions in one step:\n\n- right \u2014 to $(x + 1, y)$,\n- up-right \u2014 to $(x + 1, y + 1)$,\n- down-right \u2014 to $(x + 1, y - 1)$.\n\nThe screen has width $K$ and you are not allowed to move outside of the screen, i.e. the position of the bird must satisfy $1 \\leq y \\leq K$ at each moment.\n\n![Animation for flappy bird game](https://discuss.codechef.com/upfiles/giphy.gif)\n\nCodie is moving from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$. However, there is exactly one obstacle in the simulation. This obstacle occurs at a random $x$-coordinate between $2$ and $N - 1$ (both inclusive), where each $x$ has equal probability. The obstacle is composed of two vertical pipes. One of them is at the top and covers all $y$-coordinates between $b$ and $K$ (both inclusive). The other one is at the bottom and covers all $y$-coordinates between $1$ and $a$ (both inclusive). The pipes only allow Codie to move through $y$-coordinates that are $\\geq a+1$ and $\\leq b-1$ at this particular $x$-coordinate.\n\nCodie, being a super smart and geeky bird, is interested in finding the expected number of paths from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$. Help Codie find the answer!\n\nSpecifically, let's assume that the expected number of paths is a fraction of the form $\\frac{P}{Q}$, where $P$ and $Q$ are coprime. Let $Q^{-1}$ be the multiplicative inverse of $Q$ modulo $10^{9} + 7$. Compute $P \\cdot Q^{-1}$ modulo $10^{9} + 7$.\n",
+    "inputFormat": "The only line of the input contains four space-separated integers $N$, $K$, $a$ and $b$ denoting the final $x$-coordinate, the width of the screen, the highest coordinate blocked by the bottom pipe and the lowest coordinate blocked by the top pipe.\n",
+    "inputFormatState": true,
+    "outputFormat": "Print a single line containing one integer \u2014 the expected number of paths from $(1, \\frac{K}{2})$ to $(N, \\frac{K}{2})$ modulo $10^{9} + 7$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5 4 1 3\n",
+        "output": "666666679\n",
+        "explanation": "Let $X$ denote the starting and ending coordinate, and $B$ denote the cells blocked by pipes.\n\n![Explanation image](https://discuss.codechef.com/upfiles/codie_explain_RFTTQft.png)\n\nThe expected value is $(7 \\cdot \\frac{1}{3}) + (9 \\cdot \\frac{1}{3}) + (7 \\cdot \\frac{1}{3}) = \\frac{23}{3} = 666666679$ (modulo $10^{9} + 7$).\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/CODIE\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACM17CHN/problems/CODIE\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/sidhant007\" rel=\"nofollow noopener\">Sidhant Bansal</a></p>\n<p><strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Zi Song Yeoh</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>You are playing flappy bird on a screen of width <span class=\"math\">K</span> and length <span class=\"math\">N</span>, where <span class=\"math\">K \\le 50</span> and <span class=\"math\">N \\le 10^9</span>.<br>\nIn one step you can move either right, up and right or down and right. There is an obstacle at exactly one<br>\n<span class=\"math\">x</span> coordinate between <span class=\"math\">2</span> and <span class=\"math\">N - 1</span>, where each <span class=\"math\">x</span> has equal probability. An obstacle allows passing only<br>\nthrough some contiguous range <span class=\"math\">(a, b)</span> of y-coordinates.</p>\n<p>You want to find expected number of paths from <span class=\"math\">(1, \\frac{K}{2})</span> to <span class=\"math\">(N, \\frac{K}{2})</span>.</p>\n<h3>PREREQUISITES</h3>\n<p>Using Matrix Exponentiation to solve linear recurrences.</p>\n<h3>EXPLANATION</h3>\n<h2>An <span class=\"math\">O(N^{2}K)</span> solution</h2>\n<p>First we try to solve the problem with smaller constraints, say around <span class=\"math\">N \\le 1000</span> and <span class=\"math\">K \\le 50</span>. For such constraints, we can iterate over which x-coordinate would have the obstacle. There are <span class=\"math\">O(n)</span> choices for the obstacle. For each x-coordinate, we can use dynamic programming with state <span class=\"math\">dp[i][j] = \\text{Total number of paths from } (1, \\frac{K}{2}) \\text{ to } (i, j)</span>. Clearly, this dynamic program has <span class=\"math\">O(NK)</span> states and computing each state takes <span class=\"math\">O(1)</span> since we just<br>\nlook at the three neighbours of <span class=\"math\">(i, j)</span> i.e. <span class=\"math\">(i - 1, j), (i - 1, j - 1), (i - 1, j + 1)</span> and sum them up to compute <span class=\"math\">dp[i][j]</span>. The only place where the DP differs is when we reach the column with the obstacle. In this case, the cells blocked by the obstacle will have a DP value of zero.</p>\n<p>Finally, we can add up all the <span class=\"math\">dp[N][\\frac{K}{2}]</span> values that we get for each obstacle coordinate. Let\u2019s call this value <span class=\"math\">S</span>. Then, the answer is <span class=\"math\">\\frac{S}{N - 2}</span> since each coordinate between <span class=\"math\">2</span> and <span class=\"math\">N - 1</span> is equiprobable. Thus, this solution is <span class=\"math\">O(N) \\times O(NK) = O(N^{2}K)</span>.</p>\n<h2>Representation in matrix form</h2>\n<p>For this part, we expect that you have some level of familiarity with using matrix exponentiation to optimize dynamic programming. What we\u2019re looking for here is a transition matrix <span class=\"math\">T</span>. Consider the vector <span class=\"math\">f[i]</span> which is defined as follows:</p>\n<div class=\"math\">\n\n\\begin{bmatrix}\n    dp[i][1] \\\\\n    dp[i][2] \\\\\n    \\vdots \\\\\n    dp[i][K]\n\\end{bmatrix}\n\n</div>\n<p>Note that <span class=\"math\">f[i]</span> is a <span class=\"math\">K \\times 1</span> matrix. <span class=\"math\">T</span> should have the property that <span class=\"math\">T \\cdot f[i] = f[i + 1]</span>. Thus, <span class=\"math\">T</span> is a <span class=\"math\">K \\times K</span> matrix. If <span class=\"math\">(i + 1)^{th}</span> column doesn\u2019t have an obstacle, then <span class=\"math\">T</span> looks as follows:</p>\n<div class=\"math\">\n\n\\begin{bmatrix}\n    1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\dots  &amp; 0 &amp; 0 \\\\\n    1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\dots  &amp; 0 &amp; 0 \\\\\n    0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\dots  &amp; 0 &amp; 0 \\\\\n    \\dots &amp; \\dots &amp; \\dots &amp; \\dots &amp; \\dots &amp; \\dots &amp; \\dots &amp; \\dots \\\\\n    0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\dots  &amp; 1 &amp; 1\\\\\n\\end{bmatrix}\n\n</div>\n<p>If the <span class=\"math\">(i + 1)^{th}</span> column does have an obstacle, then the matrix differs a little. Formally, let this matrix be <span class=\"math\">S</span>. Then, all the rows of <span class=\"math\">S</span> that are outside the range <span class=\"math\">(a, b)</span> are zero rows.</p>\n<p>Let <span class=\"math\">E^{*}[i]</span> be the final vector that we get when the obstacle is at column <span class=\"math\">i</span> i.e. the <span class=\"math\">f[n]</span> vector when the obstacle<br>\nis at column <span class=\"math\">i</span>. Define <span class=\"math\">E[i] = E^{*}[i][\\frac{K}{2}]</span>. Note that <span class=\"math\">E[i] = E^{*}[i] \\cdot v</span> where <span class=\"math\">v</span> is a unit vector with a one at the <span class=\"math\">\\frac{K}{2}^{th}</span> row.</p>\n<p>Note that <span class=\"math\">E[i] = T^{N - i} \\cdot S \\cdot T^{i - 1} \\cdot v</span>. The expected number of paths is given by <span class=\"math\">\\frac{1}{N - 2} \\cdot \\sum_{k = 2}^{N - 1} E[k]</span>. So, the problem is essentially to compute this summation efficiently, since <span class=\"math\">N</span> itself can be as large as <span class=\"math\">10^9</span>.</p>\n<h2>Optimization to <span class=\"math\">O(K^3 \\log^{2}N)</span>\n</h2>\n<p>Let <span class=\"math\">P[x] = \\sum_{i = 1}^{x} T^{x - i} \\cdot S \\cdot T^{i - 1}</span>. Note that <span class=\"math\">P[x]</span> is closely related to the answer when <span class=\"math\">N = x</span>, but it counts the first and the last columns (which cannot have obstacles). We must subtract that quantity. So, our desired summation would be <span class=\"math\">(P[x] - (T^{x - 1} \\cdot S + S \\cdot T^{x - 1})) \\cdot v</span>.</p>\n<p>Now, we note that <span class=\"math\">P[x]</span> can be computed in <span class=\"math\">O(log^{2} x)</span> matrix multiplications, due to the following properties:</p>\n<ul>\n<li>When <span class=\"math\">x</span> is even then <span class=\"math\">P[x] =  P[\\frac{x}{2}] \\cdot T^{\\frac{x}{2}} + T^{\\frac{x}{2}} \\cdot P[\\frac{x}{2}]</span>\n</li>\n<li>When <span class=\"math\">x</span> is odd then <span class=\"math\">P[x] = P[x - 1] \\cdot T + T^{x - 1} \\cdot S</span>\n</li>\n</ul>\n<p>Thus, we can use the fast binary exponentiation method to compute <span class=\"math\">P[N]</span> recursively. The recursion tree would have depth <span class=\"math\">O(\\log{N})</span> and each step would do about <span class=\"math\">O(K^3 \\log{N})</span> work, making the total complexity <span class=\"math\">O(K^3 \\log^{2}N)</span>.</p>\n<p>Note that this can further be optimized to <span class=\"math\">O(K^3 \\log{N})</span>, but that wasn\u2019t required for this problem.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17709,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "sidhant007",
+  "problem_display_authors": [
+    "sidhant007"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/sidhant007'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>sidhant007</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "1-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Expected Value",
+    "Matrix Exponentiation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Probability",
+    "Matrices",
+    "Matrix Multiplication"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/CODIE",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610696
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CODIE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

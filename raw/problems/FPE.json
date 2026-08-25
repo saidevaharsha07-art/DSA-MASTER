@@ -1,0 +1,131 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FPE",
+  "contest_category": "6",
+  "problem_name": "Full Path Eraser",
+  "intended_contest_code": "JUNE221",
+  "body": "This is an example statement in markdown. This is the statement of the problem [TANDC](https://codechef.com/problems/TANDC) on CodeChef. The main statement starts with the next paragraph. Please make sure to remove this paragraph from your statement before publishing your problem. If your problem doesn't contain Subtasks, you should remove the section subtask too. We are using markdown the syntax of which can be seen [at](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). We request you to not use any HTML tags in the statement, e.g. no p, ul, li, pre, br or b tags. If you face any issue, please contact admins or email us at help@codechef.com.\n\nTracy is teaching Charlie maths via a game called $N$-Cube, which involves three sections involving $N$.\n\nTracy gives Charlie a number $N$, and Charlie makes a list of $N$-th powers of integers in increasing order $1^N, 2^N, 3^N, \\dot, \\text{so on}$. This teaches him exponentiation.\n\nThen Charlie performs the following subtraction game $N$ times: Take all pairs of consecutive numbers in the list and take their difference. These differences then form the new list for the next iteration of the game. Eg, if $N$ was 6, the list proceeds as $[1, 64, 729, 4096 ... ]$ to $[63, 685, 3367 ...]$, and so on $5$ more times.\n\nAfter the subtraction game, Charlie has to correctly tell Tracy the $N$-th element of the list. This number is the *value of the game*.\n\nAfter practice Charlie became an expert in the game. To challenge him more, Tracy will give two numbers $M$ (where $M$ is a prime) and $R$ instead of just a single number $N$, and the game must start from $M_R - 1$ instead of $N$. Since the *value of the game* can now become large, Charlie just have to tell the largest integer $K$ such that $M_K$ divides this number. Since even $K$ can be large, output $K$ modulo 1000000007 ($10^9 + 7$).\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 2\\cdot10^4$\n- $1 \\leq N \\leq 3\\cdot10^5$\n- $1 \\leq A_i \\leq 10^9$\n- $1 \\leq u,v \\leq N$ and $u \\neq v$\n- It is guaranteed that the edges given in the input form a tree.\n- The sum of $N$ over all test cases does not exceed $3\\cdot10^5$",
+    "constraintsState": true,
+    "subtasks": "- 30 points : $1 \\leq R \\leq 10000$\n- 70 points : $1 \\leq R \\leq 10^9$\n",
+    "subtasksState": false,
+    "statement": "There is a rooted tree of $N$ vertices rooted at vertex $1$. Each vertex $v$ has a value $A_v$ associated with it.\n\nYou choose a vertex $v$ (possibly the root) from the tree and remove all vertices on the path from the root to the vertex $v$, also including $v$. This will result in a forest of zero or more connected components.\n\nThe beauty of a connected component is the $\\mathrm{GCD}$ of the values of all vertices in the component. Find the maximum value of the sum of beauties of the obtained connected components for any choice of $v$.\n\nHere, $\\mathrm{GCD}$ stands for [Greatest Common Divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor).",
+    "inputFormat": "- The first line contains a single integer $T$ \u2014 the number of test cases. Then the test cases follow.\n- The first line of each test case contains an integer $N$ \u2014 the size of the tree.\n- The second line of each test case contains $N$ space-separated integers $A_1, A_2, \\dots, A_N$ denoting the values associated with each vertex.\n- The next $N-1$ lines contain two space-separated integers $u$ and $v$ \u2014 denoting an undirected edge between nodes $u$ and $v$.\n\nIt is guaranteed that the edges given in the input form a tree.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case output the maximum value of the sum of beauties of the obtained connected components for any choice of $v$.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n10\n15 30 15 5 3 15 3 3 5 5\n1 2\n1 5\n2 3\n2 4\n5 6\n5 7\n5 8\n7 9\n7 10",
+        "output": "33",
+        "explanation": "The tree from the sample is as follows.\n\n![tree_basic](https://s3.amazonaws.com/codechef_shared/download/Images/the_hyp0cr1t3/tree_basic.png =450x450)\n\nIf vertex $v = 7$ is chosen, vertices $1$, $5$ and $7$ are removed.\n\n![tree_remove](https://s3.amazonaws.com/codechef_shared/download/Images/the_hyp0cr1t3/tree_remove.png =450x450)\n\nThe resulting forest contains five connected components $\\{8\\}, \\{6\\}, \\{10\\}, \\{9\\}$ and $\\{2, 3, 4\\}$.\n\n![tree_value](https://s3.amazonaws.com/codechef_shared/download/Images/the_hyp0cr1t3/tree_value.png =450x450)\n\nThe beauties of the connected components are $3$, $15$, $5$, $5$ and $5$ respectively. Thus the answer is $3 + 15 + 5 + 5 + 5 = 33$.\n\nIt can be shown that this is the maximum value possible for any choice of $v$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 101547,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "kryptonix171",
+  "problem_display_authors": [
+    "kryptonix171"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kryptonix171'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>kryptonix171</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "tabr"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/tabr'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>tabr</span></a></div>",
+  "problem_editorialist": null,
+  "date_added": "2-06-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Trees",
+    "GCD",
+    "Dynamic Programming",
+    "DFS"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Graphs",
+    "Mathematics",
+    "Number Theory",
+    "Algorithms",
+    "Graph Algos",
+    "Traversals"
+  ],
+  "difficulty_rating": "2094",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610850
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FPE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

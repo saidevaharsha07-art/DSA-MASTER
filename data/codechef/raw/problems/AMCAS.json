@@ -1,0 +1,131 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMCAS",
+  "contest_category": "6",
+  "problem_name": "Circles and Squares",
+  "intended_contest_code": null,
+  "body": "<p><!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"><html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /></head><body></body></html></!doctype></p>\n<div>\n<p>\n    <i>Chota pendrive</i> (one of the deadliest coders) is the right hand of <i>Farzi coder</i>. He is really fond of circles and squares. One day he saw this problem and solved it. But he is not very sure if he correctly solved it. Can you help him in verifying the answer. <br /><br />\n    The problem looks like:\n    </p>\n<p>\n    There is a grid of size <b>N x M</b>, there are <b>C</b> unit radii circles with integer center coordinates ((x<sub>0</sub>,y<sub>0</sub>), (x<sub>1</sub>,y<sub>1</sub>) .... (x<sub>c-1</sub>, y<sub>c-1</sub>)) on the grid. Choose any square portion of that grid with side length <b>A</b> such that the sides of the square are parallel to the sides of grid, corners of this square must be inside or on the boundary of the grid and their coordinates are integers. Find the expected area covered by circles inside that square if you were to choose such a square randomly on the grid. Answer must be correct upto 6 places of decimal.\n    </p>\n<h2>Input</h2>\n<p>    First line will contain <b>N</b>, <b>M</b>, <b>A</b>, and <b>C </b>i.e number of rows, number of columns, side of the square and total number of cirlces respectively.<br />\nNext C lines contains coordinates of center of circles.</p>\n<h2>Output</h2>\n<p>    One line containing expected area covered by circles correct upto 6 places of decimal.</p>\n<h2>Constraints</h2>\n<ul>\n<li><b>1 \u2264 N,M,C \u2264 100000</b></li>\n<li><b>1 \u2264 A \u2264 min(N,M)</b></li>\n<li><b>0 \u2264 x<sub>i</sub> \u2264 N</b></li>\n<li><b>0 \u2264 y<sub>i</sub> \u2264 M</b></li>\n<li><b>No two pairs of x<sub>i</sub>,y<sub>i</sub> are same i.e. no two circles have the same center.</b></li>\n</ul>\n<h2>Sample</h2>\n<h3>Input 1</h3>\n<pre>\n1 1 1 1\n0 0\n    </pre><h3>Output 1</h3>\n<pre>\n0.7853981634\n    </pre><h3>Input 2</h3>\n<pre>\n3 3 2 2\n0 0\n3 3\n    </pre><h3>Output 2</h3>\n<pre>\n0.3926990817\n    </pre><h3>Explanation</h3>\n<p>    <b>Case 1:</b> These is only one possible way to choose the square and it will cover one quadrant of a circle.<br /><br />\n    <b>Case 2:</b> These are 4 possible ways to choose a square with side length 2 and two of them will contain one quadrant of a circle each.<br /></p>\n</div>\n<p></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 N, M, C \u2264 100000**\n- **1 \u2264 A \u2264 min(N, M)**\n- **0 \u2264 x<sub>i</sub> \u2264 N**\n- **0 \u2264 y<sub>i</sub> \u2264 M**\n- No two pairs of x<sub>i</sub>, y<sub>i</sub> are same i.e. no two circles have the same center.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*Chota pendrive* (one of the deadliest coders) is the right hand of *Farzi coder*. He is really fond of circles and squares. One day he saw this problem and solved it. But he is not very sure if he correctly solved it. Can you help him in verifying the answer.\n\nThe problem looks like:\n\nThere is a grid of size **N x M**, there are **C** unit radii circles with integer center coordinates ((x\u2080, y\u2080), (x\u2081, y\u2081) .... (x<sub>c-1</sub>, y<sub>c-1</sub>)) on the grid. Choose any square portion of that grid with side length **A** such that the sides of the square are parallel to the sides of the grid, corners of this square must be inside or on the boundary of the grid and their coordinates are integers. Find the expected area covered by circles inside that square if you were to choose such a square randomly on the grid. Answer must be correct up to 6 places of decimal.\n",
+    "inputFormat": "First line will contain **N**, **M**, **A**, and **C** i.e number of rows, number of columns, side of the square and total number of circles respectively.\n\nNext **C** lines contains coordinates of center of circles.\n",
+    "inputFormatState": true,
+    "outputFormat": "One line containing expected area covered by circles correct up to 6 places of decimal.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1 1 1 1\n0 0\n",
+        "output": "0.7853981634\n",
+        "explanation": "**Case 1:** There is only one possible way to choose the square and it will cover one quadrant of a circle.\n",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "3 3 2 2\n0 0\n3 3\n",
+        "output": "0.3926990817\n",
+        "explanation": "**Case 2:** There are 4 possible ways to choose a square with side length 2 and two of them will contain one quadrant of a circle each.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "akash4983",
+  "problem_display_authors": [
+    "akash4983"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/akash4983'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>akash4983</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "akash4983",
+    "combinatorics",
+    "expected-value",
+    "geometry"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Expected Value",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMCAS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

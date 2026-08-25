@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { 
   Sparkles, 
@@ -29,19 +28,26 @@ import {
   Layers,
   ArrowUpRight
 } from 'lucide-react';
-import { memoryEngine } from '@/src/engines/memory';
-import { curriculumEngine } from '@/src/engines/curriculum';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
+import { useRoadmap } from '@/hooks/use-roadmap';
+import { MentorAdapterService, MentorDashboardData } from '@/src/features/mentor/services/mentor-adapter.service';
 
 export default function MentorPage() {
   const { settings } = useSettings();
   const { toast } = useToast();
+  const { state: roadmapState } = useRoadmap();
 
-  const mentorFeedback = memoryEngine.getAIMentorFeedback();
-  const weakestPattern = memoryEngine.getWeakestPattern();
-  const nextRevisions = memoryEngine.getDueRevisions();
-  const readiness = memoryEngine.getInterviewReadiness();
+  const [mentorData, setMentorData] = useState<MentorDashboardData>(() =>
+    MentorAdapterService.getMentorData('default_user')
+  );
+
+  useEffect(() => {
+    const fresh = MentorAdapterService.getMentorData('default_user');
+    setMentorData(fresh);
+  }, [roadmapState]);
+
+  const { hud, observation, currentFocus, coachSummary, learningDna, skillMatrix, weaknessBreakdown, recommendedQuests, revisionSummary } = mentorData;
 
   const [copiedTip, setCopiedTip] = useState(false);
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
@@ -64,77 +70,6 @@ export default function MentorPage() {
       toast("Problem bookmarked for quick practice!", "success");
     }
   };
-
-  const learningDna = [
-    { label: "Learning Speed", value: 82 },
-    { label: "Problem Solving", value: 78 },
-    { label: "Pattern Recognition", value: 88 },
-    { label: "Memory Retention", value: settings.revision.memoryStrength || 70 },
-    { label: "Debugging", value: 65 },
-    { label: "Optimization", value: 60 },
-    { label: "Interview Readiness", value: readiness || 76 },
-  ];
-
-  const skillMatrix = [
-    { name: "Arrays", score: 80 },
-    { name: "Hashing", score: 78 },
-    { name: "Sliding Window", score: 72 },
-    { name: "Binary Search", score: 60 },
-    { name: "Greedy", score: 68 },
-    { name: "Graphs", score: 56 },
-    { name: "DP", score: 48 },
-  ];
-
-  const recommendedQuests = [
-    {
-      id: "p1",
-      platform: "LeetCode",
-      title: "Range Sum Query - Immutable",
-      difficulty: "Easy",
-      acceptance: "48.2%",
-      estTime: "20 min",
-      confidence: 85,
-      xp: "+60 XP",
-      tags: ["Prefix Sum", "Array"],
-      aiReason: "You repeatedly miss shrinking conditions in Sliding Window.",
-    },
-    {
-      id: "p2",
-      platform: "LeetCode",
-      title: "Minimum Size Subarray Sum",
-      difficulty: "Medium",
-      acceptance: "46.1%",
-      estTime: "25 min",
-      confidence: 82,
-      xp: "+80 XP",
-      tags: ["Sliding Window", "Two Pointers"],
-      aiReason: "Strengthen your variable window technique and edge handling.",
-    },
-    {
-      id: "p3",
-      platform: "Codeforces",
-      title: "Subarray Sums Divisible by K",
-      difficulty: "Medium",
-      acceptance: "37.8%",
-      estTime: "30 min",
-      confidence: 78,
-      xp: "+90 XP",
-      tags: ["Prefix Sum", "Hashing"],
-      aiReason: "You struggle with modular arithmetic in prefix sum problems.",
-    },
-    {
-      id: "p4",
-      platform: "LeetCode",
-      title: "Fruit Into Baskets",
-      difficulty: "Medium",
-      acceptance: "44.5%",
-      estTime: "22 min",
-      confidence: 89,
-      xp: "+85 XP",
-      tags: ["Sliding Window", "Hash Table"],
-      aiReason: "Perfect follow-up problem for 2-key hashmap frequency bounds.",
-    },
-  ];
 
   return (
     <div style={{ width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '20px', paddingBottom: '32px' }}>
@@ -161,7 +96,7 @@ export default function MentorPage() {
                 AI NEURAL COACH ACTIVE
               </span>
               <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#10B981" }} /> 98.4% Accuracy
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#10B981" }} /> {typeof hud.accuracyPct === 'number' ? `${hud.accuracyPct}% Accuracy` : 'Unrated Accuracy'}
               </span>
             </div>
             
@@ -177,25 +112,25 @@ export default function MentorPage() {
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Award size={14} style={{ color: "var(--primary)" }} />
                 <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>CURRENT LEVEL:</span>
-                <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-primary)" }}>Lvl 24 Explorer</span>
+                <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-primary)" }}>Lvl {hud.level} {hud.levelTitle}</span>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Flame size={14} style={{ color: "#F59E0B" }} />
                 <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>STREAK:</span>
-                <span style={{ fontSize: "11px", fontWeight: 700, color: "#F59E0B" }}>15 Days</span>
+                <span style={{ fontSize: "11px", fontWeight: 700, color: "#F59E0B" }}>{hud.streak} Days</span>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <TrendingUp size={14} style={{ color: "#10B981" }} />
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>WEEKLY BOOST:</span>
-                <span style={{ fontSize: "11px", fontWeight: 700, color: "#10B981" }}>+18.4% ▲</span>
+                <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>SOLVED COUNT:</span>
+                <span style={{ fontSize: "11px", fontWeight: 700, color: "#10B981" }}>{hud.solvedCount} Problems</span>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Activity size={14} style={{ color: "var(--primary)" }} />
                 <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>CONFIDENCE:</span>
-                <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-primary)" }}>92% Peak</span>
+                <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-primary)" }}>{typeof hud.confidenceScore === 'number' ? `${hud.confidenceScore}% Peak` : hud.confidenceScore}</span>
               </div>
             </div>
           </div>
@@ -226,29 +161,29 @@ export default function MentorPage() {
                 <h3 style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "var(--text-primary)" }}>Today&apos;s Observation</h3>
               </div>
               <div style={{ display: "flex", gap: "6px" }}>
-                <span style={{ fontSize: "9px", fontWeight: 700, color: "#10B981", background: "rgba(16, 185, 129, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>95% Conf</span>
-                <span style={{ fontSize: "9px", fontWeight: 700, color: "#EF4444", background: "rgba(239, 68, 68, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>P1 Priority</span>
+                <span style={{ fontSize: "9px", fontWeight: 700, color: "#10B981", background: "rgba(16, 185, 129, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>{typeof observation.confidencePct === 'number' ? `${observation.confidencePct}% Conf` : observation.confidencePct}</span>
+                <span style={{ fontSize: "9px", fontWeight: 700, color: "#EF4444", background: "rgba(239, 68, 68, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>{observation.priority}</span>
               </div>
             </div>
 
             <p style={{ margin: 0, fontSize: "12px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-              You are doing well recognizing the Sliding Window setup, but you often forget to shrink the window correctly when the condition is violated.
+              {observation.summary}
             </p>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginTop: "10px" }}>
               <div style={{ padding: "8px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)" }}>
                 <span style={{ fontSize: "9px", color: "var(--text-secondary)", fontWeight: 700, display: "block" }}>Why this matters?</span>
-                <span style={{ fontSize: "10px", color: "var(--text-primary)" }}>Incorrect shrinking leads to wrong answers in 70% of attempts.</span>
+                <span style={{ fontSize: "10px", color: "var(--text-primary)" }}>{observation.whyItMatters}</span>
               </div>
               <div style={{ padding: "8px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)" }}>
                 <span style={{ fontSize: "9px", color: "var(--text-secondary)", fontWeight: 700, display: "block" }}>Expected Improvement</span>
-                <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 700 }}>+120 XP / +45 Contest Rating</span>
+                <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 700 }}>{observation.expectedImprovement}</span>
               </div>
             </div>
           </div>
 
           <div style={{ display: "flex", gap: "6px", paddingTop: "6px" }}>
-            <button type="button" onClick={() => toast("Explaining Sliding Window rules...", "info")} style={{ flex: 1, padding: "7px", borderRadius: "6px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--text-primary)", fontSize: "10px", fontWeight: 600, cursor: "pointer" }}>📖 Explain More</button>
+            <button type="button" onClick={() => toast(`Focusing on ${currentFocus.patternName}`, "info")} style={{ flex: 1, padding: "7px", borderRadius: "6px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--text-primary)", fontSize: "10px", fontWeight: 600, cursor: "pointer" }}>📖 Explain More</button>
             <Link href="/practice" style={{ flex: 1, padding: "7px", borderRadius: "6px", background: "var(--primary-soft)", border: "1px solid var(--primary-soft)", color: "var(--primary)", fontSize: "10px", fontWeight: 600, textDecoration: "none", textAlign: "center" }}>&lt;/&gt; Create Practice</Link>
             <button type="button" onClick={() => { setUnderstoodObservation(true); toast("Acknowledged!", "success"); }} style={{ flex: 1, padding: "7px", borderRadius: "6px", background: "var(--primary)", border: "none", color: "#FFF", fontSize: "10px", fontWeight: 700, cursor: "pointer" }}>{understoodObservation ? "✓ Done" : "✓ I Understand"}</button>
           </div>
@@ -268,24 +203,23 @@ export default function MentorPage() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <div>
                 <span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>TARGET PATTERN</span>
-                <h2 style={{ margin: "2px 0 0 0", fontSize: "17px", fontWeight: 800, color: "var(--text-primary)" }}>Sliding Window</h2>
+                <h2 style={{ margin: "2px 0 0 0", fontSize: "17px", fontWeight: 800, color: "var(--text-primary)" }}>{currentFocus.patternName}</h2>
               </div>
-              <span style={{ fontSize: "9px", fontWeight: 700, color: "#F59E0B", background: "rgba(245, 158, 11, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>Medium</span>
+              <span style={{ fontSize: "9px", fontWeight: 700, color: "#F59E0B", background: "rgba(245, 158, 11, 0.15)", padding: "2px 6px", borderRadius: "4px" }}>{currentFocus.difficulty}</span>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "70px 1fr", gap: "14px", alignItems: "center", marginTop: "10px" }}>
               <div style={{ position: "relative", width: "64px", height: "64px" }}>
                 <svg width="64" height="64" viewBox="0 0 64 64">
                   <circle cx="32" cy="32" r="25" stroke="var(--border)" strokeWidth="5" fill="none" />
-                  <circle cx="32" cy="32" r="25" stroke="var(--primary)" strokeWidth="5" fill="none" strokeDasharray="157" strokeDashoffset="34" strokeLinecap="round" transform="rotate(-90 32 32)" />
+                  <circle cx="32" cy="32" r="25" stroke="var(--primary)" strokeWidth="5" fill="none" strokeDasharray="157" strokeDashoffset={157 - (157 * currentFocus.masteryPct) / 100} strokeLinecap="round" transform="rotate(-90 32 32)" />
                 </svg>
-                <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 800, color: "var(--text-primary)" }}>78%</span>
+                <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 800, color: "var(--text-primary)" }}>{currentFocus.masteryPct}%</span>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "3px", fontSize: "10px" }}>
-                <span>Est. Mastery Time: <strong style={{ color: "var(--text-primary)" }}>45 mins</strong></span>
-                <span>Confidence: <strong style={{ color: "#10B981" }}>86%</strong></span>
-                <span style={{ color: "var(--text-secondary)", fontSize: "9px" }}>Reason AI selected this: You repeatedly miss shrinking conditions in subarray problems.</span>
+                <span>Est. Mastery Time: <strong style={{ color: "var(--text-primary)" }}>{currentFocus.estTimeMins} mins</strong></span>
+                <span>Reason: <strong style={{ color: "var(--text-primary)" }}>{currentFocus.reasoning}</strong></span>
               </div>
             </div>
           </div>
@@ -305,10 +239,10 @@ export default function MentorPage() {
 
           <div style={{ padding: "14px", borderRadius: "12px", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "6px", fontSize: "10px" }}>
             <h4 style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "var(--text-primary)" }}>Coach Summary</h4>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Solved Today:</span><strong style={{ color: "var(--text-primary)" }}>4 Problems</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>XP Earned:</span><strong style={{ color: "var(--primary)" }}>+350 XP</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Accuracy:</span><strong style={{ color: "#10B981" }}>92.4%</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Revision Due:</span><strong style={{ color: "#F59E0B" }}>1 Items</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Solved Today:</span><strong style={{ color: "var(--text-primary)" }}>{coachSummary.solvedToday} Problems</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>XP Earned:</span><strong style={{ color: "var(--primary)" }}>+{coachSummary.xpEarnedToday} XP</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Accuracy:</span><strong style={{ color: "#10B981" }}>{coachSummary.accuracyText}</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Revision Due:</span><strong style={{ color: "#F59E0B" }}>{coachSummary.revisionDueCount} Items</strong></div>
           </div>
         </div>
 
@@ -320,7 +254,9 @@ export default function MentorPage() {
           <h3 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
             <Play size={16} style={{ color: "#10B981" }} /> AI Recommended Problems
           </h3>
-          <button type="button" style={{ background: "transparent", border: "none", color: "var(--text-secondary)", fontSize: "11px", cursor: "pointer", fontWeight: 600 }}>View All</button>
+          <Link href="/practice" style={{ textDecoration: 'none' }}>
+            <button type="button" style={{ background: "transparent", border: "none", color: "var(--text-secondary)", fontSize: "11px", cursor: "pointer", fontWeight: 600 }}>View All</button>
+          </Link>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "14px" }}>
@@ -355,8 +291,7 @@ export default function MentorPage() {
               </div>
 
               <div style={{ display: "flex", gap: "6px", paddingTop: "6px", borderTop: "1px solid var(--border)" }}>
-                <button type="button" style={{ flex: 1, padding: "5px", borderRadius: "6px", background: "transparent", border: "1px solid var(--border)", color: "var(--text-secondary)", fontSize: "10px", cursor: "pointer" }}>Preview</button>
-                <Link href="/practice" style={{ flex: 1, padding: "5px", borderRadius: "6px", background: "var(--primary)", color: "#FFF", fontSize: "10px", fontWeight: 700, textDecoration: "none", textAlign: "center" }}>&gt; Start Quest</Link>
+                <Link href={q.url} style={{ flex: 1, padding: "5px", borderRadius: "6px", background: "var(--primary)", color: "#FFF", fontSize: "10px", fontWeight: 700, textDecoration: "none", textAlign: "center" }}>&gt; Start Quest</Link>
               </div>
             </div>
           ))}
@@ -372,9 +307,12 @@ export default function MentorPage() {
             <AlertTriangle size={14} style={{ color: "#EF4444" }} /> Weakness Analysis
           </h4>
           <div style={{ display: "flex", flexDirection: "column", gap: "6px", fontSize: "10px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Shrinking Condition:</span><strong style={{ color: "#EF4444" }}>76% Error</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Edge Cases:</span><strong style={{ color: "#F59E0B" }}>70% Error</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Off by One:</span><strong style={{ color: "#F59E0B" }}>43% Error</strong></div>
+            {weaknessBreakdown.map((w) => (
+              <div key={w.label} style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>{w.label}:</span>
+                <strong style={{ color: "#EF4444" }}>{w.errorRate}</strong>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -419,11 +357,11 @@ export default function MentorPage() {
             <Sparkles size={14} style={{ color: "var(--primary)" }} /> AI Prediction
           </h4>
           <p style={{ margin: 0, fontSize: "10px", color: "var(--text-secondary)", lineHeight: 1.3 }}>
-            86% probability of solving Medium Sliding Window within 15 mins.
+            {mentorData.aiPredictionText}
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "3px", fontSize: "9px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Rating Gain:</span><strong style={{ color: "#10B981" }}>+120 to +150</strong></div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Mastery Gain:</span><strong style={{ color: "var(--primary)" }}>+14%</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Rating Gain:</span><strong style={{ color: "#10B981" }}>{mentorData.predictedRatingGain}</strong></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}><span>Mastery Gain:</span><strong style={{ color: "var(--primary)" }}>{mentorData.predictedMasteryGain}</strong></div>
           </div>
         </div>
 
@@ -436,9 +374,9 @@ export default function MentorPage() {
         <div style={{ padding: "16px", borderRadius: "var(--radius, 14px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
             <h4 style={{ margin: 0, fontSize: "13px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "6px" }}>
-              <RotateCcw size={14} style={{ color: "#F59E0B" }} /> Revision Timeline: Prefix Sum
+              <RotateCcw size={14} style={{ color: "#F59E0B" }} /> Revision Timeline: {revisionSummary.dueTopic}
             </h4>
-            <p style={{ margin: "2px 0 0 0", fontSize: "10px", color: "var(--text-secondary)" }}>Due in 8h 32m • Memory Decay: 32% • Retention: 94%</p>
+            <p style={{ margin: "2px 0 0 0", fontSize: "10px", color: "var(--text-secondary)" }}>{revisionSummary.dueInText} • Memory Decay: {revisionSummary.memoryDecayPct}% • Retention: {revisionSummary.retentionPct}%</p>
           </div>
           <Link href="/revision" style={{ padding: "6px 14px", borderRadius: "6px", background: "var(--primary)", color: "#FFF", fontSize: "10px", fontWeight: 700, textDecoration: "none" }}>
             Start Revision

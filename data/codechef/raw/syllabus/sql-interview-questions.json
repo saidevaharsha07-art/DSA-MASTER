@@ -1,0 +1,1173 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "sql-interview-questions",
+  "name": "Top SQL Interview Questions",
+  "title": "Top SQL Interview Questions",
+  "level": "Beginner",
+  "description": "Revise all the important concepts with our 70 SQL interview questions. Prepare yourself for the upcoming SQL interviews by solving practice problems.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/sql-interview-questions/SQLPREP01/problems/SQLMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "SELECT statements and basic querying",
+      "description": "Retrieve data from one or more tables in a database. Filter, Sort, and Specify which columns to return.",
+      "submodules": [
+        {
+          "name": "Select",
+          "submodule_id": 5907,
+          "contest_code": "SQLPREP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP01/problems/SQLMCQ01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29365",
+              "code": "SQLMCQ01",
+              "name": "Data Retrieval",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29365",
+              "code": "SQLMCQ02",
+              "name": "Column Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29365",
+              "code": "SQLMCQ03",
+              "name": "Result Ordering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29365",
+              "code": "SQLMCQ04",
+              "name": "Distinct Values",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29365",
+              "code": "SQLMCQ05",
+              "name": "Limiting Results",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Joins (INNER, LEFT, RIGHT, FULL OUTER)",
+      "description": "Combine rows from two or more tables based on a related column between them.\nDifferent types of joins determine which rows are included in the result set.",
+      "submodules": [
+        {
+          "name": "Joins",
+          "submodule_id": 5908,
+          "contest_code": "SQLPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP02/problems/SQLMCQ06",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29366",
+              "code": "SQLMCQ06",
+              "name": "Table Combination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29366",
+              "code": "SQLMCQ07",
+              "name": "Data Retrieval",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29366",
+              "code": "SQLMCQ08",
+              "name": "Comprehensive Result",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29366",
+              "code": "SQLMCQ09",
+              "name": "Reverse Direction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29366",
+              "code": "SQLMCQ10",
+              "name": "Missing Data Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Aggregation functions (COUNT, SUM, AVG, etc.)",
+      "description": "Perform calculations on a set of values to return a single result.\nCommon functions include COUNT, SUM, AVG, MAX, and MIN.",
+      "submodules": [
+        {
+          "name": "Functions",
+          "submodule_id": 5909,
+          "contest_code": "SQLPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP03/problems/SQLMCQ11",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29367",
+              "code": "SQLMCQ11",
+              "name": "Function Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29367",
+              "code": "SQLMCQ12",
+              "name": "Distinct Values",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29367",
+              "code": "SQLMCQ13",
+              "name": "Null Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29367",
+              "code": "SQLMCQ14",
+              "name": "Group Operation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29367",
+              "code": "SQLMCQ15",
+              "name": "Function Combination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "GROUP BY and HAVING clauses",
+      "description": "GROUP BY groups rows that have the same values in specified columns.\nHAVING filters groups based on a condition, similar to WHERE for individual rows.",
+      "submodules": [
+        {
+          "name": "group by",
+          "submodule_id": 5910,
+          "contest_code": "SQLPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP04/problems/SQLMCQ16",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29368",
+              "code": "SQLMCQ16",
+              "name": "Aggregate Function Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29368",
+              "code": "SQLMCQ17",
+              "name": "Filtering Grouped Data",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29368",
+              "code": "SQLMCQ18",
+              "name": "Order of Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29368",
+              "code": "SQLMCQ19",
+              "name": "Aggregate Function Placement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29368",
+              "code": "SQLMCQ20",
+              "name": "Column References",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Subqueries",
+      "description": "Nested queries within a larger query, often used in WHERE or FROM clauses.\nCan return single values, lists, or be used as derived tables.",
+      "submodules": [
+        {
+          "name": "subqueries",
+          "submodule_id": 5911,
+          "contest_code": "SQLPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP05/problems/SQLMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29369",
+              "code": "SQLMCQ21",
+              "name": "Query Nesting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29369",
+              "code": "SQLMCQ22",
+              "name": "Subquery Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29369",
+              "code": "SQLMCQ23",
+              "name": "Performance Consideration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29369",
+              "code": "SQLMCQ24",
+              "name": "Subquery Location",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29369",
+              "code": "SQLMCQ25",
+              "name": "Subquery Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "UNION and UNION ALL",
+      "description": "Combine the result sets of two or more SELECT statements.\nUNION removes duplicate rows, while UNION ALL keeps all rows including duplicates.",
+      "submodules": [
+        {
+          "name": "union",
+          "submodule_id": 5912,
+          "contest_code": "SQLPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP06/problems/SQLMCQ26",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29370",
+              "code": "SQLMCQ26",
+              "name": "Set Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29370",
+              "code": "SQLMCQ27",
+              "name": "Performance Consideration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29370",
+              "code": "SQLMCQ28",
+              "name": "Column Requirements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29370",
+              "code": "SQLMCQ29",
+              "name": "Result Set Ordering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29370",
+              "code": "SQLMCQ30",
+              "name": "Syntax Variation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Indexing and query optimization",
+      "description": "Indexes improve query performance by allowing faster data retrieval.\nQuery optimization involves structuring queries efficiently and using appropriate indexes.",
+      "submodules": [
+        {
+          "name": "indexing",
+          "submodule_id": 5913,
+          "contest_code": "SQLPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP07/problems/SQLMCQ31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29371",
+              "code": "SQLMCQ31",
+              "name": "Query Performance Enhancement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29371",
+              "code": "SQLMCQ32",
+              "name": "Index Type Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29371",
+              "code": "SQLMCQ33",
+              "name": "Query Plan Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29371",
+              "code": "SQLMCQ34",
+              "name": "Indexing Strategy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29371",
+              "code": "SQLMCQ35",
+              "name": "Optimization Technique",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Data manipulation (INSERT, UPDATE, DELETE)",
+      "description": "INSERT adds new rows to a table.\nUPDATE modifies existing rows, while DELETE removes rows from a table.",
+      "submodules": [
+        {
+          "name": "insert, update, delete",
+          "submodule_id": 5914,
+          "contest_code": "SQLPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP08/problems/SQLMCQ36",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29372",
+              "code": "SQLMCQ36",
+              "name": "SQL Manipulation Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29372",
+              "code": "SQLMCQ37",
+              "name": "Modifying Existing Data",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29372",
+              "code": "SQLMCQ38",
+              "name": "Data Removal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29372",
+              "code": "SQLMCQ39",
+              "name": "Insertion Technique",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29372",
+              "code": "SQLMCQ40",
+              "name": "Data Manipulation Safety",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Table creation and data definition language (DDL)",
+      "description": "DDL is used to define and modify the structure of database objects.\nIncludes commands like CREATE TABLE, ALTER TABLE, and DROP TABLE.",
+      "submodules": [
+        {
+          "name": "table creation",
+          "submodule_id": 5915,
+          "contest_code": "SQLPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP09/problems/SQLMCQ41",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29373",
+              "code": "SQLMCQ41",
+              "name": "Database Modification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29373",
+              "code": "SQLMCQ42",
+              "name": "Table Creation Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29373",
+              "code": "SQLMCQ43",
+              "name": "Constraint Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29373",
+              "code": "SQLMCQ44",
+              "name": "Data Type Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29373",
+              "code": "SQLMCQ45",
+              "name": "Table Removal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Views and temporary tables",
+      "description": "Views are virtual tables based on the result of a SELECT statement.\nTemporary tables are used to store intermediate results within a session.",
+      "submodules": [
+        {
+          "name": "views",
+          "submodule_id": 5916,
+          "contest_code": "SQLPREP10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP10/problems/SQLMCQ46",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29374",
+              "code": "SQLMCQ46",
+              "name": "Database Object Comparison",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29374",
+              "code": "SQLMCQ47",
+              "name": "Database Object Lifespan",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29374",
+              "code": "SQLMCQ48",
+              "name": "SQL Performance Optimization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29374",
+              "code": "SQLMCQ49",
+              "name": "SQL Data Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29374",
+              "code": "SQLMCQ50",
+              "name": "SQL Object Persistence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Window functions",
+      "description": "Perform calculations across a set of rows related to the current row.\nAllow operations like running totals, rankings, and moving averages.",
+      "submodules": [
+        {
+          "name": "window function",
+          "submodule_id": 5917,
+          "contest_code": "SQLPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP11/problems/SQLMCQ51",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29375",
+              "code": "SQLMCQ51",
+              "name": "SQL Function Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29375",
+              "code": "SQLMCQ52",
+              "name": "Function Categorization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29375",
+              "code": "SQLMCQ53",
+              "name": "Syntax Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29375",
+              "code": "SQLMCQ54",
+              "name": "Function Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29375",
+              "code": "SQLMCQ55",
+              "name": "Performance Consideration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Stored procedures and functions",
+      "description": "Precompiled SQL code that can be saved and reused.\nProcedures typically perform actions, while functions return values.",
+      "submodules": [
+        {
+          "name": "stored procedures",
+          "submodule_id": 5918,
+          "contest_code": "SQLPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP12/problems/SQLMCQ56",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29376",
+              "code": "SQLMCQ56",
+              "name": "SQL Code Encapsulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29376",
+              "code": "SQLMCQ57",
+              "name": "Return Value Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29376",
+              "code": "SQLMCQ58",
+              "name": "Execution Context",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29376",
+              "code": "SQLMCQ59",
+              "name": "Parameter Passing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29376",
+              "code": "SQLMCQ60",
+              "name": "Performance Consideration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Triggers",
+      "description": "Automated SQL code that executes in response to specific database events.\nCan be used for enforcing business rules or maintaining data integrity.",
+      "submodules": [
+        {
+          "name": "trigger",
+          "submodule_id": 5919,
+          "contest_code": "SQLPREP13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP13/problems/SQLMCQ61",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29377",
+              "code": "SQLMCQ61",
+              "name": "Trigger Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29377",
+              "code": "SQLMCQ62",
+              "name": "Trigger Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29377",
+              "code": "SQLMCQ63",
+              "name": "Trigger Scope",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29377",
+              "code": "SQLMCQ64",
+              "name": "Trigger Recursion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29377",
+              "code": "SQLMCQ65",
+              "name": "Trigger Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Transactions and ACID properties",
+      "description": "Transactions group multiple SQL operations into a single unit of work.\nACID (Atomicity, Consistency, Isolation, Durability) ensures data integrity and reliability.",
+      "submodules": [
+        {
+          "name": "transactions",
+          "submodule_id": 5920,
+          "contest_code": "SQLPREP14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/sql-interview-questions/SQLPREP14/problems/SQLMCQ66",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29378",
+              "code": "SQLMCQ66",
+              "name": "Database Integrity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29378",
+              "code": "SQLMCQ67",
+              "name": "Transaction Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29378",
+              "code": "SQLMCQ68",
+              "name": "Concurrent Transactions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29378",
+              "code": "SQLMCQ69",
+              "name": "Data Persistence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29378",
+              "code": "SQLMCQ70",
+              "name": "Transaction States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 70,
+  "total_non_pro_problems": 0,
+  "up_next": [
+    {
+      "name": "Top DBMS Interview Questions",
+      "title": "Top DBMS Interview Questions",
+      "slug": "interview-dbms",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 5638,
+      "review": {
+        "rating": 4.6,
+        "users": 584
+      },
+      "course_count": 15,
+      "description": "Prepare for DBMS interviews with more than 92 interview questions. This path covers key topics such as data modelling, relational database design, SQL, transaction management, and emerging database technologies."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "37",
+    "name": "Learn SQL",
+    "title": "Learn SQL",
+    "slug": "sql",
+    "description": "Start your journey into data handling with this interactive SQL course. Learn how to create, manipulate, and query databases with practical exercises and real-world examples.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 11004
+    },
+    "learners_count": 113284,
+    "lessons_count": 14
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    }
+  ],
+  "learners_count": 7352,
+  "path_review": {
+    "rating": 4.7,
+    "users": 696
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/sql",
+  "roadmap_title": "SQL Roadmap for Data Analysis"
+}

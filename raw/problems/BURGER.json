@@ -1,0 +1,130 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BURGER",
+  "contest_category": "6",
+  "problem_name": "Double Burgers",
+  "intended_contest_code": "COOK129",
+  "body": "\r\nYou have taken an eating challenge from Chef and now you have to eat exactly $Y$ burgers. You will eat in the following way:\r\n\r\n- In the first minute you will eat exactly $X$ burgers and every minute after that you will eat exactly twice the number of burgers you ate in the previous minute. \r\n- Since you can get tired of eating, Chef also allows you take a break from eating for exactly $1$ minute.\r\n- When you start eating again after taking a break, your eating streak resets, i.e. in the first minute after the break you will eat exactly $X$ burgers and every minute after that you will eat exactly double the burgers you ate on the previous minute. \r\n\r\nLet $a_1, a_2, ..., a_k$ be the lengths of your eating streaks in minutes. Chef requires that all $a_i$ are pairwise distinct.\r\n\r\nFind the minimum number of minutes you need to eat exactly $Y$ burgers or determine it is impossible to do so.\r\n\r\n###Input\r\n\r\n- The first line contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains two space-separated integers $X$ and $Y$.\r\n\r\n###Output\r\nFor each test case, print a single line containing one integer \u2014 the minimum number of minutes you need to eat exactly $Y$ burgers, or $\u22121$ if it is impossible.\r\n\r\n###Constraints \r\n- $1\\leq T\\leq 10^5$\r\n- $1\\leq X,Y\\leq 10^{18}$\r\n\r\n###Sample Input\r\n```\r\n2\r\n1 7\r\n1 4\r\n```\r\n\r\n###Sample Output\r\n```\r\n3\r\n4\r\n```\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou have taken an eating challenge from Chef and now you have to eat exactly $Y$ burgers. You will eat in the following way:\r\n\r\n- In the first minute you will eat exactly $X$ burgers and every minute after that you will eat exactly twice the number of burgers you ate in the previous minute. \r\n- Since you can get tired of eating, Chef also allows you take a break from eating for exactly $1$ minute.\r\n- When you start eating again after taking a break, your eating streak resets, i.e. in the first minute after the break you will eat exactly $X$ burgers and every minute after that you will eat exactly double the burgers you ate on the previous minute. \r\n\r\nLet $a_1, a_2, ..., a_k$ be the lengths of your eating streaks in minutes. Chef requires that all $a_i$ are pairwise distinct.\r\n\r\nFind the minimum number of minutes you need to eat exactly $Y$ burgers or determine it is impossible to do so.\r\n\r\n###Input\r\n\r\n- The first line contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains two space-separated integers $X$ and $Y$.\r\n\r\n###Output\r\nFor each test case, print a single line containing one integer \u2014 the minimum number of minutes you need to eat exactly $Y$ burgers, or $\u22121$ if it is impossible.\r\n\r\n###Constraints \r\n- $1\\leq T\\leq 10^5$\r\n- $1\\leq X,Y\\leq 10^{18}$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n1 7\r\n1 4",
+        "output": "3\r\n4",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 90047,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "suni30102",
+  "problem_display_authors": [
+    "suni30102"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/suni30102'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>suni30102</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "14-05-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Binary Exponentiation",
+    "Bitwise Operation",
+    "GP",
+    "Greedy",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory",
+    "Bit Manipulation",
+    "Sequences and Progression",
+    "Exponentiation",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "2072",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610651
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BURGER",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

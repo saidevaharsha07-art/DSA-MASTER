@@ -14,6 +14,23 @@ export class GeminiAdapter implements AIProvider {
   public name = 'Google Gemini 1.5 Pro';
 
   public async generate(prompt: string, context?: AIContext): Promise<string> {
+    // Client-side call delegates to server API route to protect GEMINI_API_KEY
+    if (typeof window !== 'undefined' && typeof fetch !== 'undefined') {
+      try {
+        const res = await fetch('/api/ai/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt, context, provider: 'gemini' }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.text) return data.text;
+        }
+      } catch {
+        // Fallback to static response if API route is unavailable during SSR/offline testing
+      }
+    }
+
     return `[Gemini 1.5 Pro]: Excellent effort! You can optimize your space complexity by reusing the input array in-place.`;
   }
 }

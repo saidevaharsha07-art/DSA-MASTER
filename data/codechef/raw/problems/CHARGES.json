@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHARGES",
+  "contest_category": "6",
+  "problem_name": "Charges",
+  "intended_contest_code": "LTIME96",
+  "body": "\r\nThere are $N$ subatomic particles lined up in a row. There are two types: protons and electrons. Protons have a positive charge and are represented by $1$, while electrons have a negative charge and are represented by $0$.\r\n\r\nOur current understanding of physics gives us a way to predict how the particles will be spaced out, if we know their charges. Two adjacent particles will be separated by $1$ unit if they have opposite charges, and $2$ units if they have the same charge.\r\n\r\nWhen Chef is not in the kitchen, he is doing physics experiments on subatomic particles. He is testing the hypothesis by having $N$ particles in a row, and he will change the charge of a particle $K$ times. In the $i$-th update, he will change the charge of the $Q_i$-th particle. After each update, find the distance between the first and last particle.\r\n\r\n**Note:** Each update is persistent for further updates.\r\n\r\n###Input\r\n\r\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \r\n- Each test case contains three lines of input.\r\n- The first line contains two integers $N$, $K$.\r\n- The second line contains a string $S$ of length $N$, where $S_i$ represents the initial charge on $i$-th particle.\r\n- The third line contains $K$ integers $Q_1, Q_2, \\ldots, Q_K$, the positions of the changed particles.\r\n\r\n###Output\r\nFor each test case, output $K$ lines, where the $i$-th line contains the answer after the updates $Q_1,\\ldots, Q_i$ have been made.\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 5$\r\n- $1 \\leq N, K \\leq 10^5$\r\n- $S$ contains only $0$ and $1$ characters.\r\n- $1 \\leq Q_i \\leq N$\r\n- The sum of $K$ over all testcases is at most $2 \\cdot 10^5$\r\n\r\n###Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n###Sample Input\r\n```\r\n1\r\n3 3\r\n010\r\n2 1 3\r\n```\r\n\r\n###Sample Output\r\n```\r\n4\r\n3\r\n2\r\n```\r\n\t\r\n###Explanation\r\n**Update 1:** After reversing the parity of particle $2$, the new configuration is $000$. Since all the particles have a similar charge, each is separated from the previous by a distance of $2$ units. So the location of particle $3$ is $2 + 2 = 4$ units from the first particle.\r\n\r\n**Update 2:** After reversing the parity of particle $1$, the new configuration is $100$. Here, the charges of particles $1$ and $2$ differ, so they are separated by $1$ unit. The charges of particles $2$ and $3$ agree, so they are separated by $2$ units. So, the location of particle $3$ is $1 + 2 = 3$ units from the first particle.\r\n\r\n**Update 3:** After reversing the charge of particle $3$, the new configuration is $101$. Here, particles $1$ and $2$ are separated by $1$ unit and particles $2$ and $3$ are separated by $1$ unit. So the location of particle $3$ is $1 + 1 = 2$ units from the first particle.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nThere are $N$ subatomic particles lined up in a row. There are two types: protons and electrons. Protons have a positive charge and are represented by $1$, while electrons have a negative charge and are represented by $0$.\n\nOur current understanding of physics gives us a way to predict how the particles will be spaced out, if we know their charges. Two adjacent particles will be separated by $1$ unit if they have opposite charges, and $2$ units if they have the same charge.\n\nWhen Chef is not in the kitchen, he is doing physics experiments on subatomic particles. He is testing the hypothesis by having $N$ particles in a row, and he will change the charge of a particle $K$ times. In the $i$-th update, he will change the charge of the $Q_i$-th particle. After each update, find the distance between the first and last particle.\n\n**Note:** Each update is persistent for further updates.\n\n### Input\n\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \n- Each test case contains three lines of input.\n- The first line contains two integers $N$, $K$.\n- The second line contains a string $S$ of length $N$, where $S_i$ represents the initial charge on $i$-th particle.\n- The third line contains $K$ integers $Q_1, Q_2, \\ldots, Q_K$, the positions of the changed particles.\n\n### Output\nFor each test case, output $K$ lines, where the $i$-th line contains the answer after the updates $Q_1,\\ldots, Q_i$ have been made.\n\n### Constraints \n- $1 \\leq T \\leq 5$\n- $1 \\leq N, K \\leq 10^5$\n- $S$ contains only $0$ and $1$ characters.\n- $1 \\leq Q_i \\leq N$\n- The sum of $K$ over all testcases is at most $2 \\cdot 10^5$\n\n### Subtasks\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\r\n3 3\r\n010\r\n2 1 3",
+        "output": "4\r\n3\r\n2",
+        "explanation": "**Update 1:** After reversing the parity of particle $2$, the new configuration is $000$. Since all the particles have a similar charge, each is separated from the previous by a distance of $2$ units. So the location of particle $3$ is $2 + 2 = 4$ units from the first particle.\r\n\r\n**Update 2:** After reversing the parity of particle $1$, the new configuration is $100$. Here, the charges of particles $1$ and $2$ differ, so they are separated by $1$ unit. The charges of particles $2$ and $3$ agree, so they are separated by $2$ units. So, the location of particle $3$ is $1 + 2 = 3$ units from the first particle.\r\n\r\n**Update 3:** After reversing the charge of particle $3$, the new configuration is $101$. Here, particles $1$ and $2$ are separated by $1$ unit and particles $2$ and $3$ are separated by $1$ unit. So the location of particle $3$ is $1 + 1 = 2$ units from the first particle.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 90418,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "cherry0697",
+  "date_added": "20-04-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Observation",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1645",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610661
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHARGES",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CONSADD",
+  "contest_category": "6",
+  "problem_name": "Consecutive Adding",
+  "intended_contest_code": "MARCH21",
+  "body": "\r\nYou are given two matrices $A$ and $B$, each with $R$ rows (numbered $1$ through $R$) and $C$ columns (numbered $1$ through $C$). Let's denote an element of $A$ or $B$ in row $i$ and column $j$ by $A_{i,j}$ or $B_{i,j}$ respectively.\r\n\r\nYou are also given an integer $X$. You may perform the following operation on $A$ any number of times:\r\n- Choose an integer $v$.\r\n- Choose $X$ consecutive elements of $A$, either in the same row or in the same column.\r\n- Add $v$ to each of the chosen elements of $A$.\r\n\r\nDetermine whether it is possible to change $A$ to $B$ in a finite number of operations.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains three space-separated integers $R$, $C$ and $X$.\r\n- $R$ lines follow. For each valid $i$, the $i$-th of these lines contains $C$ space-separated integers $A_{i,1}, A_{i,2}, \\ldots, A_{i,C}$.\r\n- $R$ more lines follow. For each valid $i$, the $i$-th of these lines contains $C$ space-separated integers $B_{i,1}, B_{i,2}, \\ldots, B_{i,C}$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Yes\"` if there is a sequence of operations that changes the matrix $A$ to $B$, or `\"No\"` if such a sequence of operations does not exist.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^3$\r\n- $2 \\leq R,C \\leq 10^3$\r\n- $2 \\leq X \\leq \\min(R,C)$\r\n- $|A_{i,j}|, |B_{i,j}| \\leq 10^9$ for each valid $i,j$\r\n- the sum of $R$ over all test cases does not exceed $10^3$\r\n- the sum of $C$ over all test cases does not exceed $10^3$\r\n\r\n### Subtasks\r\n**Subtask #1 (5 points):** $X=2$\r\n\r\n**Subtask #2 (10 points):** $X=3$\r\n\r\n**Subtask #3 (85 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n2 2 2\r\n1 2\r\n0 1\r\n0 0\r\n0 0\r\n2 2 2\r\n1 2\r\n0 1\r\n0 0\r\n-1 0\r\n3 2 2\r\n1 1\r\n2 2\r\n3 3\r\n1 0\r\n2 0\r\n3 0\r\n```\r\n\r\n### Example Output\r\n```\r\nYes\r\nNo\r\nNo\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** We can add $-1$ to both elements in row $1$ and add $-1$ to both elements in column $2$.    \r\n\r\n**Example case 2:** After any operation, the sum of elements of $A$ remains even. However, the sum of elements of $B$ is odd, so $A$ cannot be changed to $B$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou are given two matrices $A$ and $B$, each with $R$ rows (numbered $1$ through $R$) and $C$ columns (numbered $1$ through $C$). Let's denote an element of $A$ or $B$ in row $i$ and column $j$ by $A_{i,j}$ or $B_{i,j}$ respectively.\r\n\r\nYou are also given an integer $X$. You may perform the following operation on $A$ any number of times:\r\n- Choose an integer $v$.\r\n- Choose $X$ consecutive elements of $A$, either in the same row or in the same column.\r\n- Add $v$ to each of the chosen elements of $A$.\r\n\r\nDetermine whether it is possible to change $A$ to $B$ in a finite number of operations.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains three space-separated integers $R$, $C$ and $X$.\r\n- $R$ lines follow. For each valid $i$, the $i$-th of these lines contains $C$ space-separated integers $A_{i,1}, A_{i,2}, \\ldots, A_{i,C}$.\r\n- $R$ more lines follow. For each valid $i$, the $i$-th of these lines contains $C$ space-separated integers $B_{i,1}, B_{i,2}, \\ldots, B_{i,C}$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"Yes\"` if there is a sequence of operations that changes the matrix $A$ to $B$, or `\"No\"` if such a sequence of operations does not exist.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^3$\r\n- $2 \\leq R,C \\leq 10^3$\r\n- $2 \\leq X \\leq \\min(R,C)$\r\n- $|A_{i,j}|, |B_{i,j}| \\leq 10^9$ for each valid $i,j$\r\n- the sum of $R$ over all test cases does not exceed $10^3$\r\n- the sum of $C$ over all test cases does not exceed $10^3$\r\n\r\n### Subtasks\r\n**Subtask #1 (5 points):** $X=2$\r\n\r\n**Subtask #2 (10 points):** $X=3$\r\n\r\n**Subtask #3 (85 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n2 2 2\r\n1 2\r\n0 1\r\n0 0\r\n0 0\r\n2 2 2\r\n1 2\r\n0 1\r\n0 0\r\n-1 0\r\n3 2 2\r\n1 1\r\n2 2\r\n3 3\r\n1 0\r\n2 0\r\n3 0",
+        "output": "Yes\r\nNo\r\nNo",
+        "explanation": "**Example case 1:** We can add $-1$ to both elements in row $1$ and add $-1$ to both elements in column $2$.    \r\n\r\n**Example case 2:** After any operation, the sum of elements of $A$ remains even. However, the sum of elements of $B$ is odd, so $A$ cannot be changed to $B$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 86612,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "div5252",
+  "problem_display_authors": [
+    "div5252"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/div5252'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>div5252</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "div5252",
+  "date_added": "11-02-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Constructive"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "2038",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610697
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CONSADD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

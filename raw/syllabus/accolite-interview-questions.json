@@ -1,0 +1,152 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "accolite-interview-questions",
+  "name": "Accolite Coding Interview Questions",
+  "title": "Accolite Coding Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Accolite Digital online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/accolite-interview-questions/ACCOLITECN01/problems/ACCOLITE01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Accolite Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Accolite Coding Questions",
+          "submodule_id": 9475,
+          "contest_code": "ACCOLITECN01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/accolite-interview-questions/ACCOLITECN01/problems/ACCOLITE01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE01",
+              "name": "Anagram Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE09",
+              "name": "Nth Faithful Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE02",
+              "name": "Detect Loop in Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE03",
+              "name": "Lowest Common Ancestor in Binary Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE04",
+              "name": "Top K Frequent Numbers After Each Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE05",
+              "name": "Stock Span Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE06",
+              "name": "Equal Sum Partition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE07",
+              "name": "All Unique String Permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32277",
+              "code": "ACCOLITE08",
+              "name": "Count Matching Subsequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 9,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 417,
+  "path_review": {
+    "rating": 5,
+    "users": 2
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

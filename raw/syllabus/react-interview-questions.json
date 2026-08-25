@@ -1,0 +1,1595 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "react-interview-questions",
+  "name": "React Interview Questions",
+  "title": "React Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your React job interview with our list of common questions and answers. Cover key topics from JSX basics to advanced hooks, and boost your confidence for that big day by reading detailed explanations!",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:47",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/react-interview-questions/REACTPREP01/problems/REACTMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "JSX basics",
+      "description": "JSX is a syntax extension for JavaScript used in React. It allows you to write HTML-like code in your JavaScript files, making it easier to describe the structure of UI components.",
+      "submodules": [
+        {
+          "name": "JSX basics",
+          "submodule_id": 6122,
+          "contest_code": "REACTPREP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP01/problems/REACTMCQ01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ01",
+              "name": "JSX Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ02",
+              "name": "JSX Expressions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ03",
+              "name": "JSX vs HTML",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ04",
+              "name": "Fragment Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ05",
+              "name": "JSX Class Attribute",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ06",
+              "name": "JSX Comments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ07",
+              "name": "JSX Expressions Limitation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29638",
+              "code": "REACTMCQ08",
+              "name": "JSX and JavaScript",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Components and props",
+      "description": "Components are the building blocks of React applications, and props are the mechanism for passing data between components. Understanding how to create and use components, as well as how to work with props, is fundamental to React development.",
+      "submodules": [
+        {
+          "name": "Components and props",
+          "submodule_id": 6123,
+          "contest_code": "REACTPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP02/problems/REACTMCQ09",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ09",
+              "name": "Component Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ10",
+              "name": "Props Passing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ11",
+              "name": "Accessing Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ12",
+              "name": "PropTypes Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ13",
+              "name": "Default Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ14",
+              "name": "Children Prop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ15",
+              "name": "Functional vs Class Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ16",
+              "name": "Props Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ17",
+              "name": "Spreading Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29639",
+              "code": "REACTMCQ18",
+              "name": "PropTypes.node",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "State management with useState",
+      "description": "The useState hook is a way to add state to functional components in React. It allows components to manage and update their own data, enabling dynamic and interactive user interfaces.",
+      "submodules": [
+        {
+          "name": "State management with useState",
+          "submodule_id": 6124,
+          "contest_code": "REACTPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP03/problems/REACTMCQ19",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ19",
+              "name": "useState Hook Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ20",
+              "name": "Updating State",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ21",
+              "name": "State Updates with Objects",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ22",
+              "name": "Functional Updates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ23",
+              "name": "Multiple State Variables",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ24",
+              "name": "Initializing State",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ25",
+              "name": "Updating Arrays in State",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ26",
+              "name": "State Updates and Re-renders",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ27",
+              "name": "State in Event Handlers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29640",
+              "code": "REACTMCQ28",
+              "name": "State Updates and Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Conditional rendering",
+      "description": "Conditional rendering in React allows you to show or hide elements based on certain conditions. This topic covers various techniques for implementing logic-based rendering in your components.",
+      "submodules": [
+        {
+          "name": "Conditional rendering",
+          "submodule_id": 6125,
+          "contest_code": "REACTPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP04/problems/REACTMCQ29",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ29",
+              "name": "Conditional Rendering Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ30",
+              "name": "If-Else in JSX",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ31",
+              "name": "Ternary Operator Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ32",
+              "name": "Logical && Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ33",
+              "name": "Switch Statements in React",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ34",
+              "name": "Inline Conditional Rendering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29641",
+              "code": "REACTMCQ36",
+              "name": "Conditional CSS Classes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Lists and keys",
+      "description": "Rendering lists efficiently is a common task in React applications. This topic covers how to render arrays of data and the importance of using keys for optimal performance and correct behavior.",
+      "submodules": [
+        {
+          "name": "Lists and keys",
+          "submodule_id": 6126,
+          "contest_code": "REACTPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP05/problems/REACTMCQ37",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ37",
+              "name": "Array Rendering Method",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ38",
+              "name": "Key Prop Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ39",
+              "name": "Key Uniqueness",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ40",
+              "name": "Key Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ41",
+              "name": "Index as Key Pitfall",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ42",
+              "name": "Key Prop Accessibility",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ43",
+              "name": "Dynamic List Updates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29642",
+              "code": "REACTMCQ44",
+              "name": "Key Consistency",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Event handling",
+      "description": "Event handling in React involves managing user interactions with your application. This topic covers how to attach event listeners to elements and handle various types of user input.",
+      "submodules": [
+        {
+          "name": "Event handling",
+          "submodule_id": 6127,
+          "contest_code": "REACTPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP06/problems/REACTMCQ45",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ45",
+              "name": "Synthetic Events in React",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ46",
+              "name": "Event Handler Binding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ47",
+              "name": "Event Handler Arguments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ48",
+              "name": "Event Pooling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ49",
+              "name": "Accessing Event Properties",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ50",
+              "name": "Preventing Default Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29643",
+              "code": "REACTMCQ52",
+              "name": "Event Delegation in React",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Lifecycle methods (class components)",
+      "description": "Lifecycle methods are special methods in class components that run at particular times in a component's life. Understanding these methods is crucial for managing side effects and optimizing performance in class-based components.",
+      "submodules": [
+        {
+          "name": "Lifecycle methods (class components)",
+          "submodule_id": 6128,
+          "contest_code": "REACTPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP07/problems/REACTMCQ53",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ53",
+              "name": "Component Initialization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ54",
+              "name": "DOM Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ55",
+              "name": "Render Method",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ56",
+              "name": "Update Lifecycle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ57",
+              "name": "Performance Optimization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ58",
+              "name": "Unmounting Phase",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ59",
+              "name": "Error Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ60",
+              "name": "Snapshot Before Update",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ61",
+              "name": "Deprecated Lifecycle Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29644",
+              "code": "REACTMCQ62",
+              "name": "State Updates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Hooks (useEffect, useContext, useRef)",
+      "description": "Hooks are functions that let you use state and other React features in functional components. This topic covers several important hooks that handle side effects, context, and references to DOM elements.",
+      "submodules": [
+        {
+          "name": "Hooks (useEffect, useContext, useRef)",
+          "submodule_id": 6129,
+          "contest_code": "REACTPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP08/problems/REACTMCQ63",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ63",
+              "name": "Side Effect Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ64",
+              "name": "Dependency Array Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ65",
+              "name": "Empty Dependency Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ66",
+              "name": "Cleanup Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ67",
+              "name": "Context Consumption",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ68",
+              "name": "useRef Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ69",
+              "name": "Persistent Values with useRef",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ70",
+              "name": "useEffect and API Calls",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ71",
+              "name": "Multiple useEffect Hooks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29645",
+              "code": "REACTMCQ72",
+              "name": "useContext and Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Forms and controlled components",
+      "description": "Handling forms in React often involves creating controlled components where form data is handled by the component's state. This topic covers techniques for managing form inputs and submissions in React applications.",
+      "submodules": [
+        {
+          "name": "Forms and controlled components",
+          "submodule_id": 6130,
+          "contest_code": "REACTPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP09/problems/REACTMCQ73",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ73",
+              "name": "Component Control",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ74",
+              "name": "State Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ75",
+              "name": "Form Submission",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ76",
+              "name": "Multiple Inputs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ77",
+              "name": "Form Validation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ78",
+              "name": "Preventing Default",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ79",
+              "name": "Ref Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ80",
+              "name": "Error Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ81",
+              "name": "Form Libraries",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29646",
+              "code": "REACTMCQ82",
+              "name": "Controlled vs Uncontrolled",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "React Router",
+      "description": "React Router is a standard library for routing in React applications. This topic covers how to implement navigation in single-page applications, including route configuration and navigation between different views.",
+      "submodules": [
+        {
+          "name": "React Router",
+          "submodule_id": 6131,
+          "contest_code": "REACTPREP10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP10/problems/REACTMCQ83",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ83",
+              "name": "Router Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ84",
+              "name": "Route Component Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ85",
+              "name": "Route Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ86",
+              "name": "Nested Routes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ87",
+              "name": "Programmatic Navigation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ88",
+              "name": "Link Component",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ89",
+              "name": "Route Matching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ90",
+              "name": "404 Not Found Route",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ91",
+              "name": "Active Link Styling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29647",
+              "code": "REACTMCQ92",
+              "name": "Route Configuration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Context API",
+      "description": "The Context API provides a way to pass data through the component tree without having to pass props down manually at every level. This topic covers how to create, provide, and consume context in React applications.",
+      "submodules": [
+        {
+          "name": "Context API",
+          "submodule_id": 6132,
+          "contest_code": "REACTPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP11/problems/REACTMCQ93",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ93",
+              "name": "Context Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ94",
+              "name": "Context Provider",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ95",
+              "name": "Consuming Context",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ96",
+              "name": "useContext Hook",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ97",
+              "name": "Context Updates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ98",
+              "name": "Context vs Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ99",
+              "name": "Multiple Contexts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ100",
+              "name": "Context Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ101",
+              "name": "Context Limitations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29648",
+              "code": "REACTMCQ102",
+              "name": "Default Context Value",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Higher-Order Components (HOCs)",
+      "description": "Higher-Order Components are a pattern for reusing component logic. This advanced topic covers how to create and use HOCs to enhance components with additional functionality.",
+      "submodules": [
+        {
+          "name": "Higher-Order Components (HOCs)",
+          "submodule_id": 6133,
+          "contest_code": "REACTPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP12/problems/REACTMCQ103",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ103",
+              "name": "HOC Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ104",
+              "name": "HOC Use Case",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ105",
+              "name": "Creating an HOC",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ106",
+              "name": "HOC Naming Convention",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ107",
+              "name": "HOC Composition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ108",
+              "name": "HOC vs Hooks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ109",
+              "name": "HOC Pitfall",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ110",
+              "name": "HOC and Ref Forwarding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ111",
+              "name": "HOC and Static Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29649",
+              "code": "REACTMCQ112",
+              "name": "HOC and Component Display Name",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Render props",
+      "description": "Render props is a technique for sharing code between React components using a prop whose value is a function. This topic covers how to implement and use the render props pattern for flexible component composition.",
+      "submodules": [
+        {
+          "name": "Render props",
+          "submodule_id": 6134,
+          "contest_code": "REACTPREP13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/react-interview-questions/REACTPREP13/problems/REACTMCQ113",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ113",
+              "name": "Render Prop Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ114",
+              "name": "Render Prop Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ115",
+              "name": "Render Prop vs HOC",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ116",
+              "name": "Children as a Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ117",
+              "name": "Code Reuse with Render Props",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ118",
+              "name": "Render Prop Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ119",
+              "name": "Render Props and Context",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29650",
+              "code": "REACTMCQ120",
+              "name": "Render Props and Hooks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 118,
+  "total_non_pro_problems": 18,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2348,
+  "path_review": {
+    "rating": 4.7,
+    "users": 465
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/react-developer",
+  "roadmap_title": "React Developer Roadmap"
+}

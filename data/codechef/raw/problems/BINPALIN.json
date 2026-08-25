@@ -1,0 +1,126 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BINPALIN",
+  "contest_category": "6",
+  "problem_name": "Binary Palindrome",
+  "intended_contest_code": null,
+  "body": "You are writing in your favourite editor starting with a blank editor. In each operation you can either type a binary digit (i.e a $0$ or $1$) or type backspace which removes the rightmost typed character on the screen. \r\n\r\nAfter every operation you are required to print the length of the longest palindromic substring that is present on the screen.\r\n\r\nThere are $N$ operations of two types - \r\n- 1 $d$: Type the character $d$ on the editor, where $d \\in \\{0, 1\\}$\r\n\r\n- 2: Backspace, i.e remove the rightmost typed character on the screen\r\n\r\nIt is guaranteed that when a Type 2 operation is made, the screen will have at least 1 character.\r\n\r\n### Input\r\n- The first line contains a single integer $N$.\r\n- The next line $N$ lines contains all the $N$ queries in the format as described above\r\n\r\n### Output\r\nAfter each query, output in a new line the length of the longest palindromic substring that is present currently on the screen.\r\n\r\n### Note\r\nThe I/O in this problem is large. Please use fast I/O methods.\r\n\r\n### Constraints\r\n- $1 \\leq N \\leq 10^6$\r\n\r\nFor all the queries - \r\n- $d \\in \\{0, 1\\}$, for all queries of Type 1\r\n\r\n### Example Input\r\n```\r\n8\r\n1 0\r\n1 0\r\n1 1\r\n1 0\r\n2\r\n1 0\r\n2\r\n1 1\r\n```\r\n\r\n### Example Output\r\n```\r\n1\r\n2\r\n2\r\n3\r\n2\r\n3\r\n2\r\n2\r\n```\r\n\r\n### Explanation\r\nAfter the first 4 operations, the editor looks like \"0010\", in which the longest palindromic substring has length 3.\r\n\r\nAfter the 5th operation: Then the backspace makes it \"001\", in which the longest palindromic substring has length 2.\r\n\r\nAfter the 6th operation: Append a \"0\" and make it \"0010\" again, in which the longest palindromic substring is of length 3.\r\n\r\nAfter the 7th operation: Then the backspace makes it \"001\" again, in which the longest palindromic substring has length 2.\r\n\r\nAfter the 8th operation: Append a \"1\" and make it '0011\", in which the longest palindromic substring has length 2.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N \\leq 10^6$\n- For all the queries:\n  - $d \\in \\{0, 1\\}$, for all queries of Type 1\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are writing in your favourite editor starting with a blank editor. In each operation you can either type a binary digit (i.e a $0$ or $1$) or type backspace which removes the rightmost typed character on the screen.\n\nAfter every operation you are required to print the length of the longest palindromic substring that is present on the screen.\n\nThere are $N$ operations of two types - \n- **1 $d$**: Type the character $d$ on the editor, where $d \\in \\{0, 1\\}$\n- **2**: Backspace, i.e remove the rightmost typed character on the screen\n\nIt is guaranteed that when a Type 2 operation is made, the screen will have at least 1 character.\n",
+    "inputFormat": "- The first line contains a single integer $N$.\n- The next $N$ lines contain all the $N$ queries in the format as described above.\n",
+    "inputFormatState": true,
+    "outputFormat": "After each query, output in a new line the length of the longest palindromic substring that is present currently on the screen.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "8\n1 0\n1 0\n1 1\n1 0\n2\n1 0\n2\n1 1\n",
+        "output": "1\n2\n2\n3\n2\n3\n2\n2\n",
+        "explanation": "- After the first 4 operations, the editor looks like \"0010\", in which the longest palindromic substring has length 3.\n- After the 5th operation: Then the backspace makes it \"001\", in which the longest palindromic substring has length 2.\n- After the 6th operation: Append a \"0\" and make it \"0010\" again, in which the longest palindromic substring is of length 3.\n- After the 7th operation: Then the backspace makes it \"001\" again, in which the longest palindromic substring has length 2.\n- After the 8th operation: Append a \"1\" and make it \"0011\", in which the longest palindromic substring has length 2.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "sidhant007",
+  "problem_display_authors": [
+    "sidhant007"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/sidhant007'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>sidhant007</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "8-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Suffix Trees",
+    "Mathematics",
+    "Binary"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures",
+    "Suffix Structures",
+    "Number System"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610641
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BINPALIN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

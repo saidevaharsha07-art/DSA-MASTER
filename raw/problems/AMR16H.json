@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMR16H",
+  "contest_category": "6",
+  "problem_name": "Netcoin Verification",
+  "intended_contest_code": null,
+  "body": "<p>Due to demonitization move, normal people went to ATMs for fetching the cash, some went for cashless transactions. Many people have already started using <b>netcoins</b>.  </p>\n\n<p> In netcoins, each transaction is represented by a block. For a transaction to be accepted, its block has to be added to a chain of verified blocks. The coder of netcoin is very suspicious, so when a new block is added to the verified chain, the entire chain is verified again. </p>\n\n<p> You are given the time taken to verify each block. It is guaranteed that all the verification times are distinct. Hacker Shanker has done some black money transactions hidden across <b>N</b> given blocks. These transaction will only be detected when all the <b>N</b> blocks are verified. </p>\n\n<p>\nNetcoins uses a rather simple algorithm to figure out the order in which to add the given <b>N</b> transactions into a new, empty verified chain. It takes an array of <b>N</b> transactions as input and keeps 2 pointers - one initially at the beginning and another initially at the end. It then compares the block pointed by the 2 pointers and adds the block which requires the lesser verification time to the verified chain. Once this block has been added, the entire verified chain is verified again, spending time equal to the sum of the verification times of each block in the current verified chain. The corresponding pointer is moved, so that, both the pointers always point to the leftmost and rightmost unverified blocks in the array given to the algorithm. \n</p>\n\n<p>\nHacker Shanker wants to escape and hide. For that he needs as much time as possible before all the <b>N</b> transactions are verified. For that he can order the <b>N</b> transactions however he wants and then send the array as input to the algorithm. He wants to find out the maximum amount of time taken to verify all the <b>N</b> transactions, among all the possible orderings of the array.</p>\n\n<h3>Input</h3>\n<p>The first line contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>The only line of each test case contains an integer <b>N</b>, denoting the number of transactions.</p>\n<p>The second line of each test case contains <b>N</b> space separated integers <b>A<sub>i</sub></b> denoting time taken in verifying transaction <b>i</b>.</p>\n\n<h3>Output</h3>\n<p>For each test case, output an integer corresponding to maximum amount of time taken to verify all the blocks, among all the possible input orderings.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>5</b></li>\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10<sup>6</sup></b></li>\n<li>All the <b>A<sub>i</sub></b>s in a particular testcase will be distinct.\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n1\n2\n1 2\n\n<b>Output:</b>\n4\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example 1</b>. Block of transaction 1 takes 1 seconds to verify, whereas that of transaction 2 takes two seconds. The transactions can be given in any order. There can be two possible orders in our case, {1, 2} or {2, 1}, i.e. transaction 1 followed by 2, or transaction 2 followed by 1.</p>\n<p>Let us consider both the cases.</p>\n<p><b>Case 1.</b> Transaction 1 followed by transaction 2. The first pointer is at transaction 1, second at transaction 2. The algorithm chooses transaction 1 (as it takes lesser time than transaction 2) and adds the block to the chain of verified blocks, which was empty before this. After that the chain of blocks is verified. The current chain after adding transaction 1 consists of transaction 1 only. So, it will take 1 seconds to verify that. Afterwards, first pointer moves to the right, and now both first and second pointers are at same transaction, i.e. at transaction 2.</p>\n<p>The algorithm adds the transaction 2 block to the chain of blocks and verifies the chain again. It takes 1 + 2 = 3 seconds to verify the entire chain of blocks this time. Overall, you can see that it will take 4 seconds to verify the entire transaction.</p>\n<p>Let us consider the case, when transaction 2 followed by transaction 1. In the first step, you choose transaction 1, as its block takes less time than verifying the second block. \n\n<p><b>Case 2.</b> It will be exactly same as case 1. In the first step, the algorithm will put transaction 1 into the verified block, followed by transaction 2.</p>\n\n<p>So, the answer is 4.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **5**\n- **1** \u2264 **N** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **A<sub>i</sub>** \u2264 **10<sup>6</sup>**\n- All the **A<sub>i</sub>**s in a particular test case will be distinct.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Due to demonetization, normal people went to ATMs for fetching cash, while some opted for cashless transactions. Many people have already started using **netcoins**.\n\nIn netcoins, each transaction is represented by a block. For a transaction to be accepted, its block has to be added to a chain of verified blocks. The coder of netcoin is very suspicious, so when a new block is added to the verified chain, the entire chain is verified again.\n\nYou are given the time taken to verify each block. It is guaranteed that all the verification times are distinct. Hacker Shanker has done some black money transactions hidden across **N** given blocks. These transactions will only be detected when all the **N** blocks are verified.\n\nNetcoins uses a rather simple algorithm to figure out the order in which to add the given **N** transactions into a new, empty verified chain. It takes an array of **N** transactions as input and keeps 2 pointers - one initially at the beginning and another initially at the end. It then compares the block pointed by the 2 pointers and adds the block which requires the lesser verification time to the verified chain. Once this block has been added, the entire verified chain is verified again, spending time equal to the sum of the verification times of each block in the current verified chain. The corresponding pointer is moved, so that, both the pointers always point to the leftmost and rightmost unverified blocks in the array given to the algorithm.\n\nHacker Shanker wants to escape and hide. For that, he needs as much time as possible before all the **N** transactions are verified. For that, he can order the **N** transactions however he wants and then send the array as input to the algorithm. He wants to find out the maximum amount of time taken to verify all the **N** transactions, among all the possible orderings of the array.\n",
+    "inputFormat": "The first line contains an integer **T** denoting the number of test cases. **T** test cases follow.\n\nThe only line of each test case contains an integer **N**, denoting the number of transactions.\n\nThe second line of each test case contains **N** space-separated integers **A<sub>i</sub>** denoting the time taken in verifying transaction **i**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output an integer corresponding to the maximum amount of time taken to verify all the blocks, among all the possible input orderings.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n2\n1 2\n",
+        "output": "4\n",
+        "explanation": "**Example 1.** Block of transaction 1 takes 1 second to verify, whereas that of transaction 2 takes two seconds. The transactions can be given in any order. There can be two possible orders in our case, {1, 2} or {2, 1}, i.e., transaction 1 followed by 2, or transaction 2 followed by 1.\n\nLet us consider both the cases.\n\n**Case 1.** Transaction 1 followed by transaction 2. The first pointer is at transaction 1, second at transaction 2. The algorithm chooses transaction 1 (as it takes lesser time than transaction 2) and adds the block to the chain of verified blocks, which was empty before this. After that, the chain of blocks is verified. The current chain after adding transaction 1 consists of transaction 1 only. So, it will take 1 second to verify that. Afterwards, the first pointer moves to the right, and now both first and second pointers are at the same transaction, i.e., at transaction 2.\n\nThe algorithm adds the transaction 2 block to the chain of blocks and verifies the chain again. It takes 1 + 2 = 3 seconds to verify the entire chain of blocks this time. Overall, you can see that it will take 4 seconds to verify the entire transaction.\n\nLet us consider the case when transaction 2 is followed by transaction 1. In the first step, you choose transaction 1, as its block takes less time than verifying the second block.\n\n**Case 2.** It will be exactly the same as case 1. In the first step, the algorithm will put transaction 1 into the verified block, followed by transaction 2.\n\nSo, the answer is 4.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/AMR16MOS/problems/AMR16H/\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"https://www.codechef.com/problems/AMR16H\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Setter</strong>:<br>\n<strong>Tester</strong>:<br>\n<strong>Editorialist</strong>: <a href=\"https://www.codechef.com/users/vijju123\" rel=\"nofollow noopener\">Abhishek Pandey</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Simple/Easy</p>\n<h3>PRE-REQUISITES:</h3>\n<p><a href=\"https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/\" rel=\"nofollow noopener\">Greedy</a> , Arrays, Looping</p>\n<h3>PROBLEM:</h3>\n<p>Given an array with <span class=\"math\">N</span> elements, we have to maximize the time taken for verifying transactions. The mechanism of verifying is that, we initially have two pointers (one at start of array and another at end). The pointers are pointing towards the array elements at the respective positions. The minimum element out of the two is taken, verified and the respective pointer is moved 1 step forward (backward for pointer at end of array). On addition of a new element, the entire chain is re-verified, and hence their contribution is counted again. We have to print the maximum possible time taken for verification. (Maximum time for some permutation of the given array, i.e. we can re-order/sort the array)</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>By working on some small manual test cases, we observe that greedy works here. Its best to put the transaction taking longer time first, so that its contribution is counted again and again. Some of you must have already guessed that the permutation of array must be <span class=\"math\">{{A_2},{A_3},....{A_n},{A_1}}</span> where <span class=\"math\">{A_i}</span> denotes the <span class=\"math\">ith</span> largest element of the array. It is because out of the two elements, the <span class=\"math\">minimum</span> one is added, so <span class=\"math\">{A_1}</span> is always going to get added last.</p>\n<p>Now we simply sort the array and sum up the contribution of every element. (Discussed below).</p>\n<p>The complexity is <span class=\"math\">O(NlogN+N)</span>   [<span class=\"math\">NLogN</span> for sorting and another <span class=\"math\">N</span> for a traversal through the array]</p>\n<h3>EXPLANATION:</h3>\n<p>The question is a little bit on lengthier side, but it rewards the one who patiently reads it through.</p>\n<p>Since explaining this is easier with numbers, let us take an exemplar array-</p>\n<p><span class=\"math\">A = [1,2,3,4,5,6]</span></p>\n<p>Now, we have to find the maximum time taken for verification of all 6 transactions. Remember, the key part of the question is-<br>\n<code>Once the new block has been added, the entire verified chain is verified again, spending time equal to the sum of the verification times of each block in the current verified chain.</code></p>\n<p>It is easy to see that, the earlier an element is added, the greater will be its contribution in verification time. But what will exactly be its contribution?</p>\n<p><strong>-Contribution of ith added element in verification time-</strong></p>\n<p>So lets see how this mechanism works. Initially, the pointers are pointing towards element <span class=\"math\">1</span> (starting) and element <span class=\"math\">6</span> (ending). The minimum one among them is <span class=\"math\">1</span>, so <span class=\"math\">1</span> will be added. Time taken for verification is <span class=\"math\">1</span> . Then this <span class=\"math\">1</span> will be verified again when <span class=\"math\">2</span> is added, again when <span class=\"math\">3</span> is added, and so on till we add <span class=\"math\">6</span>. Its easy to see that <span class=\"math\">1</span>'s verification time is counted for a total of 6 times,  after which <span class=\"math\">2</span> is added and its time is counted counted 5 times, the next added element\u2019s verification time is counted 3 times, and so on.</p>\n<p>Formally stating, we observe that the <span class=\"math\">ith</span> added element\u2019s verification time gets counted <span class=\"math\">(N-i+1)</span> times. (Eg- The contribution of first added element is counted <span class=\"math\">N</span> times)</p>\n<p>[The above formula assumes 1-based indexing]</p>\n<p><strong>Order of adding elements to maximize time-</strong></p>\n<p>Now, we know how many times does the <span class=\"math\">ith</span> added element gets counted.</p>\n<p>Also, we see that in above array configuration, we are adding <span class=\"math\">1</span> first, then <span class=\"math\">2</span>, then <span class=\"math\">3</span> and so on. We ought to ask ourselves on thing. <em>Is it optimum? Will adding like this yield the maximum time?</em></p>\n<p>No! In fact, adding like that yields the <em>minimum</em> time. We already saw that earlier added elements/transactions contribute more towards maximizing time. So naturally, we will want to add the bigger ones first so they get counted again and again and yield a greater time. (Eg- if 5 gets added first, it contributes 5x6=30 seconds to verification time, while adding 1 first is contributing only 6 seconds in total)</p>\n<p>Recall the mechanism again, it states that out of the 2 elements being pointed to, the minimum one is added. So its obvious that <span class=\"math\">6</span> (i.e. the <span class=\"math\">maximum</span> element) is going to get added last and will contribute only once. Hence, the only option to maximize time in our hands is to add the second largest element first, then the third largest, then fourth largest\u2026and so on, and finally adding the largest element to get the maximum time. This order of adding elements yields the maximum time (as shown above). Its not hard to see that this order of adding elements is possible for this permutation of array <span class=\"math\">A</span>-</p>\n<p><span class=\"math\">A= [5,4,3,2,1,6]</span></p>\n<p>Here the contribution of <span class=\"math\">5</span> is added 6 times, of <span class=\"math\">4</span> added 5 times\u2026of <span class=\"math\">1</span> added 2 times. Finally, the contribution of <span class=\"math\">6</span> is added only once.</p>\n<h3>IMPLEMENTATION</h3>\n<p>Now that we got our logic clear, we can easily implement our solution. We sort the array first, so elements are ordered according to their values. Now, we start from the second largest element, and keep on adding its contribution. We can manually add the contribution of final element. Formally stating, the contribution is calculated as-</p>\n<p><span class=\"math\">Max Time= {A_2}*N +{A_3}* (N-1)+....{A_n}*2+ {A_1}</span> where <span class=\"math\">{A_i}</span> denotes the <span class=\"math\">ith</span> largest element.</p>\n<p>There are multiple other ways to implement it as well. For Example- one may use sort function to only partially sort array (from index 1 to index N-1 [1-based indexing] ) and then count the the contribution as well.</p>\n<p>I would like to request anybody who has taken a different approach/implementation to share it here as well and let the community appreciate it :).</p>\n<h3>SOLUTION:</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/15089581\" rel=\"nofollow noopener\">Editorialist</a></p>\n<h3>RELATED PROBLEMS AND CONCEPTS:</h3>\n<p>I had given some links and questions to practice greedy in my other Editorial ( for problem Mancunian Hoards Black Money ) so you can check it out :).</p>\n<p>There is another interesting concept I would like to discuss. The question mentions that there are 2 pointers pointing to elements of array and so on. Actually, this is a very nice and neat algorithm/trick known as <a href=\"https://tp-iiita.quora.com/The-Two-Pointer-Algorithm\" rel=\"nofollow noopener\">Two Pointer Algorithm</a>. Some related problems related to it, if you\u2019d like to practice, are-</p>\n<p><a href=\"https://www.codechef.com/problems/WSITES01\" rel=\"nofollow noopener\">Blocked Website</a><br>\n<a href=\"https://www.codechef.com/problems/MAXSEGM\" rel=\"nofollow noopener\">Maximum Unique Segment</a></p>\n<h3>COMMON ERRORS:</h3>\n<p>Still getting WA? Make sure you havent fallen into the common pitfalls given below-</p>\n<p>1.Look at this code-</p>\n<pre><code>int arr[n];\n....\nlong long int ans=arr[n-1];//Assume sorting+Input is done\nfor(i=0;i&lt; n-1;i++)\n   ans+= arr[i]*(n-i)\n</code></pre>\n<p>Can someone spot whats wrong here? Its this <span class=\"math\">ans+= arr[i]*(n-i)</span> . If you are declaring arr[n] and n as int, then during multiplication, the temporary result will be in <span class=\"math\">int</span> and overflow will occur. This overflowed result then gets stored into your answer!</p>\n<p>For more info, try reading about implicit and explicit type casting. The correct way is <code>ans+=(long long int)arr[i]*(n-i);</code> [The code snippet is for C++, but concept is applicable to most of the languages]</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 16336,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "20-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3",
+    "amr16",
+    "icpc2016"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AMR16H",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610602
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMR16H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

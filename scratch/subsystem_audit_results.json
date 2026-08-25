@@ -1,0 +1,42 @@
+{
+  "routesInNav": [
+    "/dashboard"
+  ],
+  "iocServices": [],
+  "rootComponents": [
+    "ai",
+    "app-shell.tsx",
+    "coming-soon.tsx",
+    "empty-state.tsx",
+    "homepage",
+    "journey",
+    "layout",
+    "practice",
+    "problem-table.tsx",
+    "progress-ring.tsx",
+    "revision",
+    "settings",
+    "topic-card.tsx",
+    "ui",
+    "visualizer",
+    "workspace"
+  ],
+  "srcComponents": [
+    "layouts",
+    "pattern",
+    "providers",
+    "roadmap",
+    "ui",
+    "visualization"
+  ],
+  "rootAppPages": [
+    "(app)",
+    "api",
+    "globals.css",
+    "layout.tsx",
+    "login",
+    "not-found.tsx",
+    "onboarding",
+    "page.tsx"
+  ]
+}

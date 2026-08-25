@@ -1,0 +1,123 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LIGHTARE",
+  "contest_category": "6",
+  "problem_name": "Find Lighted Area",
+  "intended_contest_code": null,
+  "body": "<p>You are given a square with side length 2*<b>L</b>. The coordinates of its vertices are at (-<b>L</b>, -<b>L</b>), (<b>L</b>, -<b>L</b>), (<b>L</b>, <b>L</b>) and (-<b>L</b>, <b>L</b>). You are also given <b>N</b> disks (each disk is opaque, and light rays cannot pass through them) each of radius <b>R</b>. The centers of each of the disks are at a fixed distance <b>D</b> from origin (0, 0). This distance <b>D</b> is strictly greater than <b>R</b>. It is guaranteed that all the disks lie entirely inside the square.</p>\n\n<p>Suppose, there is a light source at the origin. Find the area of the region of the square that will be lit by this light source. A point inside the square will be lit if the line segment between the origin and the point don't intersect or touch any of the discs.</p>\n\n<p>All distances mentioned are Euclidean distances.</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case contains four integers: <b>N</b>, <b>R, D, L</b>. </p>\n<p>Each of the next <b>N</b> lines contain two space separated real numbers denoting the x and y coordinates of the center of the i-th disk. Each real number may contain up to 16 digits after the decimal point. These coordinates will satisfy all the conditions mentioned in the statement, i.e.\n they will be at distance exactly <b>D</b> from the origin.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a real number representing the illuminated area. Your answer will be considered correct if the absolute or relative error of the answer doesn't exceed 10<sup>-6</sup>.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 10<sup>5</sup></li>\n<li>1 \u2264 <b>N</b> \u2264 10<sup>5</sup></li>\n<li>2 \u2264 <b>D</b> \u2264 10<sup>5</sup></li>\n<li>1 \u2264 <b>R</b> < <b>D</b></li>\n<li>R + D < <b>L</b> \u2264 3 * 10<sup>5</sup></li>\n<li>-10<sup>6</sup> \u2264 <b>x</b>, <b>y</b> \u2264 10<sup>6</sup></li>\n<li>Sum of <b>N</b> over all the test cases in a single file would be at most 4 * 10<sup>5</sup></li> \n<li>For any two centers of disks, it is guaranteed that the distance between them is \u2265 10<sup>-6</sup>.\n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n4\n1 1 2 4\n2 0\n2 1 2 4\n2 0\n-2 0\n3 1 2 4\n2 0\n-2 0\n0 2\n4 1 2 4\n2 0\n-2 0\n0 2\n0 -2\n\n<b>Output</b>\n55.4472489493382673\n46.8944978986765346\n38.3417468480148019\n29.7889957973530693\n</pre>\n\n<h3>Explanation</h3>\n<p>More examples are given in the webpage, but not printed here. Please check them as well.</p>\n\n<p>The image below shows the scenario for testcase 1:</p>\n\n<p>\n<img src=\"https://codechef_shared.s3.amazonaws.com/download/upload/ACM17GWR/LIGHTARE.png\" height=\"450\"/>\n</p>\n\n<p>ABCD represents the square, which has coordinates according to <b>L</b> = 4. The only circle is at coordinates (2, 0). Notice that the distance of the center from the origin is 2, which is <b>L</b>. Its radius is <b>R</b> = 1. The light source is at (0, 0).</p>\n\n<p>The grayed area along with the circle represents the area which is not lit by the light source. The area of the whole square with this area subtracted is the answer.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $1 \\leq N \\leq 10^5$\n- $2 \\leq D \\leq 10^5$\n- $1 \\leq R < D$\n- $R + D < L \\leq 3 \\times 10^5$\n- $-10^6 \\leq x, y \\leq 10^6$\n- The sum of $N$ over all the test cases in a single file would be at most $4 \\times 10^5$.\n- For any two centers of disks, it is guaranteed that the distance between them is $\\geq 10^{-6}$.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a square with side length $2L$. The coordinates of its vertices are at $(-L, -L)$, $(L, -L)$, $(L, L)$, and $(-L, L)$. You are also given $N$ disks (each disk is opaque, and light rays cannot pass through them) each of radius $R$. The centers of each of the disks are at a fixed distance $D$ from the origin $(0, 0)$. This distance $D$ is strictly greater than $R$. It is guaranteed that all the disks lie entirely inside the square.\n\nSuppose there is a light source at the origin. Find the area of the region of the square that will be lit by this light source. A point inside the square will be lit if the line segment between the origin and the point does not intersect or touch any of the disks.\n\nAll distances mentioned are Euclidean distances.\n",
+    "inputFormat": "The first line of the input contains an integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n\nThe first line of each test case contains four integers: $N$, $R$, $D$, $L$.\n\nEach of the next $N$ lines contains two space-separated real numbers denoting the $x$ and $y$ coordinates of the center of the $i$-th disk. Each real number may contain up to 16 digits after the decimal point. These coordinates will satisfy all the conditions mentioned in the statement, i.e., they will be at a distance exactly $D$ from the origin.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a real number representing the illuminated area. Your answer will be considered correct if the absolute or relative error of the answer does not exceed $10^{-6}$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n1 1 2 4\n2 0\n2 1 2 4\n2 0\n-2 0\n3 1 2 4\n2 0\n-2 0\n0 2\n4 1 2 4\n2 0\n-2 0\n0 2\n0 -2\n",
+        "output": "55.4472489493382673\n46.8944978986765346\n38.3417468480148019\n29.7889957973530693\n",
+        "explanation": "The image below shows the scenario for test case 1:\n\n![Image](https://codechef_shared.s3.amazonaws.com/download/upload/ACM17GWR/LIGHTARE.png)\n\nABCD represents the square, which has coordinates according to $L = 4$. The only circle is at coordinates $(2, 0)$. Notice that the distance of the center from the origin is $2$, which is $L$. Its radius is $R = 1$. The light source is at $(0, 0)$.\n\nThe grayed area along with the circle represents the area which is not lit by the light source. The area of the whole square with this area subtracted is the answer.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "3.5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin2",
+    "geometry",
+    "gwr17rol",
+    "med-hard"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610982
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LIGHTARE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFSIGN",
+  "contest_category": "6",
+  "problem_name": "Chef and Sign Sequences",
+  "intended_contest_code": "JULY17",
+  "body": "<p>Chef found a strange string yesterday - a string of signs <b>s</b>, where each sign is either a <b>'<'</b>, <b>'='</b> or a <b>'>'</b>. Let N be the length of this string. Chef wants to insert N + 1 positive integers into this sequence and make it valid. A valid sequence is a sequence where every sign is preceded and followed by an integer, and the signs are correct. That is, if a sign '<' is preceded by the integer <i>a</i> and followed by an integer <i>b</i>, then <i>a</i> should be less than <i>b</i>. Likewise for the other two signs as well. </p>\r\n\r\n<p>Chef can take some positive integers in the range <b>[1, P]</b> and use a number in the range as many times as he wants.</p>\r\n\r\n<p>Help Chef find the minimum possible <b>P</b> with which he can create a valid sequence.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The only line of each test case contains the string of signs <b>s</b>, where each sign is either <b>'<'</b>, <b>'='</b> or a <b>'>'</b>. </p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing an integer corresponding to the minimum possible <b>P</b>. </p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T, |s|</b> \u2264 10<sup>5<sup></li>\r\n<li>1 \u2264 Sum of <b>|s|</b> over all test cases in a single test file \u2264 10<sup>6</sup></li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<p><b>Subtask #1 (30 points)</b>\r\n<ul>\r\n<li>1 \u2264 <b>T, |s|</b> \u2264 10<sup>3<sup></li>\r\n<li>1 \u2264 Sum of <b>|s|</b> over all test cases in a single test file \u2264 10<sup>4</li>\r\n</ul>\r\n</p>\r\n\r\n<p><b>Subtask #2 (70 points)</b>\r\n<ul>\r\n<li>Original constraints</li>\r\n</ul>\r\n</p>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n4\r\n<<<\r\n<><\r\n<=>\r\n<=<\r\n\r\n<b>Output:</b>\r\n4\r\n2\r\n2\r\n3\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p>Here are some possible valid sequences which can be formed with the minimum <b>P</b> for each of the test cases:</p>\r\n<pre>\r\n1 < 2 < 3 < 4\r\n1 < 2 > 1 < 2\r\n1 < 2 = 2 > 1\r\n1 < 2 = 2 < 3\r\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef found a strange string yesterday - a string of signs <b>s</b>, where each sign is either a <b>'<'</b>, <b>'='</b> or a <b>'>'</b>. Let N be the length of this string. Chef wants to insert N + 1 positive integers into this sequence and make it valid. A valid sequence is a sequence where every sign is preceded and followed by an integer, and the signs are correct. That is, if a sign '<' is preceded by the integer <i>a</i> and followed by an integer <i>b</i>, then <i>a</i> should be less than <i>b</i>. Likewise for the other two signs as well. </p>\r\n\r\n<p>Chef can take some positive integers in the range <b>[1, P]</b> and use a number in the range as many times as he wants.</p>\r\n\r\n<p>Help Chef find the minimum possible <b>P</b> with which he can create a valid sequence.</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The only line of each test case contains the string of signs <b>s</b>, where each sign is either <b>'<'</b>, <b>'='</b> or a <b>'>'</b>. </p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing an integer corresponding to the minimum possible <b>P</b>. </p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T, |s|</b> \u2264 10<sup>5<sup></li>\r\n<li>1 \u2264 Sum of <b>|s|</b> over all test cases in a single test file \u2264 10<sup>6</sup></li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<p><b>Subtask #1 (30 points)</b>\r\n<ul>\r\n<li>1 \u2264 <b>T, |s|</b> \u2264 10<sup>3<sup></li>\r\n<li>1 \u2264 Sum of <b>|s|</b> over all test cases in a single test file \u2264 10<sup>4</li>\r\n</ul>\r\n</p>\r\n\r\n<p><b>Subtask #2 (70 points)</b>\r\n<ul>\r\n<li>Original constraints</li>\r\n</ul>\r\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\r\n<<<\r\n<><\r\n<=>\r\n<=<",
+        "output": "4\r\n2\r\n2\r\n3",
+        "explanation": "<p>Here are some possible valid sequences which can be formed with the minimum <b>P</b> for each of the test cases:</p>\r\n<pre>\r\n1 < 2 < 3 < 4\r\n1 < 2 > 1 < 2\r\n1 < 2 = 2 > 1\r\n1 < 2 = 2 < 3\r\n</pre>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 15523,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "berezin",
+  "problem_display_authors": [
+    "berezin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/berezin'>berezin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "deadwing97",
+  "date_added": "18-11-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Substring"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Groupings"
+  ],
+  "difficulty_rating": "1563",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610670
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFSIGN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

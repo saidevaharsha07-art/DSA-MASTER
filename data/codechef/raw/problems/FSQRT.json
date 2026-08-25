@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FSQRT",
+  "contest_category": "6",
+  "problem_name": "Finding Square Roots",
+  "intended_contest_code": null,
+  "body": "<p>\u00a0</p>\r\n<p><i>In olden days finding square roots seemed to be difficult but nowadays it can be easily done using in-built functions available across many languages </i>\r\n.</p>\r\n<p>\r\nAssume that you happen to hear the above words and you want to give a try in finding the square root of any given integer using in-built functions. So here's your chance. \r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>\r\nThe first line of the input contains an integer T, the number of test cases. T lines follow. Each line contains an integer N whose square root needs to be computed.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>\r\nFor each line of the input, output the square root of the input integer, rounded down to the nearest integer, in a new line.\r\n</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n1<=T<=20 <br />\r\n1<=N<=10000 <br />\r\n</p>\r\n\r\n\r\n<pre><b>Input:</b>\r\n3\r\n10\r\n5\r\n10000\r\n\r\n<b>Output:</b>\r\n3\r\n2\r\n100\r\n</pre>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p><i>In olden days finding square roots seemed to be difficult but nowadays it can be easily done using in-built functions available across many languages </i>\n.</p>\n<p>\nAssume that you happen to hear the above words and you want to give a try in finding the square root of any given integer using in-built functions. So here's your chance. \n</p>\n\n<h3>Input</h3>\n<p>\nThe first line of the input contains an integer T, the number of test cases. T lines follow. Each line contains an integer N whose square root needs to be computed.\n</p>\n\n<h3>Output</h3>\n<p>\nFor each line of the input, output the square root of the input integer, rounded down to the nearest integer, in a new line.\n</p>\n\n<h3>Constraints</h3>\n<p>\n1<=T<=20 <br />\n1<=N<=10000 <br /></p>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n10\n5\n10000",
+        "output": "3\n2\n100",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121170,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "karthikv1392",
+  "problem_display_authors": [
+    "karthikv1392"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/karthikv1392'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>karthikv1392</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "29-04-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Inbuilt functions"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "668",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610851
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FSQRT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 196,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,121 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "OROFAND",
+  "contest_category": "6",
+  "problem_name": "OR of ANDs",
+  "intended_contest_code": "COOK128",
+  "body": "\r\nYou are given an array $A$ with $N$ integers. An array's score is defined as the bitwise AND of all its elements. You need to find the bitwise OR of the scores of all possible non-empty subarrays of $A$.\r\n\r\nFurthermore, there are $Q$ queries. Each query consists of two integers $X$ and $V$. You need to change the value of the element at index $X$ to $V$. After each query, you again need to find the bitwise OR of the scores of all possible non-empty subarrays.\r\n\r\nSee the example for more clarification.\r\n\r\n###Input:\r\nThe first line of the input contains a single integer $T$ - the number of test cases. The description of $T$ test cases follows.\r\n\r\nThe first line of each test case contains two space-separated integers $N$ and $Q$ - the size of the array and the number of queries, respectively.\r\n\r\nThe second line contains $N$ space-separated integers $A_1,\\ldots,A_N$.\r\n\r\nEach of the next $Q$ lines contains two space-separated integers $X$ and $V$ - the position and the new value of the query, respectively.\r\n\r\n###Output:\r\nFor each test case print $Q+1$ lines. In the first line print the answer for the original array and in the next $Q$ lines print the answer after every query.\r\n\r\n###Constraints \r\n$1 \\le T \\le 100$\r\n\r\n$1 \\le N, Q \\le 10^5$\r\n\r\n$0 \\le A_i \\le 2^{31}-1$\r\n\r\n$1 \\le X \\le N$\r\n\r\n$0 \\le V \\le 2^{31}-1$\r\n\r\nThe sum of $N$ over all test cases does not exceed $10^5$\r\n\r\nThe sum of $Q$ over all test cases does not exceed $10^5$\r\n\r\n###Sample Input:\r\n\t2\r\n\t3 2\r\n\t1 2 3\r\n\t1 4\r\n\t3 0\r\n\t4 1\r\n\t1 2 3 4\r\n\t4 0\r\n\r\n###Sample Output:\r\n\t3\r\n\t7\r\n\t6\r\n\t7\r\n\t3\r\n\t\r\n###EXPLANATION:\r\n**Example case 1:** For the original array, all possible subarrays and their scores are as follows.\r\n\r\n$AND(1) = 1$, $AND(2) = 2$, $AND(3) = 3$, $AND(1,2) = 0$, $AND(2,3) = 2$, $AND(1,2,3) = 0$.\r\n\r\nThe bitwise OR of all possible subarray's score is $OR(1,2,3,0,2,0) = 3$.\r\n\r\nAfter the first query new array will be $[4,2,3]$ and the answer will be $7$.\r\n\r\nAfter the second query new array will be $[4,2,0]$ and the answer will be $6$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nYou are given an array $A$ with $N$ integers. An array's score is defined as the bitwise AND of all its elements. You need to find the bitwise OR of the scores of all possible non-empty subarrays of $A$.\n\nFurthermore, there are $Q$ queries. Each query consists of two integers $X$ and $V$. You need to change the value of the element at index $X$ to $V$. After each query, you again need to find the bitwise OR of the scores of all possible non-empty subarrays.\n\nSee the example for more clarification.\n\n###Input:\nThe first line of the input contains a single integer $T$ - the number of test cases. The description of $T$ test cases follows.\n\nThe first line of each test case contains two space-separated integers $N$ and $Q$ - the size of the array and the number of queries, respectively.\n\nThe second line contains $N$ space-separated integers $A_1,\\ldots,A_N$.\n\nEach of the next $Q$ lines contains two space-separated integers $X$ and $V$ - the position and the new value of the query, respectively.\n\n###Output:\nFor each test case print $Q+1$ lines. In the first line print the answer for the original array and in the next $Q$ lines print the answer after every query.\n\n###Constraints \n$1 \\le T \\le 100$\n\n$1 \\le N, Q \\le 10^5$\n\n$0 \\le A_i \\le 2^{31}-1$\n\n$1 \\le X \\le N$\n\n$0 \\le V \\le 2^{31}-1$\n\nThe sum of $N$ over all test cases does not exceed $10^5$\n\nThe sum of $Q$ over all test cases does not exceed $10^5$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 2\n1 2 3\n1 4\n3 0\n4 1\n1 2 3 4\n4 0",
+        "output": "3\n7\n6\n7\n3",
+        "explanation": "**Example case 1:** For the original array, all possible subarrays and their scores are as follows.\n\n$AND(1) = 1$, $AND(2) = 2$, $AND(3) = 3$, $AND(1,2) = 0$, $AND(2,3) = 2$, $AND(1,2,3) = 0$.\n\nThe bitwise OR of all possible subarray's score is $OR(1,2,3,0,2,0) = 3$.\n\nAfter the first query new array will be $[4,2,3]$ and the answer will be $7$.\n\nAfter the second query new array will be $[4,2,0]$ and the answer will be $6$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 88251,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "harshil41",
+  "problem_display_authors": [
+    "harshil41"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/harshil41'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>harshil41</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "cherry0697",
+  "date_added": "11-04-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Online Queries"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Queries"
+  ],
+  "difficulty_rating": "1820",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611127
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=OROFAND",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

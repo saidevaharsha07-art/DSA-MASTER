@@ -1,0 +1,125 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP16F",
+  "contest_category": "6",
+  "problem_name": "Optimal Partition",
+  "intended_contest_code": null,
+  "body": "<p>\nCompetitive Programmers love concise statements. Today, we have one such problem for you!\n</p>\n\n<p>\nYou're given an array <b>A</b> with <b>N</b> integers, <b>A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>....A<sub>N</sub></b>. You have to partition the elements of array <b>A</b> into exactly <b>K</b> disjoint subsets such that the following conditions are satisfied:\n<ul>\n<li>Size of each subset must be at least <b>2</b>.</li>\n<li>Let the <b>K</b> subsets be <b>S<sub>1</sub>, S<sub>2</sub>.... S<sub>K</sub></b>. \nLet <b>D<sub>i</sub> = max(S<sub>i</sub>) - min(S<sub>i</sub>)</b> where <b>max(S<sub>i</sub>)</b> is maximum element in <b>S<sub>i</sub></b> and <b>min(S<sub>i</sub>)</b> is the minimum element in <b>S<sub>i</sub></b>. We want to minimize value of <b>D<sub>1</sub> + D<sub>2</sub> + D<sub>3</sub> + .... + D<sub>K</sub></b>.</li>\n</ul>\n</p>\n\n<p>\nFind the minimum possible sum of <b>D<sub>1</sub> + D<sub>2</sub> + D<sub>3</sub> + .... + D<sub>K</sub></b> that you can obtain.\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of the test cases.</p>\n<p>The first line of each test case will contain two space separated integers <b>N, K</b>.\n<p>The next line will contain <b>N</b> space separated integers <b>A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>....A<sub>N</sub></b> </p>\n\n<h3>Output</h3>\n<p>For each test case, output a single integer denoting the minimum sum.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T </b> \u2264 <b>10</b></li>\n<li><b>2</b> \u2264 <b>N </b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>2</b> \u2264 <b>Sum of N over all test cases in a single file</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>K </b> \u2264 <b>min(500, N / 2)</b></li>\n<li><b>1</b> \u2264 <b>A<sub>i</sub> </b> \u2264 <b>10<sup>12</sup></b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>1\n5 2\n19 16 5 23 17</tt>\n\n<b>Output:</b>\n<tt>16</tt>\n</pre>\n\n<h3>Explanation</h3>\n<p>\nThe best partition that we can obtain involves partitioning <b>A</b> into {16, 5, 17} and {19, 23}, incurring a cost of (17 - 5) + (23 - 19) = 16\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10$\n- $2 \\leq N \\leq 10^5$\n- $2 \\leq \\text{Sum of } N \\text{ over all test cases in a single file} \\leq 10^5$\n- $1 \\leq K \\leq \\min(500, N / 2)$\n- $1 \\leq A_i \\leq 10^{12}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Competitive Programmers love concise statements. Today, we have one such problem for you!\n\nYou're given an array $A$ with $N$ integers, $A_1, A_2, A_3, \\dots, A_N$. You have to partition the elements of array $A$ into exactly $K$ disjoint subsets such that the following conditions are satisfied:\n\n- Size of each subset must be at least $2$.\n- Let the $K$ subsets be $S_1, S_2, \\dots, S_K$. Let $D_i = \\max(S_i) - \\min(S_i)$ where $\\max(S_i)$ is the maximum element in $S_i$ and $\\min(S_i)$ is the minimum element in $S_i$. We want to minimize the value of $D_1 + D_2 + D_3 + \\dots + D_K$.\n\nFind the minimum possible sum of $D_1 + D_2 + D_3 + \\dots + D_K$ that you can obtain.\n",
+    "inputFormat": "The first line of the input contains an integer $T$ denoting the number of the test cases.\n\nThe first line of each test case will contain two space-separated integers $N, K$.\n\nThe next line will contain $N$ space-separated integers $A_1, A_2, A_3, \\dots, A_N$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single integer denoting the minimum sum.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 2\n19 16 5 23 17\n",
+        "output": "16\n",
+        "explanation": "The best partition that we can obtain involves partitioning $A$ into $\\{16, 5, 17\\}$ and $\\{19, 23\\}$, incurring a cost of $(17 - 5) + (23 - 19) = 16$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm16",
+    "admin3",
+    "dynamic-programming",
+    "icpc2016",
+    "kgp16",
+    "programming"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610965
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP16F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

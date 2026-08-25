@@ -1,0 +1,121 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LIGHTS",
+  "contest_category": "6",
+  "problem_name": "The Glittering Caves of Aglarond",
+  "intended_contest_code": null,
+  "body": "<p><html> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>The Glittering Caves of Aglarond<br /> </h2>\n<p> <i>'Strange are the ways of Men, Legolas! Here they have one of the marvels of the Northern World, and what do they say of it? Caves, they say!     Caves! Holes to fly to in time of war, to store fodder in! My good Legolas, do you know that the caverns of Helm's Deep are vast and beautiful?     There would be an endless pilgrimage of Dwarves, merely to gaze at them, if such things were known to be. Aye indeed, they would pay pure gold for a brief glance!<br />     'And, Legolas, when the torches are kindled and men walk on the sandy floors under the echoing domes, ah! then, Legolas, gems and crystals and veins of     precious ore glint in the polished walls; and the light glows through folded marbles, shell-like, translucent as the living hands of Queen Galadriel.'</i> - Gimli, describing to Legolas the Glittering Caves of Aglarond.<br /> <br /> While these caves are by and large natural, there is one place where the Men of Rohan have chiseled into the rock to create a magnificent exhibit. You have a wall of the cave consisting of 'lighted diamonds' arranged in a <b>N</b> by <b>M</b> grid (basically, you have a light behind each diamond which can be turned on or off). Further, you have a switch corresponding to each <b>row</b> of this diamond-grid. When you operate a switch, it will toggle (flip) the lights corresponding to that row.<br /> <br /> You are given the current configuration of the lighted diamonds. Gimli challenges Legolas to turn on as many diamonds as possible using EXACTLY <b>K</b> on/off operations of the switches. Since Legolas is an Elf of the Wood and doesn't care much for things that glitter, he instead asks for your help. Note that the same switch (i.e. row) can be chosen multiple times.<br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains the number of test cases <b>T</b>. Each test case contains <b>N</b>, <b>M</b> and <b>K</b> on the first line followed by <b>N</b> lines containing <b>M</b> characters each. The ith line denotes the state of the diamonds in the ith row, where '*' denotes a diamond which is on and '.' denotes a diamond which is off.<br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> Output <b>T</b> lines containing the answer for the corresponding case.<br /> Between successive test cases, there should not be any blank lines in the output.<br /><br />\n<h3>Constraints:</h3>\n</p><p> <b>1 &lt;= T &lt;= 100<br /> 1 &lt;= N,M &lt;= 50<br /> 1 &lt;= K &lt;= 100</b><br /><br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> 2 2 1<br /> ..<br /> **<br /> 2 2 2<br /> ..<br /> **</span><br /><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 4<br /> 2<br /> </span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> In the first test case, row 1 can be toggled hence leaving all 4 lights to be in the ON state.<br /> In the second test case, row 1 (or row 2) can be toggled twice, hence maintaining the state of the initial configuration. <br /> <br /> </p></body> </html> </p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 <= T <= 100**\n- **1 <= N,M <= 50**\n- **1 <= K <= 100**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "# The Glittering Caves of Aglarond\n\nWhile these caves are by and large natural, there is one place where the Men of Rohan have chiseled into the rock to create a magnificent exhibit. You have a wall of the cave consisting of 'lighted diamonds' arranged in a **N** by **M** grid (basically, you have a light behind each diamond which can be turned on or off). Further, you have a switch corresponding to each **row** of this diamond-grid. When you operate a switch, it will toggle (flip) the lights corresponding to that row.\n\nYou are given the current configuration of the lighted diamonds. Gimli challenges Legolas to turn on as many diamonds as possible using EXACTLY **K** on/off operations of the switches. Since Legolas is an Elf of the Wood and doesn't care much for things that glitter, he instead asks for your help. Note that the same switch (i.e. row) can be chosen multiple times.\n",
+    "inputFormat": "The first line contains the number of test cases **T**. Each test case contains **N**, **M** and **K** on the first line followed by **N** lines containing **M** characters each. The ith line denotes the state of the diamonds in the ith row, where '*' denotes a diamond which is on and '.' denotes a diamond which is off.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output **T** lines containing the answer for the corresponding case. Between successive test cases, there should not be any blank lines in the output.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 2 1\n..\n**\n2 2 2\n..\n**\n",
+        "output": "4\n2\n",
+        "explanation": "In the first test case, row 1 can be toggled hence leaving all 4 lights to be in the ON state. In the second test case, row 1 (or row 2) can be toggled twice, hence maintaining the state of the initial configuration.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "22-01-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acmamr12",
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610981
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LIGHTS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

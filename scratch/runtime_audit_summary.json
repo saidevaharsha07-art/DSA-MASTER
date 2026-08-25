@@ -1,0 +1,447 @@
+{
+  "totalPages": 44,
+  "mainAudits": [
+    {
+      "path": "src/app/(app)/arena/page.tsx",
+      "lineCount": 119,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/contest/page.tsx",
+      "lineCount": 56,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/dashboard/page.tsx",
+      "lineCount": 166,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/journey/page.tsx",
+      "lineCount": 67,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/kingdoms/page.tsx",
+      "lineCount": 42,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/learn/[phase]/[topic]/[pattern]/page.tsx",
+      "lineCount": 106,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/learning/page.tsx",
+      "lineCount": 51,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/oracle/page.tsx",
+      "lineCount": 107,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/patterns/page.tsx",
+      "lineCount": 50,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/practice/codechef/page.tsx",
+      "lineCount": 756,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": true,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/practice/page.tsx",
+      "lineCount": 142,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/profile/[username]/page.tsx",
+      "lineCount": 92,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/revision/page.tsx",
+      "lineCount": 99,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/roadmap/page.tsx",
+      "lineCount": 40,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/settings/page.tsx",
+      "lineCount": 53,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    },
+    {
+      "path": "src/app/(app)/statistics/page.tsx",
+      "lineCount": 78,
+      "usesAppBackend": true,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": false
+    }
+  ],
+  "devAudits": [
+    {
+      "path": "src/app/(dev)/dev/achievements/page.tsx",
+      "lineCount": 88,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/adaptive/page.tsx",
+      "lineCount": 125,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/analytics/page.tsx",
+      "lineCount": 81,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/auth/page.tsx",
+      "lineCount": 113,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/backups/page.tsx",
+      "lineCount": 81,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/connectors/page.tsx",
+      "lineCount": 93,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/contest/page.tsx",
+      "lineCount": 138,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/datasets/page.tsx",
+      "lineCount": 159,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/dependencies/page.tsx",
+      "lineCount": 71,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/diagnostics/page.tsx",
+      "lineCount": 124,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/events/page.tsx",
+      "lineCount": 48,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/intelligence/page.tsx",
+      "lineCount": 90,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/leaderboards/page.tsx",
+      "lineCount": 76,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/live/page.tsx",
+      "lineCount": 96,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/memory/page.tsx",
+      "lineCount": 167,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/notifications/page.tsx",
+      "lineCount": 77,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/oracle/page.tsx",
+      "lineCount": 208,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/page.tsx",
+      "lineCount": 112,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/performance/page.tsx",
+      "lineCount": 52,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/platforms/page.tsx",
+      "lineCount": 133,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/plugins/page.tsx",
+      "lineCount": 45,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/profile/page.tsx",
+      "lineCount": 105,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/ratings/page.tsx",
+      "lineCount": 130,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/recommendations/page.tsx",
+      "lineCount": 100,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/runtime/page.tsx",
+      "lineCount": 46,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/scheduler/page.tsx",
+      "lineCount": 109,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/sync/page.tsx",
+      "lineCount": 101,
+      "usesAppBackend": false,
+      "usesContainer": true,
+      "usesLocalStorage": false,
+      "usesEventBus": false,
+      "hasMockKeywords": true,
+      "isDevRoute": true
+    },
+    {
+      "path": "src/app/(dev)/dev/system/page.tsx",
+      "lineCount": 254,
+      "usesAppBackend": false,
+      "usesContainer": false,
+      "usesLocalStorage": false,
+      "usesEventBus": true,
+      "hasMockKeywords": false,
+      "isDevRoute": true
+    }
+  ]
+}

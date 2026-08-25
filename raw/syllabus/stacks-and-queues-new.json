@@ -1,0 +1,329 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "stacks-and-queues-new",
+  "name": "Practice Stacks and Queues",
+  "title": "Practice Stacks and Queues",
+  "level": "Intermediate",
+  "description": "Practice intermediate level problems on Stacks and Queues",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/stacks-and-queues-new/STACKQUE06/problems/BBXJG01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Stack and Queue",
+      "description": "Practice educational problems using Stacks and Queues",
+      "submodules": [
+        {
+          "name": "Stacks and queues",
+          "submodule_id": 25844,
+          "contest_code": "STACKQUE06",
+          "start_date": "2026-05-05 17:06:21",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/stacks-and-queues-new/STACKQUE06/problems/BBXJG01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "54922",
+              "code": "BBXJG01",
+              "name": "Chef Builds Stack",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "PPMUH01",
+              "name": "Chef Builds Queue Using Stacks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "PREP59",
+              "name": "Valid Parenthesis",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "NEC",
+              "name": "Necklace",
+              "difficulty_rating": "800",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "STONE_PILE",
+              "name": "Stone Pile",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "DSCPPAS269",
+              "name": "Mountain Peak",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "ONP",
+              "name": "Transform the Expression",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54922",
+              "code": "DRKTZ01",
+              "name": "Chef Solves Asteroid Collision",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Stacks and queues additional practice",
+          "submodule_id": 25845,
+          "contest_code": "STACKQUE07",
+          "start_date": "2026-05-05 17:06:21",
+          "total_problems": 17,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/stacks-and-queues-new/STACKQUE07/problems/PREP21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 17,
+          "problems_with_status": [
+            {
+              "contest_id": "54923",
+              "code": "PREP21",
+              "name": "Evaluate Expression",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "STKSORT",
+              "name": "Stack Sort",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "LEJQI01",
+              "name": "Chef Builds Stack",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "PREP60",
+              "name": "Previous smaller element",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "HSUON01",
+              "name": "Chef Finds Next Greater Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "NFXON01",
+              "name": "Chef Circular Search",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "SUSSTR",
+              "name": "Suspense String",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "SPLITPAL",
+              "name": "Palindrome by Splitting",
+              "difficulty_rating": "1540",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "PREP23",
+              "name": "Sliding Window Maximum",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "JQJTY01",
+              "name": "Chef Calculates Subarray Minimums",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "PREP22",
+              "name": "Largest Rectangle in Histogram",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "IEIJT01",
+              "name": "Chef Solves LRU Cache",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "COMPILER",
+              "name": "Compilers and Parsers",
+              "difficulty_rating": "1588",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "SDSTRING",
+              "name": "Self-Destructing Strings",
+              "difficulty_rating": "1648",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "MXWATR",
+              "name": "Maximum water in a section",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "MAXREC",
+              "name": "Maximum Area",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54923",
+              "code": "DSCPPAS272",
+              "name": "Remove k digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 25
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 25,
+  "total_non_pro_problems": 8,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [],
+  "learners_count": 622,
+  "path_review": {
+    "rating": 4.3,
+    "users": 11
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

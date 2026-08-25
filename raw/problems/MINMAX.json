@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MINMAX",
+  "contest_category": "6",
+  "problem_name": "Wormtongues Mind",
+  "intended_contest_code": null,
+  "body": "<p><html> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Wormtongue's Mind<br /> </h2>\n<p> <i>Wormtongue looked from face to face. In his eyes was the hunted look of a beast seeking some gap in the ring of his enemies.<br />     'Nay, Eomer, you do not fully understand the mind of Master Wormtongue,' said Gandalf, turning his piercing glance upon him. 'He is bold and cunning.     Even now he plays a game with peril and wins a throw.' </i>- Gandalf, trying to figure out Wormtongue's mind.<br /> <br /> In fact, Wormtongue's mind is a complicated system of evaluating various variables and parameters. In essence, each parameter is a uniform random floating point variable between 0 and 1 (inclusive). Further, his mind works on calculating best and worst-case values, which are equivalent to min/max of 2 expressions.<br /> <br /> For example, right now Wormtongue is calculating :<br /> 'Chances of escaping' = <b>max</b>('Theoden letting me go', 'Me killing everyone')<br /> 'Theoden letting me go' = <b>max</b>('Theoden is forgiving by nature', 'Gandalf advises him to let me go').<br /> 'Me killing everyone' = <b>min</b>('Me killing Gandalf', 'Me killing Theoden').<br /> <br /> So, you are given an expression consisting of independent uniform [0, 1] random variables, on which you have an expression consisting of \"<b>min</b>\", and \"<b>max</b>\" alone. Help Gandalf figure out Wormtongue's mind by finding the <b>expected value</b> of this expression.<br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains <b>T</b>, the number of test cases.<br /> Each test case consists of a single line describing the expression. The characters of the string are derived from the set {'<b>M</b>','<b>m</b>','<b>x</b>'}, where '<b>M</b>' stands for <b>max</b>, '<b>m</b>' stands for <b>min</b>, and '<b>x</b>' is a random variable<br /> Formally, in the expression tree, each node which asks for <b>max</b> is labeled as '<b>M</b>', each node which asks for <b>min</b> is labelled '<b>m</b>', and all the leaves are labeled '<b>x</b>'. The description of the expression is preorder traversal of this tree.<br /> For example, <b>Mxmxx</b> describes the expression <b>max(x1, min(x2, x3))</b>.<br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> For each test case, output one line which contains the <b>expected value</b> of the expression. <b>The results should be accurate within an error range of 10^-6.</b><br /><br />\n<h3>Constraints:</h3>\n</p><p><b>1 &lt;= T &lt;= 1,000<br /> 1 &lt;= input string length &lt;= 100</b><br /> <br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 4<br /> x<br /> mxx<br /> Mxx<br /> MmxxMxx </span><br /><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 0.500000<br /> 0.333333<br /> 0.666667<br /> 0.700000<br /> </span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> For the first test case, it asks for the mean of a random number between 0 and 1, which is 0.5.<br /> <br /> Note:<br /> It is recommended to use <b>long long</b> and <b>long double</b> data types in calculation to avoid precision errors.<br /> <br /> <br /> </p></body> </html> </p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 <= T <= 1,000**\n- **1 <= input string length <= 100**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "# Wormtongue's Mind\n\nWormtongue's mind is a complicated system of evaluating various variables and parameters. In essence, each parameter is a uniform random floating point variable between 0 and 1 (inclusive). Further, his mind works on calculating best and worst-case values, which are equivalent to min/max of 2 expressions.\n\nFor example, right now Wormtongue is calculating:\n- 'Chances of escaping' = **max**('Theoden letting me go', 'Me killing everyone')\n- 'Theoden letting me go' = **max**('Theoden is forgiving by nature', 'Gandalf advises him to let me go')\n- 'Me killing everyone' = **min**('Me killing Gandalf', 'Me killing Theoden')\n\nSo, you are given an expression consisting of independent uniform [0, 1] random variables, on which you have an expression consisting of **min**, and **max** alone. Help Gandalf figure out Wormtongue's mind by finding the **expected value** of this expression.\n",
+    "inputFormat": "The first line contains **T**, the number of test cases.\n\nEach test case consists of a single line describing the expression. The characters of the string are derived from the set {'**M**','**m**','**x**'}, where '**M**' stands for **max**, '**m**' stands for **min**, and '**x**' is a random variable.\n\nFormally, in the expression tree, each node which asks for **max** is labeled as '**M**', each node which asks for **min** is labelled '**m**', and all the leaves are labeled '**x**'. The description of the expression is preorder traversal of this tree.\n\nFor example, **Mxmxx** describes the expression **max(x1, min(x2, x3))**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output one line which contains the **expected value** of the expression. **The results should be accurate within an error range of 10^-6.**\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\nx\nmxx\nMxx\nMmxxMxx\n",
+        "output": "0.500000\n0.333333\n0.666667\n0.700000\n",
+        "explanation": "For the first test case, it asks for the mean of a random number between 0 and 1, which is 0.5.\n\n**Note:**\nIt is recommended to use **long long** and **long double** data types in calculation to avoid precision errors.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h2>PROBLEM LINKS</h2>\n<p><a href=\"http://www.codechef.com/problems/MINMAX\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACMAMR12/problems/MINMAX\" rel=\"nofollow noopener\">Contest</a></p>\n<h1>Problem Information</h1>\n<p><strong>Problem Name:</strong> Wormtongue\u2019s Mind</p>\n<p><strong>Author\u2019s Name:</strong> Min-Max Expression</p>\n<p><strong>Problem Code:</strong> MINMAX</p>\n<p><strong>Alphabet:</strong> H</p>\n<h1>Difficulty:</h1>\n<p>Medium</p>\n<h1>Pre-requisites:</h1>\n<p>Probability, Calculus (integration of polynomials)</p>\n<h1>Problem:</h1>\n<p>Given an expression consisting of min and max operations over <strong>N</strong> independent U[0, 1] random variables x<sub>1</sub>, x<sub>2</sub>, \u2026, x<sub><strong>N</strong></sub>, find its expected value.</p>\n<h1>Solution:</h1>\n<h3>Distributions</h3>\n<p>It turns out that this problem, though it looks hard, can be solved by figuring out the probability distribution of the expression.</p>\n<p>Lets try to find the CDF (Cumulative Distribution Function) of expressions recursively. Note that we consider x ? [0, 1] only.</p>\n<p>For an expression of the form \u201cx\u201d (i.e. just a uniform random variable <strong>X</strong>), <strong>F<sub>X</sub>(x)</strong> := Prob {<strong>X &lt;= x</strong>} = <strong>x</strong></p>\n<p>For an expression of the form \u201cmax(expr1, expr2)\u201d (i.e. something that looks like <strong>X</strong> = max(<strong>X<sub>1</sub>, X<sub>2</sub></strong>) where <strong>X<sub>1</sub></strong> and <strong>X<sub>2</sub></strong> are expressions),</p>\n<blockquote>\n<p><strong>F<sub>X</sub>(x)</strong> := Prob {<strong>X &lt;= x</strong>}</p>\n</blockquote>\n<p>= Prob {max(<strong>X<sub>1</sub>, X<sub>2</sub></strong>) &lt;= <strong>x</strong>}</p>\n<p>= Prob {<strong>X<sub>1</sub> &lt;= x</strong> <em>and</em> <strong>X<sub>2</sub> &lt;= x</strong>}.</p>\n<blockquote>\n<p>Now, since <strong>X<sub>1</sub></strong> and <strong>X<sub>2</sub></strong> consist of independent random variables, we get that</p>\n</blockquote>\n<p>Prob {<strong>X<sub>1</sub> &lt;= x</strong> <em>and</em> <strong>X<sub>2</sub> &lt;= x</strong>}</p>\n<p>= Prob {<strong>X<sub>1</sub> &lt;= x</strong>} * Prob {<strong>X<sub>2</sub> &lt;= x</strong>}</p>\n<p>= <strong>F<sub>X<sub>1</sub></sub>(x) * F<sub>X<sub>2</sub></sub>(x)</strong></p>\n<p>Similarly for an expression of the form \u201cmin(expr1, expr2)\u201d. Let <strong>X</strong> = min(<strong>X<sub>1</sub>, X<sub>2</sub></strong>)$. Now,</p>\n<blockquote>\n<p><strong>F<sub>X</sub>(x)</strong> = Prob{min(<strong>X<sub>1</sub>, X<sub>2</sub></strong>) &lt;= <strong>x</strong>} = Prob {<strong>X<sub>1</sub> &lt;= x</strong> <em>or</em> <strong>X<sub>2</sub> &lt;= x</strong>}. In terms of sets, this becomes</p>\n</blockquote>\n<p>Prob( {<strong>X<sub>1</sub> &lt;= x</strong>} ? {<strong>X<sub>2</sub> &lt;= x</strong>}).</p>\n<p>Finally, using Prob(A ? B) = Prob(A) + Prob(B) - Prob(A ? B), along with (as in the case of max) the fact that the random variables are independent, we get</p>\n<p><strong>F<sub>X</sub>(x) = F<sub>X<sub>1</sub></sub>(x) + F<sub>X<sub>2</sub></sub>(x) - F<sub>X<sub>1</sub></sub>(x) * F<sub>X<sub>2</sub></sub>(x)</strong>.</p>\n<p>Thus, we notice that in all cases, the distribution turns out to be some <em>polynomial</em> in <strong>x</strong>. From here, finding the expected value can be got by integration.</p>\n<h3>Integration</h3>\n<p>Recall that ? x<sup>n</sup> = <sup>1</sup>?<sub>n+1</sub> x<sup>n+1</sup> (ignoring constants of integration etc).</p>\n<p>Also, E[X] = ?<sub>0</sub><sup>1</sup> x f<sub>X</sub>(x) dx, where f<sub>X</sub>(x) is the probability density function of X, and is dF<sub>X</sub>/dx. Thus, if F<sub>X</sub> = ?<sub>i=0</sub><sup>k</sup> c<sub>i</sub> x<sup>i</sup>, then, xf<sub>X</sub> = ?i=1<sup>k</sup> i c<sub>i</sub> x<sup>i</sup>, and hence the integral (with limits from 0 to 1) would be ?<sub>i=1</sub><sup>k</sup> <sup>i</sup>?<sub>i+1</sub> c<sub>i</sub> x<sup>i</sup>.</p>\n<p>Alternately, once you have the CDFs, then you can also use E[X] = ?<sub>0</sub><sup>?</sup> Prob(X&gt;=x) dx, which holds whenever X is a non-negative random variable. In this case, this is</p>\n<p>E[X] = ?<sub>0</sub><sup>1</sup>(1-F<sub>X</sub>(x))dx</p>\n<p>= 1 - ?<sub>0</sub><sup>1</sup> F<sub>X</sub> dx</p>\n<h1>Note on Implementation:</h1>\n<p>You are given the input in the form of a pre-order traversal of the expression tree. It would be good to actually build a tree out of this, and store \u201ccdfs\u201d related to each node (which corresponds to an \u201cexpression\u201d)</p>\n<p>Also, there is heavy use of Polynomials. Hence, it is also advised to use a Polynomial class imbued with operations of \u201c+\u201d, \u201c-\u201d and \u201c*\u201d. Finally, with the given constraints (N &lt;= |S|/2 where S is the input string length), we get that degree of polynomial is linear in number of random variables, and hence O(N^2) per polynomial multiplication is good enough. Polynomials can be stored using an array of 64-bit integers that store the coefficients.</p>\n<p>Finally, due to precision requirements, using a double (even for the final calculation) is not good enough (atleast by this approach of calculating polynomials etc.). Hence it was specified to use long double and long long datatypes. In Java, BigDecimal solution passes.</p>\n<h2>Editorial Original (unformatted) latex version can be found <a href=\"http://codechef.com/download/editorials/ACMAMR12/MINMAX.pdf\" rel=\"nofollow noopener\">here</a>\n</h2>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1482,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1 - 3",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "22-01-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acmamr12",
+    "admin",
+    "medium",
+    "probability"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/MINMAX",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611080
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MINMAX",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

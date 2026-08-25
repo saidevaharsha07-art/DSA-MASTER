@@ -1,0 +1,380 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "matrices",
+  "name": "2D Array / Matrices",
+  "title": "2D Array / Matrices",
+  "level": "Intermediate",
+  "description": "Practice problems on 2D Arrays or Matrices with our careful chosen set of 23 problems. Matrix is 2 dimensional data structures which can be used to represent grids, paths etc. Questions on 2D Arrays are generally asked in interviews to check your implementation skills.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/matrices/MATRIXINTRO/problems/MATDEF",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "What is Matrix",
+      "description": "Learn the basics of Matrix. ",
+      "submodules": [
+        {
+          "name": "Introduction",
+          "submodule_id": 4758,
+          "contest_code": "MATRIXINTRO",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 2,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/matrices/MATRIXINTRO/problems/MATDEF",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "27896",
+              "code": "MATDEF",
+              "name": "Basic Concepts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27896",
+              "code": "MATTYPES",
+              "name": "Matrix Types and Applications",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27896",
+              "code": "MATREP",
+              "name": "Matrix Representation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27896",
+              "code": "MATMCQ1",
+              "name": "Matrix Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 2
+    },
+    {
+      "assessment": null,
+      "name": "Practice",
+      "description": "Practice the matrix problems.",
+      "submodules": [
+        {
+          "name": "Matrix Problems",
+          "submodule_id": 4757,
+          "contest_code": "MATRICES",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/matrices/MATRICES/problems/MATADD",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "27895",
+              "code": "MATADD",
+              "name": "Add Two Matrices",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATZIGZAG",
+              "name": "Zig-zag traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATTREVERSE",
+              "name": "Upside Down Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATDIAGSUM",
+              "name": "Sum of Diagonals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATNEGCOUNT",
+              "name": "Count Negative Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "DSCPPAS263",
+              "name": "Valid Matrix Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMULTIPLIC",
+              "name": "Brute Force- Multiplication of Two Matrices",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATSORTDIAG",
+              "name": "Sort Matrix Diagonally",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATSETZERO",
+              "name": "Set Matrix Zeroes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATROTATE",
+              "name": "Matrix Rotations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMAXROW",
+              "name": "Row With Maximum Ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATEQRC",
+              "name": "Equal Rows and Columns",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMINPATH",
+              "name": "Path With Minimum Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMAXSQ",
+              "name": "Maximal square of all ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATSPIRAL",
+              "name": "Print Matrix In Spiral Fashion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMAXISLAND",
+              "name": "Maximum Area Island",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATROTAPPLE",
+              "name": "Rotting Apples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATSEARCH",
+              "name": "Search In Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATNEARESTO",
+              "name": "Distance to Nearest 0",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27895",
+              "code": "MATMEDIAN",
+              "name": "Median in Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 22,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 20078,
+  "path_review": {
+    "rating": 4.4,
+    "users": 463
+  },
+  "faqs": [
+    {
+      "question": "What is a 2D array?",
+      "answer": "A 2D array is a data structure that organizes elements in a grid-like format with rows and columns. It's essentially the same as a matrix in programming. 2D arrays are used to represent and manipulate matrix data structures, making them crucial for solving various matrix-related problems.",
+      "faq_order": "1"
+    },
+    {
+      "question": "Why are 2D array problems important for coding interviews?",
+      "answer": "2D array problems are frequently asked in coding interviews because they test a candidate's ability to work with complex data structures, implement matrix operations, and optimize algorithms. These problems often require skills in array manipulation, nested loops, and spatial reasoning, which are valuable for many programming scenarios.",
+      "faq_order": "2"
+    }
+  ],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms-old",
+  "roadmap_title": "Learn Data Structures and Algorithms - Roadmap"
+}

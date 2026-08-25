@@ -1,0 +1,128 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MATPAN",
+  "contest_category": "6",
+  "problem_name": "Mathison and pangrams",
+  "intended_contest_code": "LTIME51",
+  "body": "<p> Mathison recently inherited an ancient papyrus that contained some text. Unfortunately, the text was not a\n  <acronym title=\"a string using every letter of the Latin alphabet at least once.\"><b>pangram</b></acronym>. Now, Mathison has a particular liking for holoalphabetic strings and the text bothers him. The good news is that Mathison can buy letters from the local store in order to turn his text into a pangram.\n</p>\n\n<p>\n  However, each letter has a price and Mathison is not very rich. Can you help Mathison find the cheapest way to obtain a pangram?\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input file will contain one integer, <b>T</b>, representing the number of tests.</p>\n<p>Each test will be formed from two lines. The first one contains <b>26</b> space-separated integers, representing the prices of all letters.\n  The second will contain Mathison's initial text (a string of <b>N</b> lowercase letters).\n</p>\n\n<h3>Output</h3>\n<p>The output file will contain <b>T</b> lines, one for each test. Each line will contain the answer for the corresponding test.</p>\n\n<h3>Constraints and notes</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 10</li>\n<li>1 \u2264 <b>N</b> \u2264 50,000</li>\n<li>All prices are natural numbers between 1 and 1,000,000 (i.e. 10<sup>6</sup>).</li>\n<li>A pangram is a string that contains every letter of the Latin alphabet at least once.</li>\n<li>All purchased letters are added to the end of the string.</li>\n</ul>\n\n<h3>Subtaks</h3>\n<p><b>Subtask #1</b> (30 points):\n<ul>\n<li><b>N</b> = 1</li>\n</ul>\n</p>\n\n<p><b>Subtask #2</b> (70 points):\n<ul>\n<li>Original constraints</li>\n</ul>\n</p>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nabcdefghijklmopqrstuvwz\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nthequickbrownfoxjumpsoverthelazydog\n\n<b>Output:</b>\n63\n0\n</pre>\n\n<h3>Explanation</h3>\n<pre>\nFirst test\nThere are three letters missing from the original string: n (price 14), x (price 24), and y (price 25).\nTherefore the answer is 14 + 24 + 25 = 63.\n\nSecond test\nNo letter is missing so there is no point in buying something. The answer is 0.\n</pre>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p> Mathison recently inherited an ancient papyrus that contained some text. Unfortunately, the text was not a <b>pangram</b> (a string using every letter of the Latin alphabet at least once). Now, Mathison has a particular liking for holoalphabetic strings and the text bothers him. The good news is that Mathison can buy letters from the local store in order to turn his text into a pangram.\n</p>\n\n<p>\n  However, each letter has a price and Mathison is not very rich. Can you help Mathison find the cheapest way to obtain a pangram?\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input file will contain one integer, <b>T</b>, representing the number of tests.</p>\n<p>Each test will be formed from two lines. The first one contains <b>26</b> space-separated integers, representing the prices of all letters.\n  The second will contain Mathison's initial text (a string of <b>N</b> lowercase letters).\n</p>\n\n<h3>Output</h3>\n<p>The output file will contain <b>T</b> lines, one for each test. Each line will contain the answer for the corresponding test.</p>\n\n<h3>Constraints and notes</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 10</li>\n<li>1 \u2264 <b>N</b> \u2264 50,000</li>\n<li>All prices are natural numbers between 1 and 1,000,000 (i.e. 10<sup>6</sup>).</li>\n<li>A pangram is a string that contains every letter of the Latin alphabet at least once.</li>\n<li>All purchased letters are added to the end of the string.</li>\n</ul>\n\n<h3>Subtaks</h3>\n<p><b>Subtask #1</b> (30 points):\n<ul>\n<li><b>N</b> = 1</li>\n</ul>\n</p>\n\n<p><b>Subtask #2</b> (70 points):\n<ul>\n<li>Original constraints</li>\n</ul>\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nabcdefghijklmopqrstuvwz\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nthequickbrownfoxjumpsoverthelazydog",
+        "output": "63\n0",
+        "explanation": "<pre>\nFirst test\nThere are three letters missing from the original string: n (price 14), x (price 24), and y (price 25).\nTherefore the answer is 14 + 24 + 25 = 63.\n\nSecond test\nNo letter is missing so there is no point in buying something. The answer is 0.\n</pre>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 16125,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "alexvaleanu",
+  "problem_display_authors": [
+    "alexvaleanu"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/alexvaleanu'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>alexvaleanu</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "kingofnumbers"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kingofnumbers'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>kingofnumbers</span></a></div>",
+  "problem_editorialist": "likecs",
+  "date_added": "22-08-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1127",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611063
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MATPAN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 60,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

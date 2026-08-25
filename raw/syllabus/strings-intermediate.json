@@ -1,0 +1,222 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "strings-intermediate",
+  "name": "Practice Strings - Intermediate",
+  "title": "Practice Strings - Intermediate",
+  "level": "Intermediate",
+  "description": "Solve these intermediate level questions on Strings and continue learning data structures and algorithms",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/strings-intermediate/STRINGSP02/problems/STRTONUM",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Practice Strings",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Intermediate practice",
+          "submodule_id": 25833,
+          "contest_code": "STRINGSP02",
+          "start_date": "2026-05-05 16:13:21",
+          "total_problems": 16,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/strings-intermediate/STRINGSP02/problems/STRTONUM",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 16,
+          "problems_with_status": [
+            {
+              "contest_id": "54909",
+              "code": "STRTONUM",
+              "name": "Convert string to number",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "STRINGTOINT",
+              "name": "Chef and String to Integer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "EPANLNK",
+              "name": "Efficient PAN Linking",
+              "difficulty_rating": "1044",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "ADDONE",
+              "name": "Add One",
+              "difficulty_rating": "940",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "CHEFROMAN",
+              "name": "Chef and Roman Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "REVERSEWORD",
+              "name": "Reverse Words in a String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "ROTATESTRING",
+              "name": "Rotate String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "LONGESPREFIX",
+              "name": "Longest Common Prefix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "ANAGRAMP",
+              "name": "Check if a string is anagram of another",
+              "difficulty_rating": "980",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "LAPIN",
+              "name": "Lapindromes",
+              "difficulty_rating": "1159",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "FREQUENCYSOR",
+              "name": "Chef and Character Frequency Sort",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "NESTEDPARAN",
+              "name": "Chef and Nested Parentheses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "VALIDPAREN",
+              "name": "Minimum Insertions to Make Parentheses Valid",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "REMOVEPAREN",
+              "name": "Remove Outermost Parentheses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "TWOSTR",
+              "name": "Chef and the Wildcard Matching",
+              "difficulty_rating": "1254",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54909",
+              "code": "PASSWD",
+              "name": "Password",
+              "difficulty_rating": "1470",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 16,
+  "total_non_pro_problems": 16,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Data structures",
+  "reviews": [],
+  "learners_count": 404,
+  "path_review": {
+    "rating": 4.9,
+    "users": 7
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

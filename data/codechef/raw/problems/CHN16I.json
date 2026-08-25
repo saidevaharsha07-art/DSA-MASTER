@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16I",
+  "contest_category": "6",
+  "problem_name": "Alice and Bob play Contact",
+  "intended_contest_code": null,
+  "body": "<p>Chef Alice and Chef Bob are going to play their version of the social word game called Contact. First things first, let's say that the vocabulary of Alice and Bob are defined by English words <b>A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>N</sub></b> and <b>B<sub>1</sub>, B<sub>2</sub>, ..., B<sub>M</sub></b>, respectively. Also, we define <b>Prefix(S, i)</b> as prefix of string <b>S</b> consisting of first <b>i</b> characters. We define <b>|S|</b> as length of string <b>S</b>.\r\n</p>\r\n\r\n<p>Before the game starts Alice tells Bob a word <b>A<sub>i</sub></b> from her vocabulary. The game proceeds as follows:</p>\r\n<p>\r\n<ul>\r\n  <li>In the first move, Bob tells a word <b>P</b> from his vocabulary such that <b>Prefix(P, 1) == Prefix(A<sub>i</sub>, 1)</b>.</li>\r\n  <li>In second move, Bob tells a word <b>P</b> (which shouldn't have been used before by him) from his vocabulary such that <b>Prefix(P, 2) == Prefix(A<sub>i</sub>, 2)</b>.</li>\r\n  <li>In the <b>j<sup>th<sup></b> move, Bob tells a word <b>P</b> (which wasn't used earlier by him) from his vocabulary such that <b>Prefix(P, j) == Prefix(A<sub>i</sub>, j)</b>.</li>\r\n  <li>The game ends when Bob has made <b>|A<sub>i</sub>|</b> moves or Bob fails to make  a move.\r\n</ul>\r\n</p>\r\n<p>\r\nBob is secretly aware of Alice's whole vocabulary and also, he wants to spend as much time possible with her.\r\nNow, they'll play this game for all the <b>N</b> words in Alice's vocabulary. Note that all games are independent. You have to tell Bob what is the sum of maximum number of moves he can make for each of the <b>N</b> games.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains integers <b>N</b> and <b>M</b> denoting the size of vocabularies of Alice and Bob, respectively.</p>\r\n<p>Next <b>N + M</b> lines contain strings <b>A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>N</sub></b> and <b>B<sub>1</sub>, B<sub>2</sub>, ..., B<sub>M</sub></b>, each in a separate line.</p>\r\n\r\n<h3>Output</h3>\r\n<p>Output the sum of maximum number of moves for each of the <b>N</b> games (i.e. if Alice and Bob play the game for each word in Alice's vocabulary).</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n  <li><b>1</b> \u2264 <b>N, M</b> \u2264 <b>10<sup>5</sup></b></li>\r\n  <li><b>1</b> \u2264 <b>|A<sub>i</sub>|, |B<sub>i</sub>|</b> \u2264 <b>10<sup>5<sup></b></li>\r\n  <li><b>1</b> \u2264 <b>Sum of lengths of A<sub>i</sub> and B<sub>i</sub> for all i</b> \u2264 <b>10<sup>6</sup></b></li>\r\n  <li><b>All strings consist of English lowercase alphabets.</b></li>\r\n  <li><b>All strings in array A are distinct.</b></li>\r\n  <li><b>All strings in array B are distinct.</b></li>\r\n</ul>\r\n<p> </p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3 2\r\nac\r\nabd\r\nb\r\nae\r\nbd\r\n\r\n<b>Output:</b>\r\n3\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Game 1:</b></p>\r\n<p>Alice choses word \"ac\". Bob can make a maximum of 1 move. In first move, Bob tells \"ae\". Now Bob can't make any more moves.\r\n</p>\r\n\r\n<p><b>Game 2:</b></p>\r\n<p>Alice choses word \"abd\". Again, Bob can make a maximum of one move by telling the word \"ae\".\r\n</p>\r\n\r\n<p><b>Game 3:</b></p>\r\n<p>Alice choses word \"b\". Again, Bob can make a single move in which he tells the word \"bd\". Game ends here because Bob cannot make more than <b>|A<sub>i</sub>|</b> moves.</p>\r\n\r\n<p>So, you can see that total number of moves Bob can make is 1 + 1 + 1 = 3.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N, M \\leq 10^5$\n- $1 \\leq |A_i|, |B_i| \\leq 10^5$\n- $1 \\leq \\text{Sum of lengths of } A_i \\text{ and } B_i \\text{ for all } i \\leq 10^6$\n- All strings consist of English lowercase alphabets.\n- All strings in array $A$ are distinct.\n- All strings in array $B$ are distinct.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef Alice and Chef Bob are going to play their version of the social word game called Contact. First things first, let's say that the vocabulary of Alice and Bob are defined by English words $A_1, A_2, \\ldots, A_N$ and $B_1, B_2, \\ldots, B_M$, respectively. Also, we define $\\text{Prefix}(S, i)$ as the prefix of string $S$ consisting of the first $i$ characters. We define $|S|$ as the length of string $S$.\n\nBefore the game starts, Alice tells Bob a word $A_i$ from her vocabulary. The game proceeds as follows:\n\n- In the first move, Bob tells a word $P$ from his vocabulary such that $\\text{Prefix}(P, 1) == \\text{Prefix}(A_i, 1)$.\n- In the second move, Bob tells a word $P$ (which shouldn't have been used before by him) from his vocabulary such that $\\text{Prefix}(P, 2) == \\text{Prefix}(A_i, 2)$.\n- In the $j^{th}$ move, Bob tells a word $P$ (which wasn't used earlier by him) from his vocabulary such that $\\text{Prefix}(P, j) == \\text{Prefix}(A_i, j)$.\n- The game ends when Bob has made $|A_i|$ moves or Bob fails to make a move.\n\nBob is secretly aware of Alice's whole vocabulary and also, he wants to spend as much time as possible with her. Now, they'll play this game for all the $N$ words in Alice's vocabulary. Note that all games are independent. You have to tell Bob what is the sum of the maximum number of moves he can make for each of the $N$ games.\n",
+    "inputFormat": "The first line of the input contains integers $N$ and $M$ denoting the size of vocabularies of Alice and Bob, respectively.\n\nNext $N + M$ lines contain strings $A_1, A_2, \\ldots, A_N$ and $B_1, B_2, \\ldots, B_M$, each in a separate line.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output the sum of the maximum number of moves for each of the $N$ games (i.e., if Alice and Bob play the game for each word in Alice's vocabulary).\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3 2\nac\nabd\nb\nae\nbd\n",
+        "output": "3\n",
+        "explanation": "**Game 1:**\n\nAlice chooses the word \"ac\". Bob can make a maximum of 1 move. In the first move, Bob tells \"ae\". Now Bob can't make any more moves.\n\n**Game 2:**\n\nAlice chooses the word \"abd\". Again, Bob can make a maximum of one move by telling the word \"ae\".\n\n**Game 3:**\n\nAlice chooses the word \"b\". Again, Bob can make a single move in which he tells the word \"bd\". The game ends here because Bob cannot make more than $|A_i|$ moves.\n\nSo, you can see that the total number of moves Bob can make is $1 + 1 + 1 = 3$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610682
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16I",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

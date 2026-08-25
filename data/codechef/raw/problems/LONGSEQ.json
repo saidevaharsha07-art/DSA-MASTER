@@ -1,0 +1,128 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LONGSEQ",
+  "contest_category": "6",
+  "problem_name": "Chef and digits of a number",
+  "intended_contest_code": "SEPT16",
+  "body": "<p>Chef has a number <b>D</b> containing only digits 0's and 1's. He wants to make the number to have all the digits same. For that, he will change <b>exactly</b> one digit, i.e. from 0 to 1 or from 1 to 0. If it is possible to make all digits equal (either all 0's or all 1's) by flipping exactly 1 digit then output \"Yes\", else print \"No\" (quotes for clarity)</p>\r\n\r\n<h3>Input</h3>\r\n<p> The first line will contain an integer <b>T</b> representing the number of test cases.</p>\r\n<p>Each test case contain a number made of only digits 1's and 0's on newline</p>\r\n\r\n<h3>Output</h3>\r\n<p> Print T lines with a \"Yes\" or a \"No\", depending on whether its possible to make it all 0s or 1s or not.\u00a0</p>\r\n\r\n<h3>Constraints</h3>\r\n<b>Subtask #1: (40 points)</b>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>50</b></li>\r\n<li><b>1</b> \u2264 <b>Length of the number D</b> \u2264 <b>50</b></li>\r\n</ul> </br>\r\n\r\n<b>Subtask #2: (60 points)</b>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\r\n<li><b>1</b> \u2264 <b>Length of the number D</b> \u2264 <b>10<sup>5</sup></b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n101\r\n11\r\n<b>Output:</b>\r\nYes\r\nNo\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> In 101, the 0 can be flipped to make it all 1..</p>\r\n<p><b>Example case 2.</b> No matter whichever digit you flip, you will not get the desired string.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef has a number <b>D</b> containing only digits 0's and 1's. It can have leading 0's. He wants to make the number to have all the digits same. For that, he will change <b>exactly</b> one digit, i.e. from 0 to 1 or from 1 to 0. If it is possible to make all digits equal (either all 0's or all 1's) by flipping exactly 1 digit then output \"Yes\", else print \"No\" (quotes for clarity)</p>\n\n<h3>Input</h3>\n<p> The first line will contain an integer <b>T</b> representing the number of test cases.</p>\n<p>Each test case contain a number made of only digits 1's and 0's on newline</p>\n\n<h3>Output</h3>\n<p> Print T lines with a \"Yes\" or a \"No\", depending on whether its possible to make it all 0s or 1s or not.\u00a0</p>\n\n<h3>Constraints</h3>\n<b>Subtask #1: (40 points)</b>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>50</b></li>\n<li><b>1</b> \u2264 <b>Length of the number D</b> \u2264 <b>50</b></li>\n</ul> </br>\n\n<b>Subtask #2: (60 points)</b>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\n<li><b>1</b> \u2264 <b>Length of the number D</b> \u2264 <b>10<sup>5</sup></b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n101\r\n11",
+        "output": "Yes\r\nNo",
+        "explanation": "<p><b>Example case 1.</b> In 101, the 0 can be flipped to make it all 1..</p>\r\n<p><b>Example case 2.</b> No matter whichever digit you flip, you will not get the desired string.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12922,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "chandubaba",
+  "problem_display_authors": [
+    "chandubaba"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/chandubaba'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #1E7D22;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>2&#9733;</span><span class='m-username--link'>chandubaba</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "dpraveen"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/dpraveen'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>dpraveen</span></a></div>",
+  "problem_editorialist": "djdolls",
+  "date_added": "24-01-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1209",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610988
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LONGSEQ",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 63,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

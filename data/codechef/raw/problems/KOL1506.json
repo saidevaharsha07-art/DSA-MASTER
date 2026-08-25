@@ -1,0 +1,131 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1506",
+  "contest_category": "6",
+  "problem_name": "Samosa Bhai and his Courier Company",
+  "intended_contest_code": null,
+  "body": "<p>\r\nSamosa Bhai got tired of the difficult tasks given by CodeChef along with meagre salary being paid to him. So he moves to Aloo uncle's village and opens a courier company there. In the village, everyone knows Aloo uncle and Kachori Aunty, so everyone sends their gifts using Samosa Bhai's courier company only.</p><p>\r\nThere are <b>N</b> houses in a row in the village. On New Year's Eve, each house sends a gift to all the other houses.\r\nThe distance between two houses situated at positions <b>x</b> and <b>y</b> in the row is <b>|x - y|</b>. Samosa Bhai's courier company charges <b>d<sup>k</sup></b> rupees for each delivery, where <b>d</b> is the distance between the 2 houses. </p>\r\n<p>\r\nEveryone chose Samosa Bhai's company because of Aloo uncle and Kachori aunty. So he decides to give them the amount of money earned by him modulo <b>1000000007 (10<sup>9</sup> + 7)</b>. You need to compute this amount.\r\n</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\r\n<li>The first line of each test case contains 2 integers &mdash; <b>N</b> and <b>k</b> &mdash; denoting the number of houses and the exponent <b>k</b>, resepctively. The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, &hellip; , <b>A<sub>N</sub></b> denoting the positions of the houses. </li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n<li>For each test case, output a single line with the amount given to Aloo uncle and Kachori aunty by Samosa Bhai.</li>\r\n</ul>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>4</sup></b></li>\r\n<li><b>2</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>0</b> \u2264 <b>k</b> \u2264 <b>100</b></li>\r\n<li><b>0</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>1000000006</b></li>\r\n<li>The sum of <b>N</b> over all test cases will be at most <b>100000</b></li>\r\n<li>2 houses <b>can</b> be at the same position</li>\r\n\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n5\r\n2 2\r\n7 2\r\n2 3\r\n7 2\r\n3 2\r\n1 3 2\r\n10 2\r\n1 2 3 4 5 6 7 8 9 10\r\n10 10\r\n1 2 3 4 5 6 7 8 9 10\r\n\r\n<b>Output:</b>\r\n50\r\n250\r\n12\r\n1650\r\n558199159\r\n\r\n</pre>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> House 1 sends a gift to House 2 with cost (|2 - 7|)<sup>2</sup> and house 2 sends a gift to house 1 with cost (|7-2|)<sup>2</sup>, for a total cost of 50</p>\r\n<p><b>Example case 3.</b> The cost for gift from house with index 1 to house with index 2 is 2<sup>2</sup> = 4, from houses 1 to 3 is 1, from houses 2 to 3 is 1. Taking into account the gifts sent the other way (from 2 to 1, 3 to 1 and 3 to 2), the total cost is 4 + 1 + 1 + 4 + 1 + 1 = 12</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **10^4**\n- **2** \u2264 **N** \u2264 **10^5**\n- **0** \u2264 **k** \u2264 **100**\n- **0** \u2264 **A_i** \u2264 **1000000006**\n- The sum of **N** over all test cases will be at most **100000**\n- 2 houses **can** be at the same position\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Samosa Bhai got tired of the difficult tasks given by CodeChef along with meagre salary being paid to him. So he moves to Aloo uncle's village and opens a courier company there. In the village, everyone knows Aloo uncle and Kachori Aunty, so everyone sends their gifts using Samosa Bhai's courier company only.\n\nThere are **N** houses in a row in the village. On New Year's Eve, each house sends a gift to all the other houses. The distance between two houses situated at positions **x** and **y** in the row is **|x - y|**. Samosa Bhai's courier company charges **$d^k$** rupees for each delivery, where **d** is the distance between the 2 houses.\n\nEveryone chose Samosa Bhai's company because of Aloo uncle and Kachori aunty. So he decides to give them the amount of money earned by him modulo **1000000007 (10^9 + 7)**. You need to compute this amount.\n",
+    "inputFormat": "- The first line of input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n- The first line of each test case contains 2 integers \u2014 **N** and **k** \u2014 denoting the number of houses and the exponent **k**, respectively. The second line contains **N** space-separated integers **A_1**, **A_2**, \u2026 , **A_N** denoting the positions of the houses.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output a single line with the amount given to Aloo uncle and Kachori aunty by Samosa Bhai.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n2 2\n7 2\n2 3\n7 2\n3 2\n1 3 2\n10 2\n1 2 3 4 5 6 7 8 9 10\n10 10\n1 2 3 4 5 6 7 8 9 10\n",
+        "output": "50\n250\n12\n1650\n558199159\n",
+        "explanation": "**Example case 1.** House 1 sends a gift to House 2 with cost $(|2 - 7|)^2$ and house 2 sends a gift to house 1 with cost $(|7-2|)^2$, for a total cost of 50.\n\n**Example case 3.** The cost for gift from house with index 1 to house with index 2 is $2^2 = 4$, from houses 1 to 3 is 1, from houses 2 to 3 is 1. Taking into account the gifts sent the other way (from 2 to 1, 3 to 1 and 3 to 2), the total cost is $4 + 1 + 1 + 4 + 1 + 1 = 12$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1506\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1506\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/balajiganapath\" rel=\"nofollow noopener\">Balajiganapathi</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Binomial theorem, dynamic programming</p>\n<h3>PROBLEM:</h3>\n<p>There are <span class=\"math\">N</span> houses in a row. The position of the <span class=\"math\">i</span> th house is <span class=\"math\">A_i</span>. Each house sends a gift to every other house, and the cost of sending a gift from a house at position <span class=\"math\">x</span> to a house at position <span class=\"math\">y</span> is <span class=\"math\">|x-y|^k</span>. What is the total amount of money paid by all houses, modulo <span class=\"math\">10^9 + 7</span>?</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>For <span class=\"math\">0 \\le i \\le N</span> and <span class=\"math\">0 \\le a \\le k</span>, let <span class=\"math\">C_{i,a} := \\sum_{j=1}^{i-1} (-A_j)^{k-a}</span>. These values can be computed in <span class=\"math\">O(Nk)</span> using the recurrence:</p>\n<div class=\"math\">\nC_{i+1,a} = C_{i,a} + (-A_i)^{k-a}\n</div>\n<p>The answer is now:</p>\n<div class=\"math\">\n2\\sum_{i=1}^N \\sum_{a=0}^k {k \\choose a} C_{i,a} A_i^a\n</div>\n<p>By precomputing binomial coefficients and powers of <span class=\"math\">A_i</span>, this answer can be computed in <span class=\"math\">O(Nk)</span> time.</p>\n<h3>EXPLANATION:</h3>\n<p>Based on the problem itself, the answer is the following sum:</p>\n<div class=\"math\">\n\\sum_{\\substack{1 \\le i, j \\le N\\\\\\ j \\not= i}} |A_i - A_j|^k\n</div>\n<p>We can reduce this sum in half by noticing that the cost of sending a gift from house <span class=\"math\">i</span> to house <span class=\"math\">j</span> is the same as sending a gift from house <span class=\"math\">j</span> to house <span class=\"math\">i</span>.</p>\n<div class=\"math\">\n2\\sum_{1 \\le j &lt; i \\le N} |A_i - A_j|^k\n</div>\n<p>To remove the nasty absolute value in the formula, we can just sort the $A_i$s, so that if <span class=\"math\">j &lt; i</span>, then <span class=\"math\">A_j \\le A_i</span>. So assuming the $A_i$s are sorted, the sum is now:</p>\n<div class=\"math\">\n2\\sum_{1 \\le j &lt; i \\le N} (A_i - A_j)^k\n</div>\n<p>or</p>\n<div class=\"math\">\n2\\sum_{i=1}^N \\sum_{j=1}^{i-1} (A_i - A_j)^k\n</div>\n<p>For a fixed <span class=\"math\">i</span>, <span class=\"math\">1 \\le i \\le N</span>, we can interpret the inner sum as the total cost of sending a gift from house <span class=\"math\">i</span> to all the other houses <span class=\"math\">j &lt; i</span>. If we want to compute the answer quickly, we must be able to compute the inner sum quickly for each <span class=\"math\">i</span>.</p>\n<p>We can manipulate the inner sum with the <a href=\"https://en.wikipedia.org/wiki/Binomial_theorem\" rel=\"nofollow noopener\">binomial theorem</a>:</p>\n<div class=\"math\">\n\\begin{aligned}\n\\sum_{j=1}^{i-1} (A_i - A_j)^k\n&amp;= \\sum_{j=1}^{i-1} \\sum_{a=0}^k {k \\choose a} A_i^a (-A_j)^{k-a} \\\\\\\n&amp;= \\sum_{a=0}^k {k \\choose a} \\left(\\sum_{j=1}^{i-1} (-A_j)^{k-a}\\right) A_i^a\\\\\\\n\\end{aligned}\n</div>\n<p>Let\u2019s define <span class=\"math\">C_{i,a} = \\sum_{j=1}^{i-1} (-A_j)^{k-a}</span> so that the sum above is simply equal to</p>\n<div class=\"math\">\n\\sum_{a=0}^k {k \\choose a} C_{i,a} A_i^a\n</div>\n<p>Computing this sum for all <span class=\"math\">i</span> na\u00efvely will take <span class=\"math\">O(N^2k)</span> time, because computing <span class=\"math\">C_{i,a}</span> takes linear time for each <span class=\"math\">i</span>. We must be able to compute the $C_{i,a}$s quicker than this.</p>\n<p>We can take advantage of the fact that <span class=\"math\">C_{i,a}</span> and <span class=\"math\">C_{i+1,a}</span> are related; The value <span class=\"math\">C_{i+1,a} - C_{i,a}</span> is just <span class=\"math\">(-A_i)^{k-a}</span>. Thus, we have the following simple recurrence:</p>\n<div class=\"math\">\nC_{i+1,a} = C_{i,a} + (-A_i)^{k-a}\n</div>\n<p>Thus, if we know <span class=\"math\">C_{i,a}</span> for all <span class=\"math\">a</span>, then we can use this recurrence to compute <span class=\"math\">C_{i+1,a}</span> for all <span class=\"math\">a</span> quickly, and if we can compute the <span class=\"math\">C_{i,a}</span> values quickly, then we can find the answer to the problem quickly!</p>\n<p>The pseudocode is as follows:</p>\n<pre><code>mod = 10^9 + 7\nC = [0,0,0,...0] # length k+1\nP = [0,0,0,...0] # length k+1\n\nfor i = 1...N:\n    // compute powers of A[i]\n    power = 1\n    for a = 0...k:\n        P[a] = power\n        power *= A[i]\n\n    // adjust answer\n    for a = 0...k:\n        answer += binom(k,a) * C[a] * P[a]\n\n    // compute powers of -A[i]\n    power = 1\n    for a = 0...k:\n        P[a] = power\n        power *= -A[i]\n\n    // adjust C's\n    for a = 0...k:\n        C[a] += P[k-a]\n</code></pre>\n<p>The running time is clearly <span class=\"math\">O(Nk)</span>, assuming we have already precomputed the binomial coefficients. Don\u2019t forget to reduce intermediate values modulo <span class=\"math\">10^9 + 7</span>!</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(N \\log N + Nk)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1506.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1506.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12031,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "9-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Pre processing",
+    "Modular Arithmetic",
+    "Binomial Theorem",
+    "Top-down",
+    "Bottom-up"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Mathematics",
+    "Algebra",
+    "Algorithms",
+    "Dynamic Programming",
+    "DP Approach"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "Bottom Up",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1506",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610968
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1506",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

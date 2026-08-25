@@ -1,0 +1,125 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BUY1GET1",
+  "contest_category": "6",
+  "problem_name": "Buy1-Get1",
+  "intended_contest_code": "FEB13",
+  "body": "<p>One day Alice visited Byteland to purchase jewels for her upcoming wedding anniversary.\r\n<p>In Byteland, every Jewelry shop has their own discount methods to attract the customers. One discount method called <b>Buy1-Get1</b> caught Alice's attention. That is, Alice buys one jewel, then she can get one additional jewel with the same color without charge by <b>Buy1-Get1</b>. \r\n<p>Alice lists the needed jewels as a string <b>S</b>, each letter denotes one jewel, and the same letters denote the same colors of jewels, and the different letters denote the different colors of jewels. The cost of each jewel is <b>1</b>. Your task is to calculate the minimum cost for getting all the jewels Alice listed.\r\n\r\n<h3>Input</h3>\r\n<p>The first line of input contains a single line <b>T</b>, which represents the number of test cases. Then <b>T</b> lines will follow, and each contains a string <b>S</b>, which represents the jewels Alice needed.\r\n\r\n<h3>Output</h3>\r\n<p>Output the minimum cost for each test case.\r\n\r\n<h3>Constraints</h3>\r\n<p><b>1 \u2264 T \u2264 100</b><br> <b>1 \u2264 |S| \u2264 200</b>, where <b>|S|</b> represents the length of the string <b>S</b>. <br> The string <b>S</b> is case sensitive, and will contain only English characters in the range <b>[a-z], [A-Z]</b>.<br>\r\n\r\n<h3>Sample</h3>\r\n<pre>\r\n<b>Input:</b>\r\n4\r\nssss\r\nssas\r\nsa\r\ns\r\n\r\n<b>Output:</b>\r\n2\r\n3\r\n2\r\n1\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p>In the first sample case, Alice needs <b>4</b> jewel of color <b>s</b>. One of the optimal way is the following:<br> Buy the first <b>s</b> with cost <b>1</b>, and she can get the second <b>s</b> without charge. Then buy the third <b>s</b> with cost <b>1</b>, and she can get the last <b>s</b> without charge. In this case, she get <b>4</b> jewels with only cost <b>2</b>.\r\n<p>In the second sample case, Alice needs <b>3</b> jewels of color <b>s</b> and <b>1</b> jewel of color <b>a</b>. One of the optimal way is the following:<br> Buy the second <b>s</b> with cost <b>1</b>, and she can get the last <b>s</b> without charge. Then buy the <b>a</b> and the first <b>s</b> with cost <b>2</b>. In this case, she get <b>4</b> jewels with only cost <b>3</b>.\r\n<p>In the third and fourth sample cases, she cannot save her money by using <b>Buy1-Get1</b>.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>One day Alice visited Byteland to purchase jewels for her upcoming wedding anniversary.\n</p><p>In Byteland, every Jewelry shop has their own discount methods to attract the customers. One discount method called <b>Buy1-Get1</b> caught Alice's attention. That is, Alice buys one jewel, then she can get one additional jewel with the same color without charge by <b>Buy1-Get1</b>. \n</p><p>Alice lists the needed jewels as a string <b>S</b>, each letter denotes one jewel, and the same letters denote the same colors of jewels, and the different letters denote the different colors of jewels. The cost of each jewel is <b>1</b>. Your task is to calculate the minimum cost for getting all the jewels Alice listed.\n\n</p><h3>Input</h3>\n<p>The first line of input contains a single line <b>T</b>, which represents the number of test cases. Then <b>T</b> lines will follow, and each contains a string <b>S</b>, which represents the jewels Alice needed.\n\n</p><h3>Output</h3>\n<p>Output the minimum cost for each test case.\n\n</p><h3>Constraints</h3>\n<p><b>1 \u2264 T \u2264 100</b><br /><b>1 \u2264 |S| \u2264 200</b>, where <b>|S|</b> represents the length of the string <b>S</b>. <br /> The string <b>S</b> is case sensitive, and will contain only English characters in the range <b>[a-z], [A-Z]</b>.<br /></p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\nssss\nssas\nsa\ns",
+        "output": "2\n3\n2\n1",
+        "explanation": "<p>In the first sample case, Alice needs <b>4</b> jewel of color <b>s</b>. One of the optimal way is the following:<br /> Buy the first <b>s</b> with cost <b>1</b>, and she can get the second <b>s</b> without charge. Then buy the third <b>s</b> with cost <b>1</b>, and she can get the last <b>s</b> without charge. In this case, she get <b>4</b> jewels with only cost <b>2</b>.\n</p><p>In the second sample case, Alice needs <b>3</b> jewels of color <b>s</b> and <b>1</b> jewel of color <b>a</b>. One of the optimal way is the following:<br /> Buy the second <b>s</b> with cost <b>1</b>, and she can get the last <b>s</b> without charge. Then buy the <b>a</b> and the first <b>s</b> with cost <b>2</b>. In this case, she get <b>4</b> jewels with only cost <b>3</b>.\n</p><p>In the third and fourth sample cases, she cannot save her money by using <b>Buy1-Get1</b>.\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1567,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "khad_adm",
+  "problem_display_authors": [
+    "khad_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/khad_adm'>khad_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "laycurse"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/laycurse'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>laycurse</span></a></div>",
+  "problem_editorialist": "pragrame",
+  "date_added": "4-09-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc",
+    "cakewalk",
+    "feb13",
+    "khad_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1191",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610651
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BUY1GET1",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

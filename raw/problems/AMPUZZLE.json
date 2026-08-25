@@ -1,0 +1,120 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMPUZZLE",
+  "contest_category": "6",
+  "problem_name": "Sliding Puzzle",
+  "intended_contest_code": null,
+  "body": "<p>Famous company Strange Puzzles Inc. has designed a brand new series of puzzles aimed at students who are fond of competitive programming. In this problem we are going to consider one of them named \"Sliding Windows\".\r\n</p>\r\n\r\n<p>\r\nThe puzzle consists of an infinite two-dimensional plane and <b>n</b> rectangles located in it. Each of the rectangles has its sides parallel to the coordinate axes. The puzzle is considered to be solved if for any two rectangles it is true that at least one of them is <i>covered</i> by the other one. Formally, rectangle i <i>covers</i> rectangle j if and only if for any point of the plane (x,\u2009y) which lies inside rectangle j, it also lies inside rectangle i.\r\n</p>\r\n\r\n<p>\r\nThe only action that you are allowed to perform is to shift the rectangles up, down, left or right. In one unit of time you can take one of the rectangles and shift it exactly by 1 unit in one of these four directions.\r\n</p>\r\n\r\n<p>\r\nAs a true competitive programmer you wonder what the minimum number of time units required to solve the puzzle is (if it can be solved at all).\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n\t<li>The first line of the input contains a single integer <b>T</b>  \u2014 the number of test cases in the given input. Then follow <b>T</b> descriptions of individual tests. </li>\r\n\t<li>The first line of teach testcase contains a single integer, <b>n</b>  \u2014 the number of rectangles.</li>\r\n\t<li>The i<sup>th</sup> of the next <b>n</b> lines contains four integers <b>l<sub>i</sub></b>, <b>b<sub>i</sub></b>, <b>r<sub>i</sub></b> and <b>u<sub>i</sub></b> \u2014 this signifies that (<b>l<sub>i</sub></b>, <b>b<sub>i</sub></b>) is the lower left corner and (<b>r<sub>i</sub></b>, <b>u<sub>i</sub></b>) is the upper right corner of the i<sup>th</sup> rectangle.</li>\r\n</ul>\r\n\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n\t<li>If the puzzle can not be solved for the given set of rectangles print \u2009-1 in the only line of the output. Otherwise print a single integer equal to the minimum number of time units required to solve the puzzle.</li>\r\n</ul>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n\t<li>1\u2009\u2264\u2009<b>T</b>\u2009\u2264\u2009200000</li>\r\n\t<li>1\u2009\u2264\u2009<b>n</b>\u2009\u2264\u2009200000</li>\r\n\t<li>\u2009-\u200910<sup>9</sup>\u2009\u2264\u2009<b>l<sub>i</sub></b>\u2009&lt;\u2009<b>r<sub>i</sub></b>\u2009\u2264\u200910<sup>9</sup></li>\r\n       <li>\u2009-\u200910<sup>9</sup>\u2009\u2264\u2009<b>b<sub>i</sub></b>\u2009&lt;\u2009<b>u<sub>i</sub></b>\u2009\u2264\u200910<sup>9</sup></li>\r\n\t<li>It's guaranteed that the sum of <b>n</b> over all test cases in one test file won't exceed 1000000.</li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input:</b>\r\n2\r\n2\r\n0 -1 1 2\r\n-1 0 2 1\r\n3\r\n0 0 4 1\r\n-1 1 1 2\r\n2 1 5 2\r\n\r\n<b>Output:</b>\r\n-1\r\n4\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Testase 1:</b> No matter how we move the rectangles, one rectangle cannot  cover the other rectangle. Hence the answer is -1.</p>\r\n\r\n<p><b>Testcase 2:</b> One of the optimal solutions is to shift the first rectangle up by 1 unit, second rectangle right by 1 unit and third rectangle left by 2 units. This takes a total of 4 time units and hence that is the answer.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 200000$\n- $1 \\leq n \\leq 200000$\n- $-10^9 \\leq l_i < r_i \\leq 10^9$\n- $-10^9 \\leq b_i < u_i \\leq 10^9$\n- It's guaranteed that the sum of **n** over all test cases in one test file won't exceed 1000000.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Famous company Strange Puzzles Inc. has designed a brand new series of puzzles aimed at students who are fond of competitive programming. In this problem we are going to consider one of them named \"Sliding Windows\".\n\nThe puzzle consists of an infinite two-dimensional plane and **n** rectangles located in it. Each of the rectangles has its sides parallel to the coordinate axes. The puzzle is considered to be solved if for any two rectangles it is true that at least one of them is *covered* by the other one. Formally, rectangle *i* *covers* rectangle *j* if and only if for any point of the plane $(x, y)$ which lies inside rectangle *j*, it also lies inside rectangle *i*.\n\nThe only action that you are allowed to perform is to shift the rectangles up, down, left or right. In one unit of time you can take one of the rectangles and shift it exactly by 1 unit in one of these four directions.\n\nAs a true competitive programmer you wonder what the minimum number of time units required to solve the puzzle is (if it can be solved at all).\n",
+    "inputFormat": "- The first line of the input contains a single integer **T** \u2014 the number of test cases in the given input. Then follow **T** descriptions of individual tests.\n- The first line of each test case contains a single integer, **n** \u2014 the number of rectangles.\n- The *i*<sup>th</sup> of the next **n** lines contains four integers **l<sub>i</sub>**, **b<sub>i</sub>**, **r<sub>i</sub>**, and **u<sub>i</sub>** \u2014 this signifies that (**l<sub>i</sub>**, **b<sub>i</sub>**) is the lower left corner and (**r<sub>i</sub>**, **u<sub>i</sub>**) is the upper right corner of the *i*<sup>th</sup> rectangle.\n",
+    "inputFormatState": true,
+    "outputFormat": "- If the puzzle cannot be solved for the given set of rectangles, print `-1` in the only line of the output. Otherwise, print a single integer equal to the minimum number of time units required to solve the puzzle.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n0 -1 1 2\n-1 0 2 1\n3\n0 0 4 1\n-1 1 1 2\n2 1 5 2\n",
+        "output": "-1\n4\n",
+        "explanation": "**Testcase 1:** No matter how we move the rectangles, one rectangle cannot cover the other rectangle. Hence the answer is `-1`.\n\n**Testcase 2:** One of the optimal solutions is to shift the first rectangle up by 1 unit, second rectangle right by 1 unit, and third rectangle left by 2 units. This takes a total of 4 time units and hence that is the answer.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1 - 5",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "23-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "balajiganapath"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610600
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMPUZZLE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFSTEP",
+  "contest_category": "6",
+  "problem_name": "Chef and Steps",
+  "intended_contest_code": "LTIME86",
+  "body": "\r\nIn order to establish dominance amongst his friends, Chef has decided that he will only walk in large steps of length exactly $K$ feet. However, this has presented many problems in Chef\u2019s life because there are certain distances that he cannot traverse. Eg. If his step length is $5$ feet, he cannot travel a distance of $12$ feet. Chef has a strict travel plan that he follows on most days, but now he is worried that some of those distances may become impossible to travel. Given $N$ distances, tell Chef which ones he cannot travel.\r\n\r\n###Input:\r\n- The first line will contain a single integer $T$, the number of test cases.\r\n- The first line of each test case will contain two space separated integers - $N$, the number of distances, and $K$, Chef\u2019s step length.\r\n- The second line of each test case will contain $N$ space separated integers, the $i^{th}$ of which represents $D_i$, the distance of the $i^{th}$ path.\r\n\r\n\r\n###Output:\r\nFor each testcase, output a string consisting of $N$ characters. The $i^{th}$ character should be $1$ if the distance is traversable, and $0$ if not. \r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 1000$\r\n- $1 \\leq N \\leq 1000$\r\n- $1 \\leq K \\leq 10^9$\r\n- $1 \\leq D_i \\leq 10^9$\r\n\r\n###Subtasks\r\n- 100 points : No additional constraints.\r\n\r\n###Sample Input:\r\n````\r\n1\r\n5 3\r\n12 13 18 20 27216\r\n````\r\n\r\n###Sample Output:\r\n````\r\n10101\r\n````\r\n\r\n###Explanation:\r\nThe first distance can be traversed in $4$ steps.    \r\nThe second distance cannot be traversed.    \r\nThe third distance can be traversed in $6$ steps.    \r\nThe fourth distance cannot be traversed.    \r\nThe fifth distance can be traversed in $9072$ steps.    \r\n\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nIn order to establish dominance amongst his friends, Chef has decided that he will only walk in large steps of length exactly $K$ feet. However, this has presented many problems in Chef\u2019s life because there are certain distances that he cannot traverse. Eg. If his step length is $5$ feet, he cannot travel a distance of $12$ feet. Chef has a strict travel plan that he follows on most days, but now he is worried that some of those distances may become impossible to travel. Given $N$ distances, tell Chef which ones he cannot travel.\n\n### Input:\n- The first line will contain a single integer $T$, the number of test cases.\n- The first line of each test case will contain two space separated integers - $N$, the number of distances, and $K$, Chef\u2019s step length.\n- The second line of each test case will contain $N$ space separated integers, the $i^{th}$ of which represents $D_i$, the distance of the $i^{th}$ path.\n\n\n### Output:\nFor each testcase, output a string consisting of $N$ characters. The $i^{th}$ character should be $1$ if the distance is traversable, and $0$ if not. \n\n### Constraints \n- $1 \\leq T \\leq 1000$\n- $1 \\leq N \\leq 1000$\n- $1 \\leq K \\leq 10^9$\n- $1 \\leq D_i \\leq 10^9$\n\n### Subtasks\n- 100 points : No additional constraints.",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 3\n12 13 18 20 27216",
+        "output": "10101",
+        "explanation": "The first distance can be traversed in $4$ steps.    \nThe second distance cannot be traversed.    \nThe third distance can be traversed in $6$ steps.    \nThe fourth distance cannot be traversed.    \nThe fifth distance can be traversed in $9072$ steps.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 73149,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "aryanag_adm",
+  "problem_display_authors": [
+    "aryanag_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/aryanag_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>aryanag_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "rajarshi_basu",
+  "date_added": "20-07-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "1110",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610671
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFSTEP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 23,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

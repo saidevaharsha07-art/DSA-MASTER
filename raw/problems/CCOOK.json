@@ -1,0 +1,126 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CCOOK",
+  "contest_category": "6",
+  "problem_name": "Chef and Cook-Off",
+  "intended_contest_code": "COOK91",
+  "body": "<p>Chef has obtained the results of a past Cook-Off. He wants to estimate the skill level of each contestant. The contestants can be classified <a href=\"https://en.wikipedia.org/wiki/With_high_probability\">with high probability</a> (w.h.p.) based on the number of solved problems:\n\n<ul>\n<li>A contestant that solved exactly 0 problems is a beginner.</li>\n<li>A contestant that solved exactly 1 problem is a junior developer.</li>\n<li>A contestant that solved exactly 2 problems is a middle developer.</li>\n<li>A contestant that solved exactly 3 problems is a senior developer.</li>\n<li>A contestant that solved exactly 4 problems is a hacker.</li>\n<li>A contestant that solved all five problems is <a href = \"https://www.quora.com/What-are-all-the-Jeff-Dean-facts\">Jeff Dean</a>.</li>\n</ul>\n</p>\n\n<p>Please help Chef to identify the programming level of each participant.</p> \n\n<h3>Input</h3>\n<ul>\n<li>The first line of the input contains a single integer <b>N</b> denoting the number of competitors.</li>\n<li><b>N</b> lines follow. The <b>i</b>-th of these lines contains five space-separated integers <b>A<sub>i, 1</sub>, A<sub>i, 2</sub>, A<sub>i, 3</sub>, A<sub>i, 4</sub>, A<sub>i, 5</sub></b>. The <b>j</b>-th of these integers (1 \u2264 <b>j</b> \u2264 5) is 1 if the <b>i</b>-th contestant solved the <b>j</b>-th problem and 0 otherwise.</li>\n</ul>\n\n<h3>Output</h3>\n<p>For each participant, print a single line containing one string denoting Chef's classification of that contestant \u2014 one of the strings <tt>\"Beginner\"</tt>, <tt>\"Junior Developer\"</tt>, <tt>\"Middle Developer\"</tt>, <tt>\"Senior Developer\"</tt>, <tt>\"Hacker\"</tt>, <tt>\"Jeff Dean\"</tt> (without quotes).</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>N</b> \u2264 5000</li>\n<li>0 \u2264 <b>A<sub>i, j</sub></b> \u2264 1 for each valid <b>i</b>, <b>j</b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n\n7\n0 0 0 0 0\n0 1 0 1 0\n0 0 1 0 0\n1 1 1 1 1\n0 1 1 1 0\n0 1 1 1 1\n1 1 1 1 0\n\n<b>Output:</b>\n\nBeginner\nMiddle Developer\nJunior Developer\nJeff Dean\nSenior Developer\nHacker\nHacker\n</pre>\n\n<h3>Explanation</h3>\n<p>The first contestant has no solved problems, therefore he is a beginner. The second contestant solved 2 problems (the second and fourth problem), therefore he has the skills of a middle developer. The third contestant solved 1 problem, therefore he's at the expected level of a junior developer. The fourth contestant solved 5 problems \u2014 we can guess it was Jeff Dean. The fifth contestant solved 3 problems, so he is a senior developer. And the last two contestants should be hackers because they solved exactly 4 problems each.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef has obtained the results of a past Cook-Off. He wants to estimate the skill level of each contestant. The contestants can be classified <a href=\"https://en.wikipedia.org/wiki/With_high_probability\">with high probability</a> (w.h.p.) based on the number of solved problems:\n\n<ul>\n<li>A contestant that solved exactly 0 problems is a beginner.</li>\n<li>A contestant that solved exactly 1 problem is a junior developer.</li>\n<li>A contestant that solved exactly 2 problems is a middle developer.</li>\n<li>A contestant that solved exactly 3 problems is a senior developer.</li>\n<li>A contestant that solved exactly 4 problems is a hacker.</li>\n<li>A contestant that solved all five problems is <a href = \"https://www.quora.com/What-are-all-the-Jeff-Dean-facts\">Jeff Dean</a>.</li>\n</ul>\n</p>\n\n<p>Please help Chef to identify the programming level of each participant.</p> \n\n<h3>Input</h3>\n<ul>\n<li>The first line of the input contains a single integer <b>N</b> denoting the number of competitors.</li>\n<li><b>N</b> lines follow. The <b>i</b>-th of these lines contains five space-separated integers <b>A<sub>i, 1</sub>, A<sub>i, 2</sub>, A<sub>i, 3</sub>, A<sub>i, 4</sub>, A<sub>i, 5</sub></b>. The <b>j</b>-th of these integers (1 \u2264 <b>j</b> \u2264 5) is 1 if the <b>i</b>-th contestant solved the <b>j</b>-th problem and 0 otherwise.</li>\n</ul>\n\n<h3>Output</h3>\n<p>For each participant, print a single line containing one string denoting Chef's classification of that contestant \u2014 one of the strings <tt>\"Beginner\"</tt>, <tt>\"Junior Developer\"</tt>, <tt>\"Middle Developer\"</tt>, <tt>\"Senior Developer\"</tt>, <tt>\"Hacker\"</tt>, <tt>\"Jeff Dean\"</tt> (without quotes).</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>N</b> \u2264 5000</li>\n<li>0 \u2264 <b>A<sub>i, j</sub></b> \u2264 1 for each valid <b>i</b>, <b>j</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "7\n0 0 0 0 0\n0 1 0 1 0\n0 0 1 0 0\n1 1 1 1 1\n0 1 1 1 0\n0 1 1 1 1\n1 1 1 1 0",
+        "output": "Beginner\nMiddle Developer\nJunior Developer\nJeff Dean\nSenior Developer\nHacker\nHacker",
+        "explanation": "<p>The first contestant has no solved problems, therefore he is a beginner. The second contestant solved 2 problems (the second and fourth problem), therefore he has the skills of a middle developer. The third contestant solved 1 problem, therefore he's at the expected level of a junior developer. The fourth contestant solved 5 problems \u2014 we can guess it was Jeff Dean. The fifth contestant solved 3 problems, so he is a senior developer. And the last two contestants should be hackers because they solved exactly 4 problems each.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 18083,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "mgch",
+  "problem_display_authors": [
+    "mgch"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mgch'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>mgch</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "wwwwodddd"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/wwwwodddd'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>wwwwodddd</span></a></div>",
+  "problem_editorialist": "mamedov",
+  "date_added": "3-02-2018",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Case work",
+    "Conditional Statements"
+  ],
+  "computed_tags": [
+    "Special",
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "961",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610659
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CCOOK",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 24,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

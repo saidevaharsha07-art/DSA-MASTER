@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13E",
+  "contest_category": "6",
+  "problem_name": "Chocolate Division",
+  "intended_contest_code": null,
+  "body": "<p>Alice and Bob have got some chocolates as a gift. There are 2 types of chocolates. Some chocolates have the shape of a sphere and some chocolates have the shape of a stick. Each chocolate stick connects a pair of chocolate sphere. They want to divide these chocolates and they seek your help. They want all of the chocolate spheres for themselves. Alice loves chocolate sticks. For all of the chocolate spheres she gets, each pair of them should be connected by a stick. Bob dislikes chocolate sticks. For all of the chocolate spheres he gets, no pair of them should be connected by a stick. To be clear, if any two chocolate spheres are connected by a chocolate stick initially he will take at most one of them but not both. They do not care about the sticks that connect a sphere of Alice and a sphere of Bob. You can choose to eat them. Given the description of the chocolate spheres and chocolate sticks, determine if you can divide those chocolate spheres among Alice and Bob, satisfying both of their preferences. </p>\n<h3>Input</h3>\n<p>\nFirst line of the input contains <b>T</b>, the number of test cases. Each test case starts with 2 integers <b>N</b> and <b>M</b>. <b>N</b> is the number of chocolate spheres (The chocolate spheres are numbered from 1 to <b>N</b>) and <b>M</b> is the number of chocolate sticks connecting them. Each of the next <b>M</b> lines contains 2 integers, <b>a</b> and <b>b</b>, denoting that the chocolate sphere with number <b>a</b> is connected to a chocolate sphere with number <b>b</b>.\n</p>\n<h3>Output</h3>\n<p>For each test case output \"YES\" if you can divide the chocolate spheres and \"NO\" otherwise.</p>\n<h3>Constraints</h3>\n<p>1 &lt;= <b>T</b> &lt;= 100</p>\n<p>1 &lt;= <b>N</b> &lt;= 500</p>\n<p>0 &lt;= <b>M</b> &lt;= n * (n - 1) / 2</p>\n<p>For a pair of chocolate spheres, there will be at most one stick that is connecting them.</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n4\n4 4\n1 2\n1 4\n2 3\n3 4\n5 4\n1 2\n1 3\n1 4\n1 5\n10 0\n3 3\n1 2\n1 3\n2 3\n\n<b>Output:</b>\nNO\nYES\nYES\nYES\n</pre>\n<p><b>\n<p>Problem Setter : Abdullah Al Mahmud</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 <= `T` <= 100\n- 1 <= `N` <= 500\n- 0 <= `M` <= `N` * (`N` - 1) / 2\n- For any pair of chocolate spheres, there will be at most one stick connecting them.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Alice and Bob have received some chocolates as a gift. There are two types of chocolates: some are shaped like spheres, and others are shaped like sticks. Each chocolate stick connects a pair of chocolate spheres. They want to divide these chocolates among themselves with the following preferences:\n\n- Alice wants all the chocolate spheres she gets to be connected by sticks. That is, for any two spheres she gets, there should be a stick connecting them.\n- Bob wants none of the chocolate spheres he gets to be connected by sticks. That is, for any two spheres he gets, there should be no stick connecting them.\n\nGiven the description of the chocolate spheres and sticks, determine if it's possible to divide the spheres between Alice and Bob while satisfying both of their preferences.\n",
+    "inputFormat": "The first line of the input contains `T`, the number of test cases. Each test case starts with two integers `N` and `M`. `N` is the number of chocolate spheres (numbered from 1 to `N`), and `M` is the number of chocolate sticks connecting them. Each of the next `M` lines contains two integers `a` and `b`, denoting that the chocolate sphere with number `a` is connected to the chocolate sphere with number `b`.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output \"YES\" if it's possible to divide the chocolate spheres between Alice and Bob according to their preferences, and \"NO\" otherwise.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n4 4\n1 2\n1 4\n2 3\n3 4\n5 4\n1 2\n1 3\n1 4\n1 5\n10 0\n3 3\n1 2\n1 3\n2 3\n",
+        "output": "NO\nYES\nYES\nYES\n",
+        "explanation": "- **First Test Case:** It's impossible to divide the spheres such that Alice gets all connected spheres and Bob gets no connected spheres.\n- **Second Test Case:** It's possible to assign all spheres to Bob since there are no sticks connecting them.\n- **Third Test Case:** Since there are no sticks, it's trivially possible to assign all spheres to Bob.\n- **Fourth Test Case:** It's possible to assign all spheres to Bob since no two spheres are connected by a stick.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.932",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "3-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "jingbo_adm",
+    "kan13acm",
+    "medium-hard",
+    "split-graph"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Medium Hard",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610959
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13E",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

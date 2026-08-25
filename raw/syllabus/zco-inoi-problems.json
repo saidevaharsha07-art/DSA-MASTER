@@ -1,0 +1,1244 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "zco-inoi-problems",
+  "name": "Practice for ZCO and INOI",
+  "title": "Practice for ZCO and INOI",
+  "level": "Intermediate",
+  "description": "Prepare for ZCO and INOI via specially curated practice problems and past exam problems. Read our roadmap - https://www.codechef.com/blogs/prepare-for-zco-inoi-ioi-exam",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:50",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/zco-inoi-problems/IARCSJUD/problems/LEADGAME",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Practice problems",
+      "description": "Warm up with some IARCS OPC Judge Problems",
+      "submodules": [
+        {
+          "name": "IARCS OPC Problems",
+          "submodule_id": 4204,
+          "contest_code": "IARCSJUD",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 44,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/zco-inoi-problems/IARCSJUD/problems/LEADGAME",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 44,
+          "problems_with_status": [
+            {
+              "contest_id": "8360",
+              "code": "LEADGAME",
+              "name": "Lead Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "BOOKLIST",
+              "name": "List of Books",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "LONGPALI",
+              "name": "Longest Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "ENDCORR",
+              "name": "End of Corruption",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "VOTERSDI",
+              "name": "Discrepancies in the Voters List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "IAREVERS",
+              "name": "Reverse",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "TILES01",
+              "name": "Zero One Tiles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "NEXTPERM",
+              "name": "Next Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "SORTROWS",
+              "name": "Sorting Rows of Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "IARANK",
+              "name": "Whats the Rank",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "DIVSEQ",
+              "name": "Dividing Sequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "AVERAGE",
+              "name": "Average",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "WORDLIST",
+              "name": "Word List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "CYCLEPER",
+              "name": "Permutation Cycles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "GREATESC",
+              "name": "The Great Escape",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "TILINGS",
+              "name": "Number of Tilings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "FINDNUMS",
+              "name": "Find the Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "REPFREE",
+              "name": "Repetition Free Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "PYRAMID",
+              "name": "Indraneels Pyramid",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "STADIUM",
+              "name": "The Siruseri Sports Stadium",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "EQGIFTS",
+              "name": "Equal Gifts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "FINDPERM",
+              "name": "Find the Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "RAILCTER",
+              "name": "Railway Caterers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "BUFFALOE",
+              "name": "Speculating on Buffaloes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "BOOKSORT",
+              "name": "Sorting Books",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "TIMBER",
+              "name": "The Timber Auction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "DRAWFIX",
+              "name": "Draw Fixing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "CRITINTS",
+              "name": "Critical Intersections",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "CATERCON",
+              "name": "Catering Contracts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "LEAFEAT",
+              "name": "Leaf Eaters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "TASKFRCE",
+              "name": "The Bickering Task Force",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "WORDHOP",
+              "name": "Word Hopping",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "HISPDNET",
+              "name": "High Speed Network",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "MEDUVADA",
+              "name": "Medu Vada Maze",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "TREAHUNT",
+              "name": "Treasure Hunt",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "RANKFRAD",
+              "name": "Rank Fraud",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "METRO",
+              "name": "Siruseri Metro",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "DEVIOUS",
+              "name": "Devious Minister",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "APUZZLE",
+              "name": "A Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "NUMTRIPL",
+              "name": "Number Triples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "EXPT",
+              "name": "Indraneels Experiment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "NUMROUTE",
+              "name": "Number of Routings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "MINTURN",
+              "name": "Min Turn Route",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "8360",
+              "code": "SPLIT3",
+              "name": "Three-Way Split",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 44
+    },
+    {
+      "assessment": null,
+      "name": "ZCO problems",
+      "description": "Review & practice problems which have previously appeared in ZCO.",
+      "submodules": [
+        {
+          "name": "Past ZCO problems",
+          "submodule_id": 4205,
+          "contest_code": "ZCOPRAC",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 32,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/zco-inoi-problems/ZCOPRAC/problems/ZCO14003",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 32,
+          "problems_with_status": [
+            {
+              "contest_id": "2673",
+              "code": "ZCO14003",
+              "name": "Smart Phone",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO14001",
+              "name": "Video Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO15002",
+              "name": "Variation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO13001",
+              "name": "Tournament",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO12001",
+              "name": "Matched Brackets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO14002",
+              "name": "SUPW",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO14004",
+              "name": "IPL",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO13003",
+              "name": "Chewing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO12004",
+              "name": "Round Table",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO12002",
+              "name": "Wormholes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO15001",
+              "name": "Break Up",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO16001",
+              "name": "Bookshelves",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO15003",
+              "name": "Covering",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO16002",
+              "name": "Bamboo Art",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO13002",
+              "name": "Little Red Riding Hood",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO12003",
+              "name": "Matched Brackets 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO15004",
+              "name": "Rectangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "SINGTOUR",
+              "name": "ZCO 2019 - 1 Singing Tournament",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO17001",
+              "name": "Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO22001",
+              "name": "Vacation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO13004",
+              "name": "Save Spaceman Spiff",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "MOVINTRL",
+              "name": "Moving Intervals - ZCO 2018",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO20001",
+              "name": "Weird Ordering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "UPDOWSEQ",
+              "name": "ZCO 2019 - 2 UpDown Sequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "STRIMPOR",
+              "name": "Substring Importance - ZCO 2018",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO17002",
+              "name": "Rays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO20002",
+              "name": "Interleavings and Blocks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO22002",
+              "name": "Messages",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO23001",
+              "name": "Parchment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO23002",
+              "name": "Weightage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO26P1",
+              "name": "Queue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "2673",
+              "code": "ZCO26P2",
+              "name": "Rows",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "INOI problems",
+      "description": "Review & practice problems which have previously appeared in INOI.",
+      "submodules": [
+        {
+          "name": "Past INOI problems",
+          "submodule_id": 4206,
+          "contest_code": "INOIPRAC",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 30,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/zco-inoi-problems/INOIPRAC/problems/INOI1402",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 30,
+          "problems_with_status": [
+            {
+              "contest_id": "3983",
+              "code": "INOI1402",
+              "name": "Free ticket",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1201",
+              "name": "Triathlon",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1301",
+              "name": "Calvins Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1302",
+              "name": "Sequence Land",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1601",
+              "name": "Wealth Disparity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1202",
+              "name": "Table Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1401",
+              "name": "Highway Bypass",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1501",
+              "name": "Special Sums",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1502",
+              "name": "Periodic Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1602",
+              "name": "Brackets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "ROADTRIP",
+              "name": "1 Road Trips and Museums - INOI 2018",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "TINOI17B",
+              "name": "Training - INOI 2017",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "AMONGUS2",
+              "name": "Among Us - INOI 2021",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "TINOI17A",
+              "name": "Fence - INOI 2017",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2001",
+              "name": "Department Strengths",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2002",
+              "name": "3xN Tiling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "TWOPATHS",
+              "name": "2 Two Paths - INOI 2018",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1902",
+              "name": "Interesting Sequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI1901",
+              "name": "Processor Scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "BREAKSTR",
+              "name": "Break the string - INOI 2021",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2203B",
+              "name": "Diocletian - Part 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2201",
+              "name": "Posting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2202",
+              "name": "Conquest",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2203A",
+              "name": "Diocletian - Part 1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2302",
+              "name": "Pillars",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2301",
+              "name": "Planet",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI2303",
+              "name": "History",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI26P0",
+              "name": "Diff by 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI26P1",
+              "name": "Smaller Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "3983",
+              "code": "INOI26P2",
+              "name": "Tree Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 30
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 106,
+  "total_non_pro_problems": 106,
+  "up_next": [
+    {
+      "name": "500 difficulty rating",
+      "title": "500 difficulty rating",
+      "slug": "basic-programming-concepts",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 105966,
+      "review": {
+        "rating": 4.6,
+        "users": 3118
+      },
+      "course_count": 1,
+      "description": "Practice the most basic problems available on CodeChef. The problems are in the difficulty range of 0 - 500."
+    },
+    {
+      "name": "500 to 1000 difficulty rating",
+      "title": "500 to 1000 difficulty problems",
+      "slug": "logical-problems",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 153886,
+      "review": {
+        "rating": 4.6,
+        "users": 2578
+      },
+      "course_count": 2,
+      "description": "Practice the easy logical problems available on CodeChef. The problems are in the difficulty range of 500 to 1000."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Other Practice Paths",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 54449,
+  "path_review": {
+    "rating": 4.5,
+    "users": 25
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

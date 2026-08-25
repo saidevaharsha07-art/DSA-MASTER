@@ -1,0 +1,2122 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "r",
+  "name": "Practice R Programming",
+  "title": "Practice R Programming",
+  "level": "Beginner",
+  "description": "Solve Practice problems online with the Practice R path on CodeChef. Write code for over 170 R coding challenges and prepare for interviews.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:50",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/r/LPRAS01/problems/LPRASPR01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Output & Basic math operators",
+      "description": "Practice problems using R related to output and output on multiple lines",
+      "submodules": [
+        {
+          "name": "Output / Printing in R",
+          "submodule_id": 5390,
+          "contest_code": "LPRAS01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS01/problems/LPRASPR01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR01",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR02",
+              "name": "Print Coding, Chef!",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR03",
+              "name": "Identify Correct Syntax ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR04",
+              "name": "Print difference of 10 and 3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR05",
+              "name": "Identify Correct Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR06",
+              "name": "Print String num",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR07",
+              "name": "Print 6 divided by 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR08",
+              "name": "Identify Runtime Error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR09",
+              "name": "Print 108 using 9 and 12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28627",
+              "code": "LPRASPR10",
+              "name": "Print Learn Coding on CodeChef",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Printing on multiple lines + Multiple prints using single command",
+          "submodule_id": 5391,
+          "contest_code": "LPRAS02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS02/problems/LPRASPR11",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR11",
+              "name": "Guess the Output ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR12",
+              "name": "Print 5 5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR13",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR14",
+              "name": "Role of Arrow",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR15",
+              "name": "Print R Programming",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR16",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR17",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR18",
+              "name": "Print 1 to 5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR19",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR20",
+              "name": "Print Squares",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28628",
+              "code": "LPRASPR21",
+              "name": "Print all the arithematic operations ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 21
+    },
+    {
+      "assessment": null,
+      "name": "Variables and Datatypes",
+      "description": "Practice problems related to variables an Datatypes using R",
+      "submodules": [
+        {
+          "name": "Variables and Datatypes",
+          "submodule_id": 5392,
+          "contest_code": "LPRAS03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS03/problems/LPRASPR22",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR22",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR23",
+              "name": "Identify incorrect syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR24",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR25",
+              "name": "Identify Incorrect Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR26",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR27",
+              "name": "Boolean in R",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR28",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR29",
+              "name": "Identify Incorrect syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR30",
+              "name": "Divide two variables",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR31",
+              "name": "Convert Temperature",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR32",
+              "name": "Print total minutes and seconds",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28629",
+              "code": "LPRASPR33",
+              "name": "Convert speed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Strings",
+      "description": "Practice problems related to strings and characters using R",
+      "submodules": [
+        {
+          "name": "Strings",
+          "submodule_id": 5393,
+          "contest_code": "LPRAS04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS04/problems/LPRASPR34",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR34",
+              "name": "Declare a string variable",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR35",
+              "name": "Add hyphen between strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR36",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR37",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR38",
+              "name": "Guess the Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR39",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR40",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR41",
+              "name": "Print the length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR42",
+              "name": "Identify the errors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR43",
+              "name": "Print the length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28630",
+              "code": "LPRASPR44",
+              "name": "Adding the length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "User inputs",
+      "description": "Accept user input and start solving slightly complex problems",
+      "submodules": [
+        {
+          "name": "User inputs",
+          "submodule_id": 5394,
+          "contest_code": "LPRAS05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS05/problems/LPRASPR45",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR45",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR46",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR47",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR48",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR49",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR50",
+              "name": "Ways to take the input",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR51",
+              "name": "Identify the Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR52",
+              "name": "Identify the function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR53",
+              "name": "Identify the Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28631",
+              "code": "LPRASPR54",
+              "name": "Identify the function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Conditional statements",
+      "description": "Practice problems on conditional statements using If / Else, Combining conditions using And / OR, Switch",
+      "submodules": [
+        {
+          "name": "If / Else statements",
+          "submodule_id": 5395,
+          "contest_code": "LPRAS06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS06/problems/LPRASPR55",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR55",
+              "name": "Scope of Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR56",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR57",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR58",
+              "name": "Role of else if",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR59",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR60",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR61",
+              "name": "Use of if-else",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR62",
+              "name": "Check odd number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR63",
+              "name": "Identify the Symbol",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR64",
+              "name": "Identify the Condition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR65",
+              "name": "Prodigy Student - Rectify code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28632",
+              "code": "LPRASPR66",
+              "name": "Print the minimum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Combining conditions using And / Or\t",
+          "submodule_id": 5396,
+          "contest_code": "LPRAS07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS07/problems/LPRASPR67",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR67",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR68",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR69",
+              "name": "Check number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR70",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR71",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR72",
+              "name": "Not Equal ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR73",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR74",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR75",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR76",
+              "name": "Positive or Negative",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR77",
+              "name": "Prime Check",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28633",
+              "code": "LPRASPR78",
+              "name": "Leap Year",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Switch",
+          "submodule_id": 5397,
+          "contest_code": "LPRAS08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS08/problems/LPRASPR79",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR79",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR80",
+              "name": "Use of break ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR81",
+              "name": "Default case ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR82",
+              "name": "No break ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR83",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR84",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR85",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR86",
+              "name": "Default Case",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR87",
+              "name": "Vowel or Consonant",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28634",
+              "code": "LPRASPR88",
+              "name": "Arithmetic operation  ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 34
+    },
+    {
+      "assessment": null,
+      "name": "Debug common errors",
+      "description": "Practice debugging common errors that you will encounter while writing code",
+      "submodules": [
+        {
+          "name": "Debug common errors",
+          "submodule_id": 5398,
+          "contest_code": "LPRAS09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS09/problems/LPRASPR89",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR89",
+              "name": "Compilation error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR90",
+              "name": "Guess the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR91",
+              "name": "Guess the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR92",
+              "name": "Guess the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR93",
+              "name": "Guess the Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR94",
+              "name": "Identify the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR95",
+              "name": "Identify the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR96",
+              "name": "Identify the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR97",
+              "name": "Identify the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR98",
+              "name": "Identify the error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR99",
+              "name": "Which Day It Is",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28635",
+              "code": "LPRASPR100",
+              "name": "Whats Wrong",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Arrays",
+      "description": "Arrays are an integral part of any programming language. Practice problems on arrays using R",
+      "submodules": [
+        {
+          "name": "Arrays",
+          "submodule_id": 5399,
+          "contest_code": "LPRAS10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS10/problems/LPRASPR101",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR101",
+              "name": "Declare Vector",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR102",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR103",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR104",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR105",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR106",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR107",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR108",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR109",
+              "name": "Multiply elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR110",
+              "name": "Length of array items",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR111",
+              "name": "Debug it !",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28636",
+              "code": "LPRASPR112",
+              "name": "Difference between odd and even",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Loops",
+      "description": "Practice problems related to While Loops, For Loops and Break / Continue",
+      "submodules": [
+        {
+          "name": "While Loops",
+          "submodule_id": 5400,
+          "contest_code": "LPRAS11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS11/problems/LPRASPR113",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR113",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR114",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR115",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR116",
+              "name": "Evaluation in while",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR117",
+              "name": "Guess the output ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR118",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR119",
+              "name": "Number of evaluation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR120",
+              "name": "Correct Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR121",
+              "name": "Print Squares",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR122",
+              "name": "Print factorial",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR123",
+              "name": "Find the number of digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28637",
+              "code": "LPRASPR124",
+              "name": "Product and Sum of digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "For Loops",
+          "submodule_id": 5401,
+          "contest_code": "LPRAS12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS12/problems/LPRASPR125",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR125",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR126",
+              "name": "Number of iterations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR127",
+              "name": "Statement 3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR128",
+              "name": "Loop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR129",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR130",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR131",
+              "name": "Select the correct option",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR132",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR133",
+              "name": "Sum of numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR134",
+              "name": "Print fibonacci series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR135",
+              "name": "Parity Difference ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28638",
+              "code": "LPRASPR136",
+              "name": "Number not divisible by 2 or 3 or 5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Break / Continue",
+          "submodule_id": 5402,
+          "contest_code": "LPRAS13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS13/problems/LPRASPR137",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR137",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR138",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR139",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR140",
+              "name": "Next vs Continue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR141",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR142",
+              "name": "Guess the output ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR143",
+              "name": "Number of iterations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR144",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR145",
+              "name": "First occurrence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28639",
+              "code": "LPRASPR146",
+              "name": "Square of numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 34
+    },
+    {
+      "assessment": null,
+      "name": "Functions",
+      "description": "Practice problems that incorporate functions into your code using R",
+      "submodules": [
+        {
+          "name": "Functions",
+          "submodule_id": 5403,
+          "contest_code": "LPRAS14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS14/problems/LPRASPR147",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR147",
+              "name": "Define a function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR148",
+              "name": "Return Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR149",
+              "name": "Global Variable",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR150",
+              "name": "Guess the output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR151",
+              "name": "Precedence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR152",
+              "name": "function keyword",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR153",
+              "name": "Predefined function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR154",
+              "name": "Parameters and arguments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR155",
+              "name": "Calculate power",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR156",
+              "name": "Calculate area",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR157",
+              "name": "All Primes in Range",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28640",
+              "code": "LPRASPR158",
+              "name": "Armstrong Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Get started with complex algorithmic problems",
+      "description": "Practice problems on test cases and custom input / output required to solve algorithmic problems",
+      "submodules": [
+        {
+          "name": "Test Cases / Custom inputs",
+          "submodule_id": 5404,
+          "contest_code": "LPRAS15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/r/LPRAS15/problems/LPRASPR159",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR159",
+              "name": "Test cases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR160",
+              "name": "Private test files",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR161",
+              "name": "Run vs Submit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR162",
+              "name": "Custom inputs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR163",
+              "name": "AC",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR164",
+              "name": "Failing cases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR165",
+              "name": "Runtime error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR166",
+              "name": "Test cases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR167",
+              "name": "Increase the integer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR168",
+              "name": "Even odd",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR169",
+              "name": "Sum of Digits - II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "28641",
+              "code": "LPRASPR170",
+              "name": "Sum of Multiples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 170,
+  "total_non_pro_problems": 57,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Other Practice Paths",
+  "reviews": [
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2112,
+  "path_review": {
+    "rating": 4.7,
+    "users": 249
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

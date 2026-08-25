@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PSGRADE",
+  "contest_category": "6",
+  "problem_name": "Passing Marks",
+  "intended_contest_code": "COOK128",
+  "body": "\r\nRecently, Chef's College Examination has concluded. He was enrolled in $3$ courses and he scored $A, B, C$ in them, respectively. To pass the semester, he must score at least $A_{min}, B_{min}, C_{min}$ marks in the respective subjects along with a cumulative score of at least $T_{min}$, i.e, $A + B + C \\ge T_{min}$.\r\n\r\nGiven seven integers $A_{min}, B_{min}, C_{min}, T_{min}, A, B, C$, tell whether Chef passes the semester or not.\r\n\r\n###Input:\r\n\r\n- The first line will contain $T$, number of testcases. Then the testcases follow. \r\n- Each testcase contains of a single line of input, seven integers $A_{min}, B_{min}, C_{min}, T_{min}, A, B, C$ each separated by aspace.\r\n\r\n###Output:\r\nOutput in a single line, the answer, which should be \"YES\" if Chef passes the semester and \"NO\" if not.\r\n\r\nYou may print each character of the string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 100$\r\n- $1 \\leq A_{min}, B_{min}, C_{min}, A, B, C \\leq 100$\r\n- $A_{min} + B_{min} + C_{min} \\leq T_{min} \\leq 300$\r\n\r\n###Sample Input:\r\n```\r\n5\r\n1 1 1 300 2 2 2\r\n3 2 2 6 2 2 2\r\n2 3 2 6 2 2 2\r\n2 2 3 6 2 2 2\r\n100 100 100 300 100 100 100\r\n```\r\n\r\n###Sample Output:\r\n```\r\nNO\r\nNO\r\nNO\r\nNO\r\nYES\r\n```\r\n\t\r\n###Explanation:\r\n**TestCase 1:** Chef is passing in all the subjects individually but his total score ($2 + 2 + 2 = 6$) is much below the required threshold of $300$ marks. So Chef doesn't pass the semester.\r\n\r\n**TestCase 2:** Chef's score in the first subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 3:** Chef's score in the second subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 4:** Chef's score in the third subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 5:** Chef is passing in all the subjects individually and also his total score is equal to the required threshold of $300$ marks. So Chef passes the semester.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nRecently, Chef's College Examination has concluded. He was enrolled in $3$ courses and he scored $A, B, C$ in them, respectively. To pass the semester, he must score at least $A_{min}, B_{min}, C_{min}$ marks in the respective subjects along with a cumulative score of at least $T_{min}$, i.e, $A + B + C \\ge T_{min}$.\r\n\r\nGiven seven integers $A_{min}, B_{min}, C_{min}, T_{min}, A, B, C$, tell whether Chef passes the semester or not.\r\n\r\n###Input:\r\n\r\n- The first line will contain $T$, number of testcases. Then the testcases follow. \r\n- Each testcase contains of a single line of input, seven integers $A_{min}, B_{min}, C_{min}, T_{min}, A, B, C$ each separated by aspace.\r\n\r\n###Output:\r\nOutput in a single line, the answer, which should be \"YES\" if Chef passes the semester and \"NO\" if not.\r\n\r\nYou may print each character of the string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 100$\r\n- $1 \\leq A_{min}, B_{min}, C_{min}, A, B, C \\leq 100$\r\n- $A_{min} + B_{min} + C_{min} \\leq T_{min} \\leq 300$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\r\n1 1 1 300 2 2 2\r\n3 2 2 6 2 2 2\r\n2 3 2 6 2 2 2\r\n2 2 3 6 2 2 2\r\n100 100 100 300 100 100 100",
+        "output": "NO\r\nNO\r\nNO\r\nNO\r\nYES",
+        "explanation": "**TestCase 1:** Chef is passing in all the subjects individually but his total score ($2 + 2 + 2 = 6$) is much below the required threshold of $300$ marks. So Chef doesn't pass the semester.\r\n\r\n**TestCase 2:** Chef's score in the first subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 3:** Chef's score in the second subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 4:** Chef's score in the third subject is less than the threshold, so he doesn't pass the semester.\r\n\r\n**TestCase 5:** Chef is passing in all the subjects individually and also his total score is equal to the required threshold of $300$ marks. So Chef passes the semester.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 88249,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "cherry0697",
+  "date_added": "31-03-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "904",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611294
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PSGRADE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 26,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

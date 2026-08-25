@@ -1,0 +1,129 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PRMPRT",
+  "contest_category": "6",
+  "problem_name": "B - Prime-partite Graph",
+  "intended_contest_code": null,
+  "body": "We have a graph with $N$ nodes (numbered $1$ through $N$). For each valid $u$ and $v$, there is an undirected edge between nodes $u$ and $v$ if $v$ is a prime divisor of $u$ or $u$ is a prime divisor of $v$.\r\n\r\nYou should answer $Q$ queries. In each query, you should find the length of the shortest path between two given nodes $a$ and $b$ or determine that there is no path between them.\r\n\r\n**Note**: Because of large I/O, please use fast I/O methods.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $N$.\r\n- The second line contains a single integer $Q$.\r\n- Each of the next $Q$ lines contains two space-separated integers $a$ and $b$ describing a query.\r\n\r\n### Output\r\nFor each query, print a single line containing one integer - the distance between the nodes or $-1$ if the nodes are not connected.\r\n\r\n### Constraints \r\n- $1 \\le N, Q \\le 10^6$\r\n- $2 \\le a, b \\le N$\r\n\r\n### Example Input\r\n```\r\n20\r\n3\r\n2 3\r\n2 6\r\n2 9\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n1\r\n3\r\n```\r\n\r\n### Explanation\r\nFor $a = 2$ and $b = 9$, one possible shortest path is $2 \\rightarrow 6 \\rightarrow 3 \\rightarrow 9$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le N, Q \\le 10^6$\n- $2 \\le a, b \\le N$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "We have a graph with $N$ nodes (numbered $1$ through $N$). For each valid $u$ and $v$, there is an undirected edge between nodes $u$ and $v$ if $v$ is a prime divisor of $u$ or $u$ is a prime divisor of $v$.\n\nYou should answer $Q$ queries. In each query, you should find the length of the shortest path between two given nodes $a$ and $b$ or determine that there is no path between them.\n\n**Note**: Because of large I/O, please use fast I/O methods.\n",
+    "inputFormat": "- The first line of the input contains a single integer $N$.\n- The second line contains a single integer $Q$.\n- Each of the next $Q$ lines contains two space-separated integers $a$ and $b$ describing a query.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each query, print a single line containing one integer - the distance between the nodes or $-1$ if the nodes are not connected.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "20\n3\n2 3\n2 6\n2 9\n",
+        "output": "2\n1\n3\n",
+        "explanation": "For $a = 2$ and $b = 9$, one possible shortest path is $2 \\rightarrow 6 \\rightarrow 3 \\rightarrow 9$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "msi_cse_buet",
+  "problem_display_authors": [
+    "msi_cse_buet"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/msi_cse_buet'>msi_cse_buet</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Graphs",
+    "GCD",
+    "Sieve of Eratosthenes",
+    "Prime Divisors"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Mathematics",
+    "Number Theory",
+    "Integer Factorisation",
+    "Divisors"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611291
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PRMPRT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

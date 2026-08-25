@@ -1,0 +1,127 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFSTLT",
+  "contest_category": "6",
+  "problem_name": "Chef and Two Strings",
+  "intended_contest_code": "LTIME25",
+  "body": "<p>Chef has found two very old sheets of paper, each of which originally contained a string of lowercase Latin letters. The strings on both the sheets have equal lengths. However, since the sheets are very old, some letters have become unreadable.</p>\n\n<p>Chef would like to estimate the <i>difference</i> between these strings. Let's assume that the first string is named <b>S1</b>, and the second <b>S2</b>. The unreadable symbols are specified with the question mark symbol <tt>'?'</tt>. The <i>difference</i> between the strings equals to the number of positions <b>i</b>, such that <b>S1<sub>i</sub></b> is not equal to <b>S2<sub>i</sub></b>, where <b>S1<sub>i</sub></b> and <b>S2<sub>i</sub></b> denote the symbol at the <b>i</b> the position in <b>S1</b> and <b>S2</b>, respectively.</p>\n\n<p>Chef would like to know the minimal and the maximal difference between the two strings, if he changes all unreadable symbols to lowercase Latin letters. Now that you're fully aware of Chef's programming <emph>expertise</emph>, you might have guessed that he needs you help solving this problem as well. Go on, help him!</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n\n<p>The first line of a test case contains a string <b>S1</b>.</p> \n\n<p>The second line of a test case contains a string <b>S2</b>. </p>\n\n<p>Both strings consist of lowercase Latin letters and question marks in places where the symbols are unreadable.</p>\n\n<h3>Output</h3>\n<p>For each test case, output the minimal and the maximal difference between two given strings separated with a single space.</p>\n\n<h3>Constraints</h3>\n<p><ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>|S1|, |S2|</b> \u2264 <b>100</b></li>\n<li>Subtask 1 (25 points): <b>|S1| = 1</b></li>\n<li>Subtask 2 (10 points): neither <b>S1</b> nor <b>S2</b> contains unreadable symbols</li>\n<li>Subtask 3 (65 points): <b>1</b> \u2264 <b>|S1|, |S2|</b> \u2264 <b>100</b></li>\n</ul></p>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>3\na?c\n??b\n???a\n???a\n?abac\naba?w</tt>\n\n<b>Output:</b>\n<tt>1 3\n0 3\n3 5</tt>\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1</b>. You can change the question marks in the strings so that you obtain <b>S1</b> = <tt>abc</tt> and <b>S2</b> = <tt>abb</tt>. Then <b>S1</b> and <b>S2</b> will differ in one position. On the other hand, you can change the letters so that <b>S1</b> = <tt>abc</tt> and <b>S2</b> = <tt>bab</tt>. Then, the strings will differ in all three positions.</p>\n<p><b>Example case 2</b>. Change the question marks this way: <b>S1</b> = <tt>dcba</tt>, <b>S2</b> = <tt>dcba</tt>, then the strings will differ in <b>0</b> positions. You can also change the question marks so that <b>S1</b> = <tt>aaaa</tt>, <b>S2</b> = <tt>dcba</tt>, then the strings will differ in <b>3</b> positions.</p>\n<p><b>Example case 3</b>. Change the question marks this way: <b>S1</b> = <tt>aabac</tt>, <b>S2</b> = <tt>abaaw</tt>, then the strings will differ in <b>3</b> positions. Then, change the question marks this way: <b>S1</b> = <tt>xabac</tt>, <b>S2</b> = <tt>abayw</tt>, then they will differ in <b>5</b> positions.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef has found two very old sheets of paper, each of which originally contained a string of lowercase Latin letters. The strings on both the sheets have equal lengths. However, since the sheets are very old, some letters have become unreadable.</p>\n\n<p>Chef would like to estimate the <i>difference</i> between these strings. Let's assume that the first string is named <b>S1</b>, and the second <b>S2</b>. The unreadable symbols are specified with the question mark symbol <tt>'?'</tt>. The <i>difference</i> between the strings equals to the number of positions <b>i</b>, such that <b>S1<sub>i</sub></b> is not equal to <b>S2<sub>i</sub></b>, where <b>S1<sub>i</sub></b> and <b>S2<sub>i</sub></b> denote the symbol at the <b>i</b> the position in <b>S1</b> and <b>S2</b>, respectively.</p>\n\n<p>Chef would like to know the minimal and the maximal difference between the two strings, if he changes all unreadable symbols to lowercase Latin letters. Now that you're fully aware of Chef's programming expertise, you might have guessed that he needs you help solving this problem as well. Go on, help him!</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n\n<p>The first line of a test case contains a string <b>S1</b>.</p> \n\n<p>The second line of a test case contains a string <b>S2</b>. </p>\n\n<p>Both strings consist of lowercase Latin letters and question marks in places where the symbols are unreadable.</p>\n\n<h3>Output</h3>\n<p>For each test case, output the minimal and the maximal difference between two given strings separated with a single space.</p>\n\n<h3>Constraints</h3>\n<p></p><ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>|S1|, |S2|</b> \u2264 <b>100</b></li>\n<li>Subtask 1 (25 points): <b>|S1| = 1</b></li>\n<li>Subtask 2 (10 points): neither <b>S1</b> nor <b>S2</b> contains unreadable symbols</li>\n<li>Subtask 3 (65 points): <b>1</b> \u2264 <b>|S1|, |S2|</b> \u2264 <b>100</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\na?c\n??b\n???a\n???a\n?abac\naba?w",
+        "output": "1 3\n0 3\n3 5",
+        "explanation": "<p><b>Example case 1</b>. You can change the question marks in the strings so that you obtain <b>S1</b> = <tt>abc</tt> and <b>S2</b> = <tt>abb</tt>. Then <b>S1</b> and <b>S2</b> will differ in one position. On the other hand, you can change the letters so that <b>S1</b> = <tt>abc</tt> and <b>S2</b> = <tt>bab</tt>. Then, the strings will differ in all three positions.</p>\n<p><b>Example case 2</b>. Change the question marks this way: <b>S1</b> = <tt>dcba</tt>, <b>S2</b> = <tt>dcba</tt>, then the strings will differ in <b>0</b> positions. You can also change the question marks so that <b>S1</b> = <tt>aaaa</tt>, <b>S2</b> = <tt>dcba</tt>, then the strings will differ in <b>3</b> positions.</p>\n<p><b>Example case 3</b>. Change the question marks this way: <b>S1</b> = <tt>aabac</tt>, <b>S2</b> = <tt>abaaw</tt>, then the strings will differ in <b>3</b> positions. Then, change the question marks this way: <b>S1</b> = <tt>xabac</tt>, <b>S2</b> = <tt>abayw</tt>, then they will differ in <b>5</b> positions.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 11231,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "furko_adm",
+  "problem_display_authors": [
+    "furko_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/furko_adm'>furko_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "xcwgf666"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/xcwgf666'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>xcwgf666</span></a></div>",
+  "problem_editorialist": "pkacprzak",
+  "date_added": "14-06-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1036",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610672
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFSTLT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 105,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

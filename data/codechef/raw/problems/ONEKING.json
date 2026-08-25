@@ -1,0 +1,125 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ONEKING",
+  "contest_category": "6",
+  "problem_name": "One Dimensional Kingdoms",
+  "intended_contest_code": "JAN15",
+  "body": "<p><b>N</b> one dimensional kingdoms are represented as intervals of the form <b>[a<sub>i</sub> , b<sub>i</sub>]</b> on the real line.\r\nA kingdom of the form <b>[L, R]</b> can be destroyed completely by placing a bomb at a point <b>x</b> on the real line if <b>L \r\n\u2264 x \u2264 R</b>.\r\n</p>\r\n\r\n<p>\r\nYour task is to determine minimum number of bombs required to destroy all the one dimensional kingdoms.</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>\r\nFirst line of the input contains <b>T</b> denoting number of test cases.\r\n</li>\r\n<li>\r\nFor each test case, first line contains <b>N</b> denoting the number of one dimensional kingdoms.<br> \r\n</li>\r\n<li>\r\nFor each next <b>N</b> lines, each line contains two space separated integers <b>a<sub>i</sub></b> and <b>b<sub>i</sub></b>.</p>\r\n</li>\r\n</ul>\r\n \r\n<h3>Output</h3>\r\n<p>For each test case , output an integer denoting the minimum  number of bombs required.</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>Subtask 1 (20 points) : <b>1 \u2264 T \u2264 100 , 1 \u2264 N \u2264 100 , 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264500 </b> </p>\r\n<p>Subtask 2 (30 points) : <b>1 \u2264 T \u2264 100 , 1 \u2264 N \u2264 1000 , 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264 1000  </b> </p>\r\n<p>Subtask 3 (50 points) : <b>1 \u2264 T \u2264 20 , 1 \u2264 N \u2264 10<sup>5</sup>, 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264 2000</b> </p>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n1\r\n3\r\n1 3\r\n2 5\r\n6 9\r\n\r\n<b>Output:</b>\r\n2\r\n</pre>\r\n \r\n<h3>Explanation</h3>\r\nThere are three kingdoms [1,3] ,[2,5] and [6,9]. You will need at least 2 bombs \r\nto destroy the kingdoms. In one of the possible solutions, you can place two bombs at x = 2 and x = 6 . \r\n</pre> \n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p><b>N</b> one dimensional kingdoms are represented as intervals of the form <b>[a<sub>i</sub> , b<sub>i</sub>]</b> on the real line.\nA kingdom of the form <b>[L, R]</b> can be destroyed completely by placing a bomb at a point <b>x</b> on the real line if <b>L \n\u2264 x \u2264 R</b>.\n</p>\n\n<p>\nYour task is to determine minimum number of bombs required to destroy all the one dimensional kingdoms.</p>\n\n<h3>Input</h3>\n<ul><li>\nFirst line of the input contains <b>T</b> denoting number of test cases.\n</li>\n<li>\nFor each test case, first line contains <b>N</b> denoting the number of one dimensional kingdoms.<br /></li>\n<li>\nFor each next <b>N</b> lines, each line contains two space separated integers <b>a<sub>i</sub></b> and <b>b<sub>i</sub></b>.\n</li>\n</ul><h3>Output</h3>\n<p>For each test case , output an integer denoting the minimum  number of bombs required.</p>\n\n<h3>Constraints</h3>\n<p>Subtask 1 (20 points) : <b>1 \u2264 T \u2264 100 , 1 \u2264 N \u2264 100 , 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264500 </b> </p>\n<p>Subtask 2 (30 points) : <b>1 \u2264 T \u2264 100 , 1 \u2264 N \u2264 1000 , 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264 1000  </b> </p>\n<p>Subtask 3 (50 points) : <b>1 \u2264 T \u2264 20 , 1 \u2264 N \u2264 10<sup>5</sup>, 0 \u2264 a<sub>i</sub> \u2264 b<sub>i</sub> \u2264 2000</b> </p>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n3\n1 3\n2 5\n6 9",
+        "output": "2",
+        "explanation": "There are three kingdoms [1,3] ,[2,5] and [6,9]. You will need at least 2 bombs \nto destroy the kingdoms. In one of the possible solutions, you can place two bombs at x = 2 and x = 6 . \n ",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 9096,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "snigdha_adm",
+  "problem_display_authors": [
+    "snigdha_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/snigdha_adm'>snigdha_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "shiplu"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/shiplu'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>shiplu</span></a></div>",
+  "problem_editorialist": "darkshadows",
+  "date_added": "2-12-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Greedy",
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1743",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611124
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ONEKING",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

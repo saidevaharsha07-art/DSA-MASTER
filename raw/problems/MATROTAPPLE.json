@@ -1,0 +1,118 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MATROTAPPLE",
+  "contest_category": "6",
+  "problem_name": "Rotting Apples",
+  "intended_contest_code": "DSAMONDAY009",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N, M \\leq 100$\n- The elements of the matrix are either `0`, `1` or `2`.",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "Given an `N x M` matrix where each cell can have one of three values:\n\n- `0` representing an empty cell,\n- `1` representing a fresh apple, or\n- `2` representing a rotten apple.\n\nEvery minute, any fresh apple that is `4`-directionally adjacent to a rotten apple becomes rotten.\n\n`4`-directionally adjacent cells of a cell _(i, j)_ are cell _(i - 1, j)_, _(i + 1, j)_, _(i, j - 1)_ and _(i, j + 1)_. \n\nFind the minimum number of minutes that must elapse until no cell has a fresh apple. If this is impossible, return -1.",
+    "inputFormat": "- The first line of input will contain two space separated integers $N$ and $M$, denoting the no. of rows and columns in the input matrix.\n- Next $N$ lines contains $M$ space separated integers, the elements of the matrix. ",
+    "inputFormatState": true,
+    "outputFormat": "- Output on a single line, the minimum number of minutes that must elapse until no cell has a fresh apple. If this is impossible, output -1.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3 4\n0 2 1 1  \n1 1 0 1 \n1 1 0 1",
+        "output": "4",
+        "explanation": "There is a rotten apple in cell (0, 1) (assuming 0-based indexing). \n\nAfter 1 minute: fresh apples in cells (0, 2) and (1, 1) gets rotten.\n\nAfter 2 minutes: fresh apples in cells (0, 3), (1, 0) and (2, 1) gets rotten. \n\nAfter 3 minutes: fresh apples in cells (2, 0) and (1, 3) gets rotten. \n\nAfter 4 minutes: the last fresh apple in cell (2, 3) gets rotten. \n\nHence it takes minimum 4 minutes to rot all apples. ",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "<p><strong>Prerequisites:</strong> Matrix, BFS.</p>\n<p><strong>Problem:</strong>  Given an <code>N x M</code> matrix where each cell can have one of three values:</p>\n<ul>\n<li><code>0</code> representing an empty cell,</li>\n<li><code>1</code> representing a fresh apple, or</li>\n<li><code>2</code> representing a rotten apple.</li>\n</ul>\n<p>Every minute, any fresh orange that is <code>4</code>-directionally adjacent to a rotten apple becomes rotten.</p>\n<p>Find the minimum number of minutes that must elapse until no cell has a fresh apple. If this is impossible, return -1.</p>\n<p><strong>Solution Approach:</strong></p>\n<p>The core idea of the solution is to simulate the process of rotting apples in a grid. We start by initializing a queue to store the positions of rotten apples and counting the number of fresh apples in the grid. Then, in each iteration, we process all currently rotten apples by checking their adjacent cells. If a fresh apple is found adjacent to a rotten apple, it becomes rotten in the next minute, and we enqueue its position for further processing. This process continues until no fresh apples are left or until all reachable fresh apples have become rotten. Throughout the simulation, we track the number of minutes elapsed. If all fresh apples have been rotten after the simulation, we return the total number of minutes. Otherwise, if there are still fresh apples remaining but no more reachable rotten apples, it indicates that some fresh apples are unreachable and will never rot, so we return -1 to indicate that it\u2019s impossible for all fresh apples to become rotten.</p>\n<p><strong>Time Complexity</strong>:   O(N * M), where N is the number of rows and M is the number of columns in the grid. This is because we traverse each cell in the grid once during the initialization and the simulation process.</p>\n<p><strong>Space Complexity</strong>: O(N * M). This is primarily due to the usage of the queue to store the positions of rotten apples, which can potentially hold up to all the cells in the grid</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 116761,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "13-03-2024",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1782750600,
+    "submit_start_date": 1782750600,
+    "visible_start_date": 1782750600,
+    "end_date": 1893436200,
+    "current": 1785611062
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MATROTAPPLE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 21,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

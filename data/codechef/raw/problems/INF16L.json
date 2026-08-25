@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "INF16L",
+  "contest_category": "6",
+  "problem_name": "WiFi Expenses",
+  "intended_contest_code": "",
+  "body": "<p>Demonetization has made a tumultuous situation in stock market, which is responsible for recent layoffs in Information Technology jobs.</p>\n\n<p>Due to this, a technology company CF headed by CEO Praveen decided to layoff some people, specifically they can lay off only <b>at most four</b> people, other wise there will be a sad sentiment among the employers of the company that can effect its growth.</p>\n\n<p>There are total <b>N</b> employees in CF. The positions of the desks of these employees is given to you by the points in 2-D plane. As you know desk sizes are usually very small, thus we represent them by points in plane.</p>\n\n<p>CF uses a central wifi router for providing internet connection to its employees. Its cost to company will be equal to radius in which connectivity is needed.</p>\n\n<p>CEO would like to minimize the cost to company by laying off these employees. Can you please help the crooked but smart CEO? Find out the minimum cost of wifi needed.</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case contains a single integer <b>N</b> denoting the number of employees in CF. Next <b>N</b> lines contain two space-separated real numbers <b>x</b> and <b>y</b> each, denoting the co-ordinate of the desks of <b>i</b>-th of the employee in the Cartesian plane.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing three space separated real numbers <b>c<sub>x</sub></b>, <b>c<sub>y</sub></b> and <b>r</b>. First two numbers denote co-ordinates of the location of the wifi router and <b>r</b> denotes the radius of the connectivity of wifi.</p>\n<p>If there are multiple locations of wifi router possible, print any.</p>\n\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>17</b></li>\n<li><b>6</b> \u2264 <b>N</b> \u2264 <b>51</b></li>\n<li><b>-12973.1213</b> \u2264 <b>x, y</b> \u2264 <b>19291.9199</b></li>\n<li>Output should follow : <b>-1000000</b> \u2264 <b>c<sub>x</sub>, c<sub>y</sub>, r </b> \u2264 <b>1000000</b></li>\n<li>All the real numbers in the input will have a decimal point, <b> exactly</b> 4 digits after the decimal point and <b>non zero</b> number of digits before the decimal point (i.e., inputs such as <b>.2349</b> will not be given but it may be given like <b>0.2349</b>).</li>\n<li>Distance between any two given points will be greater than or equal to<b> 0.01</b> units. </li>\n<li>Output real number <b>r</b> will be acceptable if its within <b>absolute or relative</b> error of <b>10<sup>-6</sup></b> with the judge's answer. A point will be considered inside the circle even if it is actually outside but its distance from the circle is less than <b>10<sup>-6</sup></b> units.</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n6\n0.0000 0.0000\n2.0000 0.0000\n2.0000 2.0000\n0.0000 2.0000\n1.0000 -10.0000\n1.0000 10.0000\n7\n0.0000 0.0000\n2.0000 0.0000\n2.0000 2.0000\n0.0000 2.0000\n1.0000 -10.0000\n1.0000 10.0000\n10.0000 1.0000\n\n<b>Output:</b>\n1.0000000000 0.0000000000 1.0000000000\n1.0000000000 1.0000000000 1.4142135624\n</pre>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **17**\n- **6** \u2264 **N** \u2264 **51**\n- **-12973.1213** \u2264 **x, y** \u2264 **19291.9199**\n- Output should follow: **-1000000** \u2264 **c<sub>x</sub>, c<sub>y</sub>, r** \u2264 **1000000**\n- All the real numbers in the input will have a decimal point, **exactly** 4 digits after the decimal point, and a **non-zero** number of digits before the decimal point (i.e., inputs such as **.2349** will not be given, but it may be given like **0.2349**).\n- The distance between any two given points will be greater than or equal to **0.01** units.\n- The output real number **r** will be acceptable if it is within an **absolute or relative** error of **10<sup>-6</sup>** with the judge's answer. A point will be considered inside the circle even if it is actually outside but its distance from the circle is less than **10<sup>-6</sup>** units.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Demonetization has made a tumultuous situation in the stock market, which is responsible for recent layoffs in Information Technology jobs.\n\nDue to this, a technology company CF headed by CEO Praveen decided to lay off some people, specifically they can lay off only **at most four** people, otherwise there will be a sad sentiment among the employers of the company that can affect its growth.\n\nThere are a total of **N** employees in CF. The positions of the desks of these employees are given to you by the points in a 2-D plane. As you know, desk sizes are usually very small, thus we represent them by points in the plane.\n\nCF uses a central wifi router for providing internet connection to its employees. Its cost to the company will be equal to the radius in which connectivity is needed.\n\nThe CEO would like to minimize the cost to the company by laying off these employees. Can you please help the crooked but smart CEO? Find out the minimum cost of wifi needed.\n",
+    "inputFormat": "The first line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nThe first line of each test case contains a single integer **N** denoting the number of employees in CF. The next **N** lines contain two space-separated real numbers **x** and **y** each, denoting the coordinate of the desks of the **i**-th employee in the Cartesian plane.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing three space-separated real numbers **c<sub>x</sub>**, **c<sub>y</sub>**, and **r**. The first two numbers denote the coordinates of the location of the wifi router, and **r** denotes the radius of the connectivity of wifi.\n\nIf there are multiple locations of the wifi router possible, print any.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n6\n0.0000 0.0000\n2.0000 0.0000\n2.0000 2.0000\n0.0000 2.0000\n1.0000 -10.0000\n1.0000 10.0000\n7\n0.0000 0.0000\n2.0000 0.0000\n2.0000 2.0000\n0.0000 2.0000\n1.0000 -10.0000\n1.0000 10.0000\n10.0000 1.0000\n",
+        "output": "1.0000000000 0.0000000000 1.0000000000\n1.0000000000 1.0000000000 1.4142135624\n",
+        "explanation": "The first test case has 6 employees. The optimal solution is to place the wifi router at (1.0000000000, 0.0000000000) with a radius of 1.0000000000. This covers all the employees except the ones at (1.0000, -10.0000) and (1.0000, 10.0000), which are outside the circle.\n\nThe second test case has 7 employees. The optimal solution is to place the wifi router at (1.0000000000, 1.0000000000) with a radius of 1.4142135624. This covers all the employees except the one at (10.0000, 1.0000), which is outside the circle.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "28-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610875
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=INF16L",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

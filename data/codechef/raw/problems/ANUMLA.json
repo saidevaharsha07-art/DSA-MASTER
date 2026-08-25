@@ -1,0 +1,118 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ANUMLA",
+  "contest_category": "6",
+  "problem_name": "Mahesh and his lost array",
+  "intended_contest_code": "COOK51",
+  "body": "<p>\r\nMahesh got a beautiful array named <b>A</b> as a birthday gift from his beautiful girlfriend Namratha. There are <b>N</b> positive integers in that array. Mahesh loved the array so much that he started to spend a lot of time on it everyday. One day, he wrote down all possible subsets of the array. Then for each subset, he calculated the sum of elements in that subset and wrote it down on a paper. Unfortunately, Mahesh lost the beautiful array :(. He still has the paper on which he wrote all subset sums. Your task is to rebuild beautiful array <b>A</b> and help the couple stay happy :)\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.\r\nFirst line of each test case contains one integer <b>N</b>, the number of elements in <b>A</b>.\r\nSecond line of each test case contains <b>2^N</b> integers, the values written on paper</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output one line with <b>N</b> space separated integers in non-decreasing order.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>50</b>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>15</b>\r\n<li><b>0</b> \u2264 <b>Values on paper</b> \u2264 <b>10^9</b>\r\n<li><b>All input values are valid. A solution always exists</b>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input</b>\r\n2\r\n1\r\n0 10\r\n2\r\n0 1 1 2\r\n\r\n<b>Output</b>\r\n10\r\n1 1\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<b>Test case #2</b>\r\nFor the array [1,1], possible subsets are {}, {1}, {1}, {1,1}, respective sums are 0, 1, 1, 2.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\r\nMahesh got a beautiful array named <b>A</b> as a birthday gift from his beautiful girlfriend Namratha. There are <b>N</b> positive integers in that array. Mahesh loved the array so much that he started to spend a lot of time on it everyday. One day, he wrote down all possible subsets of the array. Then for each subset, he calculated the sum of elements in that subset and wrote it down on a paper. Unfortunately, Mahesh lost the beautiful array :(. He still has the paper on which he wrote all subset sums. Your task is to rebuild beautiful array <b>A</b> and help the couple stay happy :)\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.\r\nFirst line of each test case contains one integer <b>N</b>, the number of elements in <b>A</b>.\r\nSecond line of each test case contains <b>2^N</b> integers, the values written on paper</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output one line with <b>N</b> space separated integers in non-decreasing order.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>50</b>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>15</b>\r\n<li><b>0</b> \u2264 <b>Values on paper</b> \u2264 <b>10^9</b>\r\n<li><b>All input values are valid. A solution always exists</b>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input</b>\r\n2\r\n1\r\n0 10\r\n2\r\n0 1 1 2\r\n\r\n<b>Output</b>\r\n10\r\n1 1\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<b>Test case #2</b>\r\nFor the array [1,1], possible subsets are {}, {1}, {1}, {1,1}, respective sums are 0, 1, 1, 2.\r\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 7713,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "19.5",
+  "source_sizelimit": "50000",
+  "problem_author": "anudeep2011",
+  "problem_display_authors": [
+    "anudeep2011"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anudeep2011'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>anudeep2011</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "kostya_by"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kostya_by'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>kostya_by</span></a></div>",
+  "problem_editorialist": "elfus",
+  "date_added": "14-10-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Multiset",
+    "Greedy",
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Sets",
+    "Algorithms"
+  ],
+  "difficulty_rating": "2212",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610605
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ANUMLA",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

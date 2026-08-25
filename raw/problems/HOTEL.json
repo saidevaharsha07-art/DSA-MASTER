@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HOTEL",
+  "contest_category": "6",
+  "problem_name": "Hotel Bytelandia",
+  "intended_contest_code": "COOK14",
+  "body": "<p>A holiday weekend is coming up,\r\nand Hotel Bytelandia needs to find out if it has enough rooms to accommodate all potential guests.\r\nA number of guests have made reservations.\r\nEach reservation consists of an arrival time, and a departure time.\r\nThe hotel management has hired you to calculate the maximum number of guests that will be at the hotel simultaneously.\r\nNote that if one guest arrives at the same time another leaves, they are never considered to be at the hotel simultaneously\r\n(see the second example).\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>Input will begin with an integer T, the number of test cases.\r\nEach test case begins with an integer N, the number of guests.\r\nTwo lines follow, each with exactly N positive integers.\r\nThe i-th integer of the first line is the arrival time of the i-th guest,\r\nand the i-th integer of the second line is the departure time of the i-th guest\r\n(which will be strictly greater than the arrival time).\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, print the maximum number of guests that are simultaneously at the hotel.</p>\r\n\r\n<h3>Sample Input</h3>\r\n<pre>3\r\n3\r\n1 2 3\r\n4 5 6\r\n5\r\n1 2 3 4 5\r\n2 3 4 5 6\r\n7\r\n13 6 5 8 2 10 12\r\n19 18 6 9 9 11 15\r\n</pre>\r\n\r\n<h3>Sample Output</h3>\r\n<pre>3\r\n1\r\n3\r\n</pre>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>T\u2264100</li>\r\n<li>N\u2264100</li>\r\n<li>All arrival/departure times will be between 1 and 1000, inclusive</li>\r\n</ul>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>A holiday weekend is coming up,\nand Hotel Bytelandia needs to find out if it has enough rooms to accommodate all potential guests.\nA number of guests have made reservations.\nEach reservation consists of an arrival time, and a departure time.\nThe hotel management has hired you to calculate the maximum number of guests that will be at the hotel simultaneously.\nNote that if one guest arrives at the same time another leaves, they are never considered to be at the hotel simultaneously\n(see the second example).\n</p>\n\n<h3>Input</h3>\n<p>Input will begin with an integer T, the number of test cases.\nEach test case begins with an integer N, the number of guests.\nTwo lines follow, each with exactly N positive integers.\nThe i-th integer of the first line is the arrival time of the i-th guest,\nand the i-th integer of the second line is the departure time of the i-th guest\n(which will be strictly greater than the arrival time).\n</p>\n\n<h3>Output</h3>\n<p>For each test case, print the maximum number of guests that are simultaneously at the hotel.</p>\n\n<h3>Constraints</h3>\n<ul><li>T\u2264100</li>\n<li>N\u2264100</li>\n<li>All arrival/departure times will be between 1 and 1000, inclusive</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n3\n1 2 3\n4 5 6\n5\n1 2 3 4 5\n2 3 4 5 6\n7\n13 6 5 8 2 10 12\n19 18 6 9 9 11 15",
+        "output": "3\n1\n3",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 979,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "david_adm",
+  "problem_display_authors": [
+    "david_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/david_adm'>david_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "chmel_tolstiy"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/chmel_tolstiy'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>chmel_tolstiy</span></a></div>",
+  "problem_editorialist": "admin",
+  "date_added": "7-09-2011",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "cook14",
+    "david_adm",
+    "easy"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1405",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610871
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HOTEL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 471,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

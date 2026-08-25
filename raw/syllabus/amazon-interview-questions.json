@@ -1,0 +1,363 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "amazon-interview-questions",
+  "name": "Amazon Coding Interview Questions",
+  "title": "Amazon Coding Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Amazon online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/amazon-interview-questions/AMAZONPREP/problems/JUMPEND",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Amazon Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Amazon Interview Questions",
+          "submodule_id": 6186,
+          "contest_code": "AMAZONPREP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 26,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/amazon-interview-questions/AMAZONPREP/problems/JUMPEND",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 26,
+          "problems_with_status": [
+            {
+              "contest_id": "27843",
+              "code": "JUMPEND",
+              "name": "Jump To The End",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "NEC",
+              "name": "Necklace",
+              "difficulty_rating": "800",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "STKSORT",
+              "name": "Stack Sort",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PAL_STRING",
+              "name": "Dispute Resolving",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "REVSEG",
+              "name": "Reverse the Segment",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PATSEARCH",
+              "name": "Find the Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "KGRPREV",
+              "name": "Reverse m size groups",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "RECTREE",
+              "name": "Reconstruct the Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "SUBTCH",
+              "name": "Find the Subtree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "LCAN3",
+              "name": "Triplet LCA",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "LINKLP",
+              "name": "Count loop length in Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "SEGEO",
+              "name": "Separate Even and Odd values in a linked list",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP01",
+              "name": "Array - Pascals or Khayyams triangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP23",
+              "name": "Sliding Window Maximum",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP32",
+              "name": "Dynamic Programming - String Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP22",
+              "name": "Largest Rectangle in Histogram",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP36",
+              "name": "Graphs - Word Ladder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP60",
+              "name": "Previous smaller element",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP54",
+              "name": "Linked List - Swap nodes in pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP58",
+              "name": "Cycle in a linked list",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP57",
+              "name": "Linked List - Add Two Numbers As Lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP51",
+              "name": "Hashing - Minimum Window Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27843",
+              "code": "PREP49",
+              "name": "Graphs - Valid Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 26
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 26,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "khn1025",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 10338,
+  "path_review": {
+    "rating": 4.6,
+    "users": 16
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

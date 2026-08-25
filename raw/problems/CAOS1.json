@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CAOS1",
+  "contest_category": "6",
+  "problem_name": "CAO Stage-1",
+  "intended_contest_code": "SEPT13",
+  "body": "<h3>Problem Statement</h3>\r\n\r\n<b>Past</b>\r\n\r\n<p>In the year of 2048, the Virtual Reality Massively Multiplayer Online Role-Playing Game (VRMMORPG), <strong>Code Art Online (CAO)</strong>, is released. With the Chef Gear, a virtual reality helmet that stimulates the user's five senses via their brain, players can experience and control their in-game characters with their minds.</p>\r\n\r\n<p>On August the 2nd, 2048, all the players log in for the first time, and subsequently discover that they are unable to log out. They are then informed by Code Master, the creator of CAO, that if they wish to be free, they must reach the second stage of the game.</p>\r\n\r\n<p>Kirito is a known star player of CAO. You have to help him log out.</p>\r\n\r\n<b>Present</b>\r\n<br/>\r\n<i>Stage 1</i>\r\n\r\n<p>A map is described by a 2D grid of cells. Each cell is either labelled as a <b>#</b> or a <b>^</b>. <b>#</b> denotes a wall. A monster exists in a cell if the cell is not a wall and the cell is a <b>centre of Prime-Cross (CPC)</b>.\r\n<ul>\r\n<li>Let <b>L</b> be the number of contiguous <b>^</b> to the left of <b>X</b>, in the same row as <b>X</b>.</li>\r\n<li><b>R</b> be the number of contiguous <b>^</b> to the right of <b>X</b>, in the same row as <b>X</b>.</li>\r\n<li><b>T</b> be the number of contiguous <b>^</b> above <b>X</b>, in the same column as <b>X</b>.</li>\r\n<li><b>B</b> be the number of contiguous <b>^</b> below <b>X</b>, in the same column as <b>X</b>.</li>\r\n</ul>\r\n</p>\r\n<p>\r\nA cell <b>X</b> is said to be a <b>CPC</b> if there exists a prime number <b>P</b> such that <b>P \u2264 minimum of [L, R, T, B]</b>.</p>\r\n\r\n<p><b>Note:</b> While computing <b>L, R, T, B</b> for a cell <b>X</b>, you should not count the <b>^</b> of the cell <b>X</b>.</p>\r\n\r\n<p>Given a map, you have to tell Kirito the number of cells where monsters exist.</p>\r\n\r\n<b>Future</b>\r\n\r\n<p>If you are done with this task, go help Kirito with Stage 2 :-)</p>\r\n\r\n<h3>Input</h3>\r\n\r\n<p>The first line of the input contains an integer <strong>T</strong> denoting the number of test cases. The description of <strong>T</strong> test cases follows. Each case starts with a line containing two space separated integers <strong>R, C</strong> denoting the number of rows and columns in the map respectively. The next <strong>R</strong> lines contain <strong>C</strong> characters each, describing the map.</p>\r\n\r\n<h3>Output</h3>\r\n\r\n<p>For each test case, output a single line containing the number of cells where monsters exist.</p>\r\n\r\n<h3>Constraints</h3>\r\n\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 100</li>\r\n<li>1 \u2264 <b>R</b> \u2264 50</li>\r\n<li>1 \u2264 <b>C</b> \u2264 50</li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n5 5\r\n^^^^^\r\n^^^^^\r\n^^^^#\r\n^^^^^\r\n^^^^^\r\n5 7\r\n^^#^^^^\r\n^^#^#^#\r\n#^^^^^^\r\n^^#^^#^\r\n^^^^^^^\r\n\r\n<b>Output:</b>\r\n0\r\n1\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> There is no cell for which minimum of L, R, T, B is greater than some prime P.</p>\r\n<p><b>Example case 2.</b> The cell at [3, 4], (1-based indexing) is the only CPC.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<h3>Problem Statement</h3>\n\n<b>Past</b>\n\n<p>In the year of 2048, the Virtual Reality Massively Multiplayer Online Role-Playing Game (VRMMORPG), <strong>Code Art Online (CAO)</strong>, is released. With the Chef Gear, a virtual reality helmet that stimulates the user's five senses via their brain, players can experience and control their in-game characters with their minds.</p>\n\n<p>On August the 2nd, 2048, all the players log in for the first time, and subsequently discover that they are unable to log out. They are then informed by Code Master, the creator of CAO, that if they wish to be free, they must reach the second stage of the game.</p>\n\n<p>Kirito is a known star player of CAO. You have to help him log out.</p>\n\n<b>Present</b>\n<br /><i>Stage 1</i>\n\n<p>A map is described by a 2D grid of cells. Each cell is either labelled as a <b>#</b> or a <b>^</b>. <b>#</b> denotes a wall. A monster exists in a cell if the cell is not a wall and the cell is a <b>centre of Prime-Cross (CPC)</b>.\n</p><ul><li>Let <b>L</b> be the number of contiguous <b>^</b> to the left of <b>X</b>, in the same row as <b>X</b>.</li>\n<li><b>R</b> be the number of contiguous <b>^</b> to the right of <b>X</b>, in the same row as <b>X</b>.</li>\n<li><b>T</b> be the number of contiguous <b>^</b> above <b>X</b>, in the same column as <b>X</b>.</li>\n<li><b>B</b> be the number of contiguous <b>^</b> below <b>X</b>, in the same column as <b>X</b>.</li>\n</ul><p>\nA cell <b>X</b> is said to be a <b>CPC</b> if there exists a prime number <b>P</b> such that <b>P \u2264 minimum of [L, R, T, B]</b>.</p>\n\n<p><b>Note:</b> While computing <b>L, R, T, B</b> for a cell <b>X</b>, you should not count the <b>^</b> of the cell <b>X</b>.</p>\n\n<p>Given a map, you have to tell Kirito the number of cells where monsters exist.</p>\n\n<b>Future</b>\n\n<p>If you are done with this task, go help Kirito with Stage 2 :-)</p>\n\n<h3>Input</h3>\n\n<p>The first line of the input contains an integer <strong>T</strong> denoting the number of test cases. The description of <strong>T</strong> test cases follows. Each case starts with a line containing two space separated integers <strong>R, C</strong> denoting the number of rows and columns in the map respectively. The next <strong>R</strong> lines contain <strong>C</strong> characters each, describing the map.</p>\n\n<h3>Output</h3>\n\n<p>For each test case, output a single line containing the number of cells where monsters exist.</p>\n\n<h3>Constraints</h3>\n\n<ul><li>1 \u2264 <b>T</b> \u2264 100</li>\n<li>1 \u2264 <b>R</b> \u2264 50</li>\n<li>1 \u2264 <b>C</b> \u2264 50</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n5 5\n^^^^^\n^^^^^\n^^^^#\n^^^^^\n^^^^^\n5 7\n^^#^^^^\n^^#^#^#\n#^^^^^^\n^^#^^#^\n^^^^^^^",
+        "output": "0\n1",
+        "explanation": "<p><b>Example case 1.</b> There is no cell for which minimum of L, R, T, B is greater than some prime P.</p>\n<p><b>Example case 2.</b> The cell at [3, 4], (1-based indexing) is the only CPC.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 3167,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kaush_adm",
+  "problem_display_authors": [
+    "kaush_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kaush_adm'>kaush_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "xcwgf666"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/xcwgf666'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>xcwgf666</span></a></div>",
+  "problem_editorialist": "utkarsh_lath",
+  "date_added": "16-07-2013",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1488",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610654
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CAOS1",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

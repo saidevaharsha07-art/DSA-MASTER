@@ -1,0 +1,140 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFZOT",
+  "contest_category": "6",
+  "problem_name": "Chef and Subarray",
+  "intended_contest_code": "JUNE14",
+  "body": "<p></p>\r\n<p>Chef loves research! Now he is looking for subarray of maximal length with non-zero product.</p>\r\n<p>Chef has an array <b>A</b> with <b>N</b> elements: <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b>. </b>\r\n<p>Subarray <b>A<sub>ij</sub></b> of array <b>A</b> is elements from index <b>i</b> to index <b>j</b>: <b>A<sub>i</sub></b>, <b>A<sub>i+1</sub></b>, ..., <b>A<sub>j</sub></b>. </p>\r\n<p>Product of subarray <b>A<sub>ij</sub></b> is product of all its elements (from <b>i<sub>th</sub></b> to <b>j<sub>th</sub></b>). </p>\r\n<p></p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>First line contains sinlge integer <b>N</b> denoting the number of elements.</li>\r\n<li>Second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the elements of array. </li>\r\n</ul>\r\n<p>\u00a0</p>\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n<li>In a single line print single integer - the maximal length of subarray with non-zero product. </li>\r\n</ul>\r\n<p>\u00a0</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>100000</b></li>\r\n<li><b>0</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10000</b></li>\r\n</ul>\r\n<p>\u00a0</p>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n6\r\n1 0 2 3 0 4\r\n\r\n<b>Output:</b>\r\n2\r\n\r\n<b>Input:</b>\r\n1\r\n0\r\n\r\n<b>Output:</b>\r\n0\r\n\r\n<b>Input:</b>\r\n3\r\n1 0 1\r\n\r\n<b>Output:</b>\r\n1\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n<p>For the first sample subarray is: {2, 3}. </p>\r\n<p>For the second sample there are no subbarays with non-zero product. </p>\r\n<p>For the third sample subbarays is {1}, (the first element, or the third one). </p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p></p>\n<p>Chef loves research! Now he is looking for subarray of maximal length with non-zero product.</p>\n<p>Chef has an array <b>A</b> with <b>N</b> elements: <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b>. \n</p><p>Subarray <b>A<sub>ij</sub></b> of array <b>A</b> is elements from index <b>i</b> to index <b>j</b>: <b>A<sub>i</sub></b>, <b>A<sub>i+1</sub></b>, ..., <b>A<sub>j</sub></b>. </p>\n<p>Product of subarray <b>A<sub>ij</sub></b> is product of all its elements (from <b>i<sub>th</sub></b> to <b>j<sub>th</sub></b>). </p>\n<p></p>\n\n<h3>Input</h3>\n<ul><li>First line contains sinlge integer <b>N</b> denoting the number of elements.</li>\n<li>Second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the elements of array. </li>\n</ul><p>\u00a0</p>\n\n<h3>Output</h3>\n<ul><li>In a single line print single integer - the maximal length of subarray with non-zero product. </li>\n</ul><p>\u00a0</p>\n\n<h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>N</b> \u2264 <b>100000</b></li>\n<li><b>0</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10000</b></li>\n</ul><p>\u00a0</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "6\n1 0 2 3 0 4",
+        "output": "2",
+        "explanation": "<p>For the first sample subarray is: {2, 3}. </p>",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "1\n0",
+        "output": "0",
+        "explanation": "<p>For the second sample there are no subbarays with non-zero product. </p>",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "3\n1 0 1",
+        "output": "1",
+        "explanation": "<p>For the third sample subbarays is {1}, (the first element, or the third one). </p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 5845,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "berezin",
+  "problem_display_authors": [
+    "berezin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/berezin'>berezin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "shiplu"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/shiplu'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>shiplu</span></a></div>",
+  "problem_editorialist": "dpraveen",
+  "date_added": "18-03-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Subarray"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Groupings"
+  ],
+  "difficulty_rating": "1191",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610676
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFZOT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 17,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

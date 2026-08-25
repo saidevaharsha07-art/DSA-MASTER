@@ -1,0 +1,132 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "NOTIME",
+  "contest_category": "6",
+  "problem_name": "No Time to Wait",
+  "intended_contest_code": "MARCH21",
+  "body": "\r\nOnly $x$ hours are left for the March Long Challenge and Chef is only left with the last problem unsolved. However, he is sure that he cannot solve the problem in the remaining time. From experience, he figures out that he needs exactly $H$ hours to solve the problem. \r\n\r\nNow Chef finally decides to use his special power which he has gained through years of intense yoga. He can travel back in time when he concentrates. Specifically, his power allows him to travel to $N$ different time zones, which are $T_1, T_2, \\ldots, T_N$ hours respectively behind his current time.\r\n\r\nFind out whether Chef can use one of the available time zones to solve the problem and submit it before the contest ends.\r\n\r\n### Input\r\n- The first line of the input contains three space-separated integers $N$, $H$ and $x$.\r\n- The second line contains $N$ space-separated integers $T_1, T_2, \\ldots, T_N$.\r\n\r\n### Output\r\nPrint a single line containing the string `\"YES\"` if Chef can solve the problem on time or `\"NO\"` if he cannot.\r\n\r\nYou may print each character of each string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\r\n\r\n### Constraints\r\n- $1 \\leq N \\leq 100$\r\n- $1 \\leq x \\lt H \\leq 100$\r\n- $1 \\leq T_i \\leq 100$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n### Example Input 1\r\n```\r\n2 5 3\r\n1 2\r\n```\r\n\r\n### Example Output 1\r\n```\r\nYES\r\n```\r\n\r\n### Explanation\r\nChef already has $3$ hours left. He can go to the $2$-nd time zone, which is $2$ hours back in time. Then he has a total of $3 + 2 = 5$ hours, which is sufficient to solve the problem.\r\n\r\n### Example Input 2\r\n```\r\n2 6 3\r\n1 2\r\n```\r\n\r\n### Example Output 2\r\n```\r\nNO\r\n```\r\n\r\n### Explanation\r\nIf Chef goes to the $1$-st time zone, he will have $3 + 1 = 4$ hours, which is insufficient to solve the problem.\r\n\r\nIf he goes to the $2$-nd time zone, he will have $3 + 2 = 5$ hours, which is also insufficient to solve the problem.\r\n\r\nSince none of the time travel options can be used to gain sufficient time to solve the problem, Chef is incapable of solving it.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nOnly $x$ hours are left for the March Long Challenge and Chef is only left with the last problem unsolved. However, he is sure that he cannot solve the problem in the remaining time. From experience, he figures out that he needs exactly $H$ hours to solve the problem. \n\nNow Chef finally decides to use his special power which he has gained through years of intense yoga. He can travel back in time when he concentrates. Specifically, his power allows him to travel to $N$ different time zones, which are $T_1, T_2, \\ldots, T_N$ hours respectively behind his current time.\n\nFind out whether Chef can use one of the available time zones to solve the problem and submit it before the contest ends.\n\n### Input\n- The first line of the input contains three space-separated integers $N$, $H$ and $x$.\n- The second line contains $N$ space-separated integers $T_1, T_2, \\ldots, T_N$.\n\n### Output\nPrint a single line containing the string `\"YES\"` if Chef can solve the problem on time or `\"NO\"` if he cannot.\n\nYou may print each character of each string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\n\n### Constraints\n- $1 \\leq N \\leq 100$\n- $1 \\leq x \\lt H \\leq 100$\n- $1 \\leq T_i \\leq 100$ for each valid $i$\n\n### Subtasks\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2 5 3\n1 2",
+        "output": "YES",
+        "explanation": "Chef already has $3$ hours left. He can go to the $2$-nd time zone, which is $2$ hours back in time. Then he has a total of $3 + 2 = 5$ hours, which is sufficient to solve the problem.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "2 6 3\n1 2",
+        "output": "NO",
+        "explanation": "If Chef goes to the $1$-st time zone, he will have $3 + 1 = 4$ hours, which is insufficient to solve the problem.\n\nIf he goes to the $2$-nd time zone, he will have $3 + 2 = 5$ hours, which is also insufficient to solve the problem.\n\nSince none of the time travel options can be used to gain sufficient time to solve the problem, Chef is incapable of solving it.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 86692,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "4-03-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "932",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611117
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=NOTIME",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 22,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

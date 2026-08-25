@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BNSONSTR",
+  "contest_category": "6",
+  "problem_name": "Binary String on Steroids",
+  "intended_contest_code": "COOK130",
+  "body": "\nA circular binary string is called *good* if it contains at least one character '1' and there is an integer $d$ such that for each character '1', the distance to the nearest character '1' clockwise is $d$.\n\nYou are given a circular binary string $S$ with length $N$. You may choose some characters in this string and flip them (i.e. change '1' to '0' or vice versa). Convert the given string into a good string by flipping the smallest possible number of characters.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains a single string $S$ with length $N$.\n\n### Output\nPrint a single line containing one integer \u2015 the minimum number of flips required to transform the initial string into a good string.\n\n### Constraints\n- $1 \\leq T \\leq 100$\n- $1 \\leq N \\leq 5 \\cdot 10^5$\n- $S$ contains only characters '0' and '1'\n- the sum of $N$ over all test cases does not exceed $5 \\cdot 10^5$\n\n### Example Input\n```\n2\n6\n110011\n4\n0001\n```\n\n### Example Output\n```\n2\n0\n```\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nA circular binary string is called *good* if it contains at least one character '1' and there is an integer $d$ such that for each character '1', the distance to the nearest character '1' clockwise is $d$.\n\nYou are given a circular binary string $S$ with length $N$. You may choose some characters in this string and flip them (i.e. change '1' to '0' or vice versa). Convert the given string into a good string by flipping the smallest possible number of characters.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains a single string $S$ with length $N$.\n\n### Output\nPrint a single line containing one integer \u2015 the minimum number of flips required to transform the initial string into a good string.\n\n### Constraints\n- $1 \\leq T \\leq 100$\n- $1 \\leq N \\leq 5 \\cdot 10^5$\n- $S$ contains only characters '0' and '1'\n- the sum of $N$ over all test cases does not exceed $5 \\cdot 10^5$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n6\n110011\n4\n0001",
+        "output": "2\n0",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 91325,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "prasant21",
+  "problem_display_authors": [
+    "prasant21"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/prasant21'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>prasant21</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "18-06-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "cook130",
+    "easy",
+    "prasant21"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1930",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610643
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BNSONSTR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

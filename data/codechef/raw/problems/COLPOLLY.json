@@ -1,0 +1,125 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COLPOLLY",
+  "contest_category": "6",
+  "problem_name": "What is this, a crossover episode",
+  "intended_contest_code": null,
+  "body": "You are given a simple polygon (that is, its edges don't intersect with each other, apart from touching at the vertices) with $n$ vertices. The vertices are numbered, in clockwise order, as $1, 2, \\ldots, n$. Additionally, there are $m$ non-intersecting chords within the polygon. Note however that chords can touch each other at a vertex of the polygon. A chord is defined to be a line segment connecting two vertices of the polygon and which remains completely inside the polygon.\r\n\r\nConsidering it as a graph, there will be $n$ edges of the polygon, and $m$ extra chords, i.e. $n+m$ edges overall. Find a minimum coloring of the vertices, such that no two adjacent vertices have same color.\r\n\r\n###Input:\r\n\r\n- The first line will contain two space separated integers, $n$ and $m$, denoting the number of vertices and the number of chords respectively.\r\n- The next $m$ lines contain $2$ space separated integers, $x$ and $y$, denoting a chord between vertices $x$ and $y$. \r\n\r\nIt is guaranteed that there exists a simple polygon where all chords lie within the polygon and no $2$ chords intersect.\r\n\r\n###Output:\r\n- In the first line, print $k$, the number of colors you will be using to color the polygon's vertices.\r\n- Then in a new line, print $n$ space separated integers, $c_1, c_2, \\ldots, c_n$, where $c_i$ is the color of the $i^{th}$ vertex. You should ensure that $1 \\leq c_i \\leq k$.\r\n- You should use the minimum possible number of colors. If there are multiple solutions, print any one.\r\n\r\n###Constraints \r\n- $3 \\leq n \\leq 10000$\r\n- $0 \\leq m \\leq n - 3$\r\n- $1 \\leq x, y \\leq n$\r\n\r\n###Sample Input:\r\n\t4 1\r\n\t1 3\r\n\r\n###Sample Output:\r\n\t3\r\n\t1 2 3 2\r\n\t\r\n###Explanation:\r\nAll adjacent node pairs are: [1, 2] [2, 3] [3, 4] [4, 1] [1, 3]. It can be seen that no $2$ adjacent nodes have same color, and can be proven that we cannot do it in $2$ colors.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $3 \\leq n \\leq 10000$\n- $0 \\leq m \\leq n - 3$\n- $1 \\leq x, y \\leq n$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a simple polygon (that is, its edges don't intersect with each other, apart from touching at the vertices) with $n$ vertices. The vertices are numbered, in clockwise order, as $1, 2, \\ldots, n$. Additionally, there are $m$ non-intersecting chords within the polygon. Note however that chords can touch each other at a vertex of the polygon. A chord is defined to be a line segment connecting two vertices of the polygon and which remains completely inside the polygon.\n\nConsidering it as a graph, there will be $n$ edges of the polygon, and $m$ extra chords, i.e. $n+m$ edges overall. Find a minimum coloring of the vertices, such that no two adjacent vertices have the same color.\n",
+    "inputFormat": "- The first line will contain two space-separated integers, $n$ and $m$, denoting the number of vertices and the number of chords respectively.\n- The next $m$ lines contain $2$ space-separated integers, $x$ and $y$, denoting a chord between vertices $x$ and $y$.\n\nIt is guaranteed that there exists a simple polygon where all chords lie within the polygon and no $2$ chords intersect.\n",
+    "inputFormatState": true,
+    "outputFormat": "- In the first line, print $k$, the number of colors you will be using to color the polygon's vertices.\n- Then in a new line, print $n$ space-separated integers, $c_1, c_2, \\ldots, c_n$, where $c_i$ is the color of the $i^{th}$ vertex. You should ensure that $1 \\leq c_i \\leq k$.\n- You should use the minimum possible number of colors. If there are multiple solutions, print any one.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4 1\n1 3\n",
+        "output": "3\n1 2 3 2\n",
+        "explanation": "All adjacent node pairs are: [1, 2], [2, 3], [3, 4], [4, 1], [1, 3]. It can be seen that no two adjacent nodes have the same color, and it can be proven that we cannot do it in $2$ colors.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "evil999man",
+  "problem_display_authors": [
+    "evil999man"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/evil999man'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>evil999man</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "21-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Graphs",
+    "Sets",
+    "Randomized Algorithms"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Advanced Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610697
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COLPOLLY",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

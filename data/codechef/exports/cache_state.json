@@ -1,0 +1,432 @@
+{
+  "completed_slugs": {
+    "arrays-new": {
+      "slug": "arrays-new",
+      "title": "Practice Arrays",
+      "section": "Beginner DSA",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "matrices": {
+      "slug": "matrices",
+      "title": "2D Array / Matrices",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "basic-math": {
+      "slug": "basic-math",
+      "title": "Practice Basic Math",
+      "section": "Beginner DSA",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "strings-new": {
+      "slug": "strings-new",
+      "title": "Practice Strings",
+      "section": "Beginner DSA",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "stacks-and-queues-new": {
+      "slug": "stacks-and-queues-new",
+      "title": "Practice Stacks and Queues",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "sorting-new": {
+      "slug": "sorting-new",
+      "title": "Practice Sorting",
+      "section": "Beginner DSA",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "heaps": {
+      "slug": "heaps",
+      "title": "Heaps",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "linked-lists-new": {
+      "slug": "linked-lists-new",
+      "title": "Practice Linked Lists",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:42"
+    },
+    "strings-intermediate": {
+      "slug": "strings-intermediate",
+      "title": "Practice Strings - Intermediate",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "greedy-algorithms": {
+      "slug": "greedy-algorithms",
+      "title": "Greedy Algorithms",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "arrays-intermediate": {
+      "slug": "arrays-intermediate",
+      "title": "Intermediate Arrays and 2D Arrays",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "arrays-strings-sorting": {
+      "slug": "arrays-strings-sorting",
+      "title": "Arrays, Strings & Sorting",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "number-theory": {
+      "slug": "number-theory",
+      "title": "Number theory",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "binary-search-new": {
+      "slug": "binary-search-new",
+      "title": "Practice Binary Search",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "dynamic-programming": {
+      "slug": "dynamic-programming",
+      "title": "Dynamic programming",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "dsa-challenges": {
+      "slug": "dsa-challenges",
+      "title": "Monday Munch - DSA Challenge practice series",
+      "section": "Data Structures",
+      "updated_at": "2026-08-02 00:25:44"
+    },
+    "bit-manipulation": {
+      "slug": "bit-manipulation",
+      "title": "Bit manipulation",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:45"
+    },
+    "prefix-sums": {
+      "slug": "prefix-sums",
+      "title": "Prefix Sum Problems",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:45"
+    },
+    "two-pointers-new": {
+      "slug": "two-pointers-new",
+      "title": "Two Pointers and Sliding Window Technique",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:45"
+    },
+    "2-star-difficulty-problems": {
+      "slug": "2-star-difficulty-problems",
+      "title": "1400 to 1600 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:46"
+    },
+    "basic-programming-concepts": {
+      "slug": "basic-programming-concepts",
+      "title": "500 difficulty rating",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:46"
+    },
+    "arrays-strings-advanced": {
+      "slug": "arrays-strings-advanced",
+      "title": "Advanced Arrays and Strings",
+      "section": "Algorithms",
+      "updated_at": "2026-08-02 00:25:46"
+    },
+    "logical-problems": {
+      "slug": "logical-problems",
+      "title": "500 to 1000 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:46"
+    },
+    "1-star-difficulty-problems": {
+      "slug": "1-star-difficulty-problems",
+      "title": "1000 to 1400 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:46"
+    },
+    "3-star-difficulty-problems": {
+      "slug": "3-star-difficulty-problems",
+      "title": "1600 to 1800 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:47"
+    },
+    "5-star-and-above-problems": {
+      "slug": "5-star-and-above-problems",
+      "title": "2000 to 2500 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:47"
+    },
+    "4-star-difficulty-problems": {
+      "slug": "4-star-difficulty-problems",
+      "title": "1800 to 2000 difficulty problems",
+      "section": "Difficulty Rating Wise",
+      "updated_at": "2026-08-02 00:25:47"
+    },
+    "1to2stars": {
+      "slug": "1to2stars",
+      "title": "Level up from 1* to 2*",
+      "section": "Star Wise Paths",
+      "updated_at": "2026-08-02 00:25:47"
+    },
+    "2to3stars": {
+      "slug": "2to3stars",
+      "title": "Jump from 2* to 3*",
+      "section": "Star Wise Paths",
+      "updated_at": "2026-08-02 00:25:47"
+    },
+    "python-interview-questions": {
+      "slug": "python-interview-questions",
+      "title": "Python Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "3to4stars": {
+      "slug": "3to4stars",
+      "title": "Rise from 3* to 4*",
+      "section": "Star Wise Paths",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "java-interview-questions": {
+      "slug": "java-interview-questions",
+      "title": "Java Interview Questions for Freshers",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "javascript-interview-questions": {
+      "slug": "javascript-interview-questions",
+      "title": "Top JavaScript Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "sql-interview-questions": {
+      "slug": "sql-interview-questions",
+      "title": "Top SQL Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "cpp-interview-questions": {
+      "slug": "cpp-interview-questions",
+      "title": "C++ Interview Questions and Answers",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:48"
+    },
+    "react-interview-questions": {
+      "slug": "react-interview-questions",
+      "title": "React Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:49"
+    },
+    "react-advanced": {
+      "slug": "react-advanced",
+      "title": "React Advanced Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:49"
+    },
+    "interview-dsa": {
+      "slug": "interview-dsa",
+      "title": "Data Structures Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:49"
+    },
+    "operating-systems": {
+      "slug": "operating-systems",
+      "title": "Operating systems Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:49"
+    },
+    "interview-dbms": {
+      "slug": "interview-dbms",
+      "title": "Top DBMS Interview Questions",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:49"
+    },
+    "java-development-interview": {
+      "slug": "java-development-interview",
+      "title": "Java Developer Interview Preparation",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:50"
+    },
+    "python-development-interview": {
+      "slug": "python-development-interview",
+      "title": "Python Developer Interview Preparation",
+      "section": "Interview Questions",
+      "updated_at": "2026-08-02 00:25:50"
+    },
+    "sql-case-study": {
+      "slug": "sql-case-study",
+      "title": "SQL case studies",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:50"
+    },
+    "r": {
+      "slug": "r",
+      "title": "Practice R Programming",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "rust": {
+      "slug": "rust",
+      "title": "Practice Rust",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "go": {
+      "slug": "go",
+      "title": "Practice Go",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "c-sharp": {
+      "slug": "c-sharp",
+      "title": "Practice C#",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "zco-inoi-problems": {
+      "slug": "zco-inoi-problems",
+      "title": "Practice for ZCO and INOI",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "pandas": {
+      "slug": "pandas",
+      "title": "Pandas - Practice problems",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:51"
+    },
+    "numpy": {
+      "slug": "numpy",
+      "title": "Practice NumPy - Coding Problems and Challenges",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "icpc": {
+      "slug": "icpc",
+      "title": "Prepare for ICPC - Past Year Problems",
+      "section": "Other Practice Paths",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "amazon-interview-questions": {
+      "slug": "amazon-interview-questions",
+      "title": "Amazon Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "microsoft-interview-questions": {
+      "slug": "microsoft-interview-questions",
+      "title": "Microsoft Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "google-interview-questions": {
+      "slug": "google-interview-questions",
+      "title": "Google Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "flipkart-interview-questions": {
+      "slug": "flipkart-interview-questions",
+      "title": "Flipkart Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "adobe-interview-questions": {
+      "slug": "adobe-interview-questions",
+      "title": "Adobe Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:52"
+    },
+    "tcs-interview-questions": {
+      "slug": "tcs-interview-questions",
+      "title": "TCS Codevita Problems",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:53"
+    },
+    "tcs-nqt-questions": {
+      "slug": "tcs-nqt-questions",
+      "title": "TCS NQT Coding Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:53"
+    },
+    "nutanix-interview-questions": {
+      "slug": "nutanix-interview-questions",
+      "title": "Nutanix Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:53"
+    },
+    "junglee-games-interview-questions": {
+      "slug": "junglee-games-interview-questions",
+      "title": "Junglee Games Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:53"
+    },
+    "visa-interview-questions": {
+      "slug": "visa-interview-questions",
+      "title": "Visa Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "phonepe-interview-questions": {
+      "slug": "phonepe-interview-questions",
+      "title": "PhonePe Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "accolite-interview-questions": {
+      "slug": "accolite-interview-questions",
+      "title": "Accolite Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "texas-interview-questions": {
+      "slug": "texas-interview-questions",
+      "title": "Texas Instruments Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "glean-interview-questions": {
+      "slug": "glean-interview-questions",
+      "title": "Glean Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "maxlinear-interview-questions": {
+      "slug": "maxlinear-interview-questions",
+      "title": "Maxlinear Coding Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:54"
+    },
+    "deloitte-nla": {
+      "slug": "deloitte-nla",
+      "title": "Deloitte NLA Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:55"
+    },
+    "wipro-elite-nth": {
+      "slug": "wipro-elite-nth",
+      "title": "WIPRO Elite Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:55"
+    },
+    "infosys-pyq": {
+      "slug": "infosys-pyq",
+      "title": "Infosys InfyTQ - Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:55"
+    },
+    "accenture-interview-questions": {
+      "slug": "accenture-interview-questions",
+      "title": "Accenture Interview Questions",
+      "section": "Company Based Questions",
+      "updated_at": "2026-08-02 00:25:55"
+    },
+    "python-coding-challenges": {
+      "slug": "python-coding-challenges",
+      "title": "Python Coding Challenges",
+      "section": "Advanced Coding Challenges",
+      "updated_at": "2026-08-02 00:25:55"
+    }
+  },
+  "total_paths": 71,
+  "completed_count": 71
+}

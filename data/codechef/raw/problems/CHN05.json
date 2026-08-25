@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN05",
+  "contest_category": "6",
+  "problem_name": "Malvika conducts a Programming Camp",
+  "intended_contest_code": null,
+  "body": "<p>\nAfter acquiring an extraordinary amount of knowledge through programming contests, Malvika decided to harness her expertise to train the next generation of Indian programmers. So, she decided to hold a programming camp. In the camp, she held a discussion session for <b>n</b> members (<b>n-1</b> students, and herself). They are sitting in a line from left to right numbered through <b>1</b> to <b>n</b>.\n</p>\n\n<p>\nMalvika is sitting in the <b>n</b><sup>th</sup> spot. She wants to teach <b>m</b> topics of competitive programming to the students. As the people taking part in the camp are all newbies, they know none of the topics being taught, i.e., initially, the first <b>n - 1</b> people in the line know none of the topics, while the <b>n</b><sup>th</sup> knows all of them.\n</p>\n\n<p>\nIt takes one hour for a person to learn a topic from his neighbour. Obviously, one person cannot both teach a topic as well as learn one during the same hour. That is, in any particular hour, a person can either teach a topic that he knows to one of his neighbors, or he can learn a topic from one of his neighbors, or he can sit idly. It is also obvious that if person x is learning from person y at a particular hour, then person y must be teaching person x at that hour.\n\nAlso, note that people can work parallely too, i.e., in the same hour when the 4<sup>th</sup> person is teaching the 3<sup>rd</sup> person, the 1<sup>st</sup> person can also teach the 2<sup>nd</sup> or learn from 2nd.\n</p>\n\n<p>\nFind out the minimum number of hours needed so that each person learns all the <b>m</b> topics.\n</p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of input contains a single integer <b>T</b> denoting number of test cases.</li>\n<li>The only line of each test case contains two space separated integers <b>n, m</b> as defined in the statement.</li>\n</ul>\n\n<h3>Output</h3>\n<ul>\n<li>For each test case, output a single integer in a line corresponding to the answer of the problem.</li>\n</ul>\n</ul>\n\n\n<h3>Constraints</h3>\n<ul>\n<li>1 &le; <b>T, n, m</b> &le; <b>100</b></li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n2 1\n3 2\n\n<b>Output:</b>\n1\n4\n</pre>\n\n<h3>Explanation</h3>\n<p><b>In the first example</b>, there are two people. Second person is Malvika and she has to teach only one topic to the first person. It will take only one hour to do so.\n</p>\n\n<p><b>In the second example</b>, there are three people. The 3rd person is Malvika and she has to teach only two topics to 1st and 2nd person. In the 1st hour, she teaches the 1st topic to the 2nd person. Now, in the 2nd hour, the 2nd person will teach the 1st topic to the 1st person. In the 3rd hour, Malvika will teach the 2nd topic to the 2nd person. Now the 2nd person will teach that topic to the 1st in the 4th hour. So, it takes a total of 4 hours for all the people to know all the topics.\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T, n, m \\leq 100$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "After acquiring an extraordinary amount of knowledge through programming contests, Malvika decided to harness her expertise to train the next generation of Indian programmers. So, she decided to hold a programming camp. In the camp, she held a discussion session for **n** members (**n-1** students, and herself). They are sitting in a line from left to right numbered through **1** to **n**.\n\nMalvika is sitting in the **n**<sup>th</sup> spot. She wants to teach **m** topics of competitive programming to the students. As the people taking part in the camp are all newbies, they know none of the topics being taught, i.e., initially, the first **n - 1** people in the line know none of the topics, while the **n**<sup>th</sup> knows all of them.\n\nIt takes one hour for a person to learn a topic from his neighbor. Obviously, one person cannot both teach a topic as well as learn one during the same hour. That is, in any particular hour, a person can either teach a topic that he knows to one of his neighbors, or he can learn a topic from one of his neighbors, or he can sit idly. It is also obvious that if person x is learning from person y at a particular hour, then person y must be teaching person x at that hour.\n\nAlso, note that people can work parallely too, i.e., in the same hour when the 4<sup>th</sup> person is teaching the 3<sup>rd</sup> person, the 1<sup>st</sup> person can also teach the 2<sup>nd</sup> or learn from 2nd.\n\nFind out the minimum number of hours needed so that each person learns all the **m** topics.\n",
+    "inputFormat": "- The first line of input contains a single integer **T** denoting the number of test cases.\n- The only line of each test case contains two space-separated integers **n, m** as defined in the statement.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output a single integer in a line corresponding to the answer of the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 1\n3 2\n",
+        "output": "1\n4\n",
+        "explanation": "**In the first example**, there are two people. The second person is Malvika and she has to teach only one topic to the first person. It will take only one hour to do so.\n\n**In the second example**, there are three people. The 3rd person is Malvika and she has to teach only two topics to the 1st and 2nd person. In the 1st hour, she teaches the 1st topic to the 2nd person. Now, in the 2nd hour, the 2nd person will teach the 1st topic to the 1st person. In the 3rd hour, Malvika will teach the 2nd topic to the 2nd person. Now the 2nd person will teach that topic to the 1st in the 4th hour. So, it takes a total of 4 hours for all the people to know all the topics.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-01-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "Greedy",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610678
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN05",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

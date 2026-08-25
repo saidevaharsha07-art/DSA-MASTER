@@ -1,0 +1,125 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MATRIXMEDIAN",
+  "contest_category": "6",
+  "problem_name": "Matrix Median",
+  "intended_contest_code": "DSAMONDAY003",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "1 \u2264 N,M \u2264 10^5\\\n1 \u2264 N\u00d7M \u2264 10^6\\\n1 \u2264 matrix[i][j] \u2264 10^9\\\nN * M is odd",
+    "constraintsState": false,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "You are given a **row-wise sorted 2D matrix** of size $N \\times M$. Your task is to find the **median** of the matrix.\n\nThe **median** is the middle element after sorting all elements of the matrix in **non-decreasing order**. It is guaranteed that $N \\times M$ is **odd**, so the median always exists.\n\n## Function Declaration\n\n### Function Name\n\n$findMedian$ \u2013 This function finds the median of a row-wise sorted matrix.\n\n### Parameters\n\n* $matrix$ : A 2D array of integers of size $N \\times M$, where each row is sorted in non-decreasing order.\n* $N$ : The number of rows in the matrix.\n* $M$ : The number of columns in the matrix.\n\n### Return Value\n\n* Returns a single integer \u2014 the **median** of the matrix.\n\n## Constraints\n\n* $1 \u2264 N, M \u2264 10^5$\n* $1 \u2264 N \\times M \u2264 10^6$\n* $1 \\leq matrix[i][j] \\leq 10^9$\n* $N \\times M$ is **odd**\n* Each row of the matrix is sorted in non-decreasing order",
+    "inputFormat": "The first line contains two space-separated integers $N$ and $M$, denoting the number of rows and columns of the matrix.\n\nEach of the next $N$ lines contains $M$ space-separated integers, denoting the elements of the matrix.",
+    "inputFormatState": true,
+    "outputFormat": "Print a single integer \u2014 the **median** of the matrix.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3 3\n1 4 9\n2 5 6\n3 7 8\n",
+        "output": "5",
+        "explanation": "If we flatten and sort the matrix, we get:\\\n`1 2 3 4 5 6 7 8 9`\nThe middle element is `5`, which is the median.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "3 3\n10 20 30\n5 15 25\n1 2 3\n",
+        "output": "10",
+        "explanation": "Flattened array: `[10, 20, 30, 5, 15, 25, 1, 2, 3]` -> sorted `[1, 2, 3, 5, 10, 15, 20, 25, 30]`. Median = `10`.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "##  Problem Understanding\n\nYou are given a row-wise sorted matrix of size `N \u00d7 M`.\\\nYou need to find the **median** of all the elements when the matrix is flattened and sorted.\n\nSince `N * M` is **odd**, the median always exists and is the **(N\u00d7M+1)/2**-th smallest element.\n\n---  \n\n##  Intuition\n\nEach row is sorted \u2192 we can use **binary search** inside a row to count how many elements are \u2264 a given value.\n\nInstead of merging or sorting all elements (which is costly for large matrices),\nwe can **binary search on the value range** (from global min to global max).\n\n---  \n\n##  Approach\n\n**Find the minimum and maximum** elements:\n\n- `min = smallest first element of rows`\n\n- `max = largest last element of rows`\n\nUse **binary search** on the value range `[min, max]`:\n\n- For each mid-value:\n\n   - Count total elements \u2264 mid in all rows (using binary search per row).\n\n   - If the count is less than desired position `(N*M + 1)/2`, move right (`min = mid + 1`)\n\n   - Otherwise, move left (`max = mid`)\n\nWhen `min == max`, that is the **median**.\n\n---  \n\n##  Complexity Analysis\n\n**Time Complexity**:\nO(N \u00d7 log M \u00d7 log (MaxVal \u2212 MinVal))\n\n**Space Complexity**:\nO(1)",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, CAML",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mayank_pardhi",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-09-2025",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "mayank_pardhi"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1779118200,
+    "submit_start_date": 1779118200,
+    "visible_start_date": 1779118200,
+    "end_date": 1893436200,
+    "current": 1785611060
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MATRIXMEDIAN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

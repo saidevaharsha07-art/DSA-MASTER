@@ -1,0 +1,123 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN07",
+  "contest_category": "6",
+  "problem_name": "Malvika and Animesh play Red-Blue cards Game",
+  "intended_contest_code": null,
+  "body": "<p>After 2 hours of Mathematics and chill, Malvika and Animesh got bored of solving problems and decided to play a game. They have <b>n</b> cards with them, each of which is red on one side and blue on the other. They initially put them in a row, from left to right. They then takes turns, with Malvika going first. \n</p>\n\n<p>\nIn a single turn, the player should choose a card which has its red face up. The player also chooses zero or more consecutive blue faced cards, with the sequence starting immediately on the right of the chosen red card. All the chosen cards are then flipped. That is, the red faced card will now be blue. The zero or more blue faced cards will now be red. Then the turn ends, and it's the other player's turn.\n</p>\n\n<p>\nYou will be given the initial arrangement of the <b>n</b> cards as a string of R's and B's, which imply red facing-up and blue facing-up, respectively. They will be given in order, from left to right.\n</P>\n\n<p>\nThe player who is not able to make any move in his/her turn loses. Find out the winner, assuming that both Malvika and Animesh play optimally.\n</p>\n\n\n<h3>Input</h3>\n<ul>\n<li>The first line of input contains a single integer <b>T</b> denoting the number of test cases.</li>\n<li>The only line of each test case contains a string of 'R's and 'B's.</li>\n</ul>\n\n<h3>Output</h3>\n<ul>\n<li>For each test case, output a single line. It should be \"Malvika\" (without quotes) if Malvika is the winner, and \"Animesh\" (without quotes) if Animesh is the winner.</li>\n</ul>\n</ul>\n\n\n<h3>Constraints</h3>\n<ul>\n<li>1 &le; <b>T</b> &le; <b>100</sup></b></li>\n<li>1 &le; <b>n</b> &le; <b>500</sup></b>, where <b>n</b> refers to the length of each string.</li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\nR\nBB\n\n<b>Output:</b>\nMalvika\nAnimesh\n</pre>\n\n<h3>Explanation</h3>\n<p><b>In the first example</b>, Malvika will flip the red faced card in the first move, so it will now be blue faced. Now Animesh can't make any move, so he will lose. Hence Malvika is the winner.\n</p>\n\n<p><b>In the second example</b>, Malvika can not make any move in the first turn itself, and therefore she loses. Hence Animesh is the winner.\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 100$\n- $1 \\le n \\le 500$, where **n** refers to the length of each string.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "After 2 hours of Mathematics and chill, Malvika and Animesh got bored of solving problems and decided to play a game. They have **n** cards with them, each of which is red on one side and blue on the other. They initially put them in a row, from left to right. They then take turns, with Malvika going first.\n\nIn a single turn, the player should choose a card which has its red face up. The player also chooses zero or more consecutive blue faced cards, with the sequence starting immediately on the right of the chosen red card. All the chosen cards are then flipped. That is, the red faced card will now be blue. The zero or more blue faced cards will now be red. Then the turn ends, and it's the other player's turn.\n\nYou will be given the initial arrangement of the **n** cards as a string of R's and B's, which imply red facing-up and blue facing-up, respectively. They will be given in order, from left to right.\n\nThe player who is not able to make any move in his/her turn loses. Find out the winner, assuming that both Malvika and Animesh play optimally.\n",
+    "inputFormat": "- The first line of input contains a single integer **T** denoting the number of test cases.\n- The only line of each test case contains a string of 'R's and 'B's.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output a single line. It should be \"Malvika\" (without quotes) if Malvika is the winner, and \"Animesh\" (without quotes) if Animesh is the winner.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\nR\nBB\n",
+        "output": "Malvika\nAnimesh\n",
+        "explanation": "**In the first example**, Malvika will flip the red faced card in the first move, so it will now be blue faced. Now Animesh can't make any move, so he will lose. Hence Malvika is the winner.\n\n**In the second example**, Malvika can not make any move in the first turn itself, and therefore she loses. Hence Animesh is the winner.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15CHN/problems/CHN07\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/???\" rel=\"nofollow noopener\">???</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a>, <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Game theory</p>\n<h3>PROBLEM:</h3>\n<p>A game is played on a string of length <span class=\"math\">n</span> consisting of <code>R</code>s and <code>B</code>s. In a turn, an <code>R</code> is selected, along with zero or more consecutive <code>B</code>s immediately to the right of it. Then all these letters are flipped. A player loses if there are no more valid moves (i.e. no more <code>R</code>s). Which player wins?</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Replace all <code>B</code>s with <span class=\"math\">0</span> s and <code>R</code>s with <span class=\"math\">1</span> s, and interpret the string as a binary number. If this number is divisible by <span class=\"math\">3</span>, then the second player wins. Otherwise, the first player wins.</p>\n<h3>EXPLANATION:</h3>\n<p>If you didn\u2019t catch the simple solution, you might have instead tried to brute-force all instances of the problem for small <span class=\"math\">n</span>, and found that <em>there is always a winning move flipping just the leftmost <code>R</code>, the letter immediately right of it, or both</em>. With this observation, you might be able to find an <span class=\"math\">O(n)</span> dynamic programming solution, and it passes the time limit. However, there is in fact a nicer solution than this.</p>\n<p>First, replace all <code>B</code>s with <span class=\"math\">0</span> s and <code>R</code>s with <span class=\"math\">1</span> s, and interpret the string as a binary number, <span class=\"math\">X</span>.</p>\n<p>An example of a valid move is to replace a <span class=\"math\">1</span> with a <span class=\"math\">0</span>, and then replacing some number of zeroes to the right of it with a <span class=\"math\">1</span>. Since this is a binary number, the place value of the <span class=\"math\">1</span> is <span class=\"math\">2^k</span> for some <span class=\"math\">k</span>, and the <span class=\"math\">0</span> s to the right of it have place values <span class=\"math\">2^{k-1}, 2^{k-2}, \\ldots, 2^m</span> for some <span class=\"math\">m</span>. A move in effect decreases the value of our number by</p>\n<div class=\"math\">\n2^k - 2^{k-1} - 2^{k-2} - 2^{k-3} - \\ldots - 2^m\n</div>\n<p>which is just equal to <span class=\"math\">2^m</span>. (Why?) Thus, a valid move consists of subtracting a number <span class=\"math\">2^m \\le X</span>. It can also be seen that subtracting <em>any</em> power of two <span class=\"math\">\\le X</span> constitutes a valid move. The question is now: which numbers <span class=\"math\">X</span> are winning positions for the first player?</p>\n<p>A <em>losing position</em> is a position such that every move results in a winning position. A <em>winning position</em> is a position such that there is a move resulting in a losing position. We must find a property that all winning positions, and only winning positions, have. Such a property must satisfy the following:</p>\n<ul>\n<li>\n<span class=\"math\">X = 0</span> doesn\u2019t have the property.</li>\n<li>If <span class=\"math\">X</span> doesn\u2019t have the property, then subtracting any power of two <span class=\"math\">\\le X</span> results in a number with the property.</li>\n<li>If <span class=\"math\">X</span> has the property, then there is a power of two <span class=\"math\">\\le X</span> you can subtract that results in a number without the property.</li>\n</ul>\n<p>It can be seen that the following property satisfies both requirements:</p>\n<p><strong><span class=\"math\">X</span> is not a multiple of <span class=\"math\">3</span></strong></p>\n<p>Obviously <span class=\"math\">X = 0</span> doesn\u2019t have this property (because it is a multiple of <span class=\"math\">3</span>). Now, if <span class=\"math\">X</span> is a multiple of <span class=\"math\">3</span>, then subtracting a power of two from it results in a number that is not a multiple by <span class=\"math\">3</span>, because no power of two is a multiple of <span class=\"math\">3</span>. But if <span class=\"math\">X</span> is not a multiple of <span class=\"math\">3</span>, then there are two cases:</p>\n<ul>\n<li>If <span class=\"math\">X \\bmod 3 = 1</span>, then we can subtract <span class=\"math\">2^0 = 1</span> from <span class=\"math\">X</span>.</li>\n<li>If <span class=\"math\">X \\bmod 3 = 2</span>, then we can subtract <span class=\"math\">2^1 = 2</span> from <span class=\"math\">X</span>.</li>\n</ul>\n<p>In both cases, the resulting number is a multiple of <span class=\"math\">3</span>. Thus, the property satisfies all requirements! So the solution is simply:</p>\n<p><strong>If <span class=\"math\">X</span> is divisible by <span class=\"math\">3</span>, then the second player wins. Otherwise, the first player wins.</strong></p>\n<p>Finally, checking whether <span class=\"math\">X</span> is a multiple of <span class=\"math\">3</span> can be done with the <em>Horner method</em> modulo <span class=\"math\">3</span>: (here we write <code>X[i]</code> as the <span class=\"math\">i</span> th bit of <span class=\"math\">X</span> <em>from the left</em>):</p>\n<pre><code>def is_multiple_of_3(X):\n    r = 0\n    for i in 1..n:\n        r = (2*r + X[i]) % 3\n    return r == 0\n</code></pre>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(n)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>[setter][333]<br>\n[tester][444]<br>\n[editorialist][555]</p>\n<p>[333]: The link is provided by admins after the contest ends and the solutions are uploaded on the CodeChef Server.<br>\n[444]: The link is provided by admins after the contest ends and the solutions are uploaded on the CodeChef Server.<br>\n[555]: The link is provided by admins after the contest ends and the solutions are uploaded on the CodeChef Server.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12126,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "15-01-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Mathematics",
+    "Game Theory"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/CHN07",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610679
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN07",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

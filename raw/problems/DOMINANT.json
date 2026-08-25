@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DOMINANT",
+  "contest_category": "6",
+  "problem_name": "Dominant Army",
+  "intended_contest_code": "START38",
+  "body": "This is an example statement in markdown. This is the statement of the problem [TANDC](https://codechef.com/problems/TANDC) on CodeChef. The main statement starts with the next paragraph. Please make sure to remove this paragraph from your statement before publishing your problem. If your problem doesn't contain Subtasks, you should remove the section subtask too. We are using markdown the syntax of which can be seen [at](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). We request you to not use any HTML tags in the statement, e.g. no p, ul, li, pre, br or b tags. If you face any issue, please contact admins or email us at help@codechef.com.\n\nTracy is teaching Charlie maths via a game called $N$-Cube, which involves three sections involving $N$.\n\nTracy gives Charlie a number $N$, and Charlie makes a list of $N$-th powers of integers in increasing order $1^N, 2^N, 3^N, \\dot, \\text{so on}$. This teaches him exponentiation.\n\nThen Charlie performs the following subtraction game $N$ times: Take all pairs of consecutive numbers in the list and take their difference. These differences then form the new list for the next iteration of the game. Eg, if $N$ was 6, the list proceeds as $[1, 64, 729, 4096 ... ]$ to $[63, 685, 3367 ...]$, and so on $5$ more times.\n\nAfter the subtraction game, Charlie has to correctly tell Tracy the $N$-th element of the list. This number is the *value of the game*.\n\nAfter practice Charlie became an expert in the game. To challenge him more, Tracy will give two numbers $M$ (where $M$ is a prime) and $R$ instead of just a single number $N$, and the game must start from $M_R - 1$ instead of $N$. Since the *value of the game* can now become large, Charlie just have to tell the largest integer $K$ such that $M_K$ divides this number. Since even $K$ can be large, output $K$ modulo 1000000007 ($10^9 + 7$).\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1000$\n- $1 \\leq N_A, N_B, N_C \\leq 100$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "In the medieval age, there were $3$ kingdoms $A$, $B$, and $C$. The army of these kingdom had $N_A$, $N_B$, and $N_C$ soldiers respectively.  \n\nYou are given that an army with $X$ soldiers can defeat an army with $Y$ soldiers only if $X \\gt Y$.\n\nAn army is said to be **dominant** if it can defeat both the other armies **combined**. For example, kingdom $C$'s army will be dominant only if $N_C > N_A + N_B$.\n\nDetermine whether any of the armies is **dominant** or not.",
+    "inputFormat": "- The first line contains a single integer $T$ - the number of test cases. Then the test cases follow.\n- The first and only line of each test case contains three integers $N_A$, $N_B$, and $N_C$ - the number of warriors in the armies of kingdoms $A$, $B$, and $C$ respectively.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output `YES` if any of the armies is dominant. Otherwise, output `NO`.\n\nYou may print each character of `YES` and `NO` in uppercase or lowercase (for example, `yes`, `yEs`, `Yes` will be considered identical).\n\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n15 5 6\n12 13 16\n1 1 100\n10 10 20\n",
+        "output": "YES\nNO\nYES\nNO\n",
+        "explanation": "**Test case $1$:** The kingdom $A$'s army is dominant since $15 > 5 + 6$.\n\n**Test case $2$:** We can observe that none of the armies is dominant.\n\n**Test case $3$:** The kingdom $C$'s army is dominant since $100 > 1 + 1$.\n\n**Test case $4$:** We can observe that none of the armies is dominant. Note that the kingdom $C$'s army is not dominant since $20 \\le 10 + 10$.\n\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 101061,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "jeevanjyot",
+  "problem_display_authors": [
+    "jeevanjyot"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jeevanjyot'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>jeevanjyot</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "10-05-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "488",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610790
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DOMINANT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 65,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

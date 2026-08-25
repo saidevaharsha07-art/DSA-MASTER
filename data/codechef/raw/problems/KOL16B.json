@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16B",
+  "contest_category": "6",
+  "problem_name": "Extreme Encoding",
+  "intended_contest_code": null,
+  "body": "<p>Lajuk is a little girl who loves playing with array. In her 10th birthday, she got two arrays as presents. Let\u2019s call them <b>A</b> and <b>B</b>. Both arrays have the same size <b>n</b> and contains integers between <b>0</b> to <b>30000</b>.</p>\r\n\r\n<p>Lajuk\u2019s hard-drive is almost full of presents and she barely has any space to keep the arrays. She discovered a brilliant function to merge the array into one:\r\n<pre>\r\n\r\nint encodeInteger(int x, int n){\r\n\tn = n&lt;&lt;(1&lt;&lt;(1&lt;&lt;(1&lt;&lt;1)));\r\n\tx = x | n;\r\n\treturn x;\r\n}\r\nvoid encodeArray(int *A, int *B, int n){\r\n\tfor(int i=0;i&lt;n;i++) {\r\n    \t    A[i] = encodeInteger(A[i], B[i]);\r\n\t}\r\n}\r\n</pre>\r\n</p>\r\n\r\n<p>Lajuk passed <b>A</b> and <b>B</b> into the encodeArray function. After that she discarded array <b>B</b> and saved the modified version of array <b>A</b> in the hard-drive. </p>\r\n\r\n<p>Now in her 15th birthday Lajuk wants to play with those arrays again. She found the modified version of array A in the hard-drive but she forgot how to recover the original arrays from it. Being upset, she asked for your help. Can you help her to recover the original arrays?</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains <b>T (1 \u2264 T \u2264 100)</b>, the number of test cases. The first line of each test cases contains <b>n (1 \u2264  n \u2264  10<sup>4</sup>)</b>, the size of the array. Next <b>n</b> line contains <b>n</b> integers denoting the modified array <b>A</b>.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each case print the case number in the first line. In the second line, print n integers denoting the original array <b>A</b>. In the third line print n integers denoting the array <b>B</b>. Two consecutive  integers should be separated by a single space.</p>\r\n\r\n<h3>Sample </h3>\r\n<pre>\r\n<b>Input</b>\r\n1\r\n4\r\n196613\r\n655370\r\n196620\r\n131079\r\n\r\n<b>Output</b>\r\nCase 1:\r\n5 10 12 7\r\n3 10 3 2\r\n</pre>\r\n\r\n\r\n\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 100**\n- **1 \u2264 n \u2264 10<sup>4</sup>**\n- Each element in the modified array **A** is an integer between **0** and **30000**.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Lajuk is a little girl who loves playing with arrays. In her 10th birthday, she got two arrays as presents. Let\u2019s call them **A** and **B**. Both arrays have the same size **n** and contain integers between **0** to **30000**.\n\nLajuk\u2019s hard-drive is almost full of presents and she barely has any space to keep the arrays. She discovered a brilliant function to merge the array into one:\n\n```cpp\nint encodeInteger(int x, int n){\n    n = n<<(1<<(1<<(1<<1)));\n    x = x | n;\n    return x;\n}\nvoid encodeArray(int *A, int *B, int n){\n    for(int i=0;i<n;i++) {\n        A[i] = encodeInteger(A[i], B[i]);\n    }\n}\n```\n\nLajuk passed **A** and **B** into the `encodeArray` function. After that, she discarded array **B** and saved the modified version of array **A** in the hard-drive.\n\nNow, in her 15th birthday, Lajuk wants to play with those arrays again. She found the modified version of array **A** in the hard-drive but she forgot how to recover the original arrays from it. Being upset, she asked for your help. Can you help her to recover the original arrays?\n",
+    "inputFormat": "The first line contains **T (1 \u2264 T \u2264 100)**, the number of test cases. The first line of each test case contains **n (1 \u2264 n \u2264 10<sup>4</sup>)**, the size of the array. The next **n** lines contain **n** integers denoting the modified array **A**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each case, print the case number in the first line. In the second line, print **n** integers denoting the original array **A**. In the third line, print **n** integers denoting the array **B**. Two consecutive integers should be separated by a single space.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n4\n196613\n655370\n196620\n131079\n",
+        "output": "Case 1:\n5 10 12 7\n3 10 3 2\n",
+        "explanation": "The sample input shows one test case with an array of size 4. The modified array **A** is given, and the output shows the original arrays **A** and **B** after decoding. The first line of the output is the case number, followed by the original array **A**, and then the original array **B**.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/7__AB-Jibck",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16B\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16B\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>CAKEWALK</p>\n<h3>PREREQUISITES:</h3>\n<p>Binary, Bitwise operations</p>\n<h3>PROBLEM:</h3>\n<p>A procedure to merge two numbers, each less than 30000, into one number is provided. Given a list of such merged numbers, find a way to recover the two original numbers from each merged number.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Each pair of number is combined into one number <code>m</code>. Obtain the two original numbers from each new number as <code>m &amp; 0xffff</code> and <code>m &gt;&gt; 16</code>.</p>\n<h3>EXPLANATION:</h3>\n<p>The procedure to merge two numbers is described as such</p>\n<pre>int encodeInteger(int x, int n){\n\tn = n&lt;&lt;(1&lt;&lt;(1&lt;&lt;(1&lt;&lt;1)));\n\tx = x | n;\n\treturn x;\n}</pre>   \n<p>We can simplify <code>n = n&lt;&lt;(1&lt;&lt;(1&lt;&lt;(1&lt;&lt;1)))</code> to <code>n = n &lt;&lt; 16</code>. The next step is <code>x = x | n</code>. So, put together, the numbers <code>x</code> and <code>n</code> are merged to get the number <code>x | (n &lt;&lt; 16)</code>. In other words, the number <code>x</code> is kept in the lower 16 bits, and the number <code>n</code> is bit shifted left by 16 to occupy the next 16 bits. These are then bitwise OR-ed together.</p>\n<p>For example:<br>\nLet <code>x = 30000</code>, which is <code>111010100110000</code> in binary<br>\nLet <code>n = 12321</code>, which is <code>11000000100001</code> in binary.<br>\nShifting <code>n</code> left by 16 bits, we get <code>110000001000010000000000000000</code>.<br>\nBitwise OR-ing<code>, 000000000000000111010100110000 OR 110000001000010000000000000000 ------------------------------ 110000001000010111010100110000</code></p>\n<p>The OR-ed result turns out to be <code>807499056</code> in this case.</p>\n<p>It is possible to obtain the original numbers in many ways.<br>\nLet <code>m</code> be the merged number. Then,<br>\n<code>x = m &amp; 0b1111111111111111</code>, or<br>\n<code>x = m &amp; 0xffff</code>, or<br>\n<code>x = m &amp; ((1 &lt;&lt; 16) - 1)</code><br>\nAll of these do the same thing, they use bitwise AND to keep only the lowest 16 bits of <code>m</code>, which we know is <code>x. 110000001000010111010100110000 AND 000000000000001111111111111111 ------------------------------ 000000000000000111010100110000</code></p>\n<p>To find <code>n</code>, the simplest way is<br>\n<code>n = m &gt;&gt; 16</code>.<br>\nShifting <code>m</code> 16 bits to the right removes the lower 16 bits and only the value of <code>n</code> remains<code>. 110000001000010111010100110000 ? SHIFT RIGHT BY 16 ? 000000000000000011000000100001</code></p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16B.py\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17226,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16B",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610968
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16B",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

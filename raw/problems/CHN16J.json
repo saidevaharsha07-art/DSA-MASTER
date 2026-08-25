@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16J",
+  "contest_category": "6",
+  "problem_name": "Kingdom of Chef",
+  "intended_contest_code": null,
+  "body": "<p>Chef lives in a country represented by cities numbered from <b>1</b> to <b>N</b> and connected to each other via bidirectional weighted paths in such a way that there is a unique path between any pair of cities.</p>\r\n\r\n<p>Chef has aims to conquer a subset of these cities and form his Kingdom. He can choose a subset of nodes <b>v<sub>1</sub>, v<sub>2</sub>, ...., v<sub>k</sub></b> and his followers will occupy those cities to make initial kingdom consisting of those cities. Also, any city which lies on a path between any two occupied cities will be eventually occupied and will become a part of Chef's the Kingdom. </p>\r\n\r\n<p>To evaluate how good or favorable the Kingdom is, Chef defines a function. Say, if the cities in Chef's Kingdom are <b>c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>n</sub></b>, then Chef defines goodness of this kingdom as <b>f(c<sub>1</sub>) + f(c<sub>2</sub>) + ... + f(c<sub>n</sub>)</b>, where <b>f(x)</b> is defined as the minimum distance a person has to travel to visit all the cities in the Kingdom at least once, if he/she starts at city number <b>x</b>.</p>\r\n\r\n<p>Now, Chef has a total of <b>Q</b> plans about which cities he want to occupy, <b>i</b><sup>th</sup> of the plan is defined by a subset of <b>K<sub>i</sub></b> cities, <b>v<sub>i, 1</sub>, v<sub>i, 2</sub>, ..., v<sub>i, K<sub>i</sub></sub></b>, denoting the initial cities that his followers will occupy. He wants you to report the goodness of the Kingdoms eventually formed by his plans.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains two space separated integers <b>N</b> and <b>Q</b> denoting the number of cities and number of Chef's plans, respectively.</p>\r\n<p>Next <b>N - 1</b> lines contain integers <b>u</b>, <b>v</b> and <b>w</b> denoting there is a bidirectional path of length <b>w</b> between cities numbered <b>u</b> and <b>v</b>.</p>\r\n<p>Each of the next <b>Q</b> lines describe Chef's plans. Each plan first states <b>K<sub>i</sub></b> <i>i.e.</i> number of cities in the <b>i<sup>th</sup></b> plan. Next <b>K<sub>i</sub></b> integers denote the cities to be occupied in this plan.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each plan of Chef, output in one line the goodness of the Kingdom formed by that plan.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>N, Q</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>u, v</b> \u2264 <b>N</b></li>\r\n<li><b>1</b> \u2264 <b>w</b> \u2264 <b>10<sup>4</sup></b></li>\r\n<li><b>1</b> \u2264 <b>K<sub>i</sub></b> \u2264 <b>N</sup></b></li>\r\n<li><b>1</b> \u2264 <b>Sum of K<sub>i</sub> for all i</b> \u2264 <b>5*10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>v<sub>i, j</sub></b> \u2264 <b>N</b>  for all <b>i, j</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n4 3\r\n1 2 1\r\n2 3 2\r\n1 4 3\r\n1 1\r\n2 1 2\r\n2 3 4\r\n\r\n<b>Output:</b>\r\n0\r\n2\r\n29\r\n\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Plan 1:</b></br>\r\nChef plans to occupy only city 1, in which case goodness is 0.\r\n</p>\r\n\r\n<p><b>Plan 2:</b></br>\r\nChef initially occupies cities 1 and 2. Eventually, no other city other than these two is occupied. For each city in kingdom formed, a person will need to travel at most 1 distance to visit all the cities.</p>\r\n\r\n<p><b>Plan 3:</b></br>\r\nChef initially occupies city 3 and 4. However, city 1 and 2 lie on a path between initial occupied cities and therefore, belong to Chef's kingdom.</p>\r\n\r\n<p>Let's see how goodness of Chef's kingdom is calculated.\r\n<ul>\r\n<li>f(1) is 9. Path 1->2->3->2->1->4 is one of the paths which can be taken.</li>\r\n<li>f(2) is 8. Path 2->3->2->1->4 is the path which needs to be taken.</li>\r\n<li>f(3) is 6. Path 3->2->1->4 is the path which needs to be taken.</li>\r\n<li>f(4) is 6. Path 4->1->2->3 is the path which needs to be taken.</li>\r\n</ul>\r\n</p>\r\n\r\n<p>Therefore, answer is 9 + 8 + 6 + 6 = 29.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **$1 \\leq N, Q \\leq 10^5$**\n- **$1 \\leq u, v \\leq N$**\n- **$1 \\leq w \\leq 10^4$**\n- **$1 \\leq K_i \\leq N$**\n- **$1 \\leq \\text{Sum of } K_i \\text{ for all } i \\leq 5 \\times 10^5$**\n- **$1 \\leq v_{i,j} \\leq N$** for all **$i, j$**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef lives in a country represented by cities numbered from **1** to **N** and connected to each other via bidirectional weighted paths in such a way that there is a unique path between any pair of cities.\n\nChef aims to conquer a subset of these cities and form his Kingdom. He can choose a subset of nodes **$v_1, v_2, \\dots, v_k$** and his followers will occupy those cities to make an initial kingdom consisting of those cities. Also, any city which lies on a path between any two occupied cities will be eventually occupied and will become a part of Chef's Kingdom.\n\nTo evaluate how good or favorable the Kingdom is, Chef defines a function. Say, if the cities in Chef's Kingdom are **$c_1, c_2, \\dots, c_n$**, then Chef defines the goodness of this kingdom as **$f(c_1) + f(c_2) + \\dots + f(c_n)$**, where **$f(x)$** is defined as the minimum distance a person has to travel to visit all the cities in the Kingdom at least once, if he/she starts at city number **$x$**.\n\nNow, Chef has a total of **$Q$** plans about which cities he wants to occupy. The **$i^{th}$** plan is defined by a subset of **$K_i$** cities, **$v_{i,1}, v_{i,2}, \\dots, v_{i,K_i}$**, denoting the initial cities that his followers will occupy. He wants you to report the goodness of the Kingdoms eventually formed by his plans.\n",
+    "inputFormat": "The first line of the input contains two space-separated integers **$N$** and **$Q$** denoting the number of cities and the number of Chef's plans, respectively.\n\nThe next **$N - 1$** lines contain integers **$u$**, **$v$**, and **$w$** denoting there is a bidirectional path of length **$w$** between cities numbered **$u$** and **$v$**.\n\nEach of the next **$Q$** lines describes Chef's plans. Each plan first states **$K_i$**, i.e., the number of cities in the **$i^{th}$** plan. The next **$K_i$** integers denote the cities to be occupied in this plan.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each plan of Chef, output in one line the goodness of the Kingdom formed by that plan.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4 3\n1 2 1\n2 3 2\n1 4 3\n1 1\n2 1 2\n2 3 4\n",
+        "output": "0\n2\n29\n",
+        "explanation": "**Plan 1:**\n\nChef plans to occupy only city 1, in which case goodness is 0.\n\n**Plan 2:**\n\nChef initially occupies cities 1 and 2. Eventually, no other city other than these two is occupied. For each city in the kingdom formed, a person will need to travel at most 1 distance to visit all the cities.\n\n**Plan 3:**\n\nChef initially occupies city 3 and 4. However, city 1 and 2 lie on a path between initial occupied cities and therefore, belong to Chef's kingdom.\n\nLet's see how goodness of Chef's kingdom is calculated.\n\n- **$f(1)$** is 9. Path **$1 \\rightarrow 2 \\rightarrow 3 \\rightarrow 2 \\rightarrow 1 \\rightarrow 4$** is one of the paths which can be taken.\n- **$f(2)$** is 8. Path **$2 \\rightarrow 3 \\rightarrow 2 \\rightarrow 1 \\rightarrow 4$** is the path which needs to be taken.\n- **$f(3)$** is 6. Path **$3 \\rightarrow 2 \\rightarrow 1 \\rightarrow 4$** is the path which needs to be taken.\n- **$f(4)$** is 6. Path **$4 \\rightarrow 1 \\rightarrow 2 \\rightarrow 3$** is the path which needs to be taken.\n\nTherefore, the answer is **$9 + 8 + 6 + 6 = 29$**.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610682
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16J",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

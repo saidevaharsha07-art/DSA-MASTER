@@ -1,0 +1,123 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16J",
+  "contest_category": "6",
+  "problem_name": "Quentin Tarantino",
+  "intended_contest_code": null,
+  "body": "<p>\nQuentin Tarantino is a famous Hollywood filmmaker and actor. His films have a unique characteristic of connecting with youth by using popular culture references. They are usually divided into various sub-parts denoted by chapters. His plot of stories is never linear, he always make sure that the chapters should never be shown in the order of Chapter 1, Chapter 2, Chapter 3, ,.. Chapter <b>n</b> linearly. He believes doing this an insult to the intelligence of viewers. For example, Chapter 1, Chapter 2, Chapter 3 can never be a chapter sequence in Tarantino's movies.. He can have a sequence of Chapter 2, Chapter 3, Chapter 1 instead.\n</p>\n\n<p>\nRecently Santa gifted Tom a movie which consists of <b>n</b> chapters. This movie can possibly be directed by your favorite Tarantino or by someone else. Directors in hollywood can sometimes be very sloppy, they sometimes drop some chapters too and stupid they are that they will leave numbering of the chapters as it is and one can easily identify the chapters that were dropped. For example, if you find the sequence of chapters as - chapter 1, chapter 5, chapter 3, don't be surprised, they did not even take burden of renumbering the chapters to chapter 1, chapter 3, chapter 2. They can sometimes repeat the chapter numbers too. Remember that Tarantino is not a sloppy director, so he never makes this kind of stupid mistakes.\n</p>\n\n\n<p>\nTom happened to find the sequence of chapters in the movie, this sequence contains <b>n</b> chapters, <b>i</b>-th of which is denoted by <b>chapter<sub>i</sub></b>. Tom is a big fan of movies of Tarantino. So, Tom  would like to check whether the movie could possibly be directed by Tarantino or not? Please help Tom, he really needs it.\n</p>\n\n<h3>Input</h3>\n<p>The first line contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>The first line of each test case contains an integer <b>n</b> denoting number of chapters of the movie.</p>\n<p>The second line of each test case contains <b>n</b> space separated integers <b>chapter<sub>i</sub></b>, denoting numbering of <b>i<sup>th</sup></b> chapter.</p>\n\n<h3>Output</h3>\n<p>For each test case, output \"yes\" or \"no\" in a separate line.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>2</b> \u2264 <b>N</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>chapter<sub>i</sub></b> \u2264 <b>500</b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n4\n3\n2 3 1\n3\n1 5 3\n3\n1 2 3\n2\n1 1\n\n<b>Output:</b>\nyes\nno\nno\nno\n</pre>\n\n<h3>Explanation</h3>\n<p>All the examples are explained in the problem statement.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- `1` \u2264 `T` \u2264 `100`\n- `2` \u2264 `N` \u2264 `100`\n- `1` \u2264 `chapter_i` \u2264 `500`\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Quentin Tarantino is a famous Hollywood filmmaker and actor. His films have a unique characteristic of connecting with youth by using popular culture references. They are usually divided into various sub-parts denoted by chapters. His plot of stories is never linear, he always makes sure that the chapters should never be shown in the order of Chapter 1, Chapter 2, Chapter 3, ..., Chapter `n` linearly. He believes doing this is an insult to the intelligence of viewers. For example, Chapter 1, Chapter 2, Chapter 3 can never be a chapter sequence in Tarantino's movies. He can have a sequence of Chapter 2, Chapter 3, Chapter 1 instead.\n\nRecently Santa gifted Tom a movie which consists of `n` chapters. This movie can possibly be directed by your favorite Tarantino or by someone else. Directors in Hollywood can sometimes be very sloppy, they sometimes drop some chapters too and stupid they are that they will leave numbering of the chapters as it is and one can easily identify the chapters that were dropped. For example, if you find the sequence of chapters as - chapter 1, chapter 5, chapter 3, don't be surprised, they did not even take the burden of renumbering the chapters to chapter 1, chapter 3, chapter 2. They can sometimes repeat the chapter numbers too. Remember that Tarantino is not a sloppy director, so he never makes this kind of stupid mistakes.\n\nTom happened to find the sequence of chapters in the movie, this sequence contains `n` chapters, `i`-th of which is denoted by `chapter_i`. Tom is a big fan of movies of Tarantino. So, Tom would like to check whether the movie could possibly be directed by Tarantino or not? Please help Tom, he really needs it.\n",
+    "inputFormat": "The first line contains an integer `T` denoting the number of test cases. `T` test cases follow.\n\nThe first line of each test case contains an integer `n` denoting the number of chapters of the movie.\n\nThe second line of each test case contains `n` space-separated integers `chapter_i`, denoting the numbering of the `i-th` chapter.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output \"yes\" or \"no\" in a separate line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n3\n2 3 1\n3\n1 5 3\n3\n1 2 3\n2\n1 1\n",
+        "output": "yes\nno\nno\nno\n",
+        "explanation": "All the examples are explained in the problem statement.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/5_mhAGT07g8",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16J\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16J\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>CAKEWALK</p>\n<h3>PREREQUISITES:</h3>\n<p>Arrays, Sorting</p>\n<h3>PROBLEM:</h3>\n<p>Given a list of <span class=\"math\">N</span> integers, determine if all numbers from <span class=\"math\">1</span> to <span class=\"math\">N</span> appear exactly once, and whether the list is sorted.</p>\n<h3>EXPLANATION:</h3>\n<p>A Tarantino movie must have two properties:</p>\n<ol>\n<li>Each chapter from <span class=\"math\">1</span> to <span class=\"math\">N</span> must be in the movie</li>\n<li>The chapters must not be in sorted order<br>\nIf both properties are satisfied, the output is \u201cyes\u201d, otherwise \u201cno\u201d.</li>\n</ol>\n<p>For the first condition, this easiest approach is to check whether each number from <span class=\"math\">1</span> to <span class=\"math\">N</span> appear in the array.</p>\n<pre>for i in [1..N]\n    flag = 0\n    for j in [1..N]\n        if i == A[j]\n            flag = 1\n            break current loop\n    if flag == 0\n        break current loop\nif flag == 0\n    definitely not a Tarantino movie\nelse\n    proceed to check next condition</pre>\n<p>This algorithm has complexity <span class=\"math\">\\mathcal{O}(N^2)</span>. This works just fine with the given constraints, but alternately one can generate a <em>frequency array</em> which would be <span class=\"math\">\\mathcal{O}(N)</span>.</p>\n<p>If the first check is passed, we know that the array only contains elements from <span class=\"math\">1</span> to <span class=\"math\">N</span>. Now to check whether the array is sorted, we can just check whether each <span class=\"math\">A[i]</span> is <span class=\"math\">A[i-1] + 1</span> since this property holds true only when the array is sorted.</p>\n<pre>flag = 0\nfor i in [2..N]\n    if A[i] != A[i-1] + 1\n        flag = 1\n        break current loop\nif flag == 0\n    cannot be a Tarantino movie\nelse\n    both tests have been passed!</pre>\n<p>This approach is <span class=\"math\">\\mathcal{O}(N)</span>. Alternately, it is possible to sort a copy of <span class=\"math\">A</span> and if <span class=\"math\">A</span> is initially sorted the copy will be element-wise equal to <span class=\"math\">A</span>. This approach would be <span class=\"math\">\\mathcal{O}(N^2)</span> or <span class=\"math\">\\mathcal{O}(N \\log N)</span> depending on the sorting procedure.</p>\n<p>Overall complexity may be <span class=\"math\">\\mathcal{O}(N)</span>, <span class=\"math\">\\mathcal{O}(N^2)</span> or <span class=\"math\">\\mathcal{O}(N \\log N)</span>.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16J.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nEditorialist\u2019s alternate solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16J-2.py\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17234,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "26-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Sorting",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16J",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610973
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16J",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

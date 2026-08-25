@@ -1,0 +1,25 @@
+{
+  "codechefLocalStoragePassed": true,
+  "storageKey": "codechef_rating_arena_user_state_v2",
+  "eventBusPublishPassed": true,
+  "eventBusSubPassed": true,
+  "headerRoutes": [
+    "/dashboard",
+    "/journey",
+    "/arena",
+    "/practice",
+    "/revision",
+    "/contest",
+    "/statistics",
+    "/oracle",
+    "/settings"
+  ],
+  "missingFromHeader": [
+    "/practice/codechef",
+    "/kingdoms",
+    "/patterns",
+    "/learning",
+    "/roadmap",
+    "/dev/system"
+  ]
+}

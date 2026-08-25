@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMR16D",
+  "contest_category": "6",
+  "problem_name": "ATM queue",
+  "intended_contest_code": null,
+  "body": "<p>Ramu and his wife Lata are facing a cash crisis. They go to the nearby ATM to get some cash. There are <b>3</b> ATMs inside the same room. People are standing in queue outside, and go inside the room in groups of 3 to the ATMs, fetch their money and come out. Lata has an irrational fear in getting money from ATM that her ATM pin will somehow be stolen and all her money will be lost. So, she will always like to go into the room with Ramu. Ramu is standing at position <b>K</b> in line, immediately followed by Lata (i.e. at position <b>K + 1</b>).</p>\n\n<p>Can you tell whether Ramu and Lata both will be able to get money in such a way that Lata does not feel insecure?</p>\n\n<h3>Input</h3>\n<p>The first line contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>The only line of each test case contains two space separated integers <b>N</b> and <b>K</b>, where <b>N</b> denotes number of people in the queue, and <b>K</b> denotes the position of Ramu.</p>\n\n<h3>Output</h3>\n<p>For each test case, output \"yes\" or \"no\" correspondingly denoting whether they both will be able to get the money without Lata getting scared.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>3</b> \u2264 <b>N</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>K</b> \u2264 <b>N - 1</b></li>\n<li><b>N</b> is divisible by <b>3</b>.</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n3 1\n6 3\n\n<b>Output:</b>\nyes\nno\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1</b>. Ramu is at position 1 and Lata is at position 2. They will go in the room together in the very first batch of three.</p>\n<p><b>Example case 2</b>. Ramu is at position 3 and Lata is at position 4. The first two people and Ramu will go into the room first. Then Lata and remaining 2 people after her will go into the room, but Lata will be scared as Ramu is not there with her in the room.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **100**\n- **3** \u2264 **N** \u2264 **100**\n- **1** \u2264 **K** \u2264 **N - 1**\n- **N** is divisible by **3**.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Ramu and his wife Lata are facing a cash crisis. They go to the nearby ATM to get some cash. There are **3** ATMs inside the same room. People are standing in queue outside, and go inside the room in groups of 3 to the ATMs, fetch their money and come out. Lata has an irrational fear in getting money from ATM that her ATM pin will somehow be stolen and all her money will be lost. So, she will always like to go into the room with Ramu. Ramu is standing at position **K** in line, immediately followed by Lata (i.e. at position **K + 1**).\n\nCan you tell whether Ramu and Lata both will be able to get money in such a way that Lata does not feel insecure?\n",
+    "inputFormat": "The first line contains an integer **T** denoting the number of test cases. **T** test cases follow.\n\nThe only line of each test case contains two space separated integers **N** and **K**, where **N** denotes number of people in the queue, and **K** denotes the position of Ramu.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output \"yes\" or \"no\" correspondingly denoting whether they both will be able to get the money without Lata getting scared.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 1\n6 3\n",
+        "output": "yes\nno\n",
+        "explanation": "**Example case 1**. Ramu is at position 1 and Lata is at position 2. They will go in the room together in the very first batch of three.\n\n**Example case 2**. Ramu is at position 3 and Lata is at position 4. The first two people and Ramu will go into the room first. Then Lata and remaining 2 people after her will go into the room, but Lata will be scared as Ramu is not there with her in the room.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AMR16D",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610600
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMR16D",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,346 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "greedy-algorithms",
+  "name": "Greedy Algorithms",
+  "title": "Greedy Algorithms",
+  "level": "Intermediate",
+  "description": "Understanding Greedy algorithms helps in solving many complex problems where choosing the best option at each step provides the best solution.\n",
+  "time_to_complete": null,
+  "difficulty_range": "1000 - 1600",
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/greedy-algorithms/INTGRA01/problems/TDQVH01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Greedy Algorithms",
+      "description": "Practice intermediate level problems using Greedy Algorithms",
+      "submodules": [
+        {
+          "name": "Practice",
+          "submodule_id": 1242,
+          "contest_code": "INTGRA01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/greedy-algorithms/INTGRA01/problems/TDQVH01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "24272",
+              "code": "TDQVH01",
+              "name": "Changes remaining at Lemonade shop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "XYSTR",
+              "name": "Chef and String",
+              "difficulty_rating": "1124",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "PERMEXIS",
+              "name": "Watson asks Does Permutation Exist",
+              "difficulty_rating": "1207",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "COOKIEDIST",
+              "name": "Cookie distribution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "MOONSOON",
+              "name": "EVacuate to Moon",
+              "difficulty_rating": "1479",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "MAXDIFF",
+              "name": "Maximum Weight Difference",
+              "difficulty_rating": "1308",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "TACHSTCK",
+              "name": "Chopsticks",
+              "difficulty_rating": "1320",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24272",
+              "code": "SUMPAIR",
+              "name": "Maximize Disjoint Pair Sum",
+              "difficulty_rating": "1643",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Pro Practice",
+          "submodule_id": 1243,
+          "contest_code": "INTGRA02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/greedy-algorithms/INTGRA02/problems/GBHHA01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "24273",
+              "code": "GBHHA01",
+              "name": "Chef Combines Intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "NSJNH01",
+              "name": "Chef Inserts Insert Interval",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "COCRZ01",
+              "name": "Chef Removes Overlapping Intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "ZCO15003",
+              "name": "Covering",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "LEMUSIC",
+              "name": "Little Elephant and Music",
+              "difficulty_rating": "1691",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "MAXSC",
+              "name": "Maximum Score",
+              "difficulty_rating": "1561",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "SNELECT",
+              "name": "Snakes, Mongooses and the Ultimate Election",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "ADYOB01",
+              "name": "Valid Parenthesis String Practice",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "AVEEC01",
+              "name": "Chef Solves Meeting Rooms III",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24273",
+              "code": "KLIP",
+              "name": "K-Flip",
+              "difficulty_rating": "1757",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 18,
+  "total_non_pro_problems": 8,
+  "up_next": [
+    {
+      "name": "Binary Search",
+      "title": "Binary Search",
+      "slug": "binary-search",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 19183,
+      "review": {
+        "rating": 4.7,
+        "users": 141
+      },
+      "course_count": 2,
+      "description": "Practice Binary search with our curated set of problems. Implement binary search algorithm in languages like C++, Java, Python and JavaScript. "
+    },
+    {
+      "name": "Dynamic programming",
+      "title": "Dynamic programming",
+      "slug": "dynamic-programming",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 9317,
+      "review": {
+        "rating": 4.5,
+        "users": 61
+      },
+      "course_count": 2,
+      "description": "Practice these 21 problems on Dynamic Programming to understand the pattern of questions and the different ways in which you can implement the solution. Practice concepts like Iterative DP, Recursive DP, 1D and 2D DP, Digit DP etc. "
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "196",
+    "name": "Greedy Algorithms",
+    "title": "Greedy Algorithms",
+    "slug": "greedy-algorithms",
+    "description": "Learn the concept of greedy algorithms and practice what you learnt in the different types of greedy problems",
+    "highlight_color": "#FEFEFE",
+    "level": "Intermediate",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 433
+    },
+    "learners_count": 8403,
+    "lessons_count": 6
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "aided_harmony",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 13498,
+  "path_review": {
+    "rating": 4.6,
+    "users": 161
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

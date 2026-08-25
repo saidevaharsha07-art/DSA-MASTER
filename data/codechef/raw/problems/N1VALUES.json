@@ -1,0 +1,126 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "N1VALUES",
+  "contest_category": "6",
+  "problem_name": "Exactly N plus 1 Values",
+  "intended_contest_code": "LTIME101",
+  "body": "You are given a positive integer $N$. You have to print exactly $N+1$ positive integers \nwith the following condition:\n\n1. Exactly one value should be repeated twice, all other remaining  values should appear only once\n\n2. Sum of all these integers should be equal to $2^N$.\n\nPrint values in non-decreasing order. If there are multiple solutions, you can print any of them.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 60$\n- $1 \\le N \\le 60$",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (100 points):** Original constraints\n",
+    "subtasksState": true,
+    "statement": "\nYou are given a positive integer $N$. You have to print exactly $N + 1$ positive integers \nsatisfying the following conditions:\n\n- Exactly one value should appear twice, all the remaining values should appear only once.\n- Sum of all these values should be equal to $2^N$.\n\nYou have to print the values in non-decreasing order. If there are multiple solutions, you can print any of them.\n",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains a single integer $N$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print a single line containing $N + 1$ positive integers in non-decreasing order that satisfy the given conditions. If there are multiple solutions, you may print any of them.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n4\n",
+        "output": "1 2 2 3\n1 2 3 3 7",
+        "explanation": "**Test Case $1$:** $2$ is repeated twice and the remaining elements occurred only once and the sum of all the elements is equal to $8$, which is $2^3$.\n\n**Test Case $2$:** $3$ is repeated twice and the remaining elements occurred only once and the sum of all the elements is equal to $16$, which is $2^4$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 95836,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "dazlersan1",
+  "problem_display_authors": [
+    "dazlersan1"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/dazlersan1'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>dazlersan1</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-10-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1495",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611100
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=N1VALUES",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

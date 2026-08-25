@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16E",
+  "contest_category": "6",
+  "problem_name": "Moving Clams",
+  "intended_contest_code": null,
+  "body": "<p>\r\nAlice and Bob are tired of playing with messages and proving things which the lazy cryptographers should be doing on their own. So they've decided to take the day off, and have come to the beach. Alice soon spots a dirty glass bottle floating in the water, and they find an ancient parchment inside it. On it, is drawn an undirected graph! As luck would have it, they find some colored clam shells lying around. There are red, blue and green ones. And as usual, Alice devises some devious game and challenges Bob to play it.\r\n</p>\r\n\r\n<p>\r\nShe marks the vertices as <b>V<sub>1</sub>, V<sub>2</sub>, .., V<sub>N</sub></b>. She then places some clams on each of the vertices. There are <b>R<sub>1</sub></b> red clams on <b>V<sub>1</sub>, R<sub>2</sub></b> red clams on <b>V<sub>2</sub>, .., R<sub>N</sub></b> red clams on <b>V<sub>N</sub></b>. Similarly there are <b>B<sub>i</sub></b> blue clams on <b>V<sub>i</sub></b>, for every <b>i</b>, and <b>G<sub>i</sub></b> green clams on <b>V<sub>i</sub></b> for every <b>i</b>. She tells Bob that he has to take every single clam and do one of two things: Suppose the clam was on <b>V<sub>i</sub></b> originally. He should either leave it at <b>V<sub>i</sub></b> itself. Or move it along an edge incident on <b>V<sub>i</sub></b>, and place it on a neighbouring vertex. He can do this atmost once, for every clam. \r\n</p>\r\n\r\n<p>\r\nSuppose he does so for every clam, and finally ends up with a configuration, where there are <b>R<sub>1</sub>'</b> red clams on <b>V<sub>1</sub>, R<sub>2</sub>'</b> red clams on <b>V<sub>2</sub>, .., R<sub>N</sub>'</b> red clams on <b>V<sub>N</sub></b>. Similarly there are <b>B<sub>i</sub>'</b> blue clams on <b>V<sub>i</sub></b>, for every <b>i</b>, and <b>G<sub>i</sub>'</b> green clams on <b>V<sub>i</sub></b> for every <b>i</b>.\r\n</p>\r\n\r\n<p>\r\nShe then gives him a sequence of numbers: <b>T<sub>1</sub>, T<sub>2</sub>, .., T<sub>N</sub></b>, and tells him that, at the end, <b>V<sub>i</sub></b> should have a total of exactly <b>T<sub>i</sub></b> clams. That is, <b>R<sub>i</sub>' + B<sub>i</sub>' + G<sub>i</sub>'</b> should be equal to <b>T<sub>i</sub></b>.\r\n</p>\r\n\r\n<p>\r\nShe gives him another sequence of numbers: <b>MinG<sub>1</sub>, MinG<sub>2</sub>, .., MinG<sub>N</sub></b>, and tells him that there should be at least <b>MinG<sub>i</sub></b> green clams on <b>V<sub>i</sub></b>. ie. <b>G<sub>i</sub>'</b> should be greater than or equal to <b>MinG<sub>i</sub></b>.\r\n</p>\r\n\r\n<p>\r\nShe also gives him an integer <b>K</b>, and Bob has to ensure that the total number of red clams which end up on even-indexed vertices is at least <b>K</b>. <b>V<sub>2i</sub></b> is an even-indexed vertex, for all <b>i</b>. <b>V<sub>2i+1</sub></b> is an odd-indexed vertex, for all <b>i</b>. That is, <b>R<sub>2</sub>' + R<sub>4</sub>' + .. + R<sub>2i</sub>' + ..</b> should be greater than or equal to <b>K</b>.\r\n</p>\r\n\r\n<p>\r\nBob is lazy as usual and doesn't want to spend time trying, unless he knows for sure that this is achievable. Help him by figuring it out for him. Output <b>1</b> if he can satisfy all of Alice's conditions. Output <b>0</b> otherwise.\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The first line contains two integers <b>N</b> and <b>M</b>, denoting the number of vertices, and number of edges in the graph, respectively.</p>\r\n<p>The next <b>M</b> lines contain two integers each, separated by single spaces: <b>i j</b>, denoting that there is an edge between <b>V<sub>i</sub></b> and <b>V<sub>j</sub></b>.\r\nIt is guaranteed that there is atmost 1 edge between any two vertices, and there is no edge which connects a vertex to itself.</p>\r\n\r\n<p>The next line contain <b>N</b> integers, separated by single spaces: <b>R<sub>1</sub>, R<sub>2</sub>, .., R<sub>N</sub></b>, denoting the number of red clams in each vertex originally.</p>\r\n<p>The next line contain <b>N</b> integers, separated by single spaces: <b>B<sub>1</sub>, B<sub>2</sub>, .., B<sub>N</sub></b>, denoting the number of blue clams in each vertex originally.</p>\r\n<p>The next line contain <b>N</b> integers, separated by single spaces: <b>G<sub>1</sub>, G<sub>2</sub>, .., G<sub>N</sub></b>, denoting the number of green clams in each vertex originally.</p>\r\n<p>The next line contain <b>N</b> integers, separated by single spaces: <b>T<sub>1</sub>, T<sub>2</sub>, .., T<sub>N</sub></b>, denoting the total number of clams that Alice wants Bob to place in each vertex finally.</p>\r\n<p>The next line contain <b>N</b> integers, separated by single spaces: <b>MinG<sub>1</sub>, MinG<sub>2</sub>, .., MinG<sub>N</sub></b>, denoting the minimum number of green clams that Alice wants Bob to place in each vertex finally.</p>\r\n<p>The last line contains a single integer <b>K</b>, denoting the minimum number of red clams that Alice wants Bob to place in even-indexed vertices finally.</p>\r\n\r\n\r\n\r\n<h3>Output</h3>\r\n<p>Output a single line for each testcase, containing the answer, which should be a <b>0</b> or a <b>1</b>.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 3</b></li>\r\n<li><b>1 \u2264 N \u2264 100</b></li>\r\n<li><b>0 \u2264 M \u2264 1000</b></li>\r\n<li><b>0 \u2264 R<sub>i</sub>, B<sub>i</sub>, G<sub>i</sub> \u2264 100</b></li>\r\n<li><b>0 \u2264 T<sub>i</sub>, MinG<sub>i</sub>, K \u2264 3*10<sup>4</sup></b></li>\r\n</ul>\r\n\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>1\r\n4 4\r\n1 2\r\n2 3\r\n3 1\r\n4 3\r\n2 0 1 2\r\n0 1 1 2\r\n1 3 1 3\r\n1 3 8 5\r\n0 0 7 0\r\n5\r\n</tt>\r\n<b>Output:</b>\r\n<tt>1</tt>\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\nBob does these actions:\r\n<li>Moves both the red clams from <b>V<sub>1</sub></b> to <b>V<sub>2</sub></b>.</li>\r\n<li>Moves all the three green clams from <b>V<sub>2</sub></b> to <b>V<sub>3</sub></b>.</li>\r\n<li>Moves the red clam from <b>V<sub>3</sub></b> to <b>V<sub>4</sub></b>.</li>\r\n<li>Moves all the three green clams from <b>V<sub>4</sub></b> to <b>V<sub>3</sub></b>.</li>\r\n\r\n<p>\r\nOnce these are done, we see that all of Alice's conditions are met:\r\n<li>The total number of clams in <b>V<sub>1</sub></b>, <b>V<sub>2</sub></b>, .. <b>V<sub>4</sub></b> is (1, 3, 8, 5). We see that each element here is exactly equal to the corresponding element in <b>T<sub>1</sub>, T<sub>2</sub>, .., T<sub>4</sub></b>, which is (1, 3, 8, 5).\r\n</li>\r\n\r\n<li>The number of green clams in <b>V<sub>1</sub></b>, <b>V<sub>2</sub></b>, .. <b>V<sub>4</sub></b> is (1, 0, 7, 0). We see that each element here is greater than or equal to the corresponding element in <b>MinG<sub>1</sub>, MinG<sub>2</sub>, .., MinG<sub>4</sub></b>, which is (0, 0, 7, 0).\r\n</li>\r\n\r\n<li>There are 2 red clams in <b>V<sub>2</sub></b> and 3 red clams in <b>V<sub>4</sub></b>. Hence, there are at least K=5 red clams in even-indexed vertices.\r\n</li>\r\n</p>\r\n\r\nHence the answer is <b>1</b>.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 3$\n- $1 \\leq N \\leq 100$\n- $0 \\leq M \\leq 1000$\n- $0 \\leq R_i, B_i, G_i \\leq 100$\n- $0 \\leq T_i, MinG_i, K \\leq 3 \\times 10^4$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Alice and Bob are tired of playing with messages and proving things which the lazy cryptographers should be doing on their own. So they've decided to take the day off, and have come to the beach. Alice soon spots a dirty glass bottle floating in the water, and they find an ancient parchment inside it. On it, is drawn an undirected graph! As luck would have it, they find some colored clam shells lying around. There are red, blue and green ones. And as usual, Alice devises some devious game and challenges Bob to play it.\n\nShe marks the vertices as $V_1, V_2, \\dots, V_N$. She then places some clams on each of the vertices. There are $R_1$ red clams on $V_1$, $R_2$ red clams on $V_2$, $\\dots$, $R_N$ red clams on $V_N$. Similarly, there are $B_i$ blue clams on $V_i$, for every $i$, and $G_i$ green clams on $V_i$ for every $i$. She tells Bob that he has to take every single clam and do one of two things: Suppose the clam was on $V_i$ originally. He should either leave it at $V_i$ itself. Or move it along an edge incident on $V_i$, and place it on a neighboring vertex. He can do this at most once, for every clam.\n\nSuppose he does so for every clam, and finally ends up with a configuration, where there are $R_1'$ red clams on $V_1$, $R_2'$ red clams on $V_2$, $\\dots$, $R_N'$ red clams on $V_N$. Similarly, there are $B_i'$ blue clams on $V_i$, for every $i$, and $G_i'$ green clams on $V_i$ for every $i$.\n\nShe then gives him a sequence of numbers: $T_1, T_2, \\dots, T_N$, and tells him that, at the end, $V_i$ should have a total of exactly $T_i$ clams. That is, $R_i' + B_i' + G_i'$ should be equal to $T_i$.\n\nShe gives him another sequence of numbers: $MinG_1, MinG_2, \\dots, MinG_N$, and tells him that there should be at least $MinG_i$ green clams on $V_i$. That is, $G_i'$ should be greater than or equal to $MinG_i$.\n\nShe also gives him an integer $K$, and Bob has to ensure that the total number of red clams which end up on even-indexed vertices is at least $K$. $V_{2i}$ is an even-indexed vertex, for all $i$. $V_{2i+1}$ is an odd-indexed vertex, for all $i$. That is, $R_2' + R_4' + \\dots + R_{2i}' + \\dots$ should be greater than or equal to $K$.\n\nBob is lazy as usual and doesn't want to spend time trying, unless he knows for sure that this is achievable. Help him by figuring it out for him. Output `1` if he can satisfy all of Alice's conditions. Output `0` otherwise.\n",
+    "inputFormat": "The first line of input contains an integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n\nThe first line contains two integers $N$ and $M$, denoting the number of vertices, and number of edges in the graph, respectively.\n\nThe next $M$ lines contain two integers each, separated by single spaces: $i\\ j$, denoting that there is an edge between $V_i$ and $V_j$. It is guaranteed that there is at most 1 edge between any two vertices, and there is no edge which connects a vertex to itself.\n\nThe next line contains $N$ integers, separated by single spaces: $R_1, R_2, \\dots, R_N$, denoting the number of red clams in each vertex originally.\n\nThe next line contains $N$ integers, separated by single spaces: $B_1, B_2, \\dots, B_N$, denoting the number of blue clams in each vertex originally.\n\nThe next line contains $N$ integers, separated by single spaces: $G_1, G_2, \\dots, G_N$, denoting the number of green clams in each vertex originally.\n\nThe next line contains $N$ integers, separated by single spaces: $T_1, T_2, \\dots, T_N$, denoting the total number of clams that Alice wants Bob to place in each vertex finally.\n\nThe next line contains $N$ integers, separated by single spaces: $MinG_1, MinG_2, \\dots, MinG_N$, denoting the minimum number of green clams that Alice wants Bob to place in each vertex finally.\n\nThe last line contains a single integer $K$, denoting the minimum number of red clams that Alice wants Bob to place in even-indexed vertices finally.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output a single line for each test case, containing the answer, which should be a `0` or a `1`.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n4 4\n1 2\n2 3\n3 1\n4 3\n2 0 1 2\n0 1 1 2\n1 3 1 3\n1 3 8 5\n0 0 7 0\n5\n",
+        "output": "1\n",
+        "explanation": "Bob does these actions:\n- Moves both the red clams from $V_1$ to $V_2$.\n- Moves all the three green clams from $V_2$ to $V_3$.\n- Moves the red clam from $V_3$ to $V_4$.\n- Moves all the three green clams from $V_4$ to $V_3$.\n\nOnce these are done, we see that all of Alice's conditions are met:\n- The total number of clams in $V_1$, $V_2$, $\\dots$, $V_4$ is $(1, 3, 8, 5)$. We see that each element here is exactly equal to the corresponding element in $T_1, T_2, \\dots, T_4$, which is $(1, 3, 8, 5)$.\n- The number of green clams in $V_1$, $V_2$, $\\dots$, $V_4$ is $(1, 0, 7, 0)$. We see that each element here is greater than or equal to the corresponding element in $MinG_1, MinG_2, \\dots, MinG_4$, which is $(0, 0, 7, 0)$.\n- There are 2 red clams in $V_2$ and 3 red clams in $V_4$. Hence, there are at least $K=5$ red clams in even-indexed vertices.\n\nHence the answer is `1`.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610680
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16E",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,119 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CLANEXPNSN",
+  "contest_category": "6",
+  "problem_name": "Clan Expansion",
+  "intended_contest_code": "START108",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 4 \\cdot 10^4$\n- $1 \\leq N \\leq 3 \\cdot 10^5$\n- $1 \\leq A_i \\leq N$\n- The sum of $N$ over all test cases won't exceed $3 \\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "The island of Teliarganj is divided into $N$ distinct territories ruled by several different clans, each having an unique integer between $1$ and $N$ assigned to it.  \nThe island can be considered a linear place, with the $i$-th territory located next to the $(i+1)$-th one. The $i$-th territory is initially ruled by clan $A_i$.\n\nChef does not like this division of the island into several clans, and wants to unite the island by bringing all the territories under the rule of one single clan.  \nTo this end, he can choose **exactly** one clan and give its warriors super powers.\n\nWith the help of these super powers, this clan\u2019s warriors will be able to capture the territories of other clans.  \nOn each day, the clan will capture **every** territory that's adjacent to one already owned by them.\n\nWhich clan should Chef bestow with super powers so that the entire island is conquered in the **least** amount of time?  \nFind both the minimum time required, and the clan that achieves this minimum time. If multiple clans can conquer the island in minimum time, print the one with smallest value assigned to it (see the samples below for an example).\n",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Every test case contains two lines on Input.\n    - The first line of each test case contains one integer $N$ \u2014 the number of territories.\n    - The next line contains $N$ integers $A_1, A_2, \\ldots, A_N$ \u2014 meaning that the territory $i$ is initially ruled by clan $A_i$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a new line two integers separated by a space.\n- The first integer should be the clan that conquers the island in minimum time.  \nIf there are multiple, print the minimum among them.\n- The second integer is the number of days this clan will take to do so.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n8\n1 1 2 3 1 2 2 3\n5\n1 2 3 4 5\n5\n1 1 1 1 1\n7\n2 1 1 3 4 4 2\n8\n2 3 3 1 1 3 4 2\n",
+        "output": "2 2\n3 2\n1 0\n2 3\n3 2\n",
+        "explanation": "**Test case $1$:** Initially, the territories are $[1, 1, 2, 3, 1, 2, 2, 3]$.  \nIf Chef chooses clan $1$, the progression looks like (underlined territories are the ones newly conquered on that day):\n$$\n\\begin{align*}\n\\text{Day 0:} \\ \\ [1, 1, 2, 3, 1, 2, 2, 3] \\\\\n\\text{Day 1:} \\ \\ [1, 1, \\underline{1}, \\underline{1}, 1, \\underline{1}, 2, 3] \\\\\n\\text{Day 2:} \\ \\ [1, 1, 1, 1, 1, 1, \\underline{1}, 3] \\\\\n\\text{Day 3:} \\ \\ [1, 1, 1, 1, 1, 1, 1, \\underline{1}]\n\\end{align*}\n$$\n\nIf Chef chooses clan $2$, the progression is:\n\n$$\n\\begin{align*}\n\\text{Day 0:} \\ \\ [1, 1, 2, 3, 1, 2, 2, 3] \\\\\n\\text{Day 1:} \\ \\ [1, \\underline{2}, 2, \\underline{2}, \\underline{2}, 2, 2, \\underline{2}] \\\\\n\\text{Day 2:} \\ \\ [\\underline{2}, 2, 2, 2, 2, 2, 2, 2]\n\\end{align*}\n$$\n\nIf clan $3$ is chosen, the progression is:\n\n$$\n\\begin{align*}\n\\text{Day 0:} \\ \\ [1, 1, 2, 3, 1, 2, 2, 3] \\\\\n\\text{Day 1:} \\ \\ [1, 1, \\underline{3}, 3, \\underline{3}, 2, \\underline{3}, 3] \\\\\n\\text{Day 2:} \\ \\ [1, \\underline{3}, 3, 3, 3, \\underline{3}, 3, 3] \\\\\n\\text{Day 3:} \\ \\ [\\underline{3}, 3, 3, 3, 3, 3, 3, 3]\n\\end{align*}\n$$\n\nClan $2$ needs only $2$ days, while the rest need $3$ days.  \nSo, the answer is `2 2`.\n\n**Test case $2$:** Clan $3$ can conquer the others in $2$ days, as $[1, 2, 3, 4, 5] \\to [1, 3, 3, 3, 5] \\to [3, 3, 3, 3, 3]$. This is the minimum possible.\n\n**Test case $3$:** Everything is already under the control of clan $1$.\n\n**Test case $4$:** Clans $2$ and $3$ can both conquer all the territories in $3$ days. Since we must choose the minimum clan number, we print `2 3` and not `3 3`.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 113994,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "aditya_rai0705",
+  "problem_display_authors": [
+    "aditya_rai0705"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/aditya_rai0705'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>aditya_rai0705</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "6-11-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "aditya_rai0705",
+    "start108"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1944",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610687
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CLANEXPNSN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 23,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

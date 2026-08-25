@@ -1,0 +1,123 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ORDTEAMS",
+  "contest_category": "6",
+  "problem_name": "Ordering teams",
+  "intended_contest_code": null,
+  "body": "<p>In ACM-ICPC contests, there are usually three people in a team. For each person in the team, you know their scores in three skills - hard work, intelligence and persistence.</p>\r\n\r\n<p>You want to check whether it is possible to order these people (assign them numbers from 1 to 3) in such a way that for each <b>1 \u2264 i \u2264 2</b>, <b>i+1</b>-th person is stricly <em>better</em> than the <b>i</b>-th person.</p>\r\n\r\n<p>A person <b>x</b> is said to be <em>better</em> than another person <b>y</b> if <b>x</b> doesn't score less than <b>y</b> in any of the skills and scores more than <b>y</b> in at least one skill.</p>\r\n\r\n<p>Determine whether such an ordering exists.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line fo the input contains an integer <b>T</b> denoting the number of test cases.</p>\r\n<p>Each test consists of three lines. Each of these lines contains three space separated integers <b>s<sub>1</sub>, s<sub>2</sub></b> and <b>s<sub>3</sub></b> denoting the scores of one member of the team in each of the three skills, in the given order.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing \"yes\" if such an ordering exists or \"no\" if doesn't exist (without quotes).\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 1000</b></li>\r\n<li><b>1 \u2264 s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> \u2264 100</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input</b>\r\n3\r\n1 2 3\r\n2 3 4\r\n2 3 5\r\n1 2 3\r\n2 3 4\r\n2 3 4\r\n5 6 5\r\n1 2 3\r\n2 3 4\r\n\r\n<b>Output</b>\r\nyes\r\nno\r\nyes\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Test Case 1</b>: We can order them as (3, 2, 1). Person 3 is <i>better</i> than Person 2 because his scores in the first two skills are not lesser than Person 2's. And in skill 3, Person 3 scores higher. Similarly, Person 2 is <i>better</i> than Person 1. He scores more than Person 1 in every skill, in fact.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>In ACM-ICPC contests, there are usually three people in a team. For each person in the team, you know their scores in three skills - hard work, intelligence and persistence.</p>\n\n<p>You want to check whether it is possible to order these people (assign them numbers from 1 to 3) in such a way that for each <b>1 \u2264 i \u2264 2</b>, <b>i+1</b>-th person is stricly <em>better</em> than the <b>i</b>-th person.</p>\n\n<p>A person <b>x</b> is said to be <em>better</em> than another person <b>y</b> if <b>x</b> doesn't score less than <b>y</b> in any of the skills and scores more than <b>y</b> in at least one skill.</p>\n\n<p>Determine whether such an ordering exists.</p>\n\n<h3>Input</h3>\n<p>The first line fo the input contains an integer <b>T</b> denoting the number of test cases.</p>\n<p>Each test consists of three lines. Each of these lines contains three space separated integers <b>s<sub>1</sub>, s<sub>2</sub></b> and <b>s<sub>3</sub></b> denoting the scores of one member of the team in each of the three skills, in the given order.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing \"yes\" if such an ordering exists or \"no\" if doesn't exist (without quotes).\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 T \u2264 1000</b></li>\n<li><b>1 \u2264 s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> \u2264 100</b></li>\n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n\n<b>Output</b>\n\n</pre>\n\n<h3>Explanation</h3>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1 2 3\n2 3 4\n2 3 5\n1 2 3\n2 3 4\n2 3 4\n5 6 5\n1 2 3\n2 3 4\n",
+        "output": "yes\nno\nyes",
+        "explanation": "Test Case 1: We can order them as (3, 2, 1). Person 3 is better than Person 2 because his scores in the first two skills are not lesser than Person 2's. And in skill 3, Person 3 scores higher. Similarly, Person 2 is better than Person 1. He scores more than Person 1 in every skill, in fact.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/_Ch4je8zz9g",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/ORDTEAMS\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACMIND17/problems/ORDTEAMS\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a><br>\n<strong>Testers:</strong> <a href=\"https://www.codechef.com/users/xellos0\" rel=\"nofollow noopener\">Jakub Safin</a><br>\n<strong>Editorialist:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<h3>DIFFICULTY:</h3>\n<p>simple</p>\n<h3>PREREQUISITES:</h3>\n<p>sorting</p>\n<h3>PROBLEM:</h3>\n<p>There are three people in a team. For each person in the team, you know their scores in three skills - hard work, intelligence, and persistence.</p>\n<p>You want to check whether it is possible to order these people (assign them numbers from 1 to 3) in such a way that for each <span class=\"math\">1 \\leq i \\leq 2</span>, <span class=\"math\">i+1</span>-th person is strictly better than the <span class=\"math\">i</span>-th person.</p>\n<p>A person <span class=\"math\">x</span> is said to be \\textit{better} than another person <span class=\"math\">y</span> if <span class=\"math\">x</span> doesn\u2019t score less than <span class=\"math\">y</span> in any of the skills and scores more than <span class=\"math\">y</span> in at least one skill.</p>\n<p>Determine whether such an ordering exists.</p>\n<h3>SOLUTION</h3>\n<h3>Checking whether a person <span class=\"math\">x</span> is better than <span class=\"math\">y</span>\n</h3>\n<p>Let us first check whether a person <span class=\"math\">x</span> is better than person <span class=\"math\">y</span> or not. This can be checked by directly following the definition. We iterate over each skill of the person and check the condition that person <span class=\"math\">x</span> should not score less than <span class=\"math\">y</span> in any skill. We also check whether there exists a skill in which the person <span class=\"math\">x</span> scores more than <span class=\"math\">y</span>.</p>\n<p>Let <span class=\"math\">score[3][3]</span> be a 2-D array, where <span class=\"math\">score[i]</span> denotes the score of <span class=\"math\">i</span>-th person the three skills, e.g. The value <span class=\"math\">score[1][2]</span> will denote the score of <span class=\"math\">2</span>-nd person in 3rd skill.</p>\n<pre><code>boolean is_better(x, y):\n\t// Person x should not score less that y in any skill\n\tfor i = 0 to 2:\n\t\tif score[y][i] &gt; score[x][i]:\n\t\t\treturn false\n\n\t// check whether there exists a skill in which the person x scores more than y\n\tfor i = 0 to 2:\n\t\tif score[x][i] &gt; score[y][i]:\n\t\t\treturn true\n\t\n\t// Otherwise return false\n\treturn false\n</code></pre>\n<h3>Solution based on trying all orderings of <span class=\"math\">\\{1, 2, 3\\}</span>.</h3>\n<p>Now, we can decide all possible permutations/orderings of <span class=\"math\">\\{1, 2, 3\\}</span> and check whether for some ordering each person is better than it\u2019s next person. There will be total <span class=\"math\">3! = 6</span> such orderings. You can either hardcode these orderings or use three for loops or use next_permutation in C++.</p>\n<p><strong>Hard coding the orderings</strong></p>\n<pre><code>ord[6][3] = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]}\n</code></pre>\n<p><strong>Using three for loops</strong></p>\n<pre><code>for i = 1 to 3:\n\tfor j = 1 to 3:\n\t\tfor k = 1 to 3:\n\t\t\tif (i == j or j == k or i == k):\n\t\t\t\tcontinue \n\t\t\t// Here (i, j, k) denotes one possible ordering.\n</code></pre>\n<p><strong>Using next_permutation in C++</strong></p>\n<pre><code>vector&lt;int&gt; v{1, 2, 3}\ndo {\n\t// Here the array v denotes one possible ordering.\n} while (next_permuatation(v.begin(), v.end()))\n</code></pre>\n<h3>A sorting based solution.</h3>\n<p>We know that if a person <span class=\"math\">x</span> is better than person <span class=\"math\">y</span> and the person <span class=\"math\">y</span> is better than person <span class=\"math\">z</span>, then person <span class=\"math\">x</span> is better than person <span class=\"math\">z</span>. This is called transitive relation. So, we can sort the person based on the order defined by comparing the two people by checking whether a person is better than or other person or not.</p>\n<p>The basic insertion sort code will look like this.</p>\n<pre><code>for i = 0 to 2:\n\tfor j = i + 1 to 2:\n\t\tif (!is_better(i, j)):\n\t\t\tswap(score[i], score[j])\n// Now the scores are sorted according to better relationship.\n</code></pre>\n<p>Now, the above order will be one possible order if there exists an order of arranging the person. So, for that you can go through the above order and check the <span class=\"math\">i+1</span>-th person is better than the <span class=\"math\">i</span>-th person.</p>\n<p>You can also sort the persons using by their standard comparisons by comparing them by their lexicographic ordering. Most of the languages have inbuilt functions for this purpose. C++ contains sort function, Python also contains a sort function.</p>\n<p>The overall time complexity of both the solutions will be constant time, <span class=\"math\">\\mathcal{O}(1)</span>. There are 1000 test cases in the problem, which are quite easy to pass within a minute.</p>\n<h3>Setters and Tester Solution Codes</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/17192425\" rel=\"nofollow noopener\">Setter\u2019s solution</a><br>\n<a href=\"https://www.codechef.com/viewsolution/17192426\" rel=\"nofollow noopener\">Tester\u2019s solution</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17958,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "30-10-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Sorting",
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/ORDTEAMS",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611126
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ORDTEAMS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

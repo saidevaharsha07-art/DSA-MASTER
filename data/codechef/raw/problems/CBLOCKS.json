@@ -1,0 +1,113 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CBLOCKS",
+  "contest_category": "6",
+  "problem_name": "Saruman of Many Colours",
+  "intended_contest_code": null,
+  "body": "<p><html> <head> </head> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Saruman of Many Colours<br /> </h2>\n<p> <i>'\"For I am Saruman the Wise, Saruman Ring-maker, Saruman of Many Colours!\"<br />     'I looked then and saw that his robes, which had seemed white, were not so, but were woven of all colours.     And if he moved they shimmered and changed hue so that the eye was bewildered.'</i> - Gandalf the Grey.<br /> <br /> And so it was that Saruman decided to brand his Uruk-hai army with the many colours that he fancied. His method of branding his army was as follows.<br /> He straps his army of <b>N</b> Uruk-hai onto chairs on a conveyor belt. This conveyor belt passes through his colouring-room, and can be moved forward or backward. The Uruk-hai are numbered 0 to <b>N</b>-1 according to the order in which they are seated. Saruman wishes that the i'th Uruk-hai be coloured with the colour <b>c[i]</b>.<br /> Further, his colouring-room has space for exactly <b>K</b> chairs. Once the chosen <b>K</b> consecutive Uruk-hai are put into the room, a colour jet sprays all <b>K</b> of them with any fixed colour. The conveyor belt is not circular (which means that the <b>N</b>-1'th and the 0'th Uruk-hai are not consecutive). Note that Uruk-hai can be recoloured in this process.<br /> <br /> Saruman wants to find out what is the minimum number of times that the jet needs to be used in order to colour his army in the required fashion. If it is not possible to colour the army in the required fashion, output -1.<br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains the number of test-cases <b>T</b>.<br /> Each test case consists of 2 lines. The first line contains two space-separated integers, <b>N</b> and <b>K</b>.<br /> This is followed by a single line containing a string <b>c</b> of length <b>N</b>, describing the colours of the army. The i'th character of <b>c</b> denotes the colour of the i'th Uruk-hai in the army.<br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> Output <b>T</b> lines, one for each test case containing the answer for the corresponding test case. Remember if it is not possible to colour the army as required, output -1.<br /><br />\n<h3>Constraints:</h3>\n</p><p><b> 1 &lt;= T &lt;= 50<br /> 1 &lt;= K &lt;= N &lt;= 20,000<br /> The string c has length exactly N and contains only the characters 'a',...,'z'.</b><br /><br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> 3 2<br /> rgg<br /> 3 3<br /> rgg</span><br /><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> -1</span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> In the first test case, soldiers 0 and 1 can first be painted with 'r', and then soldiers 1 and 2 can be painted with 'g'.<br /> In the second test case, since N = K, all the soldiers will only have the same color.<br /> <br /> </p></body> </html> </p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p><html> <head> </head> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Saruman of Many Colours<br /> </h2>\n<p> <i>'\"For I am Saruman the Wise, Saruman Ring-maker, Saruman of Many Colours!\"<br />     'I looked then and saw that his robes, which had seemed white, were not so, but were woven of all colours.     And if he moved they shimmered and changed hue so that the eye was bewildered.'</i> - Gandalf the Grey.<br /> <br /> And so it was that Saruman decided to brand his Uruk-hai army with the many colours that he fancied. His method of branding his army was as follows.<br /> He straps his army of <b>N</b> Uruk-hai onto chairs on a conveyor belt. This conveyor belt passes through his colouring-room, and can be moved forward or backward. The Uruk-hai are numbered 0 to <b>N</b>-1 according to the order in which they are seated. Saruman wishes that the i'th Uruk-hai be coloured with the colour <b>c[i]</b>.<br /> Further, his colouring-room has space for exactly <b>K</b> chairs. Once the chosen <b>K</b> consecutive Uruk-hai are put into the room, a colour jet sprays all <b>K</b> of them with any fixed colour. The conveyor belt is not circular (which means that the <b>N</b>-1'th and the 0'th Uruk-hai are not consecutive). Note that Uruk-hai can be recoloured in this process.<br /> <br /> Saruman wants to find out what is the minimum number of times that the jet needs to be used in order to colour his army in the required fashion. If it is not possible to colour the army in the required fashion, output -1.<br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains the number of test-cases <b>T</b>.<br /> Each test case consists of 2 lines. The first line contains two space-separated integers, <b>N</b> and <b>K</b>.<br /> This is followed by a single line containing a string <b>c</b> of length <b>N</b>, describing the colours of the army. The i'th character of <b>c</b> denotes the colour of the i'th Uruk-hai in the army.<br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> Output <b>T</b> lines, one for each test case containing the answer for the corresponding test case. Remember if it is not possible to colour the army as required, output -1.<br /><br />\n<h3>Constraints:</h3>\n</p><p><b> 1 <= T <= 50<br /> 1 <= K <= N <= 20,000<br /> The string c has length exactly N and contains only the characters 'a',...,'z'.</b><br /><br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> 3 2<br /> rgg<br /> 3 3<br /> rgg</span><br /><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 2<br /> -1</span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> In the first test case, soldiers 0 and 1 can first be painted with 'r', and then soldiers 1 and 2 can be painted with 'g'.<br /> In the second test case, since N = K, all the soldiers will only have the same color.<br /> <br /> </p></body> </html> </p>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "22-01-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acmamr12",
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610657
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CBLOCKS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13B",
+  "contest_category": "6",
+  "problem_name": "Olympic Village",
+  "intended_contest_code": null,
+  "body": "<p>It is almost Olympic time, but the organizers fear that the entire Olympic village will not be ready in time given the slow progress of construction. The games are going to have <b>K</b> events (numbered from 1 to <b>K</b>), and <b>M</b> countries (numbered from 1 to <b>M</b>) have already confirmed sending their sportspersons to participate in one or more of these events, with one person participating in exactly one event. Given the urgency of the situation, the organizers hold an emergency meeting to find the minimum number of total beds that they have to plan for counting all the rooms to accommodate all the people.  Given that there will be some moving in and moving out time, it was decided that two people will not be allotted the same bed if the days their events are held overlaps (including if one event starts on the same day the other ends).</p>\n<p>The organizers want to get that number and then want to speed up the work on a war-footing to at least get that many beds ready in time. You have to help them calculate this minimum.\u00a0</p>\n<h3>Input</h3>\n<p>The first line contains the number of test cases <b>N</b>.</p>\n<p>For each test case, the first line contains the values of <b>K</b> and <b>M</b>. This is followed by <b>K</b> lines, with the j-th line containing the start and end days of event j (both positive integers, with end day > start day). This is followed by <b>M</b> lines, with the j-th line containing the participation information for country j. The participation information for each country consists of (in this order): an integer <b>D</b> indicating the number of events the country is participating in, followed by <b>D</b> pairs of integers (total 2<b>D</b> integers), with each pair containing the id (from 1 to <b>K</b>) of an event and the number of participants (positive integer) the country is sending for that event.</p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the minimum total number of beds needed.</p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> \u2264 3</p>\n<p>0 &lt; <b>K</b> \u2264 30</p>\n<p>0 &lt; <b>M</b> \u2264 100</p>\n<p>0 &lt; <b>D</b> \u2264 <b>K</b></p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n5 3\n2 7\n1 4\n5 8\n3 6\n9 10\n5 1 1 2 1 3 1 4 1 5 1\n4 1 1 2 1 3 2 5 2\n3 3 1 5 1 4 1\n4 2\n1 3\n3 6\n2 3\n4 7\n4 1 2 2 2 3 1 4 1\n4 1 1 2 1 3 2 4 2\n\n<b>Output:</b>\nCase 1: 8\nCase 2: 9\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < **N** \u2264 3\n- 0 < **K** \u2264 30\n- 0 < **M** \u2264 100\n- 0 < **D** \u2264 **K**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "It is almost Olympic time, but the organizers fear that the entire Olympic village will not be ready in time given the slow progress of construction. The games are going to have **K** events (numbered from 1 to **K**), and **M** countries (numbered from 1 to **M**) have already confirmed sending their sportspersons to participate in one or more of these events, with one person participating in exactly one event. Given the urgency of the situation, the organizers hold an emergency meeting to find the minimum number of total beds that they have to plan for counting all the rooms to accommodate all the people. Given that there will be some moving in and moving out time, it was decided that two people will not be allotted the same bed if the days their events are held overlaps (including if one event starts on the same day the other ends).\n\nThe organizers want to get that number and then want to speed up the work on a war-footing to at least get that many beds ready in time. You have to help them calculate this minimum.\n",
+    "inputFormat": "The first line contains the number of test cases **N**.\n\nFor each test case, the first line contains the values of **K** and **M**. This is followed by **K** lines, with the j-th line containing the start and end days of event j (both positive integers, with end day > start day). This is followed by **M** lines, with the j-th line containing the participation information for country j. The participation information for each country consists of (in this order): an integer **D** indicating the number of events the country is participating in, followed by **D** pairs of integers (total 2**D** integers), with each pair containing the id (from 1 to **K**) of an event and the number of participants (positive integer) the country is sending for that event.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the minimum total number of beds needed.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n5 3\n2 7\n1 4\n5 8\n3 6\n9 10\n5 1 1 2 1 3 1 4 1 5 1\n4 1 1 2 1 3 2 5 2\n3 3 1 5 1 4 1\n4 2\n1 3\n3 6\n2 3\n4 7\n4 1 2 2 2 3 1 4 1\n4 1 1 2 1 3 2 4 2\n",
+        "output": "Case 1: 8\nCase 2: 9\n",
+        "explanation": "The sample input consists of two test cases. \n\n- In the first test case, there are 5 events and 3 countries. The events are scheduled on overlapping days, and the total number of participants across all events is 8. Therefore, the minimum number of beds required is 8.\n\n- In the second test case, there are 4 events and 2 countries. The events are also scheduled on overlapping days, and the total number of participants across all events is 9. Therefore, the minimum number of beds required is 9.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13B\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13B\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy</p>\n<h3>PREREQUISITES:</h3>\n<p>sort</p>\n<h3>PROBLEM:</h3>\n<p>Given at most <b>K</b>*<b>M</b> intervals [L<sub>i</sub>, R<sub>i</sub>], find the thickest point. That is, for all points <b>x</b>, the most number of intervals covered <b>x</b>.</p>\n<h3>EXPLANATION:</h3>\n<p>Let\u2019s split one interval [L<sub>i</sub>, R<sub>i</sub>] into two events, &lt; L<sub>i</sub>, +1 &gt; and &lt; R<sub>i</sub>, -1 &gt;. The first one means the \u201ctime\u201d of that event, and the second one means the \u201cdelta\u201d of that event. See the following figure for example:<br>\n<img src=\"http://discuss.codechef.com/upfiles/B.png\" alt=\"alt text\" width=\"\" height=\"\"></p>\n<p>From this idea, we can see that if we order the events in a proper order, the prefix sum can state the cover time. If so, the answer of this problem is just the maximum number among the prefix sum.</p>\n<p>But it is ambiguous if we purely ordering the events by \u201ctime\u201d when there are two events happened at the same time, such as &lt;1, +1&gt;, &lt;1, -1&gt;. How can we deal with the order between them? In this problem, because the intervals are inclusive and we need to find the maximum covers, we can simply compare these same-\u201ctime\u201d events by their \"delta\"s, in decsending order (i.e &lt;time, +1&gt; is in front of &lt;time, -1&gt;).</p>\n<p>All the things remaining is to sort the events by \u201ctime\u201d (from early to late) and break the tie using \u201cdelta\u201d (from large to small). And then, find the maximum among the prefix sum of \u201cdelta\u201d. If we use quick sort here, the time complexity will be O(<b>KM</b>log<b>KM<b>).</b></b></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4043,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2.035",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "jingbo_adm",
+    "kgp13acm",
+    "sorting"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13B",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610963
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13B",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

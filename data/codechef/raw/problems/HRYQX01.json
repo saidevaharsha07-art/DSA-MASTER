@@ -1,0 +1,134 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HRYQX01",
+  "contest_category": "6",
+  "problem_name": "Chef Builds Twitter",
+  "intended_contest_code": "DSAMONDAY001",
+  "body": "Chef has decided to build a simplified version of Twitter to manage tweets and user interactions. Chef wants to design a system where users can post tweets, follow or unfollow other users, and view the latest tweets from themselves and the users they follow. Chef aims to fetch the 10 most recent tweets in a user's news feed, sorted from the newest to the oldest. Help Chef implement this Twitter-like service so that users can efficiently manage their social interactions and keep up with the latest updates.\n\n## Function Declaration\n\n```cpp\nSimpleTwitter* createTwitterInstance();\n```\n\n- **Function Name:** `createTwitterInstance`  \n- **Parameters:** None  \n- **Return Value:** Returns a pointer to a `SimpleTwitter` object. This instance allows calling methods such as `addTweet`, `getLatestTweets`, `startFollowingUser`, and `stopFollowingUser` for managing tweets and user relationships.\n\n## Input Format\n\n- The first line contains an integer $T$ \u2014 the number of test cases.\n- For each test case:\n  - The input will consist of a sequence of commands representing user actions such as posting tweets, following/unfollowing users, and retrieving news feeds.\n  - Each command will be provided with the required parameters (e.g., user identifiers and tweet identifiers) according to the operation.\n\n## Output Format\n\n- For each command that requires output (like retrieving the news feed), print a single line containing the list of tweet identifiers representing the 10 most recent tweets visible to the specified user.\n- Tweets must be ordered from the most recent to the least recent.\n\n## Constraints\n\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq userIdentifier, followerUserId, followedUserId \\leq 500$\n- $0 \\leq tweetIdentifier \\leq 10^4$\n- All tweet identifiers are unique.\n- At most $3 \\times 10^4$ calls will be made to `addTweet`, `getLatestTweets`, `startFollowingUser`, and `stopFollowingUser`.\n- A user cannot startFollowingUser themselves.\n\nHelp Chef implement the `SimpleTwitter` system so that users can post tweets, manage their followers, and retrieve their personalized news feed efficiently!\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": " ",
+    "constraintsState": false,
+    "subtasks": " ",
+    "subtasksState": false,
+    "statement": "Chef has decided to build a simplified version of Twitter to manage tweets and user interactions.\n\nChef wants to design a system where users can:\n\n* Post tweets\n* Follow other users\n* Unfollow users\n* Retrieve the 10 most recent tweets visible in their news feed\n\nA user's news feed must show the **most recent tweets** posted by:\n\n* The user themself\n* All users they follow\n\nThe tweets must be returned in **descending order of recency** (newest first).\n\nYour task is to help Chef implement this Twitter-like service.\n\n\n##  **Class Definition**\n\nYou must implement a class named **`Twitter`** with the following functions:\n\n### $Twitter$\n\nConstructor. Initializes the Twitter object.\n\n### $postTweet$: ( *parameters* - $userId$ and $tweetId$.)\n\nPosts a new tweet with ID $tweetId$ by user $userId$.\n\n### $getNewsFeed$ ( *parameters* - $userId$)\n\nReturns up to **10 most recent tweet IDs**, in descending order of time, from:\n\n* The user and All users they follow\n* If the post are less than 10 then all the post should be returned.\n\n### $follow$ ( *parameters* - $followerId$ and $followeeId$)\n\nUser $followerId$ starts following user $followeeId$.\n\n### $unfollow$ ( *parameters* - $followerId$ and $followeeId$)\n\nUser $followerId$ unfollows user $followeeId$.\n\n## Constraints\n\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq userIdentifier, followerUserId, followedUserId \\leq 500$\n- $0 \\leq tweetIdentifier \\leq 3 \\times 10^4$\n- All tweet identifiers are unique.\n- At most $3 \\times 10^4$ calls will be made to `addTweet`, `getLatestTweets`, `startFollowingUser`, and `stopFollowingUser`.\n- A user cannot startFollowingUser themselves.",
+    "inputFormat": "* $T$ = number of test cases.\n* Commands include:\n\n  * $\"Twitter\"$\n  * $\"postTweet\"$\n  * $\"getNewsFeed\"$\n  * $\"follow\"$\n  * $\"unfollow\"$\n* Each command has a corresponding list of arguments:\n\n  * $[]$ for `\"Twitter\"`\n  * $[userId, tweetId]$ for `\"postTweet\"`\n  * $[userId]$ for `\"getNewsFeed\"`\n  * $[followerId, followeeId]$ for `\"follow\"` / `\"unfollow\"`\n",
+    "inputFormatState": true,
+    "outputFormat": "Output values must be printed **space-separated on one line**, in the same order as commands appear.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n[\"Twitter\", \"postTweet\", \"postTweet\", \"follow\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\", \"getNewsFeed\"]\n[[], [1,101], [2,102], [1,2], [1], [1,2], [1], [2]]\n",
+        "output": "None None None None [102, 101] None [101] [102]",
+        "explanation": "- postTweet 1 101: User 1 posts tweet 101; output is None as postTweet returns void.  \n- postTweet 2 102: User 2 posts tweet 102; output is None.  \n- follow 1 2: User 1 follows user 2; output is None.  \n- getNewsFeed 1: User 1 sees tweets from self and followed user 2; latest tweets are 102 and 101.  \n- unfollow 1 2: User 1 unfollows user 2; output is None.  \n- getNewsFeed 1: User 1 now only sees own tweet 101.  \n- getNewsFeed 2: User 2 sees own tweet 102 only.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "1\n[\"Twitter\", \"postTweet\", \"postTweet\", \"postTweet\", \"follow\", \"getNewsFeed\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\", \"getNewsFeed\"]\n[[], [3,201], [3,202], [4,301], [3,4], [3], [4,302], [3], [3,4], [3], [4]]\n",
+        "output": "None None None None None [301, 202, 201] None [302, 301, 202, 201] None [202, 201] [302, 301]\n",
+        "explanation": "- postTweet 3 201, 202; user 3 posts tweets 201 and 202.  \n- postTweet 4 301; user 4 posts tweet 301.  \n- follow 3 4; user 3 follows user 4.  \n- getNewsFeed 3; user 3's feed shows tweets from self (201, 202) and user 4 (301), sorted by time: [301 202 201].  \n- postTweet 4 302; user 4 posts tweet 302.  \n- getNewsFeed 3; feed updates to include new tweet 302 from user 4: [302 301 202 201].  \n- stopFollowing 3 4; user 3 unfollows user 4.  \n- getNewsFeed 3; now only user 3's tweets appear: [202 201].  \n- getNewsFeed 4; user 4's own tweets: [302 301].",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "1\n[\"Twitter\", \"postTweet\", \"postTweet\", \"follow\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\"]\n[[], [10,1001], [11,1101], [10,11], [12,1201], [10], [10,11], [10]]\n",
+        "output": "None None None None None [1101, 1001] None [1001]\n",
+        "explanation": "- postTweet 10 1001: User 10 posts tweet 1001; output None as it\u2019s a command.\n- postTweet 11 1101: User 11 posts tweet 1101; output None.\n- follow 10 11: User 10 follows user 11; output None.\n- postTweet 12 1201: User 12 posts tweet 1201; output None.\n- getNewsFeed 10: User 10\u2019s feed includes own tweet 1001 and followed user 11\u2019s tweet 1101, ordered newest first: [1101 1001].\n- stopFollowing 10 11: User 10 unfollows user 11; output None.\n- getNewsFeed 10: Now only user 10\u2019s own tweet 1001 appears in feed: [1001].",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "This problem involves designing a miniature Twitter-like system with four core operations:\n\n1. Posting a tweet\n2. Following a user\n3. Unfollowing a user\n4. Retrieving the 10 most recent tweets visible to a user\n\nThe objective is to support these operations efficiently while handling up to tens of thousands of actions.\n\n---\n\n## **Key Observations**\n\n### 1. Tweet Visibility Rules\n\nA user's news feed should display:\n\n* Their own tweets\n* Tweets from users they follow\n\nTweets must be sorted by recency, and only the 10 most recent should be returned.\n\n### 2. Small User Range\n\nUser IDs range only up to 500, which allows efficient direct indexing for user-based data structures.\n\n### 3. Sequential Tweet Posting\n\nTweets are posted in chronological order, meaning the system can assign an increasing timestamp (or implicit sequential index) to each tweet. Since timestamps strictly increase, sorting is not required if tweets are processed in reverse order.\n\n---\n\n## **Data Structures**\n\nTo efficiently support all operations, the following structures are used:\n\n### **1. Tweet List**\n\nA global list that stores all tweets in the order they were posted. Each entry contains:\n\n* The author of the tweet\n* The tweet identifier\n\nThis list allows scanning from the most recent tweet backward.\n\n### **2. Follow Matrix or Follow List**\n\nFor each user, the followers they follow are stored. Since the maximum number of users is small, a simple boolean or flag array is sufficient. This allows constant-time checks to determine whether a user follows another.\n\n### **3. News Feed Buffer**\n\nWhen retrieving the news feed:\n\n* A small array (size 10) is used to store up to 10 relevant tweet IDs.\n* The system stops scanning as soon as 10 tweets are found.\n\n---\n\n## **Tweet Retrieval Strategy**\n\n### **Naive Approach**\n\nFor every call to retrieve the news feed:\n\n* Scan all stored tweets from the newest to the oldest.\n* Select tweets authored either by the user or by someone the user follows.\n* Stop once 10 tweets are collected.\n\nThis is efficient because:\n\n* The maximum number of tweets is capped at 20,000.\n* The scan is linear in the worst case.\n* The number of news feed requests is limited.\n\nGiven the constraints, this linear scan is fast enough.\n\n---\n\n## **Follow and Unfollow Operations**\n\nSince each user can follow up to 500 others:\n\n* A simple array of size 500 can store follow relationships.\n* Following sets the corresponding position to true.\n* Unfollowing resets it to false.\n\nBoth operations complete in constant time.\n\n---\n\n## **Complexity Analysis**\n\n### **postTweet**\n\nO(1)\nAppending a tweet to the global array is constant-time.\n\n### **follow / unfollow**\n\nO(1)\nSetting or clearing a follow flag is constant-time.\n\n### **getNewsFeed**\n\nO(N) where N is the total number of tweets\nAt most 20,000 tweets are scanned in reverse order until 10 tweets are found.\nDue to the early stop, average-case performance is significantly faster.\n\n### **Memory Usage**\n\nAll structures remain within constraints and scale linearly with the maximum number of users and tweets.\n\n---\n\n## **Why This Approach Works**\n\nThe constraints allow a solution that avoids complex structures like priority queues or heaps. A simple reverse scan over the tweet list is both sufficient and efficient.\n\nMore advanced data structures would offer no significant advantage because:\n\n* The feed is limited to 10 entries.\n* The number of tweets is capped.\n* Following relationships are simple boolean checks.\n\nThe chosen approach offers minimal overhead and predictable performance across all cases.\n\n---\n\n## **Conclusion**\n\nThe problem can be solved efficiently by combining:\n\n* A global chronological list of tweets,\n* A direct user-follow mapping,\n* A reverse scan to identify the 10 most recent visible tweets.\n\nThis structure is simple to implement, memory-efficient, and performant under all required constraints.",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "nonameetcetc",
+  "problem_display_authors": [
+    "nonameetcetc"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/nonameetcetc'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>nonameetcetc</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "9-12-2025",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "nonameetcetc"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1777908600,
+    "submit_start_date": 1777908600,
+    "visible_start_date": 1777908600,
+    "end_date": 1893436200,
+    "current": 1785610871
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HRYQX01",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

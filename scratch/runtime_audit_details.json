@@ -1,0 +1,41 @@
+{
+  "entryPoint": "src/app/layout.tsx",
+  "layout": "src/app/(app)/layout.tsx",
+  "providers": [
+    "AuthProvider",
+    "AppBackendProvider"
+  ],
+  "iocInitialization": "initializeServiceRegistry() (src/core/container/service-registry.ts)",
+  "registeredServices": [
+    "MemoryEngine",
+    "ContestEngine",
+    "RatingEngine",
+    "AdaptiveEngine",
+    "OracleService",
+    "AuthService",
+    "SessionService",
+    "PermissionService",
+    "SyncService",
+    "ConnectorService",
+    "AchievementService",
+    "LeaderboardService",
+    "NotificationService",
+    "AnalyticsService",
+    "BackupService",
+    "RealtimeService"
+  ],
+  "contextState": [
+    "profile",
+    "snapshot (OracleDashboardSnapshot)",
+    "bundle (OracleContextBundle)",
+    "activeStrategyName",
+    "isLoading",
+    "error"
+  ],
+  "eventBusSubscriptions": [
+    "ProblemSolved",
+    "AchievementUnlocked",
+    "MemoryReviewed",
+    "StrategyChanged"
+  ]
+}

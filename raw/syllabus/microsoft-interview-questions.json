@@ -1,0 +1,243 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "microsoft-interview-questions",
+  "name": "Microsoft Coding Interview Questions",
+  "title": "Microsoft Coding Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Microsoft online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/microsoft-interview-questions/MSPREP/problems/PTRLP",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Microsoft Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Interview Problems",
+          "submodule_id": 6187,
+          "contest_code": "MSPREP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 14,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/microsoft-interview-questions/MSPREP/problems/PTRLP",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "27875",
+              "code": "PTRLP",
+              "name": "Petrol ki Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PAL_STRING",
+              "name": "Dispute Resolving",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "RECTREE",
+              "name": "Reconstruct the Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "SUBTCH",
+              "name": "Find the Subtree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "NSELL",
+              "name": "Find Next Smaller value in Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "TRAINLOOP",
+              "name": "Train Loop ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PREP05",
+              "name": "Array - Addition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PREP22",
+              "name": "Largest Rectangle in Histogram",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PREP54",
+              "name": "Linked List - Swap nodes in pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27875",
+              "code": "PREP65",
+              "name": "Trees - Path Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 14
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 14,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2333,
+  "path_review": {
+    "rating": 4.5,
+    "users": 14
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

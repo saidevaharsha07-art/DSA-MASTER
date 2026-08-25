@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "OPTCODE",
+  "contest_category": "6",
+  "problem_name": "Optimize The Slow Code",
+  "intended_contest_code": null,
+  "body": "<p>Chef hates unoptimized codes and people who write such codes. One fine day he decided to look through the kitchen's codebase and found a function whose pseudo-code is given here:\n\n<pre><code>input: integer N, list X[1, 2, ..., N], list Y[1, 2, ..., N]\n\noutput: integer res\n\nfunction:\n\nset res = 0;\nfor i := 1 to N do\n   for j := 1 to N do\n      for k := 1 to N do\n         if (X[i] = X[j]) OR (X[j] = X[k]) OR (X[k] = X[i])\n            continue\n         else\n            set res = max(res, Y[i] + Y[j] + Y[k])\nreturn res\n</code>\n</pre>\n\n<p>Luckily enough this code gets triggered only if the Head Chef makes a submission. But still there is a possibility that this can crash the judge. So help Chef by writing a new function which does the same thing but is faster.</p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first line of each test case contains an integer <b>N</b> denoting the number of elements in the two lists.</li>\n<li>The i-th of the next <b>N</b> lines contains a pair of space-separated integers denoting the values of <b>X[i]</b> and <b>Y[i]</b> respectively.</li>\n</ul>\n\n<h3>Output</h3>\n<p>For each test case, output an integer corresponding to the return value of the function.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 10</li>\n<li>1 \u2264 <b>N</b> \u2264 10<sup>5</sup></li>\n<li>1 \u2264 <b>X[i]</b>, <b>Y[i]</b> \u2264 10<sup>8</sup></li> \n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n2\n3\n1 3\n3 1\n1 2\n5\n1 3\n2 4\n1 2\n3 2\n3 4\n\n<b>Output</b>\n0\n11\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Testcase 2:</b> The maximum is attained when i = 1, j = 2 and k = 5. This leads to res being 3 + 4 + 4 = 11. This value is attained in other iterations as well, but it never exceeds this, and hence this is the answer.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10$\n- $1 \\leq N \\leq 10^5$\n- $1 \\leq X[i], Y[i] \\leq 10^8$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef hates unoptimized codes and people who write such codes. One fine day he decided to look through the kitchen's codebase and found a function whose pseudo-code is given here:\n\n```plaintext\ninput: integer N, list X[1, 2, ..., N], list Y[1, 2, ..., N]\n\noutput: integer res\n\nfunction:\n\nset res = 0;\nfor i := 1 to N do\n   for j := 1 to N do\n      for k := 1 to N do\n         if (X[i] = X[j]) OR (X[j] = X[k]) OR (X[k] = X[i])\n            continue\n         else\n            set res = max(res, Y[i] + Y[j] + Y[k])\nreturn res\n```\n\nLuckily enough this code gets triggered only if the Head Chef makes a submission. But still there is a possibility that this can crash the judge. So help Chef by writing a new function which does the same thing but is faster.\n",
+    "inputFormat": "- The first line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n- The first line of each test case contains an integer **N** denoting the number of elements in the two lists.\n- The i-th of the next **N** lines contains a pair of space-separated integers denoting the values of **X[i]** and **Y[i]** respectively.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output an integer corresponding to the return value of the function.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n1 3\n3 1\n1 2\n5\n1 3\n2 4\n1 2\n3 2\n3 4\n",
+        "output": "0\n11\n",
+        "explanation": "**Testcase 2:** The maximum is attained when i = 1, j = 2 and k = 5. This leads to res being 3 + 4 + 4 = 11. This value is attained in other iterations as well, but it never exceeds this, and hence this is the answer.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/20okSctB7Eg",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "13-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Greedy",
+    "Constructive"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611127
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=OPTCODE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

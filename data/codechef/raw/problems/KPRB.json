@@ -1,0 +1,130 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KPRB",
+  "contest_category": "6",
+  "problem_name": "K-Prob",
+  "intended_contest_code": null,
+  "body": "You are given a string $S$ of length $n$ and an integer $K$.    \r\nWe will define $F(L)$ here. Let's choose $K$ random sub-strings of length $L$ from $S$.    \r\nThen $F(L)$ equals the probability such that all of them are pairwise identical.      \r\n  \r\nSee the **Explanation** section for more clarity.   \r\n\r\n \r\nYou have to find $F(L)$  for each $1 \\leq L \\leq n$. \r\n\r\nIt can be shown that any $F(L)$ can be expressed as a fraction $\\frac{P}{Q}$, where $P$ and $Q$ are coprime integers, $P \\geq 0$, $Q > 0$ and $Q$ is coprime with $998244353$. You should compute $P \\times Q^{-1}%(998244353)$, where $Q^{\u22121}$ denotes the multiplicative inverse of $Q$ modulo $998244353$.\r\n\r\n\r\n###Input:\r\n\r\n- First line will contain two integers, $n$ (the length of string $S$) and $K$. \r\n- Next line will contain the string $S$. \r\n\r\n###Output:\r\nPrint $n$ space separated integers, $F(L)$, for each $1 \\leq L \\leq n$, in a single line, \r\n\r\n###Constraints \r\n- $1 \\leq n \\leq 10^6$\r\n- $2 \\leq K \\leq 10^6$\r\n- It\u2019s guaranteed that $S$ contains only lower-case Latin letters.\r\n\r\n\r\n###Sample Input:\r\n\t5 3\r\n\tababa\r\n\r\n###Sample Output:\r\n\t239578645 748683265 332748118 748683265 1\r\n\t\r\n###Explanation:\r\n\r\nIn our sample, for $L= 3$,  we have 3 sub-strings : \r\n\r\n- $aba$ (Starting from 1st position)\r\n- $bab$ (Starting from 2nd position)\r\n- $aba$ (Starting from 3rd position)\r\n\r\nAmong them we can chose in the following ways, to get all 3 of them pairwise identical:\r\n\r\n- $(1, 1, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(2, 2, 2) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(3, 3, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(1, 1, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(1, 3, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(3, 1, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(3, 3, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(3, 1, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n- $(1, 3, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$\r\n\r\n$(1, 3, 3)$ means that the three random substrings chosen are the substring starting at index 1, at index 3 and at index 3.\r\n\r\nSo $F(3) = 9 \\times \\frac{1}{27} =  \\frac{1}{3}$\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq n \\leq 10^6$  \n- $2 \\leq K \\leq 10^6$  \n- It\u2019s guaranteed that $S$ contains only lower-case Latin letters.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a string $S$ of length $n$ and an integer $K$.  \nWe will define $F(L)$ here. Let's choose $K$ random sub-strings of length $L$ from $S$.  \nThen $F(L)$ equals the probability such that all of them are pairwise identical.  \n\nSee the **Explanation** section for more clarity.  \n\nYou have to find $F(L)$ for each $1 \\leq L \\leq n$.  \n\nIt can be shown that any $F(L)$ can be expressed as a fraction $\\frac{P}{Q}$, where $P$ and $Q$ are coprime integers, $P \\geq 0$, $Q > 0$ and $Q$ is coprime with $998244353$. You should compute $P \\times Q^{-1} \\mod 998244353$, where $Q^{\u22121}$ denotes the multiplicative inverse of $Q$ modulo $998244353$.\n",
+    "inputFormat": "- First line will contain two integers, $n$ (the length of string $S$) and $K$.  \n- Next line will contain the string $S$.\n",
+    "inputFormatState": true,
+    "outputFormat": "Print $n$ space separated integers, $F(L)$, for each $1 \\leq L \\leq n$, in a single line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5 3\nababa\n",
+        "output": "239578645 748683265 332748118 748683265 1\n",
+        "explanation": "In our sample, for $L= 3$, we have 3 sub-strings:  \n\n- $aba$ (Starting from 1st position)  \n- $bab$ (Starting from 2nd position)  \n- $aba$ (Starting from 3rd position)  \n\nAmong them we can choose in the following ways, to get all 3 of them pairwise identical:  \n\n- $(1, 1, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(2, 2, 2) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(3, 3, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(1, 1, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(1, 3, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(3, 1, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(3, 3, 1) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(3, 1, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n- $(1, 3, 3) : Probability\\ =\\ \\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$  \n\n$(1, 3, 3)$ means that the three random substrings chosen are the substring starting at index 1, at index 3 and at index 3.  \n\nSo $F(3) = 9 \\times \\frac{1}{27} = \\frac{1}{3}$  \n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "4",
+  "source_sizelimit": "50000",
+  "problem_author": "msi_cse_buet",
+  "problem_display_authors": [
+    "msi_cse_buet"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/msi_cse_buet'>msi_cse_buet</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Suffix Arrays",
+    "Disjoint Set Union",
+    "Probability",
+    "Longest Common Prefix"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures",
+    "Suffix Structures",
+    "Mathematics",
+    "Algorithms",
+    "Dynamic Programming",
+    "DP on sequences"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610975
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KPRB",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FAVOURITENUM",
+  "contest_category": "6",
+  "problem_name": "Favourite Numbers",
+  "intended_contest_code": "START90",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $1 \\leq A \\leq 1000$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "- Alice likes numbers which are even, and are a multiple of 7.\n- Bob likes numbers which are odd, and are a multiple of 9.\n\nAlice, Bob, and Charlie find a number $A$. \n- If Alice likes $A$, Alice takes home the number.\n- If Bob likes $A$, Bob takes home the number.\n- If both Alice and Bob don't like the number, Charlie takes it home.\n\nGiven $A$, find who takes it home.\n\n**Note:** You can prove that there is no integer $A$ such that both Alice and Bob like it.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of a single integer, $A$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a new line who takes the number home - \"Alice\", \"Bob\", or \"Charlie\".\n\nYou may print each character in uppercase or lowercase. For example, `Alice`, `alice`, `aLiCe`, and `ALICE` are all considered identical.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "8\n7\n14\n21\n18\n27\n63\n126\n8\n",
+        "output": "Charlie\nAlice\nCharlie\nCharlie\nBob\nBob\nAlice\nCharlie\n",
+        "explanation": "**Testcase 1:** 7 is not even, hence Alice doesn't like it. It is odd, but isn't a multiple of 9. Hence Bob doesn't like it. Therefore, Charlie takes it home.\n\n**Testcase 2:** 14 is even and a multiple of 7. Therefore, Alice likes it and takes it home.\n\n**Testcase 3:** 21 is not even, hence Alice doesn't like it. It is odd, but isn't a multiple of 9. Hence Bob doesn't like it. Therefore, Charlie takes it home.\n\n**Testcase 4:** 18 is even but not a multiple of 7, hence Alice doesn't like it. It is not odd, and hence Bob doesn't like it. Therefore, Charlie takes it home.\n\n**Testcase 5:** 27 is odd and a multiple of 9. Therefore, Bob likes it and takes it home.\n\n**Testcase 6:** 63 is odd and a multiple of 9. Therefore, Bob likes it and takes it home.\n\n**Testcase 7:** 126 is even and a multiple of 7. Therefore, Alice likes it and takes it home.\n\n**Testcase 8:** 8 is even but not a multiple of 7, hence Alice doesn't like it. It is not odd, and hence Bob doesn't like it. Therefore, Charlie takes it home.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "6464d2f327e81bb9ba2e31d0",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 106205,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-05-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements",
+    "Basic Math"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Mathematics"
+  ],
+  "difficulty_rating": "477",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610817
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FAVOURITENUM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 28,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 109,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

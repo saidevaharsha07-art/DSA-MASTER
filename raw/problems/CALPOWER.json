@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CALPOWER",
+  "contest_category": "6",
+  "problem_name": "Cool Name",
+  "intended_contest_code": "CSNS2021",
+  "body": "Sardar Singh has many men to fight against Ramadhir. He has a unique way to calculate the power of each man by using their name. The name of every man fighting for him is a string containing of lowercase English alphabets, with $N$. Sardar Singh swaps any two characters in the name of a man, any number of times and calculates the power of each new name formed. Among all the names formed this way, the maximum power of any name is considered to be the power of that man.\n\n- Sardar Singh defines the power\u00a0 of a string $S$\u00a0as \u2211 $i$ * (position of $i_{th}$ letter of string $S$ in alphabets), for $i$ = 1 \u2026 length of $S$. That is, for every letter of $S$, he multiplies its position in $S$ with its position in english alphabets and sums them all. The position of alphabets will start form $1$, that is position of $a$, $b$,...$z$ will be $1$, $2$,...$26$ respectively.\n\n\n\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 60$\n- $1 \\leq |S_{i}| \\leq 100$ \n- $S_i$ consists of lowercase english alphabets only.",
+    "constraintsState": true,
+    "subtasks": "- 30 points : $1 \\leq R \\leq 10000$\n- 70 points : $1 \\leq R \\leq 10^9$\n",
+    "subtasksState": false,
+    "statement": "Sardar Singh has many men fighting for him, and he would like to calculate the power of each of them to better plan for his fight against Ramadhir.\n\nThe power of a string $S$ of lowercase English alphabets is defined to be \n$$\n\\sum_{i = 1}^{|S|} i\\cdot ord(S_i)\n$$\nwhere $ord(S_i)$ is the position of $S_i$ in the alphabet, i.e, $ord('a') = 1, ord('b') = 2, \\dots, ord('z') = 26$.\n\nEach of Sardar Singh's men has a name consisting of lowercase English alphabets. The power of a man is defined to be the maximum power over all possible rearrangements of this string.\n\nFind the power of each of Sardar Singh's men.",
+    "inputFormat": "- The first line of input contains an integer $T$, denoting the total number of Sardar Singh's men.\n- Each of the next $T$ lines contains a single string $S_{i}$, the name of Sardar Singh's $i$-th man.\n",
+    "inputFormatState": true,
+    "outputFormat": "- Output $T$ lines, each containing a single integer. The $i$-th of these lines should have the power of the $i$-th of Sardar Singh's men.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\nfaizal",
+        "output": "273",
+        "explanation": "The rearrangement with maximum power is $aafilz$. Its power can be calculated as\n$$\n1\\cdot ord('a') + 2\\cdot ord('a') + 3\\cdot ord('f') + 4\\cdot ord('i') + 5\\cdot ord('l') + 6\\cdot ord('z')\n$$\nwhich equals $273$.\nIt can be verified that no rearrangement gives a larger power.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 96046,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "0.5 - 1",
+  "source_sizelimit": "50000",
+  "problem_author": "anshg0711",
+  "problem_display_authors": [
+    "anshg0711"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anshg0711'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>anshg0711</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "30-09-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String"
+  ],
+  "computed_tags": [
+    "Data Structures"
+  ],
+  "difficulty_rating": "1223",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610654
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CALPOWER",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 40,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MAXEDGES",
+  "contest_category": "6",
+  "problem_name": "MaxEdges",
+  "intended_contest_code": "NOV221",
+  "body": "Tracy is teaching Charlie maths via a game called MaxEdges.\n\nTracy gives Charlie a DAG with $N$ vertices, $K$ ( $K$ < $N$ ) sources and $L$ ( $L$ < $N$ ) sinks. Help Charlie to find the maximum number of edges this DAG can have.\n\nYou are asked to solve this for Charlie. As the answer can be very large output answer modulo 1000000007 ($10^9 + 7$).\n\nFormally speaking, If there are total $N$ vertices in a DAG ( directed acyclic graph ) out of which there are $K$ sources, and there are $L$ sinks. A source is a vertex with no incoming edge and a sink is a vertex with no outgoing edge. What can be the maximum number of edges this graph can have?  As the number can be very large calculate answer modulo 1000000007 ($10^9 + 7$).\n\n###Input:\n\n- First line will contain $T$, number of testcases. Then the testcases follow. \n- Each testcase contains of a single line of input, three integers $N, K, L$. \n\n###Output:\nFor each testcase, output in a single line answer given by Charlie to Tracy modulo 1000000007.\n\n###Constraints \n- $1 \\leq T \\leq 100000$\n- $2 \\leq N \\leq 10^6$\n- $K \\leq N$\n- $L \\leq N$\n\n###Sample Input:\n\t1\n\t3 1 1\n\n###Sample Output:\n\t3\n\t\n###EXPLANATION:\nSuppose vertices are 1,2 and 3. 1 is source and 3 is sink, then there can exist edges: 1->2, 2->3, and 1->3.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $2 \\leq N \\leq 10^9$\n- $1 \\leq K \\lt N$\n- $1 \\leq L \\lt N$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "Tracy gives Charlie a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) with $N$ vertices. Among these $N$ vertices, $K$ vertices are *sources*, and $L$ vertices are *sinks*. \n\nFind out the **maximum** number of edges this graph can have.\n\nNote:\n- A *source* is a vertex with **no incoming** edge.\n- A *sink* is a vertex with **no outgoing** edge.\n- A vertex can be **both**, a source, and a sink.",
+    "inputFormat": "- First line will contain $T$, number of test cases. Then the test cases follow. \n- Each test case contains of a single line of input, three space-separated integers $N, K,$ and $L$ - the number of vertices, the number of sources and the number of sinks respectively.",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output in a single line, the **maximum** number of edges this graph can have.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 1 1\n5 3 3\n",
+        "output": "3\n4\n\n",
+        "explanation": "**Test case $1$:** Assume that the vertices are numbered $1,2,$ and $3$. Let $1$ be a source and $3$ be a sink. The edges of a possible DAG are $1\\rightarrow 2, 2\\rightarrow 3,$ and $1\\rightarrow 3$.\n\nThe number of edges in this graph are $3$. It can be shown that this is the maximum number of edges possible under given constraints.\n\n**Test case $2$:** Assume that the vertices are numbered $1,2,3,4,$ and $5$. Let $1,2,$ and $3$ be sources and $3, 4, $ and $5$ be  sinks. The edges of a possible DAG are $1\\rightarrow 4, 2\\rightarrow 4, 1\\rightarrow 5$ and $2\\rightarrow 5$.\n\nThe number of edges in this graph are $4$. It can be shown that this is the maximum number of edges possible under given constraints.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 104027,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "janmansh",
+  "problem_display_authors": [
+    "janmansh"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/janmansh'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>janmansh</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "6-03-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Combinatorics"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "1618",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611067
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MAXEDGES",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

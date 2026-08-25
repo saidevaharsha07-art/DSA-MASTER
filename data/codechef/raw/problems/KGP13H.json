@@ -1,0 +1,122 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13H",
+  "contest_category": "6",
+  "problem_name": "Toy Exchange",
+  "intended_contest_code": null,
+  "body": "<p>During the pre-puja bonanza, the Khelnacompany has put <b>K</b> different types (numbered from 1 to <b>K</b>) of Disney figurines in their hot-selling RC cars. You can find the Disney figurine only after you have bought a RC car and opened the box. Sumana just loves Khelnacompany\u2019s cars and the Disney characters, and wants to collect as many different Disney figurines as possible.</p>\n<p>So Sumana tries to trade some of the figurines she has with her <b>M </b>friends to get figurines that she does not have. Any of Sumana\u2019s friends (say X) will trade a figurine with Sumana if \u00a0and only if X has a duplicate of that figurine, and Sumana gives X a figurine X does not have. Moreover, Sumana\u2019s friends are not as crazy as Sumana about collecting figurines, so they don\u2019t exchange any figurines among themselves; they just exchange with Sumana to make her happy.</p>\n<p>Sumana is clever and has realized that in some cases it might be good to exchange a Disney figurine she has for another figurine of a type she already possesses, or trade off a figurine even if she has only one copy of it. Given that Sumana knows exactly how many figurines of each type each of her friends has, can you help her find the maximum number of different Disney figurines that she can get by trading figurines with her friends?</p>\n<h3>Input</h3>\n<p>The first line contains the number of tests cases <b>N</b></p>\n<p>For each test case, the first line contains the value of <b>K</b> and <b>M</b>. The second line contains <b>K</b> integers, with the j-th integer indicating the number of figurines of type j that Sumana has. This is followed by <b>M</b> lines, one for each of Sumana\u2019s <b>M</b> friends. Each of these lines contains <b>K</b> integers, with the j-th integer indicating the number of figurines of type j possessed by that friend. Note that Sumana or a friend may not possess any figurine of a particular type, in which case that number will be 0. </p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the maximum number of Disney figurines Sumana can collect.</p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> &#8804; 3</p>\n<p>0 &lt; <b>K</b> &#8804; 100</p>\n<p>0 &lt; <b>M</b> &#8804; 100</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n3 1\n3 0 0\n1 3 3\n4 2\n3 3 0 0\n0 0 3 0\n1 1 0 2\n\n<b>Output:</b>\nCase 1: 1\nCase 2: 4\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < **N** \u2264 3\n- 0 < **K** \u2264 100\n- 0 < **M** \u2264 100\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "During the pre-puja bonanza, the Khelnacompany has put **K** different types (numbered from 1 to **K**) of Disney figurines in their hot-selling RC cars. You can find the Disney figurine only after you have bought a RC car and opened the box. Sumana just loves Khelnacompany\u2019s cars and the Disney characters, and wants to collect as many different Disney figurines as possible.\n\nSo Sumana tries to trade some of the figurines she has with her **M** friends to get figurines that she does not have. Any of Sumana\u2019s friends (say X) will trade a figurine with Sumana if and only if X has a duplicate of that figurine, and Sumana gives X a figurine X does not have. Moreover, Sumana\u2019s friends are not as crazy as Sumana about collecting figurines, so they don\u2019t exchange any figurines among themselves; they just exchange with Sumana to make her happy.\n\nSumana is clever and has realized that in some cases it might be good to exchange a Disney figurine she has for another figurine of a type she already possesses, or trade off a figurine even if she has only one copy of it. Given that Sumana knows exactly how many figurines of each type each of her friends has, can you help her find the maximum number of different Disney figurines that she can get by trading figurines with her friends?\n",
+    "inputFormat": "The first line contains the number of tests cases **N**.\n\nFor each test case, the first line contains the value of **K** and **M**. The second line contains **K** integers, with the j-th integer indicating the number of figurines of type j that Sumana has. This is followed by **M** lines, one for each of Sumana\u2019s **M** friends. Each of these lines contains **K** integers, with the j-th integer indicating the number of figurines of type j possessed by that friend. Note that Sumana or a friend may not possess any figurine of a particular type, in which case that number will be 0.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the maximum number of Disney figurines Sumana can collect.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 1\n3 0 0\n1 3 3\n4 2\n3 3 0 0\n0 0 3 0\n1 1 0 2\n",
+        "output": "Case 1: 1\nCase 2: 4\n",
+        "explanation": "In the first test case, Sumana has 3 figurines of type 1 and none of types 2 and 3. Her only friend has 1 figurine of type 1, 3 of type 2, and 3 of type 3. Sumana can trade one of her type 1 figurines for a type 2 or type 3 figurine, but since she only has one type of figurine to trade, she can only get one new type of figurine.\n\nIn the second test case, Sumana has 3 figurines of type 1, 3 of type 2, and none of types 3 and 4. Her two friends have the following figurines:\n- Friend 1: 0 of type 1, 0 of type 2, 3 of type 3, and 0 of type 4.\n- Friend 2: 1 of type 1, 1 of type 2, 0 of type 3, and 2 of type 4.\n\nSumana can trade her figurines to get all four types of figurines, thus maximizing her collection.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13H\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13H\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Medium-Hard</p>\n<h3>PREREQUISITES:</h3>\n<p>Max Flow</p>\n<h3>PROBLEM:</h3>\n<p>There are <b>M</b> objects and <b>N</b> friends. Given a <b>(N+1) * M</b> matrix which indicates how many objects everyone has. The exchange rule is that I can use an object ,which my friend <b>X</b> doesn\u2019t have, to exchange for another object he has more than one. The question is to gather as many as possible different objects.</p>\n<h3>EXPLANATION:</h3>\n<p>This problem is a same problem as <a href=\"http://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1720\" rel=\"nofollow noopener\">UVA 10779 Collectors Problem</a>. The solution is mainly about max flow.</p>\n<p>Let\u2019s build a network as following. First of all, the node part. The network has <b>N+M+1</b> nodes:</p>\n<ol>\n<li>0-th node represents me (the source node).</li>\n<li>1-st to <b>M</b>-th nodes represent <b>M</b> different objects available.</li>\n<li>(<b>M</b>+1)-th (<b>M+N</b>)-th nodes represent <b>N</b> different friends of me.</li>\n<li>(<b>M+N+1</b>)-th node represents dummy sink node.</li>\n</ol>\n<p>And then, here comes the arcs:</p>\n<ol>\n<li>0 to <b>i (1 &lt;= i &lt;= M)</b> : Number of i-th object that I have.</li>\n<li>\n<b>i (1 &lt;= i &lt;= M)</b> to <b>j (M +<br>\n1 &lt;= j &lt;= M + N)</b> : 1 (if<br>\n<b>j</b>-th friend does not have<br>\n<b>i</b>-th object).</li>\n<li>\n<b>j (M + 1 &lt;= j &lt;= M + N)</b> to<br>\n<b>i (1 &lt;= i &lt;= M)</b> : (Number of<br>\n<b>i</b>-th object that <b>j</b><br>\nhas) - 1. (if <b>j</b>-th friend<br>\ndoes have <b>i</b>-th object more<br>\nthan 1)</li>\n<li>\n<b>i (1 &lt;= i &lt;= M)</b> to<br>\n<b>M+N+1</b> : 1.</li>\n</ol>\n<p>In this network, any augment path from source to sink corresponds to an exchange plan to get a different object. Therefore, the max flow in this network is the maximum different objects I can have.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4052,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "jingbo_adm",
+    "kgp13acm",
+    "medium-hard"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Medium Hard",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13H",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610963
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

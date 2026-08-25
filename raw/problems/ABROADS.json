@@ -1,0 +1,114 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ABROADS",
+  "contest_category": "6",
+  "problem_name": "Ancient Berland Roads",
+  "intended_contest_code": "LTIME31",
+  "body": "<p>In Ancient Berland, there were <b>N</b> towns, along with <b>M</b> bidirectional roads connecting them. With time, some roads became unusable, and nobody repaired them.</p>\r\n<p>As a person who is fond of Ancient Berland history, you now want to undertake a small research study. For this purpose, you want to write a program capable of processing the following kinds of queries:</p>\r\n<p><ul>\r\n<li><tt>D</tt><b> K</b> : meaning that the road numbered <b>K</b> in the input became unusable. The road numbers are 1-indexed.</li>\r\n<li><tt>P</tt><b> A x</b> : meaning that the population of the <b>A</b><sup>th</sup> town became <b>x</b>.</li>\r\n</ul>\r\n</p>\r\n<p>Let's call a subset of towns a <b>region</b> if it is possible to get from each town in the subset to every other town in the subset by the usable (those, which haven't already been destroyed) roads, possibly, via some intermediary cities of this subset. The <b>population</b> of the region is, then, the sum of populations of all the towns in the region.</p>\r\n<p>You are given the initial road system, the initial population in each town and <b>Q</b> queries, each being one of two types above. Your task is to maintain the size of the most populated region after each query.</p> \r\n\r\n<h3>Input</h3>\r\n<p>The first line of each test case contains three space-separated integers \u2014 <b>N</b>, <b>M</b>, and <b>Q</b> \u2014 denoting the number of cities, the number of roads, and the number of queries, respectively.</p>\r\n\r\n<p>The following line contains <b>N</b> space-separated integers, the <b>i</b><sup>th</sup> of which denotes the initial population of the <b>i</b><sup>th</sup> city.</p>\r\n\r\n<p>The <b>j</b><sup>th</sup> of the following <b>M</b> lines contains a pair of space-separated integers \u2014 <b>X<sub>j</sub>, Y<sub>j</sub></b> \u2014 denoting that there is a bidirectional road connecting the cities numbered <b>X<sub>j</sub></b> and <b>Y<sub>j</sub></b>.</p>\r\n\r\n<p>Each of the following <b>Q</b> lines describes a query in one of the forms described earlier.</p>\r\n\r\n<h3>Output</h3>\r\n<p>Output <b>Q</b> lines. On the <b>i</b><sup>th</sup> line, output the size of the most populated region after performing <b>i</b> queries.</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>X<sub>j</sub></b>, <b>Y<sub>j</sub></b> \u2264 <b>N</b></li>\r\n<li>Roads' numbers are 1-indexed.</li>\r\n<li>There is no road that gets removed twice or more.</li>\r\n<li><b>1</b> \u2264 <b>P<sub>i</sub></b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li>Subtask 1 (30 points) : <b>1</b> \u2264 <b>N</b>, <b>M</b>, <b>Q</b> \u2264 <b>10<sup>3</sup></b></li>\r\n<li>Subtask 2 (70 points) : <b>1</b> \u2264 <b>N</b>, <b>M</b>, <b>Q</b> \u2264 <b>5 \u00d7 10<sup>5</sup></b></li>\r\n</ul>\r\n </p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>3 3 6\r\n1 2 3\r\n1 2\r\n2 3\r\n3 1\r\nP 1 3\r\nD 1\r\nP 2 3\r\nD 2\r\nP 3 10\r\nD 3</tt>\r\n\r\n<b>Output:</b>\r\n<tt>8\r\n8\r\n9\r\n6\r\n13\r\n10</tt>\r\n</pre>\r\n<p> </p>\r\n<h3>Explanation</h3>\r\n<p>\r\n<ul>\r\n<li>After the first query, the populations are <b>(3, 2, 3)</b> and the most populated region is <b>{1, 2, 3}</b>.</li>\r\n<li>After the second query the populations and the regions remain the same.</li>\r\n<li>After the third query the populations are <b>(3, 3, 3)</b> and the most populated region is again <b>{1, 2, 3}</b>.</li>\r\n<li>After the fourth query the populations remain the same, but we have two regions: <b>{1, 3}</b> and <b>{2}</b>. The most populated region is <b>{1, 3}</b>.</li>\r\n<li>After the fifth query the populations become equal to <b>(3, 3, 10)</b> respectively, and the most populated region is again <b>{1, 3}</b>.</li>\r\n<li>After the last query we have populations the same, but now every city forms it own separate region, and the most populated region is region <b>{3}</b>.</li>\r\n</ul>\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>In Ancient Berland, there were <b>N</b> towns, along with <b>M</b> bidirectional roads connecting them. With time, some roads became unusable, and nobody repaired them.</p>\r\n<p>As a person who is fond of Ancient Berland history, you now want to undertake a small research study. For this purpose, you want to write a program capable of processing the following kinds of queries:</p>\r\n<p><ul>\r\n<li><tt>D</tt><b> K</b> : meaning that the road numbered <b>K</b> in the input became unusable. The road numbers are 1-indexed.</li>\r\n<li><tt>P</tt><b> A x</b> : meaning that the population of the <b>A</b><sup>th</sup> town became <b>x</b>.</li>\r\n</ul>\r\n</p>\r\n<p>Let's call a subset of towns a <b>region</b> if it is possible to get from each town in the subset to every other town in the subset by the usable (those, which haven't already been destroyed) roads, possibly, via some intermediary cities of this subset. The <b>population</b> of the region is, then, the sum of populations of all the towns in the region.</p>\r\n<p>You are given the initial road system, the initial population in each town and <b>Q</b> queries, each being one of two types above. Your task is to maintain the size of the most populated region after each query.</p> \r\n\r\n<h3>Input</h3>\r\n<p>The first line of each test case contains three space-separated integers \u2014 <b>N</b>, <b>M</b>, and <b>Q</b> \u2014 denoting the number of cities, the number of roads, and the number of queries, respectively.</p>\r\n\r\n<p>The following line contains <b>N</b> space-separated integers, the <b>i</b><sup>th</sup> of which denotes the initial population of the <b>i</b><sup>th</sup> city.</p>\r\n\r\n<p>The <b>j</b><sup>th</sup> of the following <b>M</b> lines contains a pair of space-separated integers \u2014 <b>X<sub>j</sub>, Y<sub>j</sub></b> \u2014 denoting that there is a bidirectional road connecting the cities numbered <b>X<sub>j</sub></b> and <b>Y<sub>j</sub></b>.</p>\r\n\r\n<p>Each of the following <b>Q</b> lines describes a query in one of the forms described earlier.</p>\r\n\r\n<h3>Output</h3>\r\n<p>Output <b>Q</b> lines. On the <b>i</b><sup>th</sup> line, output the size of the most populated region after performing <b>i</b> queries.</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>X<sub>j</sub></b>, <b>Y<sub>j</sub></b> \u2264 <b>N</b></li>\r\n<li>Roads' numbers are 1-indexed.</li>\r\n<li>There is no road that gets removed twice or more.</li>\r\n<li><b>1</b> \u2264 <b>P<sub>i</sub></b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li>Subtask 1 (30 points) : <b>1</b> \u2264 <b>N</b>, <b>M</b>, <b>Q</b> \u2264 <b>10<sup>3</sup></b></li>\r\n<li>Subtask 2 (70 points) : <b>1</b> \u2264 <b>N</b>, <b>M</b>, <b>Q</b> \u2264 <b>5 \u00d7 10<sup>5</sup></b></li>\r\n</ul>\r\n </p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>3 3 6\r\n1 2 3\r\n1 2\r\n2 3\r\n3 1\r\nP 1 3\r\nD 1\r\nP 2 3\r\nD 2\r\nP 3 10\r\nD 3</tt>\r\n\r\n<b>Output:</b>\r\n<tt>8\r\n8\r\n9\r\n6\r\n13\r\n10</tt>\r\n</pre>\r\n<p> </p>\r\n<h3>Explanation</h3>\r\n<p>\r\n<ul>\r\n<li>After the first query, the populations are <b>(3, 2, 3)</b> and the most populated region is <b>{1, 2, 3}</b>.</li>\r\n<li>After the second query the populations and the regions remain the same.</li>\r\n<li>After the third query the populations are <b>(3, 3, 3)</b> and the most populated region is again <b>{1, 2, 3}</b>.</li>\r\n<li>After the fourth query the populations remain the same, but we have two regions: <b>{1, 3}</b> and <b>{2}</b>. The most populated region is <b>{1, 3}</b>.</li>\r\n<li>After the fifth query the populations become equal to <b>(3, 3, 10)</b> respectively, and the most populated region is again <b>{1, 3}</b>.</li>\r\n<li>After the last query we have populations the same, but now every city forms it own separate region, and the most populated region is region <b>{3}</b>.</li>\r\n</ul>\r\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12011,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "sergey_adm",
+  "problem_display_authors": [
+    "sergey_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/sergey_adm'>sergey_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "pavel1996"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/pavel1996'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>pavel1996</span></a></div>",
+  "problem_editorialist": "xcwgf666",
+  "date_added": "29-10-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Disjoint Set Union"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures"
+  ],
+  "difficulty_rating": "2324",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610566
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ABROADS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 18,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

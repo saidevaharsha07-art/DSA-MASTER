@@ -1,0 +1,127 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GUESSMID",
+  "contest_category": "6",
+  "problem_name": "Guess the Middle",
+  "intended_contest_code": null,
+  "body": "Chef's father has bought three cakes for him, his brother and sister. Unfortunately, one of the cakes is larger than the other two and so they need to decide who the lucky person is, who gets that larger cake.\r\n\r\nChef's father decides to make them play a game, and the winner will get the larger cake. The game is as follows: The father will choose an interval of numbers and give it to them. All the three children will have to write an integer from the interval [both end points inclusive], and the child whose chosen number is the middle number when all the three numbers are sorted, wins the game, and hence the larger cake.\r\n\r\nIf there is a tie for the middle number, the father would choose the winner uniform randomly from all the three children. Note that even if only two children had tied for the middle element, the father will choose from all the three children to pick the winner randomly.\r\n\r\nLuckily, Chef has an advantage! He knows that both his brother and sister have a favourite digit, and he knows that both of them will choose a number from within the interval such that the number of times that their favourite digit appears in the number as a digit is maximized. If there are multiple numbers which satisfy this criteria, then they will pick any one of them uniformly at random.\r\n\r\nFor example,\r\n- If the interval is [10, 23], and the brother's favourite digit is 2, then he will choose 22, because 2 appears in it twice, and that is the maximum you can get.\r\n- If the interval is [10, 21], and the brother's favourite digit is 2, then he will choose one number from {12, 20, 21} uniformly at random.\r\n\r\nChef doesn't know how exactly he can utilize this information to win the larger cake. Can you help him? Given the information about the interval, and his siblings' favourite digits, find out which number he should pick, so as to maximize his chance of winning. If there are more than one number with the same maximum probability of winning, then output the smallest number among them.\r\n\r\n### Input Format\r\n- The first line will contain $T$, the number of test cases. The description of each test case follows.\r\n- Each test case contains a single line of input, with four integers: $A, B, C, D$. The interval is denoted by $[A, B]$, the brother's favourite digit is $C$, and the sister's favourite digit is $D$.\r\n\r\n### Output Format\r\n- For each testcase, output in a single line, the answer: the number which Chef should choose to maximize his chance of winning.\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 10^4$\r\n- $1 \\leq A \\leq B \\leq 10^9$\r\n- $1 \\leq C, D \\leq 9$\r\n- $C \\neq D$\r\n\r\n### Example Input\r\n```\r\n3\r\n1 100 2 3\r\n22 22 1 9\r\n34 100 2 3\r\n```\r\n\r\n### Example Output\r\n```\r\n23\r\n22\r\n44\r\n```\r\n\r\n### Explanation\r\n- In the first test case, the brother will choose 22, and the sister will choose 33. The Chef can choose any of {23, 24, ..., 32} and win the game. But you should output the smallest among them, and hence the answer is 23.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^4$\n- $1 \\leq A \\leq B \\leq 10^9$\n- $1 \\leq C, D \\leq 9$\n- $C \\neq D$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef's father has bought three cakes for him, his brother, and sister. Unfortunately, one of the cakes is larger than the other two, so they need to decide who gets the larger cake. Chef's father decides to make them play a game, and the winner will get the larger cake. The game is as follows:\n\nThe father will choose an interval of numbers and give it to them. All three children will have to write an integer from the interval [both endpoints inclusive], and the child whose chosen number is the middle number when all three numbers are sorted wins the game, and hence the larger cake.\n\nIf there is a tie for the middle number, the father would choose the winner uniformly randomly from all three children. Note that even if only two children had tied for the middle element, the father will choose from all three children to pick the winner randomly.\n\nLuckily, Chef has an advantage! He knows that both his brother and sister have a favorite digit, and he knows that both of them will choose a number from within the interval such that the number of times that their favorite digit appears in the number as a digit is maximized. If there are multiple numbers that satisfy this criterion, then they will pick any one of them uniformly at random.\n\nFor example:\n- If the interval is [10, 23], and the brother's favorite digit is 2, then he will choose 22, because 2 appears in it twice, and that is the maximum you can get.\n- If the interval is [10, 21], and the brother's favorite digit is 2, then he will choose one number from {12, 20, 21} uniformly at random.\n\nChef doesn't know how exactly he can utilize this information to win the larger cake. Can you help him? Given the information about the interval, and his siblings' favorite digits, find out which number he should pick, so as to maximize his chance of winning. If there are more than one number with the same maximum probability of winning, then output the smallest number among them.\n",
+    "inputFormat": "- The first line will contain $T$, the number of test cases. The description of each test case follows.\n- Each test case contains a single line of input, with four integers: $A, B, C, D$. The interval is denoted by $[A, B]$, the brother's favorite digit is $C$, and the sister's favorite digit is $D$.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output in a single line, the answer: the number which Chef should choose to maximize his chance of winning.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1 100 2 3\n22 22 1 9\n34 100 2 3\n",
+        "output": "23\n22\n44\n",
+        "explanation": "In the first test case, the brother will choose 22, and the sister will choose 33. The Chef can choose any of {23, 24, ..., 32} and win the game. But you should output the smallest among them, and hence the answer is 23.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<p><strong>PROBLEM LINK:</strong></p>\n<p><a href=\"https://www.codechef.com/problems/GUESSMID\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/iscsi\" rel=\"nofollow noopener\">Istvan Nagy</a></p>\n<p><strong>Tester:</strong> <a href=\"https://www.codechef.com/users/tncks0121\" rel=\"nofollow noopener\">tncks0121</a></p>\n<p><strong>DIFFICULTY:</strong></p>\n<p>Medium-Hard</p>\n<p><strong>PREREQUISITES:</strong></p>\n<p>Brute Force, Math</p>\n<p><strong>PROBLEM:</strong></p>\n<p>An integer <span class=\"math\">x</span> is chosen randomly from the set of integers between <span class=\"math\">A</span> and <span class=\"math\">B</span> with maximum number of digits <span class=\"math\">C</span>. Similarly <span class=\"math\">y</span> is chosen randomly from the set of integers between <span class=\"math\">A</span> and <span class=\"math\">B</span> having maximum number of digits <span class=\"math\">D</span>. Choose an integer <span class=\"math\">z</span> which has the maximum probability of lying between the numbers <span class=\"math\">x</span> and <span class=\"math\">y</span>.</p>\n<p><strong>Explanation:</strong></p>\n<p>Let <span class=\"math\">X</span> be the set of integers between <span class=\"math\">A</span> and <span class=\"math\">B</span> with maximum number of digits equal to <span class=\"math\">C</span>.</p>\n<p>Let <span class=\"math\">Y</span> be the set of integers between <span class=\"math\">A</span> and <span class=\"math\">B</span> with maximum number of digits equal to <span class=\"math\">D</span>.</p>\n<p>The crucial observation is that the sizes of both <span class=\"math\">X</span> and <span class=\"math\">Y</span> are <span class=\"math\">O(\\log(B - A))</span>.</p>\n<p><strong>Proof:</strong></p>\n<p>Let <span class=\"math\">A = a_n a_{n-1} \\ldots a_0</span>, <span class=\"math\">B = b_n b_{n-1} \\ldots b_0</span> be the decimal representations of <span class=\"math\">A</span> and <span class=\"math\">B</span> respectively. WLOG, assume <span class=\"math\">a_n &lt; b_n</span>, else we can find the first digit at which <span class=\"math\">A</span> and <span class=\"math\">B</span> differ and consider the remaining digits only.</p>\n<p><em>Case 1:</em> <span class=\"math\">b_n &gt; a_n + 1</span>.</p>\n<p>In this case, the integer <span class=\"math\">(a_n+1) \\underbrace{CC \\ldots C}_{n}</span> lies between <span class=\"math\">A</span> and <span class=\"math\">B</span>, and has <span class=\"math\">n</span> <span class=\"math\">C</span>'s. So, clearly, any integer in <span class=\"math\">X</span> can have at max <span class=\"math\">1</span> digit not equal to <span class=\"math\">C</span>. So <span class=\"math\">|X| = O(n) = O(\\log(B - A))</span></p>\n<p><em>Case 2:</em> <span class=\"math\">b_n = a_n + 1</span></p>\n<p>Let <span class=\"math\">H = (a_n+1) 10^n </span>. Break the range <span class=\"math\">[A, B]</span> into <span class=\"math\">[A, H - 1] \\cup [H, B]</span>.</p>\n<p>Consider the range <span class=\"math\">[A, H - 1]</span>. Let <span class=\"math\">k</span> be the greatest index <span class=\"math\"> &lt; n</span> with <span class=\"math\">a_k &lt; 9</span>. If there is no such <span class=\"math\">k</span>, there is only one integer in the range <span class=\"math\">[A, H - 1]</span>, and we can consider it separately.</p>\n<p>If we increase <span class=\"math\">a_k</span> and replace the following digits by <span class=\"math\">C</span>, we get <span class=\"math\">a_n \\underbrace{9 \\ldots 9}_{n-k-1} (a_k+1) \\underbrace{C \\ldots C}_k</span>. Any integer in this range has only the last <span class=\"math\">k + 1</span> digits variable and atleast <span class=\"math\">k</span> out of them must be <span class=\"math\">C</span>. So, the number of possible integers in <span class=\"math\">X</span> in this range is <span class=\"math\">O(k) = O(\\log(H - A)) = O(\\log(B - A))</span>.</p>\n<p>Similarly, consider range <span class=\"math\">[H, B]</span>. Let <span class=\"math\">k</span> be the greatest index <span class=\"math\">&lt; n</span> with <span class=\"math\">a_k &gt; 0</span>. Then, one can decrease <span class=\"math\">a_k</span> by <span class=\"math\">1</span> and replace the following digits by <span class=\"math\">C</span>. By a similar analysis, the number of possible integers in <span class=\"math\">X</span> from this range is also <span class=\"math\">O(\\log(B - A))</span></p>\n<p>Note that the above proof can be used to find the sets <span class=\"math\">X</span> and <span class=\"math\">Y</span>.</p>\n<p>For an integer <span class=\"math\">z</span>, the chances of it lying between <span class=\"math\">x</span> and <span class=\"math\">y</span>, <span class=\"math\">f(z)</span> are proportional to (# of integers in <span class=\"math\">X \\leq z</span>) (# of integers in <span class=\"math\">Y \\geq z</span>) + (# of integers in <span class=\"math\">Y \\leq z</span>) (# of integers in <span class=\"math\">X \\geq z</span>) with a few small adjustments (when two numbers from <span class=\"math\">\\{x, y, z\\}</span> are equal).</p>\n<p>On iterating on <span class=\"math\">z</span> from <span class=\"math\">A</span> to <span class=\"math\">B</span>, <span class=\"math\">f(z)</span> only changes <span class=\"math\">O(|X| + |Y|)</span> times, and we can easily maintain <span class=\"math\">f(z)</span> in <span class=\"math\">O(1)</span> per change.</p>\n<p>The overall complexity would be <span class=\"math\">O(\\log(B - A) \\log( \\log(B - A)))</span> per test case. The <span class=\"math\">\\log\\log</span> factor comes because we have to sort <span class=\"math\">X</span> and <span class=\"math\">Y</span>.</p>\n<p><strong>TESTER\u2019s SOLUTION:</strong></p>\n<p>Tester\u2019s solution can be found <a href=\"https://ideone.com/vSV3Ap\" rel=\"nofollow noopener\">here</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 47301,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "istva_adm",
+  "problem_display_authors": [
+    "istva_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/istva_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>istva_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "jtnydv25",
+  "date_added": "5-07-2012",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Digit DP",
+    "Probability",
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Advanced DP",
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/GUESSMID",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610866
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GUESSMID",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFDINE",
+  "contest_category": "6",
+  "problem_name": "Akash and Dinner",
+  "intended_contest_code": "START69",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100$\n- $1 \\leq N,K \\leq 10^5$\n- $1 \\leq A_i \\leq 10^5$\n- $0 \\leq B_i \\leq 10^5$\n- The sum of $N$ over all test cases won't exceed $10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "Akash got his money from CodeChef today, so he decided to have dinner outside.  \nHe went to a restaurant having $N$ items on the menu. The $i^{th}$ item on the menu belongs to the *category* $A_i$ and requires $B_i$ time to be cooked.\n\nAkash wants to have a *complete meal*. Thus, his meal should have **at least** $K$ **distinct** *categories* of food.  \nThe total time required to get all the food Akash orders, is the **sum** of the cooking time of all the items in the order.\n\nHelp Akash find the **minimum time** required to have a complete meal or tell if it is not possible to do so.\n",
+    "inputFormat": "- First line will contain $T$, the number of test cases. Then the test cases follow.\n- Each test case contains three lines:\n    - The first line of each test case contains two space-separated integers $N$ and $K$, denoting the number of dishes on the menu and the number of distinct categories in a complete meal.\n    - The second line contains $N$ space-separated integers where the $i^{th}$ integer is $A_i$, denoting the category of the $i^{th}$ dish in the menu.\n    - The third line contains $N$ space-separated integers where the $i^{th}$ integer is $B_i$, denoting the time required to cook the $i^{th}$ dish in the menu.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output in a single line, the **minimum time** required to have a complete meal.\n\nIf it is impossible to have a complete meal, print $-1$ instead.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n3 1\n1 2 3\n2 1 3\n8 3\n1 3 2 2 4 1 3 5\n3 3 0 1 2 4 1 4\n1 1\n5\n1\n5 3\n1 1 2 2 1\n1 1 0 3 5",
+        "output": "1\n3\n1\n-1",
+        "explanation": "**Test case $1$:** Akash can choose dish with index $2$ having category $2$. The total time required to get the complete meal is $1$.\n\n**Test case $2$:** Akash can choose dishes with index $3, 5,$ and $7$ from the menu.\n- Dish $3$: The dish has category $2$ and requires time $0$.\n- Dish $5$: The dish has category $4$ and requires time $2$.\n- Dish $7$: The dish has category $3$ and requires time $1$.\n\nThus, there are $3$ distinct categories and the total time to get the meal is $0+2+1 = 3$. It can be shown that this is the minimum time to get the *complete meal*.\n\n**Test case $3$:** Akash can choose the only available dish having category $5$. The total time required to get the complete meal is $1$.\n\n**Test case $4$:** The total number of distinct categories available is $2$, which is less than $K$. Thus, it is impossible to have a *complete* meal.\n\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 104476,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "2.5",
+  "source_sizelimit": "50000",
+  "problem_author": "justfun21",
+  "problem_display_authors": [
+    "justfun21"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/justfun21'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>justfun21</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-11-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1438",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610666
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFDINE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 177,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

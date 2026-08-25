@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13C",
+  "contest_category": "6",
+  "problem_name": "Stairway Reduction",
+  "intended_contest_code": null,
+  "body": "<p>A garrison of soldiers is stationed at on old fort built long ago by a king located on the top of a hill. The fort can be accessed only by a cemented stairway with <b>K</b> steps (steps are numbered 1 to <b>K</b> from the bottommost to the topmost as shown below). The width of all the steps in the stairway is the same (<b>w</b>), but the length (<b>l</b>) and the height (<b>h</b>)<br />\nof each step is made different to take care of the difference in the slope of the hill at different places along the climb.</p>\n<p class=MsoNormal align=center><img src=\"/download/extimages/a64fd69cb80f042939bd7afe577f8e5a.png\" /></p>\n<p>Everyday, supplies are delivered to the soldiers stationed at the fort by laborers carrying the supplies on their back. To his utter dismay, the commander finds that the laborers are charging by the number of steps they have to climb, and not by the distance travelled or height climbed. Since the fort is at a strategic location and will be occupied for long, the commander decides to remove some of the steps by filling them up with concrete. Keeping in mind how high the fort is at, the commander decides to convert the stairway to <b>M</b> steps (0 &lt; <b>M</b> &lt; <b>K</b>). However, he knows he has to do this with the limited budget that he has, and wishes to minimize the total extra concrete he has to pour to reduce the steps. Given the common width of all the steps, and the length and height of each step, all in inches, can you help the commander find the minimum amount of concrete (in cubic inches) he has to plan for?</p>\n<h3>Input</h3>\n<p>The first line contains the number of test cases <b>N</b></p>\n<p>For each test case, the first line contains <b>K</b>, <b>M</b>, and the common width <b>w</b> (positive integer). This is followed by <b>K</b> lines, with the j-th line (1 \u2264 j \u2264 <b>K</b>) containing the length <b>l</b> and height <b>h</b> of the j-th step (both positive integers).</p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the total amount of concrete needed (in cubic inches). </p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> \u2264 3</p>\n<p>0 &lt; <b>K </b>\u2264 500</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n3 2 48\n18 12\n24 14\n16 10\n7 3 24\n12 12\n24 24\n30 30\n36 36\n18 22\n18 22\n32 18\n\n<b>Output:</b>\nCase 1: 11520\nCase 2: 57888\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < **N** \u2264 3\n- 0 < **K** \u2264 500\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A garrison of soldiers is stationed at an old fort built long ago by a king located on the top of a hill. The fort can be accessed only by a cemented stairway with **K** steps (steps are numbered 1 to **K** from the bottommost to the topmost as shown below). The width of all the steps in the stairway is the same (**w**), but the length (**l**) and the height (**h**) of each step is made different to take care of the difference in the slope of the hill at different places along the climb.\n\n![Image](/download/extimages/a64fd69cb80f042939bd7afe577f8e5a.png)\n\nEveryday, supplies are delivered to the soldiers stationed at the fort by laborers carrying the supplies on their back. To his utter dismay, the commander finds that the laborers are charging by the number of steps they have to climb, and not by the distance travelled or height climbed. Since the fort is at a strategic location and will be occupied for long, the commander decides to remove some of the steps by filling them up with concrete. Keeping in mind how high the fort is at, the commander decides to convert the stairway to **M** steps (0 < **M** < **K**). However, he knows he has to do this with the limited budget that he has, and wishes to minimize the total extra concrete he has to pour to reduce the steps. Given the common width of all the steps, and the length and height of each step, all in inches, can you help the commander find the minimum amount of concrete (in cubic inches) he has to plan for?\n",
+    "inputFormat": "The first line contains the number of test cases **N**.\n\nFor each test case, the first line contains **K**, **M**, and the common width **w** (positive integer). This is followed by **K** lines, with the j-th line (1 \u2264 j \u2264 **K**) containing the length **l** and height **h** of the j-th step (both positive integers).\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the total amount of concrete needed (in cubic inches).\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 2 48\n18 12\n24 14\n16 10\n7 3 24\n12 12\n24 24\n30 30\n36 36\n18 22\n18 22\n32 18\n",
+        "output": "Case 1: 11520\nCase 2: 57888\n",
+        "explanation": "The sample input and output demonstrate how the total amount of concrete is calculated for two different test cases. In the first test case, the stairway is reduced from 3 steps to 2 steps, and the total concrete needed is 11520 cubic inches. In the second test case, the stairway is reduced from 7 steps to 3 steps, and the total concrete needed is 57888 cubic inches.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13C\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13C\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy-Medium</p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic Programming</p>\n<h3>PROBLEM:</h3>\n<p>Given a <b>K</b>-steps stair, try to merge some adjacent steps to get <b>M</b>-steps remained such that the total volume added is minimum.</p>\n<h3>EXPLANATION:</h3>\n<p>We can only merge consecutive steps in this problem. This gives us the intuition of dynamic programming.</p>\n<p>Let\u2019s denote the cost of merging steps in [<b>L</b>, <b>R</b>] as <b>cost[L][R]</b>. Clearly, we can brute-forcely build this array in O(<b>K</b>^3) time by definition, because <b>K</b> is only at most 500 here.</p>\n<p>And let <b>f[i][j]</b> states the minimum cost of merging the first <b>i</b> steps into <b>j</b> steps. Then, we can try to deal with the problem using the following recursion.</p>\n<pre><code>f[i][j] = min { f[k][j - 1] + cost[k + 1][i] }  for all 0&lt;= k &lt; i.\n</code></pre>\n<p>Initially, by definition, we have</p>\n<pre><code>f[0][0] = 0, f[0][j &gt; 0] = + infinite.\n</code></pre>\n<p>Therefore, we can solve this problem in O(<b>K</b>^3).</p>\n<p>In fact, we can also further optimize this algorithm to O(K^2).</p>\n<p>We can observe that <b>cost[L][R]</b> can be calculated by some values (e.g. prefix sum of heights, lengths, areas) of <b>L</b> and <b>R</b> separately. More specifically,</p>\n<pre><code>cost[L][R] = (SHeight[R] - SHeight[L - 1]) * (SLeng[R] - SLeng[L - 1]) - (SArea[R] - SArea[L - 1])\n</code></pre>\n<p>About the dynamic programming, we should observe that <b>f[i][j]</b> only depends on <b>f[k &lt; i][j - 1]</b>. Furthermore, <b>f[i][j]</b> can be expressed in the minimum of <b>A<sub>k</sub> * f[k][j-1] + B<sub>k<sub></sub></sub></b>. If we first loop over <b>j</b> and then enumerate <b>i</b> from small to large, due to the monotonic property of <b>A<sub>k</sub></b>, we can maintain a double-ended-queue of <b>k</b> ordered by the <b>A<sub>k</sub></b> (pop out the invalid <b>k</b>). Every <b>k</b> will enter or leave this queue at most once. Because we can then find the minimum in O(1) time, the total complexity is reduced to O(<b>K</b>^2).</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4044,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.321429",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "jingbo_adm",
+    "kgp13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13C",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610961
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13C",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

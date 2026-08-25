@@ -1,0 +1,121 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ARRFILL",
+  "contest_category": "6",
+  "problem_name": "Array Filling",
+  "intended_contest_code": "AUG21",
+  "body": "\nYou are given an array $A$ of size $N$. Initially, the array is filled with $0$-s.\n\nThere are $M$ types of operations that you can perform on array $A$. The $i^{th}$ operation can be described by two integers $(x_i, y_i)$. In this operation, you choose a set of indices $S$ such that \n\n- $1 \\leq j \\leq N$,\n- $(j \\bmod y_i) \\neq 0$,\n- $A_j = 0$, \n\n, then you set $A_j = x_i$ for all $j \\in S$.\n\n\nYou can perform the operations in any order, but one type of operation can't be done more than once. What is the maximum sum of integers of the array $A$ you obtain if you perform the $M$ operations optimally?\n\n\n\nFor example, consider the array $A = [0, 0, 0, 0]$.\n- Suppose $x = 3, y = 2$. Here you can choose indices $1$ and $3$ and set $A_1 = A_3 = 3$. So the array A becomes $[3, 0, 3, 0]$. In this operation you can't choose the indices $2$ and $4$ because $(2 \\bmod 2) = 0$, $(4 \\bmod 2) = 0$. \n- Suppose $x = 5, y = 3$ and you set $A_2 = 5$. So the array $A$ becomes $[3, 5, 3, 0]$. Here you can't choose index $1$ because $A_1 \\gt 0$ and index $3$ because $(3 \\bmod 3) = 0$ and $A_3 \\gt 0$. However, you could also set $A_4 = 5$.\n\n- Suppose $x = 4, y = 4$. Now you can't choose any index because $A_j \\gt 0$  for all $1 \\leq j \\leq 3$ and $(4 \\bmod 4) = 0$. So the array remains same.\n\n\n**Note:** Since input-output is large, prefer using fast input-output methods.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 12600$\n- $1 \\leq N \\leq 10^9$\n- $1 \\leq M \\leq 10^5$\n- $1 \\leq x_i \\leq 10^9$\n- $2 \\leq y_i \\leq 10^9$\n- The sum of $M$ over all test cases does not exceed $10^6$.\n",
+    "constraintsState": true,
+    "subtasks": "**Subtask #1 (100 points):** original constraints",
+    "subtasksState": true,
+    "statement": "\nYou are given an array $A$ of size $N$. Initially, the array is filled with $0$-s.\n\nThere are $M$ types of operations that you can perform on array $A$. The $i^{th}$ operation can be described by two integers $(x_i, y_i)$. In this operation, you choose a set of indices $S$ such that \n\n- $1 \\leq j \\leq N$,\n- $(j \\bmod y_i) \\neq 0$,\n- $A_j = 0$, \n\n, then you set $A_j = x_i$ for all $j \\in S$.\n\n\nYou can perform the operations in any order, but one type of operation can't be done more than once. What is the maximum sum of integers of the array $A$ you obtain if you perform the $M$ operations optimally?\n\n\n\nFor example, consider the array $A = [0, 0, 0, 0]$.\n- Suppose $x = 3, y = 2$. Here you can choose indices $1$ and $3$ and set $A_1 = A_3 = 3$. So the array A becomes $[3, 0, 3, 0]$. In this operation you can't choose the indices $2$ and $4$ because $(2 \\bmod 2) = 0$, $(4 \\bmod 2) = 0$. \n- Suppose $x = 5, y = 3$ and you set $A_2 = 5$. So the array $A$ becomes $[3, 5, 3, 0]$. Here you can't choose index $1$ because $A_1 \\gt 0$ and index $3$ because $(3 \\bmod 3) = 0$ and $A_3 \\gt 0$. However, you could also set $A_4 = 5$.\n\n- Suppose $x = 4, y = 4$. Now you can't choose any index because $A_j \\gt 0$  for all $1 \\leq j \\leq 3$ and $(4 \\bmod 4) = 0$. So the array remains same.\n\n\n**Note:** Since input-output is large, prefer using fast input-output methods.",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- Each testcase contains $M + 1$ lines of input.\n- The first line of each test case contains two space-separated integers $N, M$.\n- $M$ lines follow. For each valid $i$, the $i^{th}$ of these lines contains two space-separated integers $x_i, y_i$ - parameters of the $i^{th}$ operation.\n\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output in a single line the maximum sum of integers of the array $A$ after $M$ operations.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n10 1\n5 2\n8 2\n5 2\n6 3\n3 2\n2 2\n1 3",
+        "output": "25\n41\n5",
+        "explanation": "**Test case $1$:** Optimal filling is $[5, 0, 5, 0, 5, 0, 5, 0, 5, 0]$.\n\n**Test case $2$:** Optimal filling is $[6, 6, 5, 6, 6, 0, 6, 6]$.\n\n**Test case $3$:** Optimal filling is $[2, 1, 2]$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 93434,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "14-07-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "LCM"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory"
+  ],
+  "difficulty_rating": "1887",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610628
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ARRFILL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

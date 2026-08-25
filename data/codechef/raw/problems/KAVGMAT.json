@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAVGMAT",
+  "contest_category": "6",
+  "problem_name": "Worthy Matrix",
+  "intended_contest_code": "APRIL21",
+  "body": "\r\nChef found a matrix $A$ with $N$ rows (numbered $1$ through $N$) and $M$ columns (numbered $1$ through $M$), where for each row $r$ and column $c$, the cell in row $r$ and column $c$ (denoted by $(r,c)$) contains an integer $A_{r,c}$.\r\n\r\nThis matrix has two interesting properties:\r\n- The integers in each row form a non-decreasing sequence, i.e. for each valid $i$, $A_{i,1} \\leq A_{i,2} \\leq \\ldots \\leq A_{i,M}$.\r\n- The integers in each column also form a non-decreasing sequence, i.e. for each valid $j$, $A_{1,j} \\leq A_{2,j} \\leq \\ldots \\leq A_{N,j}$.\r\n\r\nA $K$-worthy [submatrix](https://mathworld.wolfram.com/Submatrix.html) is a square submatrix of $A$, i.e. a submatrix with $l$ rows and $l$ columns, for any integer $l$, such that the average of all the integers in this submatrix is $\\geq K$. \r\n\r\nChef wants you to find the number of $K$-worthy submatrices of $A$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains three space-separated integers $N$, $M$ and $K$.\r\n- $N$ lines follow. For each valid $i$, the $i$-th of these lines contains $M$ space-separated integers $A_{i,1}, A_{i,2}, A_{i,3}, \\ldots, A_{i,M}$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of $K$-worthy submatrices of $A$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10$\r\n- $1 \\leq N \\cdot M \\leq 10^6$\r\n- $N \\leq M$\r\n- $0 \\leq K \\leq 10^9$\r\n- $0 \\leq A_{r,c} \\leq 10^9$ for each valid $r,c$\r\n- the sum of $N \\cdot M$ over all test cases does not exceed $10^6$\r\n\r\n### Subtasks\r\n**Subtask #1 (15 points):** the sum of $N \\cdot M$ over all test cases does not exceed $10^3$\r\n\r\n**Subtask #2 (25 points):** the sum of $N \\cdot M$ over all test cases does not exceed $4 \\cdot 10^5$\r\n\r\n**Subtask #3 (60 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n1\r\n3 3 4\r\n2 2 3\r\n3 4 5\r\n4 5 5\r\n```\r\n\r\n### Example Output\r\n```\r\n7\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The following are the seven $4$-worthy submatrices:\r\n- $ \r\n\\begin{bmatrix}\r\n3 & 4 \\\\\r\n4 & 5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4$; this matrix occurs only once\r\n- $\r\n\\begin{bmatrix}\r\n4 & 5 \\\\\r\n5 & 5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4.75$; this matrix also occurs only once\r\n- $\r\n\\begin{bmatrix}\r\n4 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4$; we find this matrix twice in $A$\r\n- $\r\n\\begin{bmatrix}\r\n5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $5$; we find this matrix $3$ times in $A$\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef found a matrix $A$ with $N$ rows (numbered $1$ through $N$) and $M$ columns (numbered $1$ through $M$), where for each row $r$ and column $c$, the cell in row $r$ and column $c$ (denoted by $(r,c)$) contains an integer $A_{r,c}$.\n\nThis matrix has two interesting properties:\n- The integers in each row form a non-decreasing sequence, i.e. for each valid $i$, $A_{i,1} \\leq A_{i,2} \\leq \\ldots \\leq A_{i,M}$.\n- The integers in each column also form a non-decreasing sequence, i.e. for each valid $j$, $A_{1,j} \\leq A_{2,j} \\leq \\ldots \\leq A_{N,j}$.\n\nA $K$-worthy [submatrix](https://mathworld.wolfram.com/Submatrix.html) is a square submatrix of $A$, i.e. a submatrix with $l$ rows and $l$ columns, for any integer $l$, such that the average of all the integers in this submatrix is $\\geq K$. \n\nChef wants you to find the number of $K$-worthy submatrices of $A$.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains three space-separated integers $N$, $M$ and $K$.\n- $N$ lines follow. For each valid $i$, the $i$-th of these lines contains $M$ space-separated integers $A_{i,1}, A_{i,2}, A_{i,3}, \\ldots, A_{i,M}$.\n\n### Output\nFor each test case, print a single line containing one integer \u2015 the number of $K$-worthy submatrices of $A$.\n\n### Constraints\n- $1 \\leq T \\leq 10$\n- $1 \\leq N \\cdot M \\leq 10^6$\n- $N \\leq M$\n- $0 \\leq K \\leq 10^9$\n- $0 \\leq A_{r,c} \\leq 10^9$ for each valid $r,c$\n- the sum of $N \\cdot M$ over all test cases does not exceed $10^6$\n\n### Subtasks\n**Subtask #1 (15 points):** the sum of $N \\cdot M$ over all test cases does not exceed $10^3$\n\n**Subtask #2 (25 points):** the sum of $N \\cdot M$ over all test cases does not exceed $4 \\cdot 10^5$\n\n**Subtask #3 (60 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\r\n3 3 4\r\n2 2 3\r\n3 4 5\r\n4 5 5",
+        "output": "7",
+        "explanation": "**Example case 1:** The following are the seven $4$-worthy submatrices:\r\n- $ \r\n\\begin{bmatrix}\r\n3 & 4 \\\\\r\n4 & 5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4$; this matrix occurs only once\r\n- $\r\n\\begin{bmatrix}\r\n4 & 5 \\\\\r\n5 & 5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4.75$; this matrix also occurs only once\r\n- $\r\n\\begin{bmatrix}\r\n4 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $4$; we find this matrix twice in $A$\r\n- $\r\n\\begin{bmatrix}\r\n5 \\\\\r\n\\end{bmatrix}\r\n$\r\nwith average $5$; we find this matrix $3$ times in $A$",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 87832,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "shaanknight",
+  "problem_display_authors": [
+    "shaanknight"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/shaanknight'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>shaanknight</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "shaanknight",
+  "date_added": "28-02-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "april21",
+    "binary-search",
+    "easy",
+    "shaanknight",
+    "two-pointers"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1817",
+  "best_tag": "Binary Search",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610960
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAVGMAT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 13,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,900 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "infosys-pyq",
+  "name": "Infosys InfyTQ - Questions",
+  "title": "Infosys InfyTQ - Questions",
+  "level": "Intermediate",
+  "description": "Prepare for Infosys with previous years questions. Solve the coding, numerical ability, reasoning ability, verbal ability and quant questions which were asked in the past.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:54",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/infosys-pyq/INFOSYS04/problems/QQQUOC02",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Coding Problems",
+      "description": "Practice the previous years Infosys coding problems.",
+      "submodules": [
+        {
+          "name": "Past Years Coding Problems",
+          "submodule_id": 16169,
+          "contest_code": "INFOSYS04",
+          "start_date": "2025-10-06 00:00:00",
+          "total_problems": 21,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/infosys-pyq/INFOSYS04/problems/QQQUOC02",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 21,
+          "problems_with_status": [
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC02",
+              "name": "Additive Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC03",
+              "name": "Minimum ATM Withdrawals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC06",
+              "name": "Book Fair Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC08",
+              "name": "Four-Seven Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC09",
+              "name": "Unique String Reversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC10",
+              "name": "Even Digit Squaring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC12",
+              "name": "Balanced Brackets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC13",
+              "name": "Code Breaker Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC16",
+              "name": "Minimize Unique Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC18",
+              "name": "Fibonacci Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC20",
+              "name": "Factor Sum Presence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC05",
+              "name": "Robot Grid Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC01",
+              "name": "Consecutive Four Finder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC11",
+              "name": "Largest Even Number from String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC15",
+              "name": "Non-Overlapping Prefix-Suffix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC19",
+              "name": "Digit Alternator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC21",
+              "name": "Pronic Substrings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC22",
+              "name": "Equal Sum Swaps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC23",
+              "name": "Consecutive Zeros in Base B",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC24",
+              "name": "Palindrome Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41637",
+              "code": "QQQUOC04",
+              "name": "Balanced Coin Partition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 21
+    },
+    {
+      "assessment": null,
+      "name": "Python MCQs",
+      "description": "Practice the previous years Infosys Python questions.",
+      "submodules": [
+        {
+          "name": "Past Years Python Problems",
+          "submodule_id": 16170,
+          "contest_code": "INFOSYS02",
+          "start_date": "2025-10-06 00:00:00",
+          "total_problems": 19,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/infosys-pyq/INFOSYS02/problems/MIUVCA21",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 19,
+          "problems_with_status": [
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA21",
+              "name": "Python String Split Length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA22",
+              "name": "Python String Manipulation Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA23",
+              "name": "Python Tuple Sorting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA24",
+              "name": "Python Tuple Iteration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA25",
+              "name": "Python ord() Function ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA26",
+              "name": "Code Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA27",
+              "name": "Python Tuple Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA29",
+              "name": "Python String Manipulation Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA30",
+              "name": "Creating an Empty Set in Python",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA31",
+              "name": "Invalid Python Set Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA32",
+              "name": "Python Set Equality Check",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA33",
+              "name": "Python Tuple Modification Error",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA34",
+              "name": "Python Set Length Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA35",
+              "name": "Python all() function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA36",
+              "name": "Python eval() Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA37",
+              "name": "Python Iterator next() Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA38",
+              "name": "Python's Power Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA39",
+              "name": "Inserting into a Python List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41635",
+              "code": "MIUVCA40",
+              "name": "Python Tuple Properties",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 19
+    },
+    {
+      "assessment": null,
+      "name": "Java MCQs",
+      "description": "Practice the previous years Infosys Java questions.",
+      "submodules": [
+        {
+          "name": "Past Years Java Problems",
+          "submodule_id": 16171,
+          "contest_code": "INFOSYS01",
+          "start_date": "2025-10-06 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/infosys-pyq/INFOSYS01/problems/MIUVCA01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA01",
+              "name": "Java's Ancestral Class",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA02",
+              "name": "Encapsulation and Data Security",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA03",
+              "name": "Bundling Data and Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA04",
+              "name": "Java Constructor Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA05",
+              "name": "Java Regex \\z Anchor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA06",
+              "name": "JDBC Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA07",
+              "name": "Core JDBC Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA08",
+              "name": "Java Interface",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA09",
+              "name": "Base64 Encoding Variants",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA10",
+              "name": "Single Variable Reference Limit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA11",
+              "name": "Valid Java Main Method Signature",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA12",
+              "name": "Java Boolean Data Type Size",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA13",
+              "name": "Data Type for Binary States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA14",
+              "name": "Class Method Variations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA15",
+              "name": "Subclass Constructor Invocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA16",
+              "name": "Java Object Creation Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA17",
+              "name": "Java Variable Hiding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA18",
+              "name": "Java Reserved Words Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA19",
+              "name": "Java Conditional Type Mismatch",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41634",
+              "code": "MIUVCA20",
+              "name": "Java Integer Operations and Control Flow",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Database Management System MCQs",
+      "description": "Practice the previous years Infosys DBMS questions.",
+      "submodules": [
+        {
+          "name": "Past DBMS Problems",
+          "submodule_id": 16172,
+          "contest_code": "INFOSYS03",
+          "start_date": "2025-10-06 00:00:00",
+          "total_problems": 16,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/infosys-pyq/INFOSYS03/problems/MIUVCA41",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 16,
+          "problems_with_status": [
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA41",
+              "name": "SQL Joins",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA42",
+              "name": "Conceptual View of Joins",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA43",
+              "name": "Equality-Based Join",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA44",
+              "name": "SQL String Replacement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA45",
+              "name": "Database Relationship Cardinality",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA46",
+              "name": "Pattern Matching in Student IDs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA47",
+              "name": "SQL LIKE Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA48",
+              "name": "SQL Query Error Spotting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA49",
+              "name": "SQL EXCEPT Operator Query",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA50",
+              "name": "SQL Nested String Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA51",
+              "name": "SQL FULL JOIN ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA53",
+              "name": "SQL Query on Employee Projects",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA54",
+              "name": "SQL Query on Student Enrollment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA55",
+              "name": "Database Index Scan Query",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA56",
+              "name": "SQL Query Logic",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41636",
+              "code": "MIUVCA57",
+              "name": "Primary Key",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 76,
+  "total_non_pro_problems": 76,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1594,
+  "path_review": {
+    "rating": 4.6,
+    "users": 49
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

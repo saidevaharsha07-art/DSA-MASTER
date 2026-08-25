@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1502",
+  "contest_category": "6",
+  "problem_name": "The Christmas Gift",
+  "intended_contest_code": null,
+  "body": "<p>\r\nCodeChef has received a package of <b>N</b> ingredients from Aloo uncle and Kachori aunty as their Christmas gift. <b>CodeChef decides to make dishes with every possible combination of these <b>N</b> ingredients</b>. (<b>Note:</b> A dish with 0 ingredients is also possible. CodeChef uses it as an excuse for serving air to their airy customers). Every ingredient from the package has a taste score between <b>1 and 10</b>.\r\n</p>\r\n<p>\r\nNow CodeChef has customers on two planets, planet <b>A</b> and planet <b>B</b>. People from planet <b>A</b> like all the ingredients very much. And hence for every dish given to them, planet <b>A</b> will pay CodeChef an amount, which, in Alterian dollars, equals the sum of the taste scores of all the ingredients present in the dish minus the sum of the taste scores of all the ingredients not present in the dish.\r\n</p>\r\n<p>\r\nPeople from planet <b>B</b> don't like the ingredients at all. So for every dish given to planet <b>B</b>, planet <b>B</b> will pay CodeChef Alterian dollars equal to the sum of the taste scores of all the ingredients not present in the dish minus the sum of the taste scores of all the ingredients present in the dish.\r\n</p>\r\n<p>\r\nCodeChef can only make a single dish from a particular combination of ingredients. And <b>they can send a dish either to planet <b>A</b> or planet <b>B</b>, but not both</b>. You have to find out the maximum amount of money CodeChef will make by distributing <b>all the dishes made</b> with these ingredients on planet <b>A</b> and planet <b>B</b>.\r\n</p>\r\n<p>\r\nReport the maximum amount <b>modulo 10<sup>7</sup></b>.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains <b>T</b>, the number of test cases.</p>\r\n<p>Each test case begins with <b>N</b>, the number of ingredients</p>\r\n<p>The next line for the test case contains <b>N</b> space-separated integers, which are the taste scores of the ingredients.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output the value as asked in a separate line.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>1000</b></li>\r\n<li><b>1</b> \u2264 <b>Taste scores of ingredients</b> \u2264 <b>10</b></li>\r\n<li><b>1</b> \u2264 <b>Sum of N over all Test Cases</b> \u2264 <b>1000</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n1\r\n2\r\n1 2\r\n<b>Output:</b>\r\n8\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> The dishes made by CodeChef and the amounts collected:</p>\r\n<ul>\r\n<li>Dish 1: Contains both ingredients: Sold to Planet A for 3 Alterian dollars.</li>\r\n<li>Dish 2: Contains first ingredients: Sold to Planet B for 1 Alterian dollars.</li>\r\n<li>Dish 3: Contains second ingredients: Sold to Planet A for 1 Alterian dollars.</li>\r\n<li>Dish 4: Does not contain any ingredients: Sold to Planet B for 3 Alterian dollars.</li>\r\n</ul>\r\n<p>Total Amount : 8 Alterian dollars.</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **100**\n- **1** \u2264 **N** \u2264 **1000**\n- **1** \u2264 **Taste scores of ingredients** \u2264 **10**\n- **1** \u2264 **Sum of N over all Test Cases** \u2264 **1000**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "CodeChef has received a package of **N** ingredients from Aloo uncle and Kachori aunty as their Christmas gift. **CodeChef decides to make dishes with every possible combination of these **N** ingredients**. (**Note:** A dish with 0 ingredients is also possible. CodeChef uses it as an excuse for serving air to their airy customers). Every ingredient from the package has a taste score between **1 and 10**.\n\nNow CodeChef has customers on two planets, planet **A** and planet **B**. People from planet **A** like all the ingredients very much. And hence for every dish given to them, planet **A** will pay CodeChef an amount, which, in Alterian dollars, equals the sum of the taste scores of all the ingredients present in the dish minus the sum of the taste scores of all the ingredients not present in the dish.\n\nPeople from planet **B** don't like the ingredients at all. So for every dish given to planet **B**, planet **B** will pay CodeChef Alterian dollars equal to the sum of the taste scores of all the ingredients not present in the dish minus the sum of the taste scores of all the ingredients present in the dish.\n\nCodeChef can only make a single dish from a particular combination of ingredients. And **they can send a dish either to planet **A** or planet **B**, but not both**. You have to find out the maximum amount of money CodeChef will make by distributing **all the dishes made** with these ingredients on planet **A** and planet **B**.\n\nReport the maximum amount **modulo $10^7$**.\n",
+    "inputFormat": "The first line contains **T**, the number of test cases.\n\nEach test case begins with **N**, the number of ingredients.\n\nThe next line for the test case contains **N** space-separated integers, which are the taste scores of the ingredients.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the value as asked in a separate line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n2\n1 2\n",
+        "output": "8\n",
+        "explanation": "**Example case 1.** The dishes made by CodeChef and the amounts collected:\n\n- Dish 1: Contains both ingredients: Sold to Planet A for 3 Alterian dollars.\n- Dish 2: Contains first ingredients: Sold to Planet B for 1 Alterian dollars.\n- Dish 3: Contains second ingredients: Sold to Planet A for 1 Alterian dollars.\n- Dish 4: Does not contain any ingredients: Sold to Planet B for 3 Alterian dollars.\n\nTotal Amount: 8 Alterian dollars.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1502\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1502\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/devuy11\" rel=\"nofollow noopener\">Devendra Agarwal</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic programming</p>\n<h3>PROBLEM:</h3>\n<p>There are <span class=\"math\">N</span> ingredients, each having a taste score between <span class=\"math\">1</span> to <span class=\"math\">10</span>. A dish is made out of the <span class=\"math\">2^N</span> possible combinations of ingredients (including the empty set).</p>\n<p>Planet <strong>A</strong> will pay for a dish the sum of the taste scores of ingredients in the dish, minus the sum of the taste scores of ingredients not in the dish.</p>\n<p>Planet <strong>B</strong> will pay for a dish the sum of the taste scores of ingredients not in the dish, minus the sum of the taste scores of ingredients in the dish.</p>\n<p>Each dish can be given only to one planet. What is the maximum amount of money that can be made? Give your answer modulo <span class=\"math\">10^7</span>.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>For <span class=\"math\">-10N \\le t \\le 10N</span> and <span class=\"math\">0 \\le i \\le N</span>, let <span class=\"math\">F(i,t)</span> be the number (modulo <span class=\"math\">10^7</span>) of dishes <span class=\"math\">S</span> such that <span class=\"math\">A(S) = t</span>, <strong>considering only the first <span class=\"math\">i</span> ingredients</strong>. The answer can be calculated as:</p>\n<div class=\"math\">\n\\sum_{t=-10N}^{10N} |t| F(N,t)\n</div>\n<p><span class=\"math\">F(i,t)</span> can be computed with dynamic programming using the following recurrence:</p>\n<div class=\"math\">\nF(i,t) = (F(i-1, t - t_i) + F(i-1, t + t_i)) \\bmod 10^7\n</div>\n<p>where we define <span class=\"math\">F(i,t) = 0</span> when <span class=\"math\">|t| &gt; 10N</span>. For the base case, we have <span class=\"math\">F(0,t) = 0</span> for <span class=\"math\">t \\not= 0</span>, but <span class=\"math\">F(0,t) = 1</span> for <span class=\"math\">t = 0</span>. By filling the table <span class=\"math\">F(i,t)</span> in increasing order of <span class=\"math\">i</span>, we will have access to the <span class=\"math\">F(N,t)</span> values, and then the answer can be computed.</p>\n<h3>EXPLANATION:</h3>\n<p>Let\u2019s represent an ingredient as an integer from <span class=\"math\">1</span> to <span class=\"math\">N</span>, and a dish as a subset of the set of ingredients, <span class=\"math\">[N] := \\{1, 2, \\ldots, N\\}</span>. Also, let\u2019s write the taste score of ingredient <span class=\"math\">i</span> as <span class=\"math\">t_i</span>.</p>\n<p>For a given dish <span class=\"math\">S</span> (which is a subset of <span class=\"math\">[N]</span>), let <span class=\"math\">A(S)</span> and <span class=\"math\">B(S)</span> be its value to planet <strong>A</strong> and planet <strong>B</strong>, respectively.</p>\n<p>Note that the value of a dish can be negative. However, due to the way the planets calculate the value of a dish, it\u2019s easy to see that <span class=\"math\">A(S) = -B(S)</span>. Thus, if a dish has value to <span class=\"math\">2411</span> to one planet, then it has value <span class=\"math\">-2411</span> to another planet. So to make the most money, there\u2019s only one obvious choice of planet to give each dish to (unless its value is <span class=\"math\">0</span>), and the amount of money we can get from a particular dish is just <span class=\"math\">|A(S)|</span> (or equivalently <span class=\"math\">|B(S)|</span>). So the answer is just the sum of <span class=\"math\">|A(S)|</span> for all dishes <span class=\"math\">S</span>.</p>\n<h1>Dynamic programming</h1>\n<p>Obviously, calculating this sum na\u00efvely will not pass, because there are up to <span class=\"math\">2^N</span> dishes. We need to find a better way. We can do so by exploiting the fact that <span class=\"math\">1 \\le t_i \\le 10</span>, so the maximum <span class=\"math\">|A(S)|</span> among all dishes is <span class=\"math\">10N \\le 10000</span>.</p>\n<p>For <span class=\"math\">-10N \\le t \\le 10N</span> and <span class=\"math\">0 \\le i \\le N</span>, let <span class=\"math\">F(i,t)</span> be the number (modulo <span class=\"math\">10^7</span>) of dishes <span class=\"math\">S</span> such that <span class=\"math\">A(S) = t</span>, <strong>considering only the first <span class=\"math\">i</span> ingredients</strong>. Such a function is useful to us because it gives us the number of dishes for each possible sum, so that the answer can be calculated as:</p>\n<div class=\"math\">\n\\sum_{t=-10N}^{10N} |t| F(N,t)\n</div>\n<p>Now, it\u2019s time to find a recurrence for <span class=\"math\">F(i,t)</span> (so that we can solve the problem with dynamic programming). Consider the <span class=\"math\">i</span> th ingredient. Its taste score is <span class=\"math\">t_i</span>. Also, let <span class=\"math\">S</span> be some dish from the first <span class=\"math\">i-1</span> ingredients. There are two options: either to include the <span class=\"math\">i</span> th ingredient or not. If we include it, the value of the dish becomes <span class=\"math\">A(S) + t_i</span>, otherwise, it becomes <span class=\"math\">A(S) - t_i</span>. In the former case, we want <span class=\"math\">A(S) + t_i</span> to equal <span class=\"math\">t</span>, which means <span class=\"math\">A(S) = t - t_i</span>. In the latter case, we have <span class=\"math\">A(S) = t + t_i</span>. Thus, we now have the following recurrence:</p>\n<div class=\"math\">\nF(i,t) = F(i-1, t - t_i) + F(i-1, t + t_i)\n</div>\n<p>where we define <span class=\"math\">F(i,t) = 0</span> when <span class=\"math\">|t| &gt; 10N</span>. For the base case, we have <span class=\"math\">F(0,t) = 0</span> for <span class=\"math\">t \\not= 0</span>, but <span class=\"math\">F(0,t) = 1</span> for <span class=\"math\">t = 0</span> (representing the <em>empty dish</em> having the value <span class=\"math\">0</span>). This gives us a recurrence for computing <span class=\"math\">F(i,t)</span>. By constructing a table for <span class=\"math\">F(i,t)</span> and computing its entries in increasing <span class=\"math\">i</span> order, we can now have access to the <span class=\"math\">F(N,t)</span> values and compute the answer. Don\u2019t forget to reduce your values modulo <span class=\"math\">10^7</span>!</p>\n<p>The running time of this approach is <span class=\"math\">O(sN)</span>, where <span class=\"math\">s = t_1 + \\ldots + t_N</span>. Alternatively, it is <span class=\"math\">O(t_{\\max}N^2)</span>, where <span class=\"math\">t_{\\max}</span> is the maximum <span class=\"math\">t_i</span>.</p>\n<h1>Improvements</h1>\n<p>There are a couple of improvements that can be done over the above approach.</p>\n<p>Let\u2019s start with a simple one. The above approach requires a table of size <span class=\"math\">N\\times 10N</span>, or up to <span class=\"math\">10^7</span> entries. We can reduce this to just <span class=\"math\">2\\times 10N</span> by <em>keeping only two rows of the table at a time</em>, because we only need the previous row to calculate the next row. This gives us a significant improvement in memory usage.</p>\n<p>We can even reduce this by using only <em>one</em> row. But to do so, we must offset each row. Let\u2019s define a new function <span class=\"math\">G(i,t) = F(i,t - (t_1 + t_2 + \\ldots + t_i))</span>. For a fixed <span class=\"math\">i</span>, row <span class=\"math\">i</span> of <span class=\"math\">G</span> is just row <span class=\"math\">i</span> of <span class=\"math\">F</span> <em>offset</em> <span class=\"math\">(t_1 + \\ldots + t_i)</span> units to the right. It\u2019s straightforward to compute a table entry for <span class=\"math\">G</span> given an entry for <span class=\"math\">F</span>, and vice versa, but in switching to <span class=\"math\">G</span>, we ensure that the indices of <span class=\"math\">G</span> are nonnegative, and we have the following equally-nice recurrence:</p>\n<div class=\"math\">\nG(i,t) = G(i-1,t) + G(i-1,t - 2t_i)\n</div>\n<p>with base case <span class=\"math\">G(0,t) = [t = 0]</span>. (<a href=\"https://en.wikipedia.org/wiki/Iverson_bracket\" rel=\"nofollow noopener\">Iverson bracket</a> notation).</p>\n<p>Using this recurrence, we can compute each row of <span class=\"math\">G</span> from the previous row <em>in place</em> (i.e. without requiring separate storage for the previous and current rows), by computing the $G(i,t)$s in decreasing order of <span class=\"math\">t</span>.</p>\n<p>We can still halve the memory usage! Notice that the only entries of <span class=\"math\">G(i,t)</span> that are nonzero are those where <span class=\"math\">t</span> is even. So we can define a new function, <span class=\"math\">H(i,t)</span>, as <span class=\"math\">G(i,t/2)</span>, and we have the following recurrence:</p>\n<div class=\"math\">\nH(i,t) = H(i-1,t) + H(i-1,t-t_i)\n</div>\n<p>with base case <span class=\"math\">H(0,t) = [t = 0]</span>. Each row of <span class=\"math\">H</span> is only half the size of the corresponding row in <span class=\"math\">G</span>!</p>\n<h1>Connections with polynomials</h1>\n<p>We can state the <span class=\"math\">F(i,t)</span> values in terms of polynomials. Consider the \u201cpolynomial\u201d <span class=\"math\">F_i(x) = \\sum_{t=-\\infty}^{\\infty} F(i,t) x^t</span>. (We quote \u201cpolynomial\u201d because it\u2019s not really a polynomial; the exponent of <span class=\"math\">x</span> can be negative. Instead, this is called a <a href=\"https://en.wikipedia.org/wiki/Laurent_polynomial\" rel=\"nofollow noopener\">Laurent polynomial</a>.) Based on the recurrence for <span class=\"math\">F(i,t)</span>, we can express <span class=\"math\">F_i(x)</span> in terms of <span class=\"math\">F_{i-1}(x)</span> as follows: (In the following, the sum is assumed to range across all integers <span class=\"math\">t</span>)</p>\n<div class=\"math\">\n\\begin{aligned}\nF_i(x)\n&amp;= \\sum_t F(i,t) x^t \\\\\\\n&amp;= \\sum_t [F(i-1,t-t_i) + F(i-1,t+t_i)] x^t \\\\\\\n&amp;= \\sum_t F(i-1,t-t_i) x^t + \\sum_t F(i-1,t+t_i) x^t \\\\\\\n&amp;= \\sum_t F(i-1,t) x^{t+t_i} + \\sum_t F(i-1,t) x^{t-t_i} \\\\\\\n&amp;= x^{t_i} \\sum_t F(i-1,t) x^t + x^{-t_i} \\sum_t F(i-1,t) x^t \\\\\\\n&amp;= \\left(x^{t_i} + x^{-t_i}\\right)\\left(\\sum_t F(i-1,t) x^t\\right) \\\\\\\n&amp;= \\left(x^{t_i} + x^{-t_i}\\right)F_{i-1}(x)\n\\end{aligned}\n</div>\n<p>(The fourth step is just replacement of indices)</p>\n<p>And for the base case, we have <span class=\"math\">F_0(x) = 1</span>. In fact, by unrolling this recursion, we can get:</p>\n<div class=\"math\">\nF_N(x) = \\prod_{i=1}^N \\left(x^{t_i} + x^{-t_i}\\right)\n</div>\n<p>Thus, <span class=\"math\">F(N,t)</span> is just the coefficient of <span class=\"math\">x^t</span> in <span class=\"math\">\\prod_{i=1}^N \\left(x^{t_i} + x^{-t_i}\\right)</span>.</p>\n<p>The transition we did to using <span class=\"math\">G(i,t)</span> and <span class=\"math\">H(i,t)</span> can also be realized in terms of polynomials. Define <span class=\"math\">G_i(x)</span> and <span class=\"math\">H_i(x)</span> similarly as <span class=\"math\">F_i(x)</span>. Then we have <span class=\"math\">G_i(x) = x^{t_1+\\ldots+t_i}F_i(x)</span> and <span class=\"math\">G_i(x) = H_i(x^2)</span>, and:</p>\n<div class=\"math\">\n\\begin{aligned}\nG_i(x) &amp;= \\left(x^{2t_i} + 1\\right)G_{i-1}(x) \\\\\\\nH_i(x) &amp;= \\left(x^{t_i} + 1\\right)H_{i-1}(x)\n\\end{aligned}\n</div>\n<p>And <span class=\"math\">G_i(x)</span> and <span class=\"math\">H_i(x)</span> are actual polynomials, instead of just Laurent polynomials.</p>\n<p>Finally, all these talk about polynomials isn\u2019t just for theoretical interest; they can be converted into an algorithm too. Note that we can extract the <span class=\"math\">H(N,t)</span> values (and thus the answer) by computing the coefficients of <span class=\"math\">H_N(x)</span>, so all we have to do is compute the following polynomial product:</p>\n<div class=\"math\">\nH_N(x) = \\prod_{i=1}^N \\left(x^{t_i} + 1\\right)\n</div>\n<p>But such a polynomial product can be computed quickly with FFT with binary splitting! In more detail:</p>\n<ul>\n<li>Define <span class=\"math\">H_{a,b}(x) = \\prod_{i=a+1}^b \\left(x^{t_i} + 1\\right)</span>. (In other words, <span class=\"math\">H_{a,b}(x) = H_b(x) / H_a(x)</span>.)</li>\n<li>For <span class=\"math\">a &lt; c &lt; b</span>, we have <span class=\"math\">H_{a,b}(x) = H_{a,c}(x) H_{c,b}(x)</span>.</li>\n<li>If <span class=\"math\">b - a = 1</span>, then <span class=\"math\">H_{a,b}(x)</span> is just <span class=\"math\">x^{t_b} + 1</span>.</li>\n<li>To compute <span class=\"math\">H_{a,b}(x)</span> for <span class=\"math\">b - a \\ge 2</span>, let <span class=\"math\">c = \\left\\lfloor \\frac{a+b}{2} \\right\\rfloor</span>, and compute <span class=\"math\">H_{a,c}(x)</span> and <span class=\"math\">H_{c,b}(x)</span> recursively. Then compute <span class=\"math\">H_{a,b}(x)</span> as the polynomial product of <span class=\"math\">H_{a,c}(x)</span> and <span class=\"math\">H_{c,b}(x)</span>, which can be done quickly with <a href=\"https://discuss.codechef.com/questions/73122/fft-tutorial\">FFT-based multiplication</a>.</li>\n</ul>\n<p>This gives us an <span class=\"math\">O(Nt_{\\max} \\log (Nt_{\\max}) \\log N)</span>-time algorithm!</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(sN)</span> where <span class=\"math\">s</span> is the sum of all taste scores</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1502.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1502.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12027,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "devuy11",
+  "problem_display_authors": [
+    "devuy11"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/devuy11'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>devuy11</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "29-11-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Dynamic Programming",
+    "Recurrence Relation"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Recursion"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1502",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610968
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1502",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "junglee-games-interview-questions",
+  "name": "Junglee Games Interview Questions",
+  "title": "Junglee Games Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Junglee Games online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:52",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/junglee-games-interview-questions/JUNGLEECON01/problems/JUNGLEE01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Junglee Games Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Junglee Games Coding Questions",
+          "submodule_id": 8209,
+          "contest_code": "JUNGLEECON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/junglee-games-interview-questions/JUNGLEECON01/problems/JUNGLEE01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE01",
+              "name": "Palindromic Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE02",
+              "name": "Climbing stairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE03",
+              "name": "Distinct Elements Query",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE07",
+              "name": "Element Frequency",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE08",
+              "name": "First Non-Repeating Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE05",
+              "name": "Consecutive Prime Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE06",
+              "name": "Columbus Path Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32177",
+              "code": "JUNGLEE04",
+              "name": "Garden Fountains",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 8,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 936,
+  "path_review": {
+    "rating": 5,
+    "users": 6
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

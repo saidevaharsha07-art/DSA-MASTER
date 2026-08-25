@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MAXFUN",
+  "contest_category": "6",
+  "problem_name": "Maximise Function",
+  "intended_contest_code": "FEB21",
+  "body": "\r\nYou are given a sequence $A_1, A_2, \\ldots, A_N$. Find the maximum value of the expression $|A_x-A_y| + |A_y-A_z| + |A_z-A_x|$ over all triples of pairwise distinct valid indices $(x, y, z)$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the maximum value of $|A_x-A_y| + |A_y-A_z| + |A_z-A_x|$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 5$\r\n- $3 \\leq N \\leq 10^5$\r\n- $|A_i| \\leq 10^9$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $N \\leq 500$\r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n3\r\n2 7 5\r\n3\r\n3 3 3\r\n5\r\n2 2 2 2 5\r\n```\r\n\r\n### Example Output\r\n```\r\n10\r\n0\r\n6\r\n```\r\n\t\r\n### Explanation\r\n**Example case 1:** The value of the expression is always $10$. For example, let $x = 1$, $y = 2$ and $z = 3$, then it is $|2 - 7| + |7 - 5| + |5 - 2| = 5 + 2 + 3 = 10$.\r\n\r\n**Example case 2:** Since all values in the sequence are the same, the value of the expression is always $0$.\r\n\r\n**Example case 3:** One optimal solution is $x = 1$, $y=2$ and $z = 5$, which gives $|2 - 2| + |2 - 5| + |5 - 2| = 0 + 3 + 3 = 6$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou are given a sequence $A_1, A_2, \\ldots, A_N$. Find the maximum value of the expression $|A_x-A_y| + |A_y-A_z| + |A_z-A_x|$ over all triples of pairwise distinct valid indices $(x, y, z)$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the maximum value of $|A_x-A_y| + |A_y-A_z| + |A_z-A_x|$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 5$\r\n- $3 \\leq N \\leq 10^5$\r\n- $|A_i| \\leq 10^9$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $N \\leq 500$\r\n\r\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n3\r\n2 7 5\r\n3\r\n3 3 3\r\n5\r\n2 2 2 2 5",
+        "output": "10\r\n0\r\n6",
+        "explanation": "**Example case 1:** The value of the expression is always $10$. For example, let $x = 1$, $y = 2$ and $z = 3$, then it is $|2 - 7| + |7 - 5| + |5 - 2| = 5 + 2 + 3 = 10$.\r\n\r\n**Example case 2:** Since all values in the sequence are the same, the value of the expression is always $0$.\r\n\r\n**Example case 3:** One optimal solution is $x = 1$, $y=2$ and $z = 5$, which gives $|2 - 2| + |2 - 5| + |5 - 2| = 0 + 3 + 3 = 6$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 85190,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vichitr",
+  "date_added": "24-01-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "Greedy",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1301",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611065
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MAXFUN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 12,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

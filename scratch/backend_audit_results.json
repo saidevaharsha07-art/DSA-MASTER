@@ -1,0 +1,203 @@
+[
+  {
+    "name": "Memory Engine",
+    "key": "MemoryEngine",
+    "file": "src/intelligence/memory/engine/memory.engine.ts",
+    "exists": true,
+    "usageCount": 24,
+    "sampleCallers": [
+      "src/adapters/memory-realtime.adapter.ts",
+      "src/adapters/revision-notification.adapter.ts",
+      "src/api/memory.api.ts",
+      "src/app/(dev)/dev/memory/page.tsx",
+      "src/app/(dev)/dev/oracle/page.tsx",
+      "src/app/(dev)/dev/system/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/config/constants.ts",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/index.ts",
+      "src/intelligence/memory/engine/memory.service.ts",
+      "src/intelligence/memory/tests/memory.test.ts",
+      "src/intelligence/oracle/engine/dashboard.engine.ts",
+      "src/intelligence/oracle/engine/recommendation.orchestrator.ts",
+      "src/intelligence/oracle/models/recommendation.models.ts",
+      "src/intelligence/oracle/services/context.service.ts",
+      "src/intelligence/oracle/tests/dashboard.test.ts",
+      "src/intelligence/oracle/tests/oracle.test.ts",
+      "src/intelligence/oracle/tests/ranking.test.ts",
+      "src/intelligence/tests/container.test.ts",
+      "src/intelligence/tests/integration.test.ts",
+      "src/intelligence/tests/run_tests.ts",
+      "src/memory/engine/index.ts"
+    ]
+  },
+  {
+    "name": "Oracle Service",
+    "key": "OracleService",
+    "file": "src/intelligence/oracle/services/oracle.service.ts",
+    "exists": true,
+    "usageCount": 12,
+    "sampleCallers": [
+      "src/adapters/oracle-analytics.adapter.ts",
+      "src/api/oracle.api.ts",
+      "src/api/recommendations.api.ts",
+      "src/app/(dev)/dev/oracle/page.tsx",
+      "src/app/(dev)/dev/system/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/index.ts",
+      "src/intelligence/oracle/tests/oracle.test.ts",
+      "src/intelligence/tests/container.test.ts",
+      "src/intelligence/tests/integration.test.ts"
+    ]
+  },
+  {
+    "name": "Adaptive Engine",
+    "key": "AdaptiveEngine",
+    "file": "src/intelligence/adaptive/adaptive.engine.ts",
+    "exists": true,
+    "usageCount": 11,
+    "sampleCallers": [
+      "src/app/(dev)/dev/adaptive/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/config/constants.ts",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/index.ts",
+      "src/intelligence/oracle/engine/dashboard.engine.ts",
+      "src/intelligence/oracle/engine/recommendation.orchestrator.ts",
+      "src/intelligence/scheduler/practice.scheduler.ts",
+      "src/intelligence/tests/adaptive.test.ts",
+      "src/intelligence/tests/run_tests.ts"
+    ]
+  },
+  {
+    "name": "Contest Engine",
+    "key": "ContestEngine",
+    "file": "src/intelligence/contests/contest.engine.ts",
+    "exists": true,
+    "usageCount": 17,
+    "sampleCallers": [
+      "src/api/contest.api.ts",
+      "src/app/(app)/contest/page.tsx",
+      "src/app/(dev)/dev/contest/page.tsx",
+      "src/app/(dev)/dev/oracle/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/config/constants.ts",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/index.ts",
+      "src/intelligence/oracle/engine/dashboard.engine.ts",
+      "src/intelligence/oracle/engine/recommendation.orchestrator.ts",
+      "src/intelligence/oracle/services/context.service.ts",
+      "src/intelligence/oracle/tests/dashboard.test.ts",
+      "src/intelligence/oracle/tests/oracle.test.ts",
+      "src/intelligence/tests/contest.test.ts",
+      "src/intelligence/tests/integration.test.ts",
+      "src/intelligence/tests/run_tests.ts"
+    ]
+  },
+  {
+    "name": "Rating Engine",
+    "key": "RatingEngine",
+    "file": "src/intelligence/ratings/rating.engine.ts",
+    "exists": true,
+    "usageCount": 14,
+    "sampleCallers": [
+      "src/app/(app)/contest/page.tsx",
+      "src/app/(dev)/dev/oracle/page.tsx",
+      "src/app/(dev)/dev/ratings/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/index.ts",
+      "src/intelligence/oracle/engine/recommendation.orchestrator.ts",
+      "src/intelligence/oracle/services/context.service.ts",
+      "src/intelligence/oracle/tests/dashboard.test.ts",
+      "src/intelligence/oracle/tests/oracle.test.ts",
+      "src/intelligence/tests/integration.test.ts",
+      "src/intelligence/tests/rating.test.ts",
+      "src/intelligence/tests/run_tests.ts"
+    ]
+  },
+  {
+    "name": "Achievement Service",
+    "key": "AchievementService",
+    "file": "src/intelligence/achievements/services/achievement.service.ts",
+    "exists": true,
+    "usageCount": 6,
+    "sampleCallers": [
+      "src/adapters/xp-achievement.adapter.ts",
+      "src/app/(dev)/dev/achievements/page.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/achievements/api/achievement.api.ts",
+      "src/intelligence/tests/achievements.test.ts"
+    ]
+  },
+  {
+    "name": "Notification Service",
+    "key": "NotificationService",
+    "file": "src/lib/notifications/services/notification.service.ts",
+    "exists": true,
+    "usageCount": 5,
+    "sampleCallers": [
+      "src/app/(dev)/dev/notifications/page.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/tests/notifications.test.ts",
+      "src/lib/notifications/api/notification.api.ts"
+    ]
+  },
+  {
+    "name": "Analytics Service",
+    "key": "AnalyticsService",
+    "file": "src/lib/analytics/services/analytics.service.ts",
+    "exists": true,
+    "usageCount": 10,
+    "sampleCallers": [
+      "src/adapters/dashboard-analytics.adapter.ts",
+      "src/adapters/oracle-analytics.adapter.ts",
+      "src/analytics/index.ts",
+      "src/app/(dev)/dev/analytics/page.tsx",
+      "src/app/(dev)/dev/system/page.tsx",
+      "src/components/providers/AppBackendProvider.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/tests/analytics.test.ts",
+      "src/lib/analytics/api/analytics.api.ts"
+    ]
+  },
+  {
+    "name": "Leaderboard Service",
+    "key": "LeaderboardService",
+    "file": "src/intelligence/leaderboards/services/leaderboard.service.ts",
+    "exists": true,
+    "usageCount": 6,
+    "sampleCallers": [
+      "src/adapters/profile-leaderboard.adapter.ts",
+      "src/core/container/service-registry.ts",
+      "src/game/leaderboard/index.ts",
+      "src/intelligence/leaderboards/api/leaderboard.api.ts",
+      "src/intelligence/tests/leaderboards.test.ts"
+    ]
+  },
+  {
+    "name": "Connector Service",
+    "key": "ConnectorService",
+    "file": "src/platforms/connectors/services/connector.service.ts",
+    "exists": true,
+    "usageCount": 6,
+    "sampleCallers": [
+      "src/app/(dev)/dev/connectors/page.tsx",
+      "src/app/(dev)/dev/system/page.tsx",
+      "src/core/container/service-registry.ts",
+      "src/intelligence/tests/connectors.test.ts",
+      "src/platforms/connectors/api/connector.api.ts"
+    ]
+  },
+  {
+    "name": "Repositories",
+    "key": "CodeChefRatingRepository",
+    "file": "src/curriculum/repository/codechef-rating-db.ts",
+    "exists": true,
+    "usageCount": 2,
+    "sampleCallers": [
+      "src/app/(app)/practice/codechef/page.tsx"
+    ]
+  }
+]

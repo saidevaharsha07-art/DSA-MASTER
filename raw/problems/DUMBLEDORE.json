@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DUMBLEDORE",
+  "contest_category": "6",
+  "problem_name": "Alice Potter And Dumbledore Army",
+  "intended_contest_code": "COOK144",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le N, M \\le 10^6$\n- $1 \\le P_i \\le N$, $1 \\le T_i \\le 10^6$\n- $T_1 \\le T_2 \\le \\ldots \\le T_M$",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "Dumbledore's Army consists of $N$ members. Alice Potter is planning to hold $M$ Dumbledore's Army sessions, where the members will perform training tasks to improve their skills in Defense Against the Dark Arts.\n\nInitially, each member of the Army has no tasks. Before the $i$-th training session, Alice gives the $P_i$-th participant a task that he can complete in $T_i$ seconds. And each subsequent session Alice will add more and more difficult tasks, i.e. $T_i \\le T_{i+1}$.\n\nLet's assume that by the $i$-th session, the $j$-th participant has accumulated $C_j$ tasks. Alice knows that sometimes there is not enough time to complete all the tasks in a single session, so instead of forcing them to complete all $C_1+C_2+\\ldots+C_N$ tasks, she can allow them to complete only a certain number $k$ of them. In this case, each participant can choose a subset of their tasks (in total, they have to choose $k$ tasks) and perform only those tasks. Each participant performs his tasks sequentially and spends time equal to the sum of the times of his tasks. However, different participants can perform tasks in parallel, so the total time of the session is equal to the maximum of the times of each participant. We denote the minimum possible value of this time by $ans_{i, k}$.\n\nIn order to optimally train participants, for each session $i$ Alice needs to know the value of $ans_{i, 1} + ans_{i, 2} + \\ldots + ans_{i, i}$. Help Alice \u2014 calculate these sums for her.",
+    "inputFormat": "- The first line contains two integers $N$ and $M$ \u2014 the number of members of Dumbledore's Army and the number of classes.\n\n- The $i$-th of the next $M$ lines contains two integers $P_i$ and $T_i$ \u2014 the participant who will receive the next task and the amount of time it will take to complete it. ",
+    "inputFormatState": true,
+    "outputFormat": "Print $M$ integers. The $i$-th of them should be equal to $ans_{i, 1} + ans_{i, 2} + \\ldots + ans_{i, i}$.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5 12\n5 1\n3 2\n5 2\n1 2\n4 3\n4 3\n4 3\n5 3\n1 5\n3 5\n1 8\n2 10\n",
+        "output": "1\n3\n6\n8\n11\n17\n26\n32\n39\n46\n61\n71\n",
+        "explanation": "Consider the third session in the example. The fifth participant has tasks with $T=1$ and $T=2$, and the third participant has a single task with $T=2$. It takes $1$ unit of time to complete one task (only the fifth participant will complete the task with $T=1$), $2$ unit of time to complete two tasks, and $3$ unit of time to complete all three tasks. Therefore, the third number in the answer is $1+2+3=6$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "63e3e3e7aa7917c6ba79358e",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121143,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "3.5",
+  "source_sizelimit": "50000",
+  "problem_author": "vladprog",
+  "problem_display_authors": [
+    "vladprog"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vladprog'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>vladprog</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "7-02-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "course",
+    "course",
+    "learn",
+    "learn",
+    "math",
+    "math",
+    "observation",
+    "observation",
+    "vladprog"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "1885",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610803
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DUMBLEDORE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 28,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,129 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PERMDIST",
+  "contest_category": "6",
+  "problem_name": "Permutation Distance",
+  "intended_contest_code": null,
+  "body": "Consider a permutation $P = (p_1, p_2, ..., p_n)$ of numbers $\\{1, 2, ... , n\\}$. Let us construct a graph $G(P)$ with $n$ vertices as follows: if $i, j \\in \\{1, ..., n\\}$ and $i < j$, then an undirected edge $(i, j)$ is present in $G(P)$ if and only if $p_i < p_j$.\r\n\r\nGiven a permutation $P$, answer several queries of the form \"what is the shortest length of a path between $u$ and $v$ in $G(P)$?\". If there is no path between $u$ and $v$, report so.\r\n\r\n\r\n###Input:\r\n- The first line contains a single integer $T$ denoting the number of test cases. $T$ test case descriptions follow.\r\n- Each test case description starts with a line containing two integers, $n$ and $q$, denoting the length of the permutation $P$ and the number of queries respectively.\r\n- The next line contains $n$ distinct integers $p_1, ..., p_n$ denoting the permutation $P$.\r\n- The following $q$ lines describe queries. The $i$-th of these lines contains two integers $u_i$ and $v_i$ denoting parameters of the $i$-th query.\r\n\r\n###Output:\r\n- Print answers for all queries in order of appearance in the input, one per line.\r\n- If there is no path between $u_i$ and $v_i$, print $-1$ as the answer for the $i$-th query. Otherwise, print a single integer denoting the shortest length of a path between $u_i$ and $v_i$.\r\n\r\n\r\n###Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq n, q \\leq 10^5$\r\n- $1 \\leq p_i \\leq n$\r\n- $p_1, ..., p_n$ forms a permutation of  $\\{1, 2, ... , n\\}$\r\n- $1 \\leq u_i, v_i \\leq n$\r\n- The sum of all $n$ in a test file does not exceed $5 \\cdot 10^5$\r\n- The sum of all $q$ in a test file does not exceed $5 \\cdot 10^5$\r\n\r\n###Sample Input:\r\n```\r\n1\r\n5 4\r\n3 5 2 4 1\r\n1 1\r\n2 3\r\n1 4\r\n4 5\r\n```\r\n\r\n###Sample Output:\r\n```\r\n0\r\n3\r\n1\r\n-1\r\n```\r\n\r\n###Explanation\r\n- In the first query, we can go from 1 to 1 by just staying there, and hence path of length 0.\r\n- In the second query, we can go from the 2 (which has the value $p_2 = 5$) to 1, because 1 < 2 and $p_1 < p_2$. From there, we can go to 4, and from there to 3. This gives us a path of length 3, and is the shortest that we can get.\r\n\t\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $1 \\leq n, q \\leq 10^5$\n- $1 \\leq p_i \\leq n$\n- $p_1, ..., p_n$ forms a permutation of $\\{1, 2, ... , n\\}$\n- $1 \\leq u_i, v_i \\leq n$\n- The sum of all $n$ in a test file does not exceed $5 \\cdot 10^5$\n- The sum of all $q$ in a test file does not exceed $5 \\cdot 10^5$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Consider a permutation $P = (p_1, p_2, ..., p_n)$ of numbers $\\{1, 2, ... , n\\}$. Let us construct a graph $G(P)$ with $n$ vertices as follows: if $i, j \\in \\{1, ..., n\\}$ and $i < j$, then an undirected edge $(i, j)$ is present in $G(P)$ if and only if $p_i < p_j$.\n\nGiven a permutation $P$, answer several queries of the form \"what is the shortest length of a path between $u$ and $v$ in $G(P)$?\". If there is no path between $u$ and $v$, report so.\n",
+    "inputFormat": "- The first line contains a single integer $T$ denoting the number of test cases. $T$ test case descriptions follow.\n- Each test case description starts with a line containing two integers, $n$ and $q$, denoting the length of the permutation $P$ and the number of queries respectively.\n- The next line contains $n$ distinct integers $p_1, ..., p_n$ denoting the permutation $P$.\n- The following $q$ lines describe queries. The $i$-th of these lines contains two integers $u_i$ and $v_i$ denoting parameters of the $i$-th query.\n",
+    "inputFormatState": true,
+    "outputFormat": "- Print answers for all queries in order of appearance in the input, one per line.\n- If there is no path between $u_i$ and $v_i$, print $-1$ as the answer for the $i$-th query. Otherwise, print a single integer denoting the shortest length of a path between $u_i$ and $v_i$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 4\n3 5 2 4 1\n1 1\n2 3\n1 4\n4 5\n",
+        "output": "0\n3\n1\n-1\n",
+        "explanation": "- In the first query, we can go from 1 to 1 by just staying there, and hence path of length 0.\n- In the second query, we can go from the 2 (which has the value $p_2 = 5$) to 1, because $1 < 2$ and $p_1 < p_2$. From there, we can go to 4, and from there to 3. This gives us a path of length 3, and is the shortest that we can get.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "24-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Sparse Table",
+    "Jump Pointers",
+    "Binary lifting"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures",
+    "Advanced Algorithms",
+    "Pre processing",
+    "Algorithms",
+    "Graph Algos",
+    "Lowest Common Ancestor"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611158
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PERMDIST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

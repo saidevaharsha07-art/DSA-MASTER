@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "INF16B",
+  "contest_category": "6",
+  "problem_name": "Robbery 101",
+  "intended_contest_code": null,
+  "body": "<p>\nYou are the most notorious criminal in <b>Gwalior</b>. You've decided that you're going to rob\nhard working employees of <b>CF</b>, a famous Tech company in the city.\n</p>\n\n<p>\nThere are <b>N</b> people working in <b>CF</b>. The employees working here are conveniently numbered from <b>1</b> to <b>N</b>. Furthermore, each employee except <b>Praveen</b>, the <b>CEO</b>, has exactly <b>1</b> manager that he/she has to report to regularly. We denote the manager of the <b>ith</b> employee as <b>M<sub>i</sub></b>. <b>M<sub>i</sub> = 0</b> denotes that the <b>ith</b> employee is the CEO(Praveen). Each employee also has a salary (in rupees), which is denoted by <b>S<sub>i</sub></b>. We also define another term, <b>SUB<sub>i</sub></b>, which denotes the set of employees that are subordinates of the <b>ith</b> employee. An employee <b>y</b> is a subordinate of <b>x</b> iff <b>x = M<sub>y</sub></b> or <b>M<sub>y</sub></b> is a subordinate of <b>x</b>. Note that all employees (except the CEO) are subordinates of the CEO.\n</p>\n\n<p>\nSince <b>CF</b> hires only from top institutions, the employees there are really smart. Whenever you rob\nan employee <b>x</b>, <b>x</b> tells his/her manager <b>M<sub>x</sub></b> about the incident. <b>M<sub>x</sub></b> in turn, tells <b>M<sub>M<sub>x</sub></sub></b> about the incident, and this goes on\nuntil the CEO hears about it. Also, all subordinates of <b>x</b> i.e. all employees in <b>SUB<sub>x</sub></b> hear about the incident. Upon hearing about the incident, these employees start taking extra precautions and thus you cannot rob them in the future. Obviously, <b>x</b> takes extra precautions as well to avoid getting robbed again. Robbing employee <b>x</b> gives you <b>S<sub>x</sub></b> rupees.\n</p>\n\n<p>\nYou want to maximize the amount of money you can earn by robbing <b>exactly K</b> employees. Given information about this company, can you find the optimal amount?\n</p>\n\n<h3>Input</h3>\n<p>\nThe first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.\n</p>\n<p>\nThe first line of each test case contains two space separated integers <b>N</b> and <b>K</b>.\n</p>\n<p>\nThe next <b>N</b> lines of each test case contains 2 space separated integers each. The <b>ith</b> line\ncontains two space separated integers, <b>M<sub>i</sub></b> and <b>S<sub>i</sub></b>.\n</p>\n\n\n<h3>Output</h3>\n<p>\nFor each test case, output a single line containing the answer. If a valid subset of <b>K</b> employees does not exist, print <b>-1</b>.\n</p>\n\n\n<h3>Constraints</h3>\n\n<ul>\n<li><b>1 \u2264 T \u2264 2000</b></li>\n<li><b>1 \u2264 N \u2264 10<sup>5</sup></b></li>\n<li><b>1 \u2264 K \u2264 10<sup>3</sup></b></li>\n<li><b>0 \u2264 M<sub>i</sub> \u2264 N</b></li>\n<li><b>1 \u2264 S<sub>i</sub> \u2264 2000</b></li>\n<li><b>Sum of NK in a single test file does not exceed 10<sup>8</sup></b></li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>2\n4 2\n0 2\n1 5\n2 1\n1 3\n3 3\n0 100\n1 5\n1 3\n</tt>\n<b>Output:</b>\n<tt>8\n-1\n</tt>\n</pre>\n\n<h3>Explanation</h3>\n<p>\n<img src=\"https://www.codechef.com/download/upload/ACM16INF/B.png\" height=\"200\"/> <br>\nThe picture above represents the first test case.\nIn this case, you rob employee <b>2</b> first. This notifies employees <b>1</b> and <b>3</b> about the incident. Next, you rob employee <b>4</b> earning a total of <b>5 + 3 = 8</b> dollars.\n</p>\n\n<p>\nIn the second case, you cannot rob all three employees without getting caught.\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 2000**\n- **1 \u2264 N \u2264 $10^5$**\n- **1 \u2264 K \u2264 $10^3$**\n- **0 \u2264 $M_i$ \u2264 N**\n- **1 \u2264 $S_i$ \u2264 2000**\n- Sum of **NK** in a single test file does not exceed **$10^8$**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are the most notorious criminal in **Gwalior**. You've decided that you're going to rob hard working employees of **CF**, a famous Tech company in the city.\n\nThere are **N** people working in **CF**. The employees working here are conveniently numbered from **1** to **N**. Furthermore, each employee except **Praveen**, the **CEO**, has exactly **1** manager that he/she has to report to regularly. We denote the manager of the **ith** employee as **$M_i$**. **$M_i = 0$** denotes that the **ith** employee is the CEO (Praveen). Each employee also has a salary (in rupees), which is denoted by **$S_i$**. We also define another term, **$SUB_i$**, which denotes the set of employees that are subordinates of the **ith** employee. An employee **y** is a subordinate of **x** iff **$x = M_y$** or **$M_y$** is a subordinate of **x**. Note that all employees (except the CEO) are subordinates of the CEO.\n\nSince **CF** hires only from top institutions, the employees there are really smart. Whenever you rob an employee **x**, **x** tells his/her manager **$M_x$** about the incident. **$M_x$** in turn, tells **$M_{M_x}$** about the incident, and this goes on until the CEO hears about it. Also, all subordinates of **x** i.e. all employees in **$SUB_x$** hear about the incident. Upon hearing about the incident, these employees start taking extra precautions and thus you cannot rob them in the future. Obviously, **x** takes extra precautions as well to avoid getting robbed again. Robbing employee **x** gives you **$S_x$** rupees.\n\nYou want to maximize the amount of money you can earn by robbing **exactly K** employees. Given information about this company, can you find the optimal amount?\n",
+    "inputFormat": "The first line of input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nThe first line of each test case contains two space separated integers **N** and **K**.\n\nThe next **N** lines of each test case contains 2 space separated integers each. The **ith** line contains two space separated integers, **$M_i$** and **$S_i$**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing the answer. If a valid subset of **K** employees does not exist, print **-1**.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4 2\n0 2\n1 5\n2 1\n1 3\n3 3\n0 100\n1 5\n1 3\n",
+        "output": "8\n-1\n",
+        "explanation": "![Image](https://www.codechef.com/download/upload/ACM16INF/B.png)  \nThe picture above represents the first test case.  \nIn this case, you rob employee **2** first. This notifies employees **1** and **3** about the incident. Next, you rob employee **4** earning a total of **5 + 3 = 8** dollars.\n\nIn the second case, you cannot rob all three employees without getting caught.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "27-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "kol_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610876
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=INF16B",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

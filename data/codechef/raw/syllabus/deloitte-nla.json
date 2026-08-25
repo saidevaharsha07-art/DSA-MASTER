@@ -1,0 +1,1006 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "deloitte-nla",
+  "name": "Deloitte NLA Questions",
+  "title": "Deloitte NLA Questions",
+  "level": "Intermediate",
+  "description": "Prepare for Deloitte NLA with previous years questions. Solve the coding, numerical ability, reasoning ability, verbal ability and quant questions which were asked in the past.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:54",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/deloitte-nla/DELTNLA01/problems/ISHYNF13",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Coding Problems",
+      "description": "Practice the previous years Deloitte NLA coding problems.",
+      "submodules": [
+        {
+          "name": "Past Years Coding Problems",
+          "submodule_id": 15773,
+          "contest_code": "DELTNLA01",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 24,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/deloitte-nla/DELTNLA01/problems/ISHYNF13",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF13",
+              "name": "Sentence Anagrams",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF14",
+              "name": "Class Monitor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF15",
+              "name": "first N Fibonacci",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF16",
+              "name": "Corona for Computer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF17",
+              "name": "Help of Prepsters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF18",
+              "name": "Momentum LinkedList",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF21",
+              "name": "String Rotation Check",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF22",
+              "name": "Messy Sentence Word Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF23",
+              "name": "Balanced Brackets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "MISSINPERM",
+              "name": "Missing number in permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "TWOSUMM",
+              "name": "Chef and Pair of Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "GCYCLEDFS",
+              "name": "Cycle in Undirected Graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ROTATEARRAY",
+              "name": "Rotate the array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF01",
+              "name": "Odd Sum Subarrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF03",
+              "name": "Longest Palindromic Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF05",
+              "name": "Merge K Sorted Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF06",
+              "name": "Kth Largest Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF08",
+              "name": "Longest Increasing Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF09",
+              "name": "Subarray Sum with One Deletion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "CASS34",
+              "name": "Prime Check",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF19",
+              "name": "Lazy Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF20",
+              "name": "Unique Permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41111",
+              "code": "ISHYNF07",
+              "name": "Counting Inversions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 24
+    },
+    {
+      "assessment": null,
+      "name": "Numerical Ability Problems",
+      "description": "Practice the previous years Deloitte NLA numerical ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Numerical Ability Problems",
+          "submodule_id": 15774,
+          "contest_code": "DELTNLA02",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/deloitte-nla/DELTNLA02/problems/AAKCGL01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL01",
+              "name": "Speed, Time and Distance - I",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL02",
+              "name": "Speed, Time and Distance - II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL03",
+              "name": "Pipe and Cistern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL04",
+              "name": "Ratio and Proportion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL05",
+              "name": "Time and Work",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL06",
+              "name": "Percentage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL07",
+              "name": "Compound Interest Installment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL08",
+              "name": "Mixture and Allegation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL09",
+              "name": "Inscribed Square in a Circle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41112",
+              "code": "AAKCGL10",
+              "name": "HCF of Quadratic Equations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Reasoning Ability Problems",
+      "description": "Practice the previous years Deloitte NLA reasoning ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Reasoning Ability Problems",
+          "submodule_id": 15775,
+          "contest_code": "DELTNLA03",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 15,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/deloitte-nla/DELTNLA03/problems/CJACIF01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 15,
+          "problems_with_status": [
+            {
+              "contest_id": "41113",
+              "code": "CJACIF01",
+              "name": "Unchanged Digits After Rearrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF02",
+              "name": "Distance from the Starting Point",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF04",
+              "name": "Find the Odd One Out",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF05",
+              "name": "Digit Swap",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF06",
+              "name": "Next Term in Letter Series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF07",
+              "name": "Guessing Birthday",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF08",
+              "name": "Symbolic Arithmetic Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF09",
+              "name": "Coding-Decoding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF10",
+              "name": "Letter Rearrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF11",
+              "name": "Children in a Row Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF12",
+              "name": "Coding-decoding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF14",
+              "name": "Statement and Conclusion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF15",
+              "name": "Find the Odd One Out ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF16",
+              "name": "Letter Rearrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41113",
+              "code": "CJACIF17",
+              "name": "Find the missing term in alphabet series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 15
+    },
+    {
+      "assessment": null,
+      "name": "Verbal Ability Problems",
+      "description": "Practice the previous years Deloitte NLA verbal ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Verbal Ability Problems",
+          "submodule_id": 15776,
+          "contest_code": "DELTNLA04",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/deloitte-nla/DELTNLA04/problems/AAKCGL11",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL11",
+              "name": "Antonym of Judicious",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL12",
+              "name": "Synonym of Soporific",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL13",
+              "name": "Correct Sentence Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL14",
+              "name": "One Word Substitution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL15",
+              "name": "Fill in the Blanks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL16",
+              "name": "Error Spotting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL17",
+              "name": "Animal Sound Analogy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL18",
+              "name": "Idioms and phrases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL19",
+              "name": "Sentence Rearrangement Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41114",
+              "code": "AAKCGL20",
+              "name": "Antonyms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Technical Questions",
+      "description": "Practice the previous years Deloitte NLA Technical Questions.",
+      "submodules": [
+        {
+          "name": "Past Years Technical Questions",
+          "submodule_id": 15777,
+          "contest_code": "DELTNLA05",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 25,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/deloitte-nla/DELTNLA05/problems/AAKCGL21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 25,
+          "problems_with_status": [
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL21",
+              "name": "Primary Purpose of Software Testing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL22",
+              "name": "Regression Testing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL23",
+              "name": "Purpose of Load Testing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL24",
+              "name": "Testing All Possible Routes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL25",
+              "name": "Usability Testing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL26",
+              "name": "Functions of CPU",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL27",
+              "name": "Input Devices",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL28",
+              "name": "Primary Function of ALU",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL29",
+              "name": "CPU Directly Accessible Memory",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL30",
+              "name": "Router",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL31",
+              "name": "Network Topology",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL32",
+              "name": "User Authentication Method",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL33",
+              "name": "Attack Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL34",
+              "name": "Firewall",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL35",
+              "name": "Social Engineering Breach",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL36",
+              "name": "Cloud Archival Storage Service",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL37",
+              "name": "Serverless Computing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL38",
+              "name": "Load Balancer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL39",
+              "name": "Docker in Cloud Computing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL40",
+              "name": "Cloud Service Model for Applications",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL41",
+              "name": "Role of a SIEM System",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL42",
+              "name": "Ransomware",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL43",
+              "name": "Man in the Middle Attack",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL44",
+              "name": "Access Control ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41115",
+              "code": "AAKCGL45",
+              "name": "Incident Response Plan",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 25
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 84,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1105,
+  "path_review": {
+    "rating": 3.7,
+    "users": 3
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

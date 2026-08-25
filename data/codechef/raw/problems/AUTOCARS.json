@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AUTOCARS",
+  "contest_category": "6",
+  "problem_name": "Autonomous Cars",
+  "intended_contest_code": null,
+  "body": "You are in the future. It's the time of autonomous cars. Switching lanes is a pretty difficult task for autonomous cars, and you have the logs from an experiment you had run with two cars. You want to verify whether the logs are corrupted, or could be valid.\n\nIn that experiment, you had a highway consisting of two lanes. These were represented by 2 rows of an infinite grid. The cell (1, 1) is the top left cell which is the starting point of the first lane. Cell (2, 1) is the bottom left cell of the grid which is the starting point of the second lane.\n\nThere are two cars, 1 and 2 that start from the cell (1, 1) and (2, 1). \n\nAt each instant, a car has the following choices.\n- Stay at the current position.\n- Move one cell to the right.\n- Switch Lanes. When a car switches its lane, it stays in the same column. That is, from (1, i) it could go to (2, i), or from (2, i) it could go to (1, i). But both both cars shouldn't end up at the same cell at any point. Note that there could have been a car which had moved at the very instant that you move into it.\n\nConsider one such scenario of driving cars.\n\nTime $t = 0$\n```\n1.....\n2.....\n```\n\nTime $t = 1$. Car 2 advances one cell right. Car 1 stays at the same place.\n```\n1.....\n.2....\n```\n\nTime $t = 2$. Car 2 stays at its place. Car 1 switches the lane.\n```\n......\n12....\n```\n\nTime $t = 3$. Car 2 moves one cell to the right.  Car 1 also moves one cell to the right.\n```\n......\n.12...\n```\n\nTime $t = 4$. Both the cars stay in the same place.\n```\n......\n.12...\n```\n\nYou are given positions of the car at $n$ instants. Your task is to check whether this situation is feasible or not.\n\n### Input\n- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains an integer $n$ denoting the number of instants where the positions of the cars were recorded.\n- Each of next $n$ lines contains 5 space separated integers denoting $t_i, x_i, y_i, X_i, Y_i$ denoting time, $x$ and $y$ coordinate of the first car, and that of second car.\n\n### Output\nFor each test case, output either `yes` or `no` according to the answer to the problem.\n\n###Constraints\n- $1 \\le T \\le 10^5$\n- $1 \\le n \\leq 10^5$\n- $1 \\le t_i, y_i, X_i, Y_i \\leq 10^9$\n- $1 \\leq x_i \\leq 2$\n- $t_i < t_{i+1}$\n- Sum of $n$ over all the test cases doesn't exceed $10^6$\n\n### Example Input\n```\n2\n3\n1 1 1 2 2\n2 2 1 2 2\n4 2 2 2 3\n1\n1 1 3 2 2\n```\n\n### Example Output\n```\nyes\nno\n```\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $1 \\le n \\leq 10^5$\n- $1 \\le t_i, y_i, X_i, Y_i \\leq 10^9$\n- $1 \\leq x_i \\leq 2$\n- $t_i < t_{i+1}$\n- Sum of $n$ over all the test cases doesn't exceed $10^6$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are in the future. It's the time of autonomous cars. Switching lanes is a pretty difficult task for autonomous cars, and you have the logs from an experiment you had run with two cars. You want to verify whether the logs are corrupted, or could be valid.\n\nIn that experiment, you had a highway consisting of two lanes. These were represented by 2 rows of an infinite grid. The cell $(1, 1)$ is the top left cell which is the starting point of the first lane. Cell $(2, 1)$ is the bottom left cell of the grid which is the starting point of the second lane.\n\nThere are two cars, 1 and 2 that start from the cell $(1, 1)$ and $(2, 1)$. \n\nAt each instant, a car has the following choices:\n- Stay at the current position.\n- Move one cell to the right.\n- Switch Lanes. When a car switches its lane, it stays in the same column. That is, from $(1, i)$ it could go to $(2, i)$, or from $(2, i)$ it could go to $(1, i)$. But both cars shouldn't end up at the same cell at any point. Note that there could have been a car which had moved at the very instant that you move into it.\n\nConsider one such scenario of driving cars.\n\nTime $t = 0$\n```\n1.....\n2.....\n```\n\nTime $t = 1$. Car 2 advances one cell right. Car 1 stays at the same place.\n```\n1.....\n.2....\n```\n\nTime $t = 2$. Car 2 stays at its place. Car 1 switches the lane.\n```\n......\n12....\n```\n\nTime $t = 3$. Car 2 moves one cell to the right.  Car 1 also moves one cell to the right.\n```\n......\n.12...\n```\n\nTime $t = 4$. Both the cars stay in the same place.\n```\n......\n.12...\n```\n\nYou are given positions of the car at $n$ instants. Your task is to check whether this situation is feasible or not.\n",
+    "inputFormat": "- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains an integer $n$ denoting the number of instants where the positions of the cars were recorded.\n- Each of next $n$ lines contains 5 space separated integers denoting $t_i, x_i, y_i, X_i, Y_i$ denoting time, $x$ and $y$ coordinate of the first car, and that of the second car.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output either `yes` or `no` according to the answer to the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n1 1 1 2 2\n2 2 1 2 2\n4 2 2 2 3\n1\n1 1 3 2 2\n",
+        "output": "yes\nno\n",
+        "explanation": "The first test case is feasible as the cars move without violating any constraints. The second test case is not feasible because at time $t = 1$, the first car is at $(1, 3)$ and the second car is at $(2, 2)$, which is not possible given the starting positions and the constraints on movement.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin2"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610632
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AUTOCARS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

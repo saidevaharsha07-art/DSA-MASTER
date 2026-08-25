@@ -1,0 +1,127 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EAREA",
+  "contest_category": "6",
+  "problem_name": "Expected Area",
+  "intended_contest_code": null,
+  "body": "You are given a convex polygon $P$ with vertices $P_0, P_1, \\ldots, P_{n-1}$, each having integer coordinates. On each edge $P_{i} P_{(i+1) \\% n}$ of the polygon, choose a point $R_i$ uniformly at random. What is the expected area of the convex hull of these $n$ chosen points $R_0, R_1, \\ldots R_{n-1}$ ?\r\n\r\n###Note\r\n- Consider the area of the convex hull as zero if it contains less than 3 vertices.\r\n- All the points $R_i$ are chosen independently of each other.\r\n- Your answer is considered correct if and only if its absolute or relative error doesn't exceed $10^{-6}$.\r\n\r\n\r\n### Input\r\n- The first line contains $n$, the number of vertices in the convex polygon.\r\n- The next $n$ lines contain the coordinates of the vertices of the polygon in anti-clockwise order. \r\n\r\n### Output\r\nFor each testcase, print the expected area of the convex hull of the $n$ randomly chosen points.\r\n\r\n### Constraints \r\n- $3 \\leq n \\leq 10^5$\r\n- The absolute values of all the coordinates $\\leq 10^7$.\r\n- All the points in the input are distinct.\r\n- The described polygon $P$ is convex and the vertices of the polygon are given in anti-clockwise order. Also, no three vertices of the polygon are collinear.\r\n\r\n### Example Input\r\n```\r\n3\r\n0 0\r\n1 0\r\n0 1\r\n```\r\n\r\n### Example Output\r\n```\r\n0.1250000000\r\n```\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $3 \\leq n \\leq 10^5$\n- The absolute values of all the coordinates $\\leq 10^7$.\n- All the points in the input are distinct.\n- The described polygon $P$ is convex and the vertices of the polygon are given in anti-clockwise order. Also, no three vertices of the polygon are collinear.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a convex polygon $P$ with vertices $P_0, P_1, \\ldots, P_{n-1}$, each having integer coordinates. On each edge $P_{i} P_{(i+1) \\% n}$ of the polygon, choose a point $R_i$ uniformly at random. What is the expected area of the convex hull of these $n$ chosen points $R_0, R_1, \\ldots R_{n-1}$?\n\n**Note:**\n- Consider the area of the convex hull as zero if it contains less than 3 vertices.\n- All the points $R_i$ are chosen independently of each other.\n- Your answer is considered correct if and only if its absolute or relative error doesn't exceed $10^{-6}$.\n",
+    "inputFormat": "- The first line contains $n$, the number of vertices in the convex polygon.\n- The next $n$ lines contain the coordinates of the vertices of the polygon in anti-clockwise order.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each testcase, print the expected area of the convex hull of the $n$ randomly chosen points.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n0 0\n1 0\n0 1\n",
+        "output": "0.1250000000\n",
+        "explanation": "The expected area of the convex hull of the randomly chosen points is calculated to be $0.1250000000$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<p><strong>PROBLEM LINK:</strong></p>\n<p><a href=\"https://www.codechef.com/problems/EAREA\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/jtnydv25\" rel=\"nofollow noopener\">Jatin Yadav</a></p>\n<p><strong>Tester:</strong> <a href=\"https://www.codechef.com/users/tncks0121\" rel=\"nofollow noopener\">tncks0121</a></p>\n<p><strong>DIFFICULTY:</strong></p>\n<p>Easy</p>\n<p><strong>PREREQUISITES:</strong></p>\n<p>Geometry, Linearity of expectation</p>\n<p><strong>PROBLEM:</strong></p>\n<p>Given a convex polygon <span class=\"math\">P</span>. On each edge, chose a random point. Find the expected area of the convex hull of the chosen points.</p>\n<p><strong>QUICK EXPLANATION:</strong></p>\n<p>The answer is the area of the polygon whose vertices are the midpoints of the original polygon <span class=\"math\">P</span></p>\n<p><strong>EXPLANATION:</strong></p>\n<p>Please note that all the subscripts in the following discussion have to be considered modulo <span class=\"math\">n</span>.</p>\n<p>First, notice that the chosen points will be convex. So, we just need to find the expected area of the convex polygon with vertices <span class=\"math\">R_0, R_2, \\ldots R_{n-1}</span> in anticlockwise order.</p>\n<p>We know that the area would be <span class=\"math\"> A = \\dfrac{1}{2} \\displaystyle \\sum R_i \\times  R_{i + 1} </span></p>\n<p>So, <span class=\"math\">E[A] = \\dfrac{1}{2} \\displaystyle \\sum E[ R_i \\times R_{i + 1}]</span></p>\n<p>For each <span class=\"math\">i</span>, <span class=\"math\">R_i = t_i P_{i} + (1 - t_i) P_{i+1}</span> , where <span class=\"math\">t_i</span> is chosen uniformly at random in the range <span class=\"math\">[0, 1]</span>.</p>\n<p>Therefore, <span class=\"math\">E[A] = \\dfrac{1}{2} \\displaystyle \\sum E[ (t_i P_{i} + (1 - t_i) P_{i+1}) \\times (t_{i+1} P_{i + 1} + (1 - t_{i+1}) P_{i+2})]</span></p>\n<p>= <span class=\"math\"> \\dfrac{1}{2} \\displaystyle \\sum ( E[t_i t_{i + 1}] P_i \\times P_{i+ 1} + E[t_i (1 - t_{i + 1})] P_i \\times P_{i +2} + E[(1 - t_i) t_{i + 1}] P_{i + 1} \\times P_{i + 1} + E[(1 - t_i) (1 - t_{i + 1})] P_{i + 1} \\times P_{i + 2} </span></p>\n<p>As <span class=\"math\">t_i</span> and <span class=\"math\">t_{i + 1}</span> are independent, all the expected values involved are <span class=\"math\">\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4} </span>.</p>\n<p>Replacing the <span class=\"math\">E[]</span> values by <span class=\"math\">\\frac{1}{4}</span> and rearranging into a single cross product, we have:</p>\n<p>So, <span class=\"math\">E[A] =  \\displaystyle \\sum \\left (\\left (\\dfrac{P_i + P_{i + 1}}{2} \\right ) \\times \\left (\\dfrac{P_{i+1} + P_{i + 2}}{2} \\right) \\right) </span>.</p>\n<p>This means that we can just assume <span class=\"math\">R_i</span> to be the midpoint of <span class=\"math\">P_i</span> and <span class=\"math\">P_{i + 1}</span> and then find the area, and that would be the answer.</p>\n<p><strong>AUTHOR\u2019S and TESTER\u2019S codes:</strong></p>\n<p>The author\u2019s code can be found <a href=\"https://ideone.com/evvtFf\" rel=\"nofollow noopener\">here</a></p>\n<p>The tester\u2019s code can be found <a href=\"https://ideone.com/HL2plo\" rel=\"nofollow noopener\">here</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 47449,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "jtnydv25",
+  "problem_display_authors": [
+    "jtnydv25"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jtnydv25'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>jtnydv25</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "jtnydv25",
+  "date_added": "12-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Cartesian Coordinate System",
+    "Geometry",
+    "Expected Value",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Probability",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/EAREA",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610808
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EAREA",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

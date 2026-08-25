@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CATFEED",
+  "contest_category": "6",
+  "problem_name": "Chef Feeds Cats",
+  "intended_contest_code": "LTIME76",
+  "body": "\nChef owns $N$ cats (numbered $1$ through $N$) and he wants to feed them. There are $M$ identical cans of cat food; each can must be used to feed exactly one cat and Chef can only feed one cat at a time. Chef wrote down the order in which he wants to feed the cats: a sequence $A_1, A_2, \\ldots, A_M$.\n\nAn order of feeding cats is *fair* if there is no moment where Chef feeds a cat that has already been fed strictly more times than some other cat. Help Chef \u2014 tell him if the order in which he wants to feed the cats is fair.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $M$. \n- The second line contains $M$ space-separated integers $A_1, A_2, \\ldots, A_M$.\n\n### Output\nFor each test case, print a single line containing the string `\"YES\"` if the order is fair or `\"NO\"` if it is unfair.\n\n### Constraints\n- $1 \\le T \\le 100$\n- $2 \\le N \\le 100$\n- $1 \\le M \\le 10^3$\n\n### Subtasks\n**Subtask #1 (100 points):** original constraints\n\n### Example Input\n```\n7\n3 9\n1 2 3 1 2 3 1 2 3\n3 9\n1 2 3 3 2 1 1 2 3\n3 5\n2 3 1 1 2\n3 6\n2 1 1 3 2 3\n2 8\n1 2 1 2 1 2 1 1\n5 3\n5 3 1\n4 5\n1 2 3 1 4\n```\n\n### Example Output\n```\nYES\nYES\nYES\nNO\nNO\nYES\nNO\n```\n### Explanation\n**Example case 4:** Cat $1$ will eat twice before cat $3$ eats even once, so the order is unfair.\n\n**Example case 5:** The order is unfair because cat $1$ will eat its fifth can before cat $2$ eats its fourth can.\n\n**Example case 7:** The order is unfair because cat $1$ will eat twice before cat $4$ eats even once.\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nChef owns $N$ cats (numbered $1$ through $N$) and he wants to feed them. There are $M$ identical cans of cat food; each can must be used to feed exactly one cat and Chef can only feed one cat at a time. Chef wrote down the order in which he wants to feed the cats: a sequence $A_1, A_2, \\ldots, A_M$.\n\nAn order of feeding cats is *fair* if there is no moment where Chef feeds a cat that has already been fed strictly more times than some other cat. Help Chef \u2014 tell him if the order in which he wants to feed the cats is fair.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $M$. \n- The second line contains $M$ space-separated integers $A_1, A_2, \\ldots, A_M$.\n\n### Output\nFor each test case, print a single line containing the string `\"YES\"` if the order is fair or `\"NO\"` if it is unfair.\n\n### Constraints\n- $1 \\le T \\le 100$\n- $2 \\le N \\le 100$\n- $1 \\le M \\le 10^3$\n\n### Subtasks\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "7\n3 9\n1 2 3 1 2 3 1 2 3\n3 9\n1 2 3 3 2 1 1 2 3\n3 5\n2 3 1 1 2\n3 6\n2 1 1 3 2 3\n2 8\n1 2 1 2 1 2 1 1\n5 3\n5 3 1\n4 5\n1 2 3 1 4",
+        "output": "YES\nYES\nYES\nNO\nNO\nYES\nNO",
+        "explanation": "**Example case 4:** Cat $1$ will eat twice before cat $3$ eats even once, so the order is unfair.\n\n**Example case 5:** The order is unfair because cat $1$ will eat its fifth can before cat $2$ eats its fourth can.\n\n**Example case 7:** The order is unfair because cat $1$ will eat twice before cat $4$ eats even once.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 39488,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kingofnumbers",
+  "problem_display_authors": [
+    "kingofnumbers"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kingofnumbers'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>kingofnumbers</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "deadwing97",
+  "date_added": "26-09-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc",
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1343",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610657
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CATFEED",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

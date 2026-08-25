@@ -1,0 +1,371 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "tcs-interview-questions",
+  "name": "TCS Codevita Problems",
+  "title": "TCS Codevita Problems",
+  "level": "Beginner",
+  "description": "Prepare for TCS CodeVita and TCS Interview with most commonly asked coding problems. Solve the previous year Code Vita questions and get ready for for Codevita 2024.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:52",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/tcs-interview-questions/CODEVITA2020/problems/CONSPRIMESUM",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "2020 Problems",
+      "description": "These problems were asked in CodeVita 2020.",
+      "submodules": [
+        {
+          "name": "CodeVita 2020 Problems",
+          "submodule_id": 6538,
+          "contest_code": "CODEVITA2020",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/tcs-interview-questions/CODEVITA2020/problems/CONSPRIMESUM",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "30145",
+              "code": "CONSPRIMESUM",
+              "name": "Consecutive Prime Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "CONSTPROB",
+              "name": "Constellation Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "BEETLE",
+              "name": "Distance Traveled by Beetle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "RCKCNT",
+              "name": "Counting Rock Samples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "CAVEPATH",
+              "name": "Maneuvering a Cave",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "CODEVITA20A",
+              "name": "Constellation ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "CODEVITA20B",
+              "name": "Prime Time Again",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30145",
+              "code": "CODEVITA20C",
+              "name": "Minimum Gifts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "2021 Problems",
+      "description": "These problems were asked in CodeVita 2021.",
+      "submodules": [
+        {
+          "name": "CodeVita 2021 Problems",
+          "submodule_id": 6539,
+          "contest_code": "CODEVITA2021",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/tcs-interview-questions/CODEVITA2021/problems/CODEVITA21A",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "30146",
+              "code": "CODEVITA21A",
+              "name": "The Diet Plan",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30146",
+              "code": "CODEVITA21B",
+              "name": "Minimize the sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30146",
+              "code": "CODEVITA21C",
+              "name": "Railway Station",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "2022 Problems",
+      "description": "These problems were asked in CodeVita 2022.",
+      "submodules": [
+        {
+          "name": "CodeVita 2022 Problems",
+          "submodule_id": 6540,
+          "contest_code": "CODEVITA2022",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/tcs-interview-questions/CODEVITA2022/problems/CODEVITA22A",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "30147",
+              "code": "CODEVITA22A",
+              "name": "Count Pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30147",
+              "code": "CODEVITA22B",
+              "name": "Critical Planets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30147",
+              "code": "CODEVITA22C",
+              "name": "String Pair",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "2023 Problems",
+      "description": "These problems were asked in CodeVita 2023.",
+      "submodules": [
+        {
+          "name": "CodeVita 2023 Problems",
+          "submodule_id": 6553,
+          "contest_code": "CODEVITA2023",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/tcs-interview-questions/CODEVITA2023/problems/CODEVITA23A",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "30197",
+              "code": "CODEVITA23A",
+              "name": "Zero Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30197",
+              "code": "CODEVITA23B",
+              "name": "String From Rank ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30197",
+              "code": "CODEVITA23C",
+              "name": "Good String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30197",
+              "code": "CODEVITA23D",
+              "name": "Square Free Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30197",
+              "code": "CODEVITA23E",
+              "name": "Sorting Boxes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 19,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 9945,
+  "path_review": {
+    "rating": 4.4,
+    "users": 78
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

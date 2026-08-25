@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BENCHP",
+  "contest_category": "6",
+  "problem_name": "Bench Press",
+  "intended_contest_code": "LTIME95",
+  "body": "In the gym, Chef prefers to lift at least $W$ grams during a bench press and if that's impossible, Chef considers his workout to be incomplete and feels bad.\r\n\r\nThe rod weighs $W_r$ grams and there are $N$ other weights lying on the floor that weigh $w_1, w_2, ..., w_N$ grams. To maintain balance and to ensure that there is no unnecessary load due to torque, it's important that the weights added to the left side are symmetric to the weights added to the right side. It is not required to use all of the weights. It is also not required to use any weights at all, if Chef feels satisfied lifting only the rod.\r\n\r\nFor example:\r\n\r\n - $1$ $2$ $2$ $1$ $|$Rod Center$|$ $1$ $1$ $1$ $3$ is a wrong configuration, but\r\n\r\n - $1$ $2$ $3$ $1$ $|$Rod Center$|$ $1$ $3$ $2$ $1$ is a right configuration.\r\n\r\nFind whether Chef will be able to collect the required weights to feel satisfied.\r\n\r\n###Input\r\n\r\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \r\n- Each test case contains two lines of input.\r\n- The first line contains three space-separated integers $N, W, W_r$.\r\n- The second line contains $N$ space-separated integers $w_1, w_2, \\ldots, w_N$.\r\n\r\n###Output\r\nFor each test case, output the answer in a single line: \"YES\" if Chef will be satisfied after his workout and \"NO\" if not (without quotes).\r\n\r\nYou may print each character of each string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 10$\r\n- $1 \\leq N \\leq 10^5$\r\n- $1 \\leq W \\leq 2\\cdot 10^5$\r\n- $1 \\leq w_i \\leq 10^5$\r\n- $1 \\leq W_r \\leq 2\\cdot 10^4$\r\n\r\n###Subtasks\r\n**Subtask #1 (30 points):** $w_i = 1$ for all valid $i$ \r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n###Sample Input\r\n```\r\n3\r\n2 5 10 \r\n2 2\r\n7 100 50\r\n100 10 10 10 10 10 90 \r\n6 100 40 \r\n10 10 10 10 10 10\r\n```\r\n\r\n###Sample Output\r\n```\r\nYES\r\nNO\r\nYES\r\n```\r\n\t\r\n###Explanation\r\n**Test case 1:** Since the weight of the rod is at least the required weight to be lifted, Chef will feel satisfied after the workout.\r\n\r\n**Test case 2:** The configuration having maximum weight is:\r\n\r\n$10$ $10$ $|$Rod Center$|$ $10$ $10$\r\n\r\nSo the maximum total weight Chef can lift is $50 + 4 \\cdot 10 = 90$ which is less than the required amount to get satisfied.\r\n\r\n**Test case 3:** The configuration having maximum weight is:\r\n\r\n$10$ $10$ $10$ $|$Rod Center$|$ $10$ $10$ $10$\r\n\r\nSo the maximum total weight Chef can lift is $40 + 6\\cdot 10 = 100$ which is equal to the required amount to get satisfied.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In the gym, Chef prefers to lift at least $W$ grams during a bench press and if that's impossible, Chef considers his workout to be incomplete and feels bad.\n\nThe rod weighs $W_r$ grams and there are $N$ other weights lying on the floor that weigh $w_1, w_2, ..., w_N$ grams. To maintain balance and to ensure that there is no unnecessary load due to torque, it's important that the weights added to the left side are symmetric to the weights added to the right side. It is not required to use all of the weights. It is also not required to use any weights at all, if Chef feels satisfied lifting only the rod.\n\nFor example:\n\n - $1$ $2$ $2$ $1$ $|$Rod Center$|$ $1$ $1$ $1$ $3$ is a wrong configuration, but\n\n - $1$ $2$ $3$ $1$ $|$Rod Center$|$ $1$ $3$ $2$ $1$ is a right configuration.\n\nFind whether Chef will be able to collect the required weights to feel satisfied.\n\n### Input\n\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \n- Each test case contains two lines of input.\n- The first line contains three space-separated integers $N, W, W_r$.\n- The second line contains $N$ space-separated integers $w_1, w_2, \\ldots, w_N$.\n\n### Output\nFor each test case, output the answer in a single line: \"YES\" if Chef will be satisfied after his workout and \"NO\" if not (without quotes).\n\nYou may print each character of each string in uppercase or lowercase (for example, the strings \"yEs\", \"yes\", \"Yes\" and \"YES\" will all be treated as identical).\n\n### Constraints \n- $1 \\leq T \\leq 10$\n- $1 \\leq N \\leq 10^5$\n- $1 \\leq W \\leq 2\\cdot 10^5$\n- $1 \\leq w_i \\leq 10^5$\n- $1 \\leq W_r \\leq 2\\cdot 10^4$\n\n### Subtasks\n**Subtask #1 (30 points):** $w_i = 1$ for all valid $i$ \n\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n2 5 10 \r\n2 2\r\n7 100 50\r\n100 10 10 10 10 10 90 \r\n6 100 40 \r\n10 10 10 10 10 10",
+        "output": "YES\r\nNO\r\nYES",
+        "explanation": "**Test case 1:** Since the weight of the rod is at least the required weight to be lifted, Chef will feel satisfied after the workout.\r\n\r\n**Test case 2:** The configuration having maximum weight is:\r\n\r\n$10$ $10$ $|$Rod Center$|$ $10$ $10$\r\n\r\nSo the maximum total weight Chef can lift is $50 + 4 \\cdot 10 = 90$ which is less than the required amount to get satisfied.\r\n\r\n**Test case 3:** The configuration having maximum weight is:\r\n\r\n$10$ $10$ $10$ $|$Rod Center$|$ $10$ $10$ $10$\r\n\r\nSo the maximum total weight Chef can lift is $40 + 6\\cdot 10 = 100$ which is equal to the required amount to get satisfied.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 88774,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "2-04-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "Greedy",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1611",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610637
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BENCHP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 16,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

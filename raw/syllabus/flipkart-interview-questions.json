@@ -1,0 +1,253 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "flipkart-interview-questions",
+  "name": "Flipkart Coding Interview Questions",
+  "title": "Flipkart Coding Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Flipkart online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/flipkart-interview-questions/FLIPKARTPREP/problems/KNGATK",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Flipkart Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Practice Problems",
+          "submodule_id": 6190,
+          "contest_code": "FLIPKARTPREP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 15,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/flipkart-interview-questions/FLIPKARTPREP/problems/KNGATK",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 15,
+          "problems_with_status": [
+            {
+              "contest_id": "27879",
+              "code": "KNGATK",
+              "name": "Attack on Kingdom",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "TOYDESIRE",
+              "name": "Alice and Bob",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "CRITLIST",
+              "name": "Critical points in a Linked List",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP02",
+              "name": "Array - Matrix operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP05",
+              "name": "Array - Addition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP23",
+              "name": "Sliding Window Maximum",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP36",
+              "name": "Graphs - Word Ladder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP50",
+              "name": "Graphs - Clone a graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP57",
+              "name": "Linked List - Add Two Numbers As Lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP55",
+              "name": "Remove Duplicates from Sorted List",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PTRLP",
+              "name": "Petrol ki Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP66",
+              "name": "Trees - Height of a Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27879",
+              "code": "PREP24",
+              "name": "Backtracking - Find Unique Permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 15
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 15,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2523,
+  "path_review": {
+    "rating": 3.8,
+    "users": 10
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

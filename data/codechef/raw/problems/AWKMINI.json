@@ -1,0 +1,124 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AWKMINI",
+  "contest_category": "6",
+  "problem_name": "Awkwardness Minimization",
+  "intended_contest_code": null,
+  "body": "You are teaching a class of $N$ students. Today, during the morning prayer, all the students are standing in a line. You are given a string $s$ with length $N$; for each valid $i$, the $i$-th character of this string is 'b' if the $i$-th student in the line is a boy or 'g' if this student is a girl.\r\n\r\nThe *awkwardness* of this configuration of students is defined as the sum of pairwise distances between each boy and girl. The distance between the $i$-th and $j$-th student in the line is $|i - j|$. Formally, the awkwardness is $$\\sum\\limits_{i=1}^N \\, \\sum\\limits_{j=i+1\\\\ s_j \\neq s_i}^N (j - i)\\,.$$\r\n\r\nAs the teacher, it is your responsibility to reorder the students in such a way that the awkwardness of the resulting configuration is the smallest possible. You may reorder the students in the line in any way you want. Find the minimum awkwardness that can be achieved.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single string $s$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer - the minimum possible awkwardness.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $1 \\le |s| \\le 10^5$\r\n- each character of $s$ is either 'b' or 'g'\r\n- the sum of $|s|$ over all test cases does not exceed $4 \\cdot 10^6$\r\n\r\n### Example Input\r\n```\r\n3\r\ngb\r\nbgg\r\nbbgg\r\n```\r\n\r\n### Example Output\r\n```\r\n1\r\n2\r\n6\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The total awkwardness is $|1 - 0| = 1$, no matter how you arrange the students.\r\n\r\n**Example case 2:** Initially, the awkwardness is $|1 - 0| + |2 - 0| = 1 + 2 = 3$. However, you can move the boy between the two girls, i.e. choose the configuration \"gbg\". Here, the awkwardness is $|1 - 0| + |2 - 1| = 1 + 1 = 2$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are teaching a class of $N$ students. Today, during the morning prayer, all the students are standing in a line. You are given a string $s$ with length $N$; for each valid $i$, the $i$-th character of this string is 'b' if the $i$-th student in the line is a boy or 'g' if this student is a girl.\n\nThe *awkwardness* of this configuration of students is defined as the sum of pairwise distances between each boy and girl. The distance between the $i$-th and $j$-th student in the line is $|i - j|$. Formally, the awkwardness is $$\\sum\\limits_{i=1}^N \\, \\sum\\limits_{j=i+1\\\\ s_j \\neq s_i}^N (j - i)\\,.$$\n\nAs the teacher, it is your responsibility to reorder the students in such a way that the awkwardness of the resulting configuration is the smallest possible. You may reorder the students in the line in any way you want. Find the minimum awkwardness that can be achieved.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains a single string $s$.\n\n### Output\nFor each test case, print a single line containing one integer - the minimum possible awkwardness.\n\n### Constraints\n- $1 \\le T \\le 10^5$\n- $1 \\le |s| \\le 10^5$\n- each character of $s$ is either 'b' or 'g'\n- the sum of $|s|$ over all test cases does not exceed $4 \\cdot 10^6$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\ngb\nbgg\nbbgg",
+        "output": "1\n2\n6",
+        "explanation": "**Example case 1:** The total awkwardness is $|1 - 0| = 1$, no matter how you arrange the students.\n\n**Example case 2:** Initially, the awkwardness is $|1 - 0| + |2 - 0| = 1 + 2 = 3$. However, you can move the boy between the two girls, i.e. choose the configuration \"gbg\". Here, the awkwardness is $|1 - 0| + |2 - 1| = 1 + 1 = 2$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/28VBtSOuibA",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "dpraveen_adm",
+  "problem_display_authors": [
+    "dpraveen_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/dpraveen_adm'>dpraveen_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "12-10-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Greedy",
+    "Constructive",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AWKMINI",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610635
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AWKMINI",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LIFELTD",
+  "contest_category": "6",
+  "problem_name": "Life Limited",
+  "intended_contest_code": null,
+  "body": "Recently the company Life Ltd created a new logo for themselves. You are asked to test the design of the logo. \n\nThe logo is a 3 * 3 square grid with 9 cells. Each cell contains some lower case english letter. This logo will be considered good if there exist three cells in the shape of an L that contain the letter 'l' (lower case 'L') in each of them. That is, there should be a cell with 'l', its cell directly beneath it should also have 'l' and the cell to the right of the second cell should also have 'l'.\n\nYour task is to tell whether the logo is good or not.\n\n\n### Input\n- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- Each of the next three lines contains a description of the logo, i-th of the line contains three characters which denote the i-th row of the logo. \n\n### Output\nFor each test case, output yes or no according to the answer to the problem.\n\n###Constraints\n- $1 \\le T \\le 100$\n\n### Example Input\n```\n3\nlaz\nlla\naaa\nala\nlla\naaa\nlll\nlll\nlll\n```\n\n### Example Output\n```\nyes\nno\nyes\n```\n\n###Explanation:\n**Testcase1**: The L shaped cells with 'l' in each of them is shown in bold here:\n\n**l**aa\n\n**ll**a\n\naaa\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 100$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Recently the company Life Ltd created a new logo for themselves. You are asked to test the design of the logo.\n\nThe logo is a $3 \\times 3$ square grid with 9 cells. Each cell contains some lowercase English letter. This logo will be considered good if there exist three cells in the shape of an L that contain the letter 'l' (lowercase 'L') in each of them. That is, there should be a cell with 'l', its cell directly beneath it should also have 'l', and the cell to the right of the second cell should also have 'l'.\n\nYour task is to tell whether the logo is good or not.\n",
+    "inputFormat": "- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- Each of the next three lines contains a description of the logo, i-th of the line contains three characters which denote the i-th row of the logo.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output `yes` or `no` according to the answer to the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\nlaz\nlla\naaa\nala\nlla\naaa\nlll\nlll\nlll\n",
+        "output": "yes\nno\nyes\n",
+        "explanation": "**Testcase 1**: The L-shaped cells with 'l' in each of them is shown in bold here:\n\n**l**aa\n\n**ll**a\n\naaa\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/AToW4Uw3e6U",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements",
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/LIFELTD",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610981
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LIFELTD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,131 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PLAYFIT",
+  "contest_category": "6",
+  "problem_name": "Fit to Play",
+  "intended_contest_code": "APRIL12",
+  "body": "<p><i>Who's interested in football?</i></p>\r\n<p>Rayne Wooney has been one of the top players for his football club for the last few years. But unfortunately, he got injured during a game a few months back and has been out of play ever since.</p>\r\n<p>He's got proper treatment and is eager to go out and play for his team again. Before doing that, he has to prove to his fitness to the coach and manager of the team. Rayne has been playing practice matches for the past few days. He's played N practice matches in all.</p>\r\n<p>He wants to convince the coach and the manager that he's improved over time and that his injury no longer affects his game. To increase his chances of getting back into the team, he's decided to show them stats of any 2 of his practice games. The coach and manager will look into the goals scored in both the games and see how much he's improved. If the number of goals scored in the 2nd game(the game which took place later) is greater than that in 1st, then he has a chance of getting in. Tell Rayne what is the maximum improvement in terms of goal difference that he can show to maximize his chances of getting into the team. If he hasn't improved over time, he's not fit to play. Scoring equal number of goals in 2 matches will not be considered an improvement. Also, he will be declared unfit if he doesn't have enough matches to show an improvement.</p>\r\n<p><h3>Input:</h3>\r\nThe first line of the input contains a single integer T, the number of test cases.\r\nEach test case begins with a single integer N, the number of practice matches Rayne has played.<br/>\r\nThe next line contains N integers. The ith integer, gi, on this line represents the number of goals Rayne scored in his ith practice match. The matches are given in chronological order i.e. j > i means match number j took place after match number i.</p>\r\n\r\n<p><h3>Output:</h3>\r\nFor each test case output a single line containing the maximum goal difference that Rayne can show to his coach and manager. If he's not fit yet, print \"UNFIT\".</p>\r\n\r\n<p><h3>Constraints:</h3>\r\n1<=T<=10<br/>\r\n1<=N<=100000<br/>\r\n0<=gi<=1000000 (Well, Rayne's a legend! You can expect him to score so many goals!)</p>\r\n\r\n<h3>Example:</h3>\r\n\r\n<b>Input:</b><br/>\r\n3<br/>\r\n6<br/>\r\n3 7 1 4 2 4<br/>\r\n5<br/>\r\n5 4 3 2 1<br/>\r\n5<br/>\r\n4 3 2 2 3<br/>\r\n<br/>\r\n<b>Output:</b><br/>\r\n4<br/>\r\nUNFIT<br/>\r\n1<br/>\r\n<br/>\r\n<p><b>Explanation:</b><br/>\r\nIn the first test case, Rayne can choose the first and second game. Thus he gets a difference of 7-3=4 goals. Any other pair would give him a lower improvement.\r\nIn the second test case, Rayne has not been improving in any match. Thus he's declared UNFIT.</p>\r\n<p><b><i>Note:</i></b> Large input data. Use faster I/O methods. Prefer scanf,printf over cin/cout.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10$\n- $1 \\leq N \\leq 100000$\n- $0 \\leq g_i \\leq 1000000$ (Well, Rayne's a legend! You can expect him to score so many goals!)",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Rayne Wooney has been one of the top players for his football club for the last few years. But unfortunately, he got injured during a game a few months back and has been out of play ever since.\n\nHe's got proper treatment and is eager to go out and play for his team again. Before doing that, he has to prove to his fitness to the coach and manager of the team. Rayne has been playing practice matches for the past few days. He's played N practice matches in all.\n\nHe wants to convince the coach and the manager that he's improved over time and that his injury no longer affects his game. To increase his chances of getting back into the team, he's decided to show them stats of any 2 of his practice games. The coach and manager will look into the goals scored in both the games and see how much he's improved. If the number of goals scored in the 2nd game(the game which took place later) is greater than that in 1st, then he has a chance of getting in. Tell Rayne what is the maximum improvement in terms of goal difference that he can show to maximize his chances of getting into the team. If he hasn't improved over time, he's not fit to play. Scoring equal number of goals in 2 matches will not be considered an improvement. Also, he will be declared unfit if he doesn't have enough matches to show an improvement.\n\n**Note:** Large input data. Use faster I/O methods. Prefer scanf,printf over cin/cout.",
+    "inputFormat": "- The first line of the input contains a single integer $T$, the number of test cases.\n- Each test case begins with a single integer $N$, the number of practice matches Rayne has played.\n- The next line contains $N$ integers. The $i^{th}$ integer, $g_i$, on this line represents the number of goals Rayne scored in his $i^{th}$ practice match. The matches are given in chronological order i.e. $j > i$ means match number $j$ took place after match number $i$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case output a single line containing the maximum goal difference that Rayne can show to his coach and manager. If he's not fit yet, print \"UNFIT\".",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n6\n3 7 1 4 2 4\n5\n5 4 3 2 1\n5\n4 3 2 2 3",
+        "output": "4\nUNFIT\n1",
+        "explanation": "In the first test case, Rayne can choose the first and second game. Thus he gets a difference of 7-3=4 goals. Any other pair would give him a lower improvement.\nIn the second test case, Rayne has not been improving in any match. Thus he's declared UNFIT.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 864,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1.64548",
+  "source_sizelimit": "50000",
+  "problem_author": "vamsi_adm",
+  "problem_display_authors": [
+    "vamsi_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vamsi_adm'>vamsi_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "laycurse"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/laycurse'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>laycurse</span></a></div>",
+  "problem_editorialist": "admin",
+  "date_added": "20-01-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "1D Arrays",
+    "Dynamic Programming",
+    "ad-hoc",
+    "Prefix Sum"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Constructive",
+    "Simple Algos"
+  ],
+  "difficulty_rating": "1419",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611165
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PLAYFIT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 62,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

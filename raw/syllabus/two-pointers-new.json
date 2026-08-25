@@ -1,0 +1,462 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "two-pointers-new",
+  "name": "Two Pointers and Sliding Window Technique",
+  "title": "Two Pointers and Sliding Window Technique",
+  "level": "Beginner",
+  "description": "The two pointer and sliding window techniques are widely used algorithmic approach in computer science and programming. It is used to solve problems that can be efficiently solved by maintaining two positions or indices in a sequence or array.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:45",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/two-pointers-new/TWOPOINT01/problems/PREP69",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Two-Pointer",
+      "description": "Practice educational problems on Two pointers",
+      "submodules": [
+        {
+          "name": "Two-Pointers",
+          "submodule_id": 25805,
+          "contest_code": "TWOPOINT01",
+          "start_date": "2026-05-05 14:06:09",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/two-pointers-new/TWOPOINT01/problems/PREP69",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "54873",
+              "code": "PREP69",
+              "name": "Remove Duplicates",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54873",
+              "code": "NAME2",
+              "name": "Your Name is Mine",
+              "difficulty_rating": "1285",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54873",
+              "code": "DSAPROB16",
+              "name": "Sort Array by Parity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54873",
+              "code": "COVID19",
+              "name": "Coronavirus Spread",
+              "difficulty_rating": "1219",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54873",
+              "code": "PREP68",
+              "name": "Difference Pairs",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54873",
+              "code": "PREP17",
+              "name": "Maximum Common Elements",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Two-Pointers additional practice",
+          "submodule_id": 25806,
+          "contest_code": "TWOPOINT02",
+          "start_date": "2026-05-05 14:06:09",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/two-pointers-new/TWOPOINT02/problems/RAINBOWA",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "54874",
+              "code": "RAINBOWA",
+              "name": "Chef and Rainbow Array",
+              "difficulty_rating": "1467",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "DSCPPAS276",
+              "name": "Check Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "DSAPROB20",
+              "name": "Largest Common Element in Two Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "DSCPPAS278C",
+              "name": "Check Square",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "PREP18",
+              "name": "Find Array Min",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "DSAPROB15",
+              "name": "Count Pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "DSCPPAS277",
+              "name": "Flipping subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "COLGLF5",
+              "name": "College Life 5",
+              "difficulty_rating": "1651",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54874",
+              "code": "VOWANX",
+              "name": "Vowel Anxiety",
+              "difficulty_rating": "1823",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 15
+    },
+    {
+      "assessment": null,
+      "name": "Sliding Window",
+      "description": "Sliding Window technique is a method used to efficiently solve problems that involve defining a window or range in the arrays or strings.",
+      "submodules": [
+        {
+          "name": "Sliding Window",
+          "submodule_id": 25807,
+          "contest_code": "TWOPOINT03",
+          "start_date": "2026-05-05 14:06:09",
+          "total_problems": 13,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/two-pointers-new/TWOPOINT03/problems/SLDW0101",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "54875",
+              "code": "SLDW0101",
+              "name": "Sliding Window",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "trio",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "PROC18A",
+              "name": "The Great Run",
+              "difficulty_rating": "1097",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "SLDW0102",
+              "name": "Maximum Sum of K Elements",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "SLDW0105",
+              "name": "Finding the Subarray with Minimum Sum of Size K",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "DSCPPAS278B",
+              "name": "K Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "SLDW0103",
+              "name": "Longest Substring Without Repeating Characters",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "SLDW0104",
+              "name": "Special Substring",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "SPSBTR",
+              "name": "Special Substring",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "FRUITBASKET",
+              "name": "Put fruits into basket",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "DSCPPAS275",
+              "name": "Subarray with 0, 1, 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "MAXSEGM",
+              "name": "Maximum Unique Segment",
+              "difficulty_rating": "1791",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "MINSIM",
+              "name": "Minimum Similar Substring",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "ARRSWAP",
+              "name": "Asymmetric Swaps",
+              "difficulty_rating": "1230",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54875",
+              "code": "KSUBARRAYS",
+              "name": "Subarray with k distinct number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 13
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 28,
+  "total_non_pro_problems": 6,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    }
+  ],
+  "learners_count": 18814,
+  "path_review": {
+    "rating": 4.6,
+    "users": 240
+  },
+  "faqs": [
+    {
+      "question": "What is the two pointer approach in programming?",
+      "answer": "The two pointer approach is an efficient algorithmic technique used in computer science and programming. It involves using two pointers or indices to solve problems by maintaining multiple positions in a sequence or array, often reducing time complexity and optimizing solutions for various coding challenges.",
+      "faq_order": "1"
+    },
+    {
+      "question": "How does the two pointer technique improve algorithm efficiency?",
+      "answer": "The two pointer technique improves algorithm efficiency by reducing time complexity, often from O(n^2) to O(n). By using two pointers that move through the data structure simultaneously, it eliminates the need for nested loops, making solutions more optimized and faster, especially for problems involving arrays, linked lists, or strings.",
+      "faq_order": "2"
+    },
+    {
+      "question": "What types of problems can be solved using the two pointer method?",
+      "answer": "The two pointer method is versatile and can solve various problems, including:\n<ol style=\"margin-left: 24px\">\n<li>Removing duplicates from sorted arrays</li>\n<li>Finding pairs with a specific sum or difference</li>\n<li>Detecting palindromes</li>\n<li>Merging sorted arrays</li>\n<li>Reversing arrays or strings</li>\n<li>Sliding window problems</li>\n</ol>",
+      "faq_order": "3"
+    },
+    {
+      "question": "Are there any specific data structures that work well with the two pointer technique?",
+      "answer": "The two pointer technique works particularly well with linear data structures such as arrays, linked lists, and strings. It's also effective for problems involving sorted data, as the pointers can move in opposite directions to efficiently search for solutions.",
+      "faq_order": "4"
+    },
+    {
+      "question": "How does the two pointer approach relate to the sliding window technique?",
+      "answer": "The two pointer approach and sliding window technique are closely related. Sliding window is a variation of the two pointer method where one pointer represents the start of the window and the other represents the end. This technique is particularly useful for solving substring problems, finding subarrays with specific properties, or calculating running averages.",
+      "faq_order": "5"
+    }
+  ],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

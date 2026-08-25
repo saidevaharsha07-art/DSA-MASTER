@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DIGITOP",
+  "contest_category": "6",
+  "problem_name": "Digit Operation",
+  "intended_contest_code": "START84",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1000$\n- $2 \\leq N \\leq 10^5$\n- $1 \\leq K \\leq 10^{18}$\n- $1 \\leq |A_i|, |B_i| \\leq 19$\n- $A_i$ and $B_i$ consist of characters from $0$ to $9$ (both inclusive).\n- The sum of $N$ over all test cases won't exceed $10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given arrays $A$ and $B$, each consisting of $N$ **strings**, and a positive integer $K$.  \nFor all $1\\le i \\le N$, both $A_i$ and $B_i$ consist of characters from $0$ to $9$ (both inclusive).\n\nYou can perform the following types of operations on array $A$:\n- Type $1$: Choose two indices $i$ and $j$ $(i\\neq j)$ and swap any character of $A_i$ with any character of $A_j$. The cost of this operation is $0$.\n- Type $2$: Choose an index $i$ and replace **one** character of $A_i$ with any character from $0$ to $9$ (both inclusive). The cost of this operation is $1$.\n\nFor example, let $A = [24, 30, 51]$. A valid sequence of operations can be:\n- Swap $4$ in $A_1 = 24$ with $0$ in $A_2 = 30$ to obtain $[20, 34, 51]$. \n- Swap $0$ in $A_1 = 20$ with $5$ in $A_3 = 51$ to obtain $[25, 34, 01]$.\n- Replace $0$ in $A_3 = 01$ with $1$ to obtain $[25, 34, 11]$.  \nThe cost of the above sequence of operations is $1$.\n\nFind whether we can convert the array $A$ to array $B$ using **any** (possibly zero) number of operations with cost $\\le K$.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of multiple lines of input.\n    - The first line of each test case contains two space-separated integers $N$ and $K$, the size of array and the maximum cost of operations.\n    - The second line of each test case contains $N$ space-separated strings $A_1,A_2,\\ldots,A_N$.\n    - The third line of each test case contains $N$ space-separated strings $B_1,B_2,\\ldots,B_N$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print `YES` if it is possible to convert array $A$ to $B$ using **any** (possibly zero) number of operations with cost $\\le K$. Else, print `NO`.\n\nYou may print each character of the string in uppercase or lowercase (for example, the strings `yEs`, `yes`, `Yes`, and `YES` will all be treated as identical).",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n2 2\n1 9\n9 1\n2 2\n1 11\n11 1\n4 1\n22 13 12 89\n28 98 21 31",
+        "output": "YES\nNO\nYES\n",
+        "explanation": "**Test case $1$**: We can use one operation of type $1$ to swap $1$ in $A_1$ with $9$ in $A_2$. Thus, $A$ becomes $[9,1]$, which is equal to $B$. We are able to do this with $0$ cost, which is $\\le 2$.\n\n**Test case $2$:** It is impossible to convert $A$ to $B$ with at most $2$ cost.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "642db32acc21a55eb4749818",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 105738,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "grayhathacker",
+  "problem_display_authors": [
+    "grayhathacker"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/grayhathacker'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>grayhathacker</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "3-04-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1798",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610784
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DIGITOP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 22,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

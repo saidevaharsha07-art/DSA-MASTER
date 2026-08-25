@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "HRDSEQ",
+  "contest_category": "6",
+  "problem_name": "Hard Sequence",
+  "intended_contest_code": "NOV19",
+  "body": "\r\nChef decided to write an infinite sequence. Initially, he wrote $0$, and then he started repeating the following process:\r\n- Look at the last element written so far (the $l$-th element if the sequence has length $l$ so far); let's denote it by $x$.\r\n- If $x$ does not occur anywhere earlier in the sequence, the next element in the sequence is $0$.\r\n- Otherwise, look at the previous occurrence of $x$ in the sequence, i.e. the $k$-th element, where $k \\lt l$, this element is equal to $x$ and all elements between the $k+1$-th and $l-1$-th are different from $x$. The next element is $l-k$, i.e. the distance between the last two occurrences of $x$.\r\n\r\nThe resulting sequence is $(0, 0, 1, 0, 2, 0, 2, 2, 1, \\ldots)$: the second element is $0$ since $0$ occurs only once in the sequence $(0)$, the third element is $1$ since the distance between the two occurrences of $0$ in the sequence $(0, 0)$ is $1$, the fourth element is $0$ since $1$ occurs only once in the sequence $(0, 0, 1)$, and so on.\r\n\r\nChef has given you a task to perform. Consider the $N$-th element of the sequence (denoted by $x$) and the first $N$ elements of the sequence. Find the number of occurrences of $x$ among these $N$ elements.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $N$. \r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of occurrences of the $N$-th element.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 128$\r\n- $1 \\le N \\le 128$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\le N \\le 16$\r\n\r\n**Subtask #2 (70 points):** $1 \\le N \\le 128$\r\n\r\n### Example Input\r\n```\r\n1\r\n2\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The $2$-nd element is $0$. It occurs twice among the first two elements, since the first two elements are both $0$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef decided to write an infinite sequence. Initially, he wrote $0$, and then he started repeating the following process:\r\n- Look at the last element written so far (the $l$-th element if the sequence has length $l$ so far); let's denote it by $x$.\r\n- If $x$ does not occur anywhere earlier in the sequence, the next element in the sequence is $0$.\r\n- Otherwise, look at the previous occurrence of $x$ in the sequence, i.e. the $k$-th element, where $k \\lt l$, this element is equal to $x$ and all elements between the $k+1$-th and $l-1$-th are different from $x$. The next element is $l-k$, i.e. the distance between the last two occurrences of $x$.\r\n\r\nThe resulting sequence is $(0, 0, 1, 0, 2, 0, 2, 2, 1, \\ldots)$: the second element is $0$ since $0$ occurs only once in the sequence $(0)$, the third element is $1$ since the distance between the two occurrences of $0$ in the sequence $(0, 0)$ is $1$, the fourth element is $0$ since $1$ occurs only once in the sequence $(0, 0, 1)$, and so on.\r\n\r\nChef has given you a task to perform. Consider the $N$-th element of the sequence (denoted by $x$) and the first $N$ elements of the sequence. Find the number of occurrences of $x$ among these $N$ elements.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $N$. \r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of occurrences of the $N$-th element.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 128$\r\n- $1 \\le N \\le 128$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):** $1 \\le N \\le 16$\r\n\r\n**Subtask #2 (70 points):** $1 \\le N \\le 128$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\r\n2",
+        "output": "2",
+        "explanation": "**Example case 1:** The $2$-nd element is $0$. It occurs twice among the first two elements, since the first two elements are both $0$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 43707,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mynk322",
+  "problem_display_authors": [
+    "mynk322"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mynk322'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>mynk322</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "watcher",
+  "date_added": "21-06-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1278",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610870
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=HRDSEQ",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

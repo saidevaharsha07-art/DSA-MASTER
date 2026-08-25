@@ -1,0 +1,122 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHOPRT",
+  "contest_category": "6",
+  "problem_name": "Chef And Operators",
+  "intended_contest_code": null,
+  "body": "<p>Chef has just started Programming, he is in first year of Engineering. Chef is reading about Relational Operators. <br/>\r\nRelational Operators are operators which check relatioship between two values. Given two numerical values <b>A</b> and <b>B</b> you need to help chef in finding the relationship between them that is, <br/>\r\n<li>First one is greater than second or,</li>\r\n<li>First one is less than second or,</li>\r\n<li>First and second one are equal.</li></p>\r\n<p>\u00a0</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>First line contains an integer <b>T</b>, which denotes the number of testcases. Each of the <b>T</b> lines contain two integers <b>A</b> and <b>B</b>. </p>\r\n\r\n<h3>Output</h3>\r\n<p>For each line of input produce one line of output. This line contains any one of the relational operators<br/>\r\n'<' , '>' , '='.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n<li>1 \u2264 <b>T</b> \u2264 10000</li>\r\n<li>1 \u2264 <b>A</b>, <b>B</b> \u2264 1000000001</li>\r\n</p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3\r\n10 20\r\n20 10\r\n10 10\r\n\r\n<b>Output:</b>\r\n<\r\n>\r\n=\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> In this example 1 as 10 is lesser than 20.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef has just started Programming, he is in first year of Engineering. Chef is reading about Relational Operators. <br />\nRelational Operators are operators which check relationship between two values. Given two numerical values <b>A</b> and <b>B</b> you need to help chef in finding the relationship between them that is, <br /></p>First one is greater than second or,\nFirst one is less than second or,\nFirst and second one are equal.\n<p>\u00a0</p>\n\n\n<h3>Input</h3>\n<p>First line contains an integer <b>T</b>, which denotes the number of testcases. Each of the <b>T</b> lines contain two integers <b>A</b> and <b>B</b>. </p>\n\n<h3>Output</h3>\n<p>For each line of input produce one line of output. This line contains any one of the relational operators<br />\n'<' , '>' , '='.</p>\n\n\n<h3>Constraints</h3>\n<p>\n</p>1 \u2264 <b>T</b> \u2264 10000\n1 \u2264 <b>A</b>, <b>B</b> \u2264 1000000001\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n10 20\n20 10\n10 10\n",
+        "output": "<\n>\n=",
+        "explanation": "In this example 1 as 10 is lesser than 20",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121169,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "vicky002",
+  "problem_display_authors": [
+    "vicky002"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vicky002'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #1E7D22;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>2&#9733;</span><span class='m-username--link'>vicky002</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "6-09-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "770",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610682
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHOPRT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 143,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

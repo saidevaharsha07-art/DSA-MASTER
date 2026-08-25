@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ONP",
+  "contest_category": "6",
+  "problem_name": "Transform the Expression",
+  "intended_contest_code": "",
+  "body": "<p align=\"justify\"></p>\r\nReverse Polish Notation (RPN) is a mathematical notation where every operator follows all of its operands. For instance, to add three and four, one would write \"3 4 +\" rather than \"3 + 4\". If there are multiple operations, the operator is given immediately after its second operand; so the expression written \"3 \u2212 4 + 5\" would be written \"3 4 \u2212 5 +\" first subtract 4 from 3, then add 5 to that.</p>\r\n\r\n<p>\r\nTransform the algebraic expression with brackets into RPN form. \r\n</p>\r\n<p>\r\nYou can assume that for the test cases below only single letters will be used, brackets [] will not be used and each expression has only one RPN form (no expressions like a*b*c)\r\n\r\n</p>\r\n<h3>Input</h3>\r\n\r\n<p align=\"left\">\r\nThe first line contains t, the number of test cases (less then 100).\r\n</p>\r\n<p>\r\nFollowed by t lines, containing an expression to be translated to RPN form, where the length of the expression is less then 400.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<PRE>\r\nThe <em>expression</em>s in RPN form, one per line.\r\n</pre>\r\n<h3>Example</h3>\r\n\r\n<PRE>\r\nInput:\r\n3\r\n(a+(b*c))\r\n((a+b)*(z+x))\r\n((a+t)*((b+(a+c))^(c+d)))\r\n\r\nOutput:\r\nabc*+\r\nab+zx+*\r\nat+bac++cd+^*\r\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p align=\"justify\"></p>\nReverse Polish Notation (RPN) is a mathematical notation where every operator follows all of its operands. For instance, to add three and four, one would write \"3 4 +\" rather than \"3 + 4\". If there are multiple operations, the operator is given immediately after its second operand; so the expression written \"3 \u2212 4 + 5\" would be written \"3 4 \u2212 5 +\" first subtract 4 from 3, then add 5 to that.\n\n<p>\nTransform the algebraic expression with brackets into RPN form. \n</p>\n<p>\nYou can assume that for the test cases below only single letters will be used, brackets [] will not be used and each expression has only one RPN form (no expressions like a*b*c)\n</p>\n",
+    "inputFormat": "- The first line contains t, the number of test cases (less then 100).\n- Followed by t lines, containing an expression to be translated to RPN form, where the length of the expression is less then 400.",
+    "inputFormatState": true,
+    "outputFormat": "The <em>expression</em>s in RPN form, one per line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n(a+(b*c))\n((a+b)*(z+x))\n((a+t)*((b+(a+c))^(c+d)))\n",
+        "output": "abc*+\nab+zx+*\nat+bac++cd+^*\n",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 120712,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "2.495",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "u_admin_codechef_pw"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/u_admin_codechef_pw'>u_admin_codechef_pw</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "1-12-2008",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Stacks"
+  ],
+  "computed_tags": [
+    "Data Structures"
+  ],
+  "difficulty_rating": "1300",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611127
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ONP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 18,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 251,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

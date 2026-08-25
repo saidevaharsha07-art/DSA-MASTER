@@ -1,0 +1,1944 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "java-interview-questions",
+  "name": "Java Interview Questions for Freshers",
+  "title": "Java Interview Questions for Freshers",
+  "level": "Beginner",
+  "description": "Practice these 146 Java MCQs with detailed explanations and prepare yourself for fresher interviews in Java.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:47",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/java-interview-questions/JAVAPREP01/problems/JAVAMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Java basics (data types, variables, operators)",
+      "description": "Fundamental building blocks of Java programming. Covers how data is stored, manipulated, and the basic operations that can be performed.",
+      "submodules": [
+        {
+          "name": "Java Basics",
+          "submodule_id": 6092,
+          "contest_code": "JAVAPREP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP01/problems/JAVAMCQ01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ01",
+              "name": "Data Type Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ02",
+              "name": "Variable Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ03",
+              "name": "Operator Precedence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ04",
+              "name": "Type Casting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ05",
+              "name": "Boolean Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ06",
+              "name": "String Concatenation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ07",
+              "name": "Increment Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ08",
+              "name": "Floating-Point Precision",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ09",
+              "name": "Character Data Type",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29605",
+              "code": "JAVAMCQ10",
+              "name": "Compound Assignment Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Control flow statements",
+      "description": "Structures that control the flow of program execution. Includes decision-making and looping constructs essential for creating logic in programs.",
+      "submodules": [
+        {
+          "name": "Control flow statements",
+          "submodule_id": 6093,
+          "contest_code": "JAVAPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP02/problems/JAVAMCQ11",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ11",
+              "name": "Loop Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ12",
+              "name": "Switch Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ13",
+              "name": "Conditional Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ14",
+              "name": "Loop Continuation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ15",
+              "name": "Enhanced For Loop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ16",
+              "name": "Do-While Loop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ17",
+              "name": "Switch Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ18",
+              "name": "Loop Termination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ19",
+              "name": "Nested Control Statements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29606",
+              "code": "JAVAMCQ20",
+              "name": "Ternary Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Arrays and collections",
+      "description": "Data structures for storing multiple elements. Discusses both simple arrays and the more flexible Collection framework for managing groups of objects.",
+      "submodules": [
+        {
+          "name": "Array and Collections",
+          "submodule_id": 6094,
+          "contest_code": "JAVAPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP03/problems/JAVAMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ21",
+              "name": "Array Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ22",
+              "name": "ArrayList vs LinkedList",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ23",
+              "name": "HashSet Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ24",
+              "name": "TreeMap Ordering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ25",
+              "name": "Collection Interface",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ26",
+              "name": "Array Initialization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ27",
+              "name": "Vector vs ArrayList",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ28",
+              "name": "HashMap vs Hashtable",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ29",
+              "name": "Array Bounds",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29607",
+              "code": "JAVAMCQ30",
+              "name": "List to Array Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "String manipulation and String pool",
+      "description": "Techniques for manipulating text data. Explores the String class, its methods, and the concept of the String pool for efficient memory usage.",
+      "submodules": [
+        {
+          "name": "String manipulation and String pool",
+          "submodule_id": 6095,
+          "contest_code": "JAVAPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP04/problems/JAVAMCQ31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ31",
+              "name": "String Immutability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ32",
+              "name": "String Pool Concept",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ33",
+              "name": "String Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ34",
+              "name": "String Interning",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ35",
+              "name": "String Comparison",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ36",
+              "name": "String Concatenation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ37",
+              "name": "String Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ38",
+              "name": "String Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ39",
+              "name": "String Pool vs Heap",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29608",
+              "code": "JAVAMCQ40",
+              "name": "String Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Object-Oriented Programming (OOP) concepts",
+      "description": "Core principles of object-oriented programming. Covers the basic concepts that allow for creating modular, reusable code through objects and classes.",
+      "submodules": [
+        {
+          "name": "Object-Oriented Programming (OOP) concepts",
+          "submodule_id": 6096,
+          "contest_code": "JAVAPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP05/problems/JAVAMCQ41",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ41",
+              "name": "Inheritance in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ42",
+              "name": "Encapsulation in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ43",
+              "name": "Polymorphism in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ44",
+              "name": "Abstraction in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ45",
+              "name": "Interfaces in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ46",
+              "name": "Method Overloading in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ47",
+              "name": "Constructor in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ48",
+              "name": "Static Members in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ49",
+              "name": "Final Keyword in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29609",
+              "code": "JAVAMCQ50",
+              "name": "Method Overriding in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Inheritance and interfaces",
+      "description": "Mechanisms for code reuse and abstraction. Discusses how classes can inherit properties and methods, and how interfaces define contracts for classes.\n",
+      "submodules": [
+        {
+          "name": "Inheritance and interfaces",
+          "submodule_id": 6097,
+          "contest_code": "JAVAPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP06/problems/JAVAMCQ52",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ52",
+              "name": "Interface Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ53",
+              "name": "Multiple Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ54",
+              "name": "Abstract Classes vs Interfaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ55",
+              "name": "Method Overriding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ57",
+              "name": "Access Modifiers in Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ58",
+              "name": "Inheritance and Constructors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ59",
+              "name": "Interface Constants",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29610",
+              "code": "JAVAMCQ60",
+              "name": "Polymorphism in Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Encapsulation and polymorphism",
+      "description": "Principles for hiding internal details and supporting multiple forms. Covers data protection and the ability of objects to take on multiple forms.",
+      "submodules": [
+        {
+          "name": "Encapsulation and polymorphism",
+          "submodule_id": 6098,
+          "contest_code": "JAVAPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP07/problems/JAVAMCQ62",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ62",
+              "name": "Getter and Setter Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ63",
+              "name": "Method Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ64",
+              "name": "Method Overriding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ65",
+              "name": "Runtime Polymorphism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ66",
+              "name": "Encapsulation Benefits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ67",
+              "name": "Interface Polymorphism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ68",
+              "name": "Data Hiding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ69",
+              "name": "Polymorphic Reference",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29611",
+              "code": "JAVAMCQ70",
+              "name": "Encapsulation Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Exception handling",
+      "description": "Techniques for handling and managing errors. Explores how to gracefully handle unexpected situations in code to prevent crashes and improve reliability.",
+      "submodules": [
+        {
+          "name": "Exception handling",
+          "submodule_id": 6099,
+          "contest_code": "JAVAPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP08/problems/JAVAMCQ71",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ71",
+              "name": "Exception Hierarchy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ72",
+              "name": "Try-Catch Blocks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ73",
+              "name": "Multiple Catch Blocks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ74",
+              "name": "Throws Clause",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ75",
+              "name": "Finally Block Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ76",
+              "name": "Custom Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ77",
+              "name": "Try-with-Resources",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ78",
+              "name": "Exception Propagation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29612",
+              "code": "JAVAMCQ80",
+              "name": "Suppressed Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Abstract classes and methods",
+      "description": "Tools for creating base templates and contracts. Discusses partially implemented classes and methods that enforce certain structures in child classes.",
+      "submodules": [
+        {
+          "name": "Abstract classes and methods",
+          "submodule_id": 6100,
+          "contest_code": "JAVAPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP09/problems/JAVAMCQ81",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ81",
+              "name": "Abstract Class Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ82",
+              "name": "Abstract Method Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ83",
+              "name": "Instantiating Abstract Classes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ84",
+              "name": "Abstract Class Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ85",
+              "name": "Abstract Class Constructors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ86",
+              "name": "Abstract Class vs Interface",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ87",
+              "name": "Abstract Method Overriding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ88",
+              "name": "Abstract Class Members",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ89",
+              "name": "Final Methods in Abstract Classes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29613",
+              "code": "JAVAMCQ90",
+              "name": "Abstract Class Inheritance Hierarchy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Java I/O and file handling",
+      "description": "Methods for reading from and writing to external sources. Covers techniques for interacting with files and handling input/output operations.",
+      "submodules": [
+        {
+          "name": "Java I/O and file handling",
+          "submodule_id": 6101,
+          "contest_code": "JAVAPREP10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP10/problems/JAVAMCQ91",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ91",
+              "name": "File Class in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ92",
+              "name": "FileInputStream vs FileReader",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ93",
+              "name": "Buffered I/O Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ94",
+              "name": "Closing Resources",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ95",
+              "name": "File Handling Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ96",
+              "name": "NIO vs IO",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ97",
+              "name": "RandomAccessFile Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ98",
+              "name": "Serialization in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ99",
+              "name": "File Permissions in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29614",
+              "code": "JAVAMCQ100",
+              "name": "Character Encoding in Java I/O",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Generics",
+      "description": "Mechanism for creating reusable, type-safe code. Explores how to write methods and classes that can work with different data types while maintaining type safety.",
+      "submodules": [
+        {
+          "name": "Generics",
+          "submodule_id": 6102,
+          "contest_code": "JAVAPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP11/problems/JAVAMCQ101",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ101",
+              "name": "Generic Type Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ102",
+              "name": "Multiple Type Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ103",
+              "name": "Type Erasure",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ104",
+              "name": "Wildcard in Generics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ105",
+              "name": "Generic Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ106",
+              "name": "Type Inference",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ107",
+              "name": "Bounded Type Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ108",
+              "name": "Generic Interfaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ109",
+              "name": "Raw Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29615",
+              "code": "JAVAMCQ110",
+              "name": "Type Parameter Naming Conventions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Java memory management and garbage collection",
+      "description": "Automatic memory handling in Java. Discusses how Java manages object lifecycles and automatically frees up unused memory.",
+      "submodules": [
+        {
+          "name": "Java memory management and garbage collection",
+          "submodule_id": 6103,
+          "contest_code": "JAVAPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP12/problems/JAVAMCQ111",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ111",
+              "name": "Java Memory Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ112",
+              "name": "Garbage Collection Trigger",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ113",
+              "name": "Object Eligibility for Garbage Collection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ114",
+              "name": "Garbage Collection Guarantee",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ115",
+              "name": "Memory Leak in Java",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ116",
+              "name": "Soft References",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ117",
+              "name": "Finalization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ118",
+              "name": "Garbage Collection Algorithms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ119",
+              "name": "OutOfMemoryError",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29616",
+              "code": "JAVAMCQ120",
+              "name": "Weak References",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Multithreading and concurrency",
+      "description": "Techniques for executing multiple tasks simultaneously. Covers creating and managing threads, as well as synchronizing access to shared resources.",
+      "submodules": [
+        {
+          "name": "Multithreading and concurrency",
+          "submodule_id": 6104,
+          "contest_code": "JAVAPREP13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP13/problems/JAVAMCQ121",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ121",
+              "name": "Thread Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ122",
+              "name": "Synchronization Keyword",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ123",
+              "name": "Volatile Keyword",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ124",
+              "name": "Thread States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ125",
+              "name": "Thread Pool",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ126",
+              "name": "Deadlock Scenario",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ127",
+              "name": "Race Condition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ128",
+              "name": "Concurrent Collections",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ129",
+              "name": "Atomic Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29617",
+              "code": "JAVAMCQ130",
+              "name": "Executor Framework",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Lambda expressions and functional interfaces",
+      "description": "Compact syntax for passing behaviors as method arguments. Explores functional programming concepts in Java for more concise and expressive code.",
+      "submodules": [
+        {
+          "name": "Lambda expressions and functional interfaces",
+          "submodule_id": 6105,
+          "contest_code": "JAVAPREP14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP14/problems/JAVAMCQ131",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ131",
+              "name": "Lambda Expression Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ132",
+              "name": "Functional Interface Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ133",
+              "name": "Lambda Expression Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ134",
+              "name": "Parameter Types in Lambda Expressions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ135",
+              "name": "Predefined Functional Interfaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ136",
+              "name": "Lambda Expression Scope",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ137",
+              "name": "Method References",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ138",
+              "name": "Functional Interface Annotation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ139",
+              "name": "Lambda Expression vs Anonymous Class",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29618",
+              "code": "JAVAMCQ140",
+              "name": "Built-in Functional Interfaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Java 8+ features (Stream API, Optional class)",
+      "description": "Modern Java language features. Covers newer additions to Java that enhance productivity and provide more powerful ways to process data.",
+      "submodules": [
+        {
+          "name": "Java 8+ features (Stream API, Optional class)",
+          "submodule_id": 6106,
+          "contest_code": "JAVAPREP15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/java-interview-questions/JAVAPREP15/problems/JAVAMCQ141",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ141",
+              "name": "Stream API Operation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ142",
+              "name": "Optional Class Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ143",
+              "name": "Stream Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ144",
+              "name": "Lambda Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ145",
+              "name": "Stream Reduction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ146",
+              "name": "Optional Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ147",
+              "name": "Stream Filtering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ148",
+              "name": "Method Reference",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ149",
+              "name": "Parallel Streams",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29619",
+              "code": "JAVAMCQ150",
+              "name": "Optional Chaining",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 146,
+  "total_non_pro_problems": 20,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "500",
+    "name": "Learn Java",
+    "title": "Learn Java",
+    "slug": "java",
+    "description": "Learn Java programming language within a month using our practical course. Write tons of code, solve over 500 coding problems and build beginner level projects. An excellent starting point to begin your programming journey.",
+    "highlight_color": "#FFFFFF",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 60044
+    },
+    "learners_count": 273281,
+    "lessons_count": 40
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "akhil1636",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 7309,
+  "path_review": {
+    "rating": 4.6,
+    "users": 1067
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

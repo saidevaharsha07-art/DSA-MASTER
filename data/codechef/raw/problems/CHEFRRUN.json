@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFRRUN",
+  "contest_category": "6",
+  "problem_name": "Chef and Round Run",
+  "intended_contest_code": "AUG16",
+  "body": "<p>Chef cooks nice receipes in the cafeteria of his company. The cafe contains <b>N</b> boxes with food enumerated from <b>1</b> to <b>N</b> and are placed in a circle in clocwise order (boxes <b>1</b> and <b>N</b> are adjacent). Each box has unlimited amount of food with a tastyness level of <b>A<sub>i</sub></b>. Chef invented a definition of a magic box!\r\n<ul>\r\n<li>Chef picks a box <b>i</b> and stays in front of it. </li>\r\n<li>Now Chef eats food from box <b>i</b> and <b>skips</b> next <b>A<sub>i</sub></b> boxes.</li>\r\n<li>Now Chef is staying at some other (probably even the same!) box and repeats. </li>\r\n<li>Box <b>i</b> is a magic box if at some point of such game started from box <b>i</b>, Chef will find himself staying in front of it again. </li>\r\n</ul>\r\n</p>\r\n\r\n<p>\r\nWhen Chef came home, Chef's dog Tommy asked him about how many magic boxes were in the cafe? Help Chef to in finding that!\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The first line of each test case contains a single integer <b>N</b> denoting the number of boxes.</p>\r\n<p>The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the tastyness levels of each box.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing number of magical boxes.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 sum of all <b>N</b> over all the test cases in a single test file \u2264 <b>10<sup>6</sup></b></li>\r\n<li><b>0</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b></li>\r\n</ul>\r\n\r\n<h3>Subtasks</h3>\r\n<ul>\r\n<li><b>Subtask #1 (30 points):</b> <b>1</b> \u2264 sum of all <b>N</b> over all the test cases \u2264 <b>10<sup>4</sup></b>; <b>1</b> \u2264 <b>N</b> \u2264 <b>1000</b></li>\r\n\r\n<li><b>Subtask #2 (70 points):</b> <b>1</b> \u2264 sum of all <b>N</b> over all the test cases \u2264 <b>10<sup>6</sup></b>; <b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>3\r\n4\r\n1 1 1 1\r\n4\r\n3 0 0 0\r\n4\r\n0 0 0 2</tt>\r\n<b>Output:</b>\r\n<tt>4\r\n1\r\n2</tt>\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b></p>\r\nHere are Chef's paths if he starting from each the box:\r\n<pre>\r\n<b>1</b>-><b>3</b>-><b>1</b>\r\n<b>2</b>-><b>4</b>-><b>2</b>\r\n<b>3</b>-><b>1</b>-><b>3</b>\r\n<b>4</b>-><b>2</b>-><b>4</b>\r\n</pre>\r\nAs you see, all <b>4</b> boxes are magical.\r\n\r\n<p><b>Example case 2.</b></p>\r\nHere are Chef's paths if he starts from each box appropriately:\r\n<pre>\r\n<b>1</b>-><b>1</b>\r\n<b>2</b>-><b>3</b>-><b>4</b>-><b>1</b>-><b>1</b>\r\n<b>3</b>-><b>4</b>-><b>1</b>-><b>1</b>\r\n<b>4</b>-><b>1</b>-><b>1</b>\r\n</pre>\r\nAS you see, only box <b>1</b> is magical.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef cooks nice receipes in the cafeteria of his company. The cafe contains <b>N</b> boxes with food enumerated from <b>1</b> to <b>N</b> and are placed in a circle in clocwise order (boxes <b>1</b> and <b>N</b> are adjacent). Each box has unlimited amount of food with a tastyness level of <b>A<sub>i</sub></b>. Chef invented a definition of a magic box!\n</p><ul><li>Chef picks a box <b>i</b> and stays in front of it. </li>\n<li>Now Chef eats food from box <b>i</b> and <b>skips</b> next <b>A<sub>i</sub></b> boxes.</li>\n<li>Now Chef is staying at some other (probably even the same!) box and repeats. </li>\n<li>Box <b>i</b> is a magic box if at some point of such game started from box <b>i</b>, Chef will find himself staying in front of it again. </li>\n</ul><p>\nWhen Chef came home, Chef's dog Tommy asked him about how many magic boxes were in the cafe? Help Chef to in finding that!\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case contains a single integer <b>N</b> denoting the number of boxes.</p>\n<p>The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the tastyness levels of each box.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing number of magical boxes.</p>\n\n\n<h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 sum of all <b>N</b> over all the test cases in a single test file \u2264 <b>10<sup>6</sup></b></li>\n<li><b>0</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b></li>\n</ul><h3>Subtasks</h3>\n<ul><li><b>Subtask #1 (30 points):</b> <b>1</b> \u2264 sum of all <b>N</b> over all the test cases \u2264 <b>10<sup>4</sup></b>; <b>1</b> \u2264 <b>N</b> \u2264 <b>1000</b></li>\n\n<li><b>Subtask #2 (70 points):</b> <b>1</b> \u2264 sum of all <b>N</b> over all the test cases \u2264 <b>10<sup>6</sup></b>; <b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4\n1 1 1 1\n4\n3 0 0 0\n4\n0 0 0 2",
+        "output": "4\n1\n2",
+        "explanation": "<p><b>Example case 1.</b></p>\nHere are Chef's paths if he starting from each the box:\n<pre>\n<b>1</b>-><b>3</b>-><b>1</b>\n<b>2</b>-><b>4</b>-><b>2</b>\n<b>3</b>-><b>1</b>-><b>3</b>\n<b>4</b>-><b>2</b>-><b>4</b>\n</pre>\nAs you see, all <b>4</b> boxes are magical.\n\n<p><b>Example case 2.</b></p>\nHere are Chef's paths if he starts from each box appropriately:\n<pre>\n<b>1</b>-><b>1</b>\n<b>2</b>-><b>3</b>-><b>4</b>-><b>1</b>-><b>1</b>\n<b>3</b>-><b>4</b>-><b>1</b>-><b>1</b>\n<b>4</b>-><b>1</b>-><b>1</b>\n</pre>\nAS you see, only box <b>1</b> is magical.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12974,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "berezin",
+  "problem_display_authors": [
+    "berezin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/berezin'>berezin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "xcwgf666"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/xcwgf666'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>xcwgf666</span></a></div>",
+  "problem_editorialist": "xellos0",
+  "date_added": "8-04-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Modular Arithmetic",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1847",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610669
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFRRUN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

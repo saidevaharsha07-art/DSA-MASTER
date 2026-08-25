@@ -1,0 +1,126 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GROUPS",
+  "contest_category": "6",
+  "problem_name": "Chef and Groups",
+  "intended_contest_code": "MARCH21",
+  "body": "\r\nThere are $N$ seats in a row. You are given a string $S$ with length $N$; for each valid $i$, the $i$-th character of $S$ is '0' if the $i$-th seat is empty or '1' if there is someone sitting in that seat.\r\n\r\nTwo people are friends if they are sitting next to each other. Two friends are always part of the same group of friends. Can you find the total number of groups? \r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single string $S$. \r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of groups.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 50$\r\n- $1 \\leq N \\leq 10^5$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n4\r\n000\r\n010\r\n101\r\n01011011011110\r\n```\r\n\r\n### Example Output\r\n```\r\n0\r\n1\r\n2\r\n4\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** Since all seats are empty, the number of groups is $0$.\r\n\r\n**Example case 2:** Since only one seat is occupied, the number of groups is $1$.\r\n\r\n**Example case 3:** Here, two seats are occupied, but since they are not adjacent, the people sitting on them belong to different groups.\r\n\r\n**Example case 4:** Here, we have $4$ groups of friends with size $1$, $2$, $2$ and $4$ respectively. That is, first group is sitting at $2$nd seat, second group at $4$th and $5$th seat, third group at  $7$th and $8$th seat and fourth group at $10$th to $13$th seat.\r\n\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nThere are $N$ seats in a row. You are given a string $S$ with length $N$; for each valid $i$, the $i$-th character of $S$ is '0' if the $i$-th seat is empty or '1' if there is someone sitting in that seat.\r\n\r\nTwo people are friends if they are sitting next to each other. Two friends are always part of the same group of friends. Can you find the total number of groups? \r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single string $S$. \r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of groups.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 50$\r\n- $1 \\leq N \\leq 10^5$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\r\n000\r\n010\r\n101\r\n01011011011110",
+        "output": "0\r\n1\r\n2\r\n4",
+        "explanation": "**Example case 1:** Since all seats are empty, the number of groups is $0$.\r\n\r\n**Example case 2:** Since only one seat is occupied, the number of groups is $1$.\r\n\r\n**Example case 3:** Here, two seats are occupied, but since they are not adjacent, the people sitting on them belong to different groups.\r\n\r\n**Example case 4:** Here, we have $4$ groups of friends with size $1$, $2$, $2$ and $4$ respectively. That is, first group is sitting at $2$nd seat, second group at $4$th and $5$th seat, third group at  $7$th and $8$th seat and fourth group at $10$th to $13$th seat.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "62d1029d5cc10e31e59c721e",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 86691,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "smit_adm",
+  "problem_display_authors": [
+    "smit_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/smit_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>smit_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "9-01-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements",
+    "ad-hoc",
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1176",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610862
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GROUPS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 19,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

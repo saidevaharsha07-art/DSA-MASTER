@@ -1,0 +1,1270 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "basic-programming-concepts",
+  "name": "500 difficulty rating",
+  "title": "500 difficulty rating",
+  "level": "Beginner",
+  "description": "Practice the most basic problems available on CodeChef. The problems are in the difficulty range of 0 - 500.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:45",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/basic-programming-concepts/DIFF500/problems/CWC23QUALIF",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Less than 500 difficulty rating",
+      "description": "Less than 500 difficulty rating",
+      "submodules": [
+        {
+          "name": "Less than 500",
+          "submodule_id": 4024,
+          "contest_code": "DIFF500",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 115,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/basic-programming-concepts/DIFF500/problems/CWC23QUALIF",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 115,
+          "problems_with_status": [
+            {
+              "contest_id": "26945",
+              "code": "CWC23QUALIF",
+              "name": "Cricket World Cup Qualifier",
+              "difficulty_rating": "203",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "LUCKYSEVEN",
+              "name": "Lucky Seven",
+              "difficulty_rating": "213",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CLEARDAY",
+              "name": "Clear Day",
+              "difficulty_rating": "233",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DOUBLERENT",
+              "name": "Double Rent",
+              "difficulty_rating": "234",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TAXSAVING",
+              "name": "Saving Taxes",
+              "difficulty_rating": "252",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TOP10",
+              "name": "Masterchef finals",
+              "difficulty_rating": "255",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BIRYANI",
+              "name": "Biryani classes",
+              "difficulty_rating": "257",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "LUDO",
+              "name": "Chef Plays Ludo",
+              "difficulty_rating": "260",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PRACLIST",
+              "name": "How many unattempted problems",
+              "difficulty_rating": "264",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DETSCORE",
+              "name": "Determine the Score",
+              "difficulty_rating": "267",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "ERROR404",
+              "name": "404 Not Found",
+              "difficulty_rating": "267",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "OFFBY1",
+              "name": "Off By One",
+              "difficulty_rating": "271",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DONDRIVE",
+              "name": "Donation Drive",
+              "difficulty_rating": "272",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "KITCHENTIME",
+              "name": "Kitchen Timings",
+              "difficulty_rating": "273",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "IPLTRSH",
+              "name": "IPL Ticket Rush",
+              "difficulty_rating": "273",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "AUDIBLE",
+              "name": "Audible Range",
+              "difficulty_rating": "279",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TIMELY",
+              "name": "Reach on Time",
+              "difficulty_rating": "279",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PUZHUNT",
+              "name": "Puzzle Hunt",
+              "difficulty_rating": "279",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BNE_APT",
+              "name": "Bone Appetit",
+              "difficulty_rating": "280",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TALLER",
+              "name": "Who is taller!",
+              "difficulty_rating": "281",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "REACHTARGET",
+              "name": "Reach the Target",
+              "difficulty_rating": "281",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BESTOFTWO",
+              "name": "Best of Two",
+              "difficulty_rating": "284",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "RIP2000",
+              "name": "2000",
+              "difficulty_rating": "284",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MINHEIGHT",
+              "name": "Roller Coaster",
+              "difficulty_rating": "285",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CANDIVIDE",
+              "name": "Candy Division",
+              "difficulty_rating": "289",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CHEFONDATE",
+              "name": "Chef On Date",
+              "difficulty_rating": "294",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PAR2",
+              "name": "Parity",
+              "difficulty_rating": "295",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PRIZEPOOL",
+              "name": "Total Prize Money",
+              "difficulty_rating": "296",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CNTWRD",
+              "name": "Counting Words",
+              "difficulty_rating": "296",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BTRYHLTH",
+              "name": "Battery Health",
+              "difficulty_rating": "296",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "JERRYCHASE",
+              "name": "Tom and Jerry Chase",
+              "difficulty_rating": "298",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "AGEING",
+              "name": "Ageing",
+              "difficulty_rating": "299",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "RIGHTTHERE",
+              "name": "Right There",
+              "difficulty_rating": "299",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SNDMAX",
+              "name": "Second Max of Three Numbers",
+              "difficulty_rating": "300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BULLBEAR",
+              "name": "Bull or Bear",
+              "difficulty_rating": "300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FOURTICKETS",
+              "name": "Four Tickets",
+              "difficulty_rating": "302",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CHAIRS_",
+              "name": "Chairs Requirement",
+              "difficulty_rating": "305",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DNATION",
+              "name": "Chef and Donation",
+              "difficulty_rating": "305",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SUMM",
+              "name": "Sum it",
+              "difficulty_rating": "308",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SUBSCRIBE",
+              "name": "Get Subscription",
+              "difficulty_rating": "315",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MVR",
+              "name": "Messi vs Ronaldo",
+              "difficulty_rating": "316",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "WAITTIME",
+              "name": "Waiting Time",
+              "difficulty_rating": "319",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "OCTATHON",
+              "name": "October Marathon",
+              "difficulty_rating": "319",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "ONEMORE",
+              "name": "Just One More Episode",
+              "difficulty_rating": "320",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MANAPTS",
+              "name": "Mana Points",
+              "difficulty_rating": "327",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "RAINFALL1",
+              "name": "Rain in Chefland",
+              "difficulty_rating": "328",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "AUCTION",
+              "name": "Bidding",
+              "difficulty_rating": "330",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FINE",
+              "name": "Overspeeding Fine",
+              "difficulty_rating": "335",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CHESSTIME",
+              "name": "Chess Time",
+              "difficulty_rating": "337",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FAIRPASS",
+              "name": "Passes for Fair",
+              "difficulty_rating": "342",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "READPAGES",
+              "name": "Read Pages",
+              "difficulty_rating": "343",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "COUGAME",
+              "name": "Couple Game",
+              "difficulty_rating": "347",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "AIRINDEX",
+              "name": "Air Quality Index",
+              "difficulty_rating": "347",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FEVER",
+              "name": "Fever",
+              "difficulty_rating": "348",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SLEEP",
+              "name": "Sleep deprivation",
+              "difficulty_rating": "348",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "M1ENROL",
+              "name": "MATH1 Enrolment",
+              "difficulty_rating": "349",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SEMCOURSES",
+              "name": "Chef and Chapters",
+              "difficulty_rating": "350",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "WATERREQ",
+              "name": "Water Requirement",
+              "difficulty_rating": "351",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "LTIME",
+              "name": "Lunchtime",
+              "difficulty_rating": "352",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INVESTMENT",
+              "name": "Good Investment or Not",
+              "difficulty_rating": "357",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "POPULATION",
+              "name": "Final Population",
+              "difficulty_rating": "358",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PARTY2",
+              "name": "Chef gives Party",
+              "difficulty_rating": "363",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "COMPLEXITY",
+              "name": "Time Complexity",
+              "difficulty_rating": "364",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INTRDSGN",
+              "name": "Interior Design",
+              "difficulty_rating": "373",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CARTRIP",
+              "name": "Car Trip",
+              "difficulty_rating": "374",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TABLETS",
+              "name": "Multivitamin Tablets",
+              "difficulty_rating": "376",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SIXFRIENDS",
+              "name": "Six Friends",
+              "difficulty_rating": "382",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CWIREFRAME",
+              "name": "Chef and Wire Frames",
+              "difficulty_rating": "383",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MINCOINSREQ",
+              "name": "Minimum Coins",
+              "difficulty_rating": "390",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "KITCHENSPICE",
+              "name": "Spice Level",
+              "difficulty_rating": "390",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CS2023_GIFT",
+              "name": "The Gift",
+              "difficulty_rating": "390",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "REACH_HOME",
+              "name": "Reach Home",
+              "difficulty_rating": "395",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DOREWARD",
+              "name": "Donation Rewards",
+              "difficulty_rating": "395",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TFPAPER",
+              "name": "True and False Paper",
+              "difficulty_rating": "398",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CABS",
+              "name": "The Cheaper Cab",
+              "difficulty_rating": "399",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DISCNT",
+              "name": "Discount",
+              "difficulty_rating": "401",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "HEIGHTRATION",
+              "name": "Height of Rationals",
+              "difficulty_rating": "405",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INSTAGRAM",
+              "name": "Instagram",
+              "difficulty_rating": "408",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "VOLCONTROL",
+              "name": "Volume Control",
+              "difficulty_rating": "409",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "HS08TEST",
+              "name": "ATM",
+              "difficulty_rating": "410",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "HOTCOLD",
+              "name": "Is it hot or cold",
+              "difficulty_rating": "410",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PROINC",
+              "name": "Profit Increment",
+              "difficulty_rating": "414",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FBC",
+              "name": "Fill the Bucket",
+              "difficulty_rating": "419",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PARLIAMENT",
+              "name": "Parliament",
+              "difficulty_rating": "419",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FLOW002",
+              "name": "Find Remainder",
+              "difficulty_rating": "421",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MANIPULATE",
+              "name": "Ezio and Guards",
+              "difficulty_rating": "427",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CMASKS",
+              "name": "Chef and Masks",
+              "difficulty_rating": "432",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SPECIALITY",
+              "name": "Speciality",
+              "difficulty_rating": "434",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MAXIMUMSUBS",
+              "name": "Maximum Submissions",
+              "difficulty_rating": "435",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TVDISC",
+              "name": "TV Discount",
+              "difficulty_rating": "447",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BROKENPHONE",
+              "name": "Broken Phone",
+              "difficulty_rating": "451",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "TYRE",
+              "name": "Tyre problem",
+              "difficulty_rating": "452",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FLOW006",
+              "name": "Sum of Digits",
+              "difficulty_rating": "455",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BUDGET_",
+              "name": "Monthly Budget",
+              "difficulty_rating": "456",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CREDSCORE",
+              "name": "Credit score",
+              "difficulty_rating": "459",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "FLOW004",
+              "name": "First and Last Digit",
+              "difficulty_rating": "461",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INTEST",
+              "name": "Enormous Input Test",
+              "difficulty_rating": "464",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "PRACTICEPERF",
+              "name": "Practice makes us perfect",
+              "difficulty_rating": "467",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "ASSIGNMNT",
+              "name": "Pending Assignments",
+              "difficulty_rating": "468",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "COURSEREG",
+              "name": "Course Registration",
+              "difficulty_rating": "470",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INSURANCE",
+              "name": "Insurance",
+              "difficulty_rating": "475",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "AIRLINES",
+              "name": "Codechef Airlines",
+              "difficulty_rating": "475",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "INCRIQ",
+              "name": "Increase IQ",
+              "difficulty_rating": "478",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BATTERYLOW",
+              "name": "Battery Low",
+              "difficulty_rating": "479",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "BOBBANK",
+              "name": "Bob at the Bank",
+              "difficulty_rating": "481",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MANGOES",
+              "name": "The Mango Truck",
+              "difficulty_rating": "482",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "MONOPOLY",
+              "name": "Monopoly in Chefland",
+              "difficulty_rating": "482",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "WATERFLOW",
+              "name": "Bucket and Water Flow ",
+              "difficulty_rating": "483",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "F1RULE",
+              "name": "Miami GP",
+              "difficulty_rating": "487",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "DOMINANT",
+              "name": "Dominant Army",
+              "difficulty_rating": "488",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "SONGS",
+              "name": "Playlist",
+              "difficulty_rating": "489",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CHEFCHOCO",
+              "name": "Chef and Chocolates",
+              "difficulty_rating": "492",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "NETFLIX",
+              "name": "Netflix",
+              "difficulty_rating": "493",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CGYM",
+              "name": "Chef and Gym",
+              "difficulty_rating": "496",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "26945",
+              "code": "CHEAPFOOD",
+              "name": "Best Coupon",
+              "difficulty_rating": "496",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 115
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 115,
+  "total_non_pro_problems": 115,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "45",
+    "name": "Learn Python Programming",
+    "title": "Learn Python Programming",
+    "slug": "python",
+    "description": "Learn Python 3 programming language within a month using our practical course. Understand the basic syntax of Python using our online tutorial. Prepare for a future in data science, AI and ML.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 88941
+    },
+    "learners_count": 418995,
+    "lessons_count": 37
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Difficulty rating wise",
+  "reviews": [
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 105966,
+  "path_review": {
+    "rating": 4.6,
+    "users": 3118
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

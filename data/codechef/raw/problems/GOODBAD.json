@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GOODBAD",
+  "contest_category": "6",
+  "problem_name": "Good and Bad Persons",
+  "intended_contest_code": null,
+  "body": "<p>Chef is a really nice and respectful person, in sharp contrast to his little brother, who is a very nasty and disrespectful person. Chef always sends messages to his friends in all small letters, whereas the little brother sends messages in all capital letters.</p>\n\n<p>You just received a message given by a string <b>s</b>. You don't know whether this message is sent by Chef or his brother. Also, the communication channel through which you received the message is erroneous and hence can flip a letter from uppercase to lowercase or vice versa. However, you know that this channel can make at most <b>K</b> such flips.</p>\n\n<p>Determine whether the message could have been sent only by Chef, only by the little brother, by both or by none.</p>\n\n<h3>Input</h3>\n<p><ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first line of each test case contains two space-separated integers <b>N</b> and <b>K</b> denoting the length of the string <b>s</b> and the maximum number of flips that the erroneous channel can make.</li>\n<li>The second line contains a single string <b>s</b> denoting the message you received.</li>\n</ul></p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing one string \u2014 \"chef\", \"brother\", \"both\" or \"none\".</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 1000</li>\n<li>1 \u2264 <b>N</b> \u2264 100</li>\n<li>0 \u2264 <b>K</b> \u2264 <b>N</b></li>\n<li><b>s</b> consists only of (lowercase and uppercase) English letters</li>\n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n\n4\n5 1\nfrauD\n5 1\nFRAUD\n4 4\nLife\n10 4\nsTRAWBerry\n\n<b>Output</b>\n\nchef\nbrother\nboth\nnone\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1:</b> Only one flip is possible. So it is possible that Chef sent \"fraud\" and the channel flipped the last character to get \"frauD\". However, it is not possible for the brother to have sent \"FRAUD\", because then it would need 4 flips. Hence the answer is \"chef\".</p>\n\n<p><b>Example case 2:</b> Only one flip is possible. So it is possible that the brother sent \"FRAUD\" and the channel didn't flip anything. However, it is not possible for Chef to have sent \"fraud\", because then it would need 5 flips. Hence the answer is \"brother\".</p>\n\n\n<p><b>Example case 3:</b> Four flips are allowed. It is possible that Chef sent \"life\" and the channel flipped the first character to get \"Life\". It is also possible that the brother sent \"LIFE\" and the channel flipped the last three characters to get \"Life\". Hence the answer is \"both\".</p>\n\n<p><b>Example case 4:</b> Four flips are allowed. It is not possible that Chef sent \"strawberry\", because it would need five flips to get \"sTRAWBerry\". It is also not possible that the brother sent \"STRAWBERRY\", because that would also need five flips. Hence the answer is \"none\".</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 \u2264 **T** \u2264 1000\n- 1 \u2264 **N** \u2264 100\n- 0 \u2264 **K** \u2264 **N**\n- **s** consists only of (lowercase and uppercase) English letters\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef is a really nice and respectful person, in sharp contrast to his little brother, who is a very nasty and disrespectful person. Chef always sends messages to his friends in all small letters, whereas the little brother sends messages in all capital letters.\n\nYou just received a message given by a string **s**. You don't know whether this message is sent by Chef or his brother. Also, the communication channel through which you received the message is erroneous and hence can flip a letter from uppercase to lowercase or vice versa. However, you know that this channel can make at most **K** such flips.\n\nDetermine whether the message could have been sent only by Chef, only by the little brother, by both or by none.\n",
+    "inputFormat": "- The first line of the input contains a single integer **T** denoting the number of test cases. The description of **T** test cases follows.\n- The first line of each test case contains two space-separated integers **N** and **K** denoting the length of the string **s** and the maximum number of flips that the erroneous channel can make.\n- The second line contains a single string **s** denoting the message you received.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing one string \u2014 \"chef\", \"brother\", \"both\" or \"none\".\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n5 1\nfrauD\n5 1\nFRAUD\n4 4\nLife\n10 4\nsTRAWBerry\n",
+        "output": "chef\nbrother\nboth\nnone\n",
+        "explanation": "**Example case 1:** Only one flip is possible. So it is possible that Chef sent \"fraud\" and the channel flipped the last character to get \"frauD\". However, it is not possible for the brother to have sent \"FRAUD\", because then it would need 4 flips. Hence the answer is \"chef\".\n\n**Example case 2:** Only one flip is possible. So it is possible that the brother sent \"FRAUD\" and the channel didn't flip anything. However, it is not possible for Chef to have sent \"fraud\", because then it would need 5 flips. Hence the answer is \"brother\".\n\n**Example case 3:** Four flips are allowed. It is possible that Chef sent \"life\" and the channel flipped the first character to get \"Life\". It is also possible that the brother sent \"LIFE\" and the channel flipped the last three characters to get \"Life\". Hence the answer is \"both\".\n\n**Example case 4:** Four flips are allowed. It is not possible that Chef sent \"strawberry\", because it would need five flips to get \"sTRAWBerry\". It is also not possible that the brother sent \"STRAWBERRY\", because that would also need five flips. Hence the answer is \"none\".\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/Ouz2kdWR4Pc",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/GOODBAD\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACM17CHN/problems/GOODBAD\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<p><strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>You just received a message given by a string <span class=\"math\">s</span>. You don\u2019t know whether this message is sent by Chef or his brother. Also, the communication channel through which you received the message is erroneous and hence can flip a letter from uppercase to lowercase or vice versa. However, you know that this channel can make at most <span class=\"math\">k</span> such flips.</p>\n<p>Chef always sends messages to his friends in all small letters, whereas the little brother sends messages in all capital letters. Determine whether the message could have been sent only by Chef, only by the little brother, by both or by none.</p>\n<h3>EXPLANATION</h3>\n<p>Number of uppercase letters &lt;= <span class=\"math\">k</span> implies that it could have been Chef. This is because we can consider all the uppercase letters as \u201cflips\u201d made by the communication channel, which would imply that our original message comprised only of lowercase letters. Similarly, number of lowercase letters &lt;= <span class=\"math\">k</span> implies that it could have been Chef\u2019s brother. Here is the implementation in Python:</p>\n<pre><code class=\"lang-auto\">t = int(input())\nfor _ in range(t):\n    (n, k) = list(map(int, input().split(' ')))\n    s = input()\n    chef = sum([1 for ch in s if ch &gt;= 'A' and ch &lt;= 'Z']) &lt;= k\n    brother = sum([1 for ch in s if ch &gt;= 'a' and ch &lt;= 'z']) &lt;= k\n    if (chef and brother):\n        print(\"both\")\n    elif (chef):\n        print(\"chef\")\n    elif (brother):\n        print(\"brother\")\n    else:\n        print(\"none\")\n</code></pre>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Setter/GOODBAD.py\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Tester/GOODBAD.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17634,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "animesh_f",
+  "date_added": "7-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/GOODBAD",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610859
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GOODBAD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

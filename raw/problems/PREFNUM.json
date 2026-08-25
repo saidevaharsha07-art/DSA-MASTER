@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PREFNUM",
+  "contest_category": "6",
+  "problem_name": "Prefix Numbers",
+  "intended_contest_code": null,
+  "body": "You are given two positive integers $x, y$.\n\nFind the smallest positive integer $z$ such that $z$ contains $x$ as a prefix (in base 10) and $z$ is divisible by $y$.\n\nIf the smallest such $z > 10^{18}$, print -1.\n\n### Input\n- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains two space-separated integers $x, y$.\n\n### Output\nFor each test case, output an integer $z$ corresponding to the answer of the problem. If $z > 10^{18}$, output -1 instead.\n\n###Constraints\n- $1 \\le T \\le 10^5$\n- $1 \\le x, y \\leq 10^{18}$\n\n### Example Input\n```\n2\n2 3\n12 5\n```\n\n### Example Output\n```\n21\n120\n```\n\n###Explanation:\n**Testcase 1**: 21 has 2 as a prefix, and is divisible by 3. Hence this is a valid $z$. You can check that no smaller integer satisfies these conditions, and hence the answer is 21.\n\n**Testcase 2**: 120 has 12 as a prefix, and is divisible by 5. Hence this is a valid $z$. You can check that no smaller integer satisfies these conditions, and hence the answer is 120.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $1 \\le x, y \\leq 10^{18}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given two positive integers $x, y$.\n\nFind the smallest positive integer $z$ such that $z$ contains $x$ as a prefix (in base 10) and $z$ is divisible by $y$.\n\nIf the smallest such $z > 10^{18}$, print -1.\n",
+    "inputFormat": "- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains two space-separated integers $x, y$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output an integer $z$ corresponding to the answer of the problem. If $z > 10^{18}$, output -1 instead.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 3\n12 5\n",
+        "output": "21\n120\n",
+        "explanation": "**Testcase 1**: 21 has 2 as a prefix, and is divisible by 3. Hence this is a valid $z$. You can check that no smaller integer satisfies these conditions, and hence the answer is 21.\n\n**Testcase 2**: 120 has 12 as a prefix, and is divisible by 5. Hence this is a valid $z$. You can check that no smaller integer satisfies these conditions, and hence the answer is 120.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Number Theory",
+    "Modular Arithmetic",
+    "Basic Math"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611278
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PREFNUM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

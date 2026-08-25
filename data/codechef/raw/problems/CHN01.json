@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN01",
+  "contest_category": "6",
+  "problem_name": "Malvika conducts her own ACM-ICPC contest series",
+  "intended_contest_code": null,
+  "body": "<p>\nAfter winning numerous programming competitions, Malvika has got bored of participating, and is thinking of holding her own series of contests, named \"Advanced Contests by Malvika: India's Coolest Programming Contests (ACM-ICPC)\". Each contest will have three problems, one each of easy, medium and hard levels.\n</p>\n\n<p>\nNow, after some time, Malvika realized that creating hard problems for a contest is not as easy for her as solving them. So she asked her friend Animesh to join the team and help her with it. Animesh himself is no good with creating problems, but he suggested her a clever strategy to reduce the number of hard problems she needs to create. He suggested that ACM-ICPC could have three types of contests, comprising of the following problem levels:\n<ul>\n<li>Type 1: 1 easy, 1 medium, 1 hard</li>\n<li>Type 2: 1 easy, 2 medium</li>\n<li>Type 3: 2 easy, 1 medium</li>\n</ul>\n</p>\n\n<p>\nOne day, Malvika and Animesh sat down and prepared <b>e</b> easy problems, <b>m</b> medium, and <b>h</b> hard problems. As we know that it is harder to make higher difficulty problems, the number of hard problems will be no more than medium and similarly, the number of medium level problems, will be no more than easy level.\n</p>\n\n<p>\nNow, they want to use the above problems to organizes a series of contests. Also, as they want the series to be interesting, so they don't want to have two consecutive contests in the series to be of the same type.\n</p>\n\n<p>\nCan you please help them in finding out the maximum number of contests they can conduct in the series?\n</p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of input contains a single integer <b>T</b> denoting the number of test cases.</li>\n<li>The only line of each test case contains three space separated integers \u2014 <b>e, m, h</b> \u2014 as defined in the statement.</li>\n</ul>\n\n<h3>Output</h3>\n<ul>\n<li>For each test case, output a single integer in a line, the answer to the problem.</li>\n</ul>\n</ul>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 &le; <b>T</b> &le; <b>10<sup>5</sup></b></li>\n<li>0 &le; <b>e, m, h</b> &le; <b>10<sup>5</sup></b></li>\n<li><b>h</b> &le; <b>m</b> &le; <b>e</b></li>\n<li>Sum of variables <b>e</b> for all the test cases won't exceed <b>10<sup>7</sup></b>.</li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n1 1 1\n4 4 1\n\n<b>Output:</b>\n1\n3\n</pre>\n\n\n<h3>Explanation</h3>\n<p>\n<b>In the first example</b>, they have 1 easy, 1 medium and 1 hard problem. They can conduct one contest of type 1. This is the maximum number of contests they can conduct.\n</p>\n\n<p><b>In the second example</b>, they have 4 easy, 4 medium, and 4 hard problems. They can conduct 3 contests, one each of type 1, 2, and 3, which require a total of 4 easy, 4 med and 1 hard problems. This is the maximum number of contests they can conduct. Hence, the answer is 3.\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $0 \\le e, m, h \\le 10^5$\n- $h \\le m \\le e$\n- Sum of variables **e** for all the test cases won't exceed $10^7$.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "After winning numerous programming competitions, Malvika has got bored of participating, and is thinking of holding her own series of contests, named \"Advanced Contests by Malvika: India's Coolest Programming Contests (ACM-ICPC)\". Each contest will have three problems, one each of easy, medium, and hard levels.\n\nNow, after some time, Malvika realized that creating hard problems for a contest is not as easy for her as solving them. So she asked her friend Animesh to join the team and help her with it. Animesh himself is no good with creating problems, but he suggested her a clever strategy to reduce the number of hard problems she needs to create. He suggested that ACM-ICPC could have three types of contests, comprising of the following problem levels:\n\n- **Type 1**: 1 easy, 1 medium, 1 hard\n- **Type 2**: 1 easy, 2 medium\n- **Type 3**: 2 easy, 1 medium\n\nOne day, Malvika and Animesh sat down and prepared **e** easy problems, **m** medium, and **h** hard problems. As we know that it is harder to make higher difficulty problems, the number of hard problems will be no more than medium and similarly, the number of medium level problems, will be no more than easy level.\n\nNow, they want to use the above problems to organize a series of contests. Also, as they want the series to be interesting, so they don't want to have two consecutive contests in the series to be of the same type.\n\nCan you please help them in finding out the maximum number of contests they can conduct in the series?\n",
+    "inputFormat": "- The first line of input contains a single integer **T** denoting the number of test cases.\n- The only line of each test case contains three space-separated integers \u2014 **e, m, h** \u2014 as defined in the statement.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output a single integer in a line, the answer to the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 1 1\n4 4 1\n",
+        "output": "1\n3\n",
+        "explanation": "**In the first example**, they have 1 easy, 1 medium, and 1 hard problem. They can conduct one contest of type 1. This is the maximum number of contests they can conduct.\n\n**In the second example**, they have 4 easy, 4 medium, and 4 hard problems. They can conduct 3 contests, one each of type 1, 2, and 3, which require a total of 4 easy, 4 medium, and 1 hard problems. This is the maximum number of contests they can conduct. Hence, the answer is 3.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15CHN/problems/CHN01\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"https://www.codechef.com/problems/CHN01\" rel=\"nofollow noopener\">Problems</a></p>\n<p><strong>Author:</strong> -<br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a>, <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Binary search</p>\n<h3>PROBLEM:</h3>\n<p>There are three types of contests:</p>\n<ul>\n<li>Type 1: 1 easy, 1 medium, 1 hard</li>\n<li>Type 2: 1 easy, 2 medium</li>\n<li>Type 3: 2 easy, 1 medium</li>\n</ul>\n<p>There are <span class=\"math\">e</span> easy, <span class=\"math\">m</span> medium, and <span class=\"math\">h</span> hard problems. What is the maximum number of contests you can conduct so that no two contests are of the same type?</p>\n<p>The following is guaranteed: <span class=\"math\">e \\ge m \\ge h</span>.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Binary search on the answer <span class=\"math\">x</span>. (You may use the lower bound <span class=\"math\">0</span> and upper bound <span class=\"math\">m+1</span>).</p>\n<p>It is possible to conduct <span class=\"math\">x</span> contests if and only if</p>\n<div class=\"math\">\n\\min(e-x, \\lceil x/2 \\rceil) + \\min(m-x, \\lceil x/2 \\rceil) + \\min(h, \\lceil x/2 \\rceil) \\ge x\n</div>\n<p>(Note that you can only do up to <span class=\"math\">\\lceil x/2 \\rceil</span> of each type of contest.)</p>\n<h3>EXPLANATION:</h3>\n<p>An easier question would be: given <span class=\"math\">x</span>, is it possible to conduct <span class=\"math\">x</span> contests satisfying the rules? If we can answer this, then we can answer the problem by simply starting at some upper bound, say <span class=\"math\">x = m+1</span> (because all contests need a medium problem), and decrementing until we find the largest number of contests we can conduct. If we can answer it quickly enough, this algorithm will pass the time limit.</p>\n<p>So given <span class=\"math\">x</span>, let\u2019s find out if it is possible to conduct <span class=\"math\">x</span> contests satisfying the rules.</p>\n<p>The first observation is that all contests need at least one easy and one medium problem. So if <span class=\"math\">e &lt; x</span> or <span class=\"math\">m &lt; x</span>, then it\u2019s already impossible. Otherwise, we reserve <span class=\"math\">x</span> easy and medium problems for the <span class=\"math\">x</span> contests, so there are <span class=\"math\">e-x</span> easy and <span class=\"math\">m-x</span> medium problems left. After this, things become a bit simpler, because:</p>\n<ul>\n<li>Type 1 contests only need 1 more hard</li>\n<li>Type 2 contests only need 1 more medium</li>\n<li>Type 3 contests only need 1 more easy</li>\n</ul>\n<p>So the problem becomes: Given <span class=\"math\">e-x</span> easy, <span class=\"math\">m-x</span> medium, and <span class=\"math\">h</span> hard problems, is it possible to take <span class=\"math\">x</span> of these and arrange them in a line so that no two consecutive problems are the same? Clearly <span class=\"math\">\\lceil x/2 \\rceil</span> is the most we can take of the same kind of problem (why?), so if</p>\n<div class=\"math\">\n\\min(e-x, \\lceil x/2 \\rceil) + \\min(m-x, \\lceil x/2 \\rceil) + \\min(h, \\lceil x/2 \\rceil) &lt; x\n</div>\n<p>then the task is already impossible. But if instead</p>\n<div class=\"math\">\n\\min(e-x, \\lceil x/2 \\rceil) + \\min(m-x, \\lceil x/2 \\rceil) + \\min(h, \\lceil x/2 \\rceil) \\ge x,\n</div>\n<p>can we do it? We will show that it is indeed possible.</p>\n<p>Since at this point the roles of <span class=\"math\">e-x</span>, <span class=\"math\">m-x</span> and <span class=\"math\">h</span> are symmetric, we will write these numbers as <span class=\"math\">a_1</span>, <span class=\"math\">a_2</span> and <span class=\"math\">a_3</span>, and assume they\u2019re sorted, i.e. <span class=\"math\">a_1 \\le a_2 \\le a_3</span>. And we\u2019ll call the problems type 1, 2 and 3, instead of easy, medium and hard (since they\u2019re reordered). Note that the following is true:</p>\n<div class=\"math\">\n\\min(a_1, \\lceil x/2 \\rceil) + \\min(a_2, \\lceil x/2 \\rceil) + \\min(a_3, \\lceil x/2 \\rceil) \\ge x,\n</div>\n<p>First, if <span class=\"math\">a_3 \\ge \\lceil x/2 \\rceil</span>, then we start with a list of size <span class=\"math\">x</span>, place <span class=\"math\">\\lceil x/2 \\rceil</span> type 3 problems on the odd-numbered positions, and place the type 1 and 2 problems in the even-numbered ones. Then since</p>\n<div class=\"math\">\na_1 + a_2 \\ge \\min(a_1, \\lceil x/2 \\rceil) + \\min(a_2, \\lceil x/2 \\rceil) \\ge x - \\min(a_3, \\lceil x/2 \\rceil) = x - \\lceil x/2 \\rceil,\n</div>\n<p>there are enough problems of type 1 and 2 to fill in the voids in between. Thus, we have shown a valid arrangement.</p>\n<p>Now, let\u2019s assume <span class=\"math\">a_3 &lt; \\lceil x/2 \\rceil</span>. This also means that <span class=\"math\">a_1 \\le a_2 \\le a_3 &lt; \\lceil x/2 \\rceil</span>, and the following is true:</p>\n<div class=\"math\">\na_1 + a_2 + a_3 \\ge x.\n</div>\n<p>The following is also true:</p>\n<div class=\"math\">\na_1 + a_2 &gt; a_3,\n</div>\n<p>otherwise <span class=\"math\">a_1 + a_2 + a_3 \\le a_3 + a_3 = 2a_3 &lt; x</span>. Let\u2019s consider the value <span class=\"math\">a_1 + a_2 - a_3</span> (which is positive). Also, whenever we place a problem in our arrangement, we update the corresponding value <span class=\"math\">a_1</span>, <span class=\"math\">a_2</span> or <span class=\"math\">a_3</span>.</p>\n<p>If <span class=\"math\">a_1 + a_2 - a_3 \\ge 2</span>, then we place a type 2 and then type 1 problem, reducing <span class=\"math\">a_1</span> and <span class=\"math\">a_2</span> by 1, and thus reducing <span class=\"math\">a_1 + a_2 - a_3</span> by two. We can repeat this until \u201c<span class=\"math\">a_1 + a_2 - a_3 \\ge 2</span>\u201d becomes false. Thus, <span class=\"math\">a_1 + a_2 - a_3</span> is now either 1 or <span class=\"math\">0</span>.</p>\n<p>If <span class=\"math\">a_1 + a_2 - a_3 = 1</span>, then we place another type 2 problem so that <span class=\"math\">a_1 + a_2 - a_3</span> becomes <span class=\"math\">0</span>. Since <span class=\"math\">a_1 \\le a_2</span> and they can\u2019t be both zero (otherwise <span class=\"math\">a_1 + a_2 - a_3</span> would not equal <span class=\"math\">1</span>), <span class=\"math\">a_2</span> must be <span class=\"math\">&gt; 0</span>, so there exists at least one type 2 problem.  Note that we can\u2019t place a type 1 problem because the previous problem is also of type 1.</p>\n<p>Finally, if <span class=\"math\">a_1 + a_2 - a_3 = 0</span>, then there are as many type 3 problems as there are type 1 and type 2 combined. In that case, we start with a list of size <span class=\"math\">2a_3</span>, place the type 3 problems on the odd-numbered positions, and place the type 1 and 2 problems in the even-numbered ones. This gives us a valid arrangement!</p>\n<p>Thus, we now have a simple check to see whether it is possible to conduct <span class=\"math\">x</span> contests:</p>\n<div class=\"math\">\n\\min(e-x, \\lceil x/2 \\rceil) + \\min(m-x, \\lceil x/2 \\rceil) + \\min(h, \\lceil x/2 \\rceil) \\ge x\n</div>\n<p>Since this check runs in <span class=\"math\">O(1)</span>, our running time is <span class=\"math\">O(m)</span> in the worst case, so our algorithm passes the time limit!</p>\n<h1>Faster solution</h1>\n<p>A much faster solution exists. Problems like this are amenable to <em>binary search</em> if it satisfies some form of monotonicity. In our case, the following is true:</p>\n<p><strong>If you can conduct <span class=\"math\">x</span> contests, then you can conduct <span class=\"math\">x-1</span> contests.</strong></p>\n<p>This is a trivial observation, nonetheless this is what makes binary search valid. The following is a pseudocode:</p>\n<pre><code>let L = 0 and R = m+1\n\n// we will maintain the invariant that:\n// - it is possible to conduct 'L' contests\n// - it is impossible to conduct 'R' contests\nwhile R - L &gt; 1:\n    M = floor((L + R) / 2)\n    if can_conduct_x_contests(M):\n        L = M\n    else:\n        R = M\n\n// at this point, R = L+1, so the answer is L\nprint L\n</code></pre>\n<p>Using this, our algorithm runs in a much faster <span class=\"math\">O(\\log m)</span> time.</p>\n<p>Finally, we note that an <span class=\"math\">O(1)</span> solution exists, though it\u2019s very tedious to describe and implement, so we will leave it up to the reader to find <img src=\"https://discuss.codechef.com/images/emoji/apple/stuck_out_tongue.png?v=9\" title=\":stuck_out_tongue:\" class=\"emoji\" alt=\":stuck_out_tongue:\"></p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(m)</span> or <span class=\"math\">O(\\log m)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Setter: Will be uploaded soon.<br>\nTester: Will be uploaded soon.<br>\nEditorialist: Will be uploaded soon.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12124,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "17-01-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15chn",
+    "admin2",
+    "binary-search"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Binary Search",
+  "editorial_url": "https://discuss.codechef.com/problems/CHN01",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610677
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN01",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

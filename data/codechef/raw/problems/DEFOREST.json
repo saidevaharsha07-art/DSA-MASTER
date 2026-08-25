@@ -1,0 +1,119 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DEFOREST",
+  "contest_category": "6",
+  "problem_name": "Chef and Deforestation",
+  "intended_contest_code": null,
+  "body": "<p>The Chef has come to a forest. He sees <b>N</b> trees in a line. He wants to tie a rope from the top of one tree to the top of another. To successfully tie this rope, he needs to cut the trees that get in the way of the rope. However, he does not like this kind of deforestation and wants your help to choose the best pair of trees between which to tie the rope.</p>\n<p>Formally, you are given <b>N</b> trees on the X-axis. Tree<b> T<sub>i</sub></b> has height <b>H<sub>i</sub></b> and is planted at <b>x = x<sub>i</sub></b>.</p>\n<p>You need to choose two trees <b>T<sub>i</sub></b> and <b>T<sub>j</sub></b> (where <b>x<sub>i</sub></b> &lt; <b>x<sub>j</sub></b> and <b>H<sub>i</sub></b> &lt; <b>H<sub>j</sub></b>) and connect the <b>tops</b> of these trees with a rope such that the following conditions are satisfied:\n<ul>\n<li>The angle between the rope and the X-axis is equal to <b>45</b> degrees.</li>\n<li>The rope <b>does not pass</b> through any other trees.</li>\n</ul></p>\n<p>In order to satisfy the second condition, you are allowed to reduce the height of any trees except <b>T<sub>i</sub></b> and <b>T<sub>j</sub></b>. Formally, you should choose numbers <b>C<sub>1</sub></b>, <b>C<sub>2</sub></b>, ..., <b>C<sub>N</sub></b>, such that <b>0 \u2264 C<sub>k</sub> \u2264 H<sub>k</sub></b> for each <b>1 \u2264 k \u2264 N</b> and <b>C<sub>i</sub> = C<sub>j</sub> = 0</b>. Then decrease <b>H<sub>k</sub></b> by <b>C<sub>k</sub></b> for each <b>1 \u2264 k \u2264 N</b>.</p>\n<p>Find the maximum value of <b>(length of the rope between the two tops)</b> - <b>(sum of C<sub>k</sub> for each tree T<sub>k</sub>)</b>.</p>\n\n<p>Note that the rope can touch the top of some intermediate tree. Look at the examples given for such a scenario.</p>\n\n<h3>Input</h3>\n<p><ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first line of each test case contains a single integer <b>N</b> denoting the number of trees.</li>\n<li>Each of the following <b>N</b> lines contains two space-separated integers denoting <b>x<sub>i</sub></b> and<b> H<sub>i</sub></b>.</li>\n</ul></p>\n\n<h3>Output</h3>\n<p>For each test case, print a single line with the maximum value of the given expression. Your answer will be considered correct if the <b>absolute or relative error \u2264</b> <b>10<sup>-6</sup></b>. If it's impossible to find any valid pair of trees to tie the rope between, print <b>-1</b> instead.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 100</li>\n<li>1 \u2264 <b>x<sub>i</sub>, H<sub>i</sub></b> \u2264 10<sup>9</sup></li>\n<li>1 \u2264 <b>N</b> \u2264 2.5 \u00b7 10<sup>5</sup></li>\n<li>all <b>x<sub>i</sub></b> will be distinct</li>\n<li>sum of <b>N</b> over all test cases <b>\u2264 5 \u00b7 10<sup>5</sup></b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n\n2\n3\n1 1\n2 2\n3 3\n3\n1 1\n2 5\n3 3\n\n<b>Output:</b>\n\n2.82842712\n-0.17157287\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1:</b> Tie the rope from tree 1 (1,1) to tree 3 (3,3). You don't need to cut down any trees. Note that this rope would touch the top of tree 2, but that is fine. Answer = length of rope = 2 \u00b7 sqrt(2) = 2.82842.</p>\n<p><b>Example case 2:</b> Tie the rope from tree 1 (1,1) to tree 3 (3,3). You need to cut down tree 2 from height 5 to height 2. Answer = length of rope - (height reduction of tree 2) = 2 \u00b7 sqrt(2) - 3 = -0.17157287.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>The Chef has come to a forest. He sees <b>N</b> trees in a line. He wants to tie a rope from the top of one tree to the top of another. To successfully tie this rope, he needs to cut the trees that get in the way of the rope. However, he does not like this kind of deforestation and wants your help to choose the best pair of trees between which to tie the rope.</p>\n<p>Formally, you are given <b>N</b> trees on the X-axis. Tree<b> T<sub>i</sub></b> has height <b>H<sub>i</sub></b> and is planted at <b>x = x<sub>i</sub></b>.</p>\n<p>You need to choose two trees <b>T<sub>i</sub></b> and <b>T<sub>j</sub></b> (where <b>x<sub>i</sub></b> < <b>x<sub>j</sub></b> and <b>H<sub>i</sub></b> < <b>H<sub>j</sub></b>) and connect the <b>tops</b> of these trees with a rope such that the following conditions are satisfied:\n<ul>\n<li>The angle between the rope and the X-axis is equal to <b>45</b> degrees.</li>\n<li>The rope <b>does not pass</b> through any other trees.</li>\n</ul></p>\n<p>In order to satisfy the second condition, you are allowed to reduce the height of any trees except <b>T<sub>i</sub></b> and <b>T<sub>j</sub></b>. Formally, you should choose numbers <b>C<sub>1</sub></b>, <b>C<sub>2</sub></b>, ..., <b>C<sub>N</sub></b>, such that <b>0 \u2264 C<sub>k</sub> \u2264 H<sub>k</sub></b> for each <b>1 \u2264 k \u2264 N</b> and <b>C<sub>i</sub> = C<sub>j</sub> = 0</b>. Then decrease <b>H<sub>k</sub></b> by <b>C<sub>k</sub></b> for each <b>1 \u2264 k \u2264 N</b>.</p>\n<p>Find the maximum value of <b>(length of the rope between the two tops)</b> - <b>(sum of C<sub>k</sub> for each tree T<sub>k</sub>)</b>.</p>\n\n<p>Note that the rope can touch the top of some intermediate tree. Look at the examples given for such a scenario.</p>\n\n<h3>Input</h3>\n<p><ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first line of each test case contains a single integer <b>N</b> denoting the number of trees.</li>\n<li>Each of the following <b>N</b> lines contains two space-separated integers denoting <b>x<sub>i</sub></b> and<b> H<sub>i</sub></b>.</li>\n</ul></p>\n\n<h3>Output</h3>\n<p>For each test case, print a single line with the maximum value of the given expression. Your answer will be considered correct if the <b>absolute or relative error \u2264</b> <b>10<sup>-6</sup></b>. If it's impossible to find any valid pair of trees to tie the rope between, print <b>-1</b> instead.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 100</li>\n<li>1 \u2264 <b>x<sub>i</sub>, H<sub>i</sub></b> \u2264 10<sup>9</sup></li>\n<li>1 \u2264 <b>N</b> \u2264 2.5 \u00b7 10<sup>5</sup></li>\n<li>all <b>x<sub>i</sub></b> will be distinct</li>\n<li>sum of <b>N</b> over all test cases <b>\u2264 5 \u00b7 10<sup>5</sup></b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n\n2\n3\n1 1\n2 2\n3 3\n3\n1 1\n2 5\n3 3\n\n<b>Output:</b>\n\n2.82842712\n-0.17157287\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1:</b> Tie the rope from tree 1 (1,1) to tree 3 (3,3). You don't need to cut down any trees. Note that this rope would touch the top of tree 2, but that is fine. Answer = length of rope = 2 \u00b7 sqrt(2) = 2.82842.</p>\n<p><b>Example case 2:</b> Tie the rope from tree 1 (1,1) to tree 3 (3,3). You need to cut down tree 2 from height 5 to height 2. Answer = length of rope - (height reduction of tree 2) = 2 \u00b7 sqrt(2) - 3 = -0.17157287.</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/DEFOREST\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACM17CHN/problems/DEFOREST\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/usaxena95\" rel=\"nofollow noopener\">Utkarsh Saxena</a></p>\n<p><strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>You are given <span class=\"math\">N</span> trees on the X-axis. Tree <span class=\"math\">T_i</span> has height <span class=\"math\">H_i</span> and is planted at <span class=\"math\">x = x_i</span>.<br>\nYou need to choose two trees <span class=\"math\">T_i</span> and <span class=\"math\">T_j</span> (where <span class=\"math\">x_i &lt; x_j</span> and <span class=\"math\">H_i &lt; H_j</span>) and connect the tops of these trees with a rope such that the following conditions are satisfied:</p>\n<ul>\n<li>The angle between the rope and the X-axis is equal to <span class=\"math\">45</span> degrees.</li>\n<li>The rope does not pass through any other trees.</li>\n</ul>\n<p>In order to satisfy the second condition, you are allowed to reduce the height of any trees except <span class=\"math\">T_i</span> and <span class=\"math\">T_j</span>. Formally, you should choose numbers <span class=\"math\">C_1, C_2, ..., C_N</span>, such that <span class=\"math\">0 \\le C_k \\le H_k</span> for each <span class=\"math\">1 \\le k \\le N</span> and <span class=\"math\">C_i = C_j = 0</span>, then decrease <span class=\"math\">H_k</span> by <span class=\"math\">C_k</span> for each <span class=\"math\">1 \\le k \\le N</span>.</p>\n<p>Find the maximum value of <span class=\"math\">(\\text{Length of the rope between the two tops} - \\sum_{i = 1}^{N} C_i)</span></p>\n<p>Note that the rope can touch the top of some intermediate tree.</p>\n<p>Constraints: <span class=\"math\">N \\le 2.5 \\cdot 10^5</span>. All <span class=\"math\">x_i</span> are distinct.</p>\n<h3>PREREQUISITES</h3>\n<p>Knowledge of Fenwick Tree or Segment Tree.</p>\n<h3>EXPLANATION</h3>\n<h2>Partitioning into groups</h2>\n<p>First, we analyze the constraint given to connect two trees. Note that the two trees we choose cannot have any height reductions. Suppose the pair <span class=\"math\">(i, j)</span> is a valid candidate for the answer. Then we must have <span class=\"math\">H_j - H_i = X_j - X_i</span>. Rearranging this equation, we get that <span class=\"math\">H_i - X_i = H_j - X_j</span>. This gives us a partitioning of all the trees into<br>\ngroups based on their <span class=\"math\">H_i - X_i</span> value. We denote this value as <span class=\"math\">G_i</span>. We can connect two trees if and only if they belong to the same group.</p>\n<h2>Solving each group</h2>\n<p>Consider two trees <span class=\"math\">i</span> and <span class=\"math\">j</span> belonging to the same group i.e. <span class=\"math\">G_i = G_j</span>. Let\u2019s analyze the cost of rope between <span class=\"math\">T_i</span> and <span class=\"math\">T_j</span>. We denote this as <span class=\"math\">cost(i ,j)</span>. If we need to cut the tree at <span class=\"math\">(X_k, H_k)</span> then <span class=\"math\">G_k &gt; G_i</span> and the cost is precisely <span class=\"math\">G_k - G_i</span>. Thus, the total cost is the summation of <span class=\"math\">G_k - G_i</span> where <span class=\"math\">G_k &gt; G_i</span> and <span class=\"math\">X_i &lt; X_k &lt; X_j</span>. Note that if we process the groups in decreasing order of <span class=\"math\">G_i</span> value, then the condition <span class=\"math\">G_k &gt; G_i</span> will implicitly be taken care of, and we would have to consider only the <span class=\"math\">X_i &lt; X_k &lt; X_j</span> constraint, which can be done by using Fenwick Trees indexed by <span class=\"math\">X_i</span> values.</p>\n<p>So now we can compute the cost of each candidate pair in <span class=\"math\">O(\\log{n})</span>, but we\u2019re still not done. Why? Because we<br>\ncan potentially have <span class=\"math\">O(n^2)</span> candidates since a group can have <span class=\"math\">O(n)</span> elements. We\u2019re almost there!</p>\n<h2>Reduction to Maximum Subarray Sum</h2>\n<p>We now present another observation to optimize the previous step. Sort the trees in each group <span class=\"math\">G</span> in increasing order of their <span class=\"math\">X_i</span> values. Now consider three trees <span class=\"math\">(T_i, T_j, T_k)</span> in this sorted group (i.e. <span class=\"math\">X_i &lt; X_j &lt; X_k</span>). Then, <span class=\"math\">cost(i, k) = cost(i, j) + cost(j, k)</span>. Similarly, let\u2019s denote <span class=\"math\">len(p, q)</span> as the length of rope between a valid candidate pair<br>\n<span class=\"math\">(p, q)</span> and <span class=\"math\">profit(p, q)</span> as <span class=\"math\">len(p, q) - cost(p, q)</span>. Then, <span class=\"math\">len(i, k) = len(i, j) + len(j, k)</span> and <span class=\"math\">profit(i, k) =\nprofit(i, j) + profit(j, k)</span>.</p>\n<p>This implies that we need to consider only adjacent trees in a group, and then the profit of <em>any pair</em> can be represented as a sum of a subarray of the profit list we computed. Thus, we only need to consider <span class=\"math\">O(n)</span> adjacent pairs to build this profit list, and then find the maximum sum subarray in this list. This is a very well known problem and can be solved efficiently in <span class=\"math\">O(n \\log{n})</span>.</p>\n<p>That\u2019s it! Note that the complexity is <span class=\"math\">O(n \\log{n})</span> since we use a Fenwick Tree or Segment Tree to efficiently compute<br>\nthe cost and profit of candidate pairs. Note that the fact that we process the groups in decreasing order of <span class=\"math\">G_i</span> values is important too; We would require some more complicated data structures if we didn\u2019t do that.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Setter/DEFOREST.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Tester/DEFOREST.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17706,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "usaxena95",
+  "problem_display_authors": [
+    "usaxena95"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/usaxena95'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>usaxena95</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "13-11-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Segment Trees",
+    "Fenwick Trees",
+    "Coordinate Compression"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures",
+    "Advanced Tree Structures",
+    "Advanced Algorithms",
+    "Pre processing"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/DEFOREST",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610780
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DEFOREST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

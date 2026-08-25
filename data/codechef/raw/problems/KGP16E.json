@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP16E",
+  "contest_category": "6",
+  "problem_name": "Coal mines of Kharagpur",
+  "intended_contest_code": null,
+  "body": "<p>Coal Mafias in Kharagpur are notorious for being one of the biggest perpetrators of crimes against officials protecting the mines. There are <b>n</b> mines in the area, numbered from <b>1</b> to <b>n</b>. Government wants to protect the mines by deploying some guards. As you know, governments usually don't have enough resources to assign a single guard for each mine. Instead, they know that some of the mines are quite near each other, and if there is a guard at some mine, he can monitor/guard these nearby mines also. This information about which of the mines are near to each other is given by <b>m</b> pair of integers <b>u, v</b> denoting the mine numbered <b>u</b> and <b>v</b> are near to each other.</p>\n\n<p>Earlier government already had all the arrangements in the place. Right after the elections, they decided to remove all the guards. So, now it is the new government's responsibility to allocate guards for the mines. You came to know through a very trusted source that the previous government had less than or equal to <b>ceil(n / 3)</b> guards that were protecting all the mines.</p>\n\n<p>Now, you have the responsibility of assigning the guards to the mines. Admit it or not, the general perception of people is that, the current government under which you work is doubly worse and corrupt as compared to the previous one. So, they will cut you slack and will not pay an iota of attention if you put at most <b>ceil((2 * n) / 3)</b> guards for protection of all the mines. If you employ more than this number of guards, public will definitely notice it sooner and later, and will think of this as a scam which will make it hard for the government to save its face in parliament. Mind you, heavens will fall if you dare to deploy more than one guard in a mine.</p>\n\n<p>Find out any possible deployments of guards to the mines. If there are multiple possible ways of choosing mines where guards should be present, you can output any.</p>\n\n<h3>Note</h3>\n<p>ceil(x) denotes the smallest integer greater than or equal to x</p>\n\n<h3>Input</h3>\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case contains two space separated integers <b>n, m</b> denoting number of mines and the number of proximity relationships among the mines.</p>\n<p>Each of the next <b>m</b> lines contains two space separated integers <b>u, v</b> denoting that mines numbered <b>u</b> and <b>v</b> are near each other.</p>\n\n<h3>Output</h3>\n<p>For each test case, output two lines.</p>\n<p>In the first line, output a single integer corresponding to number of guards that you are deploying. Let this number be <b>K</b>.</p>\n<p>In the next line, output <b>K</b> space separated integers corresponding to the mines where you will be having guards for protection.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>n</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>u, v</b> \u2264 <b>n</b></li>\n<li><b>0</b> \u2264 <b>m</b> \u2264 <b>min((n * (n - 1)) / 2, 2 * 10<sup>5</sup>)</b></li>\n<li><b>1</b> \u2264 Sum of <b>n</b> and <b>m</b> each, over all the test cases \u2264 <b>5 * 10<sup>5</sup></b></li>\n<li>No proximity relationship appears more than once in a input for a single test case.</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n3 2\n1 2\n2 3\n3 3\n1 2\n2 3\n1 3\n\n<b>Output:</b>\n1\n2\n2\n1 2\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1.</b> You can deploy a guard at the mine 2. He will also guard the nearby mines 1 and 3 too.</p>\n<p><b>Example case 2.</b> You can have an guard at mine 1 and one more guard at mine 2. These two guards will also guard the 3rd mine. As, we see that number of guards deployed are 2, which is equal to ceil(6 / 3) = 2, so nobody will say anything about this.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **T** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **n** \u2264 **10<sup>5</sup>**\n- **1** \u2264 **u, v** \u2264 **n**\n- **0** \u2264 **m** \u2264 **min((n * (n - 1)) / 2, 2 * 10<sup>5</sup>)**\n- **1** \u2264 Sum of **n** and **m** each, over all the test cases \u2264 **5 * 10<sup>5</sup>**\n- No proximity relationship appears more than once in a input for a single test case.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Coal Mafias in Kharagpur are notorious for being one of the biggest perpetrators of crimes against officials protecting the mines. There are **n** mines in the area, numbered from **1** to **n**. Government wants to protect the mines by deploying some guards. As you know, governments usually don't have enough resources to assign a single guard for each mine. Instead, they know that some of the mines are quite near each other, and if there is a guard at some mine, he can monitor/guard these nearby mines also. This information about which of the mines are near to each other is given by **m** pair of integers **u, v** denoting the mine numbered **u** and **v** are near to each other.\n\nEarlier government already had all the arrangements in the place. Right after the elections, they decided to remove all the guards. So, now it is the new government's responsibility to allocate guards for the mines. You came to know through a very trusted source that the previous government had less than or equal to $\\lceil n / 3 \\rceil$ guards that were protecting all the mines.\n\nNow, you have the responsibility of assigning the guards to the mines. Admit it or not, the general perception of people is that, the current government under which you work is doubly worse and corrupt as compared to the previous one. So, they will cut you slack and will not pay an iota of attention if you put at most $\\lceil (2 * n) / 3 \\rceil$ guards for protection of all the mines. If you employ more than this number of guards, public will definitely notice it sooner and later, and will think of this as a scam which will make it hard for the government to save its face in parliament. Mind you, heavens will fall if you dare to deploy more than one guard in a mine.\n\nFind out any possible deployments of guards to the mines. If there are multiple possible ways of choosing mines where guards should be present, you can output any.\n\n**Note:** $\\lceil x \\rceil$ denotes the smallest integer greater than or equal to $x$.\n",
+    "inputFormat": "First line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nThe first line of each test case contains two space separated integers **n, m** denoting number of mines and the number of proximity relationships among the mines.\n\nEach of the next **m** lines contains two space separated integers **u, v** denoting that mines numbered **u** and **v** are near each other.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output two lines.\n\nIn the first line, output a single integer corresponding to number of guards that you are deploying. Let this number be **K**.\n\nIn the next line, output **K** space separated integers corresponding to the mines where you will be having guards for protection.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 2\n1 2\n2 3\n3 3\n1 2\n2 3\n1 3\n",
+        "output": "1\n2\n2\n1 2\n",
+        "explanation": "**Example case 1.** You can deploy a guard at the mine 2. He will also guard the nearby mines 1 and 3 too.\n\n**Example case 2.** You can have an guard at mine 1 and one more guard at mine 2. These two guards will also guard the 3rd mine. As, we see that number of guards deployed are 2, which is equal to $\\lceil 6 / 3 \\rceil = 2$, so nobody will say anything about this.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610965
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP16E",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

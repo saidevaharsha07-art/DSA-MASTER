@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CIRMERGE",
+  "contest_category": "6",
+  "problem_name": "Circular Merging",
+  "intended_contest_code": "JULY19",
+  "body": "\n$N$ integers $A_1, A_2, \\ldots, A_N$ are placed in a circle in such a way that for each valid $i$, $A_i$ and $A_{i+1}$ are adjacent, and $A_1$ and $A_N$ are also adjacent.\n\nWe want to repeat the following operation exactly $N-1$ times (until only one number remains):\n- Select two adjacent numbers. Let's denote them by $a$ and $b$.\n- Score $a+b$ penalty points.\n- Erase both $a$ and $b$ from the circle and insert $a+b$ in the space between them.\n\nWhat is the minimum number of penalty points we can score?\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains $N$ space-separated integers $a_1, a_2, \\ldots, a_N$.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the minimum number of penalty points.\n\n### Constraints \n- $1 \\le T \\le 10$\n- $2 \\le N \\le 400$\n- $1 \\le a_i \\le 10^9$ for each valid $i$\n\n### Subtasks\n**Subtask #1 (10 points):**\n- $2 \\le N \\le 10$\n- $a_i \\le 10$ for each valid $i$\n\n**Subtask #2 (10 points):**\n- $2 \\le N \\le 25$\n- $a_1, a_2, \\ldots, a_N$ are distinct powers of $2$ (including $1$)\n\n**Subtask #3 (10 points):** $2 \\le N \\le 100$\n\n**Subtask #4 (70 points):** original constraints\n\n### Example Input\n```\n1\n3\n10 10 1\n```\n\n### Example Output\n```\n32\n```\n\n### Explanation\n\n- $[10,10,1] \\rightarrow [10, 11]$, penalty:  $11$\n- $[10,11] \\rightarrow [21]$, penalty:  $21$\n- Total penalty: $11+21=32$\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\n$N$ integers $A_1, A_2, \\ldots, A_N$ are placed in a circle in such a way that for each valid $i$, $A_i$ and $A_{i+1}$ are adjacent, and $A_1$ and $A_N$ are also adjacent.\n\nWe want to repeat the following operation exactly $N-1$ times (until only one number remains):\n- Select two adjacent numbers. Let's denote them by $a$ and $b$.\n- Score $a+b$ penalty points.\n- Erase both $a$ and $b$ from the circle and insert $a+b$ in the space between them.\n\nWhat is the minimum number of penalty points we can score?\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains $N$ space-separated integers $a_1, a_2, \\ldots, a_N$.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the minimum number of penalty points.\n\n### Constraints \n- $1 \\le T \\le 10$\n- $2 \\le N \\le 400$\n- $1 \\le a_i \\le 10^9$ for each valid $i$\n\n### Subtasks\n**Subtask #1 (10 points):**\n- $2 \\le N \\le 10$\n- $a_i \\le 10$ for each valid $i$\n\n**Subtask #2 (10 points):**\n- $2 \\le N \\le 25$\n- $a_1, a_2, \\ldots, a_N$ are distinct powers of $2$ (including $1$)\n\n**Subtask #3 (10 points):** $2 \\le N \\le 100$\n\n**Subtask #4 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n3\n10 10 1",
+        "output": "32",
+        "explanation": "- $[10,10,1] \\rightarrow [10, 11]$, penalty:  $11$\n- $[10,11] \\rightarrow [21]$, penalty:  $21$\n- Total penalty: $11+21=32$",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 29723,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "5",
+  "source_sizelimit": "50000",
+  "problem_author": "erfaniaa",
+  "problem_display_authors": [
+    "erfaniaa"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/erfaniaa'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>erfaniaa</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "anand20",
+  "date_added": "15-06-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "erfaniaa",
+    "july19",
+    "long-challenge"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "2208",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610683
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CIRMERGE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

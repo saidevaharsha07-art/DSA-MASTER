@@ -1,0 +1,666 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "tcs-nqt-questions",
+  "name": "TCS NQT Coding Questions",
+  "title": "TCS NQT Coding Questions",
+  "level": "Intermediate",
+  "description": "Prepare for TCS NQT with previous years questions. Solve the coding, numerical ability, reasoning ability, verbal ability and quant questions which were asked in the past.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:52",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTC/problems/TCSNQTCP01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Coding Problems",
+      "description": "Practice the previous years TCS NQT coding problems.",
+      "submodules": [
+        {
+          "name": "Past Years Coding Problems",
+          "submodule_id": 6547,
+          "contest_code": "TCSNQTC",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTC/problems/TCSNQTCP01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP01",
+              "name": "Count Pairs divisible by 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP02",
+              "name": "Factorial without Multiplication & Division",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP03",
+              "name": "Identify Row with Most 1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP04",
+              "name": "Count Character Occurrences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP05",
+              "name": "Good Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP06",
+              "name": "Vehicle Manufacturing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP07",
+              "name": "Longest Common Prefix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP08",
+              "name": "Union of Sorted Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP09",
+              "name": "Find Equilibrium Point",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30130",
+              "code": "TCSNQTCP10",
+              "name": "Convert number to words",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Numerical Ability Problems",
+      "description": "Practice the previous years TCS NQT numerical ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Numerical Ability Problems",
+          "submodule_id": 6548,
+          "contest_code": "TCSNQTNA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTNA/problems/TCSNQTNA01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA01",
+              "name": "Task Completion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA02",
+              "name": "Count Coins",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA04",
+              "name": "Cost of two articles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA03",
+              "name": "Original Price",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA05",
+              "name": "Heads and Tails",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA06",
+              "name": "Divisibility",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA07",
+              "name": "Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA08",
+              "name": "Sum of Sequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA09",
+              "name": "Range Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30188",
+              "code": "TCSNQTNA10",
+              "name": "Count Triangles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Reasoning Ability Problems",
+      "description": "Practice the previous years TCS NQT reasoning ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Reasoning Ability Problems",
+          "submodule_id": 6549,
+          "contest_code": "TCSNQTRA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTRA/problems/TCSNQTRA02",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA02",
+              "name": "Coding - Encoding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA03",
+              "name": "Train Arrival",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA04",
+              "name": "Blood - Relationships",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA05",
+              "name": "Degrees in Clock",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA06",
+              "name": "Day in 2016",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA07",
+              "name": "Missing number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA08",
+              "name": "Seating Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA09",
+              "name": "Conclusion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA10",
+              "name": "Assumption",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30189",
+              "code": "TCSNQTRA11",
+              "name": "Directions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Verbal Ability Problems",
+      "description": "Practice the previous years TCS NQT verbal ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Verbal Ability Problems",
+          "submodule_id": 6550,
+          "contest_code": "TCSNQTVA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTVA/problems/TCSNQTVA02",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA02",
+              "name": "Grammatical Errors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA03",
+              "name": "Antonyms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA04",
+              "name": "Sentence formation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA05",
+              "name": "Spelling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA06",
+              "name": "Sentence Improvement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA07",
+              "name": "Active Passive Voice",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA08",
+              "name": "Direct Indirect",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA09",
+              "name": "Analogies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA10",
+              "name": "Selecting Words",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30190",
+              "code": "TCSNQTVA11",
+              "name": "Complete the Statement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Quant Problems",
+      "description": "Practice the previous years TCS NQT quant problems.",
+      "submodules": [
+        {
+          "name": "Past Years Quant Problems",
+          "submodule_id": 6551,
+          "contest_code": "TCSNQTQA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/tcs-nqt-questions/TCSNQTQA/problems/TCSNQTQA01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA01",
+              "name": "Trains Collision",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA02",
+              "name": "Time and Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA03",
+              "name": "Tower Height",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA04",
+              "name": "Interests",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA05",
+              "name": "Age ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA06",
+              "name": "Percentage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA07",
+              "name": "Volume and Surface Area",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA08",
+              "name": "HCF and LCM",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA09",
+              "name": "Milk Mixture ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30193",
+              "code": "TCSNQTQA10",
+              "name": "Data Interpretation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 50,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 17821,
+  "path_review": {
+    "rating": 4.6,
+    "users": 163
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EOSUBSEQ",
+  "contest_category": "6",
+  "problem_name": "A - Even Odd subsequences",
+  "intended_contest_code": null,
+  "body": "You are given an array $a$ of length $n$. A subsequence of this array is valid, if it satisfies these two conditions:\r\n- There shouldn't be any two even numbers within a distance of $K$, both which have been chosen in the subsequence. i.e. there shouldn't be two indices $i, j$ such that $a_i$ and $a_j$ are even, $|i - j| \\leq K$ and $a_i$ and $a_j$ are in the subsequence. \r\n- Similarly, there shouldn't be any two odd numbers within a distance of $K$, both which have been chosen in the subsequence\r\n\r\nThe sum of a subsequence is the sum of all the numbers in it. Your task is find the maximum sum possible in a valid subsequence of the given array. Print this maximum sum.\r\n\r\n\r\n### Input\r\n- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\r\n- The first line of each test case contains two space-separated integers $n, k$.\r\n- The second line of each test case contains $n$ space-separated integers denoting the array $a$.\r\n\r\n### Output\r\nFor each test case, output an integer corresponding to the answer of the problem.\r\n\r\n###Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $1 \\le n \\leq 10^5$\r\n- $1 \\le k \\leq  n$\r\n- $1 \\le a_i \\leq 10^9$\r\n- Sum of $n$ over all the test cases doesn't exceed $10^6$\r\n\r\n### Example Input\r\n```\r\n3\r\n1 1\r\n3\r\n2 1\r\n2 2\r\n5 2\r\n1 2 3 4 6\r\n```\r\n\r\n### Example Output\r\n```\r\n3\r\n2\r\n11\r\n```\r\n\r\n###Explanation:\r\n**Testcase 2**: Only one of the two 2s can be chosen. Hence the answer is 2.\r\n\r\n**Testcase 3**: The subsequence containing the second, third and fifth numbers is a valid subsequence, and its sum is 2+3+6 = 11. You can check that this is the maximum possible, and hence is the answer.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $1 \\le n \\leq 10^5$\n- $1 \\le k \\leq n$\n- $1 \\le a_i \\leq 10^9$\n- Sum of $n$ over all the test cases doesn't exceed $10^6$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given an array $a$ of length $n$. A subsequence of this array is valid, if it satisfies these two conditions:\n\n- There shouldn't be any two even numbers within a distance of $K$, both which have been chosen in the subsequence. i.e. there shouldn't be two indices $i, j$ such that $a_i$ and $a_j$ are even, $|i - j| \\leq K$ and $a_i$ and $a_j$ are in the subsequence.\n- Similarly, there shouldn't be any two odd numbers within a distance of $K$, both which have been chosen in the subsequence.\n\nThe sum of a subsequence is the sum of all the numbers in it. Your task is to find the maximum sum possible in a valid subsequence of the given array. Print this maximum sum.\n",
+    "inputFormat": "- The first line of the input contains an integer $T$ denoting the number of test cases. The description of the test cases follows.\n- The first line of each test case contains two space-separated integers $n, k$.\n- The second line of each test case contains $n$ space-separated integers denoting the array $a$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output an integer corresponding to the answer of the problem.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1 1\n3\n2 1\n2 2\n5 2\n1 2 3 4 6\n",
+        "output": "3\n2\n11\n",
+        "explanation": "**Testcase 2**: Only one of the two 2s can be chosen. Hence the answer is 2.\n\n**Testcase 3**: The subsequence containing the second, third and fifth numbers is a valid subsequence, and its sum is $2 + 3 + 6 = 11$. You can check that this is the maximum possible, and hence is the answer.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Dynamic Programming"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610808
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EOSUBSEQ",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

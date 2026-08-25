@@ -1,0 +1,120 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BBXJG01",
+  "contest_category": "6",
+  "problem_name": "Chef Builds Stack",
+  "intended_contest_code": "DSAMONDAY004",
+  "body": "Chef wants to implement a last-in-first-out (LIFO) stack using only two queues. Chef knows that a stack supports operations like pushing an element, popping the top element, checking the top element, and checking if the stack is empty. However, Chef wants to build this stack using only the standard queue operations: pushing to the back, popping or peeking from the front, checking size, and verifying if the queue is empty.\n\nHelp Chef by implementing a class called `StackUsingQueues` that supports the following operations efficiently using two queues:\n\n- Push an element onto the stack.\n- Pop the element on the top of the stack.\n- Retrieve the top element without removing it.\n- Check if the stack is empty.\n\nChef wants the stack to behave exactly like a normal stack, but internally it must use two queues only.\n\n## Function Declaration\n\n### Function Name\n`createStack` - This function initializes and returns a new instance of the `StackUsingQueues` class.\n\n### Parameters\n- This function does not take any parameters.\n\n### Return Value\n- Returns a pointer to a `StackUsingQueues` object.\n- The returned object represents an empty stack ready for push and pop operations.\n- The output is a valid stack instance allocated dynamically.\n\n## Input Format\n* The first line contains a single integer $T$ \u2014 the number of test cases.\n* Each test case consists of a sequence of operations to be performed on Chef's stack.\n* Each operation is one of the following:\n  * `\"push x\"` \u2014 Pushes the integer $x$ onto the stack.\n  * `\"pop\"` \u2014 Removes the top element from the stack and returns it.\n  * `\"top\"` \u2014 Returns the top element of the stack.\n  * `\"empty\"` \u2014 Returns whether the stack is empty (`true` or `false`).\n\n## Output Format\n* For each operation that returns a value (`pop`, `top`, `empty`), print the result on a new line.\n* For `pop` and `top`, print the integer element.\n* For `empty`, print `true` if the stack is empty, otherwise print `false`.\n\n## Constraints\n- $1 \\leq T \\leq 10^5$\n- For each `push` operation, $1 \\leq x \\leq 9$\n- At most $100$ operations will be performed per test case.\n- All `pop` and `top` operations are guaranteed to be valid (the stack will not be empty when these operations are called).\n\nHelp Chef implement this stack using only two queues and standard queue operations!\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": " ",
+    "constraintsState": false,
+    "subtasks": " ",
+    "subtasksState": false,
+    "statement": "Chef wants to implement a stack that follows the **Last-In-First-Out (LIFO)** principle using only **two queues**.  \n**Queues** support operations such as **push to back**, **pop or peek from front**, **size**, and **isEmpty**.  \nChef needs to design a stack using only queue operations such that it behaves **exactly like a normal stack**.\n\n---\n### Class Description\n\nChef will implement a class named **$StackUsingQueues$**. \n \nThe class supports the following operations:  \n- **$push(x)$**  \nPushes the element **$x$** onto the **top of the stack**.  \n- **$pop()$**  \nRemoves and returns the **top element** of the stack.  \n- **$top()$**  \nReturns the **top element** of the stack **without removing it**.  \n- **$empty()$**  \nReturns **true** if the stack is empty, otherwise returns **false**.\n\n---\n\n### Constraints\n\n- **$1 \\le T \\le 10^5$** \u2014 number of test cases  \nFor each test case: At most **$100$ operations** will be performed.  \n- For each push operation: **$1 \\le x \\le 10^9$**  \n- All **$pop()$** and **$top()$** operations are guaranteed to be valid.\n",
+    "inputFormat": "The first line contains a single integer **$T$** \u2014 the number of test cases.  \nFor each test case:\n- A sequence of operations is performed on the stack.\n- Each operation is one of the following:\n  - **push $x$**\n  - **pop**\n  - **top**\n  - **empty**",
+    "inputFormatState": true,
+    "outputFormat": " For each operation that produces a result, print the output on a new line.\n\n- For **$pop()$** and **$top()$**, print the integer value.\n- For **$empty()$**, print **true** if the stack is empty, otherwise print **false**.\n- For $push(x)$, print **None**.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4\npush 1\npush 2\npop\ntop\n3\npush 9\npop\nempty",
+        "output": "None\nNone\n2\n1\nNone\n9\ntrue",
+        "explanation": "### For Test Case 1:\n\n- `push 1`: Stack becomes `[1]`, output `None`\n- `push 2`: Stack becomes `[1, 2]`, output `None`\n- `pop`: Stack becomes `[1]`, output `2`\n- `top`: Stack remains `[1]`, output `1`\n\n### For Test Case 2:\n\n- `push 9`: Stack becomes `[9]`, output `None`\n- `pop`: Stack becomes `[]` (empty), output `9`\n- `empty`: Stack is empty, output `true`\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "We are required to implement a **stack** (LIFO) using **queues** and support the operations  \n$\\texttt{push}$, $\\texttt{pop}$, $\\texttt{top}$, and $\\texttt{empty}$.\n\nBelow are two approaches:\n\n---\n\n## Approach 1: Brute Force\n\n### Idea\n- Use **two queues**: $q_1$ and $q_2$.\n- Keep all elements in $q_1$.\n- For $\\texttt{pop}$ and $\\texttt{top}$, move elements from $q_1$ to $q_2$ until only one element is left in $q_1$.\n- That last element represents the **top of the stack**.\n\n### Operations\n- **$\\texttt{push}(x)$**  \n  - Enqueue $x$ into $q_1$.\n\n- **$\\texttt{pop}()$**\n  - Move $\\text{size}(q_1) - 1$ elements from $q_1$ to $q_2$.\n  - The remaining element in $q_1$ is removed (this is the stack top).\n  - Swap $q_1$ and $q_2$.\n\n- **$\\texttt{top}()$**\n  - Same as $\\texttt{pop}()$, but after reading the last element, push it into $q_2$ instead of discarding it.\n\n- **$\\texttt{empty}()$**\n  - Return whether $q_1$ is empty.\n\n### Complexity\n- **$\\texttt{push}$**: $O(1)$  \n- **$\\texttt{pop}$**: $O(N)$  \n- **$\\texttt{top}$**: $O(N)$  \n- **$\\texttt{empty}$**: $O(1)$  \n- **Space**: $O(N)$\n\n### Drawback\n$\\texttt{pop}$ and $\\texttt{top}$ are expensive because elements are repeatedly moved between $q_1$ and $q_2$.\n\n---\n\n## Approach 2: Optimized (Push-Costly)\n\n### Idea\n- Use **two queues**: $q_1$ and $q_2$.\n- Always maintain the stack order in $q_1$, such that the **front of $q_1$ is the stack top**.\n- Perform all heavy operations during $\\texttt{push}$.\n\n### Operations\n- **$\\texttt{push}(x)$**\n  - Enqueue $x$ into $q_2$.\n  - Move all elements from $q_1$ to $q_2$.\n  - Swap $q_1$ and $q_2$.\n  - Now, $\\text{front}(q_1)$ is always the stack top.\n\n- **$\\texttt{pop}()$**\n  - Dequeue the front element from $q_1$.\n\n- **$\\texttt{top}()$**\n  - Return $\\text{front}(q_1)$.\n\n- **$\\texttt{empty}()$**\n  - Return whether $q_1$ is empty.\n\n### Complexity\n- **$\\texttt{push}$**: $O(N)$  \n- **$\\texttt{pop}$**: $O(1)$  \n- **$\\texttt{top}$**: $O(1)$  \n- **$\\texttt{empty}$**: $O(1)$  \n- **Space**: $O(N)$\n\n### Why This Is Better\n- In most stack use-cases, $\\texttt{pop}$ and $\\texttt{top}$ are called more frequently than $\\texttt{push}$.\n- Making $\\texttt{pop}$ and $\\texttt{top}$ constant-time improves overall performance.\n",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "nonameetcetc",
+  "problem_display_authors": [
+    "nonameetcetc"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/nonameetcetc'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>nonameetcetc</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-12-2025",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "nonameetcetc"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1779723000,
+    "submit_start_date": 1779723000,
+    "visible_start_date": 1779723000,
+    "end_date": 1893436200,
+    "current": 1785610636
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BBXJG01",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 10,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BITEQU",
+  "contest_category": "6",
+  "problem_name": "Bitwise Equation",
+  "intended_contest_code": "START78",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^4$\n- $0 \\leq N \\lt 2^{32}$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "Given an integer $N$, find four **positive** **distinct** integers $a$, $b$, $c$ and $d$ such that:\n- $1 \\leq a, b, c, d \\leq 10^{18}$\n- $((a\\mathbin{\\&}b)\\mathbin{|}c)\\oplus d = N$\n\nHere $\\mathbin{\\&}$, $\\mathbin{|}$, and $\\oplus$ represent [bitwise AND, OR and XOR](https://en.wikipedia.org/wiki/Bitwise_operation), respectively.\n\nIf there are multiple answers, print **any** of them. If no answer exists, print $-1$.\n\n",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of one line of input, containing a single integer $N$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output $-1$ if there is no way to find four distinct integers to satisfy the equation.\n\nOtherwise, print on a new line **any** four space-separated integers $a$, $b$, $c$ and $d$ that satisfy the conditions.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1\n2\n3221225472\n",
+        "output": "1 4 3 2\n2 4 3 1\n920426639 955944413 754668683 4244364431\n",
+        "explanation": "**Test case $1$:** We have $a = 1$, $b = 4$, $c = 3$, $d = 2$ and $((a\\mathbin{\\&}b)\\mathbin{|}c)\\oplus d = (0 \\mathbin{|}3) \\oplus 2 = 3 \\oplus 2 = 1.$\n\n**Test case $2$:** We have $a = 2$, $b = 4$, $c = 3$, $d = 1$ and $((a\\mathbin{\\&}b)\\mathbin{|}c)\\oplus d = (0 \\mathbin{|}3) \\oplus 1 = 3 \\oplus 1 = 2.$\n\n**Test case $3$:** Note that the value of $N$ might exceed the limit of signed a $32$-bit integer, use unsigned $32$-bit integers or $64$-bit integers instead.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "63f6266842fec0a0e88c5451",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 105323,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, NODEJS",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "gudegude"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/gudegude'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>gudegude</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-02-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Randomized Algorithms",
+    "Bitwise Operation"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Mathematics",
+    "Bit Manipulation"
+  ],
+  "difficulty_rating": "1679",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610642
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BITEQU",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 110,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

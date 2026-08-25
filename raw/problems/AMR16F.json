@@ -1,0 +1,122 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMR16F",
+  "contest_category": "6",
+  "problem_name": "Notes and GPS Chips",
+  "intended_contest_code": null,
+  "body": "<p>Suryansh, a nanophysics enthusiast, is studying about the GPS Chips present in the\nnewly released Rs. 2000 note. After careful analysis, he has come to know that the GPS\nchips contain nanoparticles! In fact, there are 2 types of GPS Chips:</p>\n\n<p><b>1. Square Shaped</b>:\nThese chips contain <b>square-shaped</b> nanoparticles. A square-shaped GPS Chip of size Z x Z contains Z<sup>2</sup> nanoparticles. See figure 1 for a 4 X 4 sized square shaped chip.</p>\n\n<p><b>2. Hexagonal Beehive Shaped</b>:\nThese chips contain <b>hexagon-shaped</b> nanoparticles arranged like a beehive.\nFrom nanoscopic analysis information, we know that the chip is divided into levels with <b>a hole in the middle</b>.\nThe size of chip is defined as the number of layers it possesses where <b>1<sup>st</sup></b> level contains <b>6</b> nanoparticles, <b>2<sup>nd</sup></b> level contains <b>12</b> nanoparticles, ... , and so on.\nHence, a chip of size 1 has <b>6</b> nanoparticles, a chip of size 2 has <b>18</b>\nnanoparticles (See Figure 2 for clarity), and so on.\n\n<p>Suryansh wishes to create his own Rs. 2000 note for experimental purposes, for which he needs to buy GPS Chips. From the popular Netcoin Shopping Website, he comes to know that for <b>Z Netcoins</b> he can either\npurchase a square-shaped chip of size <b>Z x Z</b> <i>or</i> a hexagon-shaped chip of size <b>Z</b>. For example, with <b>2 Netcoins</b>, he can either buy square-shaped chip containing <b>4</b> nanoparticles <i>or</i> hexagon-shaped chip containing <b>18</b> nanoparticles.</p>\n<p>Suryansh currently has <b>N Netcoins</b> which he wants to spend <b>entirely</b>. He needs to purchase exactly <b>A</b> square-shaped chips and <b>B</b> hexagon-shaped chips using his entire amout of N Netcoins. He wants to create this new note using all of these <b>A + B</b> GPS Chips.</p>\n\n\n<p><img src=\"https://s3.amazonaws.com/codechef_shared/download/upload/amr01.jpg\" height=\"250\"/></p>\n<p><img src=\"https://s3.amazonaws.com/codechef_shared/download/upload/amr02.jpg\" height=\"250\"/></p>\n\n<p>Suryansh denoted the number of nanoparticles in the i<sup>th</sup> chip that he bought as <b>p<sub>i</sub></b>. He knew that if he decides to buy chips such that they have <b>p<sub>1</sub>, p<sub>2</sub>, ..., p<sub>A+B</sub></b> nanoparticles respectively, his new note will have signal level of: <b>p<sub>1</sub> * p<sub>2</sub> * p<sub>3</sub> * ... * p<sub>A+B</sub></b>\nHe calls this the sequence <b>p<sub>1</sub>, p<sub>2</sub>, ..., p<sub>A+B</sub></b> a <b>configuration</b>.</p>\n\n<p>Help him find <b>sum</b> of signal levels of all possible configurations modulo <b>1234567891</b>.\nTwo configurations are different if any of the <b>p<sub>i</sub></b> is different.</p>\n\n\n\n<h3>Input</h3>\n<p>\nFirst line contains a single integer <b>T</b> - the number of testcases.<br/>\nT testcases follow which have the following format:<br/>\nA single line of input contains 3 space-separated integers <b>A</b>, <b>B</b> and <b>N</b>, denoting the number of square-shaped chips, number of hexagonal beehive shaped chips and number of netcoins.</p>\n\n<h3>Output</h3>\n<p>For each testcase, print the sum of signal levels of all possible configurations modulo <b>1234567891</b>.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 T \u2264 10</b></li>\n<li><b>1 \u2264 A, B \u2264 10<sup>5</sup></b></li>\n<li><b>1 \u2264 N \u2264 10<sup>9</sup></b></li>\n</ul>\n\n<h3>Sample Input</h3>\n<b>Input:</b><pre>2\n1 1 3\n2 1 4\n\n<b>Output:</b>\n42\n66\n</pre>\n\n<h3>Explanation:</h3>\n\n<p><b>Testcase 1:</b></p>\n<p><b>A</b> = 1, <b>B</b> = 1, <b>N</b> = 3.</p>\n<p>Since <b>N</b> Netcoins have to be spent entirely, the only 2 ways in which\nchips can be bought are:</p>\n<ol>\n<li>1 square-shaped chip of size 2x2 and 1 hexagon-shaped chip of size 1 are bought.\np<sub>1</sub> = 4, p<sub>2</sub> = 6. Signal Level<sub>1</sub> = 4*6 = 24</li>\n<li>1 square-shaped chip of size 1x1 and 1 hexagon-shaped chip that has levels uptil level 2 are bought.\np<sub>1</sub> = 1, p<sub>2</sub> = 18.\nSignal Level<sub>2</sub> = 1*18 = 18</li>\n</ol>\n</p>\n\n<p><b>Testcase 2:</b></p>\n<p><b>A</b> = 2, <b>B</b> = 1, <b>N</b> = 4.</p>\n\n<p>\nLet the 2 square-shaped chips be <b>S<sub>1</sub></b> and <b>S<sub>2</sub></b> respectively.\nLet the 1 hexagon-shaped chip be <b>H<sub>1</sub></b>.\n</p>\n\n<p>\nThe ways in which the chips can be bought are:\n<ul>\n<li>S1 = 1, S2 = 1, H1 = 2 => Signal Level<sub>1</sub> = 1 * 1 * 18 = 18</li>\n<li>S1 = 1, S2 = 2, H1 = 1 => Signal Level<sub>2</sub> = 1 * 4 * 6 = 24</li>\n<li>S1 = 2, S2 = 1, H1 = 1 => Signal Level<sub>3</sub> = 4 * 1 * 6 = 24</li>\n</ul>\n</p>\n\n<p>\nSum of signal levels = 18 + 24 + 24 = 66.\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 10**  \n- **1 \u2264 A, B \u2264 10<sup>5</sup>**  \n- **1 \u2264 N \u2264 10<sup>9</sup>**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Suryansh, a nanophysics enthusiast, is studying about the GPS Chips present in the newly released Rs. 2000 note. After careful analysis, he has come to know that the GPS chips contain nanoparticles! In fact, there are 2 types of GPS Chips:\n\n1. **Square Shaped**:  \n   These chips contain **square-shaped** nanoparticles. A square-shaped GPS Chip of size $Z \\times Z$ contains $Z^2$ nanoparticles. See figure 1 for a $4 \\times 4$ sized square-shaped chip.\n\n2. **Hexagonal Beehive Shaped**:  \n   These chips contain **hexagon-shaped** nanoparticles arranged like a beehive. From nanoscopic analysis information, we know that the chip is divided into levels with **a hole in the middle**. The size of the chip is defined as the number of layers it possesses where the **1<sup>st</sup>** level contains **6** nanoparticles, the **2<sup>nd</sup>** level contains **12** nanoparticles, ..., and so on. Hence, a chip of size 1 has **6** nanoparticles, a chip of size 2 has **18** nanoparticles (See Figure 2 for clarity), and so on.\n\nSuryansh wishes to create his own Rs. 2000 note for experimental purposes, for which he needs to buy GPS Chips. From the popular Netcoin Shopping Website, he comes to know that for **Z Netcoins** he can either purchase a square-shaped chip of size **Z x Z** *or* a hexagon-shaped chip of size **Z**. For example, with **2 Netcoins**, he can either buy a square-shaped chip containing **4** nanoparticles *or* a hexagon-shaped chip containing **18** nanoparticles.\n\nSuryansh currently has **N Netcoins** which he wants to spend **entirely**. He needs to purchase exactly **A** square-shaped chips and **B** hexagon-shaped chips using his entire amount of N Netcoins. He wants to create this new note using all of these **A + B** GPS Chips.\n\nSuryansh denoted the number of nanoparticles in the i<sup>th</sup> chip that he bought as **$p_i$**. He knew that if he decides to buy chips such that they have **$p_1, p_2, \\dots, p_{A+B}$** nanoparticles respectively, his new note will have a signal level of:  \n$$p_1 \\times p_2 \\times p_3 \\times \\dots \\times p_{A+B}$$  \nHe calls this sequence **$p_1, p_2, \\dots, p_{A+B}$** a **configuration**.\n\nHelp him find the **sum** of signal levels of all possible configurations modulo **1234567891**.  \nTwo configurations are different if any of the **$p_i$** is different.\n",
+    "inputFormat": "First line contains a single integer **T** - the number of testcases.  \nT testcases follow which have the following format:  \nA single line of input contains 3 space-separated integers **A**, **B**, and **N**, denoting the number of square-shaped chips, number of hexagonal beehive-shaped chips, and number of netcoins.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each testcase, print the sum of signal levels of all possible configurations modulo **1234567891**.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 1 3\n2 1 4\n",
+        "output": "42\n66\n",
+        "explanation": "**Testcase 1:**  \n**A** = 1, **B** = 1, **N** = 3.  \nSince **N** Netcoins have to be spent entirely, the only 2 ways in which chips can be bought are:  \n1. 1 square-shaped chip of size 2x2 and 1 hexagon-shaped chip of size 1 are bought.  \n   $p_1 = 4$, $p_2 = 6$.  \n   Signal Level$_1$ = $4 \\times 6 = 24$  \n2. 1 square-shaped chip of size 1x1 and 1 hexagon-shaped chip that has levels up to level 2 are bought.  \n   $p_1 = 1$, $p_2 = 18$.  \n   Signal Level$_2$ = $1 \\times 18 = 18$  \n\n**Testcase 2:**  \n**A** = 2, **B** = 1, **N** = 4.  \nLet the 2 square-shaped chips be **$S_1$** and **$S_2$** respectively.  \nLet the 1 hexagon-shaped chip be **$H_1$**.  \nThe ways in which the chips can be bought are:  \n- $S_1 = 1$, $S_2 = 1$, $H_1 = 2$ => Signal Level$_1$ = $1 \\times 1 \\times 18 = 18$  \n- $S_1 = 1$, $S_2 = 2$, $H_1 = 1$ => Signal Level$_2$ = $1 \\times 4 \\times 6 = 24$  \n- $S_1 = 2$, $S_2 = 1$, $H_1 = 1$ => Signal Level$_3$ = $4 \\times 1 \\times 6 = 24$  \n\nSum of signal levels = $18 + 24 + 24 = 66$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/AMR16MOS/problems/AMR16F\" rel=\"nofollow noopener\">Contest(Mirror)</a><br>\n<a href=\"https://www.codechef.com/problems/AMR16F\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Setter-</strong><a href=\"https://www.codechef.com/users/akash4983\" rel=\"nofollow noopener\">Akashdeep Nain</a><br>\n<strong>Tester-</strong><br>\n<strong>Editorialist-</strong> <a href=\"https://www.codechef.com/users/vijju123\" rel=\"nofollow noopener\">Abhishek Pandey</a></p>\n<h3>DIFFICULTY:</h3>\n<p>HARD</p>\n<h3>PRE-REQUISITES:</h3>\n<p>Math, Math AND MORE <em><strong>MATH</strong></em>. Namely- <a href=\"http://mathworld.wolfram.com/GeneratingFunction.html\" rel=\"nofollow noopener\">Generating Functions</a> ,<a href=\"http://mathworld.wolfram.com/BinomialCoefficient.html\" rel=\"nofollow noopener\">Using Binomial Coefficients in Combinatorics</a>, <a href=\"http://www.geeksforgeeks.org/compute-ncr-p-set-2-lucas-theorem/\" rel=\"nofollow noopener\">Luca\u2019s Theorem</a>, <a href=\"http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/\" rel=\"nofollow noopener\">Fast Exponentiation</a> .</p>\n<p>Please read about Generating Functions before reading the editorial if its a new concept to you. That is because, its not possible for me to derive every possible result and reason how and where its used (The editorial will be extremely long and boring then).  Hence, please google out things and read about Generating Functions and grasp the concept.</p>\n<p><strong>Word from Editorialist-</strong> This editorial will also have some hand exercises for the interested ones. They will be there to make yourself work up and hence aid your intuition in deducing things so that you can develop that <em>sixth sense</em> when you encounter such a problem, and so that you can understand the editorial better. I will try my best to explain the concepts as easily as possible <img src=\"https://discuss.codechef.com/images/emoji/apple/slight_smile.png?v=9\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\"></p>\n<h3>PROBLEM:</h3>\n<p>Given <span class=\"math\">2</span> type of chips, square and hexagonal, you have to spend exactly <span class=\"math\">N</span> bitcoins to buy exactly <span class=\"math\">A</span> square and <span class=\"math\">B</span> hexagonal chips. With this, you are expected to give <span class=\"math\">\\sum\\limits_{i=1}^n Signal Strength </span> where <span class=\"math\">SignalStrength=\\prod\\limits_{i=1}^n p_i</span></p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Using the concepts of generating functions, we get to know that the answer is <span class=\"math\">{x}^{n}</span> in the series <span class=\"math\">{6}^{B}* {x}^{A+B}* {(1 + x)}^{A}* {(1 - x)}^{-3A - 3B}</span>. Once this is deduced, we can easily calculate the required answer using <span class=\"math\">Luca's Theorem</span> for values of <span class=\"math\">n\\choose r</span> and <span class=\"math\">Fast Exponentiation</span> to avoid TLE in the process.</p>\n<h3>EXPLANATION:</h3>\n<p>The explanation will be divided into 3 parts-</p>\n<ol>\n<li>Telling about Generating function of Square and Hexagonal chips and significance of coefficients.</li>\n<li>How to deal with constraint of exact A square and exact B Hexagonal chips.</li>\n<li>Final calculations.</li>\n</ol>\n<p><strong>1.Generating functions and significance of the coefficients-</strong></p>\n<p>To anyone having a basic idea about generating functions, the intuition must had been to attempt to write the generating functions for Square and for Hexagonal chips. Its not hard at all to deduce that the generation function for square chips , say <span class=\"math\">F(x)</span> is-</p>\n<p><span class=\"math\">F(x)=x+4{x}^{2}+9{x}^{3}+16{x}^{4}.....</span></p>\n<p>To those who are having trouble interpreting generating function concept, look at the coefficient of <span class=\"math\">{x}^{n}</span> in above. Lets consider <span class=\"math\">4{x}^{2}</span>. What is the significance of it? It is, that, 4 is the number of nano-particles you get if you spend all of <span class=\"math\">N</span> money in buying a square chip of that size. You can compare all terms similarly.</p>\n<pre><code> Q1- Can you attempt to deduce what can be the function for Hexagonal chips? (Hint: Follow the analogy above)\n</code></pre>\n<p>.<br>\n.<br>\n.<br>\n.<br>\nAs intuition goes, the function for Hexagonal chips, say <span class=\"math\">G(x)</span>, is-</p>\n<p><span class=\"math\">G(x)= 6x + 18{x}^{2} + 36{x}^{3} +..... </span></p>\n<p>You can see that similar analogy holds here as well.</p>\n<p>Now, this analogy assumes that we are spending all <span class=\"math\">N</span> bitcoins in buying a single chip and gives the required nano-particles as the coefficient. But how will we use and expand this to follow the constraint in question on <code>exactly A square and exactly B hexagonal chips</code>?</p>\n<p><strong>2.Fulfilling the constraint of exactly A and B chips respective shapes-</strong></p>\n<p>This is achieved by raising the respective generating functions to power <span class=\"math\">A</span> and <span class=\"math\">B</span>. Meaning-</p>\n<p><span class=\"math\">F(x)={F(x)}^{A}={(x+4{x}^{2}+9{x}^{3}+16{x}^{4}........)}^{A}</span><br>\n<span class=\"math\">G(x)={G(x)}^{B}={(6x + 18{x}^{2} + 36{x}^{3} +.....)}^{B}</span></p>\n<p>Ca you see any intuitive reason why this is helping? For one, raising the function <span class=\"math\">F(x)</span> to power <span class=\"math\">A</span> means that the least term we encounter is <span class=\"math\">1{x}^{A}</span>. It is the case when all <span class=\"math\">A</span> coins are spent on buying square chips of size <span class=\"math\">1</span>. Can we expand this reasoning?</p>\n<p>Lets take a simple example. Take <span class=\"math\">N=3</span> and <span class=\"math\">A=2</span>. Lets ignore <span class=\"math\">B</span> and hexagonal chips for the moment.</p>\n<p><span class=\"math\">{F(x)}^{2}={(x+4{x}^{2}+9{x}^{3}+16{x}^{4}........)}^{2}={x}^{2}+8{x}^{3}+34{x}^{4}....</span></p>\n<p>Lets consider the term,<span class=\"math\">{x}^{n}={x}^{3}</span>, i.e. <span class=\"math\">8{x}^{3}</span>. What does it represent? It is the number of nano-particles spent when we have to buy exactly <span class=\"math\">2</span> square chips and spend a total of <span class=\"math\">3</span> bitcoins. It considers both cases, of <span class=\"math\">(1,2),(2,1)</span>. This is exactly what we need to know!</p>\n<pre><code>Question 2- Consider the case of N=3, B=2 , A=0. What is the generating function of hexagonal chips then? What is the coefficient of x^3 in it? Can the above reasoning hold here as well?\n</code></pre>\n<p>Till now we had considered only square chips. How to go about when hexagonal chips kick in as well? Also, finding the power of generating function is <span class=\"math\">not</span> at all an easy job. How to get over it?</p>\n<p><strong>3.Calculating the final answer-</strong></p>\n<p>Now, we know that <span class=\"math\">{F(x)}^{A}</span> and <span class=\"math\">{G(x)}^{B}</span> are the generating functions when we have to buy <span class=\"math\">exactly</span> <span class=\"math\">A</span> and <span class=\"math\">B</span> chips respectively. Further, we know that if we have to spend exactly <span class=\"math\">N</span> bit coins, then we need to look up the coefficient of <span class=\"math\">{x}^{n}</span> in the expansion.</p>\n<p>Now, since <span class=\"math\">SignalStrength=\\prod\\limits_{i=1}^n p_i</span> , where <span class=\"math\">p_i</span> is the number of nano-particles in square or hexagonal chips, its natural to see that our answer is coefficient of <span class=\"math\">{x}^{n}</span> in <span class=\"math\">{(F(x))}^{A}*{(G(x))}^{B}</span>. Meaning-</p>\n<p><span class=\"math\">Answer=</span> <span class=\"math\">Coefficient</span> <span class=\"math\">of</span> <span class=\"math\">{x}^{n}</span> in <span class=\"math\">{(x+4{x}^{2}+9{x}^{3}+16{x}^{4}........)}^{A} * {(6x + 18{x}^{2} + 36{x}^{3} +.....)}^{B}</span></p>\n<p>Now, how to proceed next? After some paperwork, you will find that the final expression is-</p>\n<p><span class=\"math\">{(x+4{x}^{2}+9{x}^{3}+16{x}^{4}........)}^{A} * {(6x + 18{x}^{2} + 36{x}^{3} +.....)}^{B}={6}^{B}* {x}^{A+B}* {(1 + x)}^{A}* {(1 - x)}^{-3A - 3B}</span></p>\n<p>(The derivation has been given in Chef Vijju\u2019s corner for the interested ones)</p>\n<p>Now we have to find coefficient of <span class=\"math\">{x}^{n}</span> in this. For <span class=\"math\">{(1+x)}^{A}</span> we can easily find coefficient of <span class=\"math\">{x}^{r}</span> as <span class=\"math\">n\\choose r</span> <span class=\"math\">{1}^{n-r} {x}^{r}</span>. For coefficient of <span class=\"math\">{x}^{k}</span> in <span class=\"math\">{(1 - x)}^{-3A - 3B}</span> the formula is <span class=\"math\">(n+k-1)\\choose k </span> <span class=\"math\">{x}^{k}</span>.</p>\n<p>Now, look at the final expression. We have already taken out <span class=\"math\">{x}^{A+B}</span>, so we need to find coefficients such that <span class=\"math\">r+k=N-A-B</span>. We see that the number of terms in <span class=\"math\">{(1+x)}^{A}</span> is <span class=\"math\">A+1</span>. We can loop through all the coefficients in this and multiply with the corresponding coefficients in the second series of <span class=\"math\">{(1 - x)}^{-3A - 3B}</span> (since this has infinite terms).</p>\n<p>For calculating, we need the values of <span class=\"math\">n\\choose r</span> and corresponding <span class=\"math\">(n+k-1)\\choose k</span> . To calculate this, we can easily use Luca\u2019s Theorem and fast exponentiation. You can refer to Editorialist\u2019s solution for details.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/15589600\" rel=\"nofollow noopener\">Editorialist\u2019s solution</a></p>\n<p><span class=\"math\">TimeComplexity=O(ALogN)</span></p>\n<h3>CHEF VIJJU\u2019S CORNER:</h3>\n<ol>\n<li>The derivation of the expression deserves to be given first.<br>\n<img src=\"https://discuss.codechef.com/upfiles/Scan_17_Oct,_17-22-page-001_qkHK6D1.jpg\" alt=\"alt text\" width=\"\" height=\"\"><br>\n<img src=\"https://amr16mos.discuss.codechef.com/upfiles/Scan_17_Oct,_17-22-page-002.jpg\" alt=\"alt text\" width=\"\" height=\"\">\n</li>\n</ol>\n<p>2.If you have got the concept correctly, can you at least tell what would be the answer, can you tell what the answer would be if I ask for <code>you need to buy **AT LEAST** A square and **AT LEAST** B Hexagonal chips</code> ?</p>\n<p>3.Consider this implementation of fast exponentiation for this question-</p>\n<pre><code>long long Fast_Exponentiation(long long num, long long power)\n{\n    if(power==1)return num;\n    else if(power==2)return (num*num)%mod;\n    else \n    {\n        return Fast_Exponentiation(num,power/2) *  Fast_Exponentiation(num,(power+1)/2);\n    }\n}\n</code></pre>\n<p>With reference to above code, answer the following-<br>\ni)Compare its run-time to normal looping method - <code>for(i=1;i&lt;=n;i++)ans=(ans*num)%mod;</code>. Is the performance better than this, equal to this, or worse than this?<br>\nii) Would you recommend using this implementation of fast exponentiation? Why/Why not?</p>\n<p>4.The setter had an unfulfilled wish of giving this problem to you guys as a bonus-<br>\n<code>Challenge problem: Solve for the case when hexagonal chips don\u2019t have a hole in center.</code> Can you solve it?</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17096,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "20-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3",
+    "amr16",
+    "icpc2016"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AMR16F",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610600
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMR16F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

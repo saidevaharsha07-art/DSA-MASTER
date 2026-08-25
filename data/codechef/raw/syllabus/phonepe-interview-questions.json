@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "phonepe-interview-questions",
+  "name": "PhonePe Interview Questions",
+  "title": "PhonePe Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your PhonePe online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/phonepe-interview-questions/PHONEPECON01/problems/PHONEPE01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "PhonePe Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "PhonePe Coding Questions",
+          "submodule_id": 8210,
+          "contest_code": "PHONEPECON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/phonepe-interview-questions/PHONEPECON01/problems/PHONEPE01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE01",
+              "name": "Form a Triangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE03",
+              "name": " Unlock the Briefcase",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE05",
+              "name": "Longest Increasing Subsequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE06",
+              "name": "Search in Rotated Sorted Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE07",
+              "name": "Knight Journey Probability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE08",
+              "name": "Snake and Ladder Journey",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE02",
+              "name": "Weighted Job Scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "32227",
+              "code": "PHONEPE04",
+              "name": "Maximum Profit Trading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 8,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1284,
+  "path_review": {
+    "rating": 4.8,
+    "users": 8
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

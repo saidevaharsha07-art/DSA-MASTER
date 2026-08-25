@@ -1,0 +1,120 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16H",
+  "contest_category": "6",
+  "problem_name": "Sum and Xor",
+  "intended_contest_code": null,
+  "body": "<p>Let <b>F(s, x)</b> be the number of triplets of nonnegative integers whose sum is <b>s</b> and bitwise xor is <b>x</b>.</p>\r\n\r\n<p>Given <b>a</b>, <b>b</b>, and <b>N</b>, find the sum of <b>F(a * n, b * n)</b> for all <b>n</b> such that <b>1 \u2264 n \u2264 N</b>.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>Each test case consists of a single line containing three space-separated integers: <b>a</b>, <b>b</b> and <b>N</b>.</p>\r\n\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing the answer. Since the answer can be very large, only output it modulo <b>10<sup>9</sup> + 7</b>.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 1500</b></li>\r\n<li><b>1 \u2264 a, b \u2264 30</b></li>\r\n<li><b>1 \u2264 N \u2264 10<sup>12</sup></b></li>\r\n</ul>\r\n\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>1\r\n2 2 2\r\n</tt>\r\n<b>Output:</b>\r\n<tt>6</tt>\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p>\r\n<ul>\r\n<li><b>F(2 * 1, 2 * 1) = F(2, 2) = 3</b>.</li>\r\n<li><b>F(2 * 2, 2 * 2) = F(4, 4) = 3</b>.</li>\r\n</ul>\r\n</p>\r\n<p>Thus, the answer is <b>3 + 3 = 6.</b></p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1500$\n- $1 \\leq a, b \\leq 30$\n- $1 \\leq N \\leq 10^{12}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Let $F(s, x)$ be the number of triplets of nonnegative integers whose sum is $s$ and bitwise xor is $x$.\n\nGiven $a$, $b$, and $N$, find the sum of $F(a \\cdot n, b \\cdot n)$ for all $n$ such that $1 \\leq n \\leq N$.\n",
+    "inputFormat": "The first line of input contains an integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n\nEach test case consists of a single line containing three space-separated integers: $a$, $b$ and $N$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing the answer. Since the answer can be very large, only output it modulo $10^9 + 7$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n2 2 2\n",
+        "output": "6\n",
+        "explanation": "- $F(2 \\cdot 1, 2 \\cdot 1) = F(2, 2) = 3$.\n- $F(2 \\cdot 2, 2 \\cdot 2) = F(4, 4) = 3$.\n\nThus, the answer is $3 + 3 = 6$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610682
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

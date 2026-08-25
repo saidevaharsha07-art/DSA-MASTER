@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHFHEIST",
+  "contest_category": "6",
+  "problem_name": "Bella ciao",
+  "intended_contest_code": "JUNE21",
+  "body": "### Read problem statements in [Vietnamese](https://www.codechef.com/download/translated/JUNE21/vietnamese/CHFHEIST.pdf),\r\n\r\nChef is planning a heist in the reserve bank of Chefland. They are planning to hijack the bank for $D$ days and print the money. The initial rate of printing the currency is $P$ dollars per day and they increase the production by $Q$ dollars after every interval of $d$ days. For example, after $d$ days the rate is $P+Q$ dollars per day, and after $2d$ days the rate is $P+2Q$ dollars per day, and so on. Output the amount of money they will be able to print in the given period.\r\n\r\n###Input\r\n\r\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \r\n- Each test case contains a single line of input, four integers $D, d, P, Q$. \r\n\r\n###Output\r\nFor each test case, output in a single line the answer to the problem.\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq d \\leq D \\leq 10^6$\r\n- $1 \\leq P, Q \\leq 10^6$\r\n\r\n###Subtasks\r\n**Subtask #1 (15 points):** $d \\leq D \\leq 100$\r\n\r\n**Subtask #2 (85 points):** original constraints\r\n\r\n###Sample Input\r\n```\r\n3\r\n2 1 1 1\r\n3 2 1 1\r\n5 2 1 2\r\n```\r\n\r\n###Sample Output\r\n```\r\n3\r\n4\r\n13\r\n```\r\n\r\n###Explanation\r\n**Test Case $1$:** \r\n- On the first day, the rate of production is $1$ dollar per day so $1$ dollar is printed on the first day.  \r\n- On the second day, the rate of production is $1 + 1 = 2$ dollars per day so $2$ dollars are printed on the second day.\r\n- The total amount of money printed in $2$ days is $1 + 2 = 3$ dollars.\r\n\r\n**Test Case $2$:** \r\n- For the first two days, the rate of production is $1$ dollar per day so $1 \\cdot 2 = 2$ dollars are printed on the first two days.  \r\n- On the third day, the rate of production is $1 + 1 = 2$ dollars per day so $2$ dollars are printed on the third day.\r\n- The total amount of money printed in $3$ days is $2 + 2 = 4$ dollars.\r\n\r\n**Test Case $3$:** \r\n- For the first two days, the rate of production is $1$ dollar per day so $1 \\cdot 2 = 2$ dollars are printed on the first two days.  \r\n- On the next two days, the rate of production is $1 + 2 = 3$ dollars per day so $3 \\cdot 2 = 6$ dollars are printed on the next two days.\r\n- On the last day, the rate of production is $3 + 2 = 5$ dollars per day so $5$ dollars are printed on the last day.\r\n- The total amount of money printed in $5$ days is $2 + 6 + 5 = 13$ dollars.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Read problem statements in [Vietnamese](https://www.codechef.com/download/translated/JUNE21/vietnamese/CHFHEIST.pdf),\n\nChef is planning a heist in the reserve bank of Chefland. They are planning to hijack the bank for $D$ days and print the money. The initial rate of printing the currency is $P$ dollars per day and they increase the production by $Q$ dollars after every interval of $d$ days. For example, after $d$ days the rate is $P+Q$ dollars per day, and after $2d$ days the rate is $P+2Q$ dollars per day, and so on. Output the amount of money they will be able to print in the given period.\n\n### Input\n\n- The first line contains an integer $T$, the number of test cases. Then the test cases follow. \n- Each test case contains a single line of input, four integers $D, d, P, Q$. \n\n### Output\nFor each test case, output in a single line the answer to the problem.\n\n### Constraints \n- $1 \\leq T \\leq 10^5$\n- $1 \\leq d \\leq D \\leq 10^6$\n- $1 \\leq P, Q \\leq 10^6$\n\n### Subtasks\n**Subtask #1 (15 points):** $d \\leq D \\leq 100$\n\n**Subtask #2 (85 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n2 1 1 1\r\n3 2 1 1\r\n5 2 1 2",
+        "output": "3\r\n4\r\n13",
+        "explanation": "**Test Case $1$:** \r\n- On the first day, the rate of production is $1$ dollar per day so $1$ dollar is printed on the first day.  \r\n- On the second day, the rate of production is $1 + 1 = 2$ dollars per day so $2$ dollars are printed on the second day.\r\n- The total amount of money printed in $2$ days is $1 + 2 = 3$ dollars.\r\n\r\n**Test Case $2$:** \r\n- For the first two days, the rate of production is $1$ dollar per day so $1 \\cdot 2 = 2$ dollars are printed on the first two days.  \r\n- On the third day, the rate of production is $1 + 1 = 2$ dollars per day so $2$ dollars are printed on the third day.\r\n- The total amount of money printed in $3$ days is $2 + 2 = 4$ dollars.\r\n\r\n**Test Case $3$:** \r\n- For the first two days, the rate of production is $1$ dollar per day so $1 \\cdot 2 = 2$ dollars are printed on the first two days.  \r\n- On the next two days, the rate of production is $1 + 2 = 3$ dollars per day so $3 \\cdot 2 = 6$ dollars are printed on the next two days.\r\n- On the last day, the rate of production is $3 + 2 = 5$ dollars per day so $5$ dollars are printed on the last day.\r\n- The total amount of money printed in $5$ days is $2 + 6 + 5 = 13$ dollars.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 91057,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "iscsi"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/iscsi'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>iscsi</span></a></div>",
+  "problem_editorialist": "taran_1407",
+  "date_added": "17-05-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Basic Math",
+    "AP"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Sequences and Progression"
+  ],
+  "difficulty_rating": "1410",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610674
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHFHEIST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 63,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LCOLLIS",
+  "contest_category": "6",
+  "problem_name": "Collisions",
+  "intended_contest_code": "LTIME37",
+  "body": "<p>Once <b>N</b> boys and <b>M</b> girls attended a party. You are given a matrix <b>A</b> of <b>N</b> rows and <b>M</b> columns where <b>A<sub>ij</sub></b> is <b>1</b> if the <b>i-th</b> boy likes the <b>j-th</b> girl, otherwise it will be 0. Note that it is not necessary that if a boy <b>x</b> likes girl <b>y</b>, then girl <b>y</b> should like boy <b>x</b>.</p>\n\n<p>You know that if there are two different boys <b>x</b> and <b>y</b>, who both like girl <b>z</b>, then there will be a collision.\nCan you calculate the number of different collisions at this party? Note that order of boys in the collision doesn't matter.</p>\n\n<h3>Input</h3>\n<p>The first line contains a single integer <b>T</b> denoting the number of test cases. Then <b>T</b> test cases follow.</p>\n<p>The first line of each test case contains two space separated integers <b>N</b>, <b>M</b> denoting the number of boys and girls, respectively.</p>\n<p>Each of the following <b>N</b> lines contain <b>M</b> characters, each of them is either <b>'0'</b> or <b>'1'</b>.</p>\n\n<h3>Output</h3>\n<p>For each test case output a single line containing an integer corresponding to the number of collisions at the party.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>N, M</b> \u2264 <b>10</b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n4 3\n111\n100\n110\n000\n2 2\n10\n01\n\n<b>Output:</b>\n4\n0\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example Case 1.</b> All three boys like the first girl, so there are <b>(1, 2, 1), (1, 3, 1), (2, 3, 1)</b> collisions with her. Boys <b>1</b> and <b>3</b> both like the second girl so this is one more collision. Only one boy likes the third girl, so there are no collisions with her and thus we have <b>4</b> collisions total.</p>\n\n<p><b>Example Case 2.</b> For each girl there is only one boy who likes her, so there are no collisions at all.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Once <b>N</b> boys and <b>M</b> girls attended a party. You are given a matrix <b>A</b> of <b>N</b> rows and <b>M</b> columns where <b>A<sub>ij</sub></b> is <b>1</b> if the <b>i-th</b> boy likes the <b>j-th</b> girl, otherwise it will be 0. Note that it is not necessary that if a boy <b>x</b> likes girl <b>y</b>, then girl <b>y</b> should like boy <b>x</b>.</p>\n\n<p>You know that if there are two different boys <b>x</b> and <b>y</b>, who both like girl <b>z</b>, then there will be a collision.\nCan you calculate the number of different collisions at this party? Note that order of boys in the collision doesn't matter.</p>\n\n<h3>Input</h3>\n<p>The first line contains a single integer <b>T</b> denoting the number of test cases. Then <b>T</b> test cases follow.</p>\n<p>The first line of each test case contains two space separated integers <b>N</b>, <b>M</b> denoting the number of boys and girls, respectively.</p>\n<p>Each of the following <b>N</b> lines contain <b>M</b> characters, each of them is either <b>'0'</b> or <b>'1'</b>.</p>\n\n<h3>Output</h3>\n<p>For each test case output a single line containing an integer corresponding to the number of collisions at the party.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>100</b></li>\n<li><b>1</b> \u2264 <b>N, M</b> \u2264 <b>10</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4 3\n111\n100\n110\n000\n2 2\n10\n01",
+        "output": "4\n0",
+        "explanation": "<p><b>Example Case 1.</b> All three boys like the first girl, so there are <b>(1, 2, 1), (1, 3, 1), (2, 3, 1)</b> collisions with her. Boys <b>1</b> and <b>3</b> both like the second girl so this is one more collision. Only one boy likes the third girl, so there are no collisions with her and thus we have <b>4</b> collisions total.</p>\n\n<p><b>Example Case 2.</b> For each girl there is only one boy who likes her, so there are no collisions at all.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12704,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "pavel1996",
+  "problem_display_authors": [
+    "pavel1996"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/pavel1996'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>pavel1996</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "karanaggarwal"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/karanaggarwal'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>karanaggarwal</span></a></div>",
+  "problem_editorialist": "dpraveen",
+  "date_added": "11-06-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1352",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610976
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LCOLLIS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

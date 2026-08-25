@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LUMPYBUS",
+  "contest_category": "6",
+  "problem_name": "Lumpy - The Bus Driver",
+  "intended_contest_code": "LTIME38",
+  "body": "<img src=\"https://codechef_shared.s3.amazonaws.com/upfiles/Bus_Driver_Lumpy_2.jpg\" height=\"250\" width=\"350\" />\n\n<p>Lumpy is a bus driver. Today, the conductor is absent so Lumpy has to do the conductor's job as well. There are <b>N</b> creatures in the bus. Sometimes the creatures don't carry change and can't pay the exact amount of the fare. Each creature in the bus today has paid an amount\ngreater than his/her fare. You are given information about the <b>extra</b> amount paid by each creature, by an array <b>A</b> of size <b>N</b>, where <b>A<sub>i</sub></b> denotes the extra amount paid by the <b>i</b>-th creature, in rupees.</p>\n\n<p>After the end of the trip, Lumpy noticed that he had <b>P</b> one rupee coins and <b>Q</b> two rupee coins. He wants to pay back the creatures using this money. Being a kind hearted moose, Lumpy wants to pay back as many creatures as he can. Note that Lumpy will \nnot pay back the <b>i</b>-th creature if he can't pay the <b>exact</b> amount that the <b>i</b>-th creature requires with the coins that he possesses. </p>\n\n<p>Lumpy is busy driving the bus and doesn't want to calculate the maximum number of creatures he can satisfy - He will surely cause an accident if he tries to do so. Can you help him out with this task? </p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>For each test case, first line consists of three space separated integers <b>N</b>, <b>P</b> and <b>Q</b>.</li>\n<li>Second line consists of <b>N</b> space separated integers <b>A</b> containing <b>N</b> space integers, where <b>i</b>-th integer denotes <b>A<sub>i</sub></b>.</li>\n</ul>\n\n<h3>Output</h3>\n<ul>\n<li>For each test case, output a single line containing an integer corresponding to maximum number of creatures that Lumpy can pay back.</li>\n</ul>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>6</sup></b></li>\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b></li>\n<li><b>0</b> \u2264 <b>P, Q</b> \u2264 <b>10<sup>14</sup></b></li>\n<li>Sum of <b>N</b> over all the cases does not exceed <b>10<sup>6</sup></b></li>\n</ul>\n\n<h3>Subtasks</h3>\n<ul>\n<li><i>Subtask #1 (15 points)</i>: <b>P</b> = 0</li>\n<li><i>Subtask #2 (15 points)</i>: <b>Q</b> = 0</li>\n<li><i>Subtask #3 (70 points)</i>: Original constraints</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>3\n3 3 0\n1 2 2\n3 2 1\n1 2 1\n4 5 4\n2 3 4 5</tt>\n\n<b>Output:</b>\n<tt>2\n3\n3</tt>\n</pre>\n\n<h3>Explanation</h3>\n<p> <b>Example 1</b>. Lumpy has just <b>3</b> one rupee coins. </br>\nHe can pay creatures numbered <b>{1, 2}</b> or creatures numbered <b>{1, 3}</b> with these coins. Thus, answer is 2. </p>\n<p> <b>Example 2</b>. Lumpy has <b>2</b> one rupee coins and <b>1</b> two rupee coin. </br>\nIn the optimal solution, Lumpy can give the two rupee coin to creature <b>2</b> and the one rupee coins to creatures <b>1</b> and <b>3</b>. Thus, answer is 3. </p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<img src=\"https://codechef_shared.s3.amazonaws.com/upfiles/Bus_Driver_Lumpy_2.jpg\" height=\"250\" width=\"350\" alt=\"Bus_Driver_Lumpy_2.jpg\" /><p>Lumpy is a bus driver. Today, the conductor is absent so Lumpy has to do the conductor's job as well. There are <b>N</b> creatures in the bus. Sometimes the creatures don't carry change and can't pay the exact amount of the fare. Each creature in the bus today has paid an amount\ngreater than his/her fare. You are given information about the <b>extra</b> amount paid by each creature, by an array <b>A</b> of size <b>N</b>, where <b>A<sub>i</sub></b> denotes the extra amount paid by the <b>i</b>-th creature, in rupees.</p>\n\n<p>After the end of the trip, Lumpy noticed that he had <b>P</b> one rupee coins and <b>Q</b> two rupee coins. He wants to pay back the creatures using this money. Being a kind hearted moose, Lumpy wants to pay back as many creatures as he can. Note that Lumpy will \nnot pay back the <b>i</b>-th creature if he can't pay the <b>exact</b> amount that the <b>i</b>-th creature requires with the coins that he possesses. </p>\n\n<p>Lumpy is busy driving the bus and doesn't want to calculate the maximum number of creatures he can satisfy - He will surely cause an accident if he tries to do so. Can you help him out with this task? </p>\n\n<h3>Input</h3>\n<ul><li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>For each test case, first line consists of three space separated integers <b>N</b>, <b>P</b> and <b>Q</b>.</li>\n<li>Second line consists of <b>N</b> space separated integers <b>A</b> containing <b>N</b> space integers, where <b>i</b>-th integer denotes <b>A<sub>i</sub></b>.</li>\n</ul><h3>Output</h3>\n<ul><li>For each test case, output a single line containing an integer corresponding to maximum number of creatures that Lumpy can pay back.</li>\n</ul><h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>6</sup></b></li>\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>A<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b></li>\n<li><b>0</b> \u2264 <b>P, Q</b> \u2264 <b>10<sup>14</sup></b></li>\n<li>Sum of <b>N</b> over all the cases does not exceed <b>10<sup>6</sup></b></li>\n</ul><h3>Subtasks</h3>\n<ul><li><i>Subtask #1 (15 points)</i>: <b>P</b> = 0</li>\n<li><i>Subtask #2 (15 points)</i>: <b>Q</b> = 0</li>\n<li><i>Subtask #3 (70 points)</i>: Original constraints</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n3 3 0\n1 2 2\n3 2 1\n1 2 1\n4 5 4\n2 3 4 5",
+        "output": "2\n3\n3",
+        "explanation": "<p> <b>Example 1</b>. Lumpy has just <b>3</b> one rupee coins. \nHe can pay creatures numbered <b>{1, 2}</b> or creatures numbered <b>{1, 3}</b> with these coins. Thus, answer is 2. </p>\n<p> <b>Example 2</b>. Lumpy has <b>2</b> one rupee coins and <b>1</b> two rupee coin. \nIn the optimal solution, Lumpy can give the two rupee coin to creature <b>2</b> and the one rupee coins to creatures <b>1</b> and <b>3</b>. Thus, answer is 3. </p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12808,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2.5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "pushkarmishra"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/pushkarmishra'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>pushkarmishra</span></a></div>",
+  "problem_editorialist": "pushkarmishra",
+  "date_added": "29-07-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1708",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611053
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LUMPYBUS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

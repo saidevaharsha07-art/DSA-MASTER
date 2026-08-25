@@ -1,0 +1,127 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MATXOR",
+  "contest_category": "6",
+  "problem_name": "Matrix XOR",
+  "intended_contest_code": "COOK127",
+  "body": "\r\nChef has a *tasty ingredient* \u2015 an integer $K$. He defines a *tasty matrix* $A$ with $N$ rows (numbered $1$ through $N$) and $M$ columns (numbered $1$ through $M$) as $A_{i, j} = K + i + j$ for each valid $i,j$.\r\n\r\nCurrently, Chef is busy in the kitchen making this tasty matrix. Help him find the bitwise XOR of all elements of this matrix.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains three space-separated integers $N$, $M$ and $K$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the bitwise XOR of all elements of the tasty matrix with the given dimensions made with the given special ingredient. \r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq N, M \\leq 2 \\cdot 10^6$\r\n- $1 \\leq K \\leq 10^9$\r\n- the sum of $N$ over all test cases does not exceed $2 \\cdot 10^6$\r\n- the sum of $M$ over all test cases does not exceed $2 \\cdot 10^6$\r\n\r\n### Example Input\r\n```\r\n2\r\n2 2 5\r\n2 3 7\r\n```\r\n\r\n### Example Output\r\n```\r\n14\r\n5\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The matrix is\r\n$$A = \\begin{pmatrix}\r\n5 + 1 + 1 & 5 + 1 + 2\\\\\r\n5 + 2 + 1 & 5 + 2 + 2\\end{pmatrix}\r\n= \\begin{pmatrix}\r\n7 & 8 \\\\\r\n8 & 9 \r\n\\end{pmatrix} \\,.$$\r\n\r\nThe XOR of all its elements is $7 \\oplus 8 \\oplus 8 \\oplus 9 = 14$.\r\n\r\n**Example case 2:** The matrix is\r\n$$A = \\begin{pmatrix}\r\n7 + 1 + 1 & 7 + 1 + 2 & 7 + 1 + 3\\\\\r\n7 + 2 + 1 & 7 + 2 + 2 & 7 + 2 + 3\r\n\\end{pmatrix}\r\n= \\begin{pmatrix}\r\n9 & 10 & 11\\\\\r\n10 & 11 & 12\r\n\\end{pmatrix} \\,.$$\r\n\r\nThe XOR of all its elements is $9 \\oplus 10 \\oplus 11 \\oplus 10 \\oplus 11 \\oplus 12 = 5$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef has a *tasty ingredient* \u2015 an integer $K$. He defines a *tasty matrix* $A$ with $N$ rows (numbered $1$ through $N$) and $M$ columns (numbered $1$ through $M$) as $A_{i, j} = K + i + j$ for each valid $i,j$.\r\n\r\nCurrently, Chef is busy in the kitchen making this tasty matrix. Help him find the bitwise XOR of all elements of this matrix.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains three space-separated integers $N$, $M$ and $K$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the bitwise XOR of all elements of the tasty matrix with the given dimensions made with the given special ingredient. \r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq N, M \\leq 2 \\cdot 10^6$\r\n- $1 \\leq K \\leq 10^9$\r\n- the sum of $N$ over all test cases does not exceed $2 \\cdot 10^6$\r\n- the sum of $M$ over all test cases does not exceed $2 \\cdot 10^6$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n2 2 5\r\n2 3 7",
+        "output": "14\r\n5",
+        "explanation": "**Example case 1:** The matrix is\r\n$$A = \\begin{pmatrix}\r\n5 + 1 + 1 & 5 + 1 + 2\\\\\r\n5 + 2 + 1 & 5 + 2 + 2\\end{pmatrix}\r\n= \\begin{pmatrix}\r\n7 & 8 \\\\\r\n8 & 9 \r\n\\end{pmatrix} \\,.$$\r\n\r\nThe XOR of all its elements is $7 \\oplus 8 \\oplus 8 \\oplus 9 = 14$.\r\n\r\n**Example case 2:** The matrix is\r\n$$A = \\begin{pmatrix}\r\n7 + 1 + 1 & 7 + 1 + 2 & 7 + 1 + 3\\\\\r\n7 + 2 + 1 & 7 + 2 + 2 & 7 + 2 + 3\r\n\\end{pmatrix}\r\n= \\begin{pmatrix}\r\n9 & 10 & 11\\\\\r\n10 & 11 & 12\r\n\\end{pmatrix} \\,.$$\r\n\r\nThe XOR of all its elements is $9 \\oplus 10 \\oplus 11 \\oplus 10 \\oplus 11 \\oplus 12 = 5$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 86866,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "pshishod2645",
+  "problem_display_authors": [
+    "pshishod2645"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/pshishod2645'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>pshishod2645</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "cherry0697",
+  "date_added": "16-03-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Loops",
+    "Basic Math",
+    "Bitwise Operation",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts",
+    "Mathematics",
+    "Bit Manipulation",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1864",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611062
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MATXOR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

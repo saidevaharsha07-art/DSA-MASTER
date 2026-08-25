@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DELISH",
+  "contest_category": "6",
+  "problem_name": "Dessert Wizard",
+  "intended_contest_code": "JUNE13",
+  "body": "<p>It's finally summer in Chefland! So our chef is looking forward to prepare some of the best \"beat-the-heat\" dishes to attract more customers. He summons the Wizard of Dessert to help him with one such dish.</p>\r\n<p> The wizard provides the chef with a sequence of <b>N</b> ingredients where the <b>i<sup>th</sup></b> ingredient has a delish value of <b>D[i]</b>. The preparation of the dish takes place in two phases. <br/><br/>\r\n\r\n<b>Phase 1 :</b> The chef chooses two indices <b>i</b> and <b>j</b> and adds the ingredients <b>i, i+1, ..., j</b> to his dish. He also finds the sum of the delish value in this range i.e <b>D[i] + D[i+1] + ... + D[j]</b>.  <br/><br/> \r\n\r\n<b>Phase 2 :</b> The chef chooses two more indices <b>k</b> and <b>l</b> and adds the ingredients <b>k, k+1, ..., l</b> to his dish. He also finds the sum of the delish value in this range i.e <b>D[k] + D[k+1] + ... + D[l]</b>. <br/> <br/>\r\nNote that <b>1</b>  \u2264 <b>i</b>  \u2264 <b>j</b> &lt; <b>k</b>  \u2264 <b>l</b> \u2264 <b>N</b>. <br/><br/>\r\n \r\nThe total delish value of the dish is determined by the absolute difference between the values obtained in the two phases. Obviously, the chef wants to maximize the total delish value for his dish. So, he hires you to help him.\r\n </p>\r\n\r\n<h3>Input</h3>\r\nFirst line of input contains an integer <b>T</b> denoting the number of test cases. For each test case, the first line contains an integer <b>N</b> denoting the number of ingredients. The next line contains <b>N</b> space separated integers where the <b>i<sup>th</sup></b> integer represents the delish value <b>D[i]</b> of the <b>i<sup>th</sup></b> ingredient.\r\n\r\n<h3>Output</h3>\r\n<p>Print the maximum delish value of the dish that the chef can get.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li> <b>1</b> \u2264 <b>T</b> \u2264 <b>50</b> </li>\r\n<li> <b>2</b> \u2264 <b>N</b> \u2264 <b>10000</b> </li>\r\n <li> <b>-1000000000 (\u221210<sup>9</sup>)</b> \u2264 <b>D[i]</b> \u2264 <b>1000000000 (10<sup>9</sup>)</b> \r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n5\r\n1 2 3 4 5\r\n4\r\n1 1 -1 -1\r\n\r\n<b>Output:</b>\r\n13\r\n4\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n\r\n</p>\r\n<p><b>Example case 1.</b><br/>\r\nChef can choose <b>i = j = 1, k = 2, l = 5</b>.<br/>\r\nThe delish value hence obtained  is <b> | (2+3+4+5) \u2212 (1) | = 13 </b>.\r\n </p>\r\n\r\n<p><b>Example case 2.</b><br/>\r\n Chef can choose <b>i = 1, j = 2, k = 3, l = 4</b>.<br/>\r\nThe delish value hence obtained  is <b> | ( ( \u22121 ) + ( \u22121 ) ) \u2212 ( 1 + 1 ) | = 4 </b>.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>It's finally summer in Chefland! So our chef is looking forward to prepare some of the best \"beat-the-heat\" dishes to attract more customers. He summons the Wizard of Dessert to help him with one such dish.</p>\n<p> The wizard provides the chef with a sequence of <b>N</b> ingredients where the <b>i<sup>th</sup></b> ingredient has a delish value of <b>D[i]</b>. The preparation of the dish takes place in two phases. <br /><br /><b>Phase 1 :</b> The chef chooses two indices <b>i</b> and <b>j</b> and adds the ingredients <b>i, i+1, ..., j</b> to his dish. He also finds the sum of the delish value in this range i.e <b>D[i] + D[i+1] + ... + D[j]</b>.  <br /><br /><b>Phase 2 :</b> The chef chooses two more indices <b>k</b> and <b>l</b> and adds the ingredients <b>k, k+1, ..., l</b> to his dish. He also finds the sum of the delish value in this range i.e <b>D[k] + D[k+1] + ... + D[l]</b>. <br /><br />\nNote that <b>1</b>  \u2264 <b>i</b>  \u2264 <b>j</b> < <b>k</b>  \u2264 <b>l</b> \u2264 <b>N</b>. <br /><br />\n \nThe total delish value of the dish is determined by the absolute difference between the values obtained in the two phases. Obviously, the chef wants to maximize the total delish value for his dish. So, he hires you to help him.\n </p>\n\n<h3>Input</h3>\nFirst line of input contains an integer <b>T</b> denoting the number of test cases. For each test case, the first line contains an integer <b>N</b> denoting the number of ingredients. The next line contains <b>N</b> space separated integers where the <b>i<sup>th</sup></b> integer represents the delish value <b>D[i]</b> of the <b>i<sup>th</sup></b> ingredient.\n\n<h3>Output</h3>\n<p>Print the maximum delish value of the dish that the chef can get.</p>\n\n<h3>Constraints</h3>\n<ul><li> <b>1</b> \u2264 <b>T</b> \u2264 <b>50</b> </li>\n<li> <b>2</b> \u2264 <b>N</b> \u2264 <b>10000</b> </li>\n <li> <b>-1000000000 (\u221210<sup>9</sup>)</b> \u2264 <b>D[i]</b> \u2264 <b>1000000000 (10<sup>9</sup>)</b> \n</li></ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n5\n1 2 3 4 5\n4\n1 1 -1 -1",
+        "output": "13\n4",
+        "explanation": "<p><b>Example case 1.</b><br />\nChef can choose <b>i = j = 1, k = 2, l = 5</b>.<br />\nThe delish value hence obtained  is <b> | (2+3+4+5) ? (1) | = 13 </b>.\n </p>\n\n<p><b>Example case 2.</b><br />\n Chef can choose <b>i = 1, j = 2, k = 3, l = 4</b>.<br />\nThe delish value hence obtained  is <b> | ( ( ?1 ) + ( ?1 ) ) ? ( 1 + 1 ) | = 4 </b>.\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 2319,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "vivek_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vivek_adm'>vivek_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "tuananh93"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/tuananh93'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>tuananh93</span></a></div>",
+  "problem_editorialist": "pragrame",
+  "date_added": "30-03-2013",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Dynamic Programming"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1804",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610779
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DELISH",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

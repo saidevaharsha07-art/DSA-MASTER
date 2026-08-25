@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DATATYPE",
+  "contest_category": "6",
+  "problem_name": "Fit in Data Type",
+  "intended_contest_code": "START25",
+  "body": "This is an example statement in markdown. This is the statement of the problem [TANDC](https://codechef.com/problems/TANDC) on CodeChef. The main statement starts with the next paragraph. Please make sure to remove this paragraph from your statement before publishing your problem. If your problem doesn't contain Subtasks, you should remove the section subtask too. We are using markdown the syntax of which can be seen [at](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). We request you to not use any HTML tags in the statement, e.g. no p, ul, li, pre, br or b tags. If you face any issue, please contact admins or email us at help@codechef.com.\n\nTracy is teaching Charlie maths via a game called $N$-Cube, which involves three sections involving $N$.\n\nTracy gives Charlie a number $N$, and Charlie makes a list of $N$-th powers of integers in increasing order $1^N, 2^N, 3^N, \\dot, \\text{so on}$. This teaches him exponentiation.\n\nThen Charlie performs the following subtraction game $N$ times: Take all pairs of consecutive numbers in the list and take their difference. These differences then form the new list for the next iteration of the game. Eg, if $N$ was 6, the list proceeds as $[1, 64, 729, 4096 ... ]$ to $[63, 685, 3367 ...]$, and so on $5$ more times.\n\nAfter the subtraction game, Charlie has to correctly tell Tracy the $N$-th element of the list. This number is the *value of the game*.\n\nAfter practice Charlie became an expert in the game. To challenge him more, Tracy will give two numbers $M$ (where $M$ is a prime) and $R$ instead of just a single number $N$, and the game must start from $M_R - 1$ instead of $N$. Since the *value of the game* can now become large, Charlie just have to tell the largest integer $K$ such that $M_K$ divides this number. Since even $K$ can be large, output $K$ modulo 1000000007 ($10^9 + 7$).\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 3000$\n- $1 \\leq N \\leq 50$\n- $0 \\leq X \\leq 50$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef wants to store some important numerical data on his personal computer. He is using a new data type that can store values only from $0$ till $N$ both inclusive. If this data type receives a value greater than $N$ then it is cyclically converted to fit into the range $0$ to $N$.\nFor example: \n- Value $N+1$ will be stored as $0$.\n- Value $N+2$ will be stored as $1$. \n\nand so on...\n\nGiven $X$, the value chef wants to store in this new data type. Determine what will be the actual value in memory after storing $X$.",
+    "inputFormat": "- First line will contain $T$, number of testcases. Then the testcases follow.\n- Each testcase contains a single line of input, two space separated integers $N, X$ - the maximum value a data type can store and the value Chef wants to store in the data type respectively.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each testcase, output in a single line the value which will be actually stored in memory.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n15 0\n15 10\n11 12\n27 37\n50 49",
+        "output": "0\n10\n0\n9\n49",
+        "explanation": "**Test Case $1$**: The data type can store values from $0$ to $15$. If we try to put $0$ in this data type, then the stored value will be the same, that is $0$.\n\n**Test Case $2$**: The data type can store values from $0$ to $15$. If we try to put $10$ in this data type, then the stored value will be the same, that is $10$.\n\n**Test Case $3$**: The data type can store values from $0$ to $11$. If we try to put $12$ in this data type, then the stored value will cyclically come back to $0$. Hence the output is $0$.\n\n**Test Case $4$**: The data type can store values from $0$ to $27$. If we try to put $37$ in this data type, then the stored value will cyclically convert to $9$. Hence the output is $9$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 99058,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "utkarsh_adm",
+  "problem_display_authors": [
+    "utkarsh_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/utkarsh_adm'>utkarsh_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "7-02-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Modular Arithmetic"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "1133",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610781
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DATATYPE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 19,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

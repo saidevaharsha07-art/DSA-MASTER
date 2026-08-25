@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN15A",
+  "contest_category": "6",
+  "problem_name": "Mutated Minions",
+  "intended_contest_code": null,
+  "body": "<p>Gru has not been in the limelight for a long time and is, therefore, planning something particularly nefarious. Frustrated by his minions' incapability which has kept him away from the limelight, he has built a transmogrifier \u2014 a machine which mutates minions.\r\n</p>\r\n\r\n<p>\r\nEach minion has an intrinsic characteristic value (similar to our DNA), which is an integer. The transmogrifier adds an integer <b>K</b> to each of the minions' characteristic value. \r\n</p>\r\n\r\n<p>\r\nGru knows that if the new characteristic value of a minion is divisible by 7, then it will have Wolverine-like mutations.\r\n</p>\r\n\r\n<p>\r\nGiven the initial characteristic integers of <b>N</b> minions, all of which are then transmogrified, find out how many of them become Wolverine-like.\r\n</p>\r\n\r\n<h3>Input Format:</h3>\r\n<p>The first line contains one integer, <b>T</b>, which is the number of test cases. Each test case is then described in two lines.</p>\r\n<p>The first line contains two integers <b>N</b> and <b>K</b>, as described in the statement.</p>\r\n<p>The next line contains <b>N</b> integers, which denote the initial characteristic values for the minions.</p>\r\n\r\n<h3>Output Format:</h3>\r\n<p>For each testcase, output one integer in a new line, which is the number of Wolverine-like minions after the transmogrification.</p>\r\n\r\n<h3>Constraints:</h3>\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 100</b></li>\r\n<li><b>1 \u2264 N \u2264 100</b></li>\r\n<li><b>1 \u2264 K \u2264 100</b></li>\r\n<li>All initial characteristic values lie between 1 and 10<sup>5</sup>, both inclusive.</li>\r\n</ul>\r\n\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input:</b>\r\n1\r\n5 10\r\n2 4 1 35 1\r\n\r\n<b>Output:</b>\r\n1\r\n</pre>\r\n\r\n<h3>Explanation:</h3>\r\nAfter transmogrification, the characteristic values become {12,14,11,45,11}, out of which only 14 is divisible by 7. So only the second minion becomes Wolverine-like.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "<ul>\n<li><b>1 \u2264 T \u2264 100</b></li>\n<li><b>1 \u2264 N \u2264 100</b></li>\n<li><b>1 \u2264 K \u2264 100</b></li>\n<li>All initial characteristic values lie between 1 and 10<sup>5</sup>, both inclusive.</li>\n</ul>",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Gru has not been in the limelight for a long time and is, therefore, planning something particularly nefarious. Frustrated by his minions' incapability which has kept him away from the limelight, he has built a transmogrifier \u2014 a machine which mutates minions.\n</p>\n\n<p>\nEach minion has an intrinsic characteristic value (similar to our DNA), which is an integer. The transmogrifier adds an integer <b>K</b> to each of the minions' characteristic value. \n</p>\n\n<p>\nGru knows that if the new characteristic value of a minion is divisible by 7, then it will have Wolverine-like mutations.\n</p>\n\n<p>\nGiven the initial characteristic integers of <b>N</b> minions, all of which are then transmogrified, find out how many of them become Wolverine-like.\n</p>\n",
+    "inputFormat": "The first line contains one integer, <b>T</b>, which is the number of test cases. \\\nEach test case contains of $2$ lines of input.\n- The first line contains two integers <b>N</b> and <b>K</b>, as described in the statement\n- The next line contains <b>N</b> integers, which denote the initial characteristic values for the minions\n",
+    "inputFormatState": true,
+    "outputFormat": "<p>For each testcase, output one integer in a new line, which is the number of Wolverine-like minions after the transmogrification.</p>\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n5 10\n2 4 1 35 1\n",
+        "output": "1",
+        "explanation": "After transmogrification, the characteristic values become {12,14,11,45,11}, out of which only 14 is divisible by 7. So only the second minion becomes Wolverine-like.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 11950,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "arjunarul",
+  "problem_display_authors": [
+    "arjunarul"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/arjunarul'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #1E7D22;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>2&#9733;</span><span class='m-username--link'>arjunarul</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "26-10-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Divisibility",
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Modular Arithmetic",
+    "Algorithms"
+  ],
+  "difficulty_rating": "777",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610680
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN15A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 87,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

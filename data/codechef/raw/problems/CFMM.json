@@ -1,0 +1,128 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CFMM",
+  "contest_category": "6",
+  "problem_name": "Making a Meal",
+  "intended_contest_code": "COOK105",
+  "body": "\r\nToday, Chef decided to cook some delicious meals from the ingredients in his kitchen. There are $N$ ingredients, represented by strings $S_1, S_2, \\ldots, S_N$. Chef took all the ingredients, put them into a cauldron and mixed them up.\r\n\r\nIn the cauldron, the letters of the strings representing the ingredients completely mixed, so each letter appears in the cauldron as many times as it appeared in all the strings in total; now, any number of times, Chef can take one letter out of the cauldron (if this letter appears in the cauldron multiple times, it can be taken out that many times) and use it in a meal. A complete meal is the string \"codechef\". Help Chef find the maximum number of complete meals he can make!\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a single string $S_i$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2014 the maximum number of complete meals Chef can create.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 100$\r\n- $1 \\le N \\le 100$\r\n- $|S_1| + |S_2| + \\ldots + |S_N| \\le 1,000$\r\n- each string contains only lowercase English letters\r\n\r\n### Example Input\r\n```\r\n3\r\n6\r\ncplusplus\r\noscar\r\ndeck\r\nfee\r\nhat\r\nnear\r\n5\r\ncode\r\nhacker\r\nchef\r\nchaby\r\ndumbofe\r\n5\r\ncodechef\r\nchefcode\r\nfehcedoc\r\ncceeohfd\r\ncodechef\r\n```\r\n\r\n### Example Output\r\n```\r\n1\r\n2\r\n5\r\n```\r\n\r\n\r\n### Explanation\r\n**Example case 1:** After mixing, the cauldron contains the letter 'c' 3 times, the letter 'e' 4 times, and each of the letters 'o', 'd', 'h' and 'f' once. Clearly, this is only enough for one \"codechef\" meal.\r\n\r\n**Example case 2:** After mixing, the cauldron contains the letter 'c' 4 times, 'o' 2 times, 'd' 2 times, 'e' 4 times, 'h' 3 times and 'f' 2 times, which is enough to make 2 meals.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nToday, Chef decided to cook some delicious meals from the ingredients in his kitchen. There are $N$ ingredients, represented by strings $S_1, S_2, \\ldots, S_N$. Chef took all the ingredients, put them into a cauldron and mixed them up.\r\n\r\nIn the cauldron, the letters of the strings representing the ingredients completely mixed, so each letter appears in the cauldron as many times as it appeared in all the strings in total; now, any number of times, Chef can take one letter out of the cauldron (if this letter appears in the cauldron multiple times, it can be taken out that many times) and use it in a meal. A complete meal is the string \"codechef\". Help Chef find the maximum number of complete meals he can make!\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a single string $S_i$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2014 the maximum number of complete meals Chef can create.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 100$\r\n- $1 \\le N \\le 100$\r\n- $|S_1| + |S_2| + \\ldots + |S_N| \\le 1,000$\r\n- each string contains only lowercase English letters",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n6\r\ncplusplus\r\noscar\r\ndeck\r\nfee\r\nhat\r\nnear\r\n5\r\ncode\r\nhacker\r\nchef\r\nchaby\r\ndumbofe\r\n5\r\ncodechef\r\nchefcode\r\nfehcedoc\r\ncceeohfd\r\ncodechef",
+        "output": "1\r\n2\r\n5",
+        "explanation": "**Example case 1:** After mixing, the cauldron contains the letter 'c' 3 times, the letter 'e' 4 times, and each of the letters 'o', 'd', 'h' and 'f' once. Clearly, this is only enough for one \"codechef\" meal.\r\n\r\n**Example case 2:** After mixing, the cauldron contains the letter 'c' 4 times, 'o' 2 times, 'd' 2 times, 'e' 4 times, 'h' 3 times and 'f' 2 times, which is enough to make 2 meals.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 24673,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mrkerim",
+  "problem_display_authors": [
+    "mrkerim"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/mrkerim'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>mrkerim</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "melfice",
+  "date_added": "18-04-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "Basic Math",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Mathematics",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1214",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610660
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CFMM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 50,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

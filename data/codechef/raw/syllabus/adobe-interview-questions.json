@@ -1,0 +1,233 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "adobe-interview-questions",
+  "name": "Adobe Coding Interview Questions",
+  "title": "Adobe Coding Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for your Adobe online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/adobe-interview-questions/ADOBEPREP/problems/JUMPEND",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Adobe Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Practice Problems",
+          "submodule_id": 6189,
+          "contest_code": "ADOBEPREP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 13,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/adobe-interview-questions/ADOBEPREP/problems/JUMPEND",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "27877",
+              "code": "JUMPEND",
+              "name": "Jump To The End",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PTRLP",
+              "name": "Petrol ki Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "SUBTCH",
+              "name": "Find the Subtree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "REMDUP",
+              "name": "Remove Duplicates",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "TOYDESIRE",
+              "name": "Alice and Bob",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP01",
+              "name": "Array - Pascals or Khayyams triangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP02",
+              "name": "Array - Matrix operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP36",
+              "name": "Graphs - Word Ladder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP40",
+              "name": "Backtracking - Unique Combinations Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP44",
+              "name": "Bit Manipulation - Count set bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27877",
+              "code": "PREP65",
+              "name": "Trees - Path Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 13
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 13,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 1119,
+  "path_review": {
+    "rating": 4.6,
+    "users": 10
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

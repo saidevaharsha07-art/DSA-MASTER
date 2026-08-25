@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ARMYFGT",
+  "contest_category": "6",
+  "problem_name": "Fighting Armies",
+  "intended_contest_code": null,
+  "body": "Civil war is brewing in the kingdom of NaturalLand again, and this time, the rebels have adopted guerilla warfare. There are $N$ rebel soldiers and they are represented by the numbers $Rebel_1, Rebel_2, \\ldots, Rebel_N$. The king has deployed his soldiers in a long defensive wall, and this is represented by two integers: $lower$ and $upper$. This means that the King's army contains ($upper$ - $lower$ +1) soldiers represented by all the numbers between $lower$ and $upper$ (end points inclusive). \r\n\r\nThe rebels pick individual soldiers from the King's army and ambush them one by one. A soldier $x$ in the King's army will be defeated only if all the $N$ numbers $Rebel_1, Rebel_2, \\ldots,$ and $Rebel_N$ divide $x$ without leaving a remainder. Else, $x$ will survive.\r\n\r\nYour job is to count the number of soldiers in the King's army who will survive at the end,\r\n\r\n###Input:\r\n\r\n- First line will contain $T$, the number of test cases. Then the test cases follow. \r\n- The first line of each test case will contain $N$, representing the number of soldiers in the rebel army.\r\n- The second line of each testcase contains  $N$ spaced integers: $Rebel_1, Rebel_2, \\ldots, Rebel_N$.\r\n- The third line of each testcase contains the 2 integers representing the range $[lower,  upper]$ of the King's army.\r\n\r\n###Output:\r\nFor each test case, output the answer in a single line.\r\n\r\n###Constraints \r\n- $1 \\leq T \\leq 1000$\r\n- $1 \\leq N \\leq 500$\r\n- $1 \\leq Rebel_i \\leq 10^9$\r\n- $1 \\leq lower \\leq upper \\leq 10^{18}$\r\n\r\n###Sample Input:\r\n```\r\n1\r\n2\r\n2 4\r\n4 8\r\n```\r\n\r\n###Sample Output:\r\n```\r\n3\r\n```\r\n\t\r\n###EXPLANATION:\r\nThe rebels' army contains the soldiers {$2,4$}. The King's army contains the soldiers {$4,5,6,7,8$}.\r\n\r\nThe rebels will be able to kill {$4,8$} in the King's army as all the members of rebel army can divide {$4,8$} without leaving a remainder. The other three soldiers, {$5,6,7$} will survive, and hence the answer is 3.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1000$\n- $1 \\leq N \\leq 500$\n- $1 \\leq Rebel_i \\leq 10^9$\n- $1 \\leq lower \\leq upper \\leq 10^{18}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Civil war is brewing in the kingdom of NaturalLand again, and this time, the rebels have adopted guerilla warfare. There are $N$ rebel soldiers and they are represented by the numbers $Rebel_1, Rebel_2, \\ldots, Rebel_N$. The king has deployed his soldiers in a long defensive wall, and this is represented by two integers: $lower$ and $upper$. This means that the King's army contains ($upper$ - $lower$ +1) soldiers represented by all the numbers between $lower$ and $upper$ (end points inclusive). \n\nThe rebels pick individual soldiers from the King's army and ambush them one by one. A soldier $x$ in the King's army will be defeated only if all the $N$ numbers $Rebel_1, Rebel_2, \\ldots,$ and $Rebel_N$ divide $x$ without leaving a remainder. Else, $x$ will survive.\n\nYour job is to count the number of soldiers in the King's army who will survive at the end.\n",
+    "inputFormat": "- First line will contain $T$, the number of test cases. Then the test cases follow. \n- The first line of each test case will contain $N$, representing the number of soldiers in the rebel army.\n- The second line of each testcase contains  $N$ spaced integers: $Rebel_1, Rebel_2, \\ldots, Rebel_N$.\n- The third line of each testcase contains the 2 integers representing the range $[lower,  upper]$ of the King's army.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the answer in a single line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n2\n2 4\n4 8\n",
+        "output": "3\n",
+        "explanation": "The rebels' army contains the soldiers $\\{2,4\\}$. The King's army contains the soldiers $\\{4,5,6,7,8\\}$.\n\nThe rebels will be able to kill $\\{4,8\\}$ in the King's army as all the members of rebel army can divide $\\{4,8\\}$ without leaving a remainder. The other three soldiers, $\\{5,6,7\\}$ will survive, and hence the answer is 3.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "bipin2",
+  "problem_display_authors": [
+    "bipin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/bipin2'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>bipin2</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2018",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "LCM"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610628
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ARMYFGT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

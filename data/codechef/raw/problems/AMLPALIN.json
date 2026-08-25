@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMLPALIN",
+  "contest_category": "6",
+  "problem_name": "Longest Palindrome",
+  "intended_contest_code": null,
+  "body": "<p>\n    <i>Farzi Coder</i> wants to give a nice Christmas present to his brother. For that he has brought <b>N</b> pairs of letters where each letter is either 'a' or 'b'. So, the possible pairs are \"aa\", \"ab\", \"ba\" or \"bb\". Now, <i>Farzi Coder</i>'s brother loves palindromes. So, he decided to concatenate some of the pairs (possibly all or none) and form a palindrome. He wants the longest such palindrome possible. If there are multiple such longest palindromes possible, he wants to give his brother the lexicographically smallest palindrome among them as the gift. Since he is, well, <i>Farzi Coder</i>, you have to help him build the gift.</p>\n<h2>Input</h2>\n<p>    The first line of the input has the number <b>T</b> denoting the number of test cases.\n</p><p>\n    The first line of each test case has the number <b>N</b> denoting the number of pairs  in this case.</p>\n<p>\n    Each of the next <b>N</b> lines contain a pair of characters which are either <b>aa</b>, <b>ab</b>, <b>ba</b> or <b>bb</b>.</p>\n\n<h2>Output</h2>\n<p>    For each test case, output on a seperate line the gift that <i>Farzi Coder</i> has to build. Note that the empty string is a palindrome.</p>\n<h2>Constraints</h2>\n<ul>\n<li><b>1 \u2264 T \u2264 500</b></li>\n<li><b>1 \u2264 N \u2264 2000</b></li>\n<li>Each pair can be either <b>aa</b>, <b>ab</b>, <b>ba</b> or <b>bb</b>\n    </li>\n</ul>\n<h2>Sample</h2>\n<h3>Input</h3>\n<!-- Do not indent input. Will be hard to copy paste --><!-- Do not indent input. Will be hard to copy paste --><pre>2\n4\naa\naa\nbb\nbb\n3\nab\nba\nab\n    </pre><h3>Output</h3>\n<pre>aabbbbaa\nabba\n\n    </pre><h3>Explanation</h3>\n<p>    <b>Case 1:</b> The following palindromes are possible: \"aa\", \"aaaa\", \"bb\", \"bbbb\", \"aabbaa\", \"bbaabb\", \"aabbbbaa\", \"bbaaaabb\". Of these, \"aabbbbaa\" and \"bbaaaabb\" are of the maximum length. Among these two, \"aabbbbaa\" is the lexicographically smallest.<br />\n    <br /><br />\n    <b>Case 2:</b> The palindromes possible here are: \"baab\" and \"abba\".<br />\n    <br /></p>\n<p></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 500**\n- **1 \u2264 N \u2264 2000**\n- Each pair can be either **aa**, **ab**, **ba** or **bb**.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "*Farzi Coder* wants to give a nice Christmas present to his brother. For that he has brought **N** pairs of letters where each letter is either 'a' or 'b'. So, the possible pairs are \"aa\", \"ab\", \"ba\" or \"bb\". Now, *Farzi Coder*'s brother loves palindromes. So, he decided to concatenate some of the pairs (possibly all or none) and form a palindrome. He wants the longest such palindrome possible. If there are multiple such longest palindromes possible, he wants to give his brother the lexicographically smallest palindrome among them as the gift. Since he is, well, *Farzi Coder*, you have to help him build the gift.\n",
+    "inputFormat": "- The first line of the input has the number **T** denoting the number of test cases.\n- The first line of each test case has the number **N** denoting the number of pairs in this case.\n- Each of the next **N** lines contain a pair of characters which are either **aa**, **ab**, **ba** or **bb**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output on a separate line the gift that *Farzi Coder* has to build. Note that the empty string is a palindrome.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4\naa\naa\nbb\nbb\n3\nab\nba\nab\n",
+        "output": "aabbbbaa\nabba\n",
+        "explanation": "**Case 1:** The following palindromes are possible: \"aa\", \"aaaa\", \"bb\", \"bbbb\", \"aabbaa\", \"bbaabb\", \"aabbbbaa\", \"bbaaaabb\". Of these, \"aabbbbaa\" and \"bbaaaabb\" are of the maximum length. Among these two, \"aabbbbaa\" is the lexicographically smallest.\n\n**Case 2:** The palindromes possible here are: \"baab\" and \"abba\".\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>Problem link:</h3>\n<p><a href=\"https://www.codechef.com/ACM15AMR/problems/AMLPALIN\" rel=\"nofollow noopener\">Contest</a></p>\n<p><a href=\"https://www.codechef.com/problems/AMLPALIN\" rel=\"nofollow noopener\">Practice</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Adhoc,greedy</p>\n<h3>PROBLEM:</h3>\n<p>Given <b>N</b> pairs of letters where each letter is \u2018a\u2019 or \u2018b\u2019 , we need to concatenate some of the pairs and form a longest possible palindrome.If there are many possible palindromes , we need to print lexicographical minimum palindrome.Note that only possible combinations given in the input will be \u2018aa\u2019 , \u2018ab\u2019 , \u2018ba\u2019 and \u2018bb\u2019.</p>\n<h3>EXPLANATION:</h3>\n<p><a href=\"https://en.wikipedia.org/wiki/Palindrome?oldformat=true\" rel=\"nofollow noopener\">Palindrome</a> is a string that reads same forward and backward( eg. madam, racecar ).Here we need to make a longest palindrome with the help of given pairs only.Lets see how can we make such palindrome in different cases.</p>\n<p>Let the total number of \u2018aa\u2019 - N(aa) , \u2018bb\u2019 - N(bb) , \u2018ab\u2019 - N(ab) and \u2018ba\u2019 - N(ba).<br>\nLets understand this problem by using different cases and examples</p>\n<h3>Case 1:</h3>\n<p>Suppose N(aa) and N(bb) is even and N(ab)=N(ba).In this case we can keep half of the \u2018aa\u2019 pairs at the beginning of the result , half at the end of the result.Now we can keep all the \u2018ab\u2019 pairs after \u2018aa\u2019 pairs which are in the beginning of the result and \u2018ba\u2019 pairs before the \u2018aa\u2019 pairs which are at the end of the result.Now we are only left with \u2018bb\u2019 pairs . We can keep all of them in the middle of the result.</p>\n<p>Suppose N(aa)=4 , N(bb)=2 , N(ab)=3 and N(ba)=3.<br>\nIn this case , first we can put the <b>aa</b> pairs like this <b>[ aa aa \u2026 aa aa ]</b> . Then we can put <b>ab</b> and <b>ba</b> pairs like this <b> [ aa aa ab ab ab \u2026 ba ba ba aa aa ]</b>.Now we are remaining with <b>bb</b> pairs.We can keep all of them in the middle of the string.<b> [aa aa ab ab ab bb bb ba ba ba aa aa aa]</b>.</p>\n<h3>Case 2:</h3>\n<p>Suppose N(aa) is odd , N(bb) is even .</p>\n<p>For example N(aa)=5 , N(bb)=2 , N(ab)=3 and N(ba)=3.</p>\n<p>Note that in this example N(aa) is one higher than previous example.Rest all is same.</p>\n<p>In this case , after putting 4 <b>aa</b> pairs as mentioned in the previous example , we will be left with one  <b>aa</b> pair . We can put it in the middle of the result.Our resulting palindrome is <b> [ aa aa ab ab ab bb aa bb ba ba ba aa aa aa ]</b>.</p>\n<h3>Case 3:</h3>\n<p>Suppose N(bb) is odd and N(aa) is even .For example N(aa)=4 , N(bb)=3 , N(ab)=3 and N(ba)=3.</p>\n<p>Note that in this example N(bb) is one higher than N(bb) in Example 1.Rest all is same.</p>\n<p>After building the result as mentioned in Example 1 , we will be left with one <b>bb</b> pair. We can keep it in the middle of the result.<br>\n<b>[ aa aa ab ab ab bb bb bb ba ba ba aa aa aa ]</b>.</p>\n<h3>Case 4:</h3>\nSuppose N(aa) and N(bb) both are odd.For example N(aa)=5 , N(bb)=3 , N(ab)=3 and N(ba)=3.\nIn this case after building string as mentioned in Example 1 , we will be left with one <b>aa</b>pair and one <b>bb</b>pair. We can ignore one <b>bb</b> pair and keep one <b>aa</b> pair in the middle of the result.We ignored the remaining <b>bb</b> pair as there is no way to include it in the string and build the lexicographical minimum palindrome.\n<b>[ aa aa ab ab ab bb aa bb ba ba ba aa aa aa ]</b>.\n<p>In all the four example we have assumed N(ab) and N(ba) are equal.If they are not equal , then we can use only min(N(ab), N(ba)) pairs of each <b>ab</b> and <b>ba</b> type and we have to  ignore rest of them.</p>\n<h3>Case 5:</h3>\n<p>Suppose N(aa)=5 , N(bb)=3 , N(ab)= 5 , N(ba)=3 .<br>\nIn this case we can use only 3 pairs of ab and ba each and ignore rest 2 ab pairs.<br>\n<b>[ aa aa ab ab ab bb aa bb ba ba ba aa aa aa ]</b>.</p>\n<p><a href=\"http://ideone.com/MnvoZE\" rel=\"nofollow noopener\">Solution </a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12158,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "harshil7924",
+  "date_added": "20-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "ad-hoc",
+    "balajiganapath",
+    "greedy"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "https://discuss.codechef.com/problems/AMLPALIN",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610598
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMLPALIN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,396 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "react-advanced",
+  "name": "React Advanced Interview Questions",
+  "title": "React Advanced Interview Questions",
+  "level": "Beginner",
+  "description": "Revise important Advanced React concepts with these interview questions and exercises. Attempt these 25 MCQs and Coding problems to practice Advanced React.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/react-advanced/REACTLEARN01/problems/REACTJSMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "MCQ Questions",
+      "description": "  ",
+      "submodules": [
+        {
+          "name": "React Questions",
+          "submodule_id": 4415,
+          "contest_code": "REACTLEARN01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/react-advanced/REACTLEARN01/problems/REACTJSMCQ01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ01",
+              "name": "React State Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ02",
+              "name": "Understanding useState Hook",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ03",
+              "name": "React Hooks Call Order",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ04",
+              "name": "React Component Lifecycle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ05",
+              "name": "Invalid Re-render Trigger",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ08",
+              "name": "useContext Hook Functionality",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ06",
+              "name": "React Reconciliation Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ07",
+              "name": "Component Rerendering Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ09",
+              "name": "Understanding Side Effects in React",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ10",
+              "name": "Props vs State Consistency",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ11",
+              "name": "React List Key Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ12",
+              "name": "Async setState Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ13",
+              "name": "useRef Hook Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ14",
+              "name": "React memo Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ15",
+              "name": "UseReducer State Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ16",
+              "name": "Inline Functions Re-Renders",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ17",
+              "name": "React useMemo Optimization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ18",
+              "name": "Props Communication in React",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ19",
+              "name": "useLayoutEffect Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27475",
+              "code": "REACTJSMCQ20",
+              "name": "Difference between useState and useRef",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Coding Questions",
+          "submodule_id": 5886,
+          "contest_code": "REACTLEARN02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/react-advanced/REACTLEARN02/problems/REACTJSMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "29317",
+              "code": "REACTJSMCQ21",
+              "name": "useEffect - Code snippet",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29317",
+              "code": "REACTJSMCQ22",
+              "name": "useState - Code Snippet",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29317",
+              "code": "REACTJSMCQ23",
+              "name": "Component Display - Code Snippet",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29317",
+              "code": "REACTJSMCQ24",
+              "name": "React Timer with useEffect",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29317",
+              "code": "REACTJSMCQ25",
+              "name": "Initial State Toggle Button",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 25,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "265",
+    "name": "Learn JavaScript",
+    "title": "Learn JavaScript",
+    "slug": "javascript",
+    "description": "Learn JavaScript with small interactive exercises. Get ready for Web development with this practical JavaScript course and solve over 130 challenges.",
+    "highlight_color": "#FFFFFF",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 15062
+    },
+    "learners_count": 57018,
+    "lessons_count": 30
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "aided_harmony",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 1424,
+  "path_review": {
+    "rating": 4.6,
+    "users": 72
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/react-developer",
+  "roadmap_title": "React Developer Roadmap"
+}

@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "maxlinear-interview-questions",
+  "name": "Maxlinear Coding Interview Questions",
+  "title": "Maxlinear Coding Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for your Maxlinear online assessment and Interview with most commonly asked coding questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:53",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/maxlinear-interview-questions/MAXLINCON01/problems/MAXLIN01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Maxlinear Coding Questions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Maxlinear Coding Questions",
+          "submodule_id": 9478,
+          "contest_code": "MAXLINCON01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/maxlinear-interview-questions/MAXLINCON01/problems/MAXLIN01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN01",
+              "name": "Average Monthly Sales Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN02",
+              "name": "Second Highest Salary Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN03",
+              "name": "Order Item Count Mode Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN04",
+              "name": "Average Power Usage Analysis for Communication Dev",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN05",
+              "name": "Employee and Contractor Analytics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN06",
+              "name": "Maximum Sales by Region for Each Product",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN07",
+              "name": "Customer Email Domain Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN08",
+              "name": "Identifying Dual-Status Personnel",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN09",
+              "name": "Third User Transaction Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33568",
+              "code": "MAXLIN10",
+              "name": "Department High Earners Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 10,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 279,
+  "path_review": {
+    "rating": 5,
+    "users": 3
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

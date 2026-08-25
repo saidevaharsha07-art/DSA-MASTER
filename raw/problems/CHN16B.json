@@ -1,0 +1,120 @@
+{
+  "category_name": "Blue",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN16B",
+  "contest_category": "6",
+  "problem_name": "Mancunian Candidate Master Forever",
+  "intended_contest_code": null,
+  "body": "<p>\r\nMancunian is a Candidate Master. He participates regularly in many programming contests. Not many people know it but his secret desire is to become a Grandmaster. But it doesn't look like it's gonna happen anytime soon. It's been a year and Mancunian has become frustrated with life. Being the responsible decision maker that he is, he's decided to stop solving problems and drown his sorrows in alcohol instead. He's a weird one so he drinks alcohol with sugar and salt added to it!\r\n</p>\r\n\r\n<p>\r\nMancunian went to the store. There are a total of <b>N</b> alcohols in the store. Each alcohol comes in a container of volume 1 liter and consists of certain micrograms of sugar and salt, and of course it has some price associated with it. Mancunian is craving to have a taste all of these alcohols. Sadly, he is not so very rich, so he would like to spend as less on buying the drinks from store as possible. He will come home with some of the alcohols and will try to prepare the remaining of the <b>N</b> alcohols at home and taste them up. He can prepare 1 liter of an alcohol (by filling the entire jug of  1 liter) by mixing any ratio of the already bought ones, and taste a little of it (you can assume that the quantity he tastes is negligible). Formally if <b>t</b> alcohols are mixed in the ratio <b>x<sub>1</sub>:x<sub>2</sub>:x<sub>3</sub>....:x<sub>n</sub></b> with the <b>i<sup>th</sup></b> alcohol having <b>s<sub>i</sub></b> micrograms of sugar, then the sugar content of the mixture is <b>(s<sub>1</sub>*x<sub>1</sub> + s<sub>2</sub>*x<sub>2</sub> + s<sub>3</sub>*x<sub>3</sub> + .... + s<sub>t</sub>*x<sub>t</sub>)/(x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> + .... + x<sub>t</sub>)</b> micrograms. Similar for salt. In this way, he would like to taste all the <b>N</b> alcohols. Also, note that a cup is not exhausted when it is used to make some mixture, i.e. it can be used again and again. </p>\r\n\r\n<p>Find out what is the minimum amount of money Mancunian has to spend in order to taste all the alcohols.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line contains an integer <b>N</b> denoting the number of alcohols craved by Mancunian.</p>\r\n<p>Each of the next <b>N</b> lines contains three integers, the <b>s<sub>i</sub></b>, <b>w<sub>i</sub></b> and <b>c<sub>i</sub></b>, where <b>s<sub>i</sub></b> and <b>w<sub>i</sub></b> denote the amount in micrograms of sugar and salt in the <b>i</b>-th drink, and <b>c<sub>i</sub></b> denotes cost of alcohol in rupees respectively. No two alcohols will have the exact same composition.</p>\r\n\r\n<h3>Output</h3>\r\n<p>Output a single integer, corresponding to minimum amount of money Mancunian has to spend.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>200,000</b></li>\r\n<li><b>0</b> \u2264 <b>s<sub>i</sub>, w<sub>i</sub>, c<sub>i</sub></b> \u2264 <b>1,000,000,000</b></li>\r\n<li><b>s<sub>i</sub> + w<sub>i</sub> != 0</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3\r\n4 2 1\r\n3 3 5\r\n2 4 10\r\n\r\n<b>Output:</b>\r\n11\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case: </b>Mancunian will buy the first and third alcohols from the store. He will prepare the second alcohol by mixing the first and second in the ratio 1:1. So, to get taste of all the alcohols, he has to spend 1 + 10 = 11 Rupees.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **N** \u2264 **200,000**\n- **0** \u2264 **s<sub>i</sub>, w<sub>i</sub>, c<sub>i</sub>** \u2264 **1,000,000,000**\n- **s<sub>i</sub> + w<sub>i</sub> != 0**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Mancunian is a Candidate Master. He participates regularly in many programming contests. Not many people know it but his secret desire is to become a Grandmaster. But it doesn't look like it's gonna happen anytime soon. It's been a year and Mancunian has become frustrated with life. Being the responsible decision maker that he is, he's decided to stop solving problems and drown his sorrows in alcohol instead. He's a weird one so he drinks alcohol with sugar and salt added to it!\n\nMancunian went to the store. There are a total of **N** alcohols in the store. Each alcohol comes in a container of volume 1 liter and consists of certain micrograms of sugar and salt, and of course it has some price associated with it. Mancunian is craving to have a taste all of these alcohols. Sadly, he is not so very rich, so he would like to spend as less on buying the drinks from store as possible. He will come home with some of the alcohols and will try to prepare the remaining of the **N** alcohols at home and taste them up. He can prepare 1 liter of an alcohol (by filling the entire jug of  1 liter) by mixing any ratio of the already bought ones, and taste a little of it (you can assume that the quantity he tastes is negligible). Formally if **t** alcohols are mixed in the ratio **x<sub>1</sub>:x<sub>2</sub>:x<sub>3</sub>....:x<sub>n</sub>** with the **i<sup>th</sup>** alcohol having **s<sub>i</sub>** micrograms of sugar, then the sugar content of the mixture is **$(s_{1}*x_{1} + s_{2}*x_{2} + s_{3}*x_{3} + .... + s_{t}*x_{t})/(x_{1} + x_{2} + x_{3} + .... + x_{t})$** micrograms. Similar for salt. In this way, he would like to taste all the **N** alcohols. Also, note that a cup is not exhausted when it is used to make some mixture, i.e. it can be used again and again.\n\nFind out what is the minimum amount of money Mancunian has to spend in order to taste all the alcohols.\n",
+    "inputFormat": "The first line contains an integer **N** denoting the number of alcohols craved by Mancunian.\n\nEach of the next **N** lines contains three integers, the **s<sub>i</sub>**, **w<sub>i</sub>** and **c<sub>i</sub>**, where **s<sub>i</sub>** and **w<sub>i</sub>** denote the amount in micrograms of sugar and salt in the **i**-th drink, and **c<sub>i</sub>** denotes cost of alcohol in rupees respectively. No two alcohols will have the exact same composition.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output a single integer, corresponding to minimum amount of money Mancunian has to spend.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4 2 1\n3 3 5\n2 4 10\n",
+        "output": "11\n",
+        "explanation": "**Example case:** Mancunian will buy the first and third alcohols from the store. He will prepare the second alcohol by mixing the first and second in the ratio 1:1. So, to get taste of all the alcohols, he has to spend 1 + 10 = 11 Rupees.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610680
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN16B",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

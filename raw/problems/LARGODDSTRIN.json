@@ -1,0 +1,132 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LARGODDSTRIN",
+  "contest_category": "6",
+  "problem_name": "Largest Odd Substring",
+  "intended_contest_code": "DSAMONDAY002",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le |S| \\le 10^{5}$\n- $S \\text{ contains only digits } (0\\text{--}9)$\n- $S \\text{ does not contain leading zeros}$\n\n",
+    "constraintsState": false,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "You are given a string $nums$ consisting of digits representing a large integer. Your task is to find the largest-valued **odd integer** (as a substring of $nums$) that can be obtained.\n\nA **substring** is a contiguous sequence of characters within the string.\n\n## Function Declaration\n\n### Function Name\n\n$findLargestOddSubstring$ \u2013 This function finds the largest-valued odd integer that can be obtained as a substring of the given numeric string.\n\n### Parameters\n\n* $num$ : A string representing a large integer, consisting only of digits ($0\u20139$).\n\n### Return Value\n\n* This function **prints**:\n\n  * The largest odd integer substring if it exists.\n  * $-1$ if no odd integer substring can be formed.\n\n## Constraints\n\n* $1 \\le |num| \\le 10^5$\n* The string $num$ contains only digits $0\u20139$\n* The string does **not** contain leading zeros\n* There is no limit on the size of the integer represented by the substring",
+    "inputFormat": "* The first line contains a single string `num`.\n",
+    "inputFormatState": true,
+    "outputFormat": "* Print a single line:\n\n  * The largest odd integer substring of `num`\n  * Or `-1` if no odd substring exists",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "128764\n",
+        "output": "1287\n",
+        "explanation": "The largest odd substring ends at the first odd digit from the right, which is '7'.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "60042\n",
+        "output": "-1\n",
+        "explanation": "There are no odd digits in the string, so no odd substring exists.",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "987654321\n",
+        "output": "987654321\n",
+        "explanation": "The last digit is '1', which is odd, so the entire number is the largest odd substring.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "## Problem Restatement\n\nYou are given a numeric string `S` representing a large integer.\\\nYour task is to find the **largest-valued odd integer substring** that can be obtained from `S`.\n\nA **substring** is a contiguous sequence of characters from the string.\n\nIf there is no odd digit in `S`, print `-1`.\n\n---  \n\n## Key Observations \n\nA substring ending at the ** odd digit** from the right will always be the largest **odd substring**.\n\nThis is because removing any trailing even digits still keeps the number as large as possible (preserving prefix digits).\n\nIf the string contains **no odd digits**, then no odd substring can exist.\n\n--- \n\n## Approach\n\n- **Traverse the string from right to left**.\n\n- Find the first odd digit (1, 3, 5, 7, or 9).\n\n- **Return the substring** from the start of the string up to (and including) that odd digit.\n\n- If no odd digit is found, print `-1`.\n\nThis approach ensures the substring is **maximal and odd**.\n\n---  \n\n## Complexity Analysis\n\n**Time Complexity**: O(n) \u2013 we make a single pass through the string.\\\n**Space Complexity**: O(1) \u2013 only a few variables are used.",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, CAML",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mayank_pardhi",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-09-2025",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "mayank_pardhi"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1778513400,
+    "submit_start_date": 1778513400,
+    "visible_start_date": 1778513400,
+    "end_date": 1893436200,
+    "current": 1785610979
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LARGODDSTRIN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 24,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

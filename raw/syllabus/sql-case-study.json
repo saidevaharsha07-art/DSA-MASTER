@@ -1,0 +1,2315 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "sql-case-study",
+  "name": "SQL case studies",
+  "title": "SQL case studies",
+  "level": "Intermediate",
+  "description": "Put your SQL skills to the test. Get better at intermediate level Analytics using the case studies given in this practice path",
+  "time_to_complete": null,
+  "difficulty_range": "800 - 1200",
+  "current_date": "2026-08-02 00:25:49",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/sql-case-study/SQLCS03/problems/SQLP033",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Case Study - Cinema Hall",
+      "description": "Refine SQL skills by analyzing movie theatre booking data, customer preferences and movie trends for valuable insights.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1228,
+          "contest_code": "SQLCS03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS03/problems/SQLP033",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23767",
+              "code": "SQLP033",
+              "name": "MCQ-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP034",
+              "name": "MCQ-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP035",
+              "name": "MCQ-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP036",
+              "name": "MCQ-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP037",
+              "name": "MCQ-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP038",
+              "name": "MCQ-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP039",
+              "name": "MCQ-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP040",
+              "name": "MCQ-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP041",
+              "name": "MCQ-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP042",
+              "name": "MCQ-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP043",
+              "name": "MCQ-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP044",
+              "name": "MCQ-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP045",
+              "name": "MCQ-13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP046",
+              "name": "MCQ-14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP047",
+              "name": "MCQ-15",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP048",
+              "name": "Rearrange code-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP049",
+              "name": "Rearrange code-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP050",
+              "name": "Rearrange code-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP051",
+              "name": "Rearrange code-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23767",
+              "code": "SQLP052",
+              "name": "Rearrange code-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1229,
+          "contest_code": "SQLCS04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS04/problems/SQLP053",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23768",
+              "code": "SQLP053",
+              "name": "Query-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP054",
+              "name": "Query-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP055",
+              "name": "Query-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP056",
+              "name": "Query-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP057",
+              "name": "Query-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP058",
+              "name": "Query-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP059",
+              "name": "Query-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP060",
+              "name": "Query-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP061",
+              "name": "Query-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP062",
+              "name": "Query-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP063",
+              "name": "Query-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23768",
+              "code": "SQLP064",
+              "name": "Query-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "Case Study - Online Education Courses",
+      "description": "Boost SQL skills with hands-on analysis of an online education platform's dataset, examining course popularity, instructor performance, and subscriber information.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1230,
+          "contest_code": "SQLCS05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS05/problems/SQLP085",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23769",
+              "code": "SQLP085",
+              "name": "Case Study - Online Education Courses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP086",
+              "name": "Rearrange1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP077",
+              "name": "MCQ2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP078",
+              "name": "MCQ3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP094",
+              "name": "MCQ4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP079",
+              "name": "MCQ5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP080",
+              "name": "MCQ6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP081",
+              "name": "MCQ7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP082",
+              "name": "MCQ8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP083",
+              "name": "MCQ9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP084",
+              "name": "MCQ10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP087",
+              "name": "MCQ11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP088",
+              "name": "MCQ12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP089",
+              "name": "MCQ13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP090",
+              "name": "MCQ14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP091",
+              "name": "MCQ15",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP092",
+              "name": "MCQ16",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP093",
+              "name": "MCQ17",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP095",
+              "name": "REARRANGE2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23769",
+              "code": "SQLP096",
+              "name": "REARRANGE3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1231,
+          "contest_code": "SQLCS06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS06/problems/SQLP065",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23770",
+              "code": "SQLP065",
+              "name": "Case Study - CodeChefEdu",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP066",
+              "name": "Query2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP067",
+              "name": "Query3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP068",
+              "name": "query4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP069",
+              "name": "query5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP070",
+              "name": "query6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP071",
+              "name": "query7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP072",
+              "name": "query8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP073",
+              "name": "query9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP074",
+              "name": "query10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP075",
+              "name": "query11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23770",
+              "code": "SQLP076",
+              "name": "query12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "Case Study - Fantasy Role Playing Game",
+      "description": "Master the art of manipulating and retrieving data from a fantasy role-playing game's database using SQL queries.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1232,
+          "contest_code": "SQLCS01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS01/problems/SQLP001",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23764",
+              "code": "SQLP001",
+              "name": "MCQ-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP002",
+              "name": "MCQ-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP003",
+              "name": "Rearrange code-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP004",
+              "name": "Rearrange code-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP005",
+              "name": "MCQ-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP006",
+              "name": "Rearrange code-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP007",
+              "name": "MCQ-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP008",
+              "name": "Rearrange code-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP009",
+              "name": "MCQ-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP010",
+              "name": "MCQ-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP011",
+              "name": "MCQ-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP012",
+              "name": "MCQ-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP013",
+              "name": "Rearrange code-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP014",
+              "name": "MCQ-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP015",
+              "name": "MCQ-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP016",
+              "name": "MCQ-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP017",
+              "name": "MCQ-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP018",
+              "name": "MCQ-13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP019",
+              "name": "MCQ-14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23764",
+              "code": "SQLP020",
+              "name": "Rearrange code-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1233,
+          "contest_code": "SQLCS02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS02/problems/SQLP021",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23765",
+              "code": "SQLP021",
+              "name": "Query-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP022",
+              "name": "Query-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP023",
+              "name": "Query-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP024",
+              "name": "Query-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP025",
+              "name": "Query-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP026",
+              "name": "Query-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP027",
+              "name": "Query-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP028",
+              "name": "Query-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP029",
+              "name": "Query-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP030",
+              "name": "Query-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP031",
+              "name": "Query-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23765",
+              "code": "SQLP032",
+              "name": "Query-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "Case Study - Company Recession",
+      "description": "Analyze company data to understand operations, including financial performance, workforce composition, sectors, and headquarters, enabling informed decisions even during recessions.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1234,
+          "contest_code": "SQLCS07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS07/problems/SQLP097",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23771",
+              "code": "SQLP097",
+              "name": "MCQ-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP098",
+              "name": "MCQ-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP099",
+              "name": "Rearrange code-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP100",
+              "name": "MCQ-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP101",
+              "name": "MCQ-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP108",
+              "name": "Rearrange code-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP103",
+              "name": "MCQ-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP104",
+              "name": "MCQ-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP102",
+              "name": "Rearrange code-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP106",
+              "name": "MCQ-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP107",
+              "name": "MCQ-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP105",
+              "name": "Rearrange code-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP109",
+              "name": "MCQ-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP110",
+              "name": "MCQ-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP111",
+              "name": "Rearrange code-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP112",
+              "name": "MCQ-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP113",
+              "name": "MCQ-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP114",
+              "name": "Rearrange code-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP115",
+              "name": "MCQ-13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23771",
+              "code": "SQLP116",
+              "name": "MCQ-14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1235,
+          "contest_code": "SQLCS08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS08/problems/SQLP117",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23772",
+              "code": "SQLP117",
+              "name": "Query-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP118",
+              "name": "Query-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP119",
+              "name": "Query-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP127",
+              "name": "Query-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP120",
+              "name": "Query-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP123",
+              "name": "Query-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP124",
+              "name": "Query-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP126",
+              "name": "Query-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP128",
+              "name": "Query-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP121",
+              "name": "Query-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP122",
+              "name": "Query-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23772",
+              "code": "SQLP125",
+              "name": "Query-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "Case Study -  Sales Analysis of E-commerce Platform",
+      "description": "Enhance SQL skills while analyzing a comprehensive dataset to gain insights into e-commerce sales and customer behavior, enabling data-driven decision-making for optimizing the online marketplace.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1236,
+          "contest_code": "SQLCS09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS09/problems/SQLP129",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23773",
+              "code": "SQLP129",
+              "name": "MCQ-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP130",
+              "name": "MCQ-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP131",
+              "name": "MCQ-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP132",
+              "name": "MCQ-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP133",
+              "name": "MCQ-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP134",
+              "name": "MCQ-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP135",
+              "name": "MCQ-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP136",
+              "name": "MCQ-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP137",
+              "name": "MCQ-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP138",
+              "name": "MCQ-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP139",
+              "name": "MCQ-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP140",
+              "name": "MCQ-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP141",
+              "name": "MCQ-13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP142",
+              "name": "MCQ-14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP143",
+              "name": "MCQ-15",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP144",
+              "name": "Rearrange code-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP145",
+              "name": "Rearrange code-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP146",
+              "name": "Rearrange code-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP147",
+              "name": "Rearrange code-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23773",
+              "code": "SQLP148",
+              "name": "Rearrange code-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1237,
+          "contest_code": "SQLCS10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS10/problems/SQLP149",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23774",
+              "code": "SQLP149",
+              "name": "Query-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP150",
+              "name": "Query-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP151",
+              "name": "Query-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP152",
+              "name": "Query-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP153",
+              "name": "Query-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP154",
+              "name": "Query-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP155",
+              "name": "Query-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP156",
+              "name": "Query-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP157",
+              "name": "Query-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP158",
+              "name": "Query-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP159",
+              "name": "Query-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23774",
+              "code": "SQLP160",
+              "name": "Query-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    },
+    {
+      "assessment": null,
+      "name": "Case Study - Music App",
+      "description": "Level up your SQL skills by extracting valuable insights from data analysis to maximize the music app's potential in the digital music industry.",
+      "submodules": [
+        {
+          "name": "MCQ",
+          "submodule_id": 1238,
+          "contest_code": "SQLCS11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS11/problems/SQLP161",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "23775",
+              "code": "SQLP161",
+              "name": "MCQ-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP162",
+              "name": "MCQ-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP163",
+              "name": "MCQ-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP164",
+              "name": "MCQ-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP165",
+              "name": "MCQ-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP166",
+              "name": "MCQ-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP167",
+              "name": "MCQ-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP168",
+              "name": "MCQ-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP169",
+              "name": "MCQ-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP170",
+              "name": "MCQ-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP171",
+              "name": "MCQ-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP172",
+              "name": "MCQ-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP173",
+              "name": "MCQ-13",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP174",
+              "name": "MCQ-14",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP175",
+              "name": "MCQ-15",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP176",
+              "name": "Rearrange code-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP177",
+              "name": "Rearrange code-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP178",
+              "name": "Rearrange code-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP179",
+              "name": "Rearrange code-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23775",
+              "code": "SQLP180",
+              "name": "Rearrange code-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Queries",
+          "submodule_id": 1239,
+          "contest_code": "SQLCS12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sql-case-study/SQLCS12/problems/SQLP181",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "23776",
+              "code": "SQLP181",
+              "name": "Query-1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP182",
+              "name": "Query-2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP183",
+              "name": "Query-3",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP184",
+              "name": "Query-4",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP185",
+              "name": "Query-5",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP186",
+              "name": "Query-6",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP187",
+              "name": "Query-7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP188",
+              "name": "Query-8",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP189",
+              "name": "Query-9",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP190",
+              "name": "Query-10",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP191",
+              "name": "Query-11",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "23776",
+              "code": "SQLP192",
+              "name": "Query-12",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 32
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 192,
+  "total_non_pro_problems": 120,
+  "up_next": [
+    {
+      "name": "Learn HTML / CSS",
+      "title": "Learn HTML / CSS",
+      "slug": "html-old",
+      "level": "Archived",
+      "is_practice_path": false,
+      "learners_count": 45767,
+      "review": {
+        "rating": 4.6,
+        "users": 4701
+      },
+      "course_count": 10,
+      "description": "Want to get started with web development? Start with this beginners course which teaches basic HTML and CSS from scratch. No prior programming experience required."
+    },
+    {
+      "name": "SQL Practice Queries",
+      "title": "SQL Practice Queries",
+      "slug": "sql-case-studies-topic-wise",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 159631,
+      "review": {
+        "rating": 4.6,
+        "users": 20357
+      },
+      "course_count": 9,
+      "description": "Practice queries on Select, Where, Limit, Order by, Aggregates, Group by, Joins, Sub-queries and Case expressions. Solve over 80 SQL exercises using real life case studies. Write queries in MySQL syntax."
+    },
+    {
+      "name": "Projects using HTML / CSS",
+      "title": "Projects using HTML / CSS",
+      "slug": "html",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 64028,
+      "review": {
+        "rating": 4.5,
+        "users": 8174
+      },
+      "course_count": 12,
+      "description": "Practice HTML and CSS with our on site editor. Code 7 guided projects to build sites. Solve MCQ exercises on HTML and CSS to test your knowledge."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "38",
+    "name": "Learn Advanced SQL",
+    "title": "Learn Advanced SQL",
+    "slug": "sql-intermediate",
+    "description": "Learn advance querying techniques like joins, sub queries and set operations to put yourself on the path to mastery in SQL.  ",
+    "highlight_color": "#115FB7",
+    "level": "Intermediate",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 1870
+    },
+    "learners_count": 21841,
+    "lessons_count": 14
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Other Practice Paths",
+  "reviews": [
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 14507,
+  "path_review": {
+    "rating": 4.6,
+    "users": 815
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/sql",
+  "roadmap_title": "SQL Roadmap for Data Analysis"
+}

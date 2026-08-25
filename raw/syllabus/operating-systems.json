@@ -1,0 +1,1902 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "operating-systems",
+  "name": "Operating systems Interview Questions",
+  "title": "Operating systems Interview Questions",
+  "level": "Beginner",
+  "description": "Revise all the important Operating Systems concepts and practice lots of MCQ questions to prepare for interviews.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": true,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/operating-systems/OSC01/problems/OSP01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Process Management",
+      "description": "The coordination and control of executing programs (processes) within an operating system. It involves creating, suspending, resuming, and terminating processes, as well as managing their resources.\n",
+      "submodules": [
+        {
+          "name": "Process Management",
+          "submodule_id": 5752,
+          "contest_code": "OSC01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC01/problems/OSP01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29162",
+              "code": "OSP01",
+              "name": "Introduction to Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ001",
+              "name": "Operating System Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ002",
+              "name": "User Interface Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ003",
+              "name": "Multitasking in Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSP03",
+              "name": "Process Creation and Termination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ004",
+              "name": "Process Creation Steps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ005",
+              "name": "Process Termination",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ006",
+              "name": "Zombie vs Orphan Processes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSP02",
+              "name": "Process States and Transitions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ007",
+              "name": "Process State Transition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ008",
+              "name": "Process Waiting State",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ009",
+              "name": "Context Switching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSP04",
+              "name": "Process Control Block (PCB)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ010",
+              "name": "PCB Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ011",
+              "name": "PCB Contents",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ012",
+              "name": "Context Switching and PCB",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSP05",
+              "name": "Context Switching in Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ013",
+              "name": "Context Switching Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ014",
+              "name": "Context Switch Information",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ015",
+              "name": "Context Switching Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSP06",
+              "name": "Inter-process Communication (IPC)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "trio",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ016",
+              "name": "IPC Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ017",
+              "name": "Pipe Example",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29162",
+              "code": "OSMCQ018",
+              "name": "IPC Advantages and Disadvantages",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "Memory Management",
+      "description": "The allocation and deallocation of computer memory to running processes and the operating system itself. It includes techniques like virtual memory, paging, and segmentation to efficiently use available memory.\n",
+      "submodules": [
+        {
+          "name": "Memory Management",
+          "submodule_id": 5753,
+          "contest_code": "OSC02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC02/problems/OSP07",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29163",
+              "code": "OSP07",
+              "name": "Introduction to Memory Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ019",
+              "name": "Memory Management Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ020",
+              "name": "Memory Management Analogy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ021",
+              "name": "Importance of Memory Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSP08",
+              "name": "Virtual Memory",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ022",
+              "name": "Virtual Memory Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ023",
+              "name": "Virtual Memory Mechanism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ024",
+              "name": "Virtual Memory Drawbacks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSP09",
+              "name": "Paging and Segmentation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ025",
+              "name": "Paging Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ026",
+              "name": "Segmentation vs Paging",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ027",
+              "name": "Paged Segmentation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSP10",
+              "name": "Memory Allocation Techniques ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ028",
+              "name": "Memory Allocation Techniques",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ029",
+              "name": "Contiguous Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ030",
+              "name": "Virtual Memory",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSP11",
+              "name": "Page Replacement Algorithms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ031",
+              "name": "Page Replacement Algorithm Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ032",
+              "name": "FIFO Algorithm Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ033",
+              "name": "Clock Algorithm Operation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSP12",
+              "name": "Thrashing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ034",
+              "name": "Thrashing Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ035",
+              "name": "Thrashing Detection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29163",
+              "code": "OSMCQ036",
+              "name": "Thrashing Prevention",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "File Systems",
+      "description": "The structure and organization of data storage on disk drives or other storage devices. File systems manage how data is stored, retrieved, and organized in files and directories.\n",
+      "submodules": [
+        {
+          "name": "File Systems",
+          "submodule_id": 5754,
+          "contest_code": "OSC03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC03/problems/OSP13",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29164",
+              "code": "OSP13",
+              "name": "Introduction to File Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ037",
+              "name": "File System Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ038",
+              "name": "File Path Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ039",
+              "name": "File System Fragmentation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSP14",
+              "name": "File organization and access methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ040",
+              "name": "File Organization Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ041",
+              "name": "Sequential File Organization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ042",
+              "name": "Indexed File Organization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSP15",
+              "name": "Directory structures",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ043",
+              "name": "Directory Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ044",
+              "name": "File Path Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ045",
+              "name": "File Permissions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSP16",
+              "name": "File allocation methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ046",
+              "name": "File Allocation Methods",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ047",
+              "name": "Contiguous Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ048",
+              "name": "Indexed Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSP17",
+              "name": "File system reliability and recovery",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ049",
+              "name": "File System Reliability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ050",
+              "name": "Journaling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ051",
+              "name": "File System Recovery",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSP18",
+              "name": "Distributed file systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ052",
+              "name": "Components of Distributed File Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ053",
+              "name": "Advantages of Distributed File Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29164",
+              "code": "OSMCQ054",
+              "name": "Security in Distributed File Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "I/O Management",
+      "description": "The control and coordination of input/output operations between the computer and its peripheral devices. It involves device drivers, buffering, and managing data transfer between the CPU and I/O devices.\n",
+      "submodules": [
+        {
+          "name": "I/O Management",
+          "submodule_id": 5755,
+          "contest_code": "OSC04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC04/problems/OSP19",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29165",
+              "code": "OSP19",
+              "name": "Introduction to IO Management",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ055",
+              "name": "I/O Management Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ056",
+              "name": "Blocking vs Non-blocking I/O",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ057",
+              "name": "I/O Error Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSP20",
+              "name": "Device drivers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ058",
+              "name": "Device Driver Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ059",
+              "name": "Kernel-mode vs User-mode Drivers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ060",
+              "name": "Plug-and-Play Device Drivers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSP21",
+              "name": "Buffering in Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ061",
+              "name": "Purpose of Buffering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ062",
+              "name": "Double Buffering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ063",
+              "name": "Drawbacks of Buffering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSP22",
+              "name": "Spooling in Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ064",
+              "name": "Spooling Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ065",
+              "name": "Spooling in Printing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ066",
+              "name": "Spooling Applications",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSP23",
+              "name": "IO scheduling in Operating Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ067",
+              "name": "I/O Scheduling Goals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ068",
+              "name": "SCAN Algorithm",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ069",
+              "name": "I/O Scheduling Algorithms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSP24",
+              "name": "Direct Memory Access (DMA)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ070",
+              "name": "DMA Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ071",
+              "name": "DMA Process",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29165",
+              "code": "OSMCQ072",
+              "name": "DMA Challenges",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "Virtualization",
+      "description": "The creation of virtual versions of computer resources, such as hardware platforms, operating systems, or storage devices. It allows multiple virtual machines to run on a single physical machine, improving resource utilization.\n",
+      "submodules": [
+        {
+          "name": "Virtualization",
+          "submodule_id": 5795,
+          "contest_code": "OSC05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC05/problems/OSP25",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 16,
+          "problems_with_status": [
+            {
+              "contest_id": "29166",
+              "code": "OSP25",
+              "name": "Introduction to Virtualization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ073",
+              "name": "Virtualization Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ074",
+              "name": "Virtualization and Cloud Computing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ075",
+              "name": "Full Virtualization vs Paravirtualization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSP26",
+              "name": "Hypervisors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ076",
+              "name": "Hypervisor Types",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ077",
+              "name": "Hypervisor Benefits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ078",
+              "name": "Hypervisors and Cloud Computing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSP27",
+              "name": "Virtual machines",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ079",
+              "name": "Virtual Machine Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ080",
+              "name": "Hypervisor Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ081",
+              "name": "Virtual Machine Benefits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSP28",
+              "name": "Container technologies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ082",
+              "name": "Container vs Virtual Machine",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ083",
+              "name": "Container Isolation Mechanisms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29166",
+              "code": "OSMCQ084",
+              "name": "Docker Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Scheduling Algorithms",
+      "description": "Methods used to determine the order in which processes are allocated CPU time. These algorithms aim to optimize system performance, fairness, and resource utilization.\n",
+      "submodules": [
+        {
+          "name": "Scheduling Algorithms",
+          "submodule_id": 5796,
+          "contest_code": "OSC06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC06/problems/OSP29",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29210",
+              "code": "OSP29",
+              "name": "Scheduling Algorithms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ085",
+              "name": "Scheduling Importance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ086",
+              "name": "Preemptive vs Non-preemptive Scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ087",
+              "name": "CPU Burst",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSP30",
+              "name": "First-Come, First-Served (FCFS)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ088",
+              "name": "FCFS Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ089",
+              "name": "FCFS Convoy Effect",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ090",
+              "name": "FCFS Nature",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSP31",
+              "name": "Shortest Job First (SJF)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ091",
+              "name": "SJF vs FCFS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ092",
+              "name": "Types of SJF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ093",
+              "name": "SJF Limitations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSP32",
+              "name": "Round Robin (RR)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ094",
+              "name": "Round Robin Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ095",
+              "name": "Time Quantum Effects",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ096",
+              "name": "Round Robin Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSP33",
+              "name": "Priority scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ097",
+              "name": "Priority Scheduling Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ098",
+              "name": "Addressing Starvation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ099",
+              "name": "Priority Assignment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSP34",
+              "name": "Multilevel queue scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ100",
+              "name": "Multilevel Queue Scheduling Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ101",
+              "name": "Advantages of Multilevel Queue Scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29210",
+              "code": "OSMCQ102",
+              "name": "Addressing Starvation in Multilevel Queue Scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "Concurrency and Synchronization",
+      "description": "The simultaneous execution of multiple processes or threads, and the mechanisms to coordinate their actions. This includes techniques like mutual exclusion, semaphores, and monitors to prevent race conditions and ensure data integrity.",
+      "submodules": [
+        {
+          "name": "Concurrency and Synchronization",
+          "submodule_id": 5797,
+          "contest_code": "OSC07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/operating-systems/OSC07/problems/OSP35",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "29211",
+              "code": "OSP35",
+              "name": "Introduction to concurrency and Synchronization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ103",
+              "name": "Concurrency Benefits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ104",
+              "name": "Synchronization Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ105",
+              "name": "Critical Section",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSP36",
+              "name": "Mutual exclusion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ106",
+              "name": "Mutual Exclusion Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ107",
+              "name": "Critical Section",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ108",
+              "name": "Deadlock Scenario",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSP37",
+              "name": "Semaphores and monitors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ109",
+              "name": "Semaphore Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ110",
+              "name": "Monitor Characteristics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ111",
+              "name": "Semaphores vs Monitors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSP38",
+              "name": "Deadlock prevention, avoidance, and detection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ112",
+              "name": "Deadlock Conditions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ113",
+              "name": "Deadlock Prevention Strategy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ114",
+              "name": "Deadlock Handling Approaches",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSP39",
+              "name": "Race conditions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ115",
+              "name": "Race Condition Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ116",
+              "name": "Race Condition Detection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ117",
+              "name": "Race Condition Prevention",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSP40",
+              "name": "Producer-consumer problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ118",
+              "name": "Producer-Consumer Problem Components",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ119",
+              "name": "Semaphores in Producer-Consumer Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29211",
+              "code": "OSMCQ120",
+              "name": "Real-world Analogy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 120,
+  "total_non_pro_problems": 0,
+  "up_next": [
+    {
+      "name": "Top DBMS Interview Questions",
+      "title": "Top DBMS Interview Questions",
+      "slug": "interview-dbms",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 5638,
+      "review": {
+        "rating": 4.6,
+        "users": 584
+      },
+      "course_count": 15,
+      "description": "Prepare for DBMS interviews with more than 92 interview questions. This path covers key topics such as data modelling, relational database design, SQL, transaction management, and emerging database technologies."
+    },
+    {
+      "name": "Company based DSA Interview Questions",
+      "title": "Company based DSA Interview Questions",
+      "slug": "company-prep",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 504,
+      "review": {
+        "rating": 0,
+        "users": 0
+      },
+      "course_count": 0,
+      "description": "Prepare yourselves for technical interview with a carefully curated set of problems that appeared in companies like Google, Facebook, Amazon, Microsoft, Adobe, Flipkart, OLX Group, Walmart Labs, eBay, Ola, LinkedIn & more"
+    },
+    {
+      "name": "Top SQL Interview Questions",
+      "title": "Top SQL Interview Questions",
+      "slug": "sql-interview-questions",
+      "level": "Beginner",
+      "is_practice_path": true,
+      "learners_count": 7352,
+      "review": {
+        "rating": 4.7,
+        "users": 696
+      },
+      "course_count": 14,
+      "description": "Revise all the important concepts with our 70 SQL interview questions. Prepare yourself for the upcoming SQL interviews by solving practice problems."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 2422,
+  "path_review": {
+    "rating": 4.7,
+    "users": 146
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

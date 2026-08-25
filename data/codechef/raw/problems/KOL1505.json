@@ -1,0 +1,122 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1505",
+  "contest_category": "6",
+  "problem_name": "Jalebi Bai and Decks of Sweets",
+  "intended_contest_code": null,
+  "body": "<p>Jalebi Bai has two decks of sweets. These decks are represented by two strings <b>s</b> and <b>t</b> consisting of lowercase letters from the English alphabet. Each letter from 'a' to 'z' denotes a single type of sweet, e.g., \u2018b\u2019 denotes Barfi, 'r' denotes Rasgulla, etc. She wants to use these decks in her friend Laddu\u2019s marriage. Instead of graciously accepting the gift, Laddu asks Jalebi Bai to first make the two decks exactly the same, so that they look good while serving. Now Jalebi Bai can apply the following operation as many times as she wants on both the decks.\r\n<ul>\r\n<li>\r\nFrom a single deck, pick any two consecutive sweets of the same type and eat one of them. e.g., if a deck is \"rrrjj\", she can change it to \"rrrj\" by picking the last two sweets of type 'j' (Jalebi) and eating one of them, or she can change the deck to \"rrjj\" by  picking up the first two sweets of type \u2018r\u2019 and eating one of them.\r\n</li>\r\n</ul>\r\n</p>\r\n<p>\r\nYou need to tell whether Jalebi Bai can make the decks equal by applying the above operation as many times as she wants. Output \"Yes\" [without quotes] if she can, otherwise output \"No\" [without quotes].\r\n</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The first line of each test case contains a string <b>s</b>.</p>\r\n<p>The second line of each test case contains a string <b>t</b>.</p>\r\n\r\n<h3>Output</h3>\r\nFor each test case, output \"Yes\" [without quotes] or \"No\" [without quotes] depending on the case.\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>50</b></li>\r\n<li>Each character of <b>s, t</b> will be between 'a' and 'z'.</li>\r\n<li><b>1</b> \u2264 length of string <b>s</b> \u2264 <b>50</b></li>\r\n<li><b>1</b> \u2264 length of string <b>t</b> \u2264 <b>50</b></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\nrrrjj\r\nrrrj\r\nrj\r\njr\r\n<b>Output:</b>\r\nYes\r\nNo\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>In the first example</b>, \r\nJalebi Bai can change the first deck from \"rrrjj\" to \"rrrj\" in a single operation, then both the decks will be equal. Example taken from the statements.</p>\r\n\r\n<p><b>In the second example</b>, \r\nJalebi Bai can never make both decks of sweets equal.\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- `1` \u2264 `T` \u2264 `50`\n- Each character of `s, t` will be between 'a' and 'z'.\n- `1` \u2264 length of string `s` \u2264 `50`\n- `1` \u2264 length of string `t` \u2264 `50`\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Jalebi Bai has two decks of sweets. These decks are represented by two strings `s` and `t` consisting of lowercase letters from the English alphabet. Each letter from 'a' to 'z' denotes a single type of sweet, e.g., \u2018b\u2019 denotes Barfi, 'r' denotes Rasgulla, etc. She wants to use these decks in her friend Laddu\u2019s marriage. Instead of graciously accepting the gift, Laddu asks Jalebi Bai to first make the two decks exactly the same, so that they look good while serving. Now Jalebi Bai can apply the following operation as many times as she wants on both the decks.\n\n- From a single deck, pick any two consecutive sweets of the same type and eat one of them. e.g., if a deck is \"rrrjj\", she can change it to \"rrrj\" by picking the last two sweets of type 'j' (Jalebi) and eating one of them, or she can change the deck to \"rrjj\" by picking up the first two sweets of type \u2018r\u2019 and eating one of them.\n\nYou need to tell whether Jalebi Bai can make the decks equal by applying the above operation as many times as she wants. Output \"Yes\" [without quotes] if she can, otherwise output \"No\" [without quotes].\n",
+    "inputFormat": "The first line of the input contains an integer `T` denoting the number of test cases. The description of `T` test cases follows.\n\nThe first line of each test case contains a string `s`.\n\nThe second line of each test case contains a string `t`.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output \"Yes\" [without quotes] or \"No\" [without quotes] depending on the case.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\nrrrjj\nrrrj\nrj\njr\n",
+        "output": "Yes\nNo\n",
+        "explanation": "**In the first example**, Jalebi Bai can change the first deck from \"rrrjj\" to \"rrrj\" in a single operation, then both the decks will be equal. Example taken from the statements.\n\n**In the second example**, Jalebi Bai can never make both decks of sweets equal.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1505\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1505\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>String processing</p>\n<h3>DIFFICULTY</h3>\n<p>Cakewalk</p>\n<h3>PROBLEM:</h3>\n<p>Given two strings, the following operation can be done in any string: given two consecutive, same, letters, remove one of them. Can we make the two strings equal?</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>Simply remove <em>all</em> consecutive duplicate letters in both strings (leaving just one for each consecutive sequence), and check if the resulting strings are equal.</p>\n<h3>EXPLANATION:</h3>\n<p>The solution should be apparent: Simply remove <em>all</em> consecutive duplicate letters in both strings (leaving just one for each consecutive sequence), and check if the resulting strings are equal. This is correct because if we can turn both strings into a string having consecutive duplicate letters, then we can continue removing the duplicates until we are left with none, thus both strings can be turned into the same string but having no consecutive duplicate letters.</p>\n<p>Here\u2019s one way to perform it, in C:</p>\n<pre><code>void remove_duplicates(char *c) {\n    int i = 1;\n    for (int j = 1; c[j]; j++) {\n        if (c[j] != c[j-1]) c[i++] = c[j];\n    }\n    c[i] = 0;\n}\n</code></pre>\n<p>This performs the operation in-place, destroying the original string in the process.</p>\n<p>There\u2019s a nice way to do it in C++:</p>\n<pre><code>string remove_duplicates(string s) {\n    return string(s.begin(), unique(s.begin(), s.end()));\n}\n</code></pre>\n<p>It uses the <code>std::unique</code> function, which does exactly what we want!</p>\n<p>Finally, in Java:</p>\n<pre><code>static String removeDuplicates(String s) {\n    StringBuilder sb = new StringBuilder();\n    for (int i = 0; i &lt; s.length(); i++) {\n        if (i == 0 || s.charAt(i-1) != s.charAt(i)) sb.append(s.charAt(i));\n    }\n    return sb.toString();\n}\n</code></pre>\n<p>After implementing this function, simply call this on both input strings, and check if they are equal!</p>\n<p><em>Gotcha:</em> A possible mistake one can make when implementing string comparison is stopping the comparison prematurely. Consider the following C code: (It prints <code>Yes</code> if <code>a</code> and <code>b</code> are the same string, and <code>No</code> otherwise.)</p>\n<pre><code>bool good = true;\nint a_len = strlen(a);\nint b_len = strlen(b);\nfor (int i = 0; i &lt; a_len &amp;&amp; i &lt; b_len; i++) {\n    if (a[i] != b[i]) {\n        good = false;\n        break;\n    }\n}\nputs(good ? \"Yes\" : \"No\");\n</code></pre>\n<p>Can you point out what\u2019s wrong with it?</p>\n<p>The code above is wrong because it fails when <code>a</code> is a proper prefix of <code>b</code>, or vice versa. This is because <code>good</code> only becomes <code>false</code> when it finds two different characters in the same position from <code>a</code> and <code>b</code>, which isn\u2019t the case when one is a prefix of the other. Here are a couple of ways to fix this:</p>\n<ul>\n<li>Check whether the lengths are equal first.</li>\n<li>Replace the loop condition by <code>i &lt; a_len || i &lt; b_len</code>,</li>\n<li>Better yet, just use builtin methods like <code>strcmp</code>.</li>\n</ul>\n<p><em>Extra:</em> There\u2019s a Unix utility that does this. The <a href=\"https://en.wikipedia.org/wiki/Uniq\" rel=\"nofollow noopener\"><code>uniq</code> command</a>, when fed some text input, outputs it, but with adjacent identical lines collapsed to one. This is usually coupled with the <code>sort</code> command to output all distinct lines in the input.</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(|s| + |t|)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1505.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1505.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12030,
+  "languages_supported": "CPP20, C, JAVA, PYP3, CS2",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "3-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "String"
+  ],
+  "computed_tags": [
+    "Data Structures"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1505",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610970
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1505",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

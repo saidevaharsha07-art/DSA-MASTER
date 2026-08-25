@@ -1,0 +1,128 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EXTRAN",
+  "contest_category": "6",
+  "problem_name": "Bear and Extra Number",
+  "intended_contest_code": "MARCH17",
+  "body": "<p>A sequence is called nice if its elements are distinct consecutive numbers, possibly in changed order.\r\nFor example, both (6, 7, 8) and (15, 13, 16, 14) are nice, while (4, 6), (4, 5, 5, 6) and (15, 16, 15) are not.</p>\r\n\r\n<p>\r\nLimak has a nice sequence.\r\nWhile he was in school today, someone inserted one extra number in the sequence.\r\nLimak has just returned and realized that the sequence isn't nice anymore!\r\nHe wants to remove the inserted number and make his sequence nice again.\r\nCan you help him to find the number that he should remove?\r\n</p>\r\n\r\n<p>Formally, in each test case you are given a sequence of <b>N</b> numbers <b>A</b><sub>1</sub>, <b>A</b><sub>2</sub>, ..., <b>A<sub>N</sub></b>.\r\nYour task is to find the value <b>X</b>, such that removing one occurrence of <b>X</b> would make the sequence nice.\r\nIt's guaranteed that exactly one solution exists.</p>\r\n\r\n\r\n\r\n<h3>Input</h3>\r\n\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.\r\nThe description of <b>T</b> test cases follows.</p>\r\n\r\n<p>The first line of each test case contains an integer <b>N</b> denoting the size of the new sequence.</p>\r\n\r\n<p>The second line of a test case contains <b>N</b> integers <b>A</b><sub>1</sub>, <b>A</b><sub>2</sub>, ..., <b>A<sub>N</sub></b> denoting the new sequence.</p>\r\n\r\n\r\n\r\n\r\n<h3>Output</h3>\r\n\r\n<p>For each test case, output a single line containing one integer \u2014 a number that should be removed from the given sequence.</p>\r\n\r\n\r\n\r\n<h3>Constraints</h3>\r\n\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\r\n<li><b>3</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\r\n<li><b>1</b> \u2264 <b>A</b><sub>i</sub> \u2264 <b>10<sup>9</sup></b></li>\r\n<li>The given sequence isn't nice.</li>\r\n<li>There is exactly one solution.</li>\r\n</ul>\r\n\r\n\r\n\r\n\r\n<h3>Subtasks</h3>\r\n\r\n<ul>\r\n<li>Subtask #1 (40 points) <b>3</b> \u2264 <b>N</b> \u2264 <b>1000</sup></b></li>\r\n<li>Subtask #2 (60 points) Original constraints</li>\r\n</ul>\r\n\r\n\r\n\r\n\r\n<h3>Example</h3>\r\n\r\n<pre><b>Input:</b>\r\n<tt>4\r\n5\r\n45 42 46 48 47\r\n3\r\n7 7 8\r\n8\r\n12 156 157 158 159 160 161 162\r\n4\r\n8 7 10 6</tt>\r\n\r\n<b>Output:</b>\r\n<tt>42\r\n7\r\n12\r\n10</tt>\r\n</pre>\r\n\r\n\r\n<h3>Explanation</h3>\r\n\r\n<p><b>Test case 1.</b> The sequence <b>A</b> is (45, 42, 46, 48, 47). We should remove the number 42, and the remaining numbers will form a nice sequence (45, 46, 48, 47).</p>\r\n\r\n<p><b>Test case 2.</b> We should remove one of two 7's to get the sequence (7, 8), which is nice.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>A sequence is called nice if its elements are distinct consecutive numbers, possibly in changed order.\nFor example, both (6, 7, 8) and (15, 13, 16, 14) are nice, while (4, 6), (4, 5, 5, 6) and (15, 16, 15) are not.</p>\n\n<p>\nLimak has a nice sequence.\nWhile he was in school today, someone inserted one extra number in the sequence.\nLimak has just returned and realized that the sequence isn't nice anymore!\nHe wants to remove the inserted number and make his sequence nice again.\nCan you help him to find the number that he should remove?\n</p>\n\n<p>Formally, in each test case you are given a sequence of <b>N</b> numbers <b>A</b><sub>1</sub>, <b>A</b><sub>2</sub>, ..., <b>A<sub>N</sub></b>.\nYour task is to find the value <b>X</b>, such that removing one occurrence of <b>X</b> would make the sequence nice.\nIt's guaranteed that exactly one solution exists.</p>\n\n\n\n<h3>Input</h3>\n\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases.\nThe description of <b>T</b> test cases follows.</p>\n\n<p>The first line of each test case contains an integer <b>N</b> denoting the size of the new sequence.</p>\n\n<p>The second line of a test case contains <b>N</b> integers <b>A</b><sub>1</sub>, <b>A</b><sub>2</sub>, ..., <b>A<sub>N</sub></b> denoting the new sequence.</p>\n\n\n\n\n<h3>Output</h3>\n\n<p>For each test case, output a single line containing one integer \u2014 a number that should be removed from the given sequence.</p>\n\n\n\n<h3>Constraints</h3>\n\n<ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\n<li><b>3</b> \u2264 <b>N</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>A</b><sub>i</sub> \u2264 <b>10<sup>9</sup></b></li>\n<li>The given sequence isn't nice.</li>\n<li>There is exactly one solution.</li>\n</ul><h3>Subtasks</h3>\n\n<ul><li>Subtask #1 (40 points) <b>3</b> \u2264 <b>N</b> \u2264 <b>1000</b></li>\n<li>Subtask #2 (60 points) Original constraints</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n5\n45 42 46 48 47\n3\n7 7 8\n8\n12 156 157 158 159 160 161 162\n4\n8 7 10 6",
+        "output": "42\n7\n12\n10",
+        "explanation": "<p><b>Test case 1.</b> The sequence <b>A</b> is (45, 42, 46, 48, 47). We should remove the number 42, and the remaining numbers will form a nice sequence (45, 46, 48, 47).</p>\n\n<p><b>Test case 2.</b> We should remove one of two 7's to get the sequence (7, 8), which is nice.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 14103,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "errichto",
+  "problem_display_authors": [
+    "errichto"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/errichto'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>errichto</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "xcwgf666"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/xcwgf666'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>xcwgf666</span></a></div>",
+  "problem_editorialist": "pkacprzak",
+  "date_added": "22-02-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Case work",
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Special",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1311",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610815
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EXTRAN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,127 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL1508",
+  "contest_category": "6",
+  "problem_name": "Antichains",
+  "intended_contest_code": null,
+  "body": "<p>Given an integer <b>N</b>, let <b>F<sub>N</sub></b> be the set of factors of <b>N</b>. e.g., <b>F<sub>6</sub></b> = {1,2,3,6}.</p>\r\n<p>The radical of an integer <b>N</b>, denoted by <b>rad(N)</b>, is defined as the product of the distinct prime factors of <b>N</b>. e.g., <b>rad(12)</b> = 2 * 3 = 6.</p>\r\n<p>Define an <b>antichain</b> of a set <b>S</b> of integers to be a subset of <b>S</b> such that for any two elements x and y in the antichain, rad(x) and rad(y) do not divide each other. e.g., antichains in <b>F<sub>6</sub></b> are {}, {1}, {2}, {3}, {6} and {2,3}.</p>\r\n<p>Given <b>N</b>, find the size of the largest antichain of <b>F<sub>N</sub></b>, and the number of antichains of F<sub>N</sub> of that size. Since the answers can be large, print both of them modulo <b>(10<sup>9</sup>+7)</b>.</p>\r\n<p>e.g., if <b>N</b> = 6, the largest antichain is of size 2, and there is only 1 antichain of that size.</p>\r\n\r\n<p>Since <b>N</b> can be large, the input is the prime factorization of <b>N</b>. The input has two arrays of size <b>M</b>: <b>base</b> and <b>power</b>, and <b>N = base<sub>1</sub><sup>power<sub>1</sub></sup> * base<sub>2</sub><sup>power<sub>2</sub></sup> * &hellip; * base<sub>M</sub><sup>power<sub>M</sub></sup></b>.</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n<li>The first line contains <b>T</b>, the number of test cases. Description of the <b>T</b> test cases follows.\r\n<li>Each test case starts with a single integer <b>M</b>.\r\n<li>The next <b>M</b> lines each contain 2 integers separated by a space. The <b>i</b><sup>th</sup> line contains <b>base<sub>i</sub></b> and <b>power_i.</b>\r\n</ul>\r\n\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n<li>For each test case, output one line containing two space-separated integers, respectively the size of the largest antichain modulo (10<sup>9</sup>+7) and the number of antichains of that size, again modulo (10<sup>9</sup>+7).\r\n</ul>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li> 1 \u2264 T \u2264 10\r\n<li> 1 \u2264 M \u2264 10<sup>5</sup>\r\n<li> 2 \u2264 base<sub>i</sub> \u2264 10<sup>9</sup>\r\n<li> 1 \u2264 power_i \u2264 10<sup>9</sup>\r\n<li> base<sub>i</sub> is a prime number for all 1 \u2264 i \u2264 M\r\n<li> For any 1 \u2264 i \u2260 j \u2264 M, base<sub>i</sub> \u2260  base<sub>j</sub>\r\n</ul>\r\n<br/>\r\n<b>NOTE: Input files can be large. Please use fast input methods (e.g. scanf in C/C++, BufferedReader in Java)</b>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n2\r\n2 1\r\n3 1\r\n2\r\n2 2\r\n3 1\r\n\r\n<b>Output:</b>\r\n2 1\r\n2 2\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1. </b>The largest antichain size is 2, and there is only one of it {2,3}</p>\r\n<p><b>Example case 2. </b>The largest antichain size is 2, and there are two of those: {2,3} and {4,3}</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10$\n- $1 \\leq M \\leq 10^5$\n- $2 \\leq \\text{base}_i \\leq 10^9$\n- $1 \\leq \\text{power}_i \\leq 10^9$\n- $\\text{base}_i$ is a prime number for all $1 \\leq i \\leq M$\n- For any $1 \\leq i \\neq j \\leq M$, $\\text{base}_i \\neq \\text{base}_j$\n\n**NOTE:** Input files can be large. Please use fast input methods (e.g. scanf in C/C++, BufferedReader in Java)\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Given an integer $N$, let $F_N$ be the set of factors of $N$. e.g., $F_6 = \\{1,2,3,6\\}$.\n\nThe radical of an integer $N$, denoted by $\\text{rad}(N)$, is defined as the product of the distinct prime factors of $N$. e.g., $\\text{rad}(12) = 2 \\times 3 = 6$.\n\nDefine an **antichain** of a set $S$ of integers to be a subset of $S$ such that for any two elements $x$ and $y$ in the antichain, $\\text{rad}(x)$ and $\\text{rad}(y)$ do not divide each other. e.g., antichains in $F_6$ are $\\{\\}$, $\\{1\\}$, $\\{2\\}$, $\\{3\\}$, $\\{6\\}$ and $\\{2,3\\}$.\n\nGiven $N$, find the size of the largest antichain of $F_N$, and the number of antichains of $F_N$ of that size. Since the answers can be large, print both of them modulo $(10^9+7)$.\n\ne.g., if $N = 6$, the largest antichain is of size 2, and there is only 1 antichain of that size.\n\nSince $N$ can be large, the input is the prime factorization of $N$. The input has two arrays of size $M$: **base** and **power**, and $N = \\text{base}_1^{\\text{power}_1} \\times \\text{base}_2^{\\text{power}_2} \\times \\dots \\times \\text{base}_M^{\\text{power}_M}$.\n",
+    "inputFormat": "- The first line contains $T$, the number of test cases. Description of the $T$ test cases follows.\n- Each test case starts with a single integer $M$.\n- The next $M$ lines each contain 2 integers separated by a space. The $i^{th}$ line contains $\\text{base}_i$ and $\\text{power}_i$.\n",
+    "inputFormatState": true,
+    "outputFormat": "- For each test case, output one line containing two space-separated integers, respectively the size of the largest antichain modulo $(10^9+7)$ and the number of antichains of that size, again modulo $(10^9+7)$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n2 1\n3 1\n2\n2 2\n3 1\n",
+        "output": "2 1\n2 2\n",
+        "explanation": "**Example case 1.** The largest antichain size is 2, and there is only one of it $\\{2,3\\}$.\n\n**Example case 2.** The largest antichain size is 2, and there are two of those: $\\{2,3\\}$ and $\\{4,3\\}$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/ACM15KOL/problems/KOL1508\" rel=\"nofollow noopener\">Contest</a><br>\n<a href=\"http://www.codechef.com/problems/KOL1508\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/piyushkumar\" rel=\"nofollow noopener\">Piyush Kumar</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/kevinsogo\" rel=\"nofollow noopener\">Kevin Atienza</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Combinatorics, Sperner\u2019s theorem, Fermat\u2019s little theorem</p>\n<h3>PROBLEM:</h3>\n<p>Given <span class=\"math\">N</span> in prime-factorized form <span class=\"math\">p_1^{e_1}\\cdot p_2^{e_2} \\cdots p_M^{e_M}</span>, an <em>antichain</em> is a set of divisors of <span class=\"math\">N</span> such that for every pair <span class=\"math\">(x,y)</span> of divisors, <span class=\"math\">\\text{rad}(x)</span> doesn\u2019t divide <span class=\"math\">\\text{rad}(y)</span>, and vice versa. What is the largest antichain, and how many largest antichains are there?</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>The largest antichain size is <span class=\"math\">{M \\choose \\lfloor M/2 \\rfloor}</span>.</p>\n<p>Let <span class=\"math\">P</span> be the product of the exponents (<span class=\"math\">e_i)</span>.</p>\n<p>If <span class=\"math\">M</span> is even, then the number of largest antichains is <span class=\"math\">P^{M-1 \\choose M/2-1} \\bmod 10^9 + 7</span>. If <span class=\"math\">M</span> is odd, then the number of largest antichains is <span class=\"math\">(P^{M-1 \\choose \\lfloor M/2 \\rfloor -1} + P^{M-1 \\choose \\lceil M/2 \\rceil -1}) \\bmod 10^9 + 7</span>.</p>\n<p><span class=\"math\">P^{x \\choose y} \\bmod 10^9 + 7</span> can be done by reducing the exponent <span class=\"math\">{x \\choose y}</span> modulo <span class=\"math\">10^9 + 6</span>. Computing <span class=\"math\">{x \\choose y}</span> modulo some <span class=\"math\">m</span> can be done by factorizing <span class=\"math\">{x \\choose y}</span> using a sieve, and the formula <span class=\"math\">\\frac{x!}{(x-y)!y!}</span>.</p>\n<h3>EXPLANATION:</h3>\n<h1>Size of largest antichain</h1>\n<p>The number <span class=\"math\">\\text{rad}(n)</span> is <a href=\"https://en.wikipedia.org/wiki/Square-free_integer\" rel=\"nofollow noopener\">squarefree</a>, which means each prime factor appears at most once in <span class=\"math\">\\text{rad}(n)</span>'s prime factorization. We can think of a squarefree number as a set of primes (the set of its prime factors). For example, <span class=\"math\">1001</span> corresponds to the set of primes <span class=\"math\">\\{7, 11, 13\\}</span>, because <span class=\"math\">1001 = 7\\times 11\\times 13</span>. In terms of sets, <span class=\"math\">\\text{rad}(x)</span> divides <span class=\"math\">\\text{rad}(y)</span> if and only if the set of primes of <span class=\"math\">\\text{rad}(x)</span> is a subset of the set of primes of <span class=\"math\">\\text{rad}(y)</span>. Thus, we want to find the largest family of subsets of <span class=\"math\">\\{p_1,\\ldots,p_M\\}</span> such that no subset contains any other subset.</p>\n<p>But this is exactly what <a href=\"https://en.wikipedia.org/wiki/Sperner%27s_theorem\" rel=\"nofollow noopener\">Sperner\u2019s theorem</a> answers! It says that the largest such family is of size <span class=\"math\">{M \\choose \\lfloor M/2 \\rfloor}</span>, and a concrete example is the family of sets each of which contains <span class=\"math\">\\lfloor M/2 \\rfloor</span> distinct primes. It\u2019s easy to see that each set in this family doesn\u2019t contain any other, because they all have the same number of elements, and it\u2019s also easy to see that there are <span class=\"math\">{M \\choose \\lfloor M/2 \\rfloor}</span> such sets. In fact, the tricky part is in proving that this is indeed the largest family you can find. (A proof of this is given in the <a href=\"https://en.wikipedia.org/wiki/Sperner%27s_theorem\" rel=\"nofollow noopener\">Wikipedia link</a> above.) Thus, we now know the answer to the first question: <span class=\"math\">{M \\choose \\lfloor M/2 \\rfloor}</span>.</p>\n<h1>Number of antichains</h1>\n<p>To get the second answer, let\u2019s look at particular example. Let\u2019s say <span class=\"math\">M = 6</span> and <span class=\"math\">N = 2^3 3^9 5^4 7^1 11^2 13^2</span>. According to Sperner\u2019s theorem, the largest such family of subsets of <span class=\"math\">\\{2,3,5,7,11,13\\}</span> is the following:</p>\n<div class=\"math\">\n\\begin{array}{cc}\n\\text{prime set} &amp; \\text{rad} \\\\\\\n\\{2,3,5\\} &amp; 30 \\\\\\\n\\{2,3,7\\} &amp; 42 \\\\\\\n\\{2,3,11\\} &amp; 66 \\\\\\\n\\{2,3,13\\} &amp; 78 \\\\\\\n\\{2,5,7\\} &amp; 70 \\\\\\\n\\{2,5,11\\} &amp; 110 \\\\\\\n\\{2,5,13\\} &amp; 130 \\\\\\\n\\{2,7,11\\} &amp; 154 \\\\\\\n\\{2,7,13\\} &amp; 182 \\\\\\\n\\{2,11,13\\} &amp; 286 \\\\\\\n\\{3,5,7\\} &amp; 105 \\\\\\\n\\{3,5,11\\} &amp; 165 \\\\\\\n\\{3,5,13\\} &amp; 195 \\\\\\\n\\{3,7,11\\} &amp; 231 \\\\\\\n\\{3,7,13\\} &amp; 273 \\\\\\\n\\{3,11,13\\} &amp; 429 \\\\\\\n\\{5,7,11\\} &amp; 385 \\\\\\\n\\{5,7,13\\} &amp; 455 \\\\\\\n\\{5,11,13\\} &amp; 715 \\\\\\\n\\{7,11,13\\} &amp; 1001 \\\\\\\n\\end{array}\n</div>\n<p>The question is now: how many ways can we choose divisors of <span class=\"math\">N</span> so that the family of their $\\text{rad}$s are these numbers?</p>\n<p>Let\u2019s consider for example <span class=\"math\">30</span>. How many divisors <span class=\"math\">x</span> of <span class=\"math\">N = 2^3 3^9 5^4 7^1 11^2 13^2</span> have <span class=\"math\">\\text{rad}(x) = 30</span>? We know which primes divide <span class=\"math\">x</span>, so we only need to select the exponents. In this case, we find that there are <span class=\"math\">3\\times 9\\times 4</span> <span class=\"math\">x</span> s whose <span class=\"math\">\\text{rad}</span> is <span class=\"math\">30</span> (because the exponents of <span class=\"math\">2</span>, <span class=\"math\">3</span> and <span class=\"math\">5</span> are <span class=\"math\">3</span>, <span class=\"math\">9</span> and <span class=\"math\">4</span>, respectively).</p>\n<p>In general, for each prime <span class=\"math\">p_i</span> that appears in the <span class=\"math\">\\text{rad}</span>, there are <span class=\"math\">e_i</span> choices for the exponent. We only need to multiply <span class=\"math\">e_i</span> across all primes in the <span class=\"math\">\\text{rad}</span>, and then across all possible $\\text{rad}$s. But how many sets does the prime <span class=\"math\">p_i</span> appear in? The answer is exactly <span class=\"math\">{6-1 \\choose 3-1}</span>, because there are <span class=\"math\">{6-1 \\choose 3-1}</span> ways to choose the <span class=\"math\">2</span> remaining members along with <span class=\"math\">p_i</span>. Thus, we need to multiply <span class=\"math\">e_i</span> a total of <span class=\"math\">{6-1 \\choose 3-1}</span> times, so the answer in the above case is:</p>\n<div class=\"math\">\n3^{6-1 \\choose 3-1}9^{6-1 \\choose 3-1}4^{6-1 \\choose 3-1}1^{6-1 \\choose 3-1}2^{6-1 \\choose 3-1}2^{6-1 \\choose 3-1}\n</div>\n<p>or simply</p>\n<div class=\"math\">\n(3\\cdot 9\\cdot 4\\cdot 1\\cdot 2\\cdot 2)^{6-1 \\choose 3-1}\n</div>\n<p>In general, the answer to the second question is simply the product of the $e_i$s, raised to the power <span class=\"math\">{M \\choose \\lfloor M/2 \\rfloor}</span>!</p>\n<p>But when <span class=\"math\">M</span> is odd, this is incomplete. This is because there are two largest families:</p>\n<ul>\n<li>The family of sets whose sizes are <span class=\"math\">\\lfloor M/2 \\rfloor</span>.</li>\n<li>The family of sets whose sizes are <span class=\"math\">\\lceil M/2 \\rceil</span>.</li>\n</ul>\n<p>So, for odd <span class=\"math\">M</span>, the answer is the following:</p>\n<div class=\"math\">\nP^{M-1 \\choose \\lfloor M/2 \\rfloor-1} + P^{M-1 \\choose \\lceil M/2 \\rceil-1}\n</div>\n<p>where <span class=\"math\">P</span> is the product of the $e_i$s.</p>\n<p>We now have an answer for the second question!</p>\n<h1>Computing <span class=\"math\">P^{x \\choose y}</span> modulo <span class=\"math\">10^9 + 7</span>\n</h1>\n<p>We need to compute a number of the form <span class=\"math\">P^{x \\choose y}</span> modulo <span class=\"math\">10^9 + 7</span>. Unfortunately, the exponent <span class=\"math\">{x \\choose y}</span> is very large, and we can\u2019t just reduce this number modulo <span class=\"math\">10^9 + 7</span> because that would be incorrect. (For example, <span class=\"math\">7^{11} \\not\\equiv 7^0 \\equiv 1 \\pmod{11}</span>.) To make the exponent smaller, we need to use Fermat\u2019s little theorem, which states that <span class=\"math\">a^{p-1} \\equiv 1 \\pmod{p}</span> for prime <span class=\"math\">p</span> and when <span class=\"math\">a</span> is not divisible by <span class=\"math\">p</span>. Since <span class=\"math\">10^9 + 7</span> is prime, this applies, and we can also infer that:</p>\n<div class=\"math\">\na^x \\equiv a^y \\pmod{p} \\iff x \\equiv y \\pmod{p-1}\n</div>\n<p>Thus, we can reduce <span class=\"math\">{M-1 \\choose \\lfloor M/2 \\rfloor-1}</span> and <span class=\"math\">{M-1 \\choose \\lceil M/2 \\rceil-1}</span> modulo <span class=\"math\">10^9+6</span>, not <span class=\"math\">10^9+7</span>.</p>\n<p>Finally, how do we compute <span class=\"math\">{x \\choose y}</span> modulo some number <span class=\"math\">m</span>, which is not necessarily a prime? One way is to simply compute the prime factorization of <span class=\"math\">{x \\choose y}</span>. Since each prime factor of <span class=\"math\">{x \\choose y}</span> is at most <span class=\"math\">x</span>, one can perform an <a href=\"https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes\" rel=\"nofollow noopener\">Eratosthenes sieve</a> up to <span class=\"math\">x</span>, and determine the exponents of the primes using the formula <span class=\"math\">{x \\choose y} = \\frac{x!}{(x-y)!y!}</span>. Finally, once you have the exponents one can then calculate <span class=\"math\">{x \\choose y}</span> with modular exponentiation.</p>\n<h3>Time Complexity:</h3>\n<p><span class=\"math\">O(M \\log \\log M)</span></p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p><a href=\"https://www.codechef.com/download/ACM15KOL/Setter/KOL1508.cpp\" rel=\"nofollow noopener\">setter</a><br>\n<a href=\"https://www.codechef.com/download/ACM15KOL/Tester/KOL1508.cpp\" rel=\"nofollow noopener\">tester</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12032,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "piyushkumar",
+  "problem_display_authors": [
+    "piyushkumar"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/piyushkumar'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>piyushkumar</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "10-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Sperner's Theorem",
+    "Fermat's Little Theorem",
+    "Permutations & Combinations"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory",
+    "Modular Arithmetic",
+    "Combinatorics"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL1508",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610967
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL1508",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

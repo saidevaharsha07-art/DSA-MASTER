@@ -1,0 +1,123 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMCAM",
+  "contest_category": "6",
+  "problem_name": "Cat and Mouse",
+  "intended_contest_code": null,
+  "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"><html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body>\r\n\r\n\r\n \r\n\r\n<div>\r\n\r\n<p>\r\n<b>N</b> cats and <b>N</b> mice are situated in a 2-D plane. <i>Mota Chuha</i> wants to choose <b>K</b> number of animals in such a way that the distance between any pair of chosen cat and chosen mouse is minimized. Distance between the same type of chosen animals doesn't matter. In other words, suppose <i>Chota Chuha</i> chooses cats <b>C<sub>1</sub>,C<sub>2</sub>,C<sub>3</sub>,.....C<sub>m</sub></b> and mice <b>M<sub>1</sub>,M<sub>2</sub>,M<sub>3</sub>,.....M<sub>n</sub></b>, then maximum of Distance(C<sub>i</sub>,M<sub>j</sub>) should be minimized.\r\n\r\n    \r\n   \r\n\r\n    </p><h2>Input</h2>\r\n    The first line of the input contains pair of integers  <b>N</b> and <b>K</b>. <p></p>\r\n\r\n    Next N lines will contain a pair of integers denoting the co-ordinates of the cats.<p></p>\r\n\r\n    Next N lines will contain a pair of integers denoting the co-ordinates of the mice.<p></p>\r\n\r\n    <h2>Output</h2>\r\n    Output the minimized distance. The output value must have an absolute or relative error smaller than 1e-6.\r\n\r\n    <h2>Constraints</h2>\r\n    <ul>\r\n        <li><b>1 \u2264 N \u2264 200</b></li>\r\n        <li><b>(N+1) \u2264 K \u2264 2*N</b></li>\r\n        <li><b>0 \u2264 X or Y-coordinates \u2264 10<sup>5</sup></b></li>\r\n        <li><b>No two animals are at the same position</b></li>\r\n    </ul>\r\n  \r\n\r\n    <h2>Sample</h2>\r\n    <h3>Input</h3>\r\n    <pre>3 4\r\n1 0\r\n2 0\r\n3 0\r\n1 1\r\n2 1\r\n3 1\r\n    </pre>\r\n\r\n    <h3>Output</h3>\r\n    <pre>\r\n1.41421356237\r\n    </pre>\r\n\r\n    <h3>Explanation</h3>\r\n    Does't matter how you choose, A pair of cat and mouse will be at distance of square root of 2.\r\n\r\n\r\n\r\n</div>\r\n</body></html>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N \\leq 200$\n- $(N+1) \\leq K \\leq 2*N$\n- $0 \\leq X, Y coordinates \\leq 10^5$\n- No two animals are at the same position",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "$N$ cats and $N$ mice are situated in a 2-D plane. Mota Chuha wants to choose $K$ number of animals in such a way that the distance between any pair of chosen cat and chosen mouse is minimized. Distance between the same type of chosen animals doesn't matter. In other words, suppose Chota Chuha chooses cats $C_1, C_2, \\ldots, C_m$ and mice $M_1, M_2, \\ldots, M_n$, then maximum of $Distance(C_i,M_j)$ should be minimized.",
+    "inputFormat": "- The first line of the input contains pair of integers $N$ and $K$.\n- Next $N$ lines will contain a pair of integers denoting the co-ordinates of the cats.\n- Next $N$ lines will contain a pair of integers denoting the co-ordinates of the mice.",
+    "inputFormatState": true,
+    "outputFormat": "Output the minimized distance. The output value must have an absolute or relative error smaller than $10^{-6}$.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3 4\n1 0\n2 0\n3 0\n1 1\n2 1\n3 1\n",
+        "output": "1.41421356237\n",
+        "explanation": "Doesn't matter how you choose, A pair of cat and mouse will be at distance of square root of 2.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>Problem link:</h3>\n<p><a href=\"https://www.codechef.com/ACM15AMR/problems/AMCAM\" rel=\"nofollow noopener\">Contest</a></p>\n<p><a href=\"https://www.codechef.com/problems/AMCAM\" rel=\"nofollow noopener\">Practice</a></p>\n<h3>PREREQUISITES:</h3>\n<p>Bipartite matching , Konig\u2019s theorem , binary search</p>\n<h3>PROBLEM:</h3>\n<p>In this problem , we were given <b>N</b> cats and <b>N</b> mice.We should choose <b>K</b> animals in such a way that maximum distance between any chosen cat and mice is minimum. Formally , suppose we chose n cats C<sub>1</sub> , C<sub>2</sub> \u2026 C<sub>n</sub> and m mice - M<sub>1</sub>, M<sub>2</sub> \u2026 M<sub>m</sub> such that n+m = <b>K</b> , we want to choose them in such a way that <strong>max( dist(C<sub>i</sub>,M<sub>j</sub>) )</strong> is minimized where 1 ? i ? n and 1 ? j ? m.Here dist gives the distance between i<sup>th</sup> chosen cat and j<sup>th</sup> chosen mice in 2D Cartesian coordinate plane.</p>\n<h3>EXPLANATION:</h3>\n<p>First we will discuss some definitions and then we will see how to solve this problem.</p>\n<p><a href=\"http://www.geeksforgeeks.org/maximum-bipartite-matching/\" rel=\"nofollow noopener\"></a></p><h3><a href=\"http://www.geeksforgeeks.org/maximum-bipartite-matching/\" rel=\"nofollow noopener\">Maximum bipartite matching</a></h3>\n<p>A matching in a Bipartite Graph is a set of the edges chosen in such a way that no two edges share an endpoint. A maximum matching is a matching of maximum size (maximum number of edges). In a maximum matching, if any edge is added to it, it is no longer a matching. There can be more than one maximum matchings for a given Bipartite Graph.</p>\n<p><a href=\"http://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/\" rel=\"nofollow noopener\"></a></p><h3><a href=\"http://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/\" rel=\"nofollow noopener\">vertex cover</a></h3>\n<p>A vertex cover of an undirected graph is a subset of its vertices such that for every edge (u, v) of the graph, either \u2018u\u2019 or \u2018v\u2019 is in vertex cover. Although the name is Vertex Cover, the set covers all edges of the given graph.The minimum vertex cover is the vertex cover having minimum size.</p>\n<p><img src=\"http://d1gjlxt8vb0knt.cloudfront.net//wp-content/uploads/VertexCover.png\" alt=\"Test Image\" width=\"200\" height=\"200\"></p>\n<p><a href=\"https://en.wikipedia.org/wiki/Independent_set_(graph_theory)?oldformat=true\" rel=\"nofollow noopener\"></a></p><h3><a href=\"https://en.wikipedia.org/wiki/Independent_set_(graph_theory)?oldformat=true\" rel=\"nofollow noopener\">Independent Set</a></h3>\n<p>The independent set of the graph is set of vertices such that no two vertex in that set are adjacent to each other.The maximum independent set is the independent set having maximum size.The size of maximum independent set is total number of vertices minus minimum vertex cover.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Independent_set_graph.svg/800px-Independent_set_graph.svg.png?1455452243656\" title=\"Test Image\" rel=\"nofollow noopener\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Independent_set_graph.svg/800px-Independent_set_graph.svg.png?1455452243656\" alt=\"Test Image\" width=\"200\" height=\"200\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use xlink:href=\"#far-image\"></use></svg><span class=\"filename\">Test Image</span><span class=\"informations\">800\u00d7800</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use xlink:href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>In the above image , the nine blue vertices form a maximum independent set.</p>\n<p><a href=\"https://en.wikipedia.org/wiki/K%C5%91nig%27s_theorem_(graph_theory)?oldformat=true\" rel=\"nofollow noopener\"></a></p><h3><a href=\"https://en.wikipedia.org/wiki/K%C5%91nig%27s_theorem_(graph_theory)?oldformat=true\" rel=\"nofollow noopener\">Konig\u2019s Theorem </a></h3>\n<p>This theorem gives an equivalence between the maximum matching problem and the minimum vertex cover problem in bipartite graphs.It says that in any bipartite graph, the number of edges in a maximum matching equals the number of vertices in a minimum vertex cover.</p>\n<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Koenigs-theorem-graph.svg/640px-Koenigs-theorem-graph.svg.png?1455449672371\" alt=\"Test Image\" width=\"200\" height=\"200\"></p>\n<p>The bipartite graph shown in the above illustration has 14 vertices. A matching with six edges is shown in blue, and a vertex cover with six vertices is shown in red. There can be no smaller vertex cover, because any vertex cover has to include at least one endpoint of each matched edge (as well as of every other edge), so this is a minimum vertex cover. Similarly, there can be no larger matching, because any matched edge has to include at least one endpoint in the vertex cover, so this is a maximum matching. Konig\u2019s theorem states that the equality between the sizes of the matching and the cover (in this example, both numbers are six) applies more generally to any bipartite graph.</p>\n<p>Now lets see how to solve this problem.Suppose we fix the value of <strong>max( dist(C<sub>i</sub>,M<sub>j</sub>) )</strong>.Let D be the value of <strong>max( dist(C<sub>i</sub>,M<sub>j</sub>) )</strong>.The point to observe is if we can choose K animals whose <strong>max( dist(C<sub>i</sub>,M<sub>j</sub>) )</strong> ? D , we can definitely choose K animals for values higher than D.However, if I decrease D , choosing K animals may or may not be possible.Thus we can see that existence of choosing of K animals is monotonic with increase in D.But why did we make this observation? This observation helps us to apply binary search on D.If we can find that we can choose K animals for any particular value of D , we will continue our search on lower values of D.So our problems reduces to find if we can choose K animals for any given value of D.If we can solve this problem , we will find minimum value of D using binary search such that its possible to  choose K animals for that particular value of D.</p>\n<p>Now lets see how to check if we can choose K animals using given D value.Lets build a graph containing only edges having weight ? D.That is , delete all the edges from the graph having weight &lt; D.Now the point of observation is:<br>\n<b>We can choose K animals only if the size of maximum independent set of this bipartite graph is atleast K.</b></p>\n<p>But how to find the size of maximum independent set of this bipartite graph ? We can know the size of maximum independent set if we know the size of minimum vertex cover (since the size of maximum independent set is total number of vertices minus minimum vertex cover).But according to Konig\u2019s theorem , the size of minimum vertex cover will be equal to number of edges in maximum bipartite matching.Thus we need to find the size of maximum bipartite matching in this graph.Lets assume its M.Thus we can choose K animals only if 2*N-M &gt;= K.Follow this <a href=\"http://www.geeksforgeeks.org/maximum-bipartite-matching/\" rel=\"nofollow noopener\">link</a> if you want to know how to find maximum matching in a bipartite graph.</p>\n<p><a href=\"http://ideone.com/QazzDu\" rel=\"nofollow noopener\">Solution</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12160,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "amitpandeykgp",
+  "problem_display_authors": [
+    "amitpandeykgp"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/amitpandeykgp'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>amitpandeykgp</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "harshil7924",
+  "date_added": "20-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm15amr",
+    "amitpandeykgp",
+    "binary-search",
+    "matching"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Binary Search",
+  "editorial_url": "https://discuss.codechef.com/problems/AMCAM",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMCAM",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

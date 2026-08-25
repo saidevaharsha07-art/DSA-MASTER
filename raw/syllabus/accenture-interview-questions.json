@@ -1,0 +1,1312 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "accenture-interview-questions",
+  "name": "Accenture Interview Questions",
+  "title": "Accenture Interview Questions",
+  "level": "Intermediate",
+  "description": "Prepare for Accenture with previous years questions. Solve the coding, numerical ability, reasoning ability, verbal ability and quant questions which were asked in the past.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:55",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE05/problems/DPNMAO01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Coding Problems",
+      "description": "Practice the previous years Accenture coding problems.",
+      "submodules": [
+        {
+          "name": "Past Years Coding Problems",
+          "submodule_id": 16164,
+          "contest_code": "ACCNTRE05",
+          "start_date": "2025-09-08 01:00:00",
+          "total_problems": 24,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE05/problems/DPNMAO01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 24,
+          "problems_with_status": [
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO01",
+              "name": "Proximity Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO02",
+              "name": "Anagram Check",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO05",
+              "name": "Peak Elevation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO11",
+              "name": "Magical Binary Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO13",
+              "name": "Maximum Exponent of 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO06",
+              "name": "Equilibrium Point",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO07",
+              "name": "Count carry",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO15",
+              "name": "Merge Sorted Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO20",
+              "name": "Sum of Common Multiples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO21",
+              "name": "Prime Summation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO23",
+              "name": "Unique Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO24",
+              "name": "Last Word Length",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO25",
+              "name": "Most Frequent Vowel",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO03",
+              "name": "Faulty Bulb Switch",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO04",
+              "name": "Chocolate Distribution Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO08",
+              "name": "Large Small Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO09",
+              "name": "Palindromic Linked List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO10",
+              "name": "Longest Unique Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO14",
+              "name": "Alice Favourite Playlist",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO16",
+              "name": "Maximum Product Pair",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO17",
+              "name": "Food for Rats",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO18",
+              "name": "Array Rotation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO19",
+              "name": "Zero Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41621",
+              "code": "DPNMAO22",
+              "name": "Fixed Vowel Permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 24
+    },
+    {
+      "assessment": null,
+      "name": "Numerical Ability Problems",
+      "description": "Practice the previous years Accenture numerical ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Numerical Ability Problems",
+          "submodule_id": 16165,
+          "contest_code": "ACCNTRE02",
+          "start_date": "2025-09-08 01:00:00",
+          "total_problems": 18,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE02/problems/AGTCCR17",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 18,
+          "problems_with_status": [
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR17",
+              "name": "Fuel Mixture Profit Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR18",
+              "name": "Server Storage Cleanup Time",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR19",
+              "name": "Profit and Loss Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR20",
+              "name": "Probability of Drawing Marbles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR21",
+              "name": "Fruit Punch Mixture Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR22",
+              "name": "Work & Time with Programmers and Interns",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR23",
+              "name": "Mural Painting Teamwork",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR24",
+              "name": "Profit Percentage on Doubled Price",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR25",
+              "name": "Profit Calculation Sufficiency",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR26",
+              "name": "Sum of Reciprocal Roots of a Polynomial",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR27",
+              "name": "Company Financial Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR28",
+              "name": "Ratio of Apples Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR29",
+              "name": "Evaluating Arguments on Government Policy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR30",
+              "name": "Arithmetic Progression Ratio Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR31",
+              "name": "Evaluating Arguments: Public Transport Policy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR32",
+              "name": "Classroom Change Logic",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR33",
+              "name": "Corporate Wellness Trend Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41618",
+              "code": "AGTCCR34",
+              "name": "Logical Assumption: Traffic Rule Change",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 18
+    },
+    {
+      "assessment": null,
+      "name": "Reasoning Ability Problems",
+      "description": "Practice the previous years Accenture reasoning ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Reasoning Ability Problems",
+          "submodule_id": 16166,
+          "contest_code": "ACCNTRE03",
+          "start_date": "2025-09-08 01:00:00",
+          "total_problems": 17,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE03/problems/AGTCCR47",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 17,
+          "problems_with_status": [
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR47",
+              "name": "Secret Code Language Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR48",
+              "name": "Alphabetical Shift Coding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR49",
+              "name": "Symbolic Relationship Logic Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR50",
+              "name": "Logical Speed Ranking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR51",
+              "name": "Logical Deduction with Unknown Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR52",
+              "name": "Logical Reasoning: Syllogism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR53",
+              "name": "Alphabet Series Position Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR54",
+              "name": "Logical Deduction Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR55",
+              "name": "Syllogism with Animals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR56",
+              "name": "Assisted Work and Time Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR57",
+              "name": "Find the Missing Number in the Sequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR58",
+              "name": "Circular Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR59",
+              "name": "Find the Missing Term in the Number Series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR60",
+              "name": "Paper Folding and Punching Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR61",
+              "name": "Logical Analogy",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR62",
+              "name": "Letter Shifts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41619",
+              "code": "AGTCCR63",
+              "name": "Analogy: Find the Related Word",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 17
+    },
+    {
+      "assessment": null,
+      "name": "Verbal Ability Problems",
+      "description": "Practice the previous years Accenture verbal ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Verbal Ability Problems",
+          "submodule_id": 16167,
+          "contest_code": "ACCNTRE01",
+          "start_date": "2025-10-06 12:04:29",
+          "total_problems": 13,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE01/problems/AGTCCR01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR01",
+              "name": "Phrasal Verb Substitution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR02",
+              "name": "Synonym Identification in a Sentence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR03",
+              "name": "Pronoun Agreement Error Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR04",
+              "name": "Sentence Jumble Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR05",
+              "name": "Correcting Prepositions of Time",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR06",
+              "name": "Grammatical Error Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR07",
+              "name": "Synonym for CANDID",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR08",
+              "name": "Sentence Completion - Logical Consequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR09",
+              "name": "Vocabulary - Fill in the Blank",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR13",
+              "name": "Antonym of Abundant",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR14",
+              "name": "Jumbled Sentence Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR15",
+              "name": "Present Continuous for Future Plans",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41617",
+              "code": "AGTCCR16",
+              "name": "Jumbled Sentences Rearrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 13
+    },
+    {
+      "assessment": null,
+      "name": "Technical Questions",
+      "description": "Practice the previous years Accenture Technical Questions.",
+      "submodules": [
+        {
+          "name": "Past Years Technical Questions",
+          "submodule_id": 16168,
+          "contest_code": "ACCNTRE04",
+          "start_date": "2025-09-08 01:00:00",
+          "total_problems": 25,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE04/problems/AGTCCR35",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 25,
+          "problems_with_status": [
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR35",
+              "name": "Excel Shortcut",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR36",
+              "name": "MS PowerPoint Executable File Name",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR37",
+              "name": "Spreadsheet Formatting Logic",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR38",
+              "name": "Selecting a Cell Range in Excel",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR39",
+              "name": "Operating System Interface Type",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR40",
+              "name": "Moving a File on a Computer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR41",
+              "name": "Keyboard Shortcut for Selecting All Content",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR42",
+              "name": "MS Word Background Text Feature",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR43",
+              "name": "MS-Word Save Shortcut Key",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR44",
+              "name": "MS Word Save As Shortcut Key",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR45",
+              "name": "Browser Shortcut: Ctrl+F",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR46",
+              "name": "MS Excel Default Worksheets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR10",
+              "name": "Factors Affecting Computer Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR11",
+              "name": "Programming Concepts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "AGTCCR12",
+              "name": "Understanding Cognition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE01",
+              "name": "OSI Layer for Link-Level Error Checking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE02",
+              "name": "Command for Listing Directory Contents",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE03",
+              "name": "Network Connectivity Troubleshooting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE04",
+              "name": "OSI Network Layer Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE05",
+              "name": "TCP/IP to OSI Layer Mapping",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE06",
+              "name": "Displaying Network Details",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE07",
+              "name": "Function of the Ping Command",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE08",
+              "name": "Main Role of TCP Protocol",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE09",
+              "name": "Dynamic vs. Static Routing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41620",
+              "code": "TDWDDE10",
+              "name": "Online Gaming Protocol Choice",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 25
+    },
+    {
+      "assessment": null,
+      "name": "Pseudo Code Questions",
+      "description": "Practice previous years Accenture pseudocode questions",
+      "submodules": [
+        {
+          "name": "Past Years Pseudo Code Questions",
+          "submodule_id": 16174,
+          "contest_code": "ACCNTRE06",
+          "start_date": "2025-09-08 01:00:00",
+          "total_problems": 15,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/accenture-interview-questions/ACCNTRE06/problems/TKYCPP01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 15,
+          "problems_with_status": [
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP01",
+              "name": "Pseudocode Bitwise Operation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP02",
+              "name": "Pseudocode Loop Value Prediction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP03",
+              "name": "Pseudocode Array Manipulation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP04",
+              "name": "Recursive Function Output Prediction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP05",
+              "name": "Pseudocode Array Subtraction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP06",
+              "name": "Robot Star Placement Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP07",
+              "name": "Pseudocode Loop Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP08",
+              "name": "Pseudocode Remainder Logic",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP09",
+              "name": "Pseudocode Variable Trace",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP10",
+              "name": "Bitwise Operator Pseudocode Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP11",
+              "name": "Pseudocode Conditional Logic Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP12",
+              "name": "Pseudocode Logic Evaluation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP13",
+              "name": "Pseudocode Logic Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP14",
+              "name": "Pseudocode Bitwise Operation Output",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41639",
+              "code": "TKYCPP15",
+              "name": "Nested If-Else Pseudocode",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 15
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 112,
+  "total_non_pro_problems": 112,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 1609,
+  "path_review": {
+    "rating": 3.5,
+    "users": 33
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

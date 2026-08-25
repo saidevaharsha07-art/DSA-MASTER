@@ -1,0 +1,122 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "GRAPHCON",
+  "contest_category": "6",
+  "problem_name": "Special Graph Construction",
+  "intended_contest_code": "",
+  "body": "If you are not familiar with graph theory terminology, please visit the end of the problem to see definitions.\r\n\r\nYou are in the graph construction business. A client of yours has asked for a special graph. A graph is called special if it satisfies the following properties:\r\n- It has $\\le 10^5$ vertices.\r\n- It is a simple, undirected, connected 3-regular graph.\r\n- It has exactly $k$ bridge edges, ($k$ given as input).\r\n\r\nFor a graph $G$, define $f(G)$ to be the minimum number of edges to be removed from it to make it bipartite. The client doesn't like graphs with a high value of $f$, so he asks you to minimize it.\r\n\r\nIf there doesn't exist any special graph, print $-1$. Otherwise, find a special graph $G$ with the minimum possible value of $f(G)$ and also find a subset of its edges of size $f(G)$ whose removal makes it bipartite . In case there are multiple such graphs, you can output any of those.\r\n\r\n### Input\r\n- The only line of the input contains a single integer $k$, the required number of bridge edges.\r\n\r\n### Output\r\nIf there are no special graphs, print a single line containing the integer $-1$. Otherwise, let $G$ be your graph with $n$ vertices numbered $1, 2, \\ldots n$ and $m$ edges numbered $1, 2, \\ldots m$. Let $X$ be a subset of edges of size $f(G)$ whose removal makes the graph bipartite. If there are multiple choices for $X$, you can choose any one of them.\r\n\r\n- In the first line, print $n$ and $m$.\r\n- In $i^{\\text{th}}$ of the next $m$ lines, print the edge numbered $i$ as its endpoints separated by a space.\r\n- In the last line, print $f(G)$ followed by the indices of the edges in $X$. You can print the indices in any order.\r\n\r\nFor example if $f(G) = 4$, and removing edges with indices $\\{2, 4, 5, 7\\}$ makes the graph bipartite, you can print `4 5 2 7 4`.\r\n\r\nYour answer is considered correct if and only if it is a special graph and of all the special graphs, it has the minimum possible $f$ value, and removing edges in $X$, the remaining graph is bipartite.\r\n\r\n### Constraints \r\n- $0 \\le k \\le 10^4$\r\n\r\n### Example Input\r\n```\r\n0\r\n```\r\n\r\n### Example Output\r\n```\r\n6 9\r\n1 4\r\n1 5\r\n1 6\r\n2 4\r\n2 5\r\n2 6\r\n3 4\r\n3 5\r\n3 6\r\n0\r\n```\r\n\r\n### Explanation\r\nThe graph printed is a bipartite graph with 3 nodes on both sides. Each node is connected to every node on the opposite side. Every node has a degree $3$; there is no bridge edge. Since it is a bipartite graph, it has a $f$ value of $0$, which is the minimum possible.\r\n\r\nIf you already know the graph theory terms used in the statement, you can skip  reading the \r\nfollowing definitions:\r\n\r\n**Connected graph** - A graph is said to be connected if, for every two nodes, you can reach one from the other using the edges of the graph.\r\n\r\n**Simple graph** - A graph $G$ is called simple if there are no self-loops (edge from a node to itself) or multiple edges( more than one edge between a pair of vertices).\r\n\r\n**3-regular graph** -  A 3-regular graph is one in which every vertex is an endpoint of exactly $3$ edges.\r\n\r\n**Bipartite graph** - A bipartite graph is a graph whose vertices can be divided into two disjoint sets $U$ and $V$ such that every edge connects a vertex in $U$ to one in $V$.\r\n\r\n**Bridge edge** - An edge is called a bridge edge if on removing it, the graph is no longer connected.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "If you are not familiar with graph theory terminology, please visit the end of the problem to see definitions.\n\nYou are in the graph construction business. A client of yours has asked for a special graph. A graph is called special if it satisfies the following properties:\n- It has $\\le 10^5$ vertices.\n- It is a simple, undirected, connected 3-regular graph.\n- It has exactly $k$ bridge edges, ($k$ given as input).\n\nFor a graph $G$, define $f(G)$ to be the minimum number of edges to be removed from it to make it bipartite. The client doesn't like graphs with a high value of $f$, so he asks you to minimize it.\n\nIf there doesn't exist any special graph, print $-1$. Otherwise, find a special graph $G$ with the minimum possible value of $f(G)$ and also find a subset of its edges of size $f(G)$ whose removal makes it bipartite . In case there are multiple such graphs, you can output any of those.\n\n### Input\n- The only line of the input contains a single integer $k$, the required number of bridge edges.\n\n### Output\nIf there are no special graphs, print a single line containing the integer $-1$. Otherwise, let $G$ be your graph with $n$ vertices numbered $1, 2, \\ldots n$ and $m$ edges numbered $1, 2, \\ldots m$. Let $X$ be a subset of edges of size $f(G)$ whose removal makes the graph bipartite. If there are multiple choices for $X$, you can choose any one of them.\n\n- In the first line, print $n$ and $m$.\n- In $i^{\\text{th}}$ of the next $m$ lines, print the edge numbered $i$ as its endpoints separated by a space.\n- In the last line, print $f(G)$ followed by the indices of the edges in $X$. You can print the indices in any order.\n\nFor example if $f(G) = 4$, and removing edges with indices $\\{2, 4, 5, 7\\}$ makes the graph bipartite, you can print `4 5 2 7 4`.\n\nYour answer is considered correct if and only if it is a special graph and of all the special graphs, it has the minimum possible $f$ value, and removing edges in $X$, the remaining graph is bipartite.\n\n### Constraints \n- $0 \\le k \\le 10^4$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "0",
+        "output": "6 9\n1 4\n1 5\n1 6\n2 4\n2 5\n2 6\n3 4\n3 5\n3 6\n0",
+        "explanation": "The graph printed is a bipartite graph with 3 nodes on both sides. Each node is connected to every node on the opposite side. Every node has a degree $3$; there is no bridge edge. Since it is a bipartite graph, it has a $f$ value of $0$, which is the minimum possible.\n\nIf you already know the graph theory terms used in the statement, you can skip  reading the \nfollowing definitions:\n\n**Connected graph** - A graph is said to be connected if, for every two nodes, you can reach one from the other using the edges of the graph.\n\n**Simple graph** - A graph $G$ is called simple if there are no self-loops (edge from a node to itself) or multiple edges( more than one edge between a pair of vertices).\n\n**3-regular graph** -  A 3-regular graph is one in which every vertex is an endpoint of exactly $3$ edges.\n\n**Bipartite graph** - A bipartite graph is a graph whose vertices can be divided into two disjoint sets $U$ and $V$ such that every edge connects a vertex in $U$ to one in $V$.\n\n**Bridge edge** - An edge is called a bridge edge if on removing it, the graph is no longer connected.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "jtnydv25",
+  "problem_display_authors": [
+    "jtnydv25"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jtnydv25'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>jtnydv25</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "25-11-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Constructive"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610861
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=GRAPHCON",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

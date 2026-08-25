@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHEFING",
+  "contest_category": "6",
+  "problem_name": "Chef and Secret Ingredients",
+  "intended_contest_code": "FEB19",
+  "body": "\r\nChef recently visited ShareChat Cafe and was highly impressed by the food. Being a food enthusiast, he decided to enquire about the ingredients of each dish.\r\n\r\nThere are $N$ dishes represented by strings $S_1, S_2, \\ldots, S_N$. Each ingredient used for making dishes in ShareChat Cafe is represented by a lowercase English letter. For each valid $i$, the ingredients used to make dish $i$ correspond to characters in the string $S_i$ (note that ingredients may be used multiple times). A *special ingredient* is an ingredient which is present in each dish at least once.\r\n\r\nChef wants to know the number of special ingredients in ShareChat Cafe. Since Chef is too busy with work, can you help him?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a single string $S_i$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of special ingredients in the dishes.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N \\le 1,000$\r\n- $1 \\le |S_i| \\le 200$ for each valid $i$\r\n- $S_1, S_2, \\ldots, S_N$ contain only lowercase English letters\r\n- The sum of length of strings over all test cases $\\le$ 3500000\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n2\r\n3\r\nabcaa\r\nbcbd\r\nbgc\r\n3\r\nquick\r\nbrown\r\nfox\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n0\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** Ingredients 'b' and 'c' are present in all three dishes, so there are two special ingredients.\r\n\r\n**Example case 2:** No ingredient is common to all three dishes.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef recently visited ShareChat Cafe and was highly impressed by the food. Being a food enthusiast, he decided to enquire about the ingredients of each dish.\r\n\r\nThere are $N$ dishes represented by strings $S_1, S_2, \\ldots, S_N$. Each ingredient used for making dishes in ShareChat Cafe is represented by a lowercase English letter. For each valid $i$, the ingredients used to make dish $i$ correspond to characters in the string $S_i$ (note that ingredients may be used multiple times). A *special ingredient* is an ingredient which is present in each dish at least once.\r\n\r\nChef wants to know the number of special ingredients in ShareChat Cafe. Since Chef is too busy with work, can you help him?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- $N$ lines follow. For each $i$ ($1 \\le i \\le N$), the $i$-th of these lines contains a single string $S_i$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the number of special ingredients in the dishes.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N \\le 1,000$\r\n- $1 \\le |S_i| \\le 200$ for each valid $i$\r\n- $S_1, S_2, \\ldots, S_N$ contain only lowercase English letters\r\n- The sum of length of strings over all test cases $\\le$ 3500000\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\r\n3\r\nabcaa\r\nbcbd\r\nbgc\r\n3\r\nquick\r\nbrown\r\nfox",
+        "output": "2\r\n0",
+        "explanation": "**Example case 1:** Ingredients 'b' and 'c' are present in all three dishes, so there are two special ingredients.\r\n\r\n**Example case 2:** No ingredient is common to all three dishes.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 21971,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "0.5",
+  "source_sizelimit": "50000",
+  "problem_author": "adityad1998",
+  "problem_display_authors": [
+    "adityad1998"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/adityad1998'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>adityad1998</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "24-01-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Frequency Arrays",
+    "String"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays"
+  ],
+  "difficulty_rating": "1376",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610667
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHEFING",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

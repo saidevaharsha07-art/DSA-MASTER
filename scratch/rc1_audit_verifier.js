@@ -1,0 +1,58 @@
+const fs = require('fs');
+const path = require('path');
+
+console.log('--- STARTING RC-1 RELEASE AUDIT VERIFICATION ---');
+
+const rcBlockers = [
+  {
+    id: 'RC1-CRIT-01',
+    severity: 'Critical',
+    title: 'Missing CodeChef Rating Arena Link in Production Navigation Header',
+    reproduction: '1. Open app at http://localhost:3000/\n2. Look at top navigation header bar.\n3. Observe that CodeChef Arena (/practice/codechef) is not in the menu.',
+    expected: 'CodeChef Arena (🧪) is visible in the top header navigation.',
+    actual: 'User must manually type /practice/codechef or find the secondary banner link on /practice.',
+    rootCause: 'navItems array in src/app/(app)/layout.tsx omits /practice/codechef.',
+    affectedFiles: ['src/app/(app)/layout.tsx'],
+    fix: 'Add { href: "/practice/codechef", label: "CodeChef Arena", icon: "🧪" } to navItems array.',
+    effort: '5 minutes'
+  },
+  {
+    id: 'RC1-CRIT-02',
+    severity: 'Critical',
+    title: 'Missing Kingdoms & Patterns Links in Production Navigation Header',
+    reproduction: '1. Open app at http://localhost:3000/\n2. Look at top navigation header bar.\n3. Observe that Kingdoms (/kingdoms) and Patterns (/patterns) are missing.',
+    expected: 'Kingdoms (🏰) and Patterns (🧬) are visible in top header navigation.',
+    actual: 'Pages are unlinked in main navigation menu.',
+    rootCause: 'navItems array in src/app/(app)/layout.tsx omits /kingdoms and /patterns.',
+    affectedFiles: ['src/app/(app)/layout.tsx'],
+    fix: 'Add /kingdoms and /patterns items to navItems array.',
+    effort: '5 minutes'
+  },
+  {
+    id: 'RC1-HIGH-01',
+    severity: 'High',
+    title: 'Missing Developer System Dashboard Shortcut in Settings Page',
+    reproduction: '1. Navigate to /settings.\n2. Look for Developer Tools / System Diagnostics button.\n3. Observe no link exists to /dev/system.',
+    expected: 'Settings page provides a button to open /dev/system diagnostic suite.',
+    actual: 'User cannot reach developer debug suite without typing URL manually.',
+    rootCause: 'src/app/(app)/settings/page.tsx lacks shortcut link component.',
+    affectedFiles: ['src/app/(app)/settings/page.tsx'],
+    fix: 'Add a Developer System Suite (/dev/system) button card.',
+    effort: '5 minutes'
+  },
+  {
+    id: 'RC1-MED-01',
+    severity: 'Medium',
+    title: 'Redundant Top-Level app/ Directory Forwarders',
+    reproduction: '1. Inspect root directory folder app/.\n2. Observe duplicate page forwarders duplicating src/app/.',
+    expected: 'Single canonical router directory in src/app/.',
+    actual: 'Top-level app/ directory exists alongside src/app/.',
+    rootCause: 'Legacy top-level app/ directory was left in repository root.',
+    affectedFiles: ['app/'],
+    fix: 'Delete redundant top-level app/ directory.',
+    effort: '5 minutes'
+  }
+];
+
+fs.writeFileSync('scratch/rc1_audit_summary.json', JSON.stringify(rcBlockers, null, 2));
+console.log(`RC-1 Audit Summary generated with ${rcBlockers.length} issues.`);

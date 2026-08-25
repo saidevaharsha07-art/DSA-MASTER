@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LLCYCLE",
+  "contest_category": "6",
+  "problem_name": "Detect Start of Cycle in Linked List",
+  "intended_contest_code": "DSAMONDAY29",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $0 \\le N \\le 10^{4}$\n- $-10^{5} \\le \\text{Node.val} \\le 10^{5}$\n- $-1 \\le \\text{pos} < N$\n",
+    "constraintsState": false,
+    "subtasks": "- **Subtask 1 (10 points):** $1 \\leq M \\leq 10$\n- **Subtask 2 (20 points):** The sum of $N$ across all test cases won't exceed $20$.\n- **Subtask 3 (70 points):** No further constraints.",
+    "subtasksState": false,
+    "statement": "You are given a singly linked list with $N$ nodes. Each node contains an integer value.\\\nYour task is to find the **index of the node where a cycle begins**, if a cycle exists. If the linked list has no cycle, print $-1$.\n\nA cycle occurs when a node's next pointer points to a **previous node** or **itself** in the list. The $pos$ is the 0-based index of the node that the last node points to. \n\n## Function Declaration\n\n### **Function Name**\n\n$detectCycle$ \u2014 This function determines whether a cycle exists in a singly linked list and returns the index of the node where the cycle begins.\n\n\n### Parameters\n\n$head$: A pointer to the **first node** of the singly linked list.\n\n* May be $NULL$ if the list is empty.\n* Each node contains an integer value and a pointer to the next node.\n\n### Return Value\n\nReturns an integer representing the **0-based index of the node** where the cycle starts.\n\n* If **no cycle** is present in the linked list, returns $-1$.\n\n`The input and output formats provided below are only for testing with custom inputs.`\n\n## Constraints:\n- $0 \\le N \\le 10^{4}$\n- $-10^{5} \\le \\text{Node.val} \\le 10^{5}$\n- $-1 \\le \\text{pos} < N$\n\n",
+    "inputFormat": "- The first line contains an integer $N$ \u2014 the number of nodes in the linked list.\n- The second line contains $N$ space-separated integers \u2014 the values of the nodes.\n- The third line contains an integer $pos$ \u2014 the index that the last node connects to ($-1$ if no cycle).",
+    "inputFormatState": true,
+    "outputFormat": "- Print a single integer \u2014 the 0-based index of the node where the cycle begins.\n- If there is no cycle, print $-1$.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "7\n11 22 33 44 55 66 77\n4\n",
+        "output": "4\n",
+        "explanation": "Linked list: `11 -> 22 -> 33 -> 44 -> 55 -> 66 -> 77`\\\nThe last node `77` points back to node at index `4` (`55`). Cycle starts at `55`.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "5\n3 6 9 12 15\n1\n",
+        "output": "1\n",
+        "explanation": "Linked list: `3 -> 6 -> 9 -> 12 -> 15`\nThe last node `15` points to index `1` (`6`). Cycle starts at `6`.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "# Problem Statement\n\nA cycle in a linked list is like a hallway that secretly loops back and refuses to let you leave. Our mission: find where the loop begins \u2014 the exact node index that starts the cycle.\n\nTo unravel this looping hallway, we use the classic Floyd\u2019s Cycle Detection Algorithm, also known as the Tortoise and Hare method.\n\nLet\u2019s break it into simple, story-like phases.\n\n---\n\n# Phase 1: Detect if a Cycle Exists\n\nWe release two travelers:\n\n- Slow pointer \u2192 takes 1 step at a time\n\n- Fast pointer \u2192 takes 2 steps at a time\n\nIf the list is straight, fast pointer eventually falls off (points to `null`).\nIf the list loops, fast pointer eventually meets slow pointer inside the loop \u2014 like two wanderers bumping into each other on a circular track.\n\n**If they never meet \u2192 No cycle \u2192 return** `-1`.\n\n---\n\n# Phase 2: Find the Start of the Cycle\n\nOnce slow and fast meet inside the cycle, there's a beautiful and slightly magical invariant:\n\n- If you put one pointer at the head, and the other stays at the meeting point,\\\nand both move **one step at a time**,\\\n**they will meet exactly at the start of the cycle**.\n\nWhy?\\\nBecause:\n\n- Distance traveled from head to cycle start = X\n- Distance inside the cycle from start to meeting point = Y\n- Cycle length = C\n\nFast moves twice as fast, and after some algebra (Floyd was clever),\\\nthe meeting ensures:\n\n`Head pointer travels X steps`\\\n`Inner pointer travels C \u2013 Y steps`\n\nBoth land at the exact same node \u2192 **cycle start**.\n\nDuring this walk, we also keep a counter to return the **0-based index**.\n\n---\n\n# Why This Works (Short Intuition)\n\nThe fast pointer laps the slow pointer in the cycle \u2014 so the meeting guarantees alignment that leads both to the start when walked in sync.\n\nThis is one of the rare moments where math, elegance, and pointer-chasing meet in harmony.\n\n---  \n\n# Time & Space Complexity\n\n| Operation           | Cost     |\n| ------------------- | -------- |\n| Detect cycle        | **O(N)** |\n| Find start of cycle | **O(N)** |\n| Total               | **O(N)** |\n| Extra Space         | **O(1)** |\n\n\n\n\n\n",
+  "text_editorial_is_markdown": 1,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, CAML",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "mayank_pardhi",
+  "problem_display_authors": null,
+  "problem_display_authors_html_handle": null,
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "11-09-2025",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "mayank_pardhi"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1773675000,
+    "submit_start_date": 1773675000,
+    "visible_start_date": 1773675000,
+    "end_date": 1893436200,
+    "current": 1785610988
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LLCYCLE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": true,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 7,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

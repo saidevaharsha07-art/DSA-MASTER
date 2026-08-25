@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ANTIPALINDR",
+  "contest_category": "6",
+  "problem_name": "Anti Palindrome",
+  "intended_contest_code": "START90",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq C \\leq 5 \\cdot 10^5$\n- $2 \\leq N \\leq 10^5$\n- $S$ contains only english lowercase letters.\n- The sum of $N$ over all testcases won't exceed $10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "**Definitions:**\n\nA string $T$ is called **semi-palindrome** if you can rearrange the characters of $T$ to make it into a [palindrome](https://en.wikipedia.org/wiki/Palindrome).\\\nFor eg. if $T = aabb$, it isn't a palindrome as of now, but it can be rearranged to form $abba$, which is a palindrome. Thus, $T = aabb$ is a semi-palindrome.\n\nAn **anti-palindrome** is the opposite of a semi-palindrome. In particular, a string $T$ is called an anti-palindrome if it is not possible to rearrange the characters of $T$ to make it into a palindrome.\\\nFor eg. if $T = abc$, there is no rearrangement of this string which makes it into a palindrome. Hence, $T = abc$ is an anti-palindrome.\n\n---\nNow on to the problem:\n\nYou are given a string $S = S_1S_2 \\ldots S_N$ consisting of $N$ english lowercase letters. \n\nYour aim is to convert $S$ into an anti-palindrome. For this, you are allowed to do the following operation as many times as you want (even 0 times) : \n- Select an index $i$ $(1 \\leq i \\leq N)$ and change $S_i$ to any other english lowercase letter.\n\nFind the minimum number of operations needed to make $S$ into an anti-palindrome. \n\n**Note:** It can be proven that for the given constraints ($2 \\leq N \\leq 10^5$), it is always possible to make $S$ into an anti-palindrome using the operations.",
+    "inputFormat": "- The first line of input will contain a single integer $C$, denoting the number of test cases.\n- Each test case consists of two lines of input.\n    - The first line of each test case contains an integer $N$ \u2014 the length of the string $S$.\n    - The next line contains the string $S$ of length $N$. ",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the minimum number of operations needed to make $S$ into an anti-palindrome. \n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n2\nab\n2\naa\n3\nabc\n3\naaa\n3\nabb\n",
+        "output": "0\n1\n0\n2\n1\n",
+        "explanation": "**Testcase 1:** The given string $ab$ is already an anti-palindrome, since there is no way to rearrange the letters to make it into a palindrome. So, we don't need to do any operations on it to make it an anti-palindrome. Hence the answer is $0$.\n\n**Testcase 2:** The given string $aa$ is a palindrome, and so it is not an anti-palindrome. We can change it to $ab$ using $1$ operation, and it becomes an anti-palindrome. Hence the answer is $1$.\n\n**Testcase 3:** The given string $abc$ is already an anti-palindrome, since there is no way to rearrange the letters to make it into a palindrome. So, we don't need to do any operations on it to make it an anti-palindrome. Hence the answer is $0$.\n\n**Testcase 4:** The given string $aaa$ is a palindrome, and so it is not an anti-palindrome. We can change it to $abc$ using $2$ operations, and it becomes an anti-palindrome. There is no way to make it into an anti-palindrome using only 1 operation. Hence the answer is $2$.\n\n**Testcase 5:** The given string $abb$ is a semi-palindrome, since it can be rearranged to form $bab$ which is a palindrome. So $abb$ is not an anti-palindrome. We can change it to $abc$ using $1$ operation, and it becomes an anti-palindrome. Hence the answer is $1$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "64651012cfe9a8088535d85e",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 106209,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "4.5",
+  "source_sizelimit": "50000",
+  "problem_author": "satyam_adm",
+  "problem_display_authors": [
+    "satyam_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/satyam_adm'>satyam_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-05-2023",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1488",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610605
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ANTIPALINDR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "video_editorial_url": "",
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 56,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

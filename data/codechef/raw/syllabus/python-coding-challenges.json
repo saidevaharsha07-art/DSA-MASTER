@@ -1,0 +1,644 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "python-coding-challenges",
+  "name": "Python Coding Challenges",
+  "title": "Python Coding Challenges",
+  "level": "Intermediate",
+  "description": "Solve these Python coding challenges based on all the well known features of the Python language and make yourself an expert at Python. You will find coding challenges on list comprehension, functional programming concepts, generators, decorators and a lot more.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:55",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC01/problems/PYTHONCH01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Comprehensions and Functional Programming",
+      "description": "Create concise and efficient code using list and dictionary comprehensions. Apply functional programming concepts like lambda functions, map, filter, and reduce to process data in a more declarative style. These topics focus on writing cleaner, more expressive code for data manipulation.",
+      "submodules": [
+        {
+          "name": "Comprehensions and Functional Programming",
+          "submodule_id": 6345,
+          "contest_code": "PYTHONCHC01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC01/problems/PYTHONCH01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH01",
+              "name": "Divisible Number Finder\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH02",
+              "name": "Alphabet Position Mapper\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH05",
+              "name": "Alternating Case Generator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH06",
+              "name": "Word Length Filter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH07",
+              "name": "Lambda-based String Reverser\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH08",
+              "name": "Sorting strings by their last character\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH09",
+              "name": "Convert inches to centimeters\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH10",
+              "name": "Convert a list of numbers to their absolute values\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH11",
+              "name": "Extract words containing a specific letter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH12",
+              "name": "Filter out vowel-starting words from a sentence\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29920",
+              "code": "PYTHONCH13",
+              "name": "Calculate the sum of digits of a number\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Function and Method Enhancements",
+      "description": "Extend and customize function behavior using advanced parameter handling (*args, **kwargs) and decorators. Implement special method types like static and class methods, and create closures for encapsulating functionality. These concepts allow for more flexible and powerful function definitions and usage.",
+      "submodules": [
+        {
+          "name": "Function and Method Enhancements",
+          "submodule_id": 6346,
+          "contest_code": "PYTHONCHC02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC02/problems/PYTHONCH15",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH15",
+              "name": "Calculate Average of Variable Arguments\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH17",
+              "name": "Customizable Restaurant Bill Calculator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH19",
+              "name": "Input Validation Decorator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH20",
+              "name": "Uppercase Converter Decorator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH21",
+              "name": "Rectangle Area Calculator with Decorator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH22",
+              "name": "File Size Converter (Bytes to KB/MB/GB)\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH23",
+              "name": "Static Morse Code Translator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH25",
+              "name": "Geometric Shape Area Calculator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH26",
+              "name": "Song Playlist Manager\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH27",
+              "name": "Create a counter with adjustable step size\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH28",
+              "name": "Create a customizable greeting function\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29921",
+              "code": "PYTHONCH30",
+              "name": "Partial Power Function\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Object-Oriented Programming Advanced Concepts",
+      "description": "Dive deep into advanced OOP concepts such as multiple inheritance, method resolution order, and metaclasses. Utilize modern Python features like dataclasses and enums to create more robust and self-documenting code. These topics enhance your ability to design complex, efficient class hierarchies and data structures.",
+      "submodules": [
+        {
+          "name": "Object-Oriented Programming Advanced Concepts",
+          "submodule_id": 6347,
+          "contest_code": "PYTHONCHC03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC03/problems/PYTHONCH31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH31",
+              "name": "Create a Magical Creature Generator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH32",
+              "name": "Implement a Character Class for a Role-Playing Game\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH33",
+              "name": "MRO Chain Finder\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH34",
+              "name": "Magical Creature Ability Resolver\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH35",
+              "name": "Shape Area Calculator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH38",
+              "name": "Implement Method Counter using Metaclass",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH39",
+              "name": "Weather Station Data Processor\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29922",
+              "code": "PYTHONCH41",
+              "name": "HTTP Status Code Interpreter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Iteration and Generation",
+      "description": "Master the art of creating custom iterators and generators to efficiently work with large or infinite sequences of data. Implement context managers to ensure proper resource handling. These concepts focus on controlling data flow and resource management in your programs.",
+      "submodules": [
+        {
+          "name": "Iteration and Generation",
+          "submodule_id": 6348,
+          "contest_code": "PYTHONCHC04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC04/problems/PYTHONCH46",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "29923",
+              "code": "PYTHONCH46",
+              "name": "Circular Array Iterator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29923",
+              "code": "PYTHONCH47",
+              "name": "Alternating Case String Generator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29923",
+              "code": "PYTHONCH48",
+              "name": "Alphabet Rotation Generator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29923",
+              "code": "PYTHONCH50",
+              "name": "Indentation Formatter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "Error Handling and Type Management",
+      "description": "Implement robust error handling strategies using try-except blocks and custom exceptions. Enhance code reliability and readability with type hinting and annotations. These topics aim to create more predictable and maintainable code by managing errors and data types effectively.",
+      "submodules": [
+        {
+          "name": "Error Handling and Type Management",
+          "submodule_id": 6349,
+          "contest_code": "PYTHONCHC05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/python-coding-challenges/PYTHONCHC05/problems/PYTHONCH51",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH51",
+              "name": "Safe Dictionary Access\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH52",
+              "name": "List Index Accessor\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH53",
+              "name": "File Opener Counter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH55",
+              "name": "RGB Color Code Validator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH57",
+              "name": "Typed Temperature Converter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH58",
+              "name": "Type-safe String Repeater\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29924",
+              "code": "PYTHONCH59",
+              "name": "Type-safe age category classifier\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 42,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "280",
+    "name": "Advanced Python",
+    "title": "Advanced Python",
+    "slug": "advanced-python",
+    "description": "Practical course on Advanced concepts of Python like Functions, Modules, Iterators, Generators, Decorators and Regular expressions. Learn these concepts and you will be able to write and read Python code like a Pro.",
+    "highlight_color": "#FFFFFF",
+    "level": "Intermediate",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 504
+    },
+    "learners_count": 5981,
+    "lessons_count": 6
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Advanced Coding Challenges",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "5020010",
+      "fullname": "khn1025",
+      "review": "It was easy to learn through doing, and your AI works great. Thank you for providing all of this for free. Thank you!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "khn1025",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 6194,
+  "path_review": {
+    "rating": 4.5,
+    "users": 93
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/python-development",
+  "roadmap_title": "Python Backend Developer "
+}

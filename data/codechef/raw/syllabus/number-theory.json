@@ -1,0 +1,392 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "number-theory",
+  "name": "Number theory",
+  "title": "Number theory",
+  "level": "Intermediate",
+  "description": "Practice problems on number theory concepts like Euclid\u2019s algorithm for GCD, LCM, prime factorization etc\n",
+  "time_to_complete": null,
+  "difficulty_range": "1000 - 1600",
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/number-theory/INTNT01/problems/BUDTECH",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic number theory",
+      "description": "Practice intermediate level problems using Number theory",
+      "submodules": [
+        {
+          "name": "Practice",
+          "submodule_id": 1248,
+          "contest_code": "INTNT01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/number-theory/INTNT01/problems/BUDTECH",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "24278",
+              "code": "BUDTECH",
+              "name": "Budget of Technex",
+              "difficulty_rating": "449",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "RANKLISTPAGE",
+              "name": "Ranklist Pages",
+              "difficulty_rating": "590",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "BETDEAL",
+              "name": "Better Deal",
+              "difficulty_rating": "584",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "FOODPLAN",
+              "name": "Online or Offline",
+              "difficulty_rating": "713",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "ODDSUMPAIR",
+              "name": "Odd Sum Pair",
+              "difficulty_rating": "506",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "BOOKPAGES",
+              "name": "Divide Pages",
+              "difficulty_rating": "500",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "REDSTRBTN",
+              "name": "Redistributing Chocolates",
+              "difficulty_rating": "842",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "LUCKYN",
+              "name": "Lucky Numbers",
+              "difficulty_rating": "655",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "RETURNCHANGE",
+              "name": "Return the Change",
+              "difficulty_rating": "763",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "CUTPAPER",
+              "name": "Paper Cutting",
+              "difficulty_rating": "800",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "APPLEORANGE",
+              "name": "Apples and oranges",
+              "difficulty_rating": "1040",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24278",
+              "code": "PRIMEDICE",
+              "name": "Hackerman",
+              "difficulty_rating": "643",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Pro Practice",
+          "submodule_id": 1249,
+          "contest_code": "INTNT02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/number-theory/INTNT02/problems/RECIPE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "24279",
+              "code": "RECIPE",
+              "name": "Cutting Recipes",
+              "difficulty_rating": "1047",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "EXISTENCE",
+              "name": "Existence",
+              "difficulty_rating": "928",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "ANUWTA",
+              "name": "Walk on the Axis",
+              "difficulty_rating": "1374",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "MUSICHAIR",
+              "name": "Musical Chairs",
+              "difficulty_rating": "1494",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "CHEFLCM",
+              "name": "Chef and Interview",
+              "difficulty_rating": "1447",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "PRIMEFACT",
+              "name": "Add smallest prime factor",
+              "difficulty_rating": "1272",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "NOTUNIT",
+              "name": "Dazzling GCD Pair",
+              "difficulty_rating": "1177",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "NUMFACT",
+              "name": "Number of Factors",
+              "difficulty_rating": "1710",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "DIVIDEMAKEEQ",
+              "name": "Luigi and Uniformity",
+              "difficulty_rating": "1185",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "LEDIV",
+              "name": "Little Elephant and Divisors",
+              "difficulty_rating": "1716",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "GCDDIV",
+              "name": "The hardest gcd problem",
+              "difficulty_rating": "1829",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24279",
+              "code": "STRNG",
+              "name": "Strong Elements",
+              "difficulty_rating": "1507",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 24
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 24,
+  "total_non_pro_problems": 12,
+  "up_next": [
+    {
+      "name": "Binary Search",
+      "title": "Binary Search",
+      "slug": "binary-search",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 19183,
+      "review": {
+        "rating": 4.7,
+        "users": 141
+      },
+      "course_count": 2,
+      "description": "Practice Binary search with our curated set of problems. Implement binary search algorithm in languages like C++, Java, Python and JavaScript. "
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "168",
+    "name": "Number theory",
+    "title": "Number theory",
+    "slug": "number-theory",
+    "description": "Learn basic number theory concepts and their implementation in our Number Theory course. Understand and solve concepts such as prime numbers, divisibility, modular arithmetic, sieve of eratosthenes, and Fermat Little Theorem.",
+    "highlight_color": "#FEFEFE",
+    "level": "Intermediate",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.5,
+      "users": 236
+    },
+    "learners_count": 4550,
+    "lessons_count": 9
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 10424,
+  "path_review": {
+    "rating": 4.5,
+    "users": 154
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

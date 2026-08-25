@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COOK82A",
+  "contest_category": "6",
+  "problem_name": "La Liga",
+  "intended_contest_code": "COOK82",
+  "body": "<p>Today is the final round of La Liga, the most popular professional football league in the world. Real Madrid is playing against Malaga and Barcelona is playing against Eibar. These two matches will decide who wins the league title. Real Madrid is already 3 points ahead of Barcelona in the league standings. In fact, Real Madrid will win the league title, except for one scenario: If Real Madrid loses against Malaga, and Barcelona wins against Eibar, then the La Liga title will go to Barcelona. In any other combination of results, Real Madrid will win the title.</p>\n\n<p>You will be given multiple scenarios for these two games, where in each one you will be given the number of goals each team scored in their respective match. A team wins a match if it scores more than the opponent. In case they score the same number of goals, it's a draw. Otherwise, the team loses the game. You are asked to tell the winner of the La Liga title in each scenario.</p>\n\n\n<h3>Input</h3>\n<p>\nThe first line contains a single number <b>T</b>, the number of scenarios.\nEach scenario is described by four lines. Each line starts with a team name followed by the number of goals this team scored in its corresponding match. (Barcelona plays Eibar and Real Madrid plays Malaga). The names are given in any arbitrary order within a scenario.</p>\n\n\n<h3>Output</h3>\n<p>For each scenario, output a single line showing the title winner in case this scenario happens. It should be either \"RealMadrid\" or \"Barcelona\".</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 <b>500</b></li>\n<li>0 \u2264 number of goals scored by a team in a match \u2264 <b>20</b></li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\nBarcelona 2\nMalaga 1\nRealMadrid 1\nEibar 0\nMalaga 3\nRealMadrid 2\nBarcelona 8\nEibar 6\n\n<b>Output:</b>\nRealMadrid\nBarcelona\n</pre>\n\n<h3>Explanations</h3>\n<p>In the first scenario, Barcelona wins against Eibar, because they scored more goals (2 > 0). But Real Madrid draws against Malaga, because they both score 1 goal each. So, Real Madrid wins the league title.</p>\n\n<p>In the second scenario, Barcelona wins against Eibar (8 > 6). And Real Madrid loses against Malaga (2 < 3). This satisfies the only criteria needed for Barcelona to win the title: Barcelona winning, and Real Madrid losing. Hence, Barcelona is the answer for this scenario.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Today is the final round of La Liga, the most popular professional football league in the world. Real Madrid is playing against Malaga and Barcelona is playing against Eibar. These two matches will decide who wins the league title. Real Madrid is already 3 points ahead of Barcelona in the league standings. In fact, Real Madrid will win the league title, except for one scenario: If Real Madrid loses against Malaga, and Barcelona wins against Eibar, then the La Liga title will go to Barcelona. In any other combination of results, Real Madrid will win the title.</p>\n\n<p>You will be given multiple scenarios for these two games, where in each one you will be given the number of goals each team scored in their respective match. A team wins a match if it scores more than the opponent. In case they score the same number of goals, it's a draw. Otherwise, the team loses the game. You are asked to tell the winner of the La Liga title in each scenario.</p>\n\n\n<h3>Input</h3>\n<p>\nThe first line contains a single number <b>T</b>, the number of scenarios.\nEach scenario is described by four lines. Each line starts with a team name followed by the number of goals this team scored in its corresponding match. (Barcelona plays Eibar and Real Madrid plays Malaga). The names are given in any arbitrary order within a scenario.</p>\n\n\n<h3>Output</h3>\n<p>For each scenario, output a single line showing the title winner in case this scenario happens. It should be either \"RealMadrid\" or \"Barcelona\".</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 <b>500</b></li>\n<li>0 \u2264 number of goals scored by a team in a match \u2264 <b>20</b></li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\nBarcelona 2\nMalaga 1\nRealMadrid 1\nEibar 0\nMalaga 3\nRealMadrid 2\nBarcelona 8\nEibar 6",
+        "output": "RealMadrid\nBarcelona",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 14643,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "deadwing97",
+  "problem_display_authors": [
+    "deadwing97"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/deadwing97'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>deadwing97</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "kingofnumbers"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kingofnumbers'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>kingofnumbers</span></a></div>",
+  "problem_editorialist": "mathecodician",
+  "date_added": "20-05-2017",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "cakewalk",
+    "cook82",
+    "deadwing97"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "956",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610701
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COOK82A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 60,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,125 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16A",
+  "contest_category": "6",
+  "problem_name": "Playing World War II",
+  "intended_contest_code": null,
+  "body": "<p>Enigma: The military machine used by Nazi Germany to encipher messages before and during World War II. The code of Enigma was broken once by Polish Cipher Bureau in 1932 and then again, during the war, by the Codebreaker team at Bletchley Park, England. Because of this, the Allied Powers were able to intercept a lot of messages transferred by German military and knew their battle plans. It is said that, breaking of Enigma shortened the length of that war by two years. </p>\n<p>But, in the time of war, Allies were gravely concerned about the possibility of Germans finding out this security breach and resetting their communication system. They were very disciplined about using the information in order to hide this source of intelligence. Their precautions included leading fake invasions, superfluous search missions and attacking only after creating a proper cover story. Even at times, they considered sabotaging own resources during a battle which resulted in the death toll of hundreds of soldiers, civilians and massive loss on supplies; just to avoid any suspicion!</p>\n<p>It seems like they played with probabilities leaving peoples\u2019 lives hanging on the decision.</p>\n<p>Cruel, wasn\u2019t it? Can you do it?</p>\n<p>There are <b>N</b> battles ahead. The probability that Allies will win the i<sup>th</sup> battle is <b>P<sub>i</sub></b>. \n<p>The enemies are calculating a value <b>PEB (Probability that Enigma has been broken)</b>. If the allies win a battle, the value of PEB increases; if the enemy wins the battle, the value decreases. If the value of PEB gets too high, the enemy will become suspicious and replace Enigma with something else.</p>\n<p><b>PEB</b> is calculated as an average from results of all previous battles using the following method.</p>\n<p>\n<pre>\ntotal := 0\nforeach Battle, b<sub>i</sub>\n\tif Allies win\n\t\ttotal += probability of Allies losing in b<sub>i</sub>\n\telse\n\t\ttotal -= probability of Allies winning in b<sub>i</sub>\nPEB = max(total / no. of battles, 0)\n</pre>\n</p>\n<p>As the Allies already deciphered Enigma, they can choose to win or lose any battle they want. Consider the following scenario as example:</p>\n\n<img src=\"https://www.codechef.com/download/upload/ACM16KOL/A.png\" height=\"120\" width=\"550\">\n\n<br/>\n<p></p>\n<p>Some battles are more important than others; the i<sup>th</sup> battle has an Impact Factor <b>F<sub>i</sub></b>. As a war analyst, your job is to maximize the sum of Impact Factors of all the battles won. But the enemies must not know that Allies have deciphered Enigma, so you must keep PEB less than a certain <b>threshold, S</b>; throughout the whole war.</p>\n<h3>Input</h3>\n<ul>\n<li>The first line of input contains an integer <b>T (1 \u2264 T \u2264 100)</b> denoting the number of test cases. Each test case contains 4 lines: </li>\n<li>The first line contains one integer <b>N (1 \u2264 N \u2264 100)</b> denoting the number of battles. </li> \n    <li>The second line contains <b>N</b> space-separated real numbers <b>P<sub>1</sub>,P<sub>2</sub>,....,P<sub>n</sub></b> (probability of the Allies winning in i<sup>th</sup> battle) <b>0.00 \u2264 P<sub>i</sub> \u2264 1.00</b>.</li>\n    <li>The third line contains <b>N</b> space-separated integers <b>F<sub>1</sub>,F<sub>2</sub>,...,F<sub>n</sub></b> (Impact factor of the i<sup>th</sup> battle). Here <b>1 \u2264 F<sub>i</sub> \u2264 10000</b></li>\n<li>The fourth line contains a real number denoting threshold, <b>S (0.00 < S \u2264 1.00)</b>.</li>\n\n</ul>\n\n\n<p>The real numbers contain at most 2 digits after the decimal point.</p>\n\n\n<h3>Output</h3>\n<p>For each test case, print case number and the maximum sum of impact factors.</p>\n\n\n<h3>Sample </h3>\n<pre><b>Input</b>     \n\n2\n2\n0.8 0.9\n100 200\n1\n4\n0.28 0.62 0.92 0.96\n3 8 7 2\n0.05\n\n<b>Output</b>\nCase 1: 300\nCase 2: 9\n</pre>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1 \u2264 T \u2264 100**\n- **1 \u2264 N \u2264 100**\n- **0.00 \u2264 $P_i$ \u2264 1.00**\n- **1 \u2264 $F_i$ \u2264 10000**\n- **0.00 < S \u2264 1.00**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Enigma: The military machine used by Nazi Germany to encipher messages before and during World War II. The code of Enigma was broken once by Polish Cipher Bureau in 1932 and then again, during the war, by the Codebreaker team at Bletchley Park, England. Because of this, the Allied Powers were able to intercept a lot of messages transferred by German military and knew their battle plans. It is said that, breaking of Enigma shortened the length of that war by two years.\n\nBut, in the time of war, Allies were gravely concerned about the possibility of Germans finding out this security breach and resetting their communication system. They were very disciplined about using the information in order to hide this source of intelligence. Their precautions included leading fake invasions, superfluous search missions and attacking only after creating a proper cover story. Even at times, they considered sabotaging own resources during a battle which resulted in the death toll of hundreds of soldiers, civilians and massive loss on supplies; just to avoid any suspicion!\n\nIt seems like they played with probabilities leaving peoples\u2019 lives hanging on the decision.\n\nCruel, wasn\u2019t it? Can you do it?\n\nThere are **N** battles ahead. The probability that Allies will win the $i^{th}$ battle is **$P_i$**.\n\nThe enemies are calculating a value **PEB (Probability that Enigma has been broken)**. If the allies win a battle, the value of PEB increases; if the enemy wins the battle, the value decreases. If the value of PEB gets too high, the enemy will become suspicious and replace Enigma with something else.\n\n**PEB** is calculated as an average from results of all previous battles using the following method.\n\n```\ntotal := 0\nforeach Battle, b_i\n    if Allies win\n        total += probability of Allies losing in b_i\n    else\n        total -= probability of Allies winning in b_i\nPEB = max(total / no. of battles, 0)\n```\n\nAs the Allies already deciphered Enigma, they can choose to win or lose any battle they want. Consider the following scenario as example:\n\n![Example Scenario](https://www.codechef.com/download/upload/ACM16KOL/A.png)\n\nSome battles are more important than others; the $i^{th}$ battle has an Impact Factor **$F_i$**. As a war analyst, your job is to maximize the sum of Impact Factors of all the battles won. But the enemies must not know that Allies have deciphered Enigma, so you must keep PEB less than a certain **threshold, S**; throughout the whole war.\n",
+    "inputFormat": "- The first line of input contains an integer **T (1 \u2264 T \u2264 100)** denoting the number of test cases. Each test case contains 4 lines:\n- The first line contains one integer **N (1 \u2264 N \u2264 100)** denoting the number of battles.\n- The second line contains **N** space-separated real numbers **$P_1, P_2, ..., P_n$** (probability of the Allies winning in $i^{th}$ battle) **0.00 \u2264 $P_i$ \u2264 1.00**.\n- The third line contains **N** space-separated integers **$F_1, F_2, ..., F_n$** (Impact factor of the $i^{th}$ battle). Here **1 \u2264 $F_i$ \u2264 10000**.\n- The fourth line contains a real number denoting threshold, **S (0.00 < S \u2264 1.00)**.\n\nThe real numbers contain at most 2 digits after the decimal point.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print case number and the maximum sum of impact factors.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n0.8 0.9\n100 200\n1\n4\n0.28 0.62 0.92 0.96\n3 8 7 2\n0.05\n",
+        "output": "Case 1: 300\nCase 2: 9\n",
+        "explanation": "In the first test case, the Allies can win both battles without exceeding the PEB threshold, resulting in a maximum sum of impact factors of 300.\n\nIn the second test case, the Allies must carefully choose which battles to win to keep the PEB below the threshold of 0.05. The optimal strategy results in a maximum sum of impact factors of 9.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16A\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16A\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>MEDIUM</p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic programming</p>\n<h3>PROBLEM:</h3>\n<p>You are given a list of <span class=\"math\">N</span> battles and a total cost metric <span class=\"math\">PEB</span>. Each battle <span class=\"math\">b_i</span> has an effect on the <span class=\"math\">PEB</span> which is determined by <span class=\"math\">P_i</span>, and a gain value <span class=\"math\">F_i</span>. If the battle is won, <span class=\"math\">F_i</span> is gained but <span class=\"math\">PEB</span> also increases. If the battle is lost no gain is made but <span class=\"math\">PEB</span> decreases. The goal is to calculate the maximum gain possible such that the <span class=\"math\">PEB</span> remains below a threshold value <span class=\"math\">S</span>. <span class=\"math\">PEB</span> is calculated as</p>\n<pre><code class=\"lang-auto\">\ntotal = 0\nfor each b_i\n\tif win\n\t\ttotal += 1 - P_i\n\telse\n\t\ttotal -= P_i\nPEB = max(total / no. of battles, 0)\n</code></pre>\n<h3>EXPLANATION:</h3>\n<p>It may not be immediately obvious due to the floating point values of <span class=\"math\">P_i</span>, but dynamic programming is to be applied to solve this problem. The key observation is that although all <span class=\"math\">P_i</span> are floating point values between <span class=\"math\">0</span> and <span class=\"math\">1</span>, they have at most 2 digits after the decimal point. So there can be only <span class=\"math\">101</span> distinct values of <span class=\"math\">P_i</span>.</p>\n<p>The following is the top-down approach, which is quite straightforward. Let the function be <span class=\"math\">f</span>. A single state will have two parameters, the index <span class=\"math\">i</span> and the \u201ctotal\u201d value till now <span class=\"math\">t</span>. If the battle can be won, the new total will be <span class=\"math\">t+1-P_i</span>. If the <span class=\"math\">PEB</span> with this total does not exceed <span class=\"math\">S</span>, winning is considered. The total gain from this option will be <span class=\"math\">F_i + f(i+1, t+1-P_i)</span>. A battle can always be lost without restriction, and the total gain from losing will be <span class=\"math\">f(i+1, t-P_i)</span>.</p>\n<pre>function f(i, t):\n    if i == N + 1:\n        return 0    // base case, end of all battles\n    win = 0\n    if t + 1 - P_i &lt; S * i:\n        win = F_i + f(i + 1, t + 1 - P_i)    // gain from winning\n    lose = f(i + 1, t - P_i)                 // gain from losing\n    return max(win, lose)\n</pre>\n<p>Just adding memoization to the above function gives a theoretically correct dp solution. However a direct implementation of the above is not a good idea, since using <span class=\"math\">P_i</span> as given will lead to floating point errors and incorrect answers. The workaround is to multiply all <span class=\"math\">P_i</span> and <span class=\"math\">S</span> by <span class=\"math\">100</span> so that each is now an integer, and then adjust the implementation of <span class=\"math\">f</span> accordingly.</p>\n<p>Total number of unique values attainable by <span class=\"math\">i</span> is <span class=\"math\">N</span> and by <span class=\"math\">t</span> is <span class=\"math\">201 \\cdot N</span>, hence if using a 2D dp array care should be taken to initialize it with sufficient size. Also the value <span class=\"math\">t</span> can be negative, so a sufficient offset should be used to obtain the appropriate index.<br>\nNote that all the hassle can be avoided by using a map in place of an array <img src=\"https://discuss.codechef.com/images/emoji/apple/smiley.png?v=9\" title=\":smiley:\" class=\"emoji\" alt=\":smiley:\"></p>\n<p>The complexity of this approach is <span class=\"math\">\\mathcal{O}(N \\cdot 201 \\cdot N) \\approx \\mathcal{O}(201 \\cdot N^2)</span></p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16A.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17225,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "DP Approach",
+    "Memoization"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Dynamic Programming",
+    "Recursion"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16A",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610968
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

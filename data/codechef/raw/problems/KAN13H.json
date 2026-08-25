@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13H",
+  "contest_category": "6",
+  "problem_name": "Multi-Peg Tower of Hanoi",
+  "intended_contest_code": null,
+  "body": "<p>Tower of Hanoi problem is a classical recurrence problem that is often used to teach recurrence relations to computer science students. In the classical 3-Peg Tower of Hanoi problem initially the peg A contains all disks top to bottom in a strictly small to big order. This tower of disks is to be moved to peg C using peg B as intermediate. The rule of the game is that in every move the top disk from one of the towers can be moved to the top of another tower. Never ever can we put a large disk on top of a smaller one. In this problem, in order to move a tower of <b>n</b> disks, we must shift the top sub-tower of <b>n</b> - 1 disks to the only intermediate peg, then shift the largest to peg C and then the sub-tower of size <b>n</b> - 1 from intermediate to destination peg. Whatever the value of <b>n</b> may be exactly <b>n</b> - 1 disks have to be shifted to the only intermediate peg. We have no choice of fewer or more disks, and no choice for the intermediate peg. </p>\n<p>In multi-Peg Tower of Hanoi problem we have <b>p</b> >= 3 pegs (<b>P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>p</sub></b>) and <b>n</b> disks to move from <b>P<sub>1</sub></b> to <b>P<sub>p</sub></b> using minimum number of moves. We refer to this as (<b>n, p</b>) system. Now we have <b>p</b> - 2 intermediate pegs and not all of <b>n</b> - 1 disks need to be shifted to one intermediate peg. However, before the largest disk moves to the destination peg, all top <b>n</b> - 1 disks have to be distributed among all intermediate pegs. While the optimal strategy still baffles algorithm designers, many believe that in the optimal solution, certain optimal number n1 disks have to be shifted to an intermediate peg. Then the remaining <b>n - n<sub>1</sub></b> disks must reach destination, while the disks in the intermediate peg will remain untouched. Then the disks in the intermediate peg must reach destination. In transferring any sub-tower to any peg, this strategy will be followed recursively. Let <b>M(n, p)</b> be the minimum number of moves required to shift a tower of n disks in p peg system. This strategy satisfies the following recurrence relations: <b>M(n,p) = min(2M(n<sub>1</sub>,p)+M(n-n<sub>1</sub>,p-1))</b> for all 0 &lt; <b>n<sub>1</sub></b> &lt; <b>n</b>.\n</p>\n<p>\nAssume further that, if multiple strategies result in minimum number of moves, then the strategy for which <b>n<sub>1</sub></b> is the smallest is chosen. Your job is to find out the move number at which a particular disk <b>D</b> moves ultimately to the destination peg in an <b>(n, p)</b> system.\n</p>\n<h3>Input</h3>\n<p>The first line of input will be an integer <b>T</b>, denoting the number of test cases. Each test case is represented by a triple of integers <b>N</b>, <b>P</b> and <b>K</b> in the same line separated by space. <b>N</b> denotes the number of disks. <b>P</b> denotes the number of pegs. <b>K</b> denotes the index (1-based from the top) of the disk, whose move number need to be found out.</p>\n<h3>Output</h3>\n<p>For each test case, there should be a single line of output. The line should contain \u201cCase <case_number>: \u201d, followed by an integer representing the move number at which disk <b>K</b> moves ultimately to the destination peg. Refer to the sample input and output for exact formatting.</case_number></p>\n<h3>Constraints</h3>\n<p>1 &lt;= <b>T</b> &lt;= 10000</p>\n<p>1 &lt;= <b>N</b> &lt;= 50</p>\n<p>3 &lt;= <b>P</b> &lt;= 50\n</p><p>1 &lt;= <b>K</b> &lt;= <b>N</b><br />\n<h3>Example</h3>\n<pre><b>Input:</b>\n3\n3 3 2\n50 3 1\n50 50 1\n\n<b>Output:</b>\nCase 1: 6\nCase 2: 1125899906842623\nCase 3: 101\n\n</pre></p>\n<p><b>\n<p>Problem Setter : Dr. M. Kaykobad</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- `1 <= T <= 10000`\n- `1 <= N <= 50`\n- `3 <= P <= 50`\n- `1 <= K <= N`\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "The Tower of Hanoi problem is a classical recurrence problem often used to teach recurrence relations to computer science students. In the classical 3-Peg Tower of Hanoi problem, initially, peg A contains all disks stacked top to bottom in strictly small to big order. The goal is to move this tower of disks to peg C using peg B as an intermediate. The rule of the game is that in every move, the top disk from one of the towers can be moved to the top of another tower. A larger disk can never be placed on top of a smaller one. In this problem, to move a tower of `n` disks, we must shift the top sub-tower of `n - 1` disks to the only intermediate peg, then shift the largest disk to peg C, and then the sub-tower of size `n - 1` from the intermediate peg to the destination peg. Regardless of the value of `n`, exactly `n - 1` disks have to be shifted to the only intermediate peg. We have no choice of fewer or more disks, and no choice for the intermediate peg.\n\nIn the multi-Peg Tower of Hanoi problem, we have `p >= 3` pegs (`P1, P2, ..., Pp`) and `n` disks to move from `P1` to `Pp` using the minimum number of moves. We refer to this as an `(n, p)` system. Now, we have `p - 2` intermediate pegs, and not all of the `n - 1` disks need to be shifted to one intermediate peg. However, before the largest disk moves to the destination peg, all top `n - 1` disks have to be distributed among all intermediate pegs. While the optimal strategy still baffles algorithm designers, many believe that in the optimal solution, a certain optimal number `n1` disks have to be shifted to an intermediate peg. Then the remaining `n - n1` disks must reach the destination, while the disks in the intermediate peg remain untouched. Then the disks in the intermediate peg must reach the destination. In transferring any sub-tower to any peg, this strategy will be followed recursively. Let `M(n, p)` be the minimum number of moves required to shift a tower of `n` disks in a `p` peg system. This strategy satisfies the following recurrence relations: `M(n,p) = min(2M(n1,p)+M(n-n1,p-1))` for all `0 < n1 < n`.\n\nAssume further that, if multiple strategies result in the minimum number of moves, then the strategy for which `n1` is the smallest is chosen. Your job is to find out the move number at which a particular disk `D` moves ultimately to the destination peg in an `(n, p)` system.\n",
+    "inputFormat": "The first line of input will be an integer `T`, denoting the number of test cases. Each test case is represented by a triple of integers `N`, `P`, and `K` in the same line, separated by spaces. `N` denotes the number of disks. `P` denotes the number of pegs. `K` denotes the index (1-based from the top) of the disk, whose move number needs to be found out.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, there should be a single line of output. The line should contain \"Case <case_number>: \", followed by an integer representing the move number at which disk `K` moves ultimately to the destination peg. Refer to the sample input and output for exact formatting.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n3 3 2\n50 3 1\n50 50 1\n",
+        "output": "Case 1: 6\nCase 2: 1125899906842623\nCase 3: 101\n",
+        "explanation": "The first test case involves 3 disks, 3 pegs, and the second disk. The second disk moves to the destination peg on the 6th move. The second test case involves 50 disks, 3 pegs, and the first disk. The first disk moves to the destination peg on the 1125899906842623rd move. The third test case involves 50 disks, 50 pegs, and the first disk. The first disk moves to the destination peg on the 101st move.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "6.75",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "jingbo_adm",
+    "kan13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610958
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

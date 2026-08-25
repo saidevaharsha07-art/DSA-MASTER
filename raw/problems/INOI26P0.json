@@ -1,0 +1,127 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "INOI26P0",
+  "contest_category": "6",
+  "problem_name": "Diff by 2",
+  "intended_contest_code": null,
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le N, Q \\le 2 \\cdot 10^5$\n- $1 \\le S \\le 2$\n- $1 \\le A_i \\le 10^9$\n- $A_1 \\le A_2 \\le \\ldots \\le A_N$\n- $1 \\le L \\le R \\le N$",
+    "constraintsState": true,
+    "subtasks": "- **Subtask 1 (4 points):** $S = 1, A_1 = A_2 = \\ldots = A_N$.\n- **Subtask 2 (10 points):** $S = 1, N, Q \\le 10$\n- **Subtask 3 (14 points):** $S = 1, Q \\le 500$\n- **Subtask 4 (25 points):** $S = 1$.\n- **Subtask 5 (4 points):** $S = 2, A_1 = A_2 = \\ldots = A_N$.\n- **Subtask 6 (21 points):** $S = 2, Q \\le 500$\n- **Subtask 7 (22 points):** $S = 2$\n",
+    "subtasksState": true,
+    "statement": "A set $C$ is said to be good if for every $2$ distinct elements $x$ and $y$ belonging to the set, either $2 \\cdot x < y$ or $2 \\cdot y < x$ is true.\n\n---\n\nYou are given an array $A$ of $N$ integers where $A_1 \\le A_2 \\le \\ldots \\le A_N$. You are also given a parameter $S$, and $Q$ queries. In each query:\n\n- You are given $2$ integers $L$ and $R$. Consider the subarray $[A_L, A_{L + 1}, \\ldots, A_R]$. Let us denote this subarray as array $B$.\n    - If $S = 1$, you need to find the size of the largest good subset of the array $B$.\n    - If $S = 2$, let $K$ denote the size of the largest good subset of the array $B$. You need to find the number of indices $i$ such that $B_i$ is included in at least one good subset of size $K$.\n\nNote that these good subsets must contain distinct elements only.",
+    "inputFormat": "- The first line contains $3$ integers - $N$, $Q$ and $S$.\n- The second line contains $N$ integers - $A_1, A_2, \\ldots, A_N$.\n- The next $Q$ lines contain $2$ integers each - $L$ and $R$.",
+    "inputFormatState": true,
+    "outputFormat": "For each query, output the required answer. \n\nWhen $S = 1$, output the size of the largest good subset of the subarray. When $S = 2$, output the number of indices which are part of at least one largest good subset.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "6 5 1\n1 2 3 5 11 13\n1 3\n2 5\n1 6\n5 5\n1 2\n",
+        "output": "2\n3\n3\n1\n1",
+        "explanation": "**Query 1** : The subarray is $[1, 2, 3]$.   \nHere, $[1, 3]$ is a good subset of size $2$. This is also the largest since there does not exist a good subset of size $3$.\n\n**Query 2** : The subarray is $[2, 3, 5, 11]$.  \nHere, $[2, 5, 11]$ is a good subset of size $3$. There do not exist good subsets of size $4$.\n\n**Query 3** : The subarray is $[1, 2, 3, 5, 11, 13]$.  \nHere, $[2, 5, 11]$ is a good subset of size $3$. There do not exist good subsets of size $4$.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "6 5 2\n1 2 3 5 11 13\n1 3\n2 5\n1 6\n5 5\n1 2\n",
+        "output": "2\n3\n6\n1\n2",
+        "explanation": "**Query 1** : The subarray is $[1, 2, 3]$.   \nHere, $[1, 3]$ is a good subset of size $2$. There is no good subset of size $2$ using the second element ($2$), hence the answer is $2$.\n\n**Query 2** : The subarray is $[2, 3, 5, 11]$.  \nHere, $[2, 5, 11]$ is a good subset of size $3$. There is no good subset of size $3$ using the second element ($3$), hence the answer is $3$.\n\n**Query 3** : The subarray is $[1, 2, 3, 5, 11, 13]$.  \n$[1, 3, 11]$, $[1, 3, 13]$ and $[2, 5, 11]$ are $3$ good subsets each of size $3$. Combined, they cover all the elements, and hence each element is part of at least one maximal good subset. Thus, the answer is $6$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, CAML",
+  "max_timelimit": "4",
+  "source_sizelimit": "50000",
+  "problem_author": "raysh07_adm",
+  "problem_display_authors": [
+    "raysh07_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/raysh07_adm'>raysh07_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "13-02-2026",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "raysh07_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610885
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=INOI26P0",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

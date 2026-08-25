@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MINSTR",
+  "contest_category": "6",
+  "problem_name": "Minimize the string",
+  "intended_contest_code": null,
+  "body": "<p>You are given <b>n</b> strings <b>s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub></b>. Each of these strings consists only of letters 'a' and 'b', and the length of each string can be at most 2. In other words, the only allowed strings are \"a\", \"b\", \"aa\", \"ab\", \"ba\" and \"bb\".</p>\r\n\r\n<p>Consider a permutation <b>p</b> = {<b>p<sub>1</sub></b>, <b>p<sub>2</sub></b>, ..., <b>p<sub>n</sub></b>} of the integers {1, 2, ..., <b>n</b>}. Using this permutation, you can obtain a new string <b>S = s<sub>p<sub>1</sub></sub> + s<sub>p<sub>2</sub></sub> + ... + s<sub>p<sub>n</sub></sub></b>, where the operator + denotes concatenation of strings.</p>\r\n\r\n<p>You can shorten the string <b>S</b> by performing the following operation any number of times: choose two consecutive equal characters and remove one of these characters from the string. For example, the string \"aabb\" can be shortened to \"abb\" or \"aab\" in one operation, and then optionally it could still be shortened to \"ab\".</p>\r\n\r\n<p>You are allowed to choose any permutation <b>p</b>. Take the string <b>S</b> obtained using this permutation, and using any sequence of operations, minimize the string length. Find the minimum possible length of the string  obtainable.</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n<p>The first line of each test case contains an integer <b>n</b>.</p>\r\n<p>The second line of each test case contains <b>n</b> space-separated strings <b>s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub></b>.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing one integer corresponding to the minimum possible length of the shortened string.</p>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li>1 \u2264 <b>T</b> \u2264 10<sup>5</sup></li>\r\n<li>1 \u2264 <b>n</b> \u2264 10<sup>5</sup></li>\r\n<li>sum of <b>n</b> over all test cases won't exceed 10<sup>6</sup></li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre>\r\n<b>Input</b>\r\n2\r\n2\r\nba ab\r\n4\r\na b a b\r\n\r\n<b>Output</b>\r\n3\r\n2\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Testcase 1:</b></p> \r\n<p>You can consider the permutation (2, 1). Using this, you get the string <b>S</b> = <b>s<sub>p<sub>1</sub></sub></b> + <b>s<sub>p<sub>2</sub></sub></b> = ab + ba = abba. You can then take the two adjacent b's and remove one of them to get aba, whose length is 3. You cannot do any better, and hence the answer is 3.</p>\r\n\r\n<p><b>Testcase 2:</b></p> \r\n<p>You can consider the permutation (1, 3, 2, 4). Using this, you get the string <b>S</b> = <b>s<sub>p<sub>1</sub></sub></b> + <b>s<sub>p<sub>3</sub></sub></b> + <b>s<sub>p<sub>2</sub></sub></b> + <b>s<sub>p<sub>4</sub></sub></b> = a + a + b + b = aabb. You can then take the two adjacent b's and remove one of them to get aab. Then you can take the two adjacent a's and remove one of them to get ab. We end up with a length of 2, and you cannot do any better. Hence the answer is 2.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 \u2264 **T** \u2264 10<sup>5</sup>\n- 1 \u2264 **n** \u2264 10<sup>5</sup>\n- sum of **n** over all test cases won't exceed 10<sup>6</sup>\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given **n** strings **s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub>**. Each of these strings consists only of letters 'a' and 'b', and the length of each string can be at most 2. In other words, the only allowed strings are \"a\", \"b\", \"aa\", \"ab\", \"ba\" and \"bb\".\n\nConsider a permutation **p** = {**p<sub>1</sub>**, **p<sub>2</sub>**, ..., **p<sub>n</sub>**} of the integers {1, 2, ..., **n**}. Using this permutation, you can obtain a new string **S = s<sub>p<sub>1</sub></sub> + s<sub>p<sub>2</sub></sub> + ... + s<sub>p<sub>n</sub></sub>**, where the operator + denotes concatenation of strings.\n\nYou can shorten the string **S** by performing the following operation any number of times: choose two consecutive equal characters and remove one of these characters from the string. For example, the string \"aabb\" can be shortened to \"abb\" or \"aab\" in one operation, and then optionally it could still be shortened to \"ab\".\n\nYou are allowed to choose any permutation **p**. Take the string **S** obtained using this permutation, and using any sequence of operations, minimize the string length. Find the minimum possible length of the string obtainable.\n",
+    "inputFormat": "The first line of the input contains an integer **T** denoting the number of test cases. The description of **T** test cases follows.\n\nThe first line of each test case contains an integer **n**.\n\nThe second line of each test case contains **n** space-separated strings **s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub>**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing one integer corresponding to the minimum possible length of the shortened string.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\nba ab\n4\na b a b\n",
+        "output": "3\n2\n",
+        "explanation": "**Testcase 1:**\n\nYou can consider the permutation (2, 1). Using this, you get the string **S** = **s<sub>p<sub>1</sub></sub>** + **s<sub>p<sub>2</sub></sub>** = ab + ba = abba. You can then take the two adjacent b's and remove one of them to get aba, whose length is 3. You cannot do any better, and hence the answer is 3.\n\n**Testcase 2:**\n\nYou can consider the permutation (1, 3, 2, 4). Using this, you get the string **S** = **s<sub>p<sub>1</sub></sub>** + **s<sub>p<sub>3</sub></sub>** + **s<sub>p<sub>2</sub></sub>** + **s<sub>p<sub>4</sub></sub>** = a + a + b + b = aabb. You can then take the two adjacent b's and remove one of them to get aab. Then you can take the two adjacent a's and remove one of them to get ab. We end up with a length of 2, and you cannot do any better. Hence the answer is 2.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/riFBM9LcYFo",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/MINSTR\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACM17CHN/problems/MINSTR\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<p><strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>You are given an array <span class=\"math\">A</span> of atmost <span class=\"math\">10^5</span> strings where each string is from the set {\u201ca\u201d, \u201caa\u201d, \u201cab\u201d, \u201cb\u201d, \u201cba\u201d, \u201cbb\u201d}. Fix a permutation <span class=\"math\">P</span> of <span class=\"math\">{1, 2, \\cdots, n}</span> and consider the string <span class=\"math\">A_{P_1} + A_{P_2} + \\cdots + A_{P_n}</span> formed by  concatenation of the mini strings. Now, replace each contiguous block of \u201ca\u201d and \u201cb\u201d with a single \u201ca\u201d and \u201cb\u201d and compute the length of this reduced string. Let\u2019s call this length <span class=\"math\">L</span>.</p>\n<p>The task is to find a permutation that minimizes <span class=\"math\">L</span>, and print the minimum value of <span class=\"math\">L</span>.</p>\n<h3>EXPLANATION</h3>\n<p>The solution uses a simple greedy algorithm. Note that minimizing the total length is the same as maximizing the<br>\ntotal reduction. Here is a step-by-step description of the algorithm:</p>\n<ul>\n<li>First, we normalize all the <span class=\"math\">a</span> and <span class=\"math\">aa</span> strings to one <span class=\"math\">a</span>. Similarly, normalize all <span class=\"math\">b</span> and <span class=\"math\">bb</span> strings to one <span class=\"math\">b</span>.</li>\n<li>Note that the only other reduction in length we can get is if we pair <span class=\"math\">ab</span> strings with <span class=\"math\">ba</span> strings. Assume that<br>\nthe <span class=\"math\">freq(ab) \\ge freq(ba)</span>. In this case we can interleave them greedily like <span class=\"math\">ab + ba + ab + \\cdots</span> until we<br>\nrun out of <span class=\"math\">ba</span> strings. Then we finish it with the remaining <span class=\"math\">ab</span> strings. We can apply a similar argument for the case where <span class=\"math\">freq(ab) &lt; freq(ba)</span>.</li>\n<li>Finally, we can merge an existing <span class=\"math\">a</span> with the string we\u2019ve made till now. Similarly, we can merge an existing <span class=\"math\">b</span>.</li>\n</ul>\n<p>Overall, assume we\u2019ve computed the number of <span class=\"math\">a</span>, <span class=\"math\">b</span>, <span class=\"math\">ab</span> and <span class=\"math\">ba</span> strings we have. Then the following pseudocode finds the optimal solution:</p>\n<pre><code class=\"lang-auto\">a = min(a, 1); // Normalize \"a\" and \"aa\"\nb = min(b, 1); // Normalize \"b\" and \"bb\"\nif (ab == 0 &amp;&amp; ba == 0) { // Edge case where we can't reduce more\n    print(a + b);\n} else if (ab == ba) { // When the counts are equal we will need one extra\n    print(ab + ab + 1);\n} else {\n    print(max(ab, ba) * 2);\n}\n</code></pre>\n<p>Clearly, this solution is <span class=\"math\">O(n)</span>.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Setter/MINSTR.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Tester/MINSTR.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17635,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "animesh_f",
+  "date_added": "7-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Greedy"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/MINSTR",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611082
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MINSTR",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

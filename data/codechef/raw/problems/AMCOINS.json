@@ -1,0 +1,120 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMCOINS",
+  "contest_category": "6",
+  "problem_name": "COINS",
+  "intended_contest_code": null,
+  "body": "<p><html><br />\n<head><br />\n    <title>COINS</title><br />\n</head><br />\n<body></body></html></p>\n<p>\n    Our <i>Farzi Coder</i> likes <i>Mota Chuha</i> a lot, as he runs very fast and catching him is not only hard, but also impossible.\n\t</p>\n<p>\n    The city is in the form of a tree (Graph Theory Tree), with <b>N</b> junctions with exactly one follower of <i>Farzi Coder</i> in each. There are <b>N</b>-1 bidirectional roads connecting these junctions such that there is exactly one distinct path between any pair of junctions.\n\t</p>\n<p>\n    Now <i>Farzi Coder</i> decides to distribute some of his illegal wealth among his followers so as to maintain their loyalty and wants <i>Mota Chuha</i> to do this task for him. In between the process of distribution, <i>Farzi Coder</i> would also ask <i>Mota Chuha</i> some questions, to check if he is really distributing the coins correctly or not.\n\t</p>\n<p>\n    Now for the next <b>Q</b> days, on each day, he assigns exactly one of the following two tasks to the <i>Mota Chuha</i>:</p>\n<ol>\n<li>Give(<b>X</b>,<b>Y</b>,<b>W</b>) => Give one <b>W</b> rupee coin to all followers along the path in the tree between the followers <b>X</b> and <b>Y</b> (including <b>X</b> and <b>Y</b>).</li>\n<li>Find(<b>Z</b>, <b>I</b>, <b>J</b>, <b>K</b>) => Find the <b>K</b>'th smallest coin among all the coins present in the hands of follower <b>Z</b> which were distributed between <b>I</b>'th and <b>J</b>'th day (including <b>I</b>'th and <b>J</b>'th Days). If <b>Z</b> has less than <b>K</b> coins, then report <b>-1</b>. It is guaranteed that <b>J</b> will be less than the current day number.</li>\n</ol>\n\n<p>\n    <i>Mota Chuha</i> is too lazy to distribute the wealth. But he has to answer the Find() tasks. He knows that ICPC participants are very smart and can simulate the Update() tasks through a program and can answer the Find() tasks very fast. So please help him, he might give some of the coins to you.\n\t</p>\n<p>\n\t\tNote that a person can hold multiple coins of same value. Let us say, person <b>Z</b> has <b>P</b> coins with him which were distributed between <b>I</b>'th and <b>J</b>'th Days, i.e, Coin[1], Coin[2]...C[<b>P</b>]. Sort the array Coin[1...P]. Now, <b>K</b>'th smallest coin is Coin[<b>K</b>].\n\t</p>\n<p>\n\t\tExample: If person <b>Z</b> has coins {1, 2, 3, 3, 4}. Then, 2nd smallest coin is 2, 3rd smallest coin is 3, 4th smallest coin is 3, 5th smallest coin is 4.\n\t</p>\n<p>\n              <b>Note:</b>Number of Update tasks will be less <b>51%</b> of the total tasks. The memory limit of the problem will be 1.5 GB.\n       </p>\n<h2>Input</h2>\n<p>\n\tThe first line contains one integer <b>N</b>, size of the tree.\n\t</p>\n<p>\n\tNext <b>N</b>-1 lines contain two space separated integers \"<b>X</b> <b>Y</b>\" (without quotes) each, representing that there is an edge between the nodes (<b>X</b>, <b>Y</b>).\n\t</p>\n<p>\n\tNext line contains an integer <b>Q</b>.\n\t</p>\n<p>\n\tNext <b>Q</b> lines contains the tasks given to <i>Mota Chuha</i>. If the first integer in the line is 1, then it is followed by three integers space separated integers \"<b>X</b> <b>Y</b> <b>W</b>\" (without quotes) denoting the first type of task. Else if the first integer in the line is 2, then it is followed by 4 space separated integers \"<b>Z</b> <b>I</b> <b>J</b> <b>K</b>\" (without quotes) denoting the second type of task.\n    </p>\n<h2>Output</h2>\n<p>    For each task of type 2, output the required answer.</p>\n<h2>Constraints</h2>\n<ul>\n<li>1 \u2264 <b>N</b> \u2264 500000</li>\n<li>1 \u2264 <b>X</b>, <b>Y</b>, <b>Z</b> \u2264 <b>N</b></li>\n<li>1 \u2264 <b>I</b> \u2264 <b>J</b> &lt; <i>Current Day Number</i></li>\n<li>1 \u2264 <b>W</b> \u2264 100000</li>\n<li>1 \u2264 <b>Q</b> \u2264 100000</li>\n<li>1 \u2264 <b>K</b> \u2264 <b>J - I + 1</b></li>\n</ul>\n<h2>Sample</h2>\n<h3>Input</h3>\n<pre>\n2\n1 2\n4\n1 1 2 121\n1 1 2 256\n2 1 1 1 1\n2 1 2 2 1\n    </pre><h3>Output</h3>\n<pre>\n121\n256\n    </pre><p>\n<br />\n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 \u2264 **N** \u2264 500000\n- 1 \u2264 **X**, **Y**, **Z** \u2264 **N**\n- 1 \u2264 **I** \u2264 **J** < *Current Day Number*\n- 1 \u2264 **W** \u2264 100000\n- 1 \u2264 **Q** \u2264 100000\n- 1 \u2264 **K** \u2264 **J - I + 1**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Our *Farzi Coder* likes *Mota Chuha* a lot, as he runs very fast and catching him is not only hard, but also impossible.\n\nThe city is in the form of a tree (Graph Theory Tree), with **N** junctions with exactly one follower of *Farzi Coder* in each. There are **N-1** bidirectional roads connecting these junctions such that there is exactly one distinct path between any pair of junctions.\n\nNow *Farzi Coder* decides to distribute some of his illegal wealth among his followers so as to maintain their loyalty and wants *Mota Chuha* to do this task for him. In between the process of distribution, *Farzi Coder* would also ask *Mota Chuha* some questions, to check if he is really distributing the coins correctly or not.\n\nNow for the next **Q** days, on each day, he assigns exactly one of the following two tasks to the *Mota Chuha*:\n\n1. **Give(X, Y, W)**: Give one **W** rupee coin to all followers along the path in the tree between the followers **X** and **Y** (including **X** and **Y**).\n2. **Find(Z, I, J, K)**: Find the **K**'th smallest coin among all the coins present in the hands of follower **Z** which were distributed between **I**'th and **J**'th day (including **I**'th and **J**'th Days). If **Z** has less than **K** coins, then report **-1**. It is guaranteed that **J** will be less than the current day number.\n\n*Mota Chuha* is too lazy to distribute the wealth. But he has to answer the **Find()** tasks. He knows that ICPC participants are very smart and can simulate the **Update()** tasks through a program and can answer the **Find()** tasks very fast. So please help him, he might give some of the coins to you.\n\nNote that a person can hold multiple coins of the same value. Let us say, person **Z** has **P** coins with him which were distributed between **I**'th and **J**'th Days, i.e, Coin[1], Coin[2]...C[**P**]. Sort the array Coin[1...P]. Now, **K**'th smallest coin is Coin[**K**].\n\nExample: If person **Z** has coins {1, 2, 3, 3, 4}. Then, 2nd smallest coin is 2, 3rd smallest coin is 3, 4th smallest coin is 3, 5th smallest coin is 4.\n\n**Note:** Number of Update tasks will be less than **51%** of the total tasks. The memory limit of the problem will be 1.5 GB.\n",
+    "inputFormat": "The first line contains one integer **N**, size of the tree.\n\nNext **N-1** lines contain two space-separated integers **X Y** (without quotes) each, representing that there is an edge between the nodes (**X**, **Y**).\n\nNext line contains an integer **Q**.\n\nNext **Q** lines contain the tasks given to *Mota Chuha*. If the first integer in the line is 1, then it is followed by three space-separated integers **X Y W** (without quotes) denoting the first type of task. Else if the first integer in the line is 2, then it is followed by 4 space-separated integers **Z I J K** (without quotes) denoting the second type of task.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each task of type 2, output the required answer.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 2\n4\n1 1 2 121\n1 1 2 256\n2 1 1 1 1\n2 1 2 2 1\n",
+        "output": "121\n256\n",
+        "explanation": "The first task is to give a 121 rupee coin to all followers along the path between junctions 1 and 2. The second task is to give a 256 rupee coin to all followers along the same path. The third task is to find the 1st smallest coin among the coins distributed on the 1st day for follower 1, which is 121. The fourth task is to find the 1st smallest coin among the coins distributed between the 2nd and 2nd day for follower 1, which is 256.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1 - 5",
+  "source_sizelimit": "50000",
+  "problem_author": "surya_adm",
+  "problem_display_authors": [
+    "surya_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/surya_adm'>surya_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "21-12-2015",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "surya_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMCOINS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

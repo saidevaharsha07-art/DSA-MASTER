@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "JOHNY",
+  "contest_category": "6",
+  "problem_name": "Uncle Johny",
+  "intended_contest_code": "NOV13",
+  "body": "<p>Vlad enjoys listening to music. He lives in Sam's Town. A few days ago he had a birthday, so his parents gave him a gift: MP3-player! Vlad was the happiest man in the world! Now he can listen his favorite songs whenever he wants!</p>\r\n<p>Vlad built up his own playlist. The playlist consists of <b>N</b> songs, each has a <b>unique</b> positive integer length. Vlad likes all the songs from his playlist, but there is a song, which he likes more than the others. It's named \"Uncle Johny\".</p>\r\n<p>After creation of the playlist, Vlad decided to sort the songs in increasing order of their lengths. For example, if the lengths of the songs in playlist was {1, 3, 5, 2, 4} after sorting it becomes {1, 2, 3, 4, 5}. Before the sorting, \"Uncle Johny\" was on <b>K</b>-th position (1-indexing is assumed for the playlist) in the playlist.</p>\r\n<p>Vlad needs your help! He gives you all the information of his playlist. Your task is to find the position of \"Uncle Johny\" in  the sorted playlist.</p>\r\n\r\n<h3>Input</h3>\r\nThe first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows. \r\n<p> </p> \r\nThe first line of each test case contains one integer <b>N</b> denoting the number of songs in Vlad's playlist. The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the lenghts of Vlad's songs.\r\nThe third line contains the only integer <b>K</b> - the position of \"Uncle Johny\" in the initial playlist.\r\n<p>\u00a0</p>\r\n\r\n<h3>Output</h3>\r\nFor each test case, output a single line containing the position of \"Uncle Johny\" in the sorted playlist.\r\n<p>\u00a0</p>\r\n\r\n<h3>Constraints</h3>\r\n1 \u2264 <b>T</b> \u2264 1000\r\n<p> </p>\r\n1 \u2264 <b>K</b> \u2264 <b>N</b> \u2264 100\r\n<p> </p>\r\n1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>9</sup>\r\n\r\n<p>\u00a0</p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n3\r\n4\r\n1 3 4 2\r\n2\r\n5\r\n1 2 3 9 4\r\n5\r\n5\r\n1 2 3 9 4 \r\n1\r\n\r\n<b>Output:</b>\r\n3\r\n4\r\n1\r\n</pre>\r\n<p>\u00a0</p>\r\n<h3>Explanation</h3>\r\n\r\n<p>In the example test there are <b>T</b>=3 test cases.</p>\r\n\r\n<p><b>Test case 1</b></p>\r\n\r\n<p>In the first test case <b>N</b> equals to 4, <b>K</b> equals to 2, <b>A</b> equals to {1, 3, 4, 2}. The answer is <b>3</b>, because {1, 3, 4, 2} -> {1, 2, 3, 4}. <b>A<sub>2</sub></b> now is on the <b>3</b>-rd position.</p>\r\n\r\n<p><b>Test case 2</b></p>\r\n\r\n<p>In the second test case <b>N</b> equals to 5, <b>K</b> equals to 5, <b>A</b> equals to {1, 2, 3, 9, 4}. The answer is <b>4</b>, because {1, 2, 3, 9, 4} -> {1, 2, 3, 4, 9}. <b>A<sub>5</sub></b> now is on the <b>4</b>-th position.</p>\r\n\r\n<p><b>Test case 3</b></p>\r\n\r\n<p>In the third test case <b>N</b> equals to 5, <b>K</b> equals to 1, <b>A</b> equals to {1, 2, 3, 9, 4}. The answer is <b>1</b>, because {1, 2, 3, 9, 4} -> {1, 2, 3, 4, 9}. <b>A<sub>1</sub></b> stays on the <b>1</b>-th position.</p>\r\n\r\n<h3>Note</h3>\r\n\r\n<p><a target=\"_blank\" href=\"http://www.last.fm/music/The+Killers/_/Uncle+Johny\">\"Uncle Johny\"</a> is a real song performed by The Killers.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Vlad enjoys listening to music. He lives in Sam's Town. A few days ago he had a birthday, so his parents gave him a gift: MP3-player! Vlad was the happiest man in the world! Now he can listen his favorite songs whenever he wants!</p>\n<p>Vlad built up his own playlist. The playlist consists of <b>N</b> songs, each has a <b>unique</b> positive integer length. Vlad likes all the songs from his playlist, but there is a song, which he likes more than the others. It's named \"Uncle Johny\".</p>\n<p>After creation of the playlist, Vlad decided to sort the songs in increasing order of their lengths. For example, if the lengths of the songs in playlist was {1, 3, 5, 2, 4} after sorting it becomes {1, 2, 3, 4, 5}. Before the sorting, \"Uncle Johny\" was on <b>K</b>-th position (1-indexing is assumed for the playlist) in the playlist.</p>\n<p>Vlad needs your help! He gives you all the information of his playlist. Your task is to find the position of \"Uncle Johny\" in  the sorted playlist.</p>\n\n<h3>Input</h3>\nThe first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows. \n<p> </p> \nThe first line of each test case contains one integer <b>N</b> denoting the number of songs in Vlad's playlist. The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the lenghts of Vlad's songs.\nThe third line contains the only integer <b>K</b> - the position of \"Uncle Johny\" in the initial playlist.\n<p>\u00a0</p>\n\n<h3>Output</h3>\nFor each test case, output a single line containing the position of \"Uncle Johny\" in the sorted playlist.\n<p>\u00a0</p>\n\n<h3>Constraints</h3>\n1 \u2264 <b>T</b> \u2264 1000\n<p> </p>\n1 \u2264 <b>K</b> \u2264 <b>N</b> \u2264 100\n<p> </p>\n1 \u2264 <b>A<sub>i</sub></b> \u2264 10<sup>9</sup><p>\u00a0</p>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4\n1 3 4 2\n2\n5\n1 2 3 9 4\n5\n5\n1 2 3 9 4 \n1",
+        "output": "3\n4\n1",
+        "explanation": "<p>In the example test there are <b>T</b>=3 test cases.</p>\n\n<p><b>Test case 1</b></p>\n\n<p>In the first test case <b>N</b> equals to 4, <b>K</b> equals to 2, <b>A</b> equals to {1, 3, 4, 2}. The answer is <b>3</b>, because {1, 3, 4, 2} -> {1, 2, 3, 4}. <b>A<sub>2</sub></b> now is on the <b>3</b>-rd position.</p>\n\n<p><b>Test case 2</b></p>\n\n<p>In the second test case <b>N</b> equals to 5, <b>K</b> equals to 5, <b>A</b> equals to {1, 2, 3, 9, 4}. The answer is <b>4</b>, because {1, 2, 3, 9, 4} -> {1, 2, 3, 4, 9}. <b>A<sub>5</sub></b> now is on the <b>4</b>-th position.</p>\n\n<p><b>Test case 3</b></p>\n\n<p>In the third test case <b>N</b> equals to 5, <b>K</b> equals to 1, <b>A</b> equals to {1, 2, 3, 9, 4}. The answer is <b>1</b>, because {1, 2, 3, 9, 4} -> {1, 2, 3, 4, 9}. <b>A<sub>1</sub></b> stays on the <b>1</b>-th position.</p>\n\n<h3>Note</h3>\n\n<p><a target=\"_blank\" href=\"http://www.last.fm/music/The+Killers/_/Uncle+Johny\" rel=\"nofollow noreferrer noopener\">\"Uncle Johny\"</a> is a real song performed by The Killers.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 3646,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2.5",
+  "source_sizelimit": "50000",
+  "problem_author": "kostya_by",
+  "problem_display_authors": [
+    "kostya_by"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kostya_by'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>kostya_by</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "shaleen",
+  "date_added": "3-10-2013",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Sorting",
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1093",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610919
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=JOHNY",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 50,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

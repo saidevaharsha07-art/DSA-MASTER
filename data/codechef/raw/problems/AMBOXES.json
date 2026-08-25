@@ -1,0 +1,127 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMBOXES",
+  "contest_category": "6",
+  "problem_name": "Nested Candy Boxes",
+  "intended_contest_code": null,
+  "body": "<p>Andy got a box of candies for Christmas. In fact, he discovered that the box contained several identical smaller boxes, and they could contain even smaller boxes, and so on. Formally, we say that candies are boxes of level 0, and for 1 \u2264 i \u2264 <b>n</b>, a level i box contains <b>a<sub>i</sub></b> boxes of level i\u2009-\u20091. The largest box has level <b>n</b>. Andy realized that it can take quite a long time to open all the boxes before he actually gets to eat some candies, so he put the box aside in frustration.\n</p>\n\n<p>But today being his birthday, some friends came to visit Andy, and Andy decided to share some candies with them. In order to do that, he must open some of the boxes. Naturally, Andy can not open a box that is still inside an unopened box. If Andy wants to retrieve <b>X</b> candies, what is the least number of boxes he must open? You must help him answer many such queries. Each query is independent.</p>\n\n\n<h3>Input</h3>\n<ul>\n\t<li>The first line contains two integers <b>n</b> and <b>m</b>, which refer to the level of the largest box, and the number of queries respectively.</li>\n\t<li>The second line contains <b>n</b> integers <b>a<sub>1</sub></b>,\u2009...,\u2009<b>a<sub>n</sub></b>.</li>\n\t<li>The third line contains <b>m</b> integers <b>X<sub>1</sub></b>,\u2009...,\u2009<b>X<sub>m</sub></b>.</li>\n</ul>\n\n\n<h3>Output</h3>\n<ul>\n\t<li>Print <b>m</b> integers each in a new line, i<sup>th</sup> of them equal to the smallest number of boxes Andy must open in order to retrieve at least <b>X<sub>i</sub></b> candies.</li>\n</ul>\n\n\n<h3>Constraints</h3>\n<ul>\n\t<li>1\u2009\u2264\u2009<b>n</b>,<b>m</b>\u2009\u2264\u2009300000</li>\n\t<li>1\u2009\u2264\u2009<b>a<sub>i</sub></b>\u2009\u2264\u200910<sup>9</sup></li>\n\t<li>1\u2009\u2264\u2009<b>X<sub>i</sub></b>\u2009\u2264\u200910<sup>12</sup></li>\n\t<li>It is guaranteed that the total number of candies is at least <b>X<sub>i</sub></b> for all i</li>\n</ul>\n\n\n<h3>Example</h3>\n<pre>\n<b>Input 1:</b>\n5 1\n1 1 1 1 1\n1\n\n<b>Output 1:</b>\n5\n\n<b>Input 2:</b>\n3 3\n3 3 3\n2 8 13\n\n<b>Output 2:</b>\n3\n5\n8\n</pre>\n\n\n<h3>Explanation</h3>\n<p><b>Testcase 1:</b> The only candy is contained in five levels of boxes. </p>\n<p><b>Testcase 2:</b> In the third query, for 13 candies, Andy should open the largest box, two level-2 boxes, and finally five of six available level-1 boxes. Each of those boxes will contain 3 level-0 boxes (which are candies). So he'll have 15 candies in total, but he needs only 13 of them. </p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq n, m \\leq 300000$\n- $1 \\leq a_i \\leq 10^9$\n- $1 \\leq X_i \\leq 10^{12}$\n- It is guaranteed that the total number of candies is at least $X_i$ for all $i$.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Andy got a box of candies for Christmas. In fact, he discovered that the box contained several identical smaller boxes, and they could contain even smaller boxes, and so on. Formally, we say that candies are boxes of level 0, and for $1 \\leq i \\leq n$, a level $i$ box contains $a_i$ boxes of level $i-1$. The largest box has level $n$. Andy realized that it can take quite a long time to open all the boxes before he actually gets to eat some candies, so he put the box aside in frustration.\n\nBut today being his birthday, some friends came to visit Andy, and Andy decided to share some candies with them. In order to do that, he must open some of the boxes. Naturally, Andy can not open a box that is still inside an unopened box. If Andy wants to retrieve $X$ candies, what is the least number of boxes he must open? You must help him answer many such queries. Each query is independent.\n",
+    "inputFormat": "- The first line contains two integers $n$ and $m$, which refer to the level of the largest box, and the number of queries respectively.\n- The second line contains $n$ integers $a_1, \\ldots, a_n$.\n- The third line contains $m$ integers $X_1, \\ldots, X_m$.\n",
+    "inputFormatState": true,
+    "outputFormat": "- Print $m$ integers each in a new line, $i^{th}$ of them equal to the smallest number of boxes Andy must open in order to retrieve at least $X_i$ candies.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5 1\n1 1 1 1 1\n1\n",
+        "output": "5\n",
+        "explanation": "**Testcase 1:** The only candy is contained in five levels of boxes.\n",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "3 3\n3 3 3\n2 8 13\n",
+        "output": "3\n5\n8\n",
+        "explanation": "**Testcase 2:** In the third query, for 13 candies, Andy should open the largest box, two level-2 boxes, and finally five of six available level-1 boxes. Each of those boxes will contain 3 level-0 boxes (which are candies). So he'll have 15 candies in total, but he needs only 13 of them.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "22-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin2"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMBOXES",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

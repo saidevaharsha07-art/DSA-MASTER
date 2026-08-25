@@ -1,0 +1,142 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DAILY",
+  "contest_category": "6",
+  "problem_name": "Daily Train",
+  "intended_contest_code": "COOK19",
+  "body": "<p>A daily train consists of <b>N</b> cars. Let's consider one particular car. It has 54 places numbered consecutively from 1 to 54, some of which are already booked and some are still free. The places are numbered in the following fashion:\r\n<img src=\"https://www.codechef.com/download/daily.jpg\" width=100%>\r\n<p>The car is separated into 9 compartments of 6 places each, as shown in the picture. So, the 1st compartment consists of places 1, 2, 3, 4, 53 and 54, the 2nd compartment consists of places 5, 6, 7, 8, 51 and 52, and so on.\r\n\r\n<p>A group of <b>X</b> friends wants to buy tickets for free places, all of which are in one compartment (it's much funnier to travel together). You are given the information about free and booked places in each of the <b>N</b> cars. Find the number of ways to sell the friends exactly <b>X</b> tickets in one compartment (note that the order in which the tickets are sold doesn't matter).\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains two integers <b>X</b> and <b>N</b> (1 \u2264 <b>X</b> \u2264 6, 1 \u2264 <b>N</b> \u2264 10) separated by a single space. Each of the following <b>N</b> lines contains the information about one car which is a string of length 54 consisting of '0' and '1'. The <b>i</b>-th character (numbered from 1) is '0' if place <b>i</b> in the corresponding car is free, and is '1' if place <b>i</b> is already booked.\r\n\r\n<h3>Output</h3>\r\n<p>Output just one integer -- the requested number of ways.\r\n\r\n<h3>Example</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n1 3\r\n100101110000001011000001111110010011110010010111000101\r\n001010000000101111100000000000000111101010101111111010\r\n011110011110000001010100101110001011111010001001111010\r\n\r\n<b>Output:</b>\r\n85\r\n\r\n<b>Input:</b>\r\n6 3\r\n100101110000001011000001111110010011110010010111000101\r\n001010000000101111100000000000000111101010101111111010\r\n011110011110000001010100101110001011111010001001111010\r\n\r\n<b>Output:</b>\r\n1\r\n\r\n<b>Input:</b>\r\n3 2\r\n000000000000000000000000000000000000000000000000000000\r\n000000000000000000000000000000000000000000000000000000\r\n\r\n<b>Output:</b>\r\n360\r\n\r\n<b>Explanation:</b>\r\n</pre>\r\nIn the first test case, any of the free places can be sold. In the second test case, the only free compartment in the train is compartment 3 in the first car (places 9, 10, 11, 12, 49 and 50 are all free). In the third test case, the train is still absolutely free; as there are 20 ways to sell 3 tickets in an empty compartment, the answer is 2 * 9 * 20 = 360.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>A daily train consists of <b>N</b> cars. Let's consider one particular car. It has 54 places numbered consecutively from 1 to 54, some of which are already booked and some are still free. The places are numbered in the following fashion:\n<img src=\"https://www.codechef.com/download/daily.jpg\" alt=\"daily.jpg\" /></p><p>The car is separated into 9 compartments of 6 places each, as shown in the picture. So, the 1st compartment consists of places 1, 2, 3, 4, 53 and 54, the 2nd compartment consists of places 5, 6, 7, 8, 51 and 52, and so on.\n\n</p><p>A group of <b>X</b> friends wants to buy tickets for free places, all of which are in one compartment (it's much funnier to travel together). You are given the information about free and booked places in each of the <b>N</b> cars. Find the number of ways to sell the friends exactly <b>X</b> tickets in one compartment (note that the order in which the tickets are sold doesn't matter).\n\n</p><h3>Input</h3>\n<p>The first line of the input contains two integers <b>X</b> and <b>N</b> (1 \u2264 <b>X</b> \u2264 6, 1 \u2264 <b>N</b> \u2264 10) separated by a single space. Each of the following <b>N</b> lines contains the information about one car which is a string of length 54 consisting of '0' and '1'. The <b>i</b>-th character (numbered from 1) is '0' if place <b>i</b> in the corresponding car is free, and is '1' if place <b>i</b> is already booked.\n\n</p><h3>Output</h3>\n<p>Output just one integer -- the requested number of ways.</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1 3\n100101110000001011000001111110010011110010010111000101\n001010000000101111100000000000000111101010101111111010\n011110011110000001010100101110001011111010001001111010",
+        "output": "85",
+        "explanation": "In the first test case, any of the free places can be sold.",
+        "isDeleted": false
+      },
+      {
+        "id": "2",
+        "input": "6 3\n100101110000001011000001111110010011110010010111000101\n001010000000101111100000000000000111101010101111111010\n011110011110000001010100101110001011111010001001111010",
+        "output": "1",
+        "explanation": "In the second test case, the only free compartment in the train is compartment 3 in the first car (places 9, 10, 11, 12, 49 and 50 are all free).",
+        "isDeleted": false
+      },
+      {
+        "id": "3",
+        "input": "3 2\n000000000000000000000000000000000000000000000000000000\n000000000000000000000000000000000000000000000000000000",
+        "output": "360",
+        "explanation": "In the third test case, the train is still absolutely free; as there are 20 ways to sell 3 tickets in an empty compartment, the answer is 2 * 9 * 20 = 360.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 915,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "2.992",
+  "source_sizelimit": "50000",
+  "problem_author": "gennady_adm",
+  "problem_display_authors": [
+    "gennady_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/gennady_adm'>gennady_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "chmel_tolstiy"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/chmel_tolstiy'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>chmel_tolstiy</span></a></div>",
+  "problem_editorialist": "admin",
+  "date_added": "24-01-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Combinatorics",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1222",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610778
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DAILY",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 64,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

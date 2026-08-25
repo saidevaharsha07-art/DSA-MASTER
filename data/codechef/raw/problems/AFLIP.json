@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AFLIP",
+  "contest_category": "6",
+  "problem_name": "Angled Flip",
+  "intended_contest_code": "AUG221",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^4$\n- $1 \\leq N,M \\leq 3 \\cdot 10^5$\n- $1 \\leq A_{i, j},B_{i, j} \\leq 10^9$\n- The sum of $N\\cdot M$ over all test cases won't exceed $3 \\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "You are given two $N \\times M$ integer matrices $A$ and $B$. You are allowed to perform the following operation on $A$ as many times as you like (possibly, zero):\n\n- Pick any square submatrix of $A$ and flip it about either its [main diagonal or its antidiagonal](https://en.wikipedia.org/wiki/Main_diagonal).\n\nFor example, suppose you choose the submatrix\n$\n\\begin{bmatrix}\n1 \\;\\;\\;\\; 2 \\;\\;\\;\\; 3 \\\\\n4 \\;\\;\\;\\; 5 \\;\\;\\;\\; 6 \\\\\n7 \\;\\;\\;\\; 8 \\;\\;\\;\\; 9\n\\end{bmatrix}\n$\n.\n\nIt can be converted into either\n$\n\\begin{bmatrix}\n1 \\;\\;\\;\\; 4 \\;\\;\\;\\; 7 \\\\\n2 \\;\\;\\;\\; 5 \\;\\;\\;\\; 8 \\\\\n3 \\;\\;\\;\\; 6 \\;\\;\\;\\; 9\n\\end{bmatrix}\n$\nby flipping about the main diagonal, or\n$\n\\begin{bmatrix}\n9 \\;\\;\\;\\; 6 \\;\\;\\;\\; 3 \\\\\n8 \\;\\;\\;\\; 5 \\;\\;\\;\\; 2 \\\\\n7 \\;\\;\\;\\; 4 \\;\\;\\;\\; 1\n\\end{bmatrix}\n$\nby flipping about the antidiagonal.\n\nIs it possible to convert $A$ to $B$ by performing this operation several (possibly, zero) times?\n\n**Note:** For the purposes of this problem, a submatrix of a matrix is the intersection of a **contiguous** segment of rows with a **contiguous** segment of columns.\n\nFor example, if\n$ A =\n\\begin{bmatrix}\n1 \\;\\;\\;\\; 2 \\;\\;\\;\\; 3 \\\\\n4 \\;\\;\\;\\; 5 \\;\\;\\;\\; 6 \\\\\n7 \\;\\;\\;\\; 8 \\;\\;\\;\\; 9\n\\end{bmatrix}\n$\nthen $\\begin{bmatrix} 2 \\end{bmatrix}$, $\\begin{bmatrix} 5 \\;\\;\\;\\; 6 \\\\ 8 \\;\\;\\;\\; 9 \\end{bmatrix}$, and $\\begin{bmatrix}1 \\\\ 4\\end{bmatrix}$ are submatrices of $A$, while $\\begin{bmatrix}1 \\;\\;\\;\\; 3 \\\\ 7 \\;\\;\\;\\; 9\\end{bmatrix}$ *is not*.\n\nA square submatrix is a submatrix with the same number of rows and columns.",
+    "inputFormat": "- The first line of input will contain a single integer $T$, denoting the number of test cases.\n- Each test case consists of multiple lines of input.\n    - The first line of each test case contains two space-separated integers $N$ and $M$ \u2014 the number of rows and columns of the matrices, respectively.\n    - The next $N$ lines describe the matrix $A$. The $i$-th of these lines contains $M$ space-separated integers \u2015 the values $A_{i, 1}, A_{i, 2}, \\ldots, A_{i, M}$.\n    - The next $N$ lines describe the matrix $B$. The $i$-th of these lines contains $M$ space-separated integers \u2015 the values $B_{i, 1}, B_{i, 2}, \\ldots, B_{i, M}$.",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print `YES` if its possible to convert $A$ to $B$, else print `NO`.\n\nEach character of the output may be printed in either uppercase or lowercase. For example, the strings `YES`, `yes`, `yeS`, `YeS` will all be treated as identical.",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2 3\n1 2 3\n4 5 6\n1 4 3\n6 5 2\n3 3\n12 11 8\n7 1 1\n9 2 4\n4 1 8\n2 1 11\n9 7 12\n",
+        "output": "YES\nYES\n",
+        "explanation": "**Test case $1$:** $A$ can be converted to $B$ as follows:\n$$\n\\begin{bmatrix} 1 \\;\\;\\;\\; 2 \\;\\;\\;\\; 3 \\\\ 4 \\;\\;\\;\\; 5 \\;\\;\\;\\; 6 \\end{bmatrix} \\to \\begin{bmatrix} 1 \\;\\;\\;\\; \\textcolor{red}{6} \\;\\;\\;\\; \\textcolor{red}{3} \\\\ 4 \\;\\;\\;\\; \\textcolor{red}{5} \\;\\;\\;\\; \\textcolor{red}{2} \\end{bmatrix} \\to \\begin{bmatrix} \\textcolor{red}{1} \\;\\;\\;\\; \\textcolor{red}{4} \\;\\;\\;\\; 3 \\\\ \\textcolor{red}{6} \\;\\;\\;\\; \\textcolor{red}{5} \\;\\;\\;\\; 2 \\end{bmatrix}\n$$",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 102627,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "kryptonix171",
+  "problem_display_authors": [
+    "kryptonix171"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kryptonix171'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>kryptonix171</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "10-08-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Data Structures",
+    "Sorting",
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1835",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610575
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AFLIP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

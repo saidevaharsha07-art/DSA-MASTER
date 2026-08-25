@@ -35,9 +35,13 @@ export const CurriculumRepository = {
     const problems = ALL_PROBLEMS.filter(
       p =>
         p.title.toLowerCase().includes(q) ||
+        p.id.toLowerCase().includes(q) ||
         p.leetcodeNumber.toString().includes(q) ||
         p.topics.some(t => t.toLowerCase().includes(q)) ||
-        p.companies.some(c => c.toLowerCase().includes(q))
+        p.companies.some(c => c.toLowerCase().includes(q)) ||
+        p.kingdomTitle.toLowerCase().includes(q) ||
+        p.patternTitle.toLowerCase().includes(q) ||
+        (p.notes && p.notes.toLowerCase().includes(q))
     ).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
     const patterns = ALL_PATTERNS.filter(
@@ -60,7 +64,7 @@ export const CurriculumRepository = {
       if (options.patternSlug && problem.patternSlug !== options.patternSlug && problem.patternId !== options.patternSlug) {
         return false;
       }
-      if (options.difficulty && problem.difficulty !== options.difficulty) {
+      if (options.difficulty && problem.difficulty.toLowerCase() !== options.difficulty.toLowerCase()) {
         return false;
       }
       if (options.company && !problem.companies.map(c => c.toLowerCase()).includes(options.company.toLowerCase())) {
@@ -75,19 +79,23 @@ export const CurriculumRepository = {
       if (options.level && problem.level !== options.level) {
         return false;
       }
-      if (options.solvedStatus === 'solved' && !solvedProblemIds.includes(problem.id)) {
+      if (options.solvedStatus === 'solved' && !solvedProblemIds.includes(problem.id) && !solvedProblemIds.includes(problem.leetcodeNumber.toString())) {
         return false;
       }
-      if (options.solvedStatus === 'unsolved' && solvedProblemIds.includes(problem.id)) {
+      if (options.solvedStatus === 'unsolved' && (solvedProblemIds.includes(problem.id) || solvedProblemIds.includes(problem.leetcodeNumber.toString()))) {
         return false;
       }
       if (options.searchQuery) {
         const q = options.searchQuery.toLowerCase();
         const matchesName = problem.title.toLowerCase().includes(q);
+        const matchesId = problem.id.toLowerCase().includes(q);
         const matchesNumber = problem.leetcodeNumber.toString().includes(q);
         const matchesTopic = problem.topics.some(t => t.toLowerCase().includes(q));
         const matchesCompany = problem.companies.some(c => c.toLowerCase().includes(q));
-        if (!matchesName && !matchesNumber && !matchesTopic && !matchesCompany) return false;
+        const matchesKingdom = problem.kingdomTitle.toLowerCase().includes(q);
+        const matchesPattern = problem.patternTitle.toLowerCase().includes(q);
+        const matchesNotes = problem.notes ? problem.notes.toLowerCase().includes(q) : false;
+        if (!matchesName && !matchesId && !matchesNumber && !matchesTopic && !matchesCompany && !matchesKingdom && !matchesPattern && !matchesNotes) return false;
       }
       return true;
     }).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));

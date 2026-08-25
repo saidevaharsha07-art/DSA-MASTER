@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13I",
+  "contest_category": "6",
+  "problem_name": "Sequence Alignment",
+  "intended_contest_code": null,
+  "body": "<p>Consider two sequences <b>A</b> and<b> B</b> comprising of digits 0 to 9, of length <b>K</b> and <b>L</b> respectively. The distance from <b>A</b> to <b>B</b> is the total minimum penalty incurred in converting <b>A</b> to <b>B</b> using the following operations, each of which incurs a penalty as described below.</p>\n<ol style='margin-top:0in' start=1 type=1>\n<li>Replacing a digit of <b>A</b> with another digit: incurs a penalty of 1</li>\n<li>Inserting a digit in <b>A</b>: incurs a penalty of 1 for each digit inserted. In addition, there is also a fixed penalty of <b>x</b> for every sequence of digits inserted (one-time penalty for starting the sequence, not per-digit). However, the total penalty charged for a sequence of digits inserted never exceeds <b>y</b> (<b>y</b> &gt; <b>x</b>). For example, if <b>x</b> = 2 and <b>y</b> = 5, then inserting a one digit sequence (say \u201c5\u201d) will incur a penalty of 3 (=<b>x</b>+1), a 2-digit sequence (say \u201c24\u201d) will incur a penalty of 4 (=<b>x</b>+2), and inserting any n-digit sequence (n &gt; 2) (say \u201c132\u201d, 2543\u201d, \u201c57241\u201d etc.) will all incur a penalty of 5 (=<b>y</b>).</li>\n<li>Deleting a digit from A: incurs a penalty of 1 for each digit deleted. In addition, there is also a fixed penalty of <b>x</b> for every sequence of digits deleted (one-time penalty for starting the sequence, not per-digit).</li>\n</ol>\n<p>What is the minimum penalty with which <b>A</b> can be converted to <b>B</b>?</p>\n<h3>Input</h3>\n<p>The first line contains the number of tests cases <b>N</b></p>\n<p>For each test case, the first line contains the integers <b>K</b> and <b>L</b>. The second line contains the sequence <b>A</b> (<b>K</b> digits with no space in between). The third line contains the sequence <b>B</b> (<b>L</b> digits with no space in between). The fourth line contains the integers <b>x</b> and <b>y </b>.</p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer representing the minimum penalty.</p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> &#8804; 3</p>\n<p>0 &lt; <b>K</b> &#8804; 100</p>\n<p>0 &lt; <b>L </b>&#8804; 100</p>\n<p><b>x</b> &gt; 0, <b>y</b> &gt; <b>x</b></p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n3\n9 1\n123456789\n1\n10 15\n1 9\n1\n123456789\n10 15\n11 4\n12345678912\n1212\n10 15\n\n<b>Output:</b>\nCase 1: 18\nCase 2: 15\nCase 3: 17\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 0 < **N** \u2264 3\n- 0 < **K** \u2264 100\n- 0 < **L** \u2264 100\n- **x** > 0, **y** > **x**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Consider two sequences **A** and **B** comprising of digits 0 to 9, of length **K** and **L** respectively. The distance from **A** to **B** is the total minimum penalty incurred in converting **A** to **B** using the following operations, each of which incurs a penalty as described below.\n\n1. Replacing a digit of **A** with another digit: incurs a penalty of 1.\n2. Inserting a digit in **A**: incurs a penalty of 1 for each digit inserted. In addition, there is also a fixed penalty of **x** for every sequence of digits inserted (one-time penalty for starting the sequence, not per-digit). However, the total penalty charged for a sequence of digits inserted never exceeds **y** (**y** > **x**). For example, if **x** = 2 and **y** = 5, then inserting a one-digit sequence (say \"5\") will incur a penalty of 3 (=**x**+1), a 2-digit sequence (say \"24\") will incur a penalty of 4 (=**x**+2), and inserting any n-digit sequence (n > 2) (say \"132\", \"2543\", \"57241\" etc.) will all incur a penalty of 5 (=**y**).\n3. Deleting a digit from **A**: incurs a penalty of 1 for each digit deleted. In addition, there is also a fixed penalty of **x** for every sequence of digits deleted (one-time penalty for starting the sequence, not per-digit).\n\nWhat is the minimum penalty with which **A** can be converted to **B**?\n",
+    "inputFormat": "The first line contains the number of test cases **N**.\n\nFor each test case, the first line contains the integers **K** and **L**. The second line contains the sequence **A** (**K** digits with no space in between). The third line contains the sequence **B** (**L** digits with no space in between). The fourth line contains the integers **x** and **y**.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer representing the minimum penalty.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n9 1\n123456789\n1\n10 15\n1 9\n1\n123456789\n10 15\n11 4\n12345678912\n1212\n10 15\n",
+        "output": "Case 1: 18\nCase 2: 15\nCase 3: 17\n",
+        "explanation": "The sample explanation is not provided in the problem statement.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13I\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13I\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy - Medium</p>\n<h3>PREREQUISITES:</h3>\n<p>Dynamic Programming</p>\n<h3>PROBLEM:</h3>\n<p>Given 3 types of operations, determine the minimum cost of transforming string <b>S[1\u2026n]</b> to <b>T[1\u2026m]</b>.</p>\n<h3>EXPLANATION:</h3>\n<p>This problem is similar to the <a href=\"http://en.wikipedia.org/wiki/Edit_distance\" rel=\"nofollow noopener\">Edit Distance Problem</a>. But here, due to the different cost plan, we need to slightly modify the classical dynamic programming.</p>\n<p>Let\u2019s use <b>f[i][j]</b> to stand for the minimum cost of transform <b>S[1\u2026i]</b> to <b>T[1\u2026j]</b>. In this problem, the insert/delete cost is dependent on the length.</p>\n<p>Consider the insert operation:</p>\n<pre><code>f[i][j - k] + min{k + x, y} --update--&gt; f[i][j]\n</code></pre>\n<p>And the delete operation:</p>\n<pre><code>f[i - k][j] + k + x --update--&gt; f[i][j]\n</code></pre>\n<p>Replace/Directly match</p>\n<pre><code>f[i][j] + (S[i + 1] != T[j + 1]) --update--&gt; f[i + 1][j + 1]\n</code></pre>\n<p>Since we need to enumerate \u201ck\u201d, the time complexi will be O(<b>n m^2 + n^2 m</b>).</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4053,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.613636",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "jingbo_adm",
+    "kgp13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13I",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610963
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13I",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

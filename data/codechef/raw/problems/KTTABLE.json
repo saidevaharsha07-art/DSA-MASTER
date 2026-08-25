@@ -1,0 +1,125 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KTTABLE",
+  "contest_category": "6",
+  "problem_name": "Kitchen Timetable",
+  "intended_contest_code": "",
+  "body": "<p>There are <b>N</b> students living in the dormitory of Berland State University. Each of them sometimes wants to use the kitchen, so the head of the dormitory came up with a timetable for kitchen's usage in order to avoid the conflicts:\r\n<ul>\r\n<li>The first student starts to use the kitchen at the time <b>0</b> and should finish the cooking not later than at the time <b>A<sub>1</sub></b>.</li>\r\n<li>The second student starts to use the kitchen at the time <b>A<sub>1</sub></b> and should finish the cooking not later than at the time <b>A<sub>2</sub></b>.</li>\r\n<li>And so on.</li>\r\n<li>The <b>N</b>-th student starts to use the kitchen at the time <b>A<sub>N-1</sub></b> and should finish the cooking not later than at the time <b>A<sub>N</sub></b></li>\r\n</ul>\r\n</p>\r\n\r\n<p>The holidays in Berland are approaching, so today each of these <b>N</b> students wants to cook some pancakes. The <b>i</b>-th student needs <b>B<sub>i</sub></b> units of time to cook.</p>\r\n\r\n<p>The students have understood that probably not all of them will be able to cook everything they want. How many students will be able to cook without violating the schedule?</p>\r\n\r\n<h3>Input</h3>\r\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\r\n\r\n<p>The first line of each test case contains a single integer <b>N</b> denoting the number of students.</p>\r\n\r\n<p>The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the moments of time by when the corresponding student should finish cooking. </p>\r\n\r\n<p>The third line contains <b>N</b> space-separated integers <b>B<sub>1</sub></b>, <b>B<sub>2</sub></b>, ..., <b>B<sub>N</sub></b> denoting the time required for each of the students to cook.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing the number of students that will be able to finish the cooking.</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>Should contain all the constraints on the input data that you may have. Format it like:</p>\r\n<ul>\r\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\r\n<li><b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>4</sup></b></li>\r\n<li><b>0</b> < <b>A<sub>1</sub></b> <  <b>A<sub>2</sub></b> < ... < <b>A<sub>N</sub></b> < <b>10<sup>9</sup></b></li>\r\n<li><b>1</b> \u2264 <b>B<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b>\r\n</ul>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n<tt>2\r\n3\r\n1 10 15\r\n1 10 3\r\n3\r\n10 20 30\r\n15 5 20</tt>\r\n\r\n<b>Output:</b>\r\n<tt>2\r\n1</tt>\r\n</pre>\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1.</b> The first student has <b>1</b> unit of time - the moment <b>0</b>. It will be enough for her to cook. The second student has <b>9</b> units of time, but wants to cook for <b>10</b> units of time, and won't fit in time. The third student has <b>5</b> units of time and will fit in time, because needs to cook only for <b>3</b> units of time.</p>\r\n<p><b>Example case 2.</b> Each of students has <b>10</b> units of time, but only the second one will be able to fit in time.</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "<b>1</b> \u2264 <b>T</b> \u2264 <b>10</b> \\\n<b>1</b> \u2264 <b>N</b> \u2264 <b>10<sup>4</sup></b> \\\n<b>0</b> < <b>A<sub>1</sub></b> <  <b>A<sub>2</sub></b> < ... < <b>A<sub>N</sub></b> < <b>10<sup>9</sup></b> \\\n<b>1</b> \u2264 <b>B<sub>i</sub></b> \u2264 <b>10<sup>9</sup></b>\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>There are <b>N</b> students living in the dormitory of Berland State University. Each of them sometimes wants to use the kitchen, so the head of the dormitory came up with a timetable for kitchen's usage in order to avoid the conflicts:\n</p><ul>\n<li>The first student starts to use the kitchen at the time <b>0</b> and should finish the cooking not later than at the time <b>A<sub>1</sub></b>.</li>\n<li>The second student starts to use the kitchen at the time <b>A<sub>1</sub></b> and should finish the cooking not later than at the time <b>A<sub>2</sub></b>.</li>\n<li>And so on.</li>\n<li>The <b>N</b>-th student starts to use the kitchen at the time <b>A<sub>N-1</sub></b> and should finish the cooking not later than at the time <b>A<sub>N</sub></b></li>\n</ul>\n\n\n<p>The holidays in Berland are approaching, so today each of these <b>N</b> students wants to cook some pancakes. The <b>i</b>-th student needs <b>B<sub>i</sub></b> units of time to cook.</p>\n\n<p>The students have understood that probably not all of them will be able to cook everything they want. How many students will be able to cook without violating the schedule?</p>\n",
+    "inputFormat": "The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows. \\\nEach test case contains 3 lines of input\n- The first line of each test case contains a single integer <b>N</b> denoting the number of students.\n- The second line contains <b>N</b> space-separated integers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, ..., <b>A<sub>N</sub></b> denoting the moments of time by when the corresponding student should finish cooking. \n- The third line contains <b>N</b> space-separated integers <b>B<sub>1</sub></b>, <b>B<sub>2</sub></b>, ..., <b>B<sub>N</sub></b> denoting the time required for each of the students to cook.",
+    "inputFormatState": true,
+    "outputFormat": "<p>For each test case, output a single line containing the number of students that will be able to finish the cooking.</p>\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3\n1 10 15\n1 10 3\n3\n10 20 30\n15 5 20",
+        "output": "2\n1",
+        "explanation": "<p><b>Example case 1.</b> The first student has <b>1</b> unit of time - the moment <b>0</b>. It will be enough for her to cook. The second student has <b>9</b> units of time, but wants to cook for <b>10</b> units of time, and won't fit in time. The third student has <b>5</b> units of time and will fit in time, because needs to cook only for <b>3</b> units of time.</p>\n<p><b>Example case 2.</b> Each of students has <b>10</b> units of time, but only the second one will be able to fit in time.</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 12617,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "sergey_adm",
+  "problem_display_authors": [
+    "sergey_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/sergey_adm'>sergey_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "kevinsogo"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kevinsogo'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>kevinsogo</span></a></div>",
+  "problem_editorialist": "kevinsogo",
+  "date_added": "24-05-2016",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Loops",
+    "Conditional Statements"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "997",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610974
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KTTABLE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 99,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

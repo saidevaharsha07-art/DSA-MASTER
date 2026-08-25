@@ -1,0 +1,125 @@
+{
+  "category_name": "",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DICITIES",
+  "contest_category": "6",
+  "problem_name": "Disconnecting Cities",
+  "intended_contest_code": null,
+  "body": "Chefland consists of $n$ cities numbered $1$, $2$, $\\ldots n$. The cities numbered $1$, $2$, $\\ldots k$ are special cities. For each unordered pair $i, j$, there exists a bidirectional road, destroying which has a cost of $w_{i, j}$. Find the minimum cost of destroying some subset of roads so that no two special cities have a path between them after the removal of these roads.\r\n\r\n### Input\r\nThere are multiple independent testcases.\r\n- First line will contain $T$, number of testcases.\r\n- The first line of each testcase contains $n$ and $k$, the number of cities and the number of special cities respectively.\r\n- The $j^{\\text{th}}$ integer in $i^{\\text{th}}$ of the next $n$ lines is $w_{ij}$.\r\n\r\n### Output\r\nFor each testcase, output the minimum cost of destroying some subset of roads so that no two special cities have a path between them after the removal of these roads.\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 5$\r\n- $3 \\leq n \\leq 20$\r\n- $ 3 \\leq k \\leq n$\r\n- The sum of $n$ over all testcases doesn't exceed $20$.\r\n- For all $i$, $w_{ii} = 0$\r\n- For all $i \\neq j$, $w_{ij} = w_{ji}$, $1 \\leq w_{ij} \\leq 10^6$\r\n\r\n### Example Input\r\n```\r\n1\r\n4 3\r\n0 1 4 2\r\n1 0 2 2\r\n4 2 0 3\r\n2 2 3 0\r\n```\r\n\r\n### Example Output\r\n```\r\n11\r\n```\r\n\r\n### Explanation\r\nRemove the roads $(1, 2)$, $(1, 3)$, $(1, 4)$, $(2, 3)$, $(2, 4)$ to get a cost of $1 + 4 + 2 + 2 + 2 = 11$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 5$\n- $3 \\leq n \\leq 20$\n- $3 \\leq k \\leq n$\n- The sum of $n$ over all testcases doesn't exceed $20$.\n- For all $i$, $w_{ii} = 0$\n- For all $i \\neq j$, $w_{ij} = w_{ji}$, $1 \\leq w_{ij} \\leq 10^6$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chefland consists of $n$ cities numbered $1$, $2$, $\\ldots n$. The cities numbered $1$, $2$, $\\ldots k$ are special cities. For each unordered pair $i, j$, there exists a bidirectional road, destroying which has a cost of $w_{i, j}$. Find the minimum cost of destroying some subset of roads so that no two special cities have a path between them after the removal of these roads.\n",
+    "inputFormat": "There are multiple independent testcases.\n- First line will contain $T$, number of testcases.\n- The first line of each testcase contains $n$ and $k$, the number of cities and the number of special cities respectively.\n- The $j^{\\text{th}}$ integer in $i^{\\text{th}}$ of the next $n$ lines is $w_{ij}$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each testcase, output the minimum cost of destroying some subset of roads so that no two special cities have a path between them after the removal of these roads.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n4 3\n0 1 4 2\n1 0 2 2\n4 2 0 3\n2 2 3 0\n",
+        "output": "11\n",
+        "explanation": "Remove the roads $(1, 2)$, $(1, 3)$, $(1, 4)$, $(2, 3)$, $(2, 4)$ to get a cost of $1 + 4 + 2 + 2 + 2 = 11$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<p><strong>PROBLEM LINK:</strong><br>\n<a href=\"https://www.codechef.com/problems/DICITIES\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/jtnydv25\" rel=\"nofollow noopener\">Jatin Yadav</a><br>\n<strong>Tester:</strong>  <a href=\"https://www.codechef.com/users/tncks0121\" rel=\"nofollow noopener\">tncks0121</a></p>\n<p><strong>DIFFICULTY:</strong><br>\nMedium</p>\n<p><strong>PREREQUISITES:</strong><br>\nGraph theory, Bitmask DP</p>\n<p><strong>PROBLEM:</strong></p>\n<p>Given an undirected weighted graph and <span class=\"math\">k</span> special nodes, delete some edges of minimum total  weight from it, such that after the deletion of these edges, no two special nodes have a path between them.</p>\n<p><strong>Explanation:</strong></p>\n<p>Let the connected components on the deletion be <span class=\"math\">S_1, S_2, \\ldots S_k</span>, where <span class=\"math\">i \\in S_i</span> <span class=\"math\">\\forall</span> <span class=\"math\"> 1 \\leq i \\leq k</span>. Note that there will be exactly <span class=\"math\">k</span> components in the optimal answer, as  a component not containing a special vertex can be merged into a component containing a special vertex giving a better solution. Also, it is not optimal to remove edges which have both endpoints in the same connected component.</p>\n<p>So, the problem is equivalent to finding such a partition such that the sum of weights of edges having endpoints in different sets of the partition is minimized. This is the same as maximizing  the sum of weights of edges having endpoints in the same set.</p>\n<p>Let <span class=\"math\">f(S)</span> denote the sum of weights of edges with both endpoints in the set <span class=\"math\">S</span>. Precompute <span class=\"math\">f(S)</span> for all sets using brute force in <span class=\"math\">O(n^2 2^n) </span>.</p>\n<p>We have to maximimize <span class=\"math\">\\displaystyle \\sum_{i=1}^{k} f(S_i)</span>.</p>\n<p>For a subset <span class=\"math\">Q</span> of non-special vertices, define <span class=\"math\">g(j, Q)</span> as the maximum possible value of <span class=\"math\">\\displaystyle \\sum_{i=1}^{j} f( \\{i\\} \\cup R_i)</span>, where <span class=\"math\">Q = R_1 \\cup R_2 \\ldots \\cup R_j</span> , and all <span class=\"math\">R_i</span> are disjoint.</p>\n<p>Clearly, we are interested in finding <span class=\"math\">g(k, V \\setminus \\{1, 2, \\ldots k\\})</span>.</p>\n<p>We use the following recurrence to compute <span class=\"math\">g</span>:</p>\n<ul>\n<li>\n<p><span class=\"math\">g(1, Q) = f(\\{1\\} \\cup Q)</span></p>\n</li>\n<li>\n<p><span class=\"math\">\\forall j &gt; 1, \\text{ } </span> <span class=\"math\">g(j, Q) =  \\displaystyle  \\max_{P \\subseteq Q }  \\left ( \\text{ } f(\\{j\\} \\cup P)  \\text{ } +  \\text{ } g (j - 1, Q \\setminus P) \\text{ } \\right) </span>.</p>\n</li>\n</ul>\n<p>To get the above recurrence we have just iterated on <span class=\"math\">R_j  = P</span>.</p>\n<p>Clearly, we are iterating over subsets of subsets of the non special vertices for each <span class=\"math\">1 \\leq j \\leq k</span>. So, the complexity is <span class=\"math\"> O(n^2 2^n + k 3^{n - k})</span>, which is maximized at <span class=\"math\">k = 3</span>.  The TL is enough for this to pass, as there are no costly operations and the memory usage is also small (<span class=\"math\">2^n</span>).</p>\n<p>Also, on a more detailed analysis, we see that the constant factor would be very small here (for example, the author\u2019s code runs in 0.31 seconds):</p>\n<ul>\n<li>\n<p>We only have to compute <span class=\"math\">k-2</span> layers of the dp from <span class=\"math\">2</span> to <span class=\"math\">k - 1</span>. For layer <span class=\"math\">k</span> we only need to compute <span class=\"math\">g(k, V \\setminus \\{1, 2, \\ldots k\\})</span>. So, we actually have <span class=\"math\">(k-2) 3^{n-k} \\leq 3^{17} \\approx 1e8</span></p>\n</li>\n<li>\n<p>When precomputing <span class=\"math\">f</span> over all sets, we iterate over edges and add its weight to all subsets containing both endpoints of this edge. So, there would be a constant factor of about <span class=\"math\">\\frac{1}{8}</span> with the <span class=\"math\">n^2 2^n </span> part.</p>\n</li>\n</ul>\n<p><strong>AUTHOR\u2019S and TESTER\u2019S codes:</strong></p>\n<p>The author\u2019s code can be found <a href=\"https://ideone.com/6NvCb8\" rel=\"nofollow noopener\">here</a><br>\nThe tester\u2019s code can be found <a href=\"https://ideone.com/OkEghJ\" rel=\"nofollow noopener\">here</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 47417,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "jtnydv25",
+  "problem_display_authors": [
+    "jtnydv25"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jtnydv25'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>jtnydv25</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "jtnydv25",
+  "date_added": "10-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Graphs",
+    "DP Bitmask"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Advanced Algorithms",
+    "Advanced DP"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/DICITIES",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610785
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DICITIES",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

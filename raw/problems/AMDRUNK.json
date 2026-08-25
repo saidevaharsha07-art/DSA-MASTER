@@ -1,0 +1,124 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMDRUNK",
+  "contest_category": "6",
+  "problem_name": "Drunk Man in Large City",
+  "intended_contest_code": null,
+  "body": "<p>\nA city consists of <b>n</b> junctions that are connected by <b>m</b> bidirectional roads. The junctions are numbered from 1 to <b>n</b>. It is known that each junction has at least two roads incident on it. Also, one can walk from any junction to any other junction using these roads. Moreover, no pair of junctions is connected by more than one road.\n</p>\n\n<p>A very drunk man has just walked out of a bar which is situated at junction <b>s</b> and wants to get to his home which is located at junction <b>t</b>. His current junction is <b>s</b>. In every minute the following happens:\n</p>\n<p>\n<ul>\n\t<li>Step 1: He rationally thinks and chooses one of the roads incident on the current junction and walks along this road.</li>\n\t<li>Step 2: If he reaches the junction <b>t</b>, he immediately gets home and goes to sleep.</li>\n\t<li>Step 3: Otherwise, influenced by the desire for adventure, he picks some random road incident on the current junction and walks along this road. The only limitation is that he never picks the road he used to get to this junction at the beginning of the current minute (ie. in Step 1 of this minute).</li>\n\t<li>Step 4: Now, if he has reached junction <b>t</b>, he sees his home and goes there directly and sleeps.</li>\n<li>Step 5: If not, then we go to the next minute, and this repeats.</li>\n</ul>\n</p>\n\n<p>\nGiven a description of the city and indices of junctions <b>s</b> and <b>t</b> you have to compute whether the drunk man will surely get home in a finite number of minutes, if he makes optimal choices in all the Step 1's. If so, what is the minimum number of minutes <b>x</b>, such that the man can get home in no more than <b>x</b> minutes whatever his random choices at step 3 of each minute are. That is, what is the minimum <b>x</b>, such that there is a strategy which the man can follow in his Step 1 choices, so that no matter what adversarial choice he makes in the Step 3's, he is guaranteed to reach his home within <b>x</b> minutes?\n</p>\n\n\n<h3>Input</h3>\n<ul>\n\t<li>The first line of the input contains a single integer <b>T</b>  \u2014 the number of test cases in this input. Then follow <b>T</b> descriptions of individual test cases.</li>\n\t<li>The first line of the input contains four integers <b>n</b>, <b>m</b>, <b>s</b> and <b>t</b>  \u2014 the number of intersections and the number of roads in the city, the index of the intersection where the bar is located and the index of the intersection where the drunk man's house is, respectively.</li>\n\t<li>The i<sup>th</sup> of the following <b>m</b> lines contains two integers <b>u<sub>i</sub></b> and <b>v<sub>i</sub></b>  \u2014 indices of the junctions connected by the i<sup>th</sup> road.</li>\n</ul>\n\n<h3>Output</h3>\n<ul>\n\t<li>If there is no strategy for him to reach home definitely, output -1 in a new line.</li>\n<li>Otherwise, print how many minutes the drunk man needs to get home in the worst possible scenario if he always behaves optimally in the Step 1 of every minute.</li>\n</ul>\n\n\n<h3>Constraints</h3>\n<ul>\n\t<li>1\u2009\u2264\u2009<b>T</b>\u2009\u2264\u2009100000</li>\n\t<li>3\u2009\u2264\u2009<b>n</b>,\u2009<b>m</b>\u2009\u2264\u2009300000</li>\n\t<li>1\u2009\u2264\u2009<b>s</b>,\u2009<b>t</b>\u2009\u2264\u2009<b>n</b></li>\n\t<li><b>s</b>\u2009\u2260\u2009<b>t</b></li>\n\t<li>1\u2009\u2264\u2009<b>u<sub>i</sub></b>,\u2009<b>v<sub>i</sub></b>\u2009\u2264\u2009<b>n</b></li>\n\t<li><b>u<sub>i</sub></b>\u2009\u2260\u2009<b>v<sub>i</sub></b></li>\n\t<li> It is guaranteed that it is possible to get from any junction to any other junction moving along the roads, each junction has at least two incident roads and no two roads connect the same pair of junctions.</li>\n\t<li>It is guaranteed that both the total number of intersections and the total number of roads over all test cases in one input file won't exceed 1000000</li\n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input:</b>\n2\n4 5 1 2\n1 3\n1 4\n3 4\n2 4\n2 3\n6 9 1 6\n1 2\n1 3\n2 3\n2 4\n2 5\n3 4\n3 5\n4 6\n5 6\n\n<b>Output:</b>\n2\n-1\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Testcase 1</b>: Consider the strategy where the drunk man first moves to junction 3 in Step 1 of the first minute. Then in Step 3 of the first minute, he randomly picks the road to junction 2 or the road to junction 4. In case he had picked the road to junction 2, he reaches home in just 1 minute. If not, he ends up at junction 4 at the end of the first minute. Then, in Step 1 of the second minute, he picks the road between 4 and 2, and goes to junction 2, thus reaching his home in the second minute. Thus, no matter what random choices he makes in the Step 3's, he is guaranteed to reach his house within the first two minutes.</p>\n\n<p><b>Testcase 2</b>: You can show that in the worst case, the drunk man will could be stuck between among the junctions {1, 2, 3, 4, 5} forever.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 100000$\n- $3 \\leq n, m \\leq 300000$\n- $1 \\leq s, t \\leq n$\n- $s \\neq t$\n- $1 \\leq u_i, v_i \\leq n$\n- $u_i \\neq v_i$\n- It is guaranteed that it is possible to get from any junction to any other junction moving along the roads, each junction has at least two incident roads and no two roads connect the same pair of junctions.\n- It is guaranteed that both the total number of intersections and the total number of roads over all test cases in one input file won't exceed 1000000.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A city consists of **n** junctions that are connected by **m** bidirectional roads. The junctions are numbered from 1 to **n**. It is known that each junction has at least two roads incident on it. Also, one can walk from any junction to any other junction using these roads. Moreover, no pair of junctions is connected by more than one road.\n\nA very drunk man has just walked out of a bar which is situated at junction **s** and wants to get to his home which is located at junction **t**. His current junction is **s**. In every minute the following happens:\n\n- **Step 1**: He rationally thinks and chooses one of the roads incident on the current junction and walks along this road.\n- **Step 2**: If he reaches the junction **t**, he immediately gets home and goes to sleep.\n- **Step 3**: Otherwise, influenced by the desire for adventure, he picks some random road incident on the current junction and walks along this road. The only limitation is that he never picks the road he used to get to this junction at the beginning of the current minute (i.e., in Step 1 of this minute).\n- **Step 4**: Now, if he has reached junction **t**, he sees his home and goes there directly and sleeps.\n- **Step 5**: If not, then we go to the next minute, and this repeats.\n\nGiven a description of the city and indices of junctions **s** and **t**, you have to compute whether the drunk man will surely get home in a finite number of minutes, if he makes optimal choices in all the Step 1's. If so, what is the minimum number of minutes **x**, such that the man can get home in no more than **x** minutes whatever his random choices at step 3 of each minute are. That is, what is the minimum **x**, such that there is a strategy which the man can follow in his Step 1 choices, so that no matter what adversarial choice he makes in the Step 3's, he is guaranteed to reach his home within **x** minutes?\n",
+    "inputFormat": "- The first line of the input contains a single integer **T** \u2014 the number of test cases in this input. Then follow **T** descriptions of individual test cases.\n- The first line of the input contains four integers **n**, **m**, **s** and **t** \u2014 the number of intersections and the number of roads in the city, the index of the intersection where the bar is located and the index of the intersection where the drunk man's house is, respectively.\n- The **i<sup>th</sup>** of the following **m** lines contains two integers **u<sub>i</sub>** and **v<sub>i</sub>** \u2014 indices of the junctions connected by the **i<sup>th</sup>** road.\n",
+    "inputFormatState": true,
+    "outputFormat": "- If there is no strategy for him to reach home definitely, output `-1` in a new line.\n- Otherwise, print how many minutes the drunk man needs to get home in the worst possible scenario if he always behaves optimally in the Step 1 of every minute.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4 5 1 2\n1 3\n1 4\n3 4\n2 4\n2 3\n6 9 1 6\n1 2\n1 3\n2 3\n2 4\n2 5\n3 4\n3 5\n4 6\n5 6\n",
+        "output": "2\n-1\n",
+        "explanation": "**Testcase 1**: Consider the strategy where the drunk man first moves to junction 3 in Step 1 of the first minute. Then in Step 3 of the first minute, he randomly picks the road to junction 2 or the road to junction 4. In case he had picked the road to junction 2, he reaches home in just 1 minute. If not, he ends up at junction 4 at the end of the first minute. Then, in Step 1 of the second minute, he picks the road between 4 and 2, and goes to junction 2, thus reaching his home in the second minute. Thus, no matter what random choices he makes in the Step 3's, he is guaranteed to reach his house within the first two minutes.\n\n**Testcase 2**: You can show that in the worst case, the drunk man could be stuck among the junctions {1, 2, 3, 4, 5} forever.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1 - 8",
+  "source_sizelimit": "50000",
+  "problem_author": "balajiganapath",
+  "problem_display_authors": [
+    "balajiganapath"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/balajiganapath'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>balajiganapath</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "21-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Dijkstra's Algorithm"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Graph Algos",
+    "Shortest Paths"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610596
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMDRUNK",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

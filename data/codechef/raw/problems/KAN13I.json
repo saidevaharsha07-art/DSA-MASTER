@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13I",
+  "contest_category": "6",
+  "problem_name": "Rewarding the Priests",
+  "intended_contest_code": null,
+  "body": "<p>Emperor of the galaxy has a number of planets where His common citizens live and in each of which runs a different clock system. However, in each planet a clock has two hands- hour and minute. <b>H</b> hours make a day, <b>M</b> minutes make an hour and <b>M</b> seconds make a minute, where values of <b>H</b> and <b>M</b> can be different for different planets. The Emperor is a lazy person and doesn\u2019t like a moving second hand in the clock. That\u2019s why all the clocks in his empire have only two hands - hour and minute.\n</p>\n<p>\nThere is a priest in each of the planets. Each priest spends some time in Emperor\u2019s Hall and gets a number of gold coins for his services, which equals the number of times swapping of hour and minute hands would represent valid time during his interval of stay in the Hall. Start and finish time of staying of a priest is given in hours, minutes and seconds expressed in minutes and fractions in lowest terms, and is provided in a row. You need to calculate number of gold coins each priest will get corresponding to the time expressed in each row.\n</p>\n<h3>Input</h3>\n<p>The first line of input will be an integer <b>T</b>, denoting the number of test case. </p>\n<p>For each test case, there will be 3 lines of input. The first line of each test case contains 2 integers <b>H</b> and <b>M</b>, separated by a space. The next line contains 5 integers, <b>h</b>, <b>m</b>, <b>s</b>, <b>sn</b>, <b>sd</b> respectively denoting hour, minute, integer second and numerator and denominator of the fractional parts of the second. These integers represent the start time. The next line contains 5 integers in the same format as previous line, representing the finish time. The start and finish time are inclusive.</p>\n<h3>Output</h3>\n<p>output for each case will be an integer representing the number of gold coins the priest will get from the Emperor for his service. The format will be following: \u201cCase <case_number>: <output>\u201d. Please refer to the sample input and output for exact formatting.</output></case_number></p>\n<h3>Constraints</h3>\n<p>1 &lt;= <b>T</b> &lt;= 50</p>\n<p>2 &lt;= <b>H</b>, <b>M</b> &lt;= 100</p>\n<p>1 &lt;= <b>h</b> &lt;= <b>H</b></p>\n<p>0 &lt;= <b>m</b> &lt; <b>M</b></p>\n<p>0 &lt;= <b>s</b> &lt; <b>M</b></p>\n<p>0 &lt;= <b>sn</b> &lt; <b>sd</b> &lt;= 10000</p>\n<p>Stay of a priest will never exceed <b>H</b> hours.</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n3\n12 60\n12 0 0 0 1\n11 59 59 999 1000\n12 60\n12 5 2  14 143\n12 10 4  28 143\n84 87\n10 25 17 10 21\n73 18 28 3747 5038\n\n<b>Output:</b>\nCase 1: 143\nCase 2: 2\nCase 3: 5284\n\n</pre>\n<p><b>\n<p>Problem Setter : Dr. M. Kaykobad</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "1 <= **T** <= 50\n\n2 <= **H**, **M** <= 100\n\n1 <= **h** <= **H**\n\n0 <= **m** < **M**\n\n0 <= **s** < **M**\n\n0 <= **sn** < **sd** <= 10000\n\nStay of a priest will never exceed **H** hours.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Emperor of the galaxy has a number of planets where His common citizens live and in each of which runs a different clock system. However, in each planet a clock has two hands- hour and minute. **H** hours make a day, **M** minutes make an hour and **M** seconds make a minute, where values of **H** and **M** can be different for different planets. The Emperor is a lazy person and doesn\u2019t like a moving second hand in the clock. That\u2019s why all the clocks in his empire have only two hands - hour and minute.\n\nThere is a priest in each of the planets. Each priest spends some time in Emperor\u2019s Hall and gets a number of gold coins for his services, which equals the number of times swapping of hour and minute hands would represent valid time during his interval of stay in the Hall. Start and finish time of staying of a priest is given in hours, minutes and seconds expressed in minutes and fractions in lowest terms, and is provided in a row. You need to calculate number of gold coins each priest will get corresponding to the time expressed in each row.\n",
+    "inputFormat": "The first line of input will be an integer **T**, denoting the number of test case. \n\nFor each test case, there will be 3 lines of input. The first line of each test case contains 2 integers **H** and **M**, separated by a space. The next line contains 5 integers, **h**, **m**, **s**, **sn**, **sd** respectively denoting hour, minute, integer second and numerator and denominator of the fractional parts of the second. These integers represent the start time. The next line contains 5 integers in the same format as previous line, representing the finish time. The start and finish time are inclusive.\n",
+    "inputFormatState": true,
+    "outputFormat": "Output for each case will be an integer representing the number of gold coins the priest will get from the Emperor for his service. The format will be following: \u201cCase <case_number>: <output>\u201d. Please refer to the sample input and output for exact formatting.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n12 60\n12 0 0 0 1\n11 59 59 999 1000\n12 60\n12 5 2  14 143\n12 10 4  28 143\n84 87\n10 25 17 10 21\n73 18 28 3747 5038\n",
+        "output": "Case 1: 143\nCase 2: 2\nCase 3: 5284\n",
+        "explanation": "The sample input and output demonstrate the calculation of gold coins for three different test cases. Each test case involves a different planet with its own clock system defined by **H** and **M**. The start and finish times are provided in a specific format, and the output shows the number of valid times when the hour and minute hands can be swapped during the priest's stay.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.766596",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "easy-medium",
+    "fractions",
+    "jingbo_adm",
+    "kan13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610959
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13I",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,123 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BLREDSET",
+  "contest_category": "6",
+  "problem_name": "Black and Red vertices of Tree",
+  "intended_contest_code": null,
+  "body": "You are given a tree with $N$ vertices. The vertices are numbered from $1$ to $N$. Some of the vertices are colored black and some are colored red. Also, some vertices can be uncolored. There is at least one black and at least one red vertex.\r\n\r\nCompute the number of subsets of vertices $W$ such that:\r\n\r\n- Each vertex in $W$ is uncolored.\r\n- $W$ is a connected subgraph of the tree.\r\n- If you remove all the vertices of set $W$, there will be at least one pair of vertices $(u, v)$ such that $u$ is black and $v$ is red, and there is no path from $u$ to $v$.\r\n\r\nOutput your answer modulo $10^{9} + 7$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$ denoting the number of vertices.\r\n- Each of the next $N - 1$ lines contains two space-separated integers $u$ and $v$ denoting an edge between vertices $u$ and $v$.\r\n- The next line contains $N$ space-separated integers denoting the colors of the vertices. The $i^{th}$ of these integers is $0$ if vertex $i$ is uncolored, $1$ if it's black, or $2$ if it's red.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer denoting the number of ways to select a valid subset $W$, modulo $10^{9} + 7$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 2 \\cdot 10^{5}$\r\n- $2 \\leq N \\leq 10^{5}$\r\n- $1 \\leq u, v \\leq N$\r\n- Sum of N over all test cases doesn't exceed $10^{6}$\r\n\r\n### Example Input\r\n```\r\n2\r\n6\r\n1 2\r\n1 3\r\n1 4\r\n3 5\r\n3 6\r\n0 1 0 1 2 0\r\n6\r\n1 2\r\n1 3\r\n1 4\r\n3 5\r\n3 6\r\n1 0 0 0 2 0\r\n```\r\n\r\n### Example Output\r\n```\r\n5\r\n2\r\n```\r\n\r\n### Explanation\r\n\r\n**Test Case 1:** The possible subsets $W$ are $\\{1\\}$, $\\{3\\}$, $\\{1, 3\\}$, $\\{3, 6\\}$ and $\\{1, 3, 6\\}$.\r\n\r\n**Test Case 2:** The possible subsets $W$ are $\\{3\\}$ and $\\{3, 6\\}$.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 2 \\cdot 10^{5}$\n- $2 \\leq N \\leq 10^{5}$\n- $1 \\leq u, v \\leq N$\n- Sum of $N$ over all test cases doesn't exceed $10^{6}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a tree with $N$ vertices. The vertices are numbered from $1$ to $N$. Some of the vertices are colored black and some are colored red. Also, some vertices can be uncolored. There is at least one black and at least one red vertex.\n\nCompute the number of subsets of vertices $W$ such that:\n\n- Each vertex in $W$ is uncolored.\n- $W$ is a connected subgraph of the tree.\n- If you remove all the vertices of set $W$, there will be at least one pair of vertices $(u, v)$ such that $u$ is black and $v$ is red, and there is no path from $u$ to $v$.\n\nOutput your answer modulo $10^{9} + 7$.\n",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$ denoting the number of vertices.\n- Each of the next $N - 1$ lines contains two space-separated integers $u$ and $v$ denoting an edge between vertices $u$ and $v$.\n- The next line contains $N$ space-separated integers denoting the colors of the vertices. The $i^{th}$ of these integers is $0$ if vertex $i$ is uncolored, $1$ if it's black, or $2$ if it's red.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print a single line containing one integer denoting the number of ways to select a valid subset $W$, modulo $10^{9} + 7$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n6\n1 2\n1 3\n1 4\n3 5\n3 6\n0 1 0 1 2 0\n6\n1 2\n1 3\n1 4\n3 5\n3 6\n1 0 0 0 2 0\n",
+        "output": "5\n2\n",
+        "explanation": "**Test Case 1:** The possible subsets $W$ are $\\{1\\}$, $\\{3\\}$, $\\{1, 3\\}$, $\\{3, 6\\}$ and $\\{1, 3, 6\\}$.\n\n**Test Case 2:** The possible subsets $W$ are $\\{3\\}$ and $\\{3, 6\\}$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/BLREDSET\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/ACM17CHN/problems/BLREDSET\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"http://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a><br>\n<strong>Tester:</strong> <a href=\"http://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a><br>\n<strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/animesh_f\" rel=\"nofollow noopener\">Animesh Fatehpuria</a></p>\n<h3>PROBLEM</h3>\n<p>You are given a tree <span class=\"math\">T</span> with <span class=\"math\">N</span> vertices. A vertex can be either black, red, or uncolored. There is at least one black and at least one red vertex. Compute the number of subsets of vertices <span class=\"math\">W</span> such that:</p>\n<ul>\n<li>Each vertex in <span class=\"math\">W</span> is uncolored.</li>\n<li>\n<span class=\"math\">W</span> is a connected subgraph of <span class=\"math\">T</span>.</li>\n<li>If you remove all the vertices in <span class=\"math\">W</span>, there will be at least one pair of vertices <span class=\"math\">(u, v)</span> such that <span class=\"math\">u</span> is colored black and <span class=\"math\">v</span> red and there is no path from node <span class=\"math\">u</span> to node <span class=\"math\">v</span>.</li>\n</ul>\n<p>Output your answer modulo <span class=\"math\">10^9 + 7</span>. Constraint: <span class=\"math\">N \\le 10^5</span>.</p>\n<h3>PREREQUISITES</h3>\n<p>Basic Familiarity with Tree DP.</p>\n<h3>EXPLANATION</h3>\n<p>There are many possible solutions to this problem, all of which use some sort of dynamic programming on trees. Thus, it is required to have some level of familiarity with that topic. If you are not familiar with DP on Trees, check out this<br>\n<a href=\"https://threads-iiith.quora.com/Dynamic-Programming-on-Trees-Tutorial\" rel=\"nofollow noopener\">blog</a>.</p>\n<p>We want to compute number of connected subgraphs of uncolored vertices that disconnect at least one pair of different-colored nodes. We call a vertex <span class=\"math\">v</span> <em>good</em> iff <span class=\"math\">v</span> is uncolored and the removal of <span class=\"math\">v</span> disconnects at least one pair of different-colored nodes. We want to compute number of connected components in <span class=\"math\">T</span> of uncolored vertices that contain at least one <em>good</em> node. This is equivalent to computing all possible connected subsets, and then<br>\nsubtracting those connected subsets (of uncolored nodes) that have no <em>good</em> nodes. It turns out that this can be done<br>\nwith a straightforward dynamic program.</p>\n<h2>Precomputing all Good Nodes</h2>\n<p>Root the tree arbitrarily. Compute for each node <span class=\"math\">v</span> two quantites, <span class=\"math\">red[v]</span> and <span class=\"math\">black[v]</span> denoting the number of red<br>\nand black vertices in the subtree rooted at <span class=\"math\">v</span> respectively. This can be done with one DFS. To check if a node <span class=\"math\">u</span><br>\nis <em>good</em>, consider <span class=\"math\">T - \\{u\\}</span>. A node <span class=\"math\">u</span> is good iff:</p>\n<ul>\n<li>\n<span class=\"math\">u</span> is uncolored.</li>\n<li>There are at least two components with colored nodes in <span class=\"math\">T - \\{u\\}</span>.</li>\n</ul>\n<p>Thus, we can check all its neighbours of <span class=\"math\">u</span> and see if there are at least two neighbours whose components have colored vertices by using our precomputed lists <span class=\"math\">red[v]</span> and <span class=\"math\">black[v]</span>. Using this approach, we can precompute all <em>good</em><br>\nnodes in amortized <span class=\"math\">O(n)</span> time.</p>\n<h2>Computing Number of Connected Subgraphs with no Good Nodes</h2>\n<p>For this step, we require to do a tree DP. Again, we root the tree arbitrarily, say at node <span class=\"math\">r</span>. Let <span class=\"math\">dp[v][0]</span> denote the number of valid subgraphs in the subtree rooted at <span class=\"math\">v</span> that don\u2019t include <span class=\"math\">v</span>, and let <span class=\"math\">dp[v][1]</span> denote the number<br>\nof <em>valid</em> subgraphs in the subtree rooted at <span class=\"math\">v</span> that include <span class=\"math\">v</span>. The answer is <span class=\"math\">dp[r][0] + dp[r][1]</span>.</p>\n<p>The transitions are fairly straightforward and I\u2019ll leave it as an exercise. As a hint, note that the transition depends on the color of the node. If you are struggling to find these transitions, please go through the blog mentioned above. It explains the basic ideas of Tree DP with some very good examples. If you\u2019re still stuck, please read some available solution.</p>\n<p>Since there are <span class=\"math\">O(n)</span> states (and the transition is <span class=\"math\">O(1)</span>), the total time complexity is <span class=\"math\">O(n)</span>.</p>\n<h3>AUTHOR\u2019S AND TESTER\u2019S SOLUTIONS:</h3>\n<p>Author\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Setter/BLREDSET.cpp\" rel=\"nofollow noopener\">here</a>.<br>\nTester\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM17CHN/Tester/BLREDSET.java\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17705,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "5",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "21-11-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Trees"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Graphs"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/BLREDSET",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610643
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BLREDSET",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

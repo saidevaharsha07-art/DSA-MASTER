@@ -1,0 +1,325 @@
+{
+  "totalMatches": 974,
+  "byKeyword": {
+    "temp": 597,
+    "placeholder": 40,
+    "mock": 219,
+    "disabled": 25,
+    "sample": 55,
+    "fake": 5,
+    "TODO": 6,
+    "FIXME": 4,
+    "HACK": 8,
+    "dummy": 13,
+    "coming soon": 2
+  },
+  "byFolder": {
+    "app": 44,
+    "components": 120,
+    "scratch": 40,
+    "scripts": 2,
+    "src": 768
+  },
+  "sampleMatches": [
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 93,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr auto\", gap: \"28px\", alignItems: \"center\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 160,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"minmax(0, 1fr) 350px\", gap: \"24px\", alignItems: \"start\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 182,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(4, 1fr)\", gap: \"14px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 196,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: \"6px\", margin: \"8px 0\", fontSize: \"10px\", color: \"var(--text-secondary)\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 204,
+      "keyword": "placeholder",
+      "content": "{/* Sparkline Graphic Placeholder */}"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 248,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(6, 1fr)\", gap: \"10px\", padding: \"12px\", background: \"var(--surface)\", borderRadius: \"12px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 264,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(3, 1fr)\", gap: \"14px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 286,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1.5fr\", gap: \"20px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 325,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(16, 1fr)\", gap: \"4px\", padding: \"8px\", background: \"var(--surface)\", borderRadius: \"8px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 340,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr 1fr\", gap: \"14px\", fontSize: \"11px\" }}>"
+    },
+    {
+      "file": "app/(app)/analytics/page.tsx",
+      "line": 362,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(6, 1fr)\", gap: \"10px\", textAlign: \"center\" }}>"
+    },
+    {
+      "file": "app/(app)/career/page.tsx",
+      "line": 38,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginBottom: '28px' }}>"
+    },
+    {
+      "file": "app/(app)/career/page.tsx",
+      "line": 78,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 57,
+      "keyword": "mock",
+      "content": "AI Mock Interview Simulator"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 73,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 78,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 149,
+      "keyword": "mock",
+      "content": "<Play size={16} fill=\"#FFF\" /> Start {selectedCompany} Mock Interview"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 158,
+      "keyword": "disabled",
+      "content": "<li>Hints are disabled during the live simulation.</li>"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 169,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', height: '640px' }}>"
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 202,
+      "keyword": "placeholder",
+      "content": "placeholder=\"Explain your approach to the interviewer...\""
+    },
+    {
+      "file": "app/(app)/interview/page.tsx",
+      "line": 252,
+      "keyword": "temp",
+      "content": "<div style={{ width: '100%', maxWidth: '600px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '14px' }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 157,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr auto auto\", gap: \"24px\", alignItems: \"center\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 218,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(3, 1fr)\", gap: \"20px\", alignItems: \"stretch\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 238,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: \"8px\", marginTop: \"10px\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 241,
+      "keyword": "temp",
+      "content": "<span style={{ fontSize: \"10px\", color: \"var(--text-primary)\" }}>Incorrect shrinking leads to wrong answers in 70% of attempts.</span>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 276,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"70px 1fr\", gap: \"14px\", alignItems: \"center\", marginTop: \"10px\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 326,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(4, 1fr)\", gap: \"14px\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 346,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr 1fr\", gap: \"4px\", fontSize: \"9px\", color: \"var(--text-secondary)\", margin: \"6px 0\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 367,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"repeat(4, 1fr)\", gap: \"14px\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 406,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: \"6px\", fontSize: \"10px\" }}>"
+    },
+    {
+      "file": "app/(app)/mentor/page.tsx",
+      "line": 433,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: \"14px\" }}>"
+    },
+    {
+      "file": "app/(app)/revision/page.tsx",
+      "line": 173,
+      "keyword": "temp",
+      "content": "<div id=\"due-today-section\" style={{ display: 'grid', gridTemplateColumns: '65% 35%', gap: '28px' }}>"
+    },
+    {
+      "file": "app/(app)/session-summary/page.tsx",
+      "line": 12,
+      "keyword": "mock",
+      "content": "// we'll extract mock stats from the timeline for the presentation."
+    },
+    {
+      "file": "app/(app)/session-summary/page.tsx",
+      "line": 26,
+      "keyword": "temp",
+      "content": "<div className=\"grid\" style={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>"
+    },
+    {
+      "file": "app/(app)/settings/page.tsx",
+      "line": 130,
+      "keyword": "temp",
+      "content": "gridTemplateColumns: \"280px 1fr\","
+    },
+    {
+      "file": "app/api/judge/run/route.ts",
+      "line": 25,
+      "keyword": "sample",
+      "content": "const sampleOutput = '[0, 1]';"
+    },
+    {
+      "file": "app/api/judge/run/route.ts",
+      "line": 26,
+      "keyword": "sample",
+      "content": "output = sampleOutput;"
+    },
+    {
+      "file": "app/login/page.tsx",
+      "line": 46,
+      "keyword": "placeholder",
+      "content": "placeholder=\"name@company.com\""
+    },
+    {
+      "file": "app/login/page.tsx",
+      "line": 61,
+      "keyword": "placeholder",
+      "content": "placeholder=\"••••••••\""
+    },
+    {
+      "file": "app/login/page.tsx",
+      "line": 69,
+      "keyword": "disabled",
+      "content": "disabled={isLoading}"
+    },
+    {
+      "file": "app/onboarding/page.tsx",
+      "line": 117,
+      "keyword": "temp",
+      "content": "Code templates and compiler workspaces will defaults to this selection."
+    },
+    {
+      "file": "app/onboarding/page.tsx",
+      "line": 120,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: 12 }}>"
+    },
+    {
+      "file": "app/onboarding/page.tsx",
+      "line": 201,
+      "keyword": "temp",
+      "content": "<div style={{ display: \"grid\", gridTemplateColumns: \"1fr 1fr\", gap: 12, marginBottom: 24 }}>"
+    },
+    {
+      "file": "app/onboarding/page.tsx",
+      "line": 229,
+      "keyword": "disabled",
+      "content": "disabled={step === 1}"
+    },
+    {
+      "file": "components/ai/oracle/OracleMentorModal.tsx",
+      "line": 165,
+      "keyword": "placeholder",
+      "content": "placeholder=\"Ask Oracle anything about algorithms...\""
+    },
+    {
+      "file": "components/app-shell.tsx",
+      "line": 39,
+      "keyword": "mock",
+      "content": "[\"Mock Test\", \"/mock-test\", Timer],"
+    },
+    {
+      "file": "components/journey/JourneyNode.tsx",
+      "line": 56,
+      "keyword": "temp",
+      "content": "20: 'radial-gradient(circle, rgba(244, 63, 94, 0.22) 0%, transparent 75%)',  // DP Temple BOSS"
+    },
+    {
+      "file": "components/journey/JourneyNodeDrawer.tsx",
+      "line": 29,
+      "keyword": "mock",
+      "content": "// Patterns mock data mapped to each world for learning path view"
+    },
+    {
+      "file": "components/journey/JourneyNodeDrawer.tsx",
+      "line": 112,
+      "keyword": "disabled",
+      "content": "<Button disabled variant=\"outline\" size=\"lg\" style={{ width: '100%', marginTop: 'auto' }}>"
+    },
+    {
+      "file": "components/journey/JourneyNodeDrawer.tsx",
+      "line": 169,
+      "keyword": "temp",
+      "content": "<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: spacing.md }}>"
+    }
+  ]
+}

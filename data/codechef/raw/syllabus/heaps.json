@@ -1,0 +1,418 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "heaps",
+  "name": "Heaps",
+  "title": "Heaps",
+  "level": "Beginner",
+  "description": "Practice problems on Heap data structure from the CodeChef repository of problems. Start with basics of Heaps and then solve harder questions which require Heap.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/heaps/HEAPF/problems/HEAPEDU0",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Heap",
+      "description": "Practice educational problems using Heaps",
+      "submodules": [
+        {
+          "name": "Heaps",
+          "submodule_id": 2750,
+          "contest_code": "HEAPF",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/heaps/HEAPF/problems/HEAPEDU0",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "25532",
+              "code": "HEAPEDU0",
+              "name": "Representation of a Heap",
+              "difficulty_rating": "100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "HEAPEDU1",
+              "name": "Insertion in a Heap",
+              "difficulty_rating": "400",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "HEAPEDU2",
+              "name": "Deletion in a Heap",
+              "difficulty_rating": "400",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "HEAPEDU3",
+              "name": "Insertion and deletion together in a Heap",
+              "difficulty_rating": "400",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "HEAPEDU4",
+              "name": "Heap sort",
+              "difficulty_rating": "400",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "TSORT",
+              "name": "Simple Sorting",
+              "difficulty_rating": "667",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "TSTROBOT",
+              "name": "Testing Robot",
+              "difficulty_rating": "1124",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "RRCOPY",
+              "name": "Copy-Paste",
+              "difficulty_rating": "1280",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "CAPPLE",
+              "name": "Chef and Apple Trees",
+              "difficulty_rating": "1301",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "CLEANUP",
+              "name": "Cleaning Up",
+              "difficulty_rating": "1309",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "MINTOMAXHEAP",
+              "name": "Convert min Heap to max Heap",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25532",
+              "code": "MERGEKSORTED",
+              "name": "Merge K sorted lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Heaps additional practice",
+          "submodule_id": 2751,
+          "contest_code": "HEAPP",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 13,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/heaps/HEAPP/problems/DISCHAR",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "25534",
+              "code": "DISCHAR",
+              "name": "Distinct Characters Subsequence",
+              "difficulty_rating": "1314",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "ALTTAB",
+              "name": "Alt-Tab",
+              "difficulty_rating": "1396",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "IPCTRAIN",
+              "name": "IPC Trainers",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "WTYDU01",
+              "name": "Chef Finds KthLargest Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "AIRTRAV",
+              "name": "Chef Airlines",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "CTEAMS",
+              "name": "Chef Teams",
+              "difficulty_rating": "1577",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "CONSECARDS",
+              "name": "Consecutive Card Grouping",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "CIREQ",
+              "name": "Positive array",
+              "difficulty_rating": "1620",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "RKS",
+              "name": "Rooks",
+              "difficulty_rating": "1624",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "TOURMAP",
+              "name": "Sridhar Likes Travelling",
+              "difficulty_rating": "1656",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "INC_HEIGHTS",
+              "name": "Parallel World",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "CHEFTMA",
+              "name": "Chef and Time Machine",
+              "difficulty_rating": "1717",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "25534",
+              "code": "HRYQX01",
+              "name": "Chef Builds Twitter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 25
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 25,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "260",
+    "name": "Heaps",
+    "title": "Heaps",
+    "slug": "heaps",
+    "description": "Learn about how Heaps are implement and solve coding problems related to heaps. This course covers Heap from a practical perspective giving you the ability to solve any Heap related questions in future.",
+    "highlight_color": "#ffffff",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 112
+    },
+    "learners_count": 3938,
+    "lessons_count": 2
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Data structures",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 9869,
+  "path_review": {
+    "rating": 4.6,
+    "users": 105
+  },
+  "faqs": [
+    {
+      "question": "What is a heap in data structures?",
+      "answer": "A heap is a specialized tree-based data structure that satisfies the heap property. In a max heap, for any given node I, the value of I is greater than or equal to the values of its children. In a min heap, the value of I is less than or equal to the values of its children. Heaps are commonly used to implement priority queues and for efficient sorting algorithms like heap sort.",
+      "faq_order": "1"
+    },
+    {
+      "question": "What are the basic operations performed on a heap?",
+      "answer": "The fundamental operations on a heap include:\n<ol style=\"margin-left: 24px\">\n<li>Insertion: Adding a new element to the heap (O(log n))</li>\n<li>Deletion: Removing the root element (O(log n))</li>\n<li>Peek: Viewing the root element without removing it (O(1))</li>\n<li>Heapify: Converting an array into a heap structure (O(n))</li>\n<li>These operations maintain the heap property and are essential for utilizing heaps effectively in various algorithms.</li>\n</ol>",
+      "faq_order": "2"
+    },
+    {
+      "question": "How does heap sort work?",
+      "answer": "Heap sort is an efficient comparison-based sorting algorithm that uses a binary heap data structure. It works by first building a max heap from the input array, then repeatedly extracting the maximum element (root) and placing it at the end of the array. After each extraction, the heap is reconstructed. This process continues until the entire array is sorted, resulting in a time complexity of O(n log n) for sorting n elements.",
+      "faq_order": "3"
+    },
+    {
+      "question": "How is a heap different from a binary search tree (BST)?",
+      "answer": "While both heaps and BSTs are tree-based data structures, they have key differences:\n<ol style=\"margin-left: 24px\">\n<li>Ordering: Heaps maintain a partial ordering (heap property) while BSTs have a specific left-right ordering.</li>\n<li>Balance: Heaps are always complete binary trees, whereas BSTs can be unbalanced.</li>\n<li>Operations: Heaps excel at finding min/max elements, while BSTs are optimized for searching, insertion, and deletion across all elements.</li>\n<li>Use cases: Heaps are ideal for priority queues and sorting, while BSTs are better for maintaining sorted data and range queries.</li>\n</ol>",
+      "faq_order": "4"
+    },
+    {
+      "question": "Why should I learn about heaps?",
+      "answer": "Learning about heaps is crucial for several reasons:\n<ol style=\"margin-left: 24px\">\n<li>Efficient algorithms: Heaps are the foundation for efficient sorting (heap sort) and graph algorithms (Dijkstra's algorithm).</li>\n<li>Priority queues: Heaps are optimal for implementing priority queues, which are used in task scheduling and data compression.</li>\n<li>Interview preparation: Heap-related questions are common in coding interviews for software engineering positions.</li>\n<li>Problem-solving skills: Understanding heaps enhances your ability to solve complex computational problems efficiently.</li>\n</ol>",
+      "faq_order": "5"
+    },
+    {
+      "question": "How can I practice implementing heaps?",
+      "answer": "To practice implementing heaps:\n<ol style=\"margin-left: 24px\">\n<li>Start with CodeChef's \"Learn Heaps\" course, which offers interactive lessons and coding problems.</li>\n<li>Implement basic heap operations (insert, delete, heapify) in your preferred programming language.</li>\n<li>Solve heap-related coding challenges on platforms like CodeChef</li>\n<li>Visualize heap operations using online tools to better understand the concept.</li>\n<li>Attempt to implement a priority queue using a heap data structure.</li>\n</ol>",
+      "faq_order": "6"
+    }
+  ],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

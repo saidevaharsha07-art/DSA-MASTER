@@ -1,0 +1,279 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "prefix-sums",
+  "name": "Prefix Sum Problems",
+  "title": "Prefix Sum Problems",
+  "level": "Intermediate",
+  "description": "Practice these 14 problems on Prefix and Suffix sum. Learn about how to create prefix arrays, suffix arrays and use them to efficiently solve a variety of programming problems.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:45",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/prefix-sums/PREFIXSUMS/problems/PREFPRO1",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Prefix and Suffix Sum",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Prefix sums",
+          "submodule_id": 4745,
+          "contest_code": "PREFIXSUMS",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 14,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/prefix-sums/PREFIXSUMS/problems/PREFPRO1",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "27848",
+              "code": "PREFPRO1",
+              "name": "Creating Prefix Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "PREFPRO2",
+              "name": "Optimization Using Prefix Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "NUM239",
+              "name": "Counting Pretty Numbers",
+              "difficulty_rating": "873",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "CHEFSUM",
+              "name": "Little Chef and Sums",
+              "difficulty_rating": "1252",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "PREFPRO5",
+              "name": "Suffix Arrays",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "MINNOTES",
+              "name": "Optimal Denomination",
+              "difficulty_rating": "1759",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "PREFPRO3",
+              "name": "Good subarrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "PREFPRO4",
+              "name": "Good Subarrays 2",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "RECTQUER",
+              "name": "Rectangular Queries",
+              "difficulty_rating": "1778",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "KLXOR",
+              "name": "Again XOR problem",
+              "difficulty_rating": "1786",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "BIN_OD",
+              "name": "Binod",
+              "difficulty_rating": "1776",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "XORGAND",
+              "name": "Mystical Numbers",
+              "difficulty_rating": "1702",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "SEGFAULT",
+              "name": "Segmentation Fault",
+              "difficulty_rating": "1815",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27848",
+              "code": "TRIPLETMIN",
+              "name": "Triplets Min",
+              "difficulty_rating": "1868",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 14
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 14,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 14883,
+  "path_review": {
+    "rating": 4.5,
+    "users": 25
+  },
+  "faqs": [
+    {
+      "question": "What is a prefix sum algorithm?",
+      "answer": "A prefix sum algorithm is a technique used to calculate cumulative sums of array elements, creating a new array where each element is the sum of all previous elements. This allows for efficient computation of range sum queries in constant time.",
+      "faq_order": "1"
+    },
+    {
+      "question": "How do you implement a prefix sum array?",
+      "answer": "To implement a prefix sum array, iterate through the original array and create a new array where each element is the sum of all previous elements, including the current one. This precomputation allows for quick range sum calculations later.",
+      "faq_order": "2"
+    },
+    {
+      "question": "What are some common applications of prefix sum?",
+      "answer": "Prefix sum is commonly used in various scenarios, including range sum queries, finding subarrays with specific properties, optimizing time complexity in certain algorithms, and solving problems related to cumulative frequencies or probabilities.",
+      "faq_order": "3"
+    },
+    {
+      "question": "What's the difference between prefix sum and suffix sum?",
+      "answer": "While prefix sum calculates cumulative sums from left to right in an array, suffix sum does the opposite, calculating cumulative sums from right to left. Both techniques can be used to solve different types of problems efficiently.",
+      "faq_order": "4"
+    },
+    {
+      "question": "What is the time complexity of prefix sum calculations?",
+      "answer": "The time complexity for creating a prefix sum array is O(n), where n is the number of elements. Once created, range sum queries can be performed in O(1) time, making it highly efficient for multiple queries.",
+      "faq_order": "5"
+    },
+    {
+      "question": "What are some common prefix sum problems for beginners?",
+      "answer": "Beginners can start with problems like calculating range sums, finding subarrays with a given sum, or solving simple prefix sum puzzles. The course on CodeChef offers 14 problems of varying difficulty to practice these concepts.",
+      "faq_order": "6"
+    },
+    {
+      "question": "What's the relationship between prefix sums and sliding window techniques?",
+      "answer": "While both techniques can be used for range-based problems, prefix sums precompute cumulative values for quick access, whereas sliding window maintains a \"window\" of elements that changes as you iterate. Prefix sums are typically more efficient for arbitrary range queries, while sliding window is useful for fixed-size ranges or when you need to maintain additional information about the range.",
+      "faq_order": "7"
+    }
+  ],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms-old",
+  "roadmap_title": "Learn Data Structures and Algorithms - Roadmap"
+}

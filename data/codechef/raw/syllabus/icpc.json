@@ -1,0 +1,3594 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "icpc",
+  "name": "Prepare for ICPC - Past Year Problems",
+  "title": "Prepare for ICPC - Past Year Problems",
+  "level": "Intermediate",
+  "description": "Prepare for your next ICPC online or onsite round by practicing problems of past years. Get an understanding of the pattern of questions which are asked.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/icpc/ICPCTR28/problems/USANBOLT",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Asia Amritapuri Onsite Round 2019",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia Amritapuri Onsite Round 2019",
+          "submodule_id": 6873,
+          "contest_code": "ICPCTR28",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR28/problems/USANBOLT",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30740",
+              "code": "USANBOLT",
+              "name": "Usain Bolt vs Tiger",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "SDIFFSTR",
+              "name": "Sufficiently different string",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "COLINT",
+              "name": "Coloring Intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "EXPCAN",
+              "name": "Expected Candies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "TRGRPH",
+              "name": "Rooted Tree Graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "MORTGAGE",
+              "name": "Mortgage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "COLPOLLY",
+              "name": "What is this, a crossover episode",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "POLCON",
+              "name": "Polygon Containment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "MOBCNT",
+              "name": "Counting Mobiles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "PERMDIST",
+              "name": "Permutation Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "COMPLEXG",
+              "name": "A Complex Graph Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30740",
+              "code": "LALALANT",
+              "name": "The Fools Who Dream",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Gwalior - Pune Site Onsite Round 2019",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Gwalior - Pune Site Onsite Round 2019",
+          "submodule_id": 6872,
+          "contest_code": "ICPCTR27",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR27/problems/SAFEROBO",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30739",
+              "code": "SAFEROBO",
+              "name": "Safe Robots",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "MEANPROB",
+              "name": "Mean Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "TELNET",
+              "name": "Telephone Network",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "EAREA",
+              "name": "Expected Area",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "UNBAL",
+              "name": "Yet Another Balanced Parenthesis Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "TRGAME",
+              "name": "Game on Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "DICITIES",
+              "name": "Disconnecting Cities",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "TRANSACT",
+              "name": "Inequality Reduction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "GUESSMID",
+              "name": "Guess the Middle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "BINPALIN",
+              "name": "Binary Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30739",
+              "code": "SMTOUR",
+              "name": "F - Beautiful Walk",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia Kharagpur Onsite Regional 2019",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia Kharagpur Onsite Regional 2019",
+          "submodule_id": 6737,
+          "contest_code": "ICPCTR05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR05/problems/WALKFAST",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "11081",
+              "code": "WALKFAST",
+              "name": "Train or Walk",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "BALLCOL",
+              "name": "Colliding Balls",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "MAXDIVER",
+              "name": "Maximize Diversity of an Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "RANDID",
+              "name": "Chef and Diamonds",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "AWKMINI",
+              "name": "Awkwardness Minimization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "VARMIN",
+              "name": "Minimum Variance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "SEGDIR2",
+              "name": "Direct Segments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "SUBMATCH",
+              "name": "Substring Matching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "GRAPHCON",
+              "name": "Special Graph Construction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "BALLSUM",
+              "name": "Colorful Balloons",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11081",
+              "code": "ANAJOBS",
+              "name": "Analytics Load Jobs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia India Regionals Online Round 2019",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia India Regionals Online Round 2019",
+          "submodule_id": 6733,
+          "contest_code": "ICPCTR01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR01/problems/DISCSHOP",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "10838",
+              "code": "DISCSHOP",
+              "name": "Discount in a Shop",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "TRAINSET",
+              "name": "Select Training Set",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "PENS",
+              "name": "Pen Pineapple Apple Pen",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "BEAUTPAR",
+              "name": "Beautiful Partitions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "SHUFGRID",
+              "name": "Grid Shuffle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "SPS",
+              "name": "Shortest Palindromic Superstring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10838",
+              "code": "SEGDIR",
+              "name": "Moving Segments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Asia Kanpur Onsite Round 2019",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia Kanpur Onsite Round 2019",
+          "submodule_id": 6874,
+          "contest_code": "ICPCTR29",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR29/problems/GVAWAY",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30741",
+              "code": "GVAWAY",
+              "name": "Is This a Give Away",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "ARRQRY",
+              "name": "Convolution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "PRMPRT",
+              "name": "B - Prime-partite Graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "WALK4",
+              "name": "Walk 4 steps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "FCIPL",
+              "name": "IPL Begins",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "KPRB",
+              "name": "K-Prob",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "WGTNKLC",
+              "name": "Weighted Necklace",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "MINDIST",
+              "name": "Minimize the Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "BEAUAR",
+              "name": "Beauty and The Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30741",
+              "code": "LNDNCK",
+              "name": "Nicks Landing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Gwalior - Pune Site Onsite Round 2018",
+      "description": "  ",
+      "submodules": [
+        {
+          "name": "Gwalior - Pune Site Onsite Round 2018",
+          "submodule_id": 6870,
+          "contest_code": "ICPCTR25",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR25/problems/LIFELTD",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30737",
+              "code": "LIFELTD",
+              "name": "Life Limited",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "CAPTBIRD",
+              "name": "Capturing Bird in A Camera",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "EOSUBSEQ",
+              "name": "A - Even Odd subsequences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "PREFNUM",
+              "name": "Prefix Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "AUTOCARS",
+              "name": "Autonomous Cars",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "SIRUSERI",
+              "name": "Siruseri Gerrymandering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "THSTRS",
+              "name": "Three Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "WALKTREE",
+              "name": "Not So Random Walks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "GAMOFNUM",
+              "name": "Game of numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "POLYSTR",
+              "name": "Polygon and String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30737",
+              "code": "NGONS",
+              "name": "Flipping Polygons",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Amritapuri Site Onsite Round 2018",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Amritapuri Site Onsite Round 2018",
+          "submodule_id": 6869,
+          "contest_code": "ICPCTR24",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR24/problems/ISITCAKE",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30736",
+              "code": "ISITCAKE",
+              "name": "Is it a Cakewalk Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "CNTFAIL",
+              "name": "Magic School",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "ARMYFGT",
+              "name": "Fighting Armies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "AVLBLT",
+              "name": "Availability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "MARTING1",
+              "name": "Martingale",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "PALPATH",
+              "name": "Palindromic Walks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "SAUNA",
+              "name": "Sauna Cred",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "BALSUB",
+              "name": "D - Balanced Parenthesis Substrings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "ALIENINV",
+              "name": "Alien Invasion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "KHULJA",
+              "name": "Alohomora",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "REFORMS",
+              "name": "Reforms, Reforms Never Change",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30736",
+              "code": "SQRECT",
+              "name": "Square in rectangles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Asia Kolkata-Kanpur Site Onsite Round 2018",
+      "description": " ",
+      "submodules": [
+        {
+          "name": " Asia Kolkata-Kanpur Site Onsite Round 2018",
+          "submodule_id": 6868,
+          "contest_code": "ICPCTR23",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR23/problems/VALIDSTK",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30735",
+              "code": "VALIDSTK",
+              "name": "Valid Stack Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "BUCKETWA",
+              "name": "Get a Bucket of Water",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "READCOST",
+              "name": "What is the Cost of Reading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "BEAUKONO",
+              "name": "Beauty of Konoha",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "TILEBAG",
+              "name": "Bag of Tiles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "SNOWMAN",
+              "name": "Do You Want to Build a Snowman",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "YASPP",
+              "name": "Yet another shortest path problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "ABSDIFFS",
+              "name": "Absolute Difference Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "ALIENCOW",
+              "name": "Chef and Alien Invasion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "JOSEPHUS",
+              "name": "Josephus Again",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "YAEXP",
+              "name": "Yet another expected value problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30735",
+              "code": "MULHANOI",
+              "name": "Again Multi-Peg Tower of Hanoi",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Asia India Regionals Online Round 2018",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia India Regionals Online Round 2018",
+          "submodule_id": 6734,
+          "contest_code": "ICPCTR02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR02/problems/ROBOGAME",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "10899",
+              "code": "ROBOGAME",
+              "name": "A Game of Robots",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10899",
+              "code": "REDCGAME",
+              "name": "Reduction Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10899",
+              "code": "WORDGRID",
+              "name": "Word Grid",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10899",
+              "code": "BIPFAMIL",
+              "name": "A Family of Bipartite Graphs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10899",
+              "code": "PRESTIGE",
+              "name": "The Prestige",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kharagpur Site Onsite Round 2018",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Kharagpur Site Onsite Round 2018",
+          "submodule_id": 6871,
+          "contest_code": "ICPCTR26",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR26/problems/NOMATCH",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30738",
+              "code": "NOMATCH",
+              "name": "Maximise the Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "PERIODCN",
+              "name": "Count Periodic Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "SORTALGO",
+              "name": "Pseudo Sorting Algorithm",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "BINGAME",
+              "name": "1-2 Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "SQRTRI",
+              "name": "A Triangle and Two Squares",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "GRAPHAND",
+              "name": "AND on Graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "SUBSUMX",
+              "name": "Subset Sums Revisited",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "POLITRI",
+              "name": "Points, Lines, Triangles and Graphs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "MAFIASYN",
+              "name": "Mafia Syndicate",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "VASTLIFE",
+              "name": "Another Game of Life",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "INFDIV",
+              "name": "E - Make it Zero",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30738",
+              "code": "PLAYPIAN",
+              "name": "Play Piano",
+              "difficulty_rating": "980",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Gwalior Site Onsite Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Gwalior Site Onsite Round 17",
+          "submodule_id": 6866,
+          "contest_code": "ICPCTR21",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR21/problems/COUPSYS",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "30733",
+              "code": "COUPSYS",
+              "name": "Coupon System",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "OPTCODE",
+              "name": "Optimize The Slow Code",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "TALESQUA",
+              "name": "A Tale of Three Squares",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "TALETRI",
+              "name": "A Tale of Two Right Angled Triangles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "TRICHEF",
+              "name": "Chef and Triangles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "QTRAGAIN",
+              "name": "Queries on tree again",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "ZUBWALLT",
+              "name": "Organize The Wallet",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "KALADIN",
+              "name": "Proprietary Probabilistic Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30733",
+              "code": "LIGHTARE",
+              "name": "Find Lighted Area",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Amritapuri Site Onsite Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Amritapuri Site Onsite Round 2017",
+          "submodule_id": 6865,
+          "contest_code": "ICPCTR20",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR20/problems/CODERLIF",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30732",
+              "code": "CODERLIF",
+              "name": "Coder Life Matters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "QUADFUNC",
+              "name": "Quadratic Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "LAUGHMEN",
+              "name": "A Few Laughing Men",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMBOXES",
+              "name": "Nested Candy Boxes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "CRYPCUR",
+              "name": "Crypto Trading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMLEX",
+              "name": "Poetic word",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMMAGIC",
+              "name": "Magic Board",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMDRUNK",
+              "name": "Drunk Man in Large City",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMRACES",
+              "name": "Longest Races",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "AMPUZZLE",
+              "name": "Sliding Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30732",
+              "code": "SIMPPOLY",
+              "name": "A Simple Polygon",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Chennai Site Onsite Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Chennai Site Onsite Round 2017",
+          "submodule_id": 6864,
+          "contest_code": "ICPCTR19",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR19/problems/GOODBAD",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30731",
+              "code": "GOODBAD",
+              "name": "Good and Bad Persons",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "MINSTR",
+              "name": "Minimize the string",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "OBEXPVAL",
+              "name": "Obtain Desired Expected Value",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "MRO",
+              "name": "Method Resolution Order",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "AREAFIGR",
+              "name": "Area of an amazing figure",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "BLREDSET",
+              "name": "Black and Red vertices of Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "VRTXCOVR",
+              "name": "Vertex Cover",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "DEFOREST",
+              "name": "Chef and Deforestation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "CODIE",
+              "name": "Codie Bird",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30731",
+              "code": "MANCBST",
+              "name": "Chef Counts Semi-BSTs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kolkata Site Onsite Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Kolkata Site Onsite Round 2017",
+          "submodule_id": 6863,
+          "contest_code": "ICPCTR18",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR18/problems/ZUBREACH",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30730",
+              "code": "ZUBREACH",
+              "name": "J - Reached Safely Or Not",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBTRCNT",
+              "name": "D - Triangle Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBAPCNT",
+              "name": "A - Appearance Count",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBRIDER",
+              "name": "C - Club of Riders",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBGOLD",
+              "name": "B - Get The Gold",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBPASSR",
+              "name": "E - Password Riddle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "RAWPOWER",
+              "name": "K - Raw Power",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBHTREE",
+              "name": "F - Huge Number of Trees",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBSECRT",
+              "name": "I - Secrets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBPALK",
+              "name": "G - Palace of King",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30730",
+              "code": "ZUBSPOIL",
+              "name": "H - Unpredictable Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia India Regionals Online Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia India Regionals Online Round 2017",
+          "submodule_id": 6735,
+          "contest_code": "ICPCTR03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR03/problems/ORDTEAMS",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "10972",
+              "code": "ORDTEAMS",
+              "name": "Ordering teams",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10972",
+              "code": "STDDEV",
+              "name": "Obtain Desired Standard Deviation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10972",
+              "code": "COMPEXP",
+              "name": "Compression Algorithm",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10972",
+              "code": "EQUALMOD",
+              "name": "Modulo Equality",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "10972",
+              "code": "TWOTREES",
+              "name": "A tale of two trees",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kharagpur Site Onsite Round 2017",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Kharagpur Site Onsite Round 2017",
+          "submodule_id": 6867,
+          "contest_code": "ICPCTR22",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR22/problems/STRLBP",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30734",
+              "code": "STRLBP",
+              "name": "Uniform Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "SPAMCLAS",
+              "name": "Spam Classification Using Neural Net",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "GENPERM",
+              "name": "Generating A Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "SADQ",
+              "name": "SAD Queries",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "NUMBGAME",
+              "name": "Number Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "TAXITURN",
+              "name": "Taxi Making Sharp Turns",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "NONOVSEG",
+              "name": "Non Overlapping Segments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "XORQUERY",
+              "name": "Chef and XOR Queries",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "SCIENCEF",
+              "name": "Science Fair",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30734",
+              "code": "DISCAREA",
+              "name": "Black Discs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kolkata Site Onsite Round 2016",
+      "description": "  ",
+      "submodules": [
+        {
+          "name": "Asia-Kolkata Site Onsite Round 2016",
+          "submodule_id": 6861,
+          "contest_code": "ICPCTR16",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR16/problems/KOL16B",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30728",
+              "code": "KOL16B",
+              "name": "Extreme Encoding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16J",
+              "name": "Quentin Tarantino",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16H",
+              "name": "Mr Wireless",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16F",
+              "name": "Precious Stones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16E",
+              "name": "Divide Me Please",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16K",
+              "name": "Chef and Points",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16A",
+              "name": "Playing World War II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16L",
+              "name": "Optimal BST Revisited",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16C",
+              "name": "Zeroes VII",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16D",
+              "name": "Men and Horses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16I",
+              "name": "Roads",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30728",
+              "code": "KOL16G",
+              "name": "Optimal use of Nuclear Power plant ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Amritapuri Site Onsite Round 2016",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Amritapuri Site Onsite Round 2016",
+          "submodule_id": 6860,
+          "contest_code": "ICPCTR15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR15/problems/AMR16A",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30727",
+              "code": "AMR16A",
+              "name": "Tim and BSTs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16B",
+              "name": "A Historic Discussion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16C",
+              "name": "Influence on Social media",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16D",
+              "name": "ATM queue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16F",
+              "name": "Notes and GPS Chips",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16H",
+              "name": "Netcoin Verification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16G",
+              "name": "Hawala Arrests",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16I",
+              "name": "Mancunian Hoards Black Money",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16J",
+              "name": "Bob vs ATM",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30727",
+              "code": "AMR16L",
+              "name": "Hide Them All",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Chennai Site Onsite Round 2016",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Chennai Site Onsite Round 2016",
+          "submodule_id": 6859,
+          "contest_code": "ICPCTR14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR14/problems/CHN16G",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30725",
+              "code": "CHN16G",
+              "name": "Voting Fraud",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16F",
+              "name": "ACM ICPC World Finals Accommodation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16C",
+              "name": "Birthday Pizza Party",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16I",
+              "name": "Alice and Bob play Contact",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16B",
+              "name": "Mancunian Candidate Master Forever",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16A",
+              "name": "Mancunian and Sonu Generate Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16J",
+              "name": "Kingdom of Chef",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16D",
+              "name": "ATM Queue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16E",
+              "name": "Moving Clams",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30725",
+              "code": "CHN16H",
+              "name": "Sum and Xor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kharagpur Site Onsite Round 2016",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Kharagpur Site Onsite Round 2016",
+          "submodule_id": 6858,
+          "contest_code": "ICPCTR13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR13/problems/KGP16H",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30724",
+              "code": "KGP16H",
+              "name": "Coal Mafia and Toll Tax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16E",
+              "name": "Coal mines of Kharagpur",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16F",
+              "name": "Optimal Partition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16D",
+              "name": "Sweet Shops of Kolkata",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16C",
+              "name": "Timestamps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16K",
+              "name": "Cookie Flavors",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16B",
+              "name": "Path by a Castle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16J",
+              "name": "Bus Routes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16A",
+              "name": "Finding Seats",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16G",
+              "name": "Painting a Town",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30724",
+              "code": "KGP16I",
+              "name": "Monetize Mania",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia India Regionals Online Round 2016",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia India Regionals Online Round 2016",
+          "submodule_id": 6736,
+          "contest_code": "ICPCTR04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR04/problems/ICPC16A",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "11023",
+              "code": "ICPC16A",
+              "name": "Help Lost Robot!",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16B",
+              "name": "Beautiful Arrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16C",
+              "name": "Watson and Digit Sums",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16D",
+              "name": "Good Sets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16E",
+              "name": "Colorful Grids",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16G",
+              "name": "Robolympic Batons",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "11023",
+              "code": "ICPC16F",
+              "name": "Chef and Bipartite Graphs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Asia-India Finals Onsite Round 2016",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-India Finals Onsite Round 2016",
+          "submodule_id": 6862,
+          "contest_code": "ICPCTR17",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR17/problems/INF16I",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30729",
+              "code": "INF16I",
+              "name": "Pacman",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16E",
+              "name": "Jumping Frogs III",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16H",
+              "name": "Employee Voice Surveys",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16A",
+              "name": "Forming Teams Again",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16C",
+              "name": "Maximizing Minimum Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16D",
+              "name": "Pinocchio",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16L",
+              "name": "WiFi Expenses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16B",
+              "name": "Robbery 101",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16F",
+              "name": "Lost in the Cave",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16J",
+              "name": "Robots of Robin",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30729",
+              "code": "INF16K",
+              "name": "Road Maintenance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Chennai Site Onsite Round 2015",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Chennai Site Onsite Round 2015",
+          "submodule_id": 6857,
+          "contest_code": "ICPCTR12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR12/problems/CHN05",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "30723",
+              "code": "CHN05",
+              "name": "Malvika conducts a Programming Camp",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN08",
+              "name": "Crazy Malvika discovers Crazy Fibonacci function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN01",
+              "name": "Malvika conducts her own ACM-ICPC contest series",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN03",
+              "name": "Animesh practices some programming contests",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN07",
+              "name": "Malvika and Animesh play Red-Blue cards Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN02",
+              "name": "Animesh decides to settle down",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN10",
+              "name": "Animesh does not gift Malvika on her birthday",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN04",
+              "name": "Malvika gets bored along with her Cats",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN06",
+              "name": "King Animesh decides to have a voyage to the sun",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN09",
+              "name": "Malvika is peculiar about color of balloons",
+              "difficulty_rating": "988",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN11",
+              "name": "Animesh has a war with tribal leader Malvika",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30723",
+              "code": "CHN12",
+              "name": "Praveen falls from a tall tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Kolkata Site Onsite Round 2015",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Kolkata Site Onsite Round 2015",
+          "submodule_id": 6856,
+          "contest_code": "ICPCTR11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR11/problems/KOL1505",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30722",
+              "code": "KOL1505",
+              "name": "Jalebi Bai and Decks of Sweets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1504",
+              "name": "The making of a cake",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1502",
+              "name": "The Christmas Gift",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1509",
+              "name": "Save The Trees",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1506",
+              "name": "Samosa Bhai and his Courier Company",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1510",
+              "name": "The Revenge of Jalebi Bai",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1503",
+              "name": "The Parenthesis Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1508",
+              "name": "Antichains",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1507",
+              "name": "The Christmas Cookies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1501",
+              "name": "In a planet far far away",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30722",
+              "code": "KOL1511",
+              "name": "Wait for it",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Asia-Amritapuri Site Onsite Round 2015",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Asia-Amritapuri Site Onsite Round 2015",
+          "submodule_id": 6855,
+          "contest_code": "ICPCTR10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR10/problems/AMJMP",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30721",
+              "code": "AMJMP",
+              "name": "Jump on Buildings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMSS",
+              "name": "Similar Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMLPALIN",
+              "name": "Longest Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMGIT",
+              "name": "git",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMBDAY",
+              "name": "Chota Mouse and his birthday cake",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMCAS",
+              "name": "Circles and Squares",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMCAM",
+              "name": "Cat and Mouse",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMMAM",
+              "name": "Magical Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMCOINS",
+              "name": "COINS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30721",
+              "code": "AMCOP",
+              "name": "COPRIMES",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Kharagpur Onsite Regionals 2013 ",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Kharagpur Onsite Regionals 2013 ",
+          "submodule_id": 6854,
+          "contest_code": "ICPCTR09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR09/problems/KGP13B",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "30720",
+              "code": "KGP13B",
+              "name": "Olympic Village",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13F",
+              "name": "Ant Colony",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13A",
+              "name": "Election Campaign",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13I",
+              "name": "Sequence Alignment",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13G",
+              "name": "Message Coding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13C",
+              "name": "Stairway Reduction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13H",
+              "name": "Toy Exchange",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13E",
+              "name": "One-Way Roads",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13J",
+              "name": "Nomad Camp",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30720",
+              "code": "KGP13D",
+              "name": "Building Township",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Kanpur Onsite Regionals 2013",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Kanpur Onsite Regionals 2013",
+          "submodule_id": 6853,
+          "contest_code": "ICPCTR08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR08/problems/KAN13C",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "30719",
+              "code": "KAN13C",
+              "name": "Rich Rhyme",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13G",
+              "name": "Changing Money",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13A",
+              "name": "Hard Disk",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13E",
+              "name": "Chocolate Division",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13F",
+              "name": "Merging Files",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13B",
+              "name": "Walking Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13D",
+              "name": "Family of Recurrences",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13H",
+              "name": "Multi-Peg Tower of Hanoi",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30719",
+              "code": "KAN13I",
+              "name": "Rewarding the Priests",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Amritapuri Onsite Regionals 2012",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Amritapuri Onsite Regionals 2012",
+          "submodule_id": 6852,
+          "contest_code": "ICPCTR07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/icpc/ICPCTR07/problems/MSTRINGS",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "30718",
+              "code": "MSTRINGS",
+              "name": "The Mirror of Galadriel",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "LIGHTS",
+              "name": "The Glittering Caves of Aglarond",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "CBLOCKS",
+              "name": "Saruman of Many Colours",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "ATKCTR",
+              "name": "Gandalf vs the Balrog",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "FSSYNC",
+              "name": "The Loyalty of the Orcs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "PSTRINGS",
+              "name": "Dyslexic Gollum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "RNEST",
+              "name": "Escape from the Mines",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "BALL",
+              "name": "Entmoot",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "MINMAX",
+              "name": "Wormtongues Mind",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "FINDHOLES",
+              "name": "finding holes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "30718",
+              "code": "DQPERMS",
+              "name": "Denethors Decryption of Dequeue permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 283,
+  "total_non_pro_problems": 283,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Other Practice Paths",
+  "reviews": [],
+  "learners_count": 4095,
+  "path_review": {
+    "rating": 3.9,
+    "users": 57
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

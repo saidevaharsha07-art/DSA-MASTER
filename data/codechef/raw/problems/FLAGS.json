@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FLAGS",
+  "contest_category": "6",
+  "problem_name": "Counting Flags",
+  "intended_contest_code": "COOK47",
+  "body": "<p>\nMike is a famous traveler. He visits about 100 countries a year and buys the flag of each country he has been to.\n</p>\n<p>\nMike knows, that there are some flags, that correspond to one pattern, but colored in different ways. E.g. the flag of Ireland(<a href=\"http://en.wikipedia.org/wiki/File:Flag_of_Ireland.svg\">link</a>) and the flag of Belgium(<a href=\"http://en.wikipedia.org/wiki/File:Flag_of_Belgium.svg\">link</a>). In this problem we consider only <b>five</b> 2,2cm\u27151,1cm patterns of flags:\n</p>\n<p>\n<img src=\"/download/extimages/e0a288110c029176f586f6eac23b4546.jpg\" width=500 />\n</p>\n<p>\nThere are <b>N</b> different colors available to paint the flags and the colors are denoted by integers from 1 to <b>N</b>.<br />\nMike wants you to count the number of different well-painted flags. We call a flag well-painted if it's made according to the following algorithm:\n</p>\n<p><ul>\n<li>Pick up one of the flag patterns considered above;\n</li><li>Paint each one-colored polygon on the pattern in a color encoded by an integer from <b>1</b> to <b>N</b>. Different colors are encoded with different integers. If two different one-colored polygons share a common side(not corner), than they must be painted in different colors. In any other case they can be painted in both equal and different colors.\n</li></ul>\n</p>\n<p>\nTwo flags are different, if they look different(have at least one pixel painted with different color).\n</p>\n<p>\nHelp Mike!\n</p>\n<h3>Input</h3>\n<p>The first line of the input contains integer <b>T</b>, denoting the number of testcases. The description of <b>T</b> testcases follows.</p>\n<p>The only line of each test case contains integer <b>N</b>, denoting the number of different colors, that can be used while painting a flag pattern.</p>\n<p>\u00a0</p>\n<h3>Output</h3>\n<p>For each testcase, output a single line containing an integer - the answer for the corresponding query.</p>\n<p>\u00a0</p>\n<h3>Constraints</h3>\n<p>1 \u2264 <b>T</b> \u2264 10 000;</p>\n<p>1 \u2264 <b>N</b> \u2264 10 000 for each testcase.</p>\n<p>\u00a0</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n3\n1\n2\n3\n\n<b>Output:</b>\n0\n4\n42\n</pre><h3>Explanations:</h3>\n<p>\nThere are <b>four</b> different well-painted flags for <b>N</b> = 2 different colors :\n</p>\n<p>\n<img src=\"/download/extimages/57c2f54761cda108c18bd840f4638fda.jpg\" width=500 />\n</p>\n<h3>Text version of the pictures: </h3>\n<p><b>Picture 1</b></p>\n<p>\n112233<br /><br />\n112233<br /><br />\n112233\n</p>\n<p>\n111111<br /><br />\n222222<br /><br />\n333333\n</p>\n<p>\n112222<br /><br />\n112222<br /><br />\n113333\n</p>\n<p>\n122223<br /><br />\n111333<br /><br />\n144443\n</p>\n<p>\n111222<br /><br />\n333222<br /><br />\n333444\n</p>\n<p><b>Picture 2</b></p>\n<p>\n112211<br /><br />\n112211<br /><br />\n112211\n</p>\n<p>\n221122<br /><br />\n221122<br /><br />\n221122\n</p>\n<p>\n111111<br /><br />\n222222<br /><br />\n111111\n</p>\n<p>\n222222<br /><br />\n111111<br /><br />\n222222\n</p>\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\nMike is a famous traveler. He visits about 100 countries a year and buys the flag of each country he has been to.\n</p>\n<p>\nMike knows, that there are some flags, that correspond to one pattern, but colored in different ways. E.g. the flag of Ireland(<a href=\"http://en.wikipedia.org/wiki/File:Flag_of_Ireland.svg\" rel=\"nofollow\">link</a>) and the flag of Belgium(<a href=\"http://en.wikipedia.org/wiki/File:Flag_of_Belgium.svg\" rel=\"nofollow\">link</a>). In this problem we consider only <b>five</b> 2,2cm\u27151,1cm patterns of flags:\n</p>\n<p>\n<img src=\"/download/extimages/e0a288110c029176f586f6eac23b4546.jpg\" width=\"500\" alt=\"e0a288110c029176f586f6eac23b4546.jpg\" /></p>\n<p>\nThere are <b>N</b> different colors available to paint the flags and the colors are denoted by integers from 1 to <b>N</b>.<br />\nMike wants you to count the number of different well-painted flags. We call a flag well-painted if it's made according to the following algorithm:\n</p>\n<p></p><ul><li>Pick up one of the flag patterns considered above;\n</li><li>Paint each one-colored polygon on the pattern in a color encoded by an integer from <b>1</b> to <b>N</b>. Different colors are encoded with different integers. If two different one-colored polygons share a common side(not corner), than they must be painted in different colors. In any other case they can be painted in both equal and different colors.\n</li></ul><p>\nTwo flags are different, if they look different(have at least one pixel painted with different color).\n</p>\n<p>\nHelp Mike!\n</p>\n<h3>Text version of the pictures: </h3>\n<p><b>Picture 1</b></p>\n<p>\n112233<br /><br />\n112233<br /><br />\n112233\n</p>\n<p>\n111111<br /><br />\n222222<br /><br />\n333333\n</p>\n<p>\n112222<br /><br />\n112222<br /><br />\n113333\n</p>\n<p>\n122223<br /><br />\n111333<br /><br />\n144443\n</p>\n<p>\n111222<br /><br />\n333222<br /><br />\n333444\n</p>\n<p><b>Picture 2</b></p>\n<p>\n112211<br /><br />\n112211<br /><br />\n112211\n</p>\n<p>\n221122<br /><br />\n221122<br /><br />\n221122\n</p>\n<p>\n111111<br /><br />\n222222<br /><br />\n111111\n</p>\n<p>\n222222<br /><br />\n111111<br /><br />\n222222\n</p>\n<h3>Input</h3>\n<p>The first line of the input contains integer <b>T</b>, denoting the number of testcases. The description of <b>T</b> testcases follows.</p>\n<p>The only line of each test case contains integer <b>N</b>, denoting the number of different colors, that can be used while painting a flag pattern.</p>\n<p>\u00a0</p>\n<h3>Output</h3>\n<p>For each testcase, output a single line containing an integer - the answer for the corresponding query.</p>\n<p>\u00a0</p>\n<h3>Constraints</h3>\n<p>1 \u2264 <b>T</b> \u2264 10 000;</p>\n<p>1 \u2264 <b>N</b> \u2264 10 000 for each testcase.</p>\n<p>\u00a0</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1\n2\n3",
+        "output": "0\n4\n42",
+        "explanation": "<p>\nThere are <b>four</b> different well-painted flags for <b>N</b> = 2 different colors :\n</p>\n<p>\n<img src=\"/download/extimages/57c2f54761cda108c18bd840f4638fda.jpg\" width=\"500\" alt=\"57c2f54761cda108c18bd840f4638fda.jpg\" /></p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 5963,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kostya_by",
+  "problem_display_authors": [
+    "kostya_by"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kostya_by'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>kostya_by</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "rustinpiece"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/rustinpiece'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>rustinpiece</span></a></div>",
+  "problem_editorialist": "dpraveen",
+  "date_added": "31-05-2014",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "1446",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610846
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FLAGS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 16,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

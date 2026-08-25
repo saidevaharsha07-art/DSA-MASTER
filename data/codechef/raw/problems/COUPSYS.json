@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COUPSYS",
+  "contest_category": "6",
+  "problem_name": "Coupon System",
+  "intended_contest_code": null,
+  "body": "<p>Chef is organizing an exam for certifying algorithmic skills. The exam will consist of three levels: 1, 2 and 3, and will be organized at various cities numbered from 1 to 100.</p>\n\n<p>You have received <b>n</b> coupons which give discounts for the exam. Each coupon can be applied for a particular city, for a given level and will provide a certain discount.</p> \n\n<p>You want to attempt all the three levels of the exam, and you are willing to go to different cities to avail the maximum discount. So, for each level, find out the maximum discount that you can avail, and which city you'd need to go to to do so. If there are multiple such cities, choose the city that has the least number. That is, if the discounts are same, city i is preferable over city j, if i < j.</p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of the input contains a single integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</li>\n<li>The first line of each test case contains a single integer <b>n</b> denoting the number of coupons.</li>\n<li>Each of the next <b>n</b> lines contains three space-separated integers city <b>c</b>, level <b>l</b> and discount <b>x</b> applicable in the i-th coupon.</li>\n</ul>\n\n<h3>Output</h3>\n<p>For each test case, output three lines. The first line should contain two space-separated integers: maximum discount for level 1, and the city where you can avail this discount. In case of ties, find the smallest numbered such city. Similarly, second and third line should contain similar info for second and third levels.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 100</li>\n<li>3 \u2264 <b>n</b> \u2264 100</li>\n<li>1 \u2264 <b>c</b> \u2264 100</li>\n<li>1 \u2264 <b>l</b> \u2264 3</li>\n<li>1 \u2264 <b>x</b> \u2264 100</li>\n<li>It is guaranteed that for each level, there will at least one coupon.</li>\n</ul>\n\n<h3>Example</h3>\n<pre>\n<b>Input</b>\n1\n7\n2 1 10\n1 1 20\n3 2 100\n2 3 50\n2 2 100\n5 3 75\n100 3 75\n\n<b>Output</b>\n20 1\n100 2\n75 5\n</pre>\n\n<h3>Explanation</h3>\n<p>For Level 1, there are two discount coupons, which give a discount of 10 and 20 respectively. We choose the maximum, and that is for city 1. Hence the first line of output is \"20 1\".</p>\n\n\n<p>For Level 2, there are two discount coupons, both of which give a discount of 100. We choose the one which is for the city with the smaller number, and that is for city 2. Hence the second line of output is \"100 2\".</p>\n\n<p>For Level 3, there are three discount coupons, which give discounts of 50, 75 and 75. The maximum discount is 75, and so that leaves us with two coupons to decide from. We choose the one which is for the city with the smaller number, and that is for city 5. Hence the third line of output is \"75 5\".</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 \u2264 **T** \u2264 100\n- 3 \u2264 **n** \u2264 100\n- 1 \u2264 **c** \u2264 100\n- 1 \u2264 **l** \u2264 3\n- 1 \u2264 **x** \u2264 100\n- It is guaranteed that for each level, there will at least one coupon.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef is organizing an exam for certifying algorithmic skills. The exam will consist of three levels: 1, 2 and 3, and will be organized at various cities numbered from 1 to 100.\n\nYou have received **n** coupons which give discounts for the exam. Each coupon can be applied for a particular city, for a given level and will provide a certain discount.\n\nYou want to attempt all the three levels of the exam, and you are willing to go to different cities to avail the maximum discount. So, for each level, find out the maximum discount that you can avail, and which city you'd need to go to to do so. If there are multiple such cities, choose the city that has the least number. That is, if the discounts are same, city i is preferable over city j, if i < j.\n",
+    "inputFormat": "- The first line of the input contains a single integer **T** denoting the number of test cases. The description of **T** test cases follows.\n- The first line of each test case contains a single integer **n** denoting the number of coupons.\n- Each of the next **n** lines contains three space-separated integers city **c**, level **l** and discount **x** applicable in the i-th coupon.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output three lines. The first line should contain two space-separated integers: maximum discount for level 1, and the city where you can avail this discount. In case of ties, find the smallest numbered such city. Similarly, second and third line should contain similar info for second and third levels.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n7\n2 1 10\n1 1 20\n3 2 100\n2 3 50\n2 2 100\n5 3 75\n100 3 75\n",
+        "output": "20 1\n100 2\n75 5\n",
+        "explanation": "For Level 1, there are two discount coupons, which give a discount of 10 and 20 respectively. We choose the maximum, and that is for city 1. Hence the first line of output is \"20 1\".\n\nFor Level 2, there are two discount coupons, both of which give a discount of 100. We choose the one which is for the city with the smaller number, and that is for city 2. Hence the second line of output is \"100 2\".\n\nFor Level 3, there are three discount coupons, which give discounts of 50, 75 and 75. The maximum discount is 75, and so that leaves us with two coupons to decide from. We choose the one which is for the city with the smaller number, and that is for city 5. Hence the third line of output is \"75 5\".\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "https://youtu.be/IDdZ2GMQ81c",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/COUPSYS\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/GWR17ROL/problems/COUPSYS\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Author:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a><br>\n<strong>Testers:</strong> <a href=\"https://www.codechef.com/users/mgch\" rel=\"nofollow noopener\">Misha Chorniy</a><br>\n<strong>Editorialist:</strong> <a href=\"https://www.codechef.com/users/dpraveen\" rel=\"nofollow noopener\">Praveen Dhinwa</a></p>\n<h3>DIFFICULTY:</h3>\n<p>cakewalk</p>\n<h3>PREREQUISITES:</h3>\n<p>none</p>\n<h3>PROBLEM:</h3>\n<p>An exam can be of three levels, level 1, 2 and 3. There are n exams being conducted, each exam will be conducted in a particular city, for a particular level and provide a fixed discount.</p>\n<p>For each level, you have to provide maximum discount you can obtain and find the city in which this discount is applicable. If there are more than one cities for a discount, choose the city with less index.</p>\n<h3>SOLUTION</h3>\n<p>The solution is to iterate over all the exams and maintain for each level, what is the maximum discount you can get, and update it for each exam.</p>\n<pre><code>int n;\nscanf(\"%d\", &amp;n);\nvector&lt;int&gt; which_city(3, (int) 1e9), maxDiscounts(3);\nfor (int i = 0; i &lt; n; i++) {\n\tint city, level, discount;\n\tscanf(\"%d %d %d\", &amp;city, &amp;level, &amp;discount);\n\tlevel--;\n\tif (discount &gt; maxDiscounts[level]) {\n\t\tmaxDiscounts[level] = discount;\n\t\twhich_city[level] = city;\n\t} else if (discount == maxDiscounts[level]) {\n\t\tmaxDiscounts[level] = discount;\n\t\twhich_city[level] = min(which_city[level], city);\n\t}\n}\nfor (int level = 0; level &lt; 3; level++) {\n\tprintf(\"%d %d\\n\", maxDiscounts[level], which_city[level]);\n}\n</code></pre>\n<h3>Setters and Tester Solution Codes</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/17128244\" rel=\"nofollow noopener\">Setter\u2019s solution</a><br>\n<a href=\"https://www.codechef.com/viewsolution/17128248\" rel=\"nofollow noopener\">Tester\u2019s solution</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17713,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "14-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/COUPSYS",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610703
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COUPSYS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

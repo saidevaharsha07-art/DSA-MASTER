@@ -1,0 +1,126 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LNDNCK",
+  "contest_category": "6",
+  "problem_name": "Nicks Landing",
+  "intended_contest_code": null,
+  "body": "In a city called *Nick's Landing*, there are $N$ people (numbered $1$ through $N$). For each valid $i$, the $i$-th person has beauty $B_i$ and politeness $P_i$; no two people are equally beautiful.\r\n\r\nYou should answer $Q$ queries. In each query you are given two integers $L$ and $R$, and you should calculate $Score(L, R)$ as defined below:\r\n\r\n```\r\n        Score (L, R) :\r\n            Initialize empty Lists Q, OddQ, EvenQ\r\n            For each person with id between [L, R] : \r\n                add his id to List Q\r\n            Sort Q in increasing order of the beauty value of the persons\r\n            Flag = 0;\r\n            For each person's id in Q : \r\n                Flag = 1 - Flag\r\n                If (Flag == 1) append his id to List OddQ\r\n                Else append his id to List EvenQ  \r\n            Return DiffSum (OddQ) + DiffSum (EvenQ)\r\n\r\n        DiffSum (Z[1...n]) :\r\n            Sum = 0\r\n            For i = 2 to n :\r\n                u = Z[i]\r\n                v = Z[i - 1]\r\n                Sum = Sum + |P[u] - P[v]|\r\n            Return Sum\r\n```\r\n\r\n### Input\r\n- The first line of the input contains a single integer $N$. \r\n- Each of the next $N$ lines contains two space-separated integers $B_i$ and $P_i$.\r\n- The next line contains a single integer $Q$.\r\n- Each of the next $Q$ lines contains two space-separated integers $L$ and $R$ describing a query.\r\n\r\n### Output\r\nFor each query, print a single integer(answer to the query) in a single line.\r\n\r\n### Constraints \r\n- $1 \\le N, Q \\le 2 \\cdot 10^5$\r\n- $1 \\le B_i, P_i \\le 2 \\cdot 10^5$\r\n- $1 \\le L \\le R \\le N$\r\n- All beauty values are **distinct**.\r\n\r\n### Example Input\r\n```\r\n6\r\n2 1\r\n4 6\r\n1 4\r\n3 10\r\n6 4\r\n5 8\r\n5\r\n1 3\r\n1 6\r\n3 6\r\n2 5\r\n4 4\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n15\r\n10\r\n8\r\n0\r\n```\r\n\t\r\n### Explanation\r\nFor the $2$-nd query, $Q= \\{1, 2, 3, 4, 5, 6\\}$.\r\n\r\nIf we sort them according to the persons's beauty value, then $Q =\\{3, 1, 4, 2, 6, 5\\}.$\r\n\r\nNow, $OddQ = \\{3, 4, 6\\}$ and $EvenQ = \\{1, 2, 5\\}$\r\n \r\nSo, $DiffSum$ $(OddQ) = $ |$P_3$ - $P_4$| $+$ |$P_4$ - $P_6$|  $=$ $6 + 2$ $=$ $8.$  \r\n\r\nSimiliarly, $DiffSum$ $(EvenQ) =$ |$P_1$ - $P_2$| $+$ |$P_2$ - $P_5$|  $=$ $5 + 2$ $=$ $7.$  \r\n\r\nSo $Score = 7 + 8 = 15.$\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le N, Q \\le 2 \\cdot 10^5$\n- $1 \\le B_i, P_i \\le 2 \\cdot 10^5$\n- $1 \\le L \\le R \\le N$\n- All beauty values are **distinct**.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In a city called *Nick's Landing*, there are $N$ people (numbered $1$ through $N$). For each valid $i$, the $i$-th person has beauty $B_i$ and politeness $P_i$; no two people are equally beautiful.\n\nYou should answer $Q$ queries. In each query, you are given two integers $L$ and $R$, and you should calculate $Score(L, R)$ as defined below:\n\n```\nScore (L, R) :\n    Initialize empty Lists Q, OddQ, EvenQ\n    For each person with id between [L, R] : \n        add his id to List Q\n    Sort Q in increasing order of the beauty value of the persons\n    Flag = 0;\n    For each person's id in Q : \n        Flag = 1 - Flag\n        If (Flag == 1) append his id to List OddQ\n        Else append his id to List EvenQ  \n    Return DiffSum (OddQ) + DiffSum (EvenQ)\n\nDiffSum (Z[1...n]) :\n    Sum = 0\n    For i = 2 to n :\n        u = Z[i]\n        v = Z[i - 1]\n        Sum = Sum + |P[u] - P[v]|\n    Return Sum\n```\n",
+    "inputFormat": "- The first line of the input contains a single integer $N$. \n- Each of the next $N$ lines contains two space-separated integers $B_i$ and $P_i$.\n- The next line contains a single integer $Q$.\n- Each of the next $Q$ lines contains two space-separated integers $L$ and $R$ describing a query.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each query, print a single integer (answer to the query) in a single line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "6\n2 1\n4 6\n1 4\n3 10\n6 4\n5 8\n5\n1 3\n1 6\n3 6\n2 5\n4 4\n",
+        "output": "2\n15\n10\n8\n0\n",
+        "explanation": "For the $2$-nd query, $Q= \\{1, 2, 3, 4, 5, 6\\}$.\n\nIf we sort them according to the persons's beauty value, then $Q =\\{3, 1, 4, 2, 6, 5\\}.$\n\nNow, $OddQ = \\{3, 4, 6\\}$ and $EvenQ = \\{1, 2, 5\\}$\n\nSo, $DiffSum$ $(OddQ) = $ |$P_3$ - $P_4$| $+$ |$P_4$ - $P_6$|  $=$ $6 + 2$ $=$ $8.$  \n\nSimilarly, $DiffSum$ $(EvenQ) =$ |$P_1$ - $P_2$| $+$ |$P_2$ - $P_5$|  $=$ $5 + 2$ $=$ $7.$  \n\nSo $Score = 7 + 8 = 15.$\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "6",
+  "source_sizelimit": "50000",
+  "problem_author": "msi_cse_buet",
+  "problem_display_authors": [
+    "msi_cse_buet"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/msi_cse_buet'>msi_cse_buet</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Square Root Decomposition",
+    "Sorting",
+    "Offline Queries"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Algorithms",
+    "Queries"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611022
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LNDNCK",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

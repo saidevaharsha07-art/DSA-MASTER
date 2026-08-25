@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16H",
+  "contest_category": "6",
+  "problem_name": "Mr Wireless",
+  "intended_contest_code": null,
+  "body": "<p>Mr. Wire Less is not that good at implementing circuit in a breadboard. In his Digital Logic Design course, he has to implement several boolean functions using the breadboard. In a breadboard, inputs are given through the switches and outputs are taken through the LEDs. Each input switch can be either in ground state or in high state. So, if he wishes to implement a boolean function, <b>f(x<sub>1</sub>, x<sub>2</sub>, .., x<sub>n</sub>)</b> that takes <b>n</b> boolean values as input and returns <b>m</b> boolean values as output, he will use <b>n</b> switches and <b>m</b> LEDs. </p>\n\n<p>Mr. Wire Less can quickly assemble the necessary ICs and wires, but the key problem is testing. While testing he has to check with all possible input combination, to make sure whether the output of LED corresponds to the expected output or not. This is taking too long for him, as most of the switches are jammed and difficult to toggle. </p>\n\n<p>Mr. Wire Less is asking for help to minimize his time of testing. So, your task is to minimize the total number of switch-toggle throughout the testing.</p>\n\n<p>For example, if Mr. Wire Less has to test a function <b>f(x0, x1)</b> of two variables, he may choose this switching-sequence for testing <b>00, 11, 10, 01</b>. In this case, the total number of switch-toggle will be <b>2+1+2 = 5</b>. But if he tests in this sequence <b>00, 10, 11, 01</b> total number of toggle will be <b>1+1+1 = 3</b>.</p>\n\n<p>Given <b>n</b>, you have to output the minimum number of toggle needed for complete testing. Though it seems impractical, he wants you to solve the problem for a very large value of <b>n</b>. But, then the toggle value can be quite big. So, he is completely okay with the toggle value modulo <b>8589934592 (2<sup>33</sup>)</b>.</p>\u2028\u2028<h3>Input</h3>\n<p>The first line of the input contains a positive integer <b>T(T \u2264 10<sup>5</sup>)</b>, denoting the number of test-case. Each of the following <b>T</b> lines contains a single non-negative integer <b>n(n \u2264 10<sup>20</sup>)</b>.<p>\n\n<h3>Output</h3>\n<p>For every test-case, output a single containing test-case number and the minimum number of switch-toggle modulo <b>8589934592 (2<sup>33</sup>)</b>.</p>\n\n\n<h3>Sample</h3> <pre><b>Input</b>   \n2\n1\n2\n\n<b>Output</b>\nCase 1: 1\nCase 2: 3\n</p></pre>\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10^5$\n- $0 \\leq n \\leq 10^{20}$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Mr. Wire Less is not that good at implementing circuits on a breadboard. In his Digital Logic Design course, he has to implement several boolean functions using the breadboard. In a breadboard, inputs are given through switches and outputs are taken through LEDs. Each input switch can be either in the ground state or in the high state. So, if he wishes to implement a boolean function, $f(x_1, x_2, \\dots, x_n)$ that takes $n$ boolean values as input and returns $m$ boolean values as output, he will use $n$ switches and $m$ LEDs.\n\nMr. Wire Less can quickly assemble the necessary ICs and wires, but the key problem is testing. While testing, he has to check with all possible input combinations to ensure that the output of the LED corresponds to the expected output. This is taking too long for him, as most of the switches are jammed and difficult to toggle.\n\nMr. Wire Less is asking for help to minimize his time of testing. So, your task is to minimize the total number of switch toggles throughout the testing.\n\nFor example, if Mr. Wire Less has to test a function $f(x_0, x_1)$ of two variables, he may choose this switching sequence for testing: $00, 11, 10, 01$. In this case, the total number of switch toggles will be $2 + 1 + 2 = 5$. But if he tests in this sequence: $00, 10, 11, 01$, the total number of toggles will be $1 + 1 + 1 = 3$.\n\nGiven $n$, you have to output the minimum number of toggles needed for complete testing. Though it seems impractical, he wants you to solve the problem for a very large value of $n$. But, then the toggle value can be quite big. So, he is completely okay with the toggle value modulo $8589934592 (2^{33})$.\n",
+    "inputFormat": "The first line of the input contains a positive integer $T (T \\leq 10^5)$, denoting the number of test cases. Each of the following $T$ lines contains a single non-negative integer $n (n \\leq 10^{20})$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For every test case, output a single line containing the test case number and the minimum number of switch toggles modulo $8589934592 (2^{33})$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1\n2\n",
+        "output": "Case 1: 1\nCase 2: 3\n",
+        "explanation": "For the first test case, when $n = 1$, the minimum number of toggles required is $1$. For the second test case, when $n = 2$, the minimum number of toggles required is $3$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16H\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16H\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>EASY</p>\n<h3>PREREQUISITES:</h3>\n<p>Binary, Gray code</p>\n<h3>PROBLEM:</h3>\n<p>Given a number of binary inputs switches <span class=\"math\">n</span>, determine the number of switch flips required to go through all <span class=\"math\">2^n</span> input configurations.</p>\n<h3>EXPLANATION:</h3>\n<p>It is always possible to enumerate all <span class=\"math\">2^n</span> input configurations with just 1 flip between two consecutive configurations. Such a sequence is called <em>unit distance code</em> for obvious reasons, otherwise known as the <a href=\"https://en.wikipedia.org/wiki/Gray_code\" rel=\"nofollow noopener\">Gray code</a>. Hence by following the Gray code, it is possible to go through all configurations with <span class=\"math\">2^n-1</span> moves, and clearly it is impossible to do better than that.</p>\n<p>However <span class=\"math\">n</span> can be at most <span class=\"math\">10^{20}</span>, so calculating <span class=\"math\">2^n-1</span> is not a good idea. The way out lies in the fact that the problem asks for the answer modulo <span class=\"math\">2^{33}</span>. We need to use two observations about binary numbers:</p>\n<ol>\n<li>In binary, <span class=\"math\">x</span> modulo <span class=\"math\">2^b</span> is simply the lowest <span class=\"math\">b</span> bits of <span class=\"math\">x</span>.</li>\n<li>In binary, <span class=\"math\">2^b-1</span> contains only the bit <span class=\"math\">1</span> repeated <span class=\"math\">b</span> times.</li>\n</ol>\n<p>So, if <span class=\"math\">n &gt; 33</span>, the answer will be <span class=\"math\">1</span> repeated <span class=\"math\">&gt;33</span> times in binary. And that number modulo <span class=\"math\">2^{33}</span> will be just the lowest <span class=\"math\">33</span> bits, which are all <span class=\"math\">1</span>! This is nothing but the number <span class=\"math\">2^{33}-1</span>.<br>\nConcluding, if <span class=\"math\">n &lt; 33</span> the answer is <span class=\"math\">2^n-1</span>, and otherwise the answer is <span class=\"math\">2^{33}-1</span>.</p>\n<p>Complexity is <span class=\"math\">\\mathcal{O}(1)</span>.<br>\nPS: The time limit is set to 2 sec, perhaps to confuse people? <img src=\"https://discuss.codechef.com/images/emoji/apple/stuck_out_tongue.png?v=9\" title=\":stuck_out_tongue:\" class=\"emoji\" alt=\":stuck_out_tongue:\"></p>\n<h3>EDITORIALIST\u2019S SOLUTIONS:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16H.py\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17232,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Gray code"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number System",
+    "Binary"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16H",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610970
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

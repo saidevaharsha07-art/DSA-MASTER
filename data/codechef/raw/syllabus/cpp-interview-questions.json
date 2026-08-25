@@ -1,0 +1,1606 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "cpp-interview-questions",
+  "name": "C++ Interview Questions and Answers",
+  "title": "C++ Interview Questions and Answers",
+  "level": "Beginner",
+  "description": "Revise all the important concepts of C++ and prepare yourself for the interviews. Check explanation of the questions if you are not able to solve them and learn new concepts.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP01/problems/CPPMCQ01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic C++ Syntax and Concepts",
+      "description": "The fundamental building blocks of C++ programming. Includes core language elements and structures used to write C++ code.",
+      "submodules": [
+        {
+          "name": "Basic C++ Syntax and Concepts",
+          "submodule_id": 6038,
+          "contest_code": "CPPPREP01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP01/problems/CPPMCQ01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ01",
+              "name": "Data Type Selection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ02",
+              "name": "Operator Precedence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ03",
+              "name": "Control Structure Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ04",
+              "name": "Loop Execution",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ05",
+              "name": "Function Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ06",
+              "name": "Variable Scope",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ07",
+              "name": "Switch Statement Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ08",
+              "name": "Reference Variable",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ09",
+              "name": "Const Keyword Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29503",
+              "code": "CPPMCQ10",
+              "name": "Ternary Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Object-Oriented Programming (OOP) Basics",
+      "description": "A programming paradigm based on the concept of \"objects\" containing data and code. It focuses on creating reusable and modular code through classes and objects.",
+      "submodules": [
+        {
+          "name": "Object-Oriented Programming (OOP)",
+          "submodule_id": 6039,
+          "contest_code": "CPPPREP02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP02/problems/CPPMCQ11",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ11",
+              "name": "Class Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ12",
+              "name": "Object Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ13",
+              "name": "Access Specifiers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ14",
+              "name": "Inheritance Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ15",
+              "name": "Virtual Functions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ16",
+              "name": "Constructor Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ17",
+              "name": "Polymorphism Type",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ18",
+              "name": "Encapsulation Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ19",
+              "name": "Multiple Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29504",
+              "code": "CPPMCQ20",
+              "name": "Pure Virtual Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Memory Management",
+      "description": "The process of allocating, using, and freeing memory in C++ programs. Involves understanding how memory is organized and handled during program execution.",
+      "submodules": [
+        {
+          "name": "Memory Management",
+          "submodule_id": 6040,
+          "contest_code": "CPPPREP03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP03/problems/CPPMCQ21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ21",
+              "name": "Memory Allocation Location",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ22",
+              "name": "Dynamic Memory Allocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ23",
+              "name": "Memory Deallocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ24",
+              "name": "Smart Pointer Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ25",
+              "name": "Shared Ownership",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ26",
+              "name": "Array Deallocation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ27",
+              "name": "Stack vs Heap Performance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ28",
+              "name": "Weak Pointer Purpose",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ29",
+              "name": "Memory Leak Identification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29505",
+              "code": "CPPMCQ30",
+              "name": "Smart Pointer Creation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Exception Handling",
+      "description": "A mechanism for dealing with runtime errors or exceptional situations in programs. Allows for graceful error handling and recovery in C++ applications.",
+      "submodules": [
+        {
+          "name": "Exception Handling",
+          "submodule_id": 6041,
+          "contest_code": "CPPREP04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPREP04/problems/CPPMCQ31",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ31",
+              "name": "Exception Handling Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ32",
+              "name": "Exception Throwing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ33",
+              "name": "Exception Catching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ34",
+              "name": "Custom Exception Class",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ35",
+              "name": "Exception Propagation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ36",
+              "name": "Multiple Catch Blocks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ37",
+              "name": "Nested Try-Catch",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ38",
+              "name": "Rethrowing Exceptions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ39",
+              "name": "Exception Specification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29506",
+              "code": "CPPMCQ40",
+              "name": "Stack Unwinding",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "File I/O",
+      "description": "Input/Output operations for reading from and writing to files in C++. Enables programs to interact with external data stored in files on the computer.",
+      "submodules": [
+        {
+          "name": "File IO",
+          "submodule_id": 6042,
+          "contest_code": "CPPPREP05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP05/problems/CPPMCQ41",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ41",
+              "name": "File Opening Mode",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ42",
+              "name": "File Stream Classes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ43",
+              "name": "Closing a File",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ44",
+              "name": "Reading from a File",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ45",
+              "name": "Writing to a File",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ46",
+              "name": "Checking File Open Status",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ47",
+              "name": "End of File Detection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ48",
+              "name": "File Position",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ49",
+              "name": "Binary File Operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29507",
+              "code": "CPPMCQ50",
+              "name": "Stream Error Handling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Pointers and References",
+      "description": "Variables that store memory addresses, allowing direct memory manipulation. Essential for dynamic memory allocation and efficient data handling in C++.",
+      "submodules": [
+        {
+          "name": "Pointers and References",
+          "submodule_id": 6043,
+          "contest_code": "CPPPREP06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP06/problems/CPPMCQ51",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ51",
+              "name": "Pointer Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ52",
+              "name": "Reference Variable Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ53",
+              "name": "Pointer Dereferencing",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ54",
+              "name": "Address-of Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ55",
+              "name": "Pointer Arithmetic",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ56",
+              "name": "Const References",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ57",
+              "name": "Null Pointer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ58",
+              "name": "Pointer to Pointer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ59",
+              "name": "Reference vs Pointer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29508",
+              "code": "CPPMCQ60",
+              "name": "Array Decay",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Standard Template Library (STL)",
+      "description": "A collection of powerful, reusable components in C++. Provides efficient implementations of commonly used data structures and algorithms.",
+      "submodules": [
+        {
+          "name": "Standard Template Library (STL)",
+          "submodule_id": 6044,
+          "contest_code": "CPPPREP07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP07/problems/CPPMCQ61",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ61",
+              "name": "Vector Capacity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ62",
+              "name": "Map Key Uniqueness",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ63",
+              "name": "Iterator Invalidation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ64",
+              "name": "Algorithm Complexity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ65",
+              "name": "Container Adaptor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ66",
+              "name": "Algorithm Predicate",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ67",
+              "name": "List vs Vector",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ68",
+              "name": "Iterator Category",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ69",
+              "name": "Algorithm Efficiency",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29509",
+              "code": "CPPMCQ70",
+              "name": "Container Element Requirements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Const Correctness",
+      "description": "A principle in C++ for using the 'const' keyword to prevent unintended modifications. Helps in writing more robust and error-free code.",
+      "submodules": [
+        {
+          "name": "Const Correctness",
+          "submodule_id": 6045,
+          "contest_code": "CPPPREP08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP08/problems/CPPMCQ71",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ71",
+              "name": "Const Variable Modification",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ72",
+              "name": "Const Member Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ73",
+              "name": "Const Pointer Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ74",
+              "name": "Const Reference Parameter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ75",
+              "name": "Mutable Keyword",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ76",
+              "name": "Const Iterator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ77",
+              "name": "Const Cast",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ78",
+              "name": "Logical Constness",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ79",
+              "name": "Const Function Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29510",
+              "code": "CPPMCQ80",
+              "name": "Const Member Function Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Virtual Functions and Abstract Classes",
+      "description": "Mechanisms for achieving runtime polymorphism in C++. Allows for creating interfaces and implementing method overriding in derived classes.",
+      "submodules": [
+        {
+          "name": "Virtual Functions and Abstract Classes",
+          "submodule_id": 6046,
+          "contest_code": "CPPPREP09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP09/problems/CPPMCQ81",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ81",
+              "name": "Virtual Function Behavior",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ82",
+              "name": "Pure Virtual Function Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ83",
+              "name": "Abstract Class Definition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ84",
+              "name": "Virtual Destructor Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ85",
+              "name": "Interface Implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ86",
+              "name": "Virtual Function Table",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ87",
+              "name": "Abstract Class Instantiation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ88",
+              "name": "Override Keyword Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ89",
+              "name": "Virtual Inheritance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29511",
+              "code": "CPPMCQ90",
+              "name": "Pure Virtual Destructor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Templates",
+      "description": "A feature that allows writing generic, type-independent code in C++. Enables creating flexible functions and classes that work with different data types.",
+      "submodules": [
+        {
+          "name": "Templates",
+          "submodule_id": 6047,
+          "contest_code": "CPPPREP10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP10/problems/CPPMCQ91",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ91",
+              "name": "Template Syntax",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ92",
+              "name": "Function Template Usage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ93",
+              "name": "Class Template Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ94",
+              "name": "Template Specialization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ95",
+              "name": "Non-Type Template Parameters",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ96",
+              "name": "Template Parameter Deduction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ97",
+              "name": "Variadic Templates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ98",
+              "name": "Template Metaprogramming",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ99",
+              "name": "Template Instantiation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29513",
+              "code": "CPPMCQ100",
+              "name": "Template Type Constraints",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Operator Overloading",
+      "description": "The ability to redefine the behavior of operators for user-defined types. Allows custom types to behave like built-in types in expressions.",
+      "submodules": [
+        {
+          "name": "Operator Overloading",
+          "submodule_id": 6048,
+          "contest_code": "CPPPREP11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP11/problems/CPPMCQ101",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ101",
+              "name": "Operator Overloading Basics",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ102",
+              "name": "Syntax for Operator Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ103",
+              "name": "Friend Function for Operator Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ104",
+              "name": "Overloading Stream Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ105",
+              "name": "Overloading Assignment Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ106",
+              "name": "Overloading Increment/Decrement Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ107",
+              "name": "Overloading Comparison Operators",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ108",
+              "name": "Overloading Subscript Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ109",
+              "name": "Overloading Function Call Operator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29514",
+              "code": "CPPMCQ110",
+              "name": "Limitations of Operator Overloading",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Namespaces",
+      "description": "A feature to organize code into logical groups and prevent name collisions. Helps in managing large codebases and avoiding naming conflicts in C++.",
+      "submodules": [
+        {
+          "name": "Namespaces",
+          "submodule_id": 6049,
+          "contest_code": "CPPPREP12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/cpp-interview-questions/CPPPREP12/problems/CPPMCQ111",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ111",
+              "name": "Namespace Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ112",
+              "name": "Accessing Namespace Members",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ113",
+              "name": "Using Directive",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ114",
+              "name": "Nested Namespaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ115",
+              "name": "Anonymous Namespaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ116",
+              "name": "Namespace Alias",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ117",
+              "name": "Using Declaration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ118",
+              "name": "Namespace and ODR",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ119",
+              "name": "Inline Namespaces",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "29515",
+              "code": "CPPMCQ120",
+              "name": "Namespace Pitfall",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 120,
+  "total_non_pro_problems": 20,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "42",
+    "name": "Learn C++",
+    "title": "Learn C++",
+    "slug": "cpp",
+    "description": "Learn the basics of C++ programming language with our practice oriented course. You will get to write code in our online editor from the first lesson itself and test your knowledge.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.7,
+      "users": 30778
+    },
+    "learners_count": 160725,
+    "lessons_count": 41
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "2884700",
+      "fullname": "Chandana N M",
+      "review": "Awesome! I am very excited and happy to do this. As a beginner, this is a very useful platform to practice from the basics on our own. I used an AI tool to rectify my mistakes, and it has helped and guided me. Thank you!",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "chandana_126",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 3261,
+  "path_review": {
+    "rating": 4.6,
+    "users": 404
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/cpp-development",
+  "roadmap_title": "C++ Developer Roadmap"
+}

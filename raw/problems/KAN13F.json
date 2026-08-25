@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13F",
+  "contest_category": "6",
+  "problem_name": "Merging Files",
+  "intended_contest_code": null,
+  "body": "<p>In olden days, when primary memory was not as available as it is now, files were stored in external storage devices like tapes, and then two files or their parts were loaded in memory for merging. In merging two sorted files, in the worst case, number of comparisons required equals sum of lengths of the two files. Assume in <b>K</b>-way merging the number of comparisons equals sum of lengths of files to be merged. Given length of a set of files you are required to find order in which these files will have to be merged in minimum number of comparisons.</p>\n<h3>Input</h3>\n<p>The first line of input is an integer <b>T</b>, denoting the number of test cases. </p>\n<p>From the next line, test cases follow. For each case, the first line contains two integers, <b>N</b> and <b>K</b>, representing respectively number of files to be merged and maximum number of files that can be merged at the same time. Next line contains <b>N</b> positive integers representing the length of each file.\u00a0</p>\n<h3>Output</h3>\n<p>For each test case, you must print a single line with the test case number and the minimum number of comparisons incurred to merge the files. Please refer to the sample input and output for exact formatting.</p>\n<h3>Constraints</h3>\n<p>1 &lt;= <b>T</b> &lt;= 50</p>\n<p>1 &lt;= <b>N</b> &lt;= 1000</p>\n<p>2 &lt;= <b>K</b> &lt;= <b>N</b></p>\n<p>The maximum length of a file can be 10^8.</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n11 2\n3 1 4 5 2 7 6 8 3 9 4\n11 3\n3 1 4 5 2 7 6 8 3 9 4\n\n<b>Output:</b>\nCase 1: 172\nCase 2: 110\n\n</pre>\n<p><b>\n<p>Problem Setter : Dr. M. Kaykobad</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "1 <= **T** <= 50\n\n1 <= **N** <= 1000\n\n2 <= **K** <= **N**\n\nThe maximum length of a file can be 10^8.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In olden days, when primary memory was not as available as it is now, files were stored in external storage devices like tapes, and then two files or their parts were loaded in memory for merging. In merging two sorted files, in the worst case, the number of comparisons required equals the sum of the lengths of the two files. Assume in **K**-way merging the number of comparisons equals the sum of the lengths of files to be merged. Given the length of a set of files, you are required to find the order in which these files will have to be merged in the minimum number of comparisons.\n",
+    "inputFormat": "The first line of input is an integer **T**, denoting the number of test cases. \n\nFrom the next line, test cases follow. For each case, the first line contains two integers, **N** and **K**, representing respectively the number of files to be merged and the maximum number of files that can be merged at the same time. The next line contains **N** positive integers representing the length of each file.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, you must print a single line with the test case number and the minimum number of comparisons incurred to merge the files. Please refer to the sample input and output for exact formatting.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n11 2\n3 1 4 5 2 7 6 8 3 9 4\n11 3\n3 1 4 5 2 7 6 8 3 9 4\n",
+        "output": "Case 1: 172\nCase 2: 110\n",
+        "explanation": "The first test case involves merging 11 files with a maximum of 2 files merged at a time, resulting in 172 comparisons. The second test case involves merging the same 11 files but with a maximum of 3 files merged at a time, resulting in 110 comparisons.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.35907",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "3-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "greedy",
+    "jingbo_adm",
+    "kan13acm",
+    "medium-hard"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Medium Hard",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610958
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

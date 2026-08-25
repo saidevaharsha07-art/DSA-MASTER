@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DIRECTI",
+  "contest_category": "6",
+  "problem_name": "Reversing directions",
+  "intended_contest_code": "COOK29",
+  "body": "<p>Chef recently printed directions from his home to a hot new restaurant across the town, but forgot to print the directions to get back home. Help Chef to transform the directions to get home from the restaurant.</p>\n<p>A set of directions consists of several instructions. The first instruction is of the form \"Begin on XXX\", indicating the street that the route begins on. Each subsequent instruction is of the form \"Left on XXX\" or \"Right on XXX\", indicating a turn onto the specified road.</p>\n<p>When reversing directions, all left turns become right turns and vice versa, and the order of roads and turns is reversed. See the sample input for examples.</p>\n<h3>Input</h3>\n<p>Input will begin with an integer <b>T</b>, the number of test cases that follow. Each test case begins with an integer <b>N</b>, the number of instructions in the route. <b>N</b> lines follow, each with exactly one instruction in the format described above.</p>\n<h3>Output</h3>\n<p>For each test case, print the directions of the reversed route, one instruction per line. Print a blank line after each test case.</p>\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>T</b> \u2264 15</li>\n<li>2 \u2264 <b>N</b> \u2264 40</li>\n<li>Each line in the input will contain at most 50 characters, will contain only alphanumeric characters and spaces and will not contain consecutive spaces nor trailing spaces. By alphanumeric characters we mean digits and letters of the English alphabet (lowercase and uppercase).</li>\n</ul>\n<h3>Sample Input</h3>\n<pre>2\n4\nBegin on Road A\nRight on Road B\nRight on Road C\nLeft on Road D\n6\nBegin on Old Madras Road\nLeft on Domlur Flyover\nLeft on 100 Feet Road\nRight on Sarjapur Road\nRight on Hosur Road\nRight on Ganapathi Temple Road\n</pre><h3>Sample Output</h3>\n<pre>Begin on Road D\nRight on Road C\nLeft on Road B\nLeft on Road A\n\nBegin on Ganapathi Temple Road\nLeft on Hosur Road\nLeft on Sarjapur Road\nLeft on 100 Feet Road\nRight on Domlur Flyover\nRight on Old Madras Road\n\n</pre><h3>Explanation</h3>\n<p>In the first test case, the destination lies on Road D, hence the reversed route begins on Road D. The final turn in the original route is turning left from Road C onto Road D. The reverse of this, turning right from Road D onto Road C, is the first turn in the reversed route.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Chef recently printed directions from his home to a hot new restaurant across the town, but forgot to print the directions to get back home. Help Chef to transform the directions to get home from the restaurant.</p>\n<p>A set of directions consists of several instructions. The first instruction is of the form \"Begin on XXX\", indicating the street that the route begins on. Each subsequent instruction is of the form \"Left on XXX\" or \"Right on XXX\", indicating a turn onto the specified road.</p>\n<p>When reversing directions, all left turns become right turns and vice versa, and the order of roads and turns is reversed. See the sample input for examples.</p>\n<h3>Input</h3>\n<p>Input will begin with an integer <b>T</b>, the number of test cases that follow. Each test case begins with an integer <b>N</b>, the number of instructions in the route. <b>N</b> lines follow, each with exactly one instruction in the format described above.</p>\n<h3>Output</h3>\n<p>For each test case, print the directions of the reversed route, one instruction per line. Print a blank line after each test case.</p>\n<h3>Constraints</h3>\n<ul><li>1 \u2264 <b>T</b> \u2264 15</li>\n<li>2 \u2264 <b>N</b> \u2264 40</li>\n<li>Each line in the input will contain at most 50 characters, will contain only alphanumeric characters and spaces and will not contain consecutive spaces nor trailing spaces. By alphanumeric characters we mean digits and letters of the English alphabet (lowercase and uppercase).</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n4\nBegin on Road A\nRight on Road B\nRight on Road C\nLeft on Road D\n6\nBegin on Old Madras Road\nLeft on Domlur Flyover\nLeft on 100 Feet Road\nRight on Sarjapur Road\nRight on Hosur Road\nRight on Ganapathi Temple Road",
+        "output": "Begin on Road D\nRight on Road C\nLeft on Road B\nLeft on Road A\n\nBegin on Ganapathi Temple Road\nLeft on Hosur Road\nLeft on Sarjapur Road\nLeft on 100 Feet Road\nRight on Domlur Flyover\nRight on Old Madras Road",
+        "explanation": "<p>In the first test case, the destination lies on Road D, hence the reversed route begins on Road D. The final turn in the original route is turning left from Road C onto Road D. The reverse of this, turning right from Road D onto Road C, is the first turn in the reversed route.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1250,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "david_adm",
+  "problem_display_authors": [
+    "david_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/david_adm'>david_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "anton_lunyov"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anton_lunyov'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>anton_lunyov</span></a></div>",
+  "problem_editorialist": "pragrame",
+  "date_added": "26-11-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Algorithms"
+  ],
+  "difficulty_rating": "1426",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610782
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DIRECTI",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 32,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

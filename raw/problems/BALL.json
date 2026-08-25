@@ -1,0 +1,113 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BALL",
+  "contest_category": "6",
+  "problem_name": "Entmoot",
+  "intended_contest_code": null,
+  "body": "<p><html> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Entmoot<br /> </h2>\n<p> <i>     'Hoo, ho! Good morning, Merry and Pippin!' he boomed, when he saw them. 'You sleep long. I have been many a hundred strides already today. Now we will have a drink, and go to Entmoot.'<br />     'Where is Entmoot?' Pippin ventured to ask.<br />     'Hoo, eh? Entmoot?' said Treebeard, turning round. 'It is not a place, it is a gathering of Ents - which does not often happen nowadays. But I have managed to make a fair number promise to come.'<br /> </i> <br /> Indeed, Entmoot cannot be thought of as any particular place, since where it occurs changes from time to time. The choice of the location however, follows a basic principle: Although the Ents (walking and talking Trees - \"shepherds of Fangorn Forest\") are by and large not hasty, when it comes to gathering for Entmoot, they would like to choose a location that ensures all the Ents can reach as soon as possible.<br /> <br /> Note however, that the speed they can travel varies from Ent to Ent. Also, although Fangorn Forest has dense overgrowth, with regard to the Ents, the forest poses no obstacles.<br /> <br /> You are given the locations of <b>N</b> Ents who have agreed to join in for Entmoot, as well as their speeds. You need to find out when Entmoot will occur. Formally, given the <b>(x[i],y[i])</b> along with speed <b>s[i]</b> for each Ent, find the point (X, Y) such that the maximum time taken by any of the Ents to reach (X, Y) is minimized. <b>Output the earliest time</b> when all the Ents can meet. <br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains <b>T</b>, the number of test cases.<br /> The first line of each test case contains <b>N</b>, the number of Ents.<br /> The next <b>N</b> lines contain three space-separated integers each. The ith of these lines contains : <b>x[i], y[i], s[i]</b>.<br /> <br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> Output one line per test case, containing the earliest time when the Ents can meet.<b> Relative and absolute error of 10^-4 are acceptable.</b> <br /><br />\n<h3>Constraints:</h3>\n</p><p><b> 1 &lt;= T &lt;= 10<br /> 2 &lt;= N &lt;= 50<br /> -1,000,000 &lt;= x[i], y[i] &lt;= 1,000,000<br /> 1 &lt;= s[i] &lt;= 1,000,000</b><br /> <br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 4<br /> 3<br /> 0 3 3<br /> 4 0 4<br /> -3 -4 5<br /> 3<br /> 0 10 2<br /> 0 20 2<br /> 0 40 2<br /> 3<br /> 0 100 15<br /> 0 -100 15<br /> 8 0 7<br /> 3<br /> 0 0 1<br /> 10000 0 1<br /> 5000 8661 1<br /> </span><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 1.000000<br /> 7.500000<br /> 6.666667<br /> 5773.751357</span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> <br />In the first test case, all the ents can meet at origin in 1 unit of time. <br />In the second test case, the first and the third ent reach (25,0) after 7.5 units of ime, whereas the second ent reaches there after 2.5 units of time and waits for the remaining ents to arrive. <br />In the third test case, all the ents can meet at origin in 100/15 units of time. </p></body> </html> </p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p><html> <body><br />\n<h1 style=\"font-family: Arial;\"><small>ACM International Collegiate     Programming Contest, Asia-Amritapuri Site, 2012</small></h1>\n<h2>Entmoot<br /> </h2>\n<p> <i>     'Hoo, ho! Good morning, Merry and Pippin!' he boomed, when he saw them. 'You sleep long. I have been many a hundred strides already today. Now we will have a drink, and go to Entmoot.'<br />     'Where is Entmoot?' Pippin ventured to ask.<br />     'Hoo, eh? Entmoot?' said Treebeard, turning round. 'It is not a place, it is a gathering of Ents - which does not often happen nowadays. But I have managed to make a fair number promise to come.'<br /> </i> <br /> Indeed, Entmoot cannot be thought of as any particular place, since where it occurs changes from time to time. The choice of the location however, follows a basic principle: Although the Ents (walking and talking Trees - \"shepherds of Fangorn Forest\") are by and large not hasty, when it comes to gathering for Entmoot, they would like to choose a location that ensures all the Ents can reach as soon as possible.<br /> <br /> Note however, that the speed they can travel varies from Ent to Ent. Also, although Fangorn Forest has dense overgrowth, with regard to the Ents, the forest poses no obstacles.<br /> <br /> You are given the locations of <b>N</b> Ents who have agreed to join in for Entmoot, as well as their speeds. You need to find out when Entmoot will occur. Formally, given the <b>(x[i],y[i])</b> along with speed <b>s[i]</b> for each Ent, find the point (X, Y) such that the maximum time taken by any of the Ents to reach (X, Y) is minimized. <b>Output the earliest time</b> when all the Ents can meet. <br /><br />\n<h3>Input (STDIN):</h3>\n</p><p> The first line contains <b>T</b>, the number of test cases.<br /> The first line of each test case contains <b>N</b>, the number of Ents.<br /> The next <b>N</b> lines contain three space-separated integers each. The ith of these lines contains : <b>x[i], y[i], s[i]</b>.<br /> <br /><br />\n<h3>Output (STDOUT):</h3>\n</p><p> Output one line per test case, containing the earliest time when the Ents can meet.<b> Relative and absolute error of 10^-4 are acceptable.</b> <br /><br />\n<h3>Constraints:</h3>\n</p><p><b> 1 <= T <= 10<br /> 2 <= N <= 50<br /> -1,000,000 <= x[i], y[i] <= 1,000,000<br /> 1 <= s[i] <= 1,000,000</b><br /> <br /><br />\n<h3>Sample Input:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 4<br /> 3<br /> 0 3 3<br /> 4 0 4<br /> -3 -4 5<br /> 3<br /> 0 10 2<br /> 0 20 2<br /> 0 40 2<br /> 3<br /> 0 100 15<br /> 0 -100 15<br /> 8 0 7<br /> 3<br /> 0 0 1<br /> 10000 0 1<br /> 5000 8661 1<br /> </span><br />\n<h3>Sample Output:</h3>\n</p><p> <span style=\"font-family: Courier New,Courier,monospace;\"> 1.000000<br /> 7.500000<br /> 6.666667<br /> 5773.751357</span><br /><br />\n<h3>Notes/Explanation of Sample Input:</h3>\n</p><p> <br />In the first test case, all the ents can meet at origin in 1 unit of time. <br />In the second test case, the first and the third ent reach (25,0) after 7.5 units of ime, whereas the second ent reaches there after 2.5 units of time and waits for the remaining ents to arrive. <br />In the third test case, all the ents can meet at origin in 100/15 units of time. </p></body> </html> </p>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h2>PROBLEM LINKS</h2>\n<p><a href=\"http://www.codechef.com/problems/BALL\" rel=\"nofollow noopener\">Practice</a></p>\n<p><a href=\"http://www.codechef.com/ACMAMR12/problems/BALL\" rel=\"nofollow noopener\">Contest</a></p>\n<h2>Editorial Can be found here</h2>\n<p><a href=\"http://codechef.com/download/editorials/ACMAMR12/BALL.pdf\" rel=\"nofollow noopener\">here</a></p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1479,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "1 - 2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "admin"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin'>admin</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "22-01-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acmamr12",
+    "admin"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/BALL",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610635
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BALL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

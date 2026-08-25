@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PRICECON",
+  "contest_category": "6",
+  "problem_name": "Chef and Price Control",
+  "intended_contest_code": "JUNE20",
+  "body": "\r\nChef has $N$ items in his shop (numbered $1$ through $N$); for each valid $i$, the price of the $i$-th item is $P_i$. Since Chef has very loyal customers, all $N$ items are guaranteed to be sold regardless of their price.\r\n\r\nHowever, the government introduced a *price ceiling* $K$, which means that for each item $i$ such that $P_i \\gt K$, its price should be reduced from $P_i$ to $K$.\r\n\r\nChef's *revenue* is the sum of prices of all the items he sells. Find the amount of revenue which Chef loses because of this price ceiling.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $K$.\r\n- The second line contains $N$ space-separated integers $P_1, P_2, \\ldots, P_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the amount of lost revenue.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 100$\r\n- $1 \\le N \\le 10,000$\r\n- $1 \\le P_i \\le 1,000$ for each valid $i$\r\n- $1 \\le K \\le 1,000$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n5 4\r\n10 2 3 4 5\r\n7 15\r\n1 2 3 4 5 6 7\r\n5 5\r\n10 9 8 7 6\r\n```\r\n\r\n### Example Output\r\n```\r\n7\r\n0\r\n15\r\n```\r\n\r\n### Explanation\r\n**Test Case 1**: The initial revenue is $10 + 2 + 3 + 4 + 5 = 24$. Because of the price ceiling, $P_1$ decreases from $10$ to $4$ and $P_5$ decreases from $5$ to $4$. The revenue afterwards is $4 + 2 + 3 + 4 + 4 = 17$ and the lost revenue is $24 - 17 = 7$.\r\n\r\n**Test Case 2**: The initial revenue is $1 + 2 + 3 + 4 + 5 + 6 + 7 = 28$. For each valid $i$, $P_i \\le 15$, so there are no changes, the revenue after introduction of the price ceiling is the same and there is zero lost revenue.\r\n\r\n**Test Case 3**: The initial revenue is $10 + 9 + 8 + 7 + 6 = 40$. Since $P_i \\gt 5$ for each valid $i$, the prices of all items decrease to $5$. The revenue afterwards is $5 \\cdot 5 = 25$ and the lost revenue is $40 - 25 = 15$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef has $N$ items in his shop (numbered $1$ through $N$); for each valid $i$, the price of the $i$-th item is $P_i$. Since Chef has very loyal customers, all $N$ items are guaranteed to be sold regardless of their price.\r\n\r\nHowever, the government introduced a *price ceiling* $K$, which means that for each item $i$ such that $P_i \\gt K$, its price should be reduced from $P_i$ to $K$.\r\n\r\nChef's *revenue* is the sum of prices of all the items he sells. Find the amount of revenue which Chef loses because of this price ceiling.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $K$.\r\n- The second line contains $N$ space-separated integers $P_1, P_2, \\ldots, P_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the amount of lost revenue.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 100$\r\n- $1 \\le N \\le 10,000$\r\n- $1 \\le P_i \\le 1,000$ for each valid $i$\r\n- $1 \\le K \\le 1,000$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n5 4\r\n10 2 3 4 5\r\n7 15\r\n1 2 3 4 5 6 7\r\n5 5\r\n10 9 8 7 6",
+        "output": "7\r\n0\r\n15",
+        "explanation": "**Test Case 1**: The initial revenue is $10 + 2 + 3 + 4 + 5 = 24$. Because of the price ceiling, $P_1$ decreases from $10$ to $4$ and $P_5$ decreases from $5$ to $4$. The revenue afterwards is $4 + 2 + 3 + 4 + 4 = 17$ and the lost revenue is $24 - 17 = 7$.\r\n\r\n**Test Case 2**: The initial revenue is $1 + 2 + 3 + 4 + 5 + 6 + 7 = 28$. For each valid $i$, $P_i \\le 15$, so there are no changes, the revenue after introduction of the price ceiling is the same and there is zero lost revenue.\r\n\r\n**Test Case 3**: The initial revenue is $10 + 9 + 8 + 7 + 6 = 40$. Since $P_i \\gt 5$ for each valid $i$, the prices of all items decrease to $5$. The revenue afterwards is $5 \\cdot 5 = 25$ and the lost revenue is $40 - 25 = 15$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 68099,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "aryanag_adm",
+  "problem_display_authors": [
+    "aryanag_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/aryanag_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>aryanag_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "rajarshi_basu",
+  "date_added": "4-06-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "931",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611290
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PRICECON",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 14,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

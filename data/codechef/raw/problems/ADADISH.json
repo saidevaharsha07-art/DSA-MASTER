@@ -1,0 +1,123 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ADADISH",
+  "contest_category": "6",
+  "problem_name": "Ada and Dishes",
+  "intended_contest_code": "NOV20",
+  "body": "\r\nChef Ada is preparing $N$ dishes (numbered $1$ through $N$). For each valid $i$, it takes $C_i$ minutes to prepare the $i$-th dish. The dishes can be prepared in any order.\r\n\r\nAda has a kitchen with two identical burners. For each valid $i$, to prepare the $i$-th dish, she puts it on one of the burners and after $C_i$ minutes, removes it from this burner; the dish may not be removed from the burner before those $C_i$ minutes pass, because otherwise it cools down and gets spoiled. Any two dishes may be prepared simultaneously, however, no two dishes may be on the same burner at the same time. Ada may remove a dish from a burner and put another dish on the same burner at the same time.\r\n\r\nWhat is the minimum time needed to prepare all dishes, i.e. reach the state where all dishes are prepared?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $C_1, C_2, \\ldots, C_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the minimum number of minutes needed to prepare all dishes.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N \\le 4$\r\n- $1 \\le C_i \\le 5$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (1 points):** $C_1 = C_2 = \\ldots = C_N$\r\n\r\n**Subtask #2 (99 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n3\r\n2 2 2\r\n3\r\n1 2 3\r\n4\r\n2 3 4 5\r\n```\r\n\r\n### Example Output\r\n```\r\n4\r\n3\r\n7\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** Place the first two dishes on the burners, wait for two minutes, remove both dishes and prepare the last one on one burner.\r\n\r\n**Example case 2:** Place the first and third dish on the burners. When the first dish is prepared, remove it and put the second dish on the same burner.\r\n\r\n**Example case 3:** Place the third and fourth dish on the burners. When the third dish is prepared, remove it and put the second dish on the same burner. Similarly, replace the fourth dish (when it is prepared) by the first dish on the other burner.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef Ada is preparing $N$ dishes (numbered $1$ through $N$). For each valid $i$, it takes $C_i$ minutes to prepare the $i$-th dish. The dishes can be prepared in any order.\r\n\r\nAda has a kitchen with two identical burners. For each valid $i$, to prepare the $i$-th dish, she puts it on one of the burners and after $C_i$ minutes, removes it from this burner; the dish may not be removed from the burner before those $C_i$ minutes pass, because otherwise it cools down and gets spoiled. Any two dishes may be prepared simultaneously, however, no two dishes may be on the same burner at the same time. Ada may remove a dish from a burner and put another dish on the same burner at the same time.\r\n\r\nWhat is the minimum time needed to prepare all dishes, i.e. reach the state where all dishes are prepared?\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $C_1, C_2, \\ldots, C_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the minimum number of minutes needed to prepare all dishes.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 1,000$\r\n- $1 \\le N \\le 4$\r\n- $1 \\le C_i \\le 5$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (1 points):** $C_1 = C_2 = \\ldots = C_N$\r\n\r\n**Subtask #2 (99 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n3\r\n2 2 2\r\n3\r\n1 2 3\r\n4\r\n2 3 4 5",
+        "output": "4\r\n3\r\n7",
+        "explanation": "**Example case 1:** Place the first two dishes on the burners, wait for two minutes, remove both dishes and prepare the last one on one burner.\r\n\r\n**Example case 2:** Place the first and third dish on the burners. When the first dish is prepared, remove it and put the second dish on the same burner.\r\n\r\n**Example case 3:** Place the third and fourth dish on the burners. When the third dish is prepared, remove it and put the second dish on the same burner. Similarly, replace the fourth dish (when it is prepared) by the first dish on the other burner.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 79937,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "alei",
+  "problem_display_authors": [
+    "alei"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/alei'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>alei</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "alei",
+  "date_added": "6-10-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Brute Force",
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1237",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610571
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ADADISH",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 18,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

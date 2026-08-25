@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BITTUP",
+  "contest_category": "6",
+  "problem_name": "Bitwise Tuples",
+  "intended_contest_code": "JUNE21",
+  "body": "### Read problem statements in [Vietnamese](https://www.codechef.com/download/translated/JUNE21/vietnamese/BITTUP.pdf),\r\n\r\nChef has two numbers $N$ and $M$. Help Chef to find number of integer $N$-tuples $(A_1, A_2, \\ldots, A_N)$ such that $0 \\leq A_1, A_2, \\ldots, A_N \\leq 2^M - 1$ and $A_1 \\& A_2 \\& \\ldots \\& A_N = 0$, where $\\&$ denotes the [bitwise AND](https://en.wikipedia.org/wiki/Bitwise_operation#AND) operator.\r\n\r\nSince the number of tuples can be large, output it modulo $10^9+7$. \r\n\r\n### Input\r\n- The first line contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains two integers $N$ and $M$.\r\n\r\n### Output\r\nFor each test case, output in a single line the answer to the problem modulo $10^9+7$. \r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq N, M \\leq 10^6$\r\n\r\n###Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n###Sample Input\r\n```\r\n4\r\n1 2\r\n2 2\r\n4 2\r\n8 4\r\n```\r\n\r\n###Sample Output\r\n```\r\n1\r\n9\r\n225\r\n228250597\r\n```\r\n\r\n### Explanation\r\n**Test Case $1$:** The only possible tuple is $(0)$.\r\n\r\n**Test Case $2$:** The tuples are $(0, 0)$, $(0, 1)$, $(0, 2)$, $(0, 3)$, $(1, 0)$, $(2, 0)$, $(3, 0)$, $(1, 2)$, $(2, 1)$.\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef has two numbers $N$ and $M$. Help Chef to find number of integer $N$-tuples $(A_1, A_2, \\ldots, A_N)$ such that $0 \\leq A_1, A_2, \\ldots, A_N \\leq 2^M - 1$ and $A_1 \\& A_2 \\& \\ldots \\& A_N = 0$, where $\\&$ denotes the [bitwise AND](https://en.wikipedia.org/wiki/Bitwise_operation#AND) operator.\n\nSince the number of tuples can be large, output it modulo $10^9+7$. \n\n### Input\n- The first line contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains two integers $N$ and $M$.\n\n### Output\nFor each test case, output in a single line the answer to the problem modulo $10^9+7$. \n\n### Constraints\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq N, M \\leq 10^6$\n\n###Subtasks\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\r\n1 2\r\n2 2\r\n4 2\r\n8 4",
+        "output": "1\r\n9\r\n225\r\n228250597",
+        "explanation": "**Test Case $1$:** The only possible tuple is $(0)$.\r\n\r\n**Test Case $2$:** The tuples are $(0, 0)$, $(0, 1)$, $(0, 2)$, $(0, 3)$, $(1, 0)$, $(2, 0)$, $(3, 0)$, $(1, 2)$, $(2, 1)$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 91053,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "souradeep_adm",
+  "problem_display_authors": [
+    "souradeep_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/souradeep_adm'>souradeep_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "iscsi"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/iscsi'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>iscsi</span></a></div>",
+  "problem_editorialist": "taran_1407",
+  "date_added": "12-05-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation",
+    "Combinatorics"
+  ],
+  "computed_tags": [
+    "Mathematics"
+  ],
+  "difficulty_rating": "1634",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610641
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BITTUP",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 3,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 13,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

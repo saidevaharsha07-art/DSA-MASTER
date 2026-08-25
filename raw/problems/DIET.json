@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DIET",
+  "contest_category": "6",
+  "problem_name": "Chef Diet",
+  "intended_contest_code": "COOK112",
+  "body": "\r\nChef decided to go on a diet during the following $N$ days (numbered $1$ through $N$). Part of the diet plan is to eat $K$ grams of protein during each day. For each valid $i$, Chef wants to buy $A_i$ grams of protein in the morning of the $i$-th day and then eat $K$ grams of protein as part of his dinner. If he has any protein remaining, he can store it and use it in later dinners. Initially, Chef is storing $0$ grams of protein.\r\n\r\nDetermine whether Chef will have enough protein all the time during his diet. In case he will not have enough, find the first day on which Chef will be unable to eat $K$ grams of protein.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $K$. \r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case:\r\n- If Chef will have enough protein during his diet, print a single line containing the string `\"YES\"`.\r\n- Otherwise, print a single line containing the string `\"NO\"`, followed by a space and one integer \u2014 the first day when Chef will be unable to eat $K$ grams of protein.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 200$\r\n- $1 \\le N \\le 100$\r\n- $1 \\le K \\le 10^6$\r\n- $1 \\le A_i \\le 10^6$ for each valid $i$\r\n\r\n### Example Input\r\n```\r\n3\r\n4 5\r\n7 3 6 5\r\n3 4\r\n3 10 10\r\n3 4\r\n8 1 1\r\n```\r\n\r\n### Example Output\r\n```\r\nYES\r\nNO 1\r\nNO 3\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** On the first day, Chef buys $7$ grams, eats $5$ and stores $2$ grams for later. On the second day, he buys $3$ grams, so he has $5$ grams, which is just enough for the dinner on this day. On the third day, he buys $6$ grams, eats $5$ and stores $1$, and on the fourth day, he buys $5$ grams, so he has $6$ grams \u2014 enough for dinner. In the end, he had enough protein to eat during all four dinners.\r\n\r\n**Example case 2:** Chef needs to eat $4$ grams of protein on the first day, but he only has $3$ grams, so he does not have a sufficient amount of protein already for the first dinner.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef decided to go on a diet during the following $N$ days (numbered $1$ through $N$). Part of the diet plan is to eat $K$ grams of protein during each day. For each valid $i$, Chef wants to buy $A_i$ grams of protein in the morning of the $i$-th day and then eat $K$ grams of protein as part of his dinner. If he has any protein remaining, he can store it and use it in later dinners. Initially, Chef is storing $0$ grams of protein.\r\n\r\nDetermine whether Chef will have enough protein all the time during his diet. In case he will not have enough, find the first day on which Chef will be unable to eat $K$ grams of protein.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $K$. \r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case:\r\n- If Chef will have enough protein during his diet, print a single line containing the string `\"YES\"`.\r\n- Otherwise, print a single line containing the string `\"NO\"`, followed by a space and one integer \u2014 the first day when Chef will be unable to eat $K$ grams of protein.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 200$\r\n- $1 \\le N \\le 100$\r\n- $1 \\le K \\le 10^6$\r\n- $1 \\le A_i \\le 10^6$ for each valid $i$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n4 5\r\n7 3 6 5\r\n3 4\r\n3 10 10\r\n3 4\r\n8 1 1",
+        "output": "YES\r\nNO 1\r\nNO 3",
+        "explanation": "**Example case 1:** On the first day, Chef buys $7$ grams, eats $5$ and stores $2$ grams for later. On the second day, he buys $3$ grams, so he has $5$ grams, which is just enough for the dinner on this day. On the third day, he buys $6$ grams, eats $5$ and stores $1$, and on the fourth day, he buys $5$ grams, so he has $6$ grams \u2014 enough for dinner. In the end, he had enough protein to eat during all four dinners.\r\n\r\n**Example case 2:** Chef needs to eat $4$ grams of protein on the first day, but he only has $3$ grams, so he does not have a sufficient amount of protein already for the first dinner.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 44745,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kingofnumbers",
+  "problem_display_authors": [
+    "kingofnumbers"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kingofnumbers'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>kingofnumbers</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "taran_1407",
+  "date_added": "17-11-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1025",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610784
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DIET",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 174,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

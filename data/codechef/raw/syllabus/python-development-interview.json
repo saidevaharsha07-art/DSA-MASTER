@@ -1,0 +1,1896 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "python-development-interview",
+  "name": "Python Developer Interview Preparation",
+  "title": "Python Developer Interview Preparation",
+  "level": "Intermediate",
+  "description": "Prepare for freshers interviews for Python developer roles. Practice your responses for commonly asked Interview questions.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:49",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/python-development-interview/PYINTPR01/problems/SHRTPROB90",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Python Fundamentals",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Python Fundamentals",
+          "submodule_id": 9654,
+          "contest_code": "PYINTPR01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 19,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR01/problems/SHRTPROB90",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 19,
+          "problems_with_status": [
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB90",
+              "name": "Lists vs. Tuples\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB91",
+              "name": "Concurrency Bottleneck\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB92",
+              "name": "Memory Handling Techniques\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB93",
+              "name": "Enhanced Functions\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB94",
+              "name": "String Duality\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB95",
+              "name": "Exception Handling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB96",
+              "name": "Concise Lists\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB97",
+              "name": "GenFib\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB98",
+              "name": "Memory Management\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB99",
+              "name": "Copycat Conundrum\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB100",
+              "name": "Inheritance Resolution\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB101",
+              "name": "Flexible Functions\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB102",
+              "name": "Understanding Metaclasses\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB103",
+              "name": "Custom Context\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB104",
+              "name": "Code Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB105",
+              "name": "Attribute Access Control\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB106",
+              "name": "Identity vs. Equality\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB108",
+              "name": "Dynamic Modification\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33990",
+              "code": "SHRTPROB109",
+              "name": "Static vs. Class\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 19
+    },
+    {
+      "assessment": null,
+      "name": "Data structures and Algorithms (Coding problems)",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Data structures and Algorithms (Coding problems)",
+          "submodule_id": 9673,
+          "contest_code": "PYINTPR02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 16,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR02/problems/LLMID",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 16,
+          "problems_with_status": [
+            {
+              "contest_id": "33991",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "NSELL",
+              "name": "Find Next Smaller value in Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "MAXLCS",
+              "name": "Maximizing LCS",
+              "difficulty_rating": "1567",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DAA109",
+              "name": "Check Reachability",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DAA119",
+              "name": "Single Source Shortest Path ",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "HEAP06",
+              "name": "Implement complete heap",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "QUEUE06",
+              "name": "Queue - To do list",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "TRIE11",
+              "name": "Auto-Complete",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "BTPREORDER",
+              "name": "PreOrder Traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "BSTKTHMAX",
+              "name": "Kth Largest Node in BST",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "SESO43",
+              "name": "Complete the implementation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DSAPROB15",
+              "name": "Count Pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DSAAGP58",
+              "name": "Count Beautiful Pairs",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DSAAGP1093",
+              "name": "Binary Search",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33991",
+              "code": "DSAAGP119A",
+              "name": "Valid Parenthesis",
+              "difficulty_rating": "932",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    },
+    {
+      "assessment": null,
+      "name": "Database and SQL",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Database and SQL",
+          "submodule_id": 9674,
+          "contest_code": "PYINTPR03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR03/problems/SHRTPROB120",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB120",
+              "name": "Join Types Explained\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "GSQ35",
+              "name": "Project - Distinct with name pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB121",
+              "name": "Query Tuning\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "ASQLPR109",
+              "name": "Task-8  Patients Treated in Multiple Departments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB122",
+              "name": "Normalization Types\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "ASQLPR111",
+              "name": "Task-10  Get Treatment Feedback from Patients",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB124",
+              "name": "Database Pillars\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "RSMSPR03C",
+              "name": "Task-3C Data Retrieval Using Queries",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB125",
+              "name": "Filtering Differences\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "RSMSPR04D",
+              "name": "Task-4 Data Modification (Update and Alter)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB126",
+              "name": "Database Keys\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33992",
+              "code": "SHRTPROB127",
+              "name": "Atomic Operations\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Web development and APIs",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Web development and APIs",
+          "submodule_id": 9675,
+          "contest_code": "PYINTPR04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR04/problems/SHRTPROB128",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB128",
+              "name": "REST API Fundamentals\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB129",
+              "name": "CORS Handling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB130",
+              "name": "GET vs. POST\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB131",
+              "name": "API Versioning Strategies\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB132",
+              "name": "HTTP Status Codes\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB133",
+              "name": "Web File Uploads\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB134",
+              "name": "Web Session Handling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB135",
+              "name": "API Endpoint Security\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB136",
+              "name": "Real-time Communication\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33993",
+              "code": "SHRTPROB137",
+              "name": "Data Access Strategies\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Testing and development practices",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Testing and development practices",
+          "submodule_id": 9676,
+          "contest_code": "PYINTPR05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR05/problems/SHRTPROB138",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB138",
+              "name": "TDD Explained\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB139",
+              "name": "Dependency Mocking\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB140",
+              "name": "Automated Delivery\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB141",
+              "name": "Test Data Management\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB142",
+              "name": "Test Double Types\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB143",
+              "name": "Coverage Metrics\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB144",
+              "name": "BDD Explained\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB145",
+              "name": "Data Assurance\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33994",
+              "code": "SHRTPROB147",
+              "name": "Test Case Organization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Advanced Python concepts",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Advanced Python concepts",
+          "submodule_id": 9672,
+          "contest_code": "PYINTPR06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 14,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR06/problems/SHRTPROB148",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB148",
+              "name": "Async Context Manager\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB149",
+              "name": "Async Scraping\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB150",
+              "name": "Validating Attribute Descriptor\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB151",
+              "name": "Memory Efficiency\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB152",
+              "name": "TimedCache\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB153",
+              "name": "Method Resolution\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB154",
+              "name": "Custom Serializer\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB155",
+              "name": "Code to Bytes\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB156",
+              "name": "LogCraft\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB157",
+              "name": "Module Loading Deep Dive\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB158",
+              "name": "Custom Type Verification\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB159",
+              "name": "Attribute Delegation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB160",
+              "name": "Event System Design\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33995",
+              "code": "SHRTPROB161",
+              "name": "Object Memory Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 14
+    },
+    {
+      "assessment": null,
+      "name": "System design and Architecture",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "System design and Architecture",
+          "submodule_id": 9671,
+          "contest_code": "PYINTPR07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR07/problems/SHRTPROB162",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB162",
+              "name": "TaskFlow\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB163",
+              "name": "Notification system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB164",
+              "name": "URL shorterner",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB165",
+              "name": "Rate limiting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB166",
+              "name": "Basic search engine",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB167",
+              "name": "Caching system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB168",
+              "name": "Social media feed",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB169",
+              "name": "Recommendation system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB170",
+              "name": "File storage system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB171",
+              "name": "Payment processing system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB172",
+              "name": "StreamVerse\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB173",
+              "name": "Simple Logger\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB174",
+              "name": "User authentication",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB175",
+              "name": "Messaging system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB176",
+              "name": "Content moderation system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB177",
+              "name": "Analytics system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB178",
+              "name": "Distributed locking",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB179",
+              "name": "Job scheduling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB180",
+              "name": "Configuration management system",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33996",
+              "code": "SHRTPROB181",
+              "name": "Microservices architecture",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Project implementation",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Project implementation",
+          "submodule_id": 9670,
+          "contest_code": "PYINTPR08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR08/problems/SHRTPROB182",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB182",
+              "name": "Async Crawlers\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB183",
+              "name": "Real-Time Chat App with WebSockets\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB184",
+              "name": "Secured API\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB185",
+              "name": "Recommender Lite\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB186",
+              "name": "Resilient Task Scheduler\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB187",
+              "name": "Web Application Cache Implementation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB188",
+              "name": "Simple Search Index\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB189",
+              "name": "Throttle\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB190",
+              "name": "SimpleQ\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB191",
+              "name": "SimpleBalancer\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB192",
+              "name": "Watchdog\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB193",
+              "name": "Orchestrator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB194",
+              "name": "Automated Deployment Flow\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB195",
+              "name": "Orchestrator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB196",
+              "name": "ServiceBeacon\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB197",
+              "name": "API Conduit\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB198",
+              "name": "Data Flow Blueprint\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB199",
+              "name": "AuthCore\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB200",
+              "name": "CacheLite\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33997",
+              "code": "SHRTPROB201",
+              "name": "LogSimple\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Performance and Optimization",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Performance and Optimization",
+          "submodule_id": 9669,
+          "contest_code": "PYINTPR09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR09/problems/SHRTPROB202",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB202",
+              "name": "Performance Bottleneck Buster\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB203",
+              "name": "Query Optimizer\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB204",
+              "name": "Memory Efficiency Maximization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB205",
+              "name": "Smart Caching\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB206",
+              "name": "API Speed Boost\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB207",
+              "name": "PooledDB\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB208",
+              "name": "Efficient Data Handling\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB209",
+              "name": "Performance Tuning\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB210",
+              "name": "Efficient Data Fetching\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB211",
+              "name": "Memory Efficiency\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB212",
+              "name": "Indexing Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB213",
+              "name": "Memoized Queries\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB214",
+              "name": "BatchBoost\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB215",
+              "name": "Async Boost\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB216",
+              "name": "Image Processing Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB217",
+              "name": "Data Partitioning\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB218",
+              "name": "Cache Invalidation Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB219",
+              "name": "Lazy Load Implementation\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB220",
+              "name": "Background Task Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "33998",
+              "code": "SHRTPROB221",
+              "name": "QueryCache\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Project Review and Architecture",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Project review and Architecture",
+          "submodule_id": 9668,
+          "contest_code": "PYINTPR10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/python-development-interview/PYINTPR10/problems/SHRTPROB222",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB222",
+              "name": "Code Hardening Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB223",
+              "name": "Architecture Refinement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB224",
+              "name": "Performance Code Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB225",
+              "name": "Schema Refinement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB226",
+              "name": "API Refinement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB227",
+              "name": "Robustness Refinement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB228",
+              "name": "Observability Audit\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB229",
+              "name": "Test Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB230",
+              "name": "Deployment Architecture Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB231",
+              "name": "Scalability Bottleneck Analysis\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB232",
+              "name": "Cache Audit\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB233",
+              "name": "Authentication Hardening\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB234",
+              "name": "Data Model Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB235",
+              "name": "Integration Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB236",
+              "name": "Code Architecture Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB237",
+              "name": "ConfigOpt\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB238",
+              "name": "Dependency Audit\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB239",
+              "name": "Pipeline Optimization\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB240",
+              "name": "Documentation Quality Review\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34000",
+              "code": "SHRTPROB241",
+              "name": "System Refinement\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "short_answer",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 160,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Interview Questions",
+  "reviews": [],
+  "learners_count": 1321,
+  "path_review": {
+    "rating": 5,
+    "users": 60
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/python-development",
+  "roadmap_title": "Python Backend Developer "
+}

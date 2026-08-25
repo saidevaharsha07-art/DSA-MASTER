@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "EVENTUAL",
+  "contest_category": "6",
+  "problem_name": "Even-tual Reduction",
+  "intended_contest_code": "COOK120",
+  "body": "\r\nYou are given a string $S$ with length $N$. You may perform the following operation any number of times: choose a non-empty substring of $S$ (possibly the whole string $S$) such that each character occurs an even number of times **in this substring** and erase this substring from $S$. (The parts of $S$ before and after the erased substring are concatenated and the next operation is performed on this shorter string.)\r\n\r\nFor example, from the string \"ac**abba**d\", we can erase the highlighted substring \"abba\", since each character occurs an even number of times in this substring. After this operation, the remaining string is \"acd\".\r\n\r\nIs it possible to erase the whole string using one or more operations?\r\n\r\nNote: A string $B$ is a substring of a string $A$ if $B$ can be obtained from $A$ by deleting several (possibly none or all) characters from the beginning and several (possibly none or all) characters from the end.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains a single string $S$ with length $N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"YES\"` if it is possible to erase the whole string or `\"NO\"` otherwise (without quotes).\r\n\r\n### Constraints\r\n- $1 \\le T \\le 200$\r\n- $1 \\le N \\le 1,000$\r\n- $S$ contains only lowercase English letters\r\n\r\n### Example Input\r\n```\r\n4\r\n6\r\ncabbac\r\n7\r\nacabbad\r\n18\r\nfbedfcbdaebaaceeba\r\n21\r\nyourcrushlovesyouback\r\n```\r\n### Example Output\r\n```\r\nYES\r\nNO\r\nYES\r\nNO\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** We can perform two operations: erase the substring \"abba\", which leaves us with the string \"cc\", and then erase \"cc\".\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nYou are given a string $S$ with length $N$. You may perform the following operation any number of times: choose a non-empty substring of $S$ (possibly the whole string $S$) such that each character occurs an even number of times **in this substring** and erase this substring from $S$. (The parts of $S$ before and after the erased substring are concatenated and the next operation is performed on this shorter string.)\r\n\r\nFor example, from the string \"ac**abba**d\", we can erase the highlighted substring \"abba\", since each character occurs an even number of times in this substring. After this operation, the remaining string is \"acd\".\r\n\r\nIs it possible to erase the whole string using one or more operations?\r\n\r\nNote: A string $B$ is a substring of a string $A$ if $B$ can be obtained from $A$ by deleting several (possibly none or all) characters from the beginning and several (possibly none or all) characters from the end.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains a single string $S$ with length $N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the string `\"YES\"` if it is possible to erase the whole string or `\"NO\"` otherwise (without quotes).\r\n\r\n### Constraints\r\n- $1 \\le T \\le 200$\r\n- $1 \\le N \\le 1,000$\r\n- $S$ contains only lowercase English letters",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\r\n6\r\ncabbac\r\n7\r\nacabbad\r\n18\r\nfbedfcbdaebaaceeba\r\n21\r\nyourcrushlovesyouback",
+        "output": "YES\r\nNO\r\nYES\r\nNO",
+        "explanation": "**Example case 1:** We can perform two operations: erase the substring \"abba\", which leaves us with the string \"cc\", and then erase \"cc\".",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 72468,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "sjshohag",
+  "problem_display_authors": [
+    "sjshohag"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/sjshohag'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FF7F00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>6&#9733;</span><span class='m-username--link'>sjshohag</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "rajarshi_basu",
+  "date_added": "9-07-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1040",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610812
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=EVENTUAL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 126,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

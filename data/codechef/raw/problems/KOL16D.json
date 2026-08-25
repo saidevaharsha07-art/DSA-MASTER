@@ -1,0 +1,126 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16D",
+  "contest_category": "6",
+  "problem_name": "Men and Horses",
+  "intended_contest_code": null,
+  "body": "<p>There are <b>n<sub>m</sub></b> men living in a town. They have  <b>n<sub>h</sub></b> horses, each capable of carrying only one man at a time. All the men are supposed to attend a dinner party <b>d</b> km away from their house. They should start their journey together and reach destination in minimum time. Speed of each man is <b>v<sub>m</sub></b> km/hour whereas speed of each horse (with or without somebody on back) is <b>v<sub>h</sub></b> km/hour. You need to find the minimum time required to complete the journey? For simplicity you can assume the following things:\n <ul>\n     \n     <li>No time is needed in riding a horse or getting down from a horse.</li>\n     <li>The horses are very well trained to execute any instruction given to it.</li>\n     <li>No time is needed for changing the direction of horse or man.</li>\n     <li>The town and the dinner party location can be considered as two different points and all people and horses travel along the straight line connecting these two points.</li>\n</ul>\n\n<h3>Constraints</h3>\n<ul>\n<li>d (0 &lt; d \u2264 10000)</li>\n<li>n<sub>m</sub> (1 &lt; n<sub>m</sub> \u2264 1000)</li>\n<li>n<sub>h</sub> (0 &lt; n<sub>h</sub> \u2264 1000)</li>\n<li>v<sub>m</sub> (0 &lt; v<sub>m</sub> \u2264 20)</li>\n<li>v<sub>h</sub> (0 &lt; v<sub>h</sub> \u2264 50)</li>\n</ul>\n\n<h3>Input</h3>\n<p>Each input set consists of  five integers <b>d, n<sub>m</sub>, n<sub>h</sub>, v<sub>m</sub>,  v<sub>h</sub></b> in a new line. Input ends with five 0s in a line. There will be at max <b>10<sup>5</sup>+1</b> lines in the input</p>\n \n<h3>Output</h3>\n<p>For each line of input except the last one produce one line of output. This line should print a fraction <b>p</b> by <b>q</b>, in <b>p/q</b> form. This denotes the minimum possible reaching time of all men. Here <b>p</b> and <b>q</b> must be relative prime.</p>\n \n<h3>Sample</h3>\n<pre><b>Input</b>   \n70 2 1 5 10\n0 0 0 0 0 \n\n<b>Output</b>\n49/5\n</pre>\n\n \n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $d$ (0 < $d$ \u2264 10000)\n- $n_m$ (1 < $n_m$ \u2264 1000)\n- $n_h$ (0 < $n_h$ \u2264 1000)\n- $v_m$ (0 < $v_m$ \u2264 20)\n- $v_h$ (0 < $v_h$ \u2264 50)\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "There are $n_m$ men living in a town. They have $n_h$ horses, each capable of carrying only one man at a time. All the men are supposed to attend a dinner party $d$ km away from their house. They should start their journey together and reach the destination in minimum time. The speed of each man is $v_m$ km/hour whereas the speed of each horse (with or without somebody on back) is $v_h$ km/hour. You need to find the minimum time required to complete the journey. For simplicity, you can assume the following things:\n\n- No time is needed in riding a horse or getting down from a horse.\n- The horses are very well trained to execute any instruction given to it.\n- No time is needed for changing the direction of a horse or man.\n- The town and the dinner party location can be considered as two different points, and all people and horses travel along the straight line connecting these two points.\n",
+    "inputFormat": "Each input set consists of five integers $d$, $n_m$, $n_h$, $v_m$, $v_h$ in a new line. Input ends with five 0s in a line. There will be at max $10^5 + 1$ lines in the input.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each line of input except the last one, produce one line of output. This line should print a fraction $p$ by $q$, in $p/q$ form. This denotes the minimum possible reaching time of all men. Here $p$ and $q$ must be relative prime.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "70 2 1 5 10\n0 0 0 0 0\n",
+        "output": "49/5\n",
+        "explanation": "The sample input corresponds to a scenario where:\n- Distance to the dinner party ($d$) is 70 km.\n- Number of men ($n_m$) is 2.\n- Number of horses ($n_h$) is 1.\n- Speed of each man ($v_m$) is 5 km/hour.\n- Speed of each horse ($v_h$) is 10 km/hour.\n\nThe output `49/5` represents the minimum time required for all men to reach the destination, which is $\\frac{49}{5}$ hours.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16D\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16D\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>HARD</p>\n<h3>PREREQUISITES:</h3>\n<p>Basic maths</p>\n<h3>PROBLEM:</h3>\n<p>There are <span class=\"math\">n_m</span> men and <span class=\"math\">n_h</span> horses. The speed of each man is <span class=\"math\">v_m</span> and speed of each horse is <span class=\"math\">v_h</span>. The men must cover a straight distance <span class=\"math\">d</span>. The men may utilize the horses. A horse can carry at most one man at a time and can obey instructions even when riderless. No time is needed in mounting or dismounting from a horse or reversing the direction of motion. What is the minimum time the men need to cross the distance?</p>\n<h3>EXPLANATION:</h3>\n<p>The difficult thing is to discover the optimal approach. Once the approach is known, a little bit of algebra will give the answer. There also also two trivial cases. When <span class=\"math\">v_m \\ge v_h</span>, the men will be faster without horses and will take time <span class=\"math\">d/v_m</span>. When <span class=\"math\">n_h \\ge n_m</span> every man gets a horse and reaches destination in <span class=\"math\">d/v_h</span> time. Now to the main problem</p>\n<h4>Simpler case with <span class=\"math\">v_m  = 0</span>\n</h4>\n<p>Consider a case where the men cannot move and must rely on the horses. Although such a test case does not exist due to the constraints, solving this will help in finding the general solution. The solution is as follows.</p>\n<p>The distance <span class=\"math\">d</span> is divided into <span class=\"math\">n_h</span> ranges. Each horse <span class=\"math\">h_i</span> is given the <span class=\"math\">i^{th}</span> range. First all horses start out carrying a man. Each horse carries his man to the end of his assigned range and drops him off. Then he returns to the beginning of his range and picks one man up. He repeats moving back and forth across his range until he picks up the last man. Then he moves to the destination.</p>\n<p>As an example, consider <span class=\"math\">n_h = 2</span> and <span class=\"math\">n_m = 3</span>. The time it takes for a horse to move across one range is <span class=\"math\">t</span>. Below are the states after every <span class=\"math\">t</span> time.</p>\n<p><img src=\"https://discuss.codechef.com/upfiles/vm0_2_2.png\" alt=\"vm=0\" width=\"\" height=\"\"></p>\n<h4>The general case</h4>\n<p>The previous solution needs to be modified to be applied to the general case. All men now move at <span class=\"math\">v_m</span> forward when they are not on a horse. What difference does that make?</p>\n<ol>\n<li>When a horse is on his way back across his range after dropping off a man, he will meet the next man before he reaches the beginning of the range.</li>\n<li>If the last horse drops off men at the destination, that\u2019s a waste of time since one man will reach before the other. Instead, it is better to drop off the man at some distance from the destination in such a way that in the end all men and horses reach together.</li>\n</ol>\n<p>It is extremely helpful to the draw the displacement-time graph of the scenario.</p>\n<p><img src=\"https://discuss.codechef.com/upfiles/gph_correct_final_small.png\" alt=\"st-graph\" width=\"\" height=\"\"></p>\n<p>The steeper lines are the trails of the horses with slope <span class=\"math\">v_h</span> or <span class=\"math\">-v_h</span>, and the gentler lines those of the men with slope <span class=\"math\">v_m</span>. The red, yellow, blue and green trails belong to different horses. The black lines indicate where more than one horse travel in parallel. Each horse moves back and forth and carries one man across his range each time. At points where two horses meet they can easily swap their ranges, but the overall effect remains the same.</p>\n<p>We do not know beforehand what range should be assigned to each horse, so let it be <span class=\"math\">x</span>. Also let the time taken for a horse to move across his range and then partly back until he meets a man be <span class=\"math\">t</span>. Then we can calculate <span class=\"math\">t</span> as</p>\n<div class=\"math\">\nt = \\frac{2x}{v_m + v_h}\n</div>\n<p>Next consider the first man dropped off at distance <span class=\"math\">n_hx</span> by the last horse. From there he moves at <span class=\"math\">v_m</span> until he reaches <span class=\"math\">d</span>. Now the horse goes back and comes with another man again and again, until at the end all <span class=\"math\">n_h</span> horses bring <span class=\"math\">n_h</span> men. Since the total men is <span class=\"math\">n_m</span>, the number of times he sees the horse go and come back is <span class=\"math\">n_m - n_h</span>.</p>\n<div class=\"math\">\nn_hx + v_m (n_m - n_h)t = d\n</div>\n<p>We can plug in the expression for <span class=\"math\">t</span>, and simplify to get</p>\n<div class=\"math\">\nx = \\frac{d(v_m + v_h)}{2n_mv_m + n_hv_h - n_hv_m}\n</div>\n<p>From the graph we can see the total time taken <span class=\"math\">T</span> is</p>\n<div class=\"math\">\n\\begin{aligned}\nT &amp;= \\frac{n_hx}{v_h} + (n_m-n_h)t \\\\\n  &amp;= \\frac{n_hx}{v_h} + \\frac{d - n_hx}{v_m}\n\\end{aligned}\n</div>\n<p>Complexity is <span class=\"math\">\\mathcal{O}(1)</span>.<br>\nIt is convenient to use Python here since it has built-in support for fractions. Using Java or C++ it is necessary to manually implement operations on fractions.</p>\n<h3>ALTERNATIVE SOLUTION:</h3>\n<p>If you have an alternate strategy that also takes minimum time, feel free to share it below.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16D.py\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17228,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1 - 2",
+  "source_sizelimit": "40000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Physics",
+    "Mathematics",
+    "ad-hoc"
+  ],
+  "computed_tags": [
+    "Special",
+    "Algorithms",
+    "Constructive"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16D",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610969
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16D",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

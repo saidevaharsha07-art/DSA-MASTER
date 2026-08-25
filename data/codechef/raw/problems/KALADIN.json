@@ -1,0 +1,123 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KALADIN",
+  "contest_category": "6",
+  "problem_name": "Proprietary Probabilistic Problem",
+  "intended_contest_code": null,
+  "body": "<p>You are given a bag containing <b>N</b> balls, numbered from 1 to <b>N</b>, each having a given non-zero integral volume.</p>\n\n<p>The likelihood of a ball being taken out of the bag is directly proportional to its volume. More specifically, the probability of a ball being taken out of the bag is equal to it's volume divided by the sum of volumes of all the balls in the bag at that point.</p>\n\n<p>You are bored and decide to play a game. It has <b>N</b> Rounds. In the i-th Round, you want to find the ball numbered i. To do so, you take out balls one by one, <b>without replacement</b>, till you take out the ball numbered i. Then the Round ends, and you place all the balls back into the bag and proceed with the next Round.</p>\n\n<p>You need to find, for each Round, what is the expected number of balls you would need to remove.</p>\n\n<p>Please note that during a single Round, you do not replace any balls you remove. However, every Round starts from scratch with all the balls put in.</p>\n\n<h3>Input</h3>\n<ul>\n<li>The first line of each input contains a single integer <b>N</b>, the number of balls in the bag.</li>\n<li>The second line contains <b>N</b> integers, the i<sup>th</sup> integer representing the volume of the i<sup>th</sup> ball.</li>\n</ul>\n\n<h3>Output</h3>\n<p>Print <b>N</b> space separated values on a single line where the i<sup>th</sup> value is the expected number of balls you remove in Round i. Your answer will be considered correct if the absolute error is less than or equal to 10<sup>-6</sup> for each ball.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li>1 \u2264 <b>N</b> \u2264 10<sup>3</sup></li>\n<li>1 \u2264 ball volumes \u2264 10<sup>9</sup></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n3 5\n\n<b>Output:</b>\n1.625000 1.375000\n</pre>\n\n<h3>Explanation</h3>\n<p>Finding expected number of balls removed in Round 1: The probability of extracting the first ball in the first try is 3/8. Therefore, we will either extract 1 ball with probability 3/8 or two balls with probability 5/8. Expected number of balls extracted therefore is 3/8 + 2 * (5/8) = 1.625.</p> \n\n<p>Similarly for the second ball, 5/8 + 2 * (3/8) = 1.375</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 \u2264 **N** \u2264 10<sup>3</sup>\n- 1 \u2264 ball volumes \u2264 10<sup>9</sup>\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a bag containing **N** balls, numbered from 1 to **N**, each having a given non-zero integral volume.\n\nThe likelihood of a ball being taken out of the bag is directly proportional to its volume. More specifically, the probability of a ball being taken out of the bag is equal to its volume divided by the sum of volumes of all the balls in the bag at that point.\n\nYou are bored and decide to play a game. It has **N** Rounds. In the i-th Round, you want to find the ball numbered i. To do so, you take out balls one by one, **without replacement**, till you take out the ball numbered i. Then the Round ends, and you place all the balls back into the bag and proceed with the next Round.\n\nYou need to find, for each Round, what is the expected number of balls you would need to remove.\n\nPlease note that during a single Round, you do not replace any balls you remove. However, every Round starts from scratch with all the balls put in.\n",
+    "inputFormat": "- The first line of each input contains a single integer **N**, the number of balls in the bag.\n- The second line contains **N** integers, the i<sup>th</sup> integer representing the volume of the i<sup>th</sup> ball.\n",
+    "inputFormatState": true,
+    "outputFormat": "Print **N** space separated values on a single line where the i<sup>th</sup> value is the expected number of balls you remove in Round i. Your answer will be considered correct if the absolute error is less than or equal to 10<sup>-6</sup> for each ball.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 5\n",
+        "output": "1.625000 1.375000\n",
+        "explanation": "Finding expected number of balls removed in Round 1: The probability of extracting the first ball in the first try is $\\frac{3}{8}$. Therefore, we will either extract 1 ball with probability $\\frac{3}{8}$ or two balls with probability $\\frac{5}{8}$. Expected number of balls extracted therefore is $\\frac{3}{8} + 2 \\times \\frac{5}{8} = 1.625$.\n\nSimilarly for the second ball, $\\frac{5}{8} + 2 \\times \\frac{3}{8} = 1.375$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "grebnesieh",
+  "problem_display_authors": [
+    "grebnesieh"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/grebnesieh'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>grebnesieh</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2017",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Expected Value"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Probability"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610956
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KALADIN",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

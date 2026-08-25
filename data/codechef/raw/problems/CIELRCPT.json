@@ -1,0 +1,124 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CIELRCPT",
+  "contest_category": "6",
+  "problem_name": "Ciel and Receipt",
+  "intended_contest_code": "COOK24",
+  "body": "<p>\r\nTomya is a girl. She loves Chef Ciel very much.\r\n</p>\r\n\r\n<p>\r\nTomya like a positive integer <b>p</b>, and now she wants to get a receipt of Ciel's restaurant whose total price is exactly <b>p</b>.\r\nThe current menus of Ciel's restaurant are shown the following table.\r\n</p>\r\n\r\n<table border=\"1\" align=\"center\">\r\n<tr><td><b>Name of Menu</b></td><td align=\"right\"><b>price</b></td></tr>\r\n<tr><td>eel flavored water</td><td align=\"right\">1</td></tr>\r\n<tr><td>deep-fried eel bones</td><td align=\"right\">2</td></tr>\r\n<tr><td>clear soup made with eel livers</td><td align=\"right\">4</td></tr>\r\n<tr><td>grilled eel livers served with grated radish</td><td align=\"right\">8</td></tr>\r\n<tr><td>savory egg custard with eel</td><td align=\"right\">16</td></tr>\r\n<tr><td>eel fried rice (S)</td><td align=\"right\">32</td></tr>\r\n<tr><td>eel fried rice (L)</td><td align=\"right\">64</td></tr>\r\n<tr><td>grilled eel wrapped in cooked egg</td><td align=\"right\">128</td></tr>\r\n<tr><td>eel curry rice</td><td align=\"right\">256</td></tr>\r\n<tr><td>grilled eel over rice</td><td align=\"right\">512</td></tr>\r\n<tr><td>deluxe grilled eel over rice</td><td align=\"right\">1024</td></tr>\r\n<tr><td>eel full-course</td><td align=\"right\">2048</td></tr>\r\n</table>\r\n\r\n<p>\r\nNote that the <b>i</b>-th menu has the price 2<sup><b>i</b>-1</sup> (1 \u2264 <b>i</b> \u2264 12).\r\n</p>\r\n\r\n<p>\r\nSince Tomya is a pretty girl, she cannot eat a lot.\r\nSo please find the minimum number of menus whose total price is exactly <b>p</b>.\r\nNote that if she orders the same menu twice, then it is considered as two menus are ordered. (See <b>Explanations</b> for details)\r\n</p>\r\n\r\n\r\n<h3>Input</h3>\r\n<p>\r\nThe first line contains an integer <strong>T</strong>, the number of test cases.\r\nThen <strong>T</strong> test cases follow.\r\nEach test case contains an integer <b>p</b>.\r\n</p>\r\n\r\n<h3>Output</h3>\r\n<p>\r\nFor each test case, print the minimum number of menus whose total price is exactly <b>p</b>.\r\n</p>\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n1 \u2264 <b>T</b> \u2264 5<br>\r\n1 \u2264 <b>p</b> \u2264 100000 (10<sup>5</sup>)<br>\r\nThere exists combinations of menus whose total price is exactly <b>p</b>.<br>\r\n</p>\r\n\r\n<h3>Sample Input</h3>\r\n<pre>4\r\n10\r\n256\r\n255\r\n4096</pre>\r\n\r\n<h3>Sample Output</h3>\r\n<pre>2\r\n1\r\n8\r\n2</pre>\r\n\r\n<h3>Explanations</h3>\r\n\r\n<p>\r\nIn the first sample, examples of the menus whose total price is 10 are the following:<br>\r\n1+1+1+1+1+1+1+1+1+1 = 10 (10 menus)<br>\r\n1+1+1+1+1+1+1+1+2 = 10 (9 menus)<br>\r\n2+2+2+2+2 = 10 (5 menus)<br>\r\n2+4+4 = 10 (3 menus)<br>\r\n2+8 = 10 (2 menus)<br>\r\nHere the minimum number of menus is 2.\r\n</p>\r\n<p>\r\nIn the last sample, the optimal way is 2048+2048=4096 (2 menus).\r\nNote that there is no menu whose price is 4096.\r\n</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\nTomya is a girl. She loves Chef Ciel very much.\n</p>\n\n<p>\nTomya likes a positive integer <b>p</b>, and now she wants to get a receipt of Ciel's restaurant whose total price is exactly <b>p</b>.\nThe current menus of Ciel's restaurant are shown the following table.\n</p>\n\n<table border=\"1\" align=\"center\"><tr><td><b>Name of Menu</b></td><td align=\"right\"><b>price</b></td></tr><tr><td>eel flavored water</td><td align=\"right\">1</td></tr><tr><td>deep-fried eel bones</td><td align=\"right\">2</td></tr><tr><td>clear soup made with eel livers</td><td align=\"right\">4</td></tr><tr><td>grilled eel livers served with grated radish</td><td align=\"right\">8</td></tr><tr><td>savory egg custard with eel</td><td align=\"right\">16</td></tr><tr><td>eel fried rice (S)</td><td align=\"right\">32</td></tr><tr><td>eel fried rice (L)</td><td align=\"right\">64</td></tr><tr><td>grilled eel wrapped in cooked egg</td><td align=\"right\">128</td></tr><tr><td>eel curry rice</td><td align=\"right\">256</td></tr><tr><td>grilled eel over rice</td><td align=\"right\">512</td></tr><tr><td>deluxe grilled eel over rice</td><td align=\"right\">1024</td></tr><tr><td>eel full-course</td><td align=\"right\">2048</td></tr></table><p>\nNote that the <b>i</b>-th menu has the price 2<sup><b>i</b>-1</sup> (1 \u2264 <b>i</b> \u2264 12).\n</p>\n\n<p>\nSo please find the minimum number of menus whose total price is exactly <b>p</b>.\nNote that if she orders the same menu twice, then it is considered as two menus are ordered. (See <b>Explanations</b> for details)\n</p>\n\n\n<h3>Input</h3>\n<p>\nThe first line contains an integer <strong>T</strong>, the number of test cases.\nThen <strong>T</strong> test cases follow.\nEach test case contains an integer <b>p</b>.\n</p>\n\n<h3>Output</h3>\n<p>\nFor each test case, print the minimum number of menus whose total price is exactly <b>p</b>.\n</p>\n\n<h3>Constraints</h3>\n<p>\n1 \u2264 <b>T</b> \u2264 5<br />\n1 \u2264 <b>p</b> \u2264 100000 (10<sup>5</sup>)<br />\nThere exists combinations of menus whose total price is exactly <b>p</b>.<br /></p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n10\n256\n255\n4096",
+        "output": "2\n1\n8\n2",
+        "explanation": "<p>\nIn the first sample, examples of the menus whose total price is 10 are the following:<br />\n1+1+1+1+1+1+1+1+1+1 = 10 (10 menus)<br />\n1+1+1+1+1+1+1+1+2 = 10 (9 menus)<br />\n2+2+2+2+2 = 10 (5 menus)<br />\n2+4+4 = 10 (3 menus)<br />\n2+8 = 10 (2 menus)<br />\nHere the minimum number of menus is 2.\n</p>\n<p>\nIn the last sample, the optimal way is 2048+2048=4096 (2 menus).\nNote that there is no menu whose price is 4096.\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 426,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, CS2, NODEJS",
+  "max_timelimit": "1.32",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "hiroto_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/hiroto_adm'>hiroto_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "anton_lunyov",
+  "date_added": "4-07-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation",
+    "Greedy"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "936",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610683
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CIELRCPT",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 91,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

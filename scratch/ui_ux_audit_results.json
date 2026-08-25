@@ -1,0 +1,172 @@
+[
+  {
+    "file": "src/app/(app)/arena/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": false,
+    "hasHoverStates": true,
+    "hasFocusStates": true,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/contest/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/dashboard/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": true
+  },
+  {
+    "file": "src/app/(app)/journey/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/kingdoms/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/layout.tsx",
+    "hasGlassmorphism": false,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/learn/[phase]/[topic]/[pattern]/page.tsx",
+    "hasGlassmorphism": false,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": true
+  },
+  {
+    "file": "src/app/(app)/learning/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": false,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/oracle/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/patterns/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/practice/codechef/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": true,
+    "hasLoadingState": false,
+    "hasEmptyState": true,
+    "hasErrorState": true
+  },
+  {
+    "file": "src/app/(app)/practice/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/profile/[username]/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": true,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/revision/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/roadmap/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": false,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/settings/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": true,
+    "hasFocusStates": false,
+    "hasLoadingState": false,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  },
+  {
+    "file": "src/app/(app)/statistics/page.tsx",
+    "hasGlassmorphism": true,
+    "hasResponsiveClasses": true,
+    "hasHoverStates": false,
+    "hasFocusStates": false,
+    "hasLoadingState": true,
+    "hasEmptyState": false,
+    "hasErrorState": false
+  }
+]

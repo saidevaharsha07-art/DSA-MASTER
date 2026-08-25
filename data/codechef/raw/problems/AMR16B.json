@@ -1,0 +1,120 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMR16B",
+  "contest_category": "6",
+  "problem_name": "A Historic Discussion",
+  "intended_contest_code": null,
+  "body": "<p>A great discussion about demonetization is happening on social media. This is the first time in the history of the Internet, that people have decided to organise a discussion in which they actually thought of knowing about each other's views rather than the usual way of forcing your thoughts down the throat of other person. This is a great and unimaginable change and history is being created here. The discussion organisers need your help in creating history. Won't you help them in such a noble cause?</p>\n\n<p>Specifically, the discussion will be conducted in following manner. There are a total of <b>n</b> people who want to have a discussion. They will be split into two groups each of size <b>n/2</b> (<b>n</b> is guaranteed to be even). Each person in a group sits down calmly with all the persons of the other group and then they discuss their point of views about the issue. In this way, a nice, constructive and helpful discussion occurs. Note that in one particular discussion, a person discusses with the <b>n/2</b> members of the other group. They do not discuss with people from their own group.</p>\n\n<p>Now people are not satisfied with just a single discussion, as you may not know point of views of all the persons out there. So, they ask organisers to conduct more discussions in such a way that each person is able to discuss his/her views with every other person. That is, for every pair of people <b>(i,j)</b>, there should be at least one discussion in which they are in opposite groups. As you know organising discussions is a tedious and resource constrained task, you have to help organisers in achieving this objective in as few discussion as possible. Can you please help them?</p>\n\n<h3>Input</h3>\n<p>The first line contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>The only line of each test case contains an integer <b>N</b> denoting the number of persons who want to participate in the discussion.</p>\n\n<h3>Output</h3>\n<p>For each test case, output <b>K + 1</b> lines, where <b>K</b> denotes the number of discussions that should be conducted. </p>\n<p>In the first line, output a single integer <b>K</b>. </p>\n<p>In each of the next <b>K</b> lines, output <b>N</b> space separated integers in the range <b>1</b> to <b>N</b>, which will mean the first <b>N/2</b> persons are discussing with last <b>N/2</b> persons.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10</b></li>\n<li><b>2</b> \u2264 <b>N</b> \u2264 <b>500</b></li>\n<li><b>N</b> is even</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n1\n6\n\n<b>Output:</b>\n3\n1 2 3 4 5 6\n1 2 4 3 5 6\n1 4 5 2 3 6\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1</b>. There are total 6 persons. In the first discussion, persons {1, 2, 3} were in a group and {4, 5, 6} in the other group. After the end of these 3 discussions, you can see that each person got to know the views of all other persons. For example, person 1 discussed with person 2 in the 3rd discussion, with person 3 in 2nd and 3rd debates, and with person 4, 5 and 6 in the first discussion. In this way, we can see that person 1 interacted with all other 5 people out there. You can check yourself that each person in this case has interacted with every other person.</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 10$\n- $2 \\leq N \\leq 500$\n- $N$ is even\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "A great discussion about demonetization is happening on social media. This is the first time in the history of the Internet, that people have decided to organise a discussion in which they actually thought of knowing about each other's views rather than the usual way of forcing your thoughts down the throat of other person. This is a great and unimaginable change and history is being created here. The discussion organisers need your help in creating history. Won't you help them in such a noble cause?\n\nSpecifically, the discussion will be conducted in the following manner. There are a total of $n$ people who want to have a discussion. They will be split into two groups each of size $n/2$ ($n$ is guaranteed to be even). Each person in a group sits down calmly with all the persons of the other group and then they discuss their point of views about the issue. In this way, a nice, constructive and helpful discussion occurs. Note that in one particular discussion, a person discusses with the $n/2$ members of the other group. They do not discuss with people from their own group.\n\nNow people are not satisfied with just a single discussion, as you may not know point of views of all the persons out there. So, they ask organisers to conduct more discussions in such a way that each person is able to discuss his/her views with every other person. That is, for every pair of people $(i,j)$, there should be at least one discussion in which they are in opposite groups. As you know organising discussions is a tedious and resource constrained task, you have to help organisers in achieving this objective in as few discussion as possible. Can you please help them?\n",
+    "inputFormat": "The first line contains an integer $T$ denoting the number of test cases. $T$ test cases follow.\n\nThe only line of each test case contains an integer $N$ denoting the number of persons who want to participate in the discussion.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output $K + 1$ lines, where $K$ denotes the number of discussions that should be conducted.\n\nIn the first line, output a single integer $K$.\n\nIn each of the next $K$ lines, output $N$ space separated integers in the range $1$ to $N$, which will mean the first $N/2$ persons are discussing with last $N/2$ persons.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\n6\n",
+        "output": "3\n1 2 3 4 5 6\n1 2 4 3 5 6\n1 4 5 2 3 6\n",
+        "explanation": "**Example case 1**. There are total 6 persons. In the first discussion, persons {1, 2, 3} were in a group and {4, 5, 6} in the other group. After the end of these 3 discussions, you can see that each person got to know the views of all other persons. For example, person 1 discussed with person 2 in the 3rd discussion, with person 3 in 2nd and 3rd debates, and with person 4, 5 and 6 in the first discussion. In this way, we can see that person 1 interacted with all other 5 people out there. You can check yourself that each person in this case has interacted with every other person.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "20-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AMR16B",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610600
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMR16B",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

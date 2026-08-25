@@ -1,0 +1,350 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "basic-math",
+  "name": "Practice Basic Math",
+  "title": "Practice Basic Math",
+  "level": "Beginner",
+  "description": "Basic Math includes problems on topics like arithmetic, sequences, and counting, which are fundamental to proper understanding of algorithmic logic.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/basic-math/BASICMATH/problems/FIT",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic Math",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Free problems",
+          "submodule_id": 4508,
+          "contest_code": "BASICMATH",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/basic-math/BASICMATH/problems/FIT",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "27557",
+              "code": "FIT",
+              "name": "Fitness",
+              "difficulty_rating": "258",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "SNDMAX",
+              "name": "Second Max of Three Numbers",
+              "difficulty_rating": "300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "CCHOCOLATES",
+              "name": "Chef and Chocolates",
+              "difficulty_rating": "405",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "FLOW002",
+              "name": "Find Remainder",
+              "difficulty_rating": "421",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "CANDYSTORE",
+              "name": "Candy Store",
+              "difficulty_rating": "429",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "SCALENE",
+              "name": "Scalene Triangle",
+              "difficulty_rating": "430",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "FLOW006",
+              "name": "Sum of Digits",
+              "difficulty_rating": "455",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27557",
+              "code": "FAVOURITENUM",
+              "name": "Favourite Numbers",
+              "difficulty_rating": "477",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Premium Problems ",
+          "submodule_id": 4509,
+          "contest_code": "BASICMATHPRO",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 15,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/basic-math/BASICMATHPRO/problems/TESTAVG",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 15,
+          "problems_with_status": [
+            {
+              "contest_id": "27577",
+              "code": "TESTAVG",
+              "name": "Test Averages",
+              "difficulty_rating": "558",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "SEVENRINGS",
+              "name": "7 Rings",
+              "difficulty_rating": "568",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "MAKEAP",
+              "name": "Make AP",
+              "difficulty_rating": "577",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "SUMNEQ",
+              "name": "Integers that sum to the same value",
+              "difficulty_rating": "592",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "MINNOO",
+              "name": "Minimum Number of Ones",
+              "difficulty_rating": "604",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "NEGPROD",
+              "name": "Negative Product",
+              "difficulty_rating": "630",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "FLOW016",
+              "name": "GCD and LCM",
+              "difficulty_rating": "635",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "EQUALISE",
+              "name": "Make A and B equal",
+              "difficulty_rating": "851",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "CONN",
+              "name": "Construct N",
+              "difficulty_rating": "860",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "ALTERADD",
+              "name": "Alternate Additions",
+              "difficulty_rating": "863",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "RECTSQ",
+              "name": "Farmer And His Plot",
+              "difficulty_rating": "936",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "TWOVSTEN",
+              "name": "Two vs Ten",
+              "difficulty_rating": "936",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "PPSUM",
+              "name": "Puppy and Sum",
+              "difficulty_rating": "961",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "MODULO3",
+              "name": "Divisible by 3",
+              "difficulty_rating": "978",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "27577",
+              "code": "BALLBOX",
+              "name": "Balls and Boxes",
+              "difficulty_rating": "994",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 23
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 23,
+  "total_non_pro_problems": 8,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Beginner DSA",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 85304,
+  "path_review": {
+    "rating": 4.5,
+    "users": 2233
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/python-dsa",
+  "roadmap_title": "Python with Beginner DSA"
+}

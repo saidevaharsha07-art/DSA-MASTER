@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "PRIME1",
+  "contest_category": "6",
+  "problem_name": "Prime Generator",
+  "intended_contest_code": null,
+  "body": "<p>\r\nRam wants to generate some prime numbers for his cryptosystem. Help him please!\r\nYour task is to generate all prime numbers between two given numbers.\r\n</p>\r\n<h3>Input</h3>\r\n<p>\r\nThe first line contains t, the number of test cases (less then or equal to 10). \r\n\r\nFollowed by t lines which contain two numbers m and n (1 <= m <= n <= 1000000000, n-m<=100000) separated by a space.\r\n</p>\r\n<h3>Output</h3>\r\n<p>For every test case print all prime numbers p such that m <= p <= n,\r\none number per line.  Separate the answers for each test case by an empty line.</p>\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n2\r\n1 10\r\n3 5\r\n\r\n<b>Output:</b>\r\n2\r\n3\r\n5\r\n7\r\n\r\n3\r\n5\r\n</pre>\r\n<b>Warning: large Input/Output data, be careful with certain languages (though most should be OK if the algorithm is well designed)</b>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "(1 <= m <= n <= 1000000000, n-m<=100000)",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>\nRam wants to generate some prime numbers for his cryptosystem. Help him please!\nYour task is to generate all prime numbers between two given numbers.\n</p>\n\n</pre>\n<b>Warning: large Input/Output data, be careful with certain languages (though most should be OK if the algorithm is well designed)</b>",
+    "inputFormat": "<p>\nThe first line contains t, the number of test cases (less then or equal to 10). \n\nFollowed by t lines which contain two numbers m and n (1 <= m <= n <= 1000000000, n-m<=100000) separated by a space.\n</p>\n",
+    "inputFormatState": true,
+    "outputFormat": "<p>For every test case print all prime numbers p such that m <= p <= n,\none number per line.  Separate the answers for each test case by an empty line.</p>\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 10\n3 5",
+        "output": "2\n3\n5\n7\n\n\n3\n5",
+        "explanation": "",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121212,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "u_admin_codechef_pw",
+  "problem_display_authors": [
+    "u_admin_codechef_pw"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/u_admin_codechef_pw'>u_admin_codechef_pw</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "1-12-2008",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Sqrt N Primality Check",
+    "Segmented Sieve"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory",
+    "Primality Checking",
+    "Sieve of Eratosthenes"
+  ],
+  "difficulty_rating": "1069",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611293
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=PRIME1",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 5,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 80,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

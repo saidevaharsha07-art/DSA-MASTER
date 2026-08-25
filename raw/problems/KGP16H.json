@@ -1,0 +1,122 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP16H",
+  "contest_category": "6",
+  "problem_name": "Coal Mafia and Toll Tax",
+  "intended_contest_code": null,
+  "body": "<p>You are one of the notorious coal mafias. You run an illegal coal mining business. There are <b>n</b> villages, enumerated from <b>1</b> to <b>n</b> from left to right. Each village has some coal mines. This information is given to you by an integer <b>coal<sub>i</sub></b> denoting the amount of coal (in kgs) in village <b>i</b>. The cost of coal is fixed at 1 rupee per kg. </p>\n\n<p>There are toll booths in the highway at the middle of the road connecting any two adjacent villages. So, if you want to go from village <b>i</b> to village <b>i + 1</b>, you might have to pay toll tax for it. This information is provided you by an integer <b>tax<sub>i</sub></b> which denotes the toll tax to pay on the road joining villages <b>i</b> and <b>i + 1</b>. Additionally, some of the toll booths allow you to go both to and fro and pay tax only once, while others don't. This is provided you by an integer <b>policy<sub>i</sub></b> which will be either 1 or 2, denoting whether the toll booth allows 1 way taxation or 2 way taxation. If a toll booth has 1 way taxation, you can cross it twice by paying tax for only the first time you cross the road, you don't need to pay tax the second time. On other hand, if it has two way taxation, then you will have to pay toll tax both the times you cross the road.</p>\n\n<p>\nYou brought a big truck and now want to collect coal in turn maximizing your profit. You will start your journey at village 1, and collect coal from some of the villages and then end back at village 1 itself. Compute the maximum profit you can obtain!\n</p>\n\n<h3>Input</h3>\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>The first line of each test case a single integer <b>n</b> denoting the number of villages.</p>\n<p>The second line of each test case contains <b>n</b> space separated integers in which the <b>i</b>-th of them denotes  <b>coal<sub>i</sub></b> - amount of coal in village <b>i</b>.</p>\n<p>The third line of each test case contains <b>n - 1</b> space separated integers in which the <b>i</b>-th of them denotes  <b>tax<sub>i</sub></b> - amount of toll tax you have to pay each time you cross the road between village <b>i</b> and <b>i + 1</b>.</p>\n<p>The fourth line of each test case contains <b>n - 1</b> space separated integers in which the <b>i</b>-th of them denotes <b>policy<sub>i</sub></b> - whether the toll booth charges 1 way taxation or 2 way while using the road between village <b>i</b> and <b>i + 1</b>.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single integer in a separate line corresponding to the maximum profit that you can obtain.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T, n</b> \u2264 <b>50</b></li>\n<li><b>0</b> \u2264 <b>coal<sub>i</sub></b>, <b>tax<sub>i</sub></b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>1</b> \u2264 <b>policy<sub>i</sub></b> \u2264 <b>2</b></li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n<tt>2\n2\n1 2\n2\n2\n2\n1 3\n2\n1 </tt>\n<b>Output:</b>\n<tt>1\n2</tt>\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1.</b> There is a toll tax of 2 Rs for crossing the road between village 1 and 2. So, if you decide to collect the coal of 2 units in 2nd village, then you will lose 4 Rs in toll tax. Instead, you just decide to collect coal from first village itself, So your profit will be just 1 Rs.</p>\n<p><b>Example case 2.</b> There is toll tax of 2 Rs for crossing the road between village 1 and 2. So you decide to collect the coal from second village, total coal collected will be 4 units, and you will have to spend 2 rupees in toll tax. So, your profit will be just 2 Rs. Hence answer is 2.</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T, n \\leq 50$\n- $0 \\leq coal_i, tax_i \\leq 10^5$\n- $1 \\leq policy_i \\leq 2$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are one of the notorious coal mafias. You run an illegal coal mining business. There are $n$ villages, enumerated from $1$ to $n$ from left to right. Each village has some coal mines. This information is given to you by an integer $coal_i$ denoting the amount of coal (in kgs) in village $i$. The cost of coal is fixed at 1 rupee per kg.\n\nThere are toll booths in the highway at the middle of the road connecting any two adjacent villages. So, if you want to go from village $i$ to village $i + 1$, you might have to pay toll tax for it. This information is provided you by an integer $tax_i$ which denotes the toll tax to pay on the road joining villages $i$ and $i + 1$. Additionally, some of the toll booths allow you to go both to and fro and pay tax only once, while others don't. This is provided you by an integer $policy_i$ which will be either 1 or 2, denoting whether the toll booth allows 1 way taxation or 2 way taxation. If a toll booth has 1 way taxation, you can cross it twice by paying tax for only the first time you cross the road, you don't need to pay tax the second time. On other hand, if it has two way taxation, then you will have to pay toll tax both the times you cross the road.\n\nYou brought a big truck and now want to collect coal in turn maximizing your profit. You will start your journey at village 1, and collect coal from some of the villages and then end back at village 1 itself. Compute the maximum profit you can obtain!\n",
+    "inputFormat": "First line of the input contains an integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n\nThe first line of each test case a single integer $n$ denoting the number of villages.\n\nThe second line of each test case contains $n$ space separated integers in which the $i$-th of them denotes $coal_i$ - amount of coal in village $i$.\n\nThe third line of each test case contains $n - 1$ space separated integers in which the $i$-th of them denotes $tax_i$ - amount of toll tax you have to pay each time you cross the road between village $i$ and $i + 1$.\n\nThe fourth line of each test case contains $n - 1$ space separated integers in which the $i$-th of them denotes $policy_i$ - whether the toll booth charges 1 way taxation or 2 way while using the road between village $i$ and $i + 1$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single integer in a separate line corresponding to the maximum profit that you can obtain.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n1 2\n2\n2\n2\n1 3\n2\n1\n",
+        "output": "1\n2\n",
+        "explanation": "**Example case 1.** There is a toll tax of 2 Rs for crossing the road between village 1 and 2. So, if you decide to collect the coal of 2 units in 2nd village, then you will lose 4 Rs in toll tax. Instead, you just decide to collect coal from first village itself, So your profit will be just 1 Rs.\n\n**Example case 2.** There is toll tax of 2 Rs for crossing the road between village 1 and 2. So you decide to collect the coal from second village, total coal collected will be 4 units, and you will have to spend 2 rupees in toll tax. So, your profit will be just 2 Rs. Hence answer is 2.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "15-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "acm-icpc",
+    "admin3",
+    "kgp16"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610966
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP16H",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

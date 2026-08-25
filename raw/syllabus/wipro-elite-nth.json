@@ -1,0 +1,1136 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "wipro-elite-nth",
+  "name": "WIPRO Elite Questions",
+  "title": "WIPRO Elite Questions",
+  "level": "Intermediate",
+  "description": "Prepare for WIPRO Elite NTH with previous years questions. Solve the coding, numerical ability, reasoning ability, verbal ability and quant questions which were asked in the past.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:54",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/wipro-elite-nth/WIPRO01/problems/YJQPVI01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Coding Problems",
+      "description": "Practice the previous years WIPRO Elite NTH coding problems.",
+      "submodules": [
+        {
+          "name": "Past Years Coding Problems",
+          "submodule_id": 15768,
+          "contest_code": "WIPRO01",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 26,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/wipro-elite-nth/WIPRO01/problems/YJQPVI01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 26,
+          "problems_with_status": [
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI01",
+              "name": "Buy Apples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI02",
+              "name": "Parity Partition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI03",
+              "name": "Word Reversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI04",
+              "name": "First Unique Character",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI05",
+              "name": "Find The Missing Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI06",
+              "name": "Word Counter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI07",
+              "name": "eBay Shipping Price Calculator",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI08",
+              "name": "Sum of Divisibles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI14",
+              "name": "Left Array Rotation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI15",
+              "name": "Data Encryption",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI16",
+              "name": "Digit Exclusion Game",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI17",
+              "name": "Sorted Array Deduplication",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI18",
+              "name": "Unique Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI19",
+              "name": "Count Set Bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI09",
+              "name": "Maximum Subarray Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI10",
+              "name": "Spaceship Fleets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI11",
+              "name": "Lexicographically Smallest String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI12",
+              "name": "Matching Socks",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI13",
+              "name": "Counting Valleys",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI20",
+              "name": "Majority Element",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI21",
+              "name": "Rotate the List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI22",
+              "name": "K-Group Reversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI23",
+              "name": "Wildcard Pattern Matching",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI24",
+              "name": "Subarray Product",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI25",
+              "name": "Queens Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41106",
+              "code": "YJQPVI26",
+              "name": "Optimal Matrix Multiplication",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 26
+    },
+    {
+      "assessment": null,
+      "name": "Numerical Ability Problems",
+      "description": "Practice the previous years WIPRO Elite NTH numerical ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Numerical Ability Problems",
+          "submodule_id": 15769,
+          "contest_code": "WIPRO02",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 14,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/wipro-elite-nth/WIPRO02/problems/LKCCTY01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY01",
+              "name": "Shopkeeper's Cost Price Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY02",
+              "name": "Efficiency and Work Time Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY03",
+              "name": "Coins Ratio Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY04",
+              "name": "Relative Speed of Two Trains",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY05",
+              "name": "Algebraic Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY06",
+              "name": "Arithmetic Progression: Concert Ticket Sales",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY07",
+              "name": "Midpoint Coordinates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY08",
+              "name": "Rectangular Park Area",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY09",
+              "name": "Alloy Mixture Composition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY10",
+              "name": "Average Players from Three States",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY11",
+              "name": "Dilution Profit Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY12",
+              "name": "Gold Medal Ratio",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY13",
+              "name": "Fraction Alteration Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41107",
+              "code": "LKCCTY14",
+              "name": "Student Marks Comparison",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 14
+    },
+    {
+      "assessment": null,
+      "name": "Reasoning Ability Problems",
+      "description": "Practice the previous years WIPRO Elite NTH reasoning ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Reasoning Ability Problems",
+          "submodule_id": 15770,
+          "contest_code": "WIPRO03",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 16,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/wipro-elite-nth/WIPRO03/problems/LKCCTY15",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 16,
+          "problems_with_status": [
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY15",
+              "name": "Coded Inequality I",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY16",
+              "name": "Coded Inequality II",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY17",
+              "name": "Seating Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY18",
+              "name": "Statement and Argument Analysis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY19",
+              "name": "Data Sufficiency: Student Scores",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "LKCCTY20",
+              "name": "Letter Series with Mixed Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ37",
+              "name": "Alternating Number Series Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ38",
+              "name": "Logical Deduction: School Uniforms",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ39",
+              "name": "Family Relation Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ40",
+              "name": "Family Relationship Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ41",
+              "name": "Directional Turn Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ42",
+              "name": "Remote Work Policy Debate",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ43",
+              "name": "Strong Arguments on Education",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ44",
+              "name": "Logical Deduction Tools",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ45",
+              "name": "Logical Reasoning: Vehicles and Engines",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41108",
+              "code": "NJTODZ46",
+              "name": "Family Relation Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    },
+    {
+      "assessment": null,
+      "name": "Verbal Ability Problems",
+      "description": "Practice the previous years WIPRO Elite NTH verbal ability problems.",
+      "submodules": [
+        {
+          "name": "Past Years Verbal Ability Problems",
+          "submodule_id": 15771,
+          "contest_code": "WIPRO04",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/wipro-elite-nth/WIPRO04/problems/LKCCTY21",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "41109",
+              "code": "LKCCTY21",
+              "name": "Meaning of visitors in a sentence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41109",
+              "code": "LKCCTY22",
+              "name": "Spot the Error: Subject-Verb Agreement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41109",
+              "code": "LKCCTY23",
+              "name": "Active and Passive Voice Transformation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41109",
+              "code": "LKCCTY24",
+              "name": "Spot the Error: Subject-Verb Agreement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41109",
+              "code": "LKCCTY25",
+              "name": "Synonym of SAVAGE",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Quant Problems",
+      "description": "Practice the previous years WIPRO Elite NTH quant problems.",
+      "submodules": [
+        {
+          "name": "Past Years Quant Problems",
+          "submodule_id": 15772,
+          "contest_code": "WIPRO05",
+          "start_date": "2025-09-19 17:00:00",
+          "total_problems": 36,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/wipro-elite-nth/WIPRO05/problems/NJTODZ01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 36,
+          "problems_with_status": [
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ01",
+              "name": "Library Usable Stock Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ02",
+              "name": "Smallest Perfect Square Divisible by Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ03",
+              "name": "Perfect Square Land Plot",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ04",
+              "name": "Last Digit Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ05",
+              "name": "Permutation of Professor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ06",
+              "name": "Painters Working Together",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ07",
+              "name": "Team's Average Score Change",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ08",
+              "name": "Age Ratio Problem: Alice and Bob",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ09",
+              "name": "Book Price Comparison",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ10",
+              "name": "Calendar Day Prediction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ11",
+              "name": "Logarithmic Equation Evaluation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ12",
+              "name": "Logarithmic Expression Evaluation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ13",
+              "name": "Shelf Arrangement Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ14",
+              "name": "Tournament Matches Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ15",
+              "name": "Probability of Contradiction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ16",
+              "name": "Spinner Game Probability",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ17",
+              "name": "Probability of Picking Chocolates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ18",
+              "name": "Ratio and Proportion Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ19",
+              "name": "Number Relationship Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ20",
+              "name": "Algebraic Identity Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ21",
+              "name": "Maximizing Company Profit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ22",
+              "name": "Coffee Bean Mixture Ratio",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ23",
+              "name": "Dishonest Milkman's Profit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ24",
+              "name": "Heights and Angles Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ25",
+              "name": "Lighthouse Height Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ26",
+              "name": "Lighthouse Angle of Depression Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ27",
+              "name": "Bookshelf Arrangement Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ28",
+              "name": "Smartphone Production Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ29",
+              "name": "4 Digit Security Code Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ30",
+              "name": "Secret Code Language Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ31",
+              "name": "Secret Language Coding Puzzle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ32",
+              "name": "Simple Interest Principal Calculation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ33",
+              "name": "Cyclist Against the Wind Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ34",
+              "name": "Moving Walkway Speed Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ35",
+              "name": "Pipes Filling a Tank",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "41110",
+              "code": "NJTODZ36",
+              "name": "Reservoir Filling Time",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 36
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 97,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Company Based Questions",
+  "reviews": [],
+  "learners_count": 683,
+  "path_review": {
+    "rating": 4.7,
+    "users": 7
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

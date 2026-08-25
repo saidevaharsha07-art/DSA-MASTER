@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "DEQUEUE",
+  "contest_category": "6",
+  "problem_name": "Minimum Popping",
+  "intended_contest_code": "START4",
+  "body": "\r\nYou are given a double-ended queue $Q$. Initially, it contains elements $Q_1, Q_2, \\ldots, Q_M$ in this order. Each of these elements is an integer between $1$ and $N$ (inclusive) and each integer between $1$ and $N$ (inclusive) occurs in the queue at least once.\r\n\r\nWe want to pop some (possibly zero) elements from the front of the queue and some (not necessarily the same number, possibly zero) elements from the back. Among all the popped elements, each integer between $1$ and $N$ (inclusive) should appear at least once. Find the smallest possible total number of elements we need to pop.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains two space-separated integers $N$ and $M$.\r\n- The second line contains $M$ space-separated integers $Q_1, Q_2, \\ldots, Q_M$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2014 the minimum number of elements we need to pop.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 10$\r\n- $1 \\leq N \\leq 10^5$\r\n- $N \\leq M \\leq 2 \\cdot 10^5$\r\n- for each $i$ ($1 \\le i \\le N$), there is at least one element equal to $i$ in the queue\r\n- the sum of $N$ over all test cases does not exceed $10^5$\r\n- the sum of $M$ over all test cases does not exceed $2 \\cdot 10^5$\r\n\r\n### Example Input\r\n```\r\n3\r\n2 2\r\n1 2\r\n2 3\r\n1 2 1\r\n3 6\r\n1 1 1 3 2 2\r\n```\r\n\r\n### Example Output\r\n```\r\n2\r\n2\r\n4\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** Since $N = M$ and all elements are pairwise distinct, we have to pop everything to get each value at least once.\r\n\r\n**Example case 2:** We can pop the first $2$ or the last $2$ elements.\r\n\r\n**Example case 3:** We can pop the first element and the last $3$ elements, so the answer is $1 + 3 = 4$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given a double-ended queue $Q$. Initially, it contains elements $Q_1, Q_2, \\ldots, Q_M$ in this order. Each of these elements is an integer between $1$ and $N$ (inclusive) and each integer between $1$ and $N$ (inclusive) occurs in the queue at least once.\n\nWe want to pop some (possibly zero) elements from the front of the queue and some (not necessarily the same number, possibly zero) elements from the back. Among all the popped elements, each integer between $1$ and $N$ (inclusive) should appear at least once. Find the smallest possible total number of elements we need to pop.\n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains two space-separated integers $N$ and $M$.\n- The second line contains $M$ space-separated integers $Q_1, Q_2, \\ldots, Q_M$.\n\n### Output\nFor each test case, print a single line containing one integer \u2014 the minimum number of elements we need to pop.\n\n### Constraints\n- $1 \\leq T \\leq 10$\n- $1 \\leq N \\leq 10^5$\n- $N \\leq M \\leq 2 \\cdot 10^5$\n- for each $i$ ($1 \\le i \\le N$), there is at least one element equal to $i$ in the queue\n- the sum of $N$ over all test cases does not exceed $10^5$\n- the sum of $M$ over all test cases does not exceed $2 \\cdot 10^5$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n2 2\r\n1 2\r\n2 3\r\n1 2 1\r\n3 6\r\n1 1 1 3 2 2",
+        "output": "2\r\n2\r\n4",
+        "explanation": "**Example case 1:** Since $N = M$ and all elements are pairwise distinct, we have to pop everything to get each value at least once.\r\n\r\n**Example case 2:** We can pop the first $2$ or the last $2$ elements.\r\n\r\n**Example case 3:** We can pop the first element and the last $3$ elements, so the answer is $1 + 3 = 4$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 90341,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "daanish_adm",
+  "problem_display_authors": [
+    "daanish_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/daanish_adm'>daanish_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "costheta_z",
+  "date_added": "30-03-2021",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "1D Arrays",
+    "Binary Search"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Arrays",
+    "Algorithms",
+    "Searching"
+  ],
+  "difficulty_rating": "2463",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610783
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=DEQUEUE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

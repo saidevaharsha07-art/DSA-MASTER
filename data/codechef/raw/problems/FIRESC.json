@@ -1,0 +1,126 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FIRESC",
+  "contest_category": "6",
+  "problem_name": "Fire Escape Routes",
+  "intended_contest_code": "MARCH13",
+  "body": "There are $N$ people working in a building, and each one works in a separate cabin. Chef\u2019s employees are numbered by integers from $1$ to $N$, inclusive. Chef wants to ensure the safety of his employees. He wants to have fire escapes in the building and wants to train the employees to use these by conducting mock drills.\r\n\r\nChef knows that the number of people working in his office can be very large. In order to avoid crowding of a common fire escape route during emergency, Chef has decided to build multiple fire escapes. For the safety of every employee, each cabin has a fire exit which is connected to one of the fire escape routes.\r\n\r\nA lot of employees are friends with each other. The friendship is mutual. This means that if employee $i$ is a friend of employee $j$ then employee $j$ is a friend of employee $i$ as well. But friendship is NOT necessarily transitive. This means that if employee $i$ is a friend of employee $j$ AND employee $j$ is a friend of employee $k$, then employee $i$ and employee $k$ need not necessarily be friends.\r\n\r\nIf two employees are friends, they do not want to escape through different routes.\r\nThis complicates the task for the Chef. As already mentioned, he wants to have the maximum number of fire escape routes to ensure maximum safety. Also, for every escape route, one of the employees using that route needs to be appointed as the fire drill captain. The captain will be responsible for conducting the mock drills and train all the employees using that route. Your task is simple. Given the number of employees and the friendship list, you need to tell the Chef the maximum number of fire escape routes that he can have in the building and the number of ways of selecting the captains for every route. Since the number of ways can be really large, output this value modulo $10^{9} + 7$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$, denoting the number of test cases. The description of T test cases follows. \r\n- The first line of each test case contains two space-separated integers $N$ and $M$, denoting the number of employees and the number of friendship relations, respectively.\r\n- Each of the following $M$ lines contains two space-separated integers $i$ and $j$, denoting that employee $i$ and employee $j$ are friends.\r\n\r\n### Output\r\nFor each test case, output a single line containing two space separated integers, denoting the maximum number of distinct fire escape routes that can be constructed and the number of ways of selecting the captains modulo $10^{9} + 7$.\r\n\r\n### Constraints\r\n- $1 \\leq T \\leq 5$\r\n- $1 \\leq N \\leq 10^{5}$\r\n- $0 \\leq M \\leq 10^{5}$\r\n- $1 \\leq i, j \\leq N$\r\n- $ i \\neq j$\r\n- For any pair of employees $i$ and $j$ such that $1 \\leq i, j \\leq N$, at most one pair among $(i, j)$ and $(j, i)$ will appear in the input\r\n\r\n\r\n### Example Input\r\n```\r\n3\r\n4 2\r\n1 2\r\n2 3\r\n5 3\r\n1 2\r\n2 3\r\n1 3\r\n6 3\r\n1 2\r\n3 4\r\n5 6\r\n```\r\n\r\n### Example Output:\r\n```\r\n2 3\r\n3 3\r\n3 8\r\n```\r\n\r\n### Explanation\r\n\r\n**Example case 1:** Here employees $1$ and $2$ are friends and should share the same fire escape. Also employees $2$ and $3$ share the same fire escape. This means employees $1$, $2$, and $3$ will have a common route. But to maximize number of routes Chef could assign another route to employee $4$ since it is not a friend of other employee. So we have two escape routes with the following distribution of employees by routes: $\\{1, 2, 3\\}$, $\\{4\\}$. Therefore, there are $3$ ways to chose drill captains: $(1, 4)$, $(2, 4)$, $(3, 4)$, where first element in the pair denotes the captain for the first route and second element denotes the captain for the second route.\r\n\r\n**Example case 2:** Here the optimal distribution of employees by routes is $\\{1, 2, 3\\}$, $\\{4\\}$, $\\{5\\}$. Therefore, there are $3$ ways to chose drill captains: $(1, 4, 5)$, $(2, 4, 5)$, $(3, 4, 5)$.\r\n\r\n**Example case 3:** Here the optimal distribution of employees by routes is $\\{1, 2\\}$, $\\{3, 4\\}$, $\\{5, 6\\}$. Therefore, there are 8 ways to chose drill captains: $(1, 3, 5)$, $(1, 3, 6)$, $(1, 4, 5)$, $(1, 4, 6)$, $(2, 3, 5)$, $(2, 3, 6)$, $(2, 4, 5)$, $(2, 4, 6)$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "There are $N$ people working in a building, and each one works in a separate cabin. Chef\u2019s employees are numbered by integers from $1$ to $N$, inclusive. Chef wants to ensure the safety of his employees. He wants to have fire escapes in the building and wants to train the employees to use these by conducting mock drills.\n\nChef knows that the number of people working in his office can be very large. In order to avoid crowding of a common fire escape route during emergency, Chef has decided to build multiple fire escapes. For the safety of every employee, each cabin has a fire exit which is connected to one of the fire escape routes.\n\nA lot of employees are friends with each other. The friendship is mutual. This means that if employee $i$ is a friend of employee $j$ then employee $j$ is a friend of employee $i$ as well. But friendship is NOT necessarily transitive. This means that if employee $i$ is a friend of employee $j$ AND employee $j$ is a friend of employee $k$, then employee $i$ and employee $k$ need not necessarily be friends.\n\nIf two employees are friends, they do not want to escape through different routes.\nThis complicates the task for the Chef. As already mentioned, he wants to have the maximum number of fire escape routes to ensure maximum safety. Also, for every escape route, one of the employees using that route needs to be appointed as the fire drill captain. The captain will be responsible for conducting the mock drills and train all the employees using that route. Your task is simple. Given the number of employees and the friendship list, you need to tell the Chef the maximum number of fire escape routes that he can have in the building and the number of ways of selecting the captains for every route. Since the number of ways can be really large, output this value modulo $10^{9} + 7$.\n\n### Input\n- The first line of the input contains a single integer $T$, denoting the number of test cases. The description of T test cases follows. \n- The first line of each test case contains two space-separated integers $N$ and $M$, denoting the number of employees and the number of friendship relations, respectively.\n- Each of the following $M$ lines contains two space-separated integers $i$ and $j$, denoting that employee $i$ and employee $j$ are friends.\n\n### Output\nFor each test case, output a single line containing two space separated integers, denoting the maximum number of distinct fire escape routes that can be constructed and the number of ways of selecting the captains modulo $10^{9} + 7$.\n\n### Constraints\n- $1 \\leq T \\leq 5$\n- $1 \\leq N \\leq 10^{5}$\n- $0 \\leq M \\leq 10^{5}$\n- $1 \\leq i, j \\leq N$\n- $ i \\neq j$\n- For any pair of employees $i$ and $j$ such that $1 \\leq i, j \\leq N$, at most one pair among $(i, j)$ and $(j, i)$ will appear in the input",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4 2\n1 2\n2 3\n5 3\n1 2\n2 3\n1 3\n6 3\n1 2\n3 4\n5 6",
+        "output": "2 3\n3 3\n3 8",
+        "explanation": "**Example case 1:** Here employees $1$ and $2$ are friends and should share the same fire escape. Also employees $2$ and $3$ share the same fire escape. This means employees $1$, $2$, and $3$ will have a common route. But to maximize number of routes Chef could assign another route to employee $4$ since it is not a friend of other employee. So we have two escape routes with the following distribution of employees by routes: $\\{1, 2, 3\\}$, $\\{4\\}$. Therefore, there are $3$ ways to chose drill captains: $(1, 4)$, $(2, 4)$, $(3, 4)$, where first element in the pair denotes the captain for the first route and second element denotes the captain for the second route.\n\n**Example case 2:** Here the optimal distribution of employees by routes is $\\{1, 2, 3\\}$, $\\{4\\}$, $\\{5\\}$. Therefore, there are $3$ ways to chose drill captains: $(1, 4, 5)$, $(2, 4, 5)$, $(3, 4, 5)$.\n\n**Example case 3:** Here the optimal distribution of employees by routes is $\\{1, 2\\}$, $\\{3, 4\\}$, $\\{5, 6\\}$. Therefore, there are 8 ways to chose drill captains: $(1, 3, 5)$, $(1, 3, 6)$, $(1, 4, 5)$, $(1, 4, 6)$, $(2, 3, 5)$, $(2, 3, 6)$, $(2, 4, 5)$, $(2, 4, 6)$.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 1713,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "3",
+  "source_sizelimit": "50000",
+  "problem_author": "vamsi_adm",
+  "problem_display_authors": [
+    "vamsi_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vamsi_adm'>vamsi_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "anton_lunyov"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/anton_lunyov'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>anton_lunyov</span></a></div>",
+  "problem_editorialist": "gamabunta",
+  "date_added": "3-02-2013",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Disjoint Set Union",
+    "Combinatorics"
+  ],
+  "computed_tags": [
+    "Advanced Data Structures",
+    "Mathematics"
+  ],
+  "difficulty_rating": "1671",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610844
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FIRESC",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 15,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

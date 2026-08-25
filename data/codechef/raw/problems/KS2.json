@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KS2",
+  "contest_category": "6",
+  "problem_name": "Guddu on a Date",
+  "intended_contest_code": "JUNE19",
+  "body": "\r\nGuddu likes a girl that loves playing with numbers. She agreed to go on a date with Guddu, but only if he can solve the following problem:\r\n\r\nAn integer is *round* if it is greater than $0$ and the sum of its digits in decimal representation is a multiple of $10$. Find the $N$-th smallest round integer.\r\n\r\nHowever, Guddu does not like playing with numbers at all and he is unable to solve this problem, so he begs you to solve it for him. In return, he will definitely give you a treat.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the $N$-th round integer. It is guaranteed that this number is smaller than $2^{64}$.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $1 \\le N \\le 10^{18}$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):**\r\n- $1 \\le T \\le 10$\r\n- $1 \\le N \\le 10^5$\r\n\r\n**Subtask #2 (70 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n1\r\n2\r\n```\r\n\r\n### Example Output\r\n```\r\n28\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** The smallest round integer is $19$ and the second smallest is $28$.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nGuddu likes a girl that loves playing with numbers. She agreed to go on a date with Guddu, but only if he can solve the following problem:\r\n\r\nAn integer is *round* if it is greater than $0$ and the sum of its digits in decimal representation is a multiple of $10$. Find the $N$-th smallest round integer.\r\n\r\nHowever, Guddu does not like playing with numbers at all and he is unable to solve this problem, so he begs you to solve it for him. In return, he will definitely give you a treat.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains a single integer $N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing the $N$-th round integer. It is guaranteed that this number is smaller than $2^{64}$.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 10^5$\r\n- $1 \\le N \\le 10^{18}$\r\n\r\n### Subtasks\r\n**Subtask #1 (30 points):**\r\n- $1 \\le T \\le 10$\r\n- $1 \\le N \\le 10^5$\r\n\r\n**Subtask #2 (70 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\r\n2",
+        "output": "28",
+        "explanation": "**Example case 1:** The smallest round integer is $19$ and the second smallest is $28$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121224,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "kartik_354",
+  "problem_display_authors": [
+    "kartik_354"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kartik_354'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #3366CC;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>3&#9733;</span><span class='m-username--link'>kartik_354</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "25-04-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1525",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610973
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KS2",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 9,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

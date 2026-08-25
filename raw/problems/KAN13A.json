@@ -1,0 +1,123 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KAN13A",
+  "contest_category": "6",
+  "problem_name": "Hard Disk",
+  "intended_contest_code": null,
+  "body": "<p>Dipu's hard disk crashed last week. He bought a new one and has already installed all necessary software. But he has lost his personal collection of media files. It is just unbearable! How can he avoid such a loss in future?\n</p>\n<p>\nDipu is planning to maintain a \"fresh\" second hard disk in his computer as a backup device. He wants to make sure that the backup hard disk is never too old, by replacing it with a new one every few months. This is what he will do: after a backup hard disk has been used for a few months, Dipu will buy a new hard disk, move all the data from the old backup disk to the new one and then sell the old one. He knows that he will have to sell an old backup disk at a price lower than its original price because of both depreciation and the drop in the market price of new hard disks. His goal is to keep the total cost of maintaining the backups as low as possible.\n</p>\n<p>\nGiven the prices of different models of hard disks in the next few months, your job is to determine the minimum cost of maintaining the backup disks in the same period of time. Assume: </p>\n<ul>\n<li>Dipu will only buy a new backup hard disk and sell the old one on the first day of a month. </li>\n<li>He has no backup disk to sell on the first day of the first month. So he needs to buy a new backup disk on the first day of the first month, without selling.</li>\n<li>The amount he will get by selling a hard disk is exactly <b>Tk 100</b> less than the current price of a new hard disk of the same model at the selling time. </li>\n<li>the price of same model hard disks never goes up versus months, and always remains expensive than <b>Tk 100</b>. </li>\n</ul>\n\n<h3>Input</h3>\n<p>Input consists of several datasets. Each dataset consists of the followings: </p>\n<p>Tips:</p>\n<ul>\n<li>A line containing the name of the set. </li>\n<li>A line containing 2 positive integers <b>n</b> and <b>m</b>, denoting respectively the number of different models of hard disks and the number of months to consider. </li>\n<li>Each of next n lines contains the description of one hard disk. The description of a hard disk consists of its model name followed by m integers denoting its price on the first day of the m months in order. </li>\n</ul>\n<p>\u00a0The end of input is marked with a line consisting of \"TheEnd\" (quotes for clarification). All data on a single line are separated by exactly one space. </p>\n<h3>Output</h3>\n<p>For each set of input, the output should contain the name of the set on the first line first. On the second line, output the minimum possible cost. Then, list several lines of hard disks used in those m months, in the order of their use (maybe less than m disks are used). For each hard disk, its name should be followed by the number of month(s) it will be used. At the end of each set, print an empty line.\n</p>\n<p>If there are multiple possibilities, any one of them is acceptable.\n</p>\n<p>The end of output should be marked with a line consisting of \"TheEnd\" (quotes for clarification).  See the sample output for details.\n</p>\n<h3>Constraints</h3>\n<p>1 &lt; <b>n</b> &lt; 100, 1 &lt; <b>m</b> &lt; 200</p>\n<p> The prices are below Tk 20,000 and non-increasing in the same line. </p>\n<p> The name of sets and the name of a hard disk consist of 2 to 16 alphanumeric characters. </p>\n<h3>Example</h3>\n<pre><b>Input:</b>\nFirstSet\n2 4\nBrand1 4000 3600 3500 3400\nBrand2 3500 3500 3200 3000\nSecondSet\n4 8\nMintor 4500 4500 4400 4200 4000 3700 3500 3200\nRivergate 4500 4400 4300 4100 3900 3800 3600 3300 \nEasternDigital 5000 4900 4800 4700 4500 4100 3700 3500\nWesternAnalog 7500 7200 7000 6800 6500 6200 6000 5500\nTheEnd\n\n\n<b>Output:</b>\nFirstSet\nTk 3400\nBrand2 for 1 month(s)\nBrand1 for 2 month(s)\nBrand2 for 1 month(s)\n\nSecondSet\nTk 4500\nMintor for 8 month(s)\n\nTheEnd\n</pre>\n<p><b>\n<p>Problem Setter : Dr. Mustaq Ahmed</p>\n<p></p></b></p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- 1 < `n` < 100, 1 < `m` < 200\n- The prices are below Tk 20,000 and non-increasing in the same line.\n- The name of sets and the name of a hard disk consist of 2 to 16 alphanumeric characters.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Dipu's hard disk crashed last week. He bought a new one and has already installed all necessary software. But he has lost his personal collection of media files. It is just unbearable! How can he avoid such a loss in future?\n\nDipu is planning to maintain a \"fresh\" second hard disk in his computer as a backup device. He wants to make sure that the backup hard disk is never too old, by replacing it with a new one every few months. This is what he will do: after a backup hard disk has been used for a few months, Dipu will buy a new hard disk, move all the data from the old backup disk to the new one and then sell the old one. He knows that he will have to sell an old backup disk at a price lower than its original price because of both depreciation and the drop in the market price of new hard disks. His goal is to keep the total cost of maintaining the backups as low as possible.\n\nGiven the prices of different models of hard disks in the next few months, your job is to determine the minimum cost of maintaining the backup disks in the same period of time. Assume:\n\n- Dipu will only buy a new backup hard disk and sell the old one on the first day of a month.\n- He has no backup disk to sell on the first day of the first month. So he needs to buy a new backup disk on the first day of the first month, without selling.\n- The amount he will get by selling a hard disk is exactly Tk 100 less than the current price of a new hard disk of the same model at the selling time.\n- The price of same model hard disks never goes up versus months, and always remains expensive than Tk 100.\n",
+    "inputFormat": "Input consists of several datasets. Each dataset consists of the followings:\n\n- A line containing the name of the set.\n- A line containing 2 positive integers `n` and `m`, denoting respectively the number of different models of hard disks and the number of months to consider.\n- Each of next `n` lines contains the description of one hard disk. The description of a hard disk consists of its model name followed by `m` integers denoting its price on the first day of the `m` months in order.\n\nThe end of input is marked with a line consisting of \"TheEnd\" (quotes for clarification). All data on a single line are separated by exactly one space.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each set of input, the output should contain the name of the set on the first line first. On the second line, output the minimum possible cost. Then, list several lines of hard disks used in those `m` months, in the order of their use (maybe less than `m` disks are used). For each hard disk, its name should be followed by the number of month(s) it will be used. At the end of each set, print an empty line.\n\nIf there are multiple possibilities, any one of them is acceptable.\n\nThe end of output should be marked with a line consisting of \"TheEnd\" (quotes for clarification). See the sample output for details.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "FirstSet\n2 4\nBrand1 4000 3600 3500 3400\nBrand2 3500 3500 3200 3000\nSecondSet\n4 8\nMintor 4500 4500 4400 4200 4000 3700 3500 3200\nRivergate 4500 4400 4300 4100 3900 3800 3600 3300 \nEasternDigital 5000 4900 4800 4700 4500 4100 3700 3500\nWesternAnalog 7500 7200 7000 6800 6500 6200 6000 5500\nTheEnd\n",
+        "output": "FirstSet\nTk 3400\nBrand2 for 1 month(s)\nBrand1 for 2 month(s)\nBrand2 for 1 month(s)\n\nSecondSet\nTk 4500\nMintor for 8 month(s)\n\nTheEnd\n",
+        "explanation": "In the first set, Dipu uses Brand2 for the first month, then switches to Brand1 for the next two months, and finally switches back to Brand2 for the last month. This results in a total cost of Tk 3400.\n\nIn the second set, Dipu uses Mintor for all 8 months, resulting in a total cost of Tk 4500.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.17",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "2-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dynamic-programming",
+    "easy-medium",
+    "jingbo_adm",
+    "kan13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "Dynamic Programming",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610957
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KAN13A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

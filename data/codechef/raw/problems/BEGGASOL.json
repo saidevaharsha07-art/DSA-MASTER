@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BEGGASOL",
+  "contest_category": "6",
+  "problem_name": "Gasoline Introduction",
+  "intended_contest_code": "LTIME90",
+  "body": "\r\nThere are $N$ cars (numbered $1$ through $N$) on a circular track with length $N$. For each $i$ ($2 \\le i \\le N$), the $i$-th of them is at a distance $i-1$ clockwise from car $1$, i.e. car $1$ needs to travel a distance $i-1$ clockwise to reach car $i$. Also, for each valid $i$, the $i$-th car has $f_i$ litres of gasoline in it initially.\r\n\r\nYou are driving car $1$ in the clockwise direction. To move one unit of distance in this direction, you need to spend $1$ litre of gasoline. When you pass another car (even if you'd run out of gasoline exactly at that point), you steal all its gasoline. Once you do not have any gasoline left, you stop.\r\n\r\nWhat is the total clockwise distance travelled by your car? \r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains a single integer $N$.\r\n- The second line contains $N$ space-separated integers $f_1, f_2, \\ldots, f_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the total clockwise distance travelled.\r\n\r\n### Constraints\r\n- $1 \\le T \\le 100$\r\n- $1 \\le N \\le 100$\r\n- $0 \\le f_i \\le 100$ for each valid $i$\r\n\r\n### Subtasks\r\n**Subtask #1 (100 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n5\r\n3 0 0 0 0\r\n5\r\n1 1 1 1 1\r\n5\r\n5 4 3 2 1\r\n```\r\n\r\n### Example Output\r\n```\r\n3\r\n5\r\n15\r\n```\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\nThere are $N$ cars (numbered $1$ through $N$) on a circular track with length $N$. For each $i$ ($2 \\le i \\le N$), the $i$-th of them is at a distance $i-1$ clockwise from car $1$, i.e. car $1$ needs to travel a distance $i-1$ clockwise to reach car $i$. Also, for each valid $i$, the $i$-th car has $f_i$ litres of gasoline in it initially.\n\nYou are driving car $1$ in the clockwise direction. To move one unit of distance in this direction, you need to spend $1$ litre of gasoline. When you pass another car (even if you'd run out of gasoline exactly at that point), you steal all its gasoline. Once you do not have any gasoline left, you stop.\n\nWhat is the total clockwise distance travelled by your car? \n\n### Input\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first line of each test case contains a single integer $N$.\n- The second line contains $N$ space-separated integers $f_1, f_2, \\ldots, f_N$.\n\n### Output\nFor each test case, print a single line containing one integer \u2015 the total clockwise distance travelled.\n\n### Constraints\n- $1 \\le T \\le 100$\n- $1 \\le N \\le 100$\n- $0 \\le f_i \\le 100$ for each valid $i$\n\n### Subtasks\n**Subtask #1 (100 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n5\r\n3 0 0 0 0\r\n5\r\n1 1 1 1 1\r\n5\r\n5 4 3 2 1",
+        "output": "3\r\n5\r\n15",
+        "explanation": "**Test case $1$:** The car starts with $3$ liters of gasoline. Using this, the car can travel $3$ units. On its journey, there is no other car having gasoline. Thus, the car stops after $3$ units.\n\n**Test case $2$:** The car starts with $1$ liter of gasoline.\n- After traveling $1$ unit, it passes another car with $1$ liter gasoline. Thus, the amount of gasoline left after traveling $1$ unit is $1$ liter. \n- After traveling $2$ units, it passes another car with $1$ liter gasoline. Thus, the amount of gasoline left after traveling $2$ units is $1$ liter.\n- After traveling $3$ units, it passes another car with $1$ liter gasoline. Thus, the amount of gasoline left after traveling $3$ units is $1$ liter.\n- After traveling $4$ units, it passes another car with $1$ liter gasoline. Thus, the amount of gasoline left after traveling $4$ units is $1$ liter.\n- After traveling $5$ units, there is no car with gasoline. Thus, the car stops after $5$ units.\n\n**Test case $3$:** The car starts with $5$ liters of gasoline.\n- After traveling $1$ unit, it passes another car with $4$ liters gasoline. Thus, the amount of gasoline left after traveling $1$ unit is $5-1+4 = 8$ liters. \n- After traveling $2$ units, it passes another car with $3$ liters gasoline. Thus, the amount of gasoline left after traveling $2$ units is $8-1+3 = 10$ liters.\n- After traveling $3$ units, it passes another car with $2$ liters gasoline. Thus, the amount of gasoline left after traveling $3$ units is $10-1+2 = 11$ liters.\n- After traveling $4$ units, it passes another car with $1$ liter gasoline. Thus, the amount of gasoline left after traveling $4$ units is $11-1+1 = 11$ liters.\n- After traveling $5$ units, there is no car with gasoline. Thus, after $5$ units, $10$ liters of gasoline is left. \n\nThe car can move $10$ more units using the leftover gasoline. The total distance travelled is $15$ units.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 81656,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "ildar_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/ildar_adm'>ildar_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "alei",
+  "date_added": "27-11-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Observation",
+    "Brute Force"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1263",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610637
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BEGGASOL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 8,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

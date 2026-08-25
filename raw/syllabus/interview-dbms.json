@@ -1,0 +1,1784 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "interview-dbms",
+  "name": "Top DBMS Interview Questions",
+  "title": "Top DBMS Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare for DBMS interviews with more than 92 interview questions. This path covers key topics such as data modelling, relational database design, SQL, transaction management, and emerging database technologies.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/interview-dbms/CORECS01/problems/PPREPCS01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Module 1: Introduction to Databases",
+      "description": "Learn the basics of Database, DBMS and DBMS Architecture",
+      "submodules": [
+        {
+          "name": "Databases and their relevance",
+          "submodule_id": 2091,
+          "contest_code": "CORECS01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS01/problems/PPREPCS01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS01",
+              "name": "Introduction to Database",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS02",
+              "name": "Example and Use Cases of Database",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS03",
+              "name": "Example and Use Cases of Database - 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS03A",
+              "name": "Database Segmentation Identification - Quiz",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS04",
+              "name": "Difference between Databases and File Systems",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS05",
+              "name": "Ensuring Simultaneous Data Access - Quiz",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS06",
+              "name": "Introduction to DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS07",
+              "name": "DBMS Architecture",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS08",
+              "name": "DBMS Architecture Role - Quiz ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS09",
+              "name": "Data Independence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS10",
+              "name": "Data Abstraction",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS11",
+              "name": "Disadvantages of using DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24218",
+              "code": "PPREPCS12",
+              "name": "DBMS Architecture Security Levels - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Quiz: Basics of databases and their components",
+          "submodule_id": 2092,
+          "contest_code": "CORECS02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS02/problems/PPREPCS12A",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS12A",
+              "name": "Data Abstraction Levels for Users - MCQ ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS13",
+              "name": "DBMS Data Interaction Flow - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS14",
+              "name": "Database vs File System Usage - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS15",
+              "name": "Physical Data Independence Purpose - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS16",
+              "name": "Database Architecture Access Issue - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS17",
+              "name": "DBMS Architecture Speed Query - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24219",
+              "code": "PPREPCS18",
+              "name": "Upgrading Hard Drive Strategy - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Module 2: Data Modeling and Entity-Relationship (ER) Diagrams",
+      "description": "This module introduces data modeling, including ER modeling, entity-attribute relationships, and ER diagram-to-table conversion, essential for effective database design",
+      "submodules": [
+        {
+          "name": "Data modeling and Entity relationship",
+          "submodule_id": 2093,
+          "contest_code": "CORECS03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS03/problems/PPREPCS19",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS19",
+              "name": "Data Modeling",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS20",
+              "name": "Types of Data Models",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS21",
+              "name": "Entity Relationship (ER) Model",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS22",
+              "name": "Entities and Attributes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS23",
+              "name": "Relationships",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS24",
+              "name": "Challenge",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS25",
+              "name": "Participation constraints",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS26",
+              "name": "Generalization, Specialization and Aggregation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24220",
+              "code": "PPREPCS27",
+              "name": "Reduction of ER diagram to Table",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Quiz: Data modeling and Entity relationship",
+          "submodule_id": 2094,
+          "contest_code": "CORECS04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS04/problems/PPREPCS28",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS28",
+              "name": "Weak Entity Set Representation - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS29",
+              "name": "Relational Database Degree Definition - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS30",
+              "name": "ER Model Cardinality Question - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS31",
+              "name": "Minimum Tables for ER Diagram - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS32",
+              "name": "Library System Entity Relationship - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS33",
+              "name": "Library ER Diagram Relationship - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS34",
+              "name": "Library Database Entity Attributes - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS36",
+              "name": "ER Diagram Table Conversion - MCQ ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24221",
+              "code": "PPREPCS37",
+              "name": "ER Model to Relation Mapping - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    },
+    {
+      "assessment": null,
+      "name": "Module 3: Relational Database Design",
+      "description": "Fundamentals of relational databases, including key concepts, types of keys, and their significance in database design.",
+      "submodules": [
+        {
+          "name": "Relational Database Design: Fundamentals",
+          "submodule_id": 2095,
+          "contest_code": "CORECS05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS05/problems/PPREPCS38",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS38",
+              "name": "Fundamentals of Relational Databases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS39",
+              "name": "Key Concepts  - Adding New Attribute to Table",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS40",
+              "name": "Key Concepts - Integrity in Employee Database",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS41",
+              "name": "Keys In RDBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS42",
+              "name": "Some More Keys in RDBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24222",
+              "code": "PPREPCS43",
+              "name": "Key Identification - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Relational Algebra",
+          "submodule_id": 2096,
+          "contest_code": "CORECS05A",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS05A/problems/PPREPCS44",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS44",
+              "name": "Relational Algebra Basic Operations - 1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS45",
+              "name": "Relational Algebra Basic Operations - 2 ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS46",
+              "name": "Relational Algebra Query Evaluation - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS47",
+              "name": "Joins - Inner Join",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS48",
+              "name": "Joins - Left (or Left Outer) Join",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS49",
+              "name": "Joins - Right (or Right Outer) Join",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS50",
+              "name": "Joins - Full Outer Join",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS51",
+              "name": "Relational Algebra Join Exercise - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24290",
+              "code": "PPREPCS52",
+              "name": "Relational Algebra Join Query - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Functional Dependencies and Normal Forms",
+          "submodule_id": 2097,
+          "contest_code": "CORECS05B",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS05B/problems/PPREPCS53",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS53",
+              "name": "Introduction to Functional Dependencies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS54",
+              "name": "Types of Funcational Dependencies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS55",
+              "name": "Rules of Functional Dependencies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS56",
+              "name": "Functional Dependency Analysis - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS57",
+              "name": "Introduction to Normalization",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS58",
+              "name": "Normal Form - 1NF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS59",
+              "name": "Normal Form - 2NF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS60",
+              "name": "Normal Form - 3NF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS61",
+              "name": "Normal Form - BCNF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS62",
+              "name": "Normal Form - 4NF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24291",
+              "code": "PPREPCS63",
+              "name": "Normal form - 5NF",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Quiz: Relational database design: Concepts",
+          "submodule_id": 2098,
+          "contest_code": "CORECS06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS06/problems/PPREPCS64",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS64",
+              "name": "Relational Database Degree Definition - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS65",
+              "name": "Understanding Prime Attributes - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS67",
+              "name": "Relational Algebra Join Size - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS68",
+              "name": "Counting Superkeys in a Relation - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS69",
+              "name": "DB Normalization Schema Comparison - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS70",
+              "name": "Functional Dependency in BCNF - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS71",
+              "name": "Interview Question on Relational Database Keys",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS72",
+              "name": "Interview Question on Database Anomalies",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24223",
+              "code": "PPREPCS73",
+              "name": "Interview Question on  Differences in DBMS Keys",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 21
+    },
+    {
+      "assessment": null,
+      "name": "Module 4: SQL",
+      "description": "Fundamentals of SQL commands and Database constraints",
+      "submodules": [
+        {
+          "name": "SQL Fundamentals Part 1",
+          "submodule_id": 2099,
+          "contest_code": "CORECS07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS07/problems/PPREPCS74",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS74",
+              "name": "Introduction to SQL (Structured Query Language)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS75",
+              "name": "Basic SQL commands-SELECT, INSERT, UPDATE, DELETE",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS76",
+              "name": "Examples for Basic SQL Commands",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS77",
+              "name": "SQL Query for Age Filter - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS78",
+              "name": "SQL Delete Query Syntax - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS79",
+              "name": "Retrieving data from a single table (FILTER, SORT)",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS80",
+              "name": "Example for FILTER and SORT operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS80A",
+              "name": "SQL Query on Retrieve and Sort Books - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS81",
+              "name": "JOINS in SQL - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS82",
+              "name": "Types of SQL Joins - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS83",
+              "name": "SQL LIKE Operator Query",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS84",
+              "name": "Subqueries and complex queries ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24224",
+              "code": "PPREPCS85",
+              "name": "Employee Salary Query Selection - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Quiz: SQL fundamentals",
+          "submodule_id": 2101,
+          "contest_code": "CORECS08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS08/problems/PPREPCS86",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS86",
+              "name": "SQL Query Tuple Count - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS87",
+              "name": "SQL Query Upper Case Alias - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS88",
+              "name": "SQL Query for Name Matching - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS89",
+              "name": "Ordering SQL Query - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS90",
+              "name": "Retrieve Duplicates",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "rearrange",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS91",
+              "name": "Finding Third-Highest Salary - The TOP Keyword",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS92",
+              "name": "Employee Salaries by Position - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS93",
+              "name": "SQL Query on Train Reservations - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS94",
+              "name": "SQL Query Comparison - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24225",
+              "code": "PPREPCS95",
+              "name": "Count Tuples - GATE MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 16
+    },
+    {
+      "assessment": null,
+      "name": "Module 5: Transactions and Concurrency Control",
+      "description": "Fundamentals of transactions - ACID properties, schedules in DBMS. Lets also cover some Deadlock and concurrency control",
+      "submodules": [
+        {
+          "name": "Transactions and Concurrency Control",
+          "submodule_id": 2102,
+          "contest_code": "CORECS11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS11/problems/PPREPCS96",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS96",
+              "name": "What is Transaction in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS97",
+              "name": "ACID Properties in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS98",
+              "name": "Schedule in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS99",
+              "name": "Interview Questions on DBMS Concepts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS100",
+              "name": "Serializability in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS101",
+              "name": "Recoverability in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS102",
+              "name": "Deadlock in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS103",
+              "name": "Case Study",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS104",
+              "name": "Concurrency Control in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS105",
+              "name": "Distributed Database System in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS106",
+              "name": "Query Processing in DBMS",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24228",
+              "code": "PPREPCS107",
+              "name": "More Interview Questions on Transactions ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Quiz: Transactions and Concurrency Control",
+          "submodule_id": 2103,
+          "contest_code": "CORECS12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS12/problems/PPREPCS108",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS108",
+              "name": "Concurrency Control Protocols in DBMS - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS109",
+              "name": "Correct Serialization Order - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS110",
+              "name": "Conflict Serializability in Schedules - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS111",
+              "name": "Transaction Schedule Analysis - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS112",
+              "name": "Irrecoverable Error Scenarios in DBMS - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS113",
+              "name": "Bank Transaction Constraint - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS114",
+              "name": "Checkpoint Recovery Operations Analysis - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS115",
+              "name": "Two-Phase Locking Protocol Analysis - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS116",
+              "name": "Transaction Recovery Procedure - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24229",
+              "code": "PPREPCS117",
+              "name": "Transaction Precedence Graph Analysis - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 13
+    },
+    {
+      "assessment": null,
+      "name": "Module 6: NoSQL and New Database Technologies",
+      "description": "Learn the concepts of NoSQL database, its types and its comparison with relational databases",
+      "submodules": [
+        {
+          "name": "NoSQL and New Database Technologies",
+          "submodule_id": 2104,
+          "contest_code": "CORECS15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 1,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS15/problems/PPREPCS118",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "24232",
+              "code": "PPREPCS118",
+              "name": "Introduction to NoSQL databases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24232",
+              "code": "PPREPCS119",
+              "name": "Different types of NoSQL databases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24232",
+              "code": "PPREPCS120",
+              "name": "Comparison with relational databases",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "concept",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24232",
+              "code": "PPREPCS121",
+              "name": "Quiz",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 1
+    },
+    {
+      "assessment": null,
+      "name": "Module 7: Interview Questions",
+      "description": "Questions which are generally asked during the interview rounds",
+      "submodules": [
+        {
+          "name": "Interview Questions MCQ",
+          "submodule_id": 2105,
+          "contest_code": "CORECS19",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 14,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dbms/CORECS19/problems/PPREPCS122",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 14,
+          "problems_with_status": [
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS122",
+              "name": "DBMS vs File-Based Systems - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS123",
+              "name": "Database Key Concepts Overview - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS124",
+              "name": "SQL Statement Categories - MCQ ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS125",
+              "name": "Database Trigger Definition - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS126",
+              "name": "Database Transaction Example - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS127",
+              "name": "ACID Properties in Databases - MCQ ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS128",
+              "name": "Clustered Index Limits - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS129",
+              "name": "Non-Clustered Index Explanation - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS130",
+              "name": "Purpose of SQL Clause - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS131",
+              "name": "Role of Normalization in Databases - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS132",
+              "name": "Identifying Key Types in Tables - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS133",
+              "name": "Primary vs Unique Key Differences - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS137",
+              "name": "Maximum Unique Keys in DB Table - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24236",
+              "code": "PPREPCS138",
+              "name": "Data Abstraction Levels in DBMS - MCQ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "mcq",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 14
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 92,
+  "total_non_pro_problems": 0,
+  "up_next": [
+    {
+      "name": "Learn Advanced SQL",
+      "title": "Learn Advanced SQL",
+      "slug": "sql-intermediate",
+      "level": "Intermediate",
+      "is_practice_path": false,
+      "learners_count": 21841,
+      "review": {
+        "rating": 4.6,
+        "users": 1870
+      },
+      "course_count": 14,
+      "description": "Learn advance querying techniques like joins, sub queries and set operations to put yourself on the path to mastery in SQL.  "
+    },
+    {
+      "name": "SQL at Work",
+      "title": "SQL at Work",
+      "slug": "sql-at-work",
+      "level": "Intermediate",
+      "is_practice_path": false,
+      "learners_count": 9555,
+      "review": {
+        "rating": 4.6,
+        "users": 666
+      },
+      "course_count": 9,
+      "description": "Learn how to use SQL queries to analyze data in your job as business, operations or marketing analyst. This course is best for practicing SQL as it contains a lot real world exercises."
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "37",
+    "name": "Learn SQL",
+    "title": "Learn SQL",
+    "slug": "sql",
+    "description": "Start your journey into data handling with this interactive SQL course. Learn how to create, manipulate, and query databases with practical exercises and real-world examples.",
+    "highlight_color": "#115FB7",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "0",
+    "prerequisite_reviews": {
+      "rating": 4.6,
+      "users": 11004
+    },
+    "learners_count": 113284,
+    "lessons_count": 14
+  },
+  "prerequisite_type": "learn",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4899687",
+      "fullname": "Deeksshitha S ",
+      "review": "The tutorials are very specific to each problem and reinforce the concepts effectively, making it a great way to learn. Thank you, and I wish you all the best in improving the learning process!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "aided_harmony",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 5638,
+  "path_review": {
+    "rating": 4.6,
+    "users": 584
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

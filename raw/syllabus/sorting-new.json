@@ -1,0 +1,230 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "sorting-new",
+  "name": "Practice Sorting",
+  "title": "Practice Sorting",
+  "level": "Beginner",
+  "description": "Practice problems which require you to use sorting algorithms to solve the task at hand. These questions help you understand the different patters of sorting problems and how to identify them.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:42",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/sorting-new/SORTING01/problems/TSORT",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Sorting",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Free sorting problems",
+          "submodule_id": 25828,
+          "contest_code": "SORTING01",
+          "start_date": "2026-05-05 15:20:43",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sorting-new/SORTING01/problems/TSORT",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "54897",
+              "code": "TSORT",
+              "name": "Simple Sorting",
+              "difficulty_rating": "667",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54897",
+              "code": "SIMPSTAT",
+              "name": "Simple Statistics",
+              "difficulty_rating": "1222",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54897",
+              "code": "HORSES",
+              "name": "Racing Horses",
+              "difficulty_rating": "1231",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54897",
+              "code": "DSCPPAS266",
+              "name": "Reduce to Single Element Array",
+              "difficulty_rating": "1150",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Premium sorting problems",
+          "submodule_id": 25829,
+          "contest_code": "SORTING02",
+          "start_date": "2026-05-05 15:20:43",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/sorting-new/SORTING02/problems/MAXDIFF",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "54898",
+              "code": "MAXDIFF",
+              "name": "Maximum Weight Difference",
+              "difficulty_rating": "1308",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "AMMEAT",
+              "name": "Andrew and the Meatballs",
+              "difficulty_rating": "1275",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "CHEFA",
+              "name": "Chef and easy problem",
+              "difficulty_rating": "1408",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "STICKS",
+              "name": "Sticks",
+              "difficulty_rating": "1261",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "ARRAYREOR",
+              "name": "Array Reordering",
+              "difficulty_rating": "1250",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "DSCPPAS265",
+              "name": "Counting sort",
+              "difficulty_rating": "1650",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "54898",
+              "code": "BOOKCHEF",
+              "name": "ChefWatson uses Social Network",
+              "difficulty_rating": "1610",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 11,
+  "total_non_pro_problems": 4,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Beginner DSA",
+  "reviews": [
+    {
+      "user_id": "4685493",
+      "fullname": "Md Sahwaz Raza",
+      "review": "This platform helps me a lot to solve code and identify errors when writing incorrect code. Thank you.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "blest_tub_97",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 32767,
+  "path_review": {
+    "rating": 4.5,
+    "users": 483
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

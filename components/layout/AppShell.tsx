@@ -114,7 +114,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         onMobileClose={() => setSidebarMobileOpen(false)}
         isExpanded={sidebarExpanded}
         onToggleExpand={toggleSidebarExpand}
-        pathname={pathname}
+        pathname={pathname ?? ""}
         nav={nav}
       />
 
@@ -149,7 +149,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <CommandPalette />
       <OracleMentorModal />
-      <MobileNav pathname={pathname} />
+      <MobileNav pathname={pathname ?? ""} />
     </div>
   );
 }

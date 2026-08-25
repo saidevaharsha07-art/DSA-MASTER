@@ -1,0 +1,119 @@
+{
+  "category_name": "hard",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL16G",
+  "contest_category": "6",
+  "problem_name": "Optimal use of Nuclear Power plant ",
+  "intended_contest_code": null,
+  "body": "<p>It is now 2050 AD. A city will be built under large protective circular dome. A nuclear power plant <b>(NPP)</b>  built outside the city will power the whole city. For safety reasons the <b>NPP</b> must be at least <b>d<sub>min</sub> </b>distance away from the dome. The radius of the dome has not been fixed yet. The houses inside the dome will be built after building the dome. So for simplicity it can be assumed that each location under the dome is equally likely to have a house. In other words houses will be uniformly distributed in the land inside the dome. As the houses are full of modern electrical equipments, so the power consumption per house is quite high. So each house is connected with the <b>NPP</b> with the shortest possible cable underground. In the figure below you can see four houses (Blue circles) and their shortest connection with <b>NPP</b> (dotted line). For wiring cost and line-loss issues the average distance of the houses (assuming they are uniformly distributed under then dome) from the <b>NPP</b> cannot be more than <b>D<sub>avg</sub></b>. \n</p>\n\n<img src=\"https://www.codechef.com/download/upload/ACM16KOL/G.png\" height=\"250\">\n\n\n<p>Given the value of <b>D<sub>avg</sub>, d<sub>min</sub></b> your job is to find the maximum possible value of the radius of the land under dome.</p>\n\n<h3>Input</h3>\n<p>First line of the input file contains an integer <b>T (0 &lt; T \u2264 20)</b> which denotes how many test cases to follow. Each of the next <b>T</b> lines contains two strictly positive integers <b>D<sub>avg</sub> (0 &lt; D<sub>avg</sub> &lt;1000)</b> and <b>d<sub>min</sub> (0 &lt; d<sub>min</sub> &lt; D<sub>avg</sub>)</b>. The meaning of <b>D<sub>avg</sub></b> and <b>d<sub>min</sub></b> are given in the problem statement above.</p>\n\n\n\n\n<h3>Output</h3> \n<p>For each test case produce one line of output. This line contains a floating-point number <b>R<sub>max</sub></b>, which denotes maximum possible value of the radius of the circular land under the dome maintaining the constraints imposed by <b>D<sub>avg</sub></b> and <b>d<sub>min</sub></b>. This value should be rounded to four digits after the decimal point. Errors not exceeding <b>1.5 * 10<sup>-4</sup></b> will be ignored.</p>\n\n<h3>Sample</h3> \n<pre><b>Input</b>\n2\n100 20\n10 5\n\n<b>Output</b>\n72.6679\n4.7114\n</pre>\n\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>It is now 2050 AD. A city will be built under large protective circular dome. A nuclear power plant <b>(NPP)</b>  built outside the city will power the whole city. For safety reasons the <b>NPP</b> must be at least <b>d<sub>min</sub> </b>distance away from the dome. The radius of the dome has not been fixed yet. The houses inside the dome will be built after building the dome. So for simplicity it can be assumed that each location under the dome is equally likely to have a house. In other words houses will be uniformly distributed in the land inside the dome. As the houses are full of modern electrical equipments, so the power consumption per house is quite high. So each house is connected with the <b>NPP</b> with the shortest possible cable underground. In the figure below you can see four houses (Blue circles) and their shortest connection with <b>NPP</b> (dotted line). For wiring cost and line-loss issues the average distance of the houses (assuming they are uniformly distributed under then dome) from the <b>NPP</b> cannot be more than <b>D<sub>avg</sub></b>. \n</p>\n\n<img src=\"https://www.codechef.com/download/upload/ACM16KOL/G.png\" height=\"250\">\n\n\n<p>Given the value of <b>D<sub>avg</sub>, d<sub>min</sub></b> your job is to find the maximum possible value of the radius of the land under dome.</p>\n\n<h3>Input</h3>\n<p>First line of the input file contains an integer <b>T (0 < T \u2264 20)</b> which denotes how many test cases to follow. Each of the next <b>T</b> lines contains two strictly positive integers <b>D<sub>avg</sub> (0 < D<sub>avg</sub> <1000)</b> and <b>d<sub>min</sub> (0 < d<sub>min</sub> < D<sub>avg</sub>)</b>. The meaning of <b>D<sub>avg</sub></b> and <b>d<sub>min</sub></b> are given in the problem statement above.</p>\n\n\n\n\n<h3>Output</h3> \n<p>For each test case produce one line of output. This line contains a floating-point number <b>R<sub>max</sub></b>, which denotes maximum possible value of the radius of the circular land under the dome maintaining the constraints imposed by <b>D<sub>avg</sub></b> and <b>d<sub>min</sub></b>. This value should be rounded to four digits after the decimal point. Errors not exceeding <b>1.5 * 10<sup>-4</sup></b> will be ignored.</p>\n\n<h3>Sample</h3> \n<pre><b>Input</b>\n2\n100 20\n10 5\n\n<b>Output</b>\n72.6679\n4.7114\n</pre>\n\n\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": []
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/problems/KOL16G\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"https://www.codechef.com/ACM16KOL/problems/KOL16G\" rel=\"nofollow noopener\">Contest</a></p>\n<p>Editorialist: <a href=\"https://www.codechef.com/users/meooow\" rel=\"nofollow noopener\">Soumik Sarkar</a></p>\n<h3>DIFFICULTY:</h3>\n<p>HARD</p>\n<h3>PREREQUISITES:</h3>\n<p>Binary search, Numerical integration</p>\n<h3>PROBLEM:</h3>\n<p>Find the radius of a circle such that the average distance from any point inside the circle to a fixed point <span class=\"math\">P</span> located outside the circle at <span class=\"math\">d_{min}</span> distance from the circumference equals <span class=\"math\">D_{avg}</span>.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>The average distance is a monotonously increasing function of the radius. Binary search on the radius to find the value for which average distance is <span class=\"math\">D_{avg}</span>. The average distance can be computed through definite integrals whose limits depend on the radius.</p>\n<h3>EXPLANATION:</h3>\n<p>It is clear that <span class=\"math\">D_{avg}</span> is a function of the radius <span class=\"math\">r</span> and <span class=\"math\">d_{min}</span>. Since <span class=\"math\">d_{min}</span> is constant, it solely depends on <span class=\"math\">r</span>. The key observation is that <span class=\"math\">D_{avg}</span> monotonously increases with increase in <span class=\"math\">r</span>. Hence it is possible to use binary search on <span class=\"math\">r</span> to get the answer.</p>\n<p>But how do we calculate <span class=\"math\">D_{min}</span> for some <span class=\"math\">r</span>? Surely we cannot find the distance from each of the infinite points inside the circle to <span class=\"math\">P</span> and take their average\u2026<br>\nActually we can, thanks to calculus! If you are not familiar with calculus, and even if you are, I would love to recommend this <a href=\"https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr\" rel=\"nofollow noopener\">Essence of calculus</a> playlist by <a href=\"https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw\" rel=\"nofollow noopener\">3Blue1Brown</a>.</p>\n<p><img src=\"https://discuss.codechef.com/upfiles/pic1_small.png\" alt=\"pic1\" width=\"\" height=\"\"></p>\n<p>Consider our circle on the X-Y plane with the center at <span class=\"math\">(0, 0)</span> and radius <span class=\"math\">r</span>. The point <span class=\"math\">P</span> is located at <span class=\"math\">(r+d_{min}, 0)</span>. Let <span class=\"math\">f(x, y)</span> be the function that returns the distance between the points <span class=\"math\">(x, y)</span> and <span class=\"math\">P</span>. So</p>\n<div class=\"math\">\nf(x, y) = \\sqrt{(r+d_{min}-x)^2 + y^2}\n</div>\n<p>Now imagine if for every point in the circle we could compute <span class=\"math\">f(x, y)</span> and plot its value as a point above it in 3D space. Then the entire plot would form a surface above the X-Y plane. Then the required <span class=\"math\">D_{avg}</span> is just the average height of a point on this surface. And this is nothing but <strong>the volume under the surface divided by the area it covers on the X-Y plane</strong>. The latter is just the area of the circle, so the main task is to find the volume.<br>\nFor example, for <span class=\"math\">r = 20</span> and <span class=\"math\">d_{min} = 5</span>, the volume of this structure needs to be calculated.</p>\n<p><img src=\"https://discuss.codechef.com/upfiles/pic2_small.gif\" alt=\"pic2\" width=\"\" height=\"\"></p>\n<p>The volume under the surface is the double integral of <span class=\"math\">f</span> over the domain of the circle</p>\n<div class=\"math\">\n\\begin{aligned}\nV &amp;= \\iint_{x^2 + y^2 \\le r^2} f(x, y) \\,dx \\,dy \\\\\n  &amp;= \\iint_{x^2 + y^2 \\le r^2} \\sqrt{(r+d_{min}-x)^2 + y^2} \\,dx \\,dy\n\\end{aligned}\n</div>\n<p>This form doesn\u2019t help us, so let us separately integrate over <span class=\"math\">x</span> and <span class=\"math\">y</span>. Inside the circle <span class=\"math\">x</span> ranges from <span class=\"math\">-r</span> to <span class=\"math\">r</span>. And for a particular <span class=\"math\">x</span>, <span class=\"math\">y</span> ranges from <span class=\"math\">-\\sqrt{r^2 - x^2}</span> to <span class=\"math\">\\sqrt{r^2 - x^2}</span>. Notice that <span class=\"math\">f(x, y) = f(x, -y)</span>, so to keep things simple we can find the integral over the upper half of the circle only, and double it to get the total volume. Over the upper half only, <span class=\"math\">y</span> ranges from <span class=\"math\">0</span> to <span class=\"math\">\\sqrt{r^2 - x^2}</span>.</p>\n<div class=\"math\">\nV = 2 \\int_{-r}^{r} dx \\int_{0}^{\\sqrt{r^2 - x^2}} \\sqrt{(r+d_{min}-x)^2 + y^2} \\,dy\n</div>\n<p>Let <span class=\"math\">Y = \\sqrt{r^2 - x^2}</span> and <span class=\"math\">a = r+d_{min}-x</span>. Then by using <a href=\"http://www.rfcafe.com/references/mathematical/integrals-sq-root.htm\" rel=\"nofollow noopener\">standard formulae</a></p>\n<div class=\"math\">\n\\begin{aligned}\nV &amp;= 2 \\int_{-r}^{r} dx \\int_{0}^{Y} \\sqrt{a^2 + y^2} \\,dy \\\\\n  &amp;= 2 \\int_{-r}^{r} \\left( \\frac{Y}{2} \\sqrt{a^2 + Y^2} + \\frac{a^2}{2} \\ln \\left| \\frac{Y + \\sqrt{a^2 + Y^2}}{a} \\right| \\right) \\, dx\\\\\n\\end{aligned}\n</div>\n<p>We still have an integration left to perform and it looks terrible already. Luckily, being programmers, we can <strong>numerically integrate</strong> over <span class=\"math\">x</span>. The simplest method is the <a href=\"http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/07/rectangle-method.html\" rel=\"nofollow noopener\">rectangle method</a>. Better methods such as the <a href=\"https://en.wikipedia.org/wiki/Trapezoidal_rule\" rel=\"nofollow noopener\">trapezoidal rule</a> or <a href=\"https://en.wikipedia.org/wiki/Simpson%27s_rule\" rel=\"nofollow noopener\">Simpson\u2019s 1/3 rule</a> can also be used. A sufficiently small size of the intervals should be chosen for the error to be small. Around <span class=\"math\">10^4</span> divisions works fine.</p>\n<h4>Alternate inner integral (easier)</h4>\n<p><img src=\"https://discuss.codechef.com/upfiles/pic3_smal.png\" alt=\"pic3\" width=\"\" height=\"\"></p>\n<p>As can be seen, integrating the term <span class=\"math\">\\sqrt{(r+d_{min}-x)^2 + y^2}</span> is complicated, but there is a smarter way. Consider a curve <span class=\"math\">C</span> which is a circular arc with center <span class=\"math\">P</span>. Instead of integrating over vertical lines as before, we can instead perform <a href=\"https://en.wikipedia.org/wiki/Line_integral\" rel=\"nofollow noopener\">line integrals</a> along curve such as these from the <span class=\"math\">x</span>-axis to the point where it intersects the circumference. Why is this easier? That\u2019s because all points on this curve are at the same distance from <span class=\"math\">P</span>. Let this distance be <span class=\"math\">L</span>, then the line integral is just <span class=\"math\">L</span> times the length of the <span class=\"math\">C</span>.</p>\n<div class=\"math\">\nL = r + d_{min} - x \n</div>\n<p>The angle <span class=\"math\">\\theta</span> can be obtained by using the <a href=\"https://en.wikipedia.org/wiki/Law_of_cosines\" rel=\"nofollow noopener\">law of cosines</a>.</p>\n<div class=\"math\">\n\\theta = \\cos^{-1} \\left( \\frac{-r^2 + L^2 + (r+d_{min})^2}{2L(r+d_{min})} \\right)\n</div>\n<p>The length of <span class=\"math\">C</span> is given by <span class=\"math\">L \\theta</span>. Then the line integral can be obtained as <span class=\"math\">L^2 \\theta</span>. The rest of the algorithm remains the same. The new integral to be calculated is below where <span class=\"math\">L</span> and <span class=\"math\">\\theta</span> are determined by <span class=\"math\">x</span> as shown above.</p>\n<div class=\"math\">\n\\begin{aligned}\nV &amp;= 2 \\int_{-r}^{r} dx \\int_C L \\,ds  \\\\\n &amp;= 2 \\int_{-r}^{r} L^2 \\theta \\, dx\n\\end{aligned}\n</div>\n<p>Regardless of the integral used, once the volume <span class=\"math\">V</span> is obtained the average distance to <span class=\"math\">P</span> can be calculated as <span class=\"math\">V / \\pi r^2</span>. Hence now it is possible to binary search over <span class=\"math\">r</span> to find the answer.</p>\n<p>Each integration uses <span class=\"math\">\\approx 10^4</span> iterations, and there are <span class=\"math\">\\log_2(\\varepsilon \\cdot D_{avg})</span> integrations performed by the binary search procedure where <span class=\"math\">\\varepsilon</span> is the acceptable error. So complexity is <span class=\"math\">\\mathcal{O}(10^4 \\log(\\varepsilon \\cdot D_{avg}))</span>.</p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p>Editorialist\u2019s solution can be found <a href=\"http://www.codechef.com/download/Solutions/ACM16KOL/Editorialist/KOL16G.cpp\" rel=\"nofollow noopener\">here</a>.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 17231,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "4",
+  "source_sizelimit": "50000",
+  "problem_author": "kol_adm",
+  "problem_display_authors": [
+    "kol_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/kol_adm'>kol_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "meooow",
+  "date_added": "21-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Geometry",
+    "Integration",
+    "Binary Search"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Calculus",
+    "Algorithms",
+    "Searching"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KOL16G",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610974
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL16G",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

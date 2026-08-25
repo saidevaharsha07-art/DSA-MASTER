@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FLOW001",
+  "contest_category": "6",
+  "problem_name": "Add Two Numbers",
+  "intended_contest_code": "",
+  "body": "<blockquote><em>Welcome! This is a tutorial problem to help you solve a problem on CodeChef. You can find the tutorial over <a href=\"https://blog.codechef.com/2021/06/17/get-started-with-coding-tutorial-for-a-simple-addition-problem/?utm_source=codechef&utm_medium=problem-page&utm_campaign=FLOW001\">here</a></em></blockquote>\n\n<h3>Problem Statement</h3>\n<blockquote><em>Every problem starts with a Problem Statement. It tells you in detail about the task to be solved. Usually, although not necessarily, it is accompanied with a story. As a competitive programmer, it is your job to break the problem statement and figure out exactly what it is asking.</em></blockquote>\n<p>\nShivam is the youngest programmer in the world, he is just 12 years old. Shivam is learning programming and today he is writing his first program. \n<br/><br/>\nThe task is very simple: given two integers A and B, write a program to add these two numbers and output it.\n</p>\n\n<h3>Input</h3>\n<blockquote><em>This section tells you the format in which your program should receive the input.</em></blockquote>\n<p> \nThe first line contains an integer <b>T</b>, the total number of test cases. Then follow <b>T</b> lines, each line contains two Integers <b>A</b> and <b>B</b>. \n</p>\n\n<h3>Output</h3>\n<blockquote><em>This section tells us the format in which your program should give the output</em></blockquote>\n\n<p>For each test case, add <b>A</b> and <b>B</b> and display the sum in a new line.</p>\n\n<blockquote><em>Take special care for the output format; everything your program prints is considered \u201coutput\u201d, so if you output some debugging statements like \u201cPlease enter T\u201d or print something like: \u201cThe answer is: \u201d, this will be considered as part of your answer, and because it does not satisfy the output format, it will be marked wrong, even if your answer is otherwise correct! </em></blockquote>\n\n<h3>Constraints</h3>\n<blockquote> <em>This section tell you the maximum and minimum possible values the variables in the problem statement can take. You <b>do not</b> need to check these constraints in your program. You can safely assume that the input given to your program will be in the given range of constraints. </em> </blockquote>\n<ul>\n<li>1 <b>\u2264</b> <b>T</b> <b>\u2264</b> 1000</li>\n<li>0 <b>\u2264</b> <b>A,B</b> <b>\u2264</b> 10000</li>\n</ul>\n\n<h3>Example</h3>\n<blockquote>\n<em>In this section examples of input and output are given in the expected format. </em> </blockquote>\n<pre>\n<b>Input</b>\n3\n1 2\n100 200\n10 40\n\n<b>Output</b>\n3\n300\n50\n</pre>\n<blockquote>\n<em><b>Note,</b> there will be more test cases (which are hidden from you) on which your program will be tested. The ones mentioned here are only samples. More details on test cases in the <a target=\"_blank\" href=\"https://www.codechef.com/wiki/tutorial-inputoutput\"> tutorial here </a></em>\n</blockquote>\n<h3>What next? </h3>\n<h6>Write your program</h6>\n<blockquote>\n<em>Click on submit button at the bottom or top right corner to write your program in the programming language of your choice. You can also write on CodeChef IDE <a href=\"https://www.codechef.com/ide\" target=\"_blank\">here</a></em></blockquote>\n<h6>Test your program</h6>\n<blockquote>\n<em>Use the <b>Run</b> button provided on the Submit page to test your program. You need to enter the Sample Input or any other input of your choice in the \"Custom Input\" field before Running it. </em></blockquote>\n<h6> Submit your program </h6>\n<blockquote>\n<em>Once done, submit your program using the submit button. To know what happens when you submit, check <a href=\"https://docs.google.com/presentation/d/e/2PACX-1vTJJjsaVn7JgGCaQ4cwtqbQWfpMTaGSq4s4uCnjXkMqB1pH3UoLbKiFsNuYNUi4M85qgRiFU-3AFMkV/pub?start=true&loop=true&delayms=3000\" target=\"_blank\">here</a> </em>\n</blockquote>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1000$\n- $0 \\leq A, B \\leq 10000$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Your task is very simple: given two integers $A$ and $B$, write a program to add these two numbers and output the sum.\n\n\n\n",
+    "inputFormat": "- The first line contains an integer $T$, the total number of test cases. \n- Then follow $T$ lines, each line contains two integers, $A$ and $B$.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, add $A$ and $B$ and display the sum in a new line.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n1 2\n100 200\n10 40",
+        "output": "3\n300\n50",
+        "explanation": "**Testcase 1:** $1 + 2 = 3$. Hence the first output is $3$.\n\n**Testcase 2:** $100 + 200 = 300$. Hence the second output is $300$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, CS2, NODEJS, GO, rust",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "vicky002"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/vicky002'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #1E7D22;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>2&#9733;</span><span class='m-username--link'>vicky002</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "27-04-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Implementation"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "242",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610844
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FLOW001",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 100,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 23,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 976,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

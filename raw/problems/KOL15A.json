@@ -1,0 +1,130 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KOL15A",
+  "contest_category": "6",
+  "problem_name": "Processing a string",
+  "intended_contest_code": "",
+  "body": "<p>Given an alphanumeric string made up of digits and lower case Latin characters only, find the sum of all the digit characters in the string.</p>\r\n\r\n<h3>Input</h3>\r\n<ul>\r\n    <li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. Then <b>T</b> test cases follow.</li>\r\n    <li>Each test case is described with a single line containing a string <b>S</b>, the alphanumeric string.</li>\r\n</ul>\r\n\r\n<h3>Output</h3>\r\n<ul>\r\n    <li>For each test case, output a single line containing the sum of all the digit characters in that string.</li>\r\n</ul>\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n    <li><b>1</b> \u2264 <b>T</b> \u2264 <b>1000</b></li>\r\n    <li><b>1</b> \u2264 <b>|S|</b> \u2264 <b>1000</b>, where |S| is the length of the string S.</li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input:</b>\r\n1\r\nab1231da\r\n\r\n<b>Output:</b>\r\n7\r\n</pre>\r\n<h3>Explanation</h3>\r\n<p>The digits in this string are 1, 2, 3 and 1. Hence, the sum of all of them is 7.</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>Given an alphanumeric string made up of digits and lower case Latin characters only, find the sum of all the digit characters in the string.</p>\n\n<h3>Input</h3>\n<ul><li>The first line of the input contains an integer <b>T</b> denoting the number of test cases. Then <b>T</b> test cases follow.</li>\n    <li>Each test case is described with a single line containing a string <b>S</b>, the alphanumeric string.</li>\n</ul><h3>Output</h3>\n<ul><li>For each test case, output a single line containing the sum of all the digit characters in that string.</li>\n</ul><h3>Constraints</h3>\n<ul><li><b>1</b> \u2264 <b>T</b> \u2264 <b>1000</b></li>\n    <li><b>1</b> \u2264 <b>|S|</b> \u2264 <b>1000</b>, where |S| is the length of the string S.</li>\n</ul>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "1\nab1231da\n",
+        "output": "7",
+        "explanation": "<p>The digits in this string are 1, 2, 3 and 1. Hence, the sum of all of them is 7.</p>\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 11943,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "pnkjjindal",
+  "problem_display_authors": [
+    "pnkjjindal"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/pnkjjindal'>pnkjjindal</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "kevinsogo",
+  "date_added": "13-10-2015",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String",
+    "Arithmetic",
+    "ad-hoc",
+    "Loops using Cpp"
+  ],
+  "computed_tags": [
+    "Data Structures",
+    "Mathematics",
+    "Basic Math",
+    "Algorithms",
+    "Constructive",
+    "CPP"
+  ],
+  "difficulty_rating": "1125",
+  "best_tag": "Ad Hoc",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610968
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KOL15A",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 38,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

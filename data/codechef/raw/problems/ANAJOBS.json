@@ -1,0 +1,120 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ANAJOBS",
+  "contest_category": "6",
+  "problem_name": "Analytics Load Jobs",
+  "intended_contest_code": null,
+  "body": "You are given $N$ events for your events-pipeline that writes the events in your system to various tables, depending on the event.\r\n\r\nEach event has two parameters, the index of the table in which it should be written and the size of the event payload (either 1 kb or 2kb).\r\n\r\nFor writing files into tables, you can perform many load jobs. \r\n\r\nA load job is performed as follows. Choose some events that **belong to the same table**. (Note that you can pick any subset of the remaining events, and they do not have to be consecutive). Divide these chosen events into $\\leq K$ groups. For each group, concatenate the list of events in the group and add them to a new file. The size of each file will be the sum of the sizes of the payload of events in it.\r\n\r\nYou are allowed to perform at max $J$ load jobs. You want to minimize the size of the largest file used in the above-mentioned load jobs. Find this minimum possible value.\r\n\r\n###Input:\r\n\r\n- The first line will contain $T$, the number of test cases. Then the test cases follow.\r\n- The first line of each test case contains three space-separated integers $N, K, J$, respectively.\r\n- Each of the next $N$ lines will contain two space-separated integers $t_i, sz_i$ denoting the table index to write to, and the size of the event payload.\r\n\r\n###Output:\r\nFor each test case, output in a single line an integer corresponding to the answer of the test case.\r\n\r\n###Constraints\r\n- $1 \\leq T \\leq 10^5$\r\n- $1 \\leq N, K, J, t_i \\leq 10^5$\r\n- It's guaranteed that the total number of tables in the input is less than or equal to $J$. Thus, it is always possible to put all the events into the tables by using the load jobs.\r\n- $1 \\leq sz_i \\leq 2$\r\n- Sum of $N$ over all test cases $\\leq 10^6$\r\n\r\n###Sample Input:\r\n    4\r\n    4 1 2\r\n    1 1\r\n    1 2\r\n    1 1\r\n    1 2\r\n    4 2 2\r\n    1 1\r\n    1 2\r\n    1 1\r\n    1 2\r\n    4 2 1\r\n    1 1\r\n    1 2\r\n    1 2\r\n    1 2\r\n    4 1 4 \r\n    1 2\r\n    2 2\r\n    3 2\r\n    4 2\r\n\r\n\r\n###Sample Output:\r\n    3\r\n    2\r\n    4\r\n    2\r\n\r\n###Explanation\r\nTest case 1. All the events are supposed to be written to table 1. Per load job, you can only load a single file and can make two load jobs at max. In the first load job, you can put the event 1 and 2 into a single file. For the second load job, you can put events 3 and 4 into a single file. This way, in any single file, the maximum size you had to put is 3. You can't do better than this.\r\n\r\nTest case 2. This time, you can have two files per load job. The first load job can have two files, the first one containing event 1, the second containing event 2. Similarly, you can do for the second load job. You can see that each event will go to a single file. Thus, the maximum size you had to put is 2.\r\n\r\nTest case 4. Each event is to be written to its separate table. The total number of load jobs allowed is 4. In each load job, we will take a single event and write to a particular table. Thus, the maximum file size in any load job would be 2. \n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given $N$ events for your events-pipeline that writes the events in your system to various tables, depending on the event.\n\nEach event has two parameters, the index of the table in which it should be written and the size of the event payload (either 1 kb or 2kb).\n\nFor writing files into tables, you can perform many load jobs. \n\nA load job is performed as follows. Choose some events that **belong to the same table**. (Note that you can pick any subset of the remaining events, and they do not have to be consecutive). Divide these chosen events into $\\leq K$ groups. For each group, concatenate the list of events in the group and add them to a new file. The size of each file will be the sum of the sizes of the payload of events in it.\n\nYou are allowed to perform at max $J$ load jobs. You want to minimize the size of the largest file used in the above-mentioned load jobs. Find this minimum possible value.\n\n###Input:\n\n- The first line will contain $T$, the number of test cases. Then the test cases follow.\n- The first line of each test case contains three space-separated integers $N, K, J$, respectively.\n- Each of the next $N$ lines will contain two space-separated integers $t_i, sz_i$ denoting the table index to write to, and the size of the event payload.\n\n###Output:\nFor each test case, output in a single line an integer corresponding to the answer of the test case.\n\n###Constraints\n- $1 \\leq T \\leq 10^5$\n- $1 \\leq N, K, J, t_i \\leq 10^5$\n- It's guaranteed that the total number of tables in the input is less than or equal to $J$. Thus, it is always possible to put all the events into the tables by using the load jobs.\n- $1 \\leq sz_i \\leq 2$\n- Sum of $N$ over all test cases $\\leq 10^6$\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n4 1 2\n1 1\n1 2\n1 1\n1 2\n4 2 2\n1 1\n1 2\n1 1\n1 2\n4 2 1\n1 1\n1 2\n1 2\n1 2\n4 1 4 \n1 2\n2 2\n3 2\n4 2",
+        "output": "3\n2\n4\n2",
+        "explanation": "Test case 1. All the events are supposed to be written to table 1. Per load job, you can only load a single file and can make two load jobs at max. In the first load job, you can put the event 1 and 2 into a single file. For the second load job, you can put events 3 and 4 into a single file. This way, in any single file, the maximum size you had to put is 3. You can't do better than this.\n\nTest case 2. This time, you can have two files per load job. The first load job can have two files, the first one containing event 1, the second containing event 2. Similarly, you can do for the second load job. You can see that each event will go to a single file. Thus, the maximum size you had to put is 2.\n\nTest case 4. Each event is to be written to its separate table. The total number of load jobs allowed is 4. In each load job, we will take a single event and write to a particular table. Thus, the maximum file size in any load job would be 2. ",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "dpraveen_adm",
+  "problem_display_authors": [
+    "dpraveen_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/dpraveen_adm'>dpraveen_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "dpraveen_adm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610604
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ANAJOBS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "COMPRESSVD",
+  "contest_category": "6",
+  "problem_name": "Compress the Video",
+  "intended_contest_code": "START39",
+  "body": "This is an example statement in markdown. This is the statement of the problem [TANDC](https://codechef.com/problems/TANDC) on CodeChef. The main statement starts with the next paragraph. Please make sure to remove this paragraph from your statement before publishing your problem. If your problem doesn't contain Subtasks, you should remove the section subtask too. We are using markdown the syntax of which can be seen [at](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). We request you to not use any HTML tags in the statement, e.g. no p, ul, li, pre, br or b tags. If you face any issue, please contact admins or email us at help@codechef.com.\n\nTracy is teaching Charlie maths via a game called $N$-Cube, which involves three sections involving $N$.\n\nTracy gives Charlie a number $N$, and Charlie makes a list of $N$-th powers of integers in increasing order $1^N, 2^N, 3^N, \\dot, \\text{so on}$. This teaches him exponentiation.\n\nThen Charlie performs the following subtraction game $N$ times: Take all pairs of consecutive numbers in the list and take their difference. These differences then form the new list for the next iteration of the game. Eg, if $N$ was 6, the list proceeds as $[1, 64, 729, 4096 ... ]$ to $[63, 685, 3367 ...]$, and so on $5$ more times.\n\nAfter the subtraction game, Charlie has to correctly tell Tracy the $N$-th element of the list. This number is the *value of the game*.\n\nAfter practice Charlie became an expert in the game. To challenge him more, Tracy will give two numbers $M$ (where $M$ is a prime) and $R$ instead of just a single number $N$, and the game must start from $M_R - 1$ instead of $N$. Since the *value of the game* can now become large, Charlie just have to tell the largest integer $K$ such that $M_K$ divides this number. Since even $K$ can be large, output $K$ modulo 1000000007 ($10^9 + 7$).\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq T \\leq 1000$\n- $1 \\leq N \\leq 10^5$\n- $1 \\leq A_i \\leq 10^6$\n- Sum of $N$ over all test cases does not exceed $2\\cdot 10^5$.",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Chef recorded a video explaining his favorite recipe. However, the size of the video is too large to upload on the internet. He wants to compress the video so that it has the minimum size possible. \n\nChef's video has $N$ frames initially. The value of the $i^{th}$ frame is $A_i$. Chef can do the following type of operation **any** number of times:\n- Choose an index $i$ $(1\\le i \\le N)$ such that the value of the $i^{th}$ frame is **equal** to the value of **either** of its neighbors and **remove** the $i^{th}$ frame. \n\nFind the **minimum** number of frames Chef can achieve.",
+    "inputFormat": "- First line will contain $T$, the number of test cases. Then the test cases follow.\n- The first line of each test case contains a single integer $N$ - the number of frames initially.\n- The second line contains $N$ space-separated integers, $A_1, A_2, \\ldots, A_N$ - the values of the frames.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output in a single line the **minimum** number of frames Chef can achieve.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n1\n5\n2\n1 1\n3\n1 2 3\n4\n2 1 2 2\n",
+        "output": "1\n1\n3\n3",
+        "explanation": "**Test case $1$:** There is only one frame with value $5$. Since there are no neighbors, Chef won't remove any frame and the minimum number of frames Chef can achieve is $1$.\n\n**Test case $2$:** There are two frames where both frames have value $1$. Chef can remove the first frame as the value of the first frame is equal to that of the second frame. The remaining frames have values $[1]$. The minimum number of frames Chef can achieve is $1$.\n\n**Test case $3$:** There are $3$ frames. All frames have distinct values. Thus, the minimum number of frames Chef can achieve is $3$.\n\n**Test case $4$:** Chef can remove the fourth frame as the value of the fourth frame is equal to that of the third frame. The remaining frames have values $[2, 1, 2]$. Thus, the minimum number of frames Chef can achieve is $3$.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 101158,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "1.5",
+  "source_sizelimit": "50000",
+  "problem_author": "notsoloud",
+  "problem_display_authors": [
+    "notsoloud"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/notsoloud'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>notsoloud</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "19-04-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "String"
+  ],
+  "computed_tags": [
+    "Data Structures"
+  ],
+  "difficulty_rating": "940",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610698
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=COMPRESSVD",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 124,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

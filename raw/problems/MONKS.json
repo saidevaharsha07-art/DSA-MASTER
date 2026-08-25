@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "MONKS",
+  "contest_category": "6",
+  "problem_name": "Monks",
+  "intended_contest_code": "START49",
+  "body": "This is an example problem statement in markdown, and a mini guide on writing statements. Please make sure to remove everything here before publishing your problem.\n\n- Codechef uses markdown for its problem statements. Markdown syntax can be found [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax). Note the `[text](link)` syntax to insert a hyperlink.\n- Codechef also uses $\\LaTeX$ to render mathematical expressions, and you are advised to make liberal use of it to make your statement look good.\n- Text can be made **bold** or *italicized*.\n- **Do not** use HTML tags (p, ul, li, pre, br, ...) in the statement.\n- To insert an image, first upload it to an online hosting service (for an official contest, ask a Codechef admin to do this for you \u2014 this is important) and then use the following syntax: `![alt text](link-to-image)`.\n- If your problem doesn't contain subtasks, ensure that the Subtasks section below is disabled and **all content is deleted from it**.\n\nIf you face any issues, either contact a Codechef admin directly or send us an email at help@codechef.com.\n\nBelow is an example problem statement that uses some of the above-mentioned features.\n\n---------\n\nChef has a simple undirected graph $G$ with $N$ vertices and $M$ edges. A [subgraph](https://mathworld.wolfram.com/Subgraph.html) $H$ of $G$ is called *good* if:\n- $H$ is connected\n- $H$ contains all $N$ vertices of $G$\n- There is a unique path between any two vertices in $H$, using only edges in $H$\n\nCount the number of *good* subgraphs of $G$. Since this number might be large, report it modulo $10^9 + 7$.\n\nIn other news, here's a completely unrelated image:\n\n![](https://s3.amazonaws.com/codechef_shared/download/Images/START41/ss3.png).\n\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 10^5$\n- $1 \\le N \\le 10^5$\n- $1 \\le A_i \\le 10^9$\n- Sum of $N$ over all test cases does not exceed $2 \\cdot 10^5$.\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": true,
+    "statement": "There is a town with $N$ people and initially, the $i^{th}$ person has $A_i$ coins. However, some people of the town decide to become *monks*. If the $i^{th}$ person becomes a monk, then:\n- He leaves the town thereby reducing the number of people in the town by $1$.\n- He distributes $X$ $(0 \\le X \\le A_i)$ coins to the remaining people of the town (not necessarily equally). Note that each monk can freely choose his value of $X$, and different monks may choose different values of $X$.\n- He takes the remaining $A_i - X$ coins with him.\n\nFor example, initially, if $A = [1, 3, 4, 5]$ and $4^{th}$ person decides to become a monk then he can leave the town and can give $2$ coins to the $1^{st}$ person, $1$ coin to the $2^{nd}$ person, no coins to the $3^{rd}$ person and take $2$ coins along with him while going. Now $A$ becomes $[3, 4, 4]$.\n\nDetermine the **minimum** number of people who have to become monks, so that in the end, everyone remaining in the town has an equal number of coins.",
+    "inputFormat": "- The first line contains a single integer $T$ \u2014 the number of test cases. Then the test cases follow.\n- The first line of each test case contains an integer $N$ \u2014 the number of people in the town.\n- The second line of each test case contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$ denoting the initial number of coins of everyone in the town.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the minimum number of people who have to become monks, so that in the end, everyone remaining in the town has an equal number of coins.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4\n6 6 6 6\n3\n5 1 4\n5\n2 1 2 1 1\n",
+        "output": "0\n1\n2\n",
+        "explanation": "**Test case $1$:** All the people already have an equal number of coins.\n\n**Test case $2$:** The $2^{nd}$ person can become a monk and give his $1$ coin to the person with $4$ coins. After this, both the remaining people will have $5$ coins.\n\n**Test case $3$:** One way of two people becoming monks is as follows:\n- The $2^{nd}$ person becomes a monk, and takes his $1$ coin with him\n- The $3^{rd}$ person becomes a monk, and gives one coin each to the $4^{th}$ and $5^{th}$ people\n\nEveryone remaining in the town now has $2$ coins.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 102428,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, TS, PHP, kotlin, rust, R, SQL, CAML, OracleDB, HTML, CSS, PyScript",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "ved_ansh",
+  "problem_display_authors": [
+    "ved_ansh"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/ved_ansh'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>ved_ansh</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "26-07-2022",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Greedy",
+    "Sorting"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1776",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785611097
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=MONKS",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 4,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

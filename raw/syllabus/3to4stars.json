@@ -1,0 +1,1482 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "3to4stars",
+  "name": "Rise from 3* to 4*",
+  "title": "Rise from 3* to 4*",
+  "level": "Intermediate",
+  "description": "Practice these problems curated to help you rise from a 3* on CodeChef to 4* ",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:47",
+  "lastUpdatedOn": null,
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/3to4stars/LP3TO401/problems/RISK",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic Graph Theory - Trees, DFS, BFS",
+      "description": "Basic Graph Theory - Trees, DFS, BFS",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1659,
+          "contest_code": "LP3TO401",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 19,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO401/problems/RISK",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 19,
+          "problems_with_status": [
+            {
+              "contest_id": "13545",
+              "code": "RISK",
+              "name": "Maximum Size",
+              "difficulty_rating": "2113",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "ADAKNG",
+              "name": "Ada King",
+              "difficulty_rating": "1581",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "SNSOCIAL",
+              "name": "Snakes and transition from Capitalism to Socialism",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "CFMAR04",
+              "name": "IS IT DSU HARD!!",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "DIAMTREE",
+              "name": "Find Tree Diameter",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "ROOTTREE",
+              "name": "Root the Tree",
+              "difficulty_rating": "1934",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "INOI1601",
+              "name": "Wealth Disparity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "DSUBAGS",
+              "name": "Queries with Bags",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "FAMTREE",
+              "name": "Family Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "CRIMCH",
+              "name": "Cricket Match",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "SUBREM",
+              "name": "Subtree Removal",
+              "difficulty_rating": "2010",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "COSTEMP",
+              "name": "Cosmic Temple",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "TINOI17A",
+              "name": "Fence - INOI 2017",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "EVEDG",
+              "name": "Even Edges",
+              "difficulty_rating": "1945",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "SEGDIR",
+              "name": "Moving Segments",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "TREEVERS",
+              "name": "Treeversion",
+              "difficulty_rating": "2453",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "ABDTOLL",
+              "name": "Abdullah and Toll Discounts",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "TOURISTS",
+              "name": "Tourists in Mancunia",
+              "difficulty_rating": "2133",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13545",
+              "code": "DINCPATH",
+              "name": "Doubly Increasing Path",
+              "difficulty_rating": "2493",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 19
+    },
+    {
+      "assessment": null,
+      "name": "Basic Graph Theory II - Shortest Paths",
+      "description": "Basic Graph Theory II - Shortest Paths",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1660,
+          "contest_code": "LP3TO402",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO402/problems/REVERSE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "13546",
+              "code": "REVERSE",
+              "name": "Chef and Reversing",
+              "difficulty_rating": "1879",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "DIGJUMP",
+              "name": "Chef and Digit Jumps",
+              "difficulty_rating": "1886",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "GALACTIK",
+              "name": "Galactik Football",
+              "difficulty_rating": "1860",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "CORONA",
+              "name": "India Fights Corona",
+              "difficulty_rating": "2560",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "ARRGRAPH",
+              "name": "Graph on an Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "PERCAPTA",
+              "name": "Per Capita Income",
+              "difficulty_rating": "2132",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "INSQ15_F",
+              "name": "FCAR",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13546",
+              "code": "AMR14B",
+              "name": "Road Decoration",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Graphs",
+      "description": "Graphs",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1661,
+          "contest_code": "LP3TO403",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 20,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO403/problems/HDELIVER",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 20,
+          "problems_with_status": [
+            {
+              "contest_id": "13547",
+              "code": "HDELIVER",
+              "name": "Home Delivery",
+              "difficulty_rating": "1621",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "BINTREE",
+              "name": "Shortest Path in Binary Trees",
+              "difficulty_rating": "1413",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "PATHSUMS",
+              "name": "Path-etic Sums",
+              "difficulty_rating": "1838",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "ICM2006",
+              "name": "Lavanya Loves DFA",
+              "difficulty_rating": "1586",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "OMWG",
+              "name": "One more weird game",
+              "difficulty_rating": "1536",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "CIELTOMY",
+              "name": "Ciel and Tomya",
+              "difficulty_rating": "1877",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "PETERSEN",
+              "name": "Petersen Graph",
+              "difficulty_rating": "1894",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "TR1",
+              "name": "Rendezvous",
+              "difficulty_rating": "1638",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "FIRE",
+              "name": "Brush Fire",
+              "difficulty_rating": "1761",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "KINGCON",
+              "name": "Kingdom Unity",
+              "difficulty_rating": "1851",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "TR2",
+              "name": "Robot Game",
+              "difficulty_rating": "1754",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "CHEFHACK",
+              "name": "End Of The World",
+              "difficulty_rating": "1730",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "SPREAD",
+              "name": "Gravel",
+              "difficulty_rating": "1822",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "F3",
+              "name": "Curry Stained Napkin",
+              "difficulty_rating": "1815",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "RG_01",
+              "name": "Maximal Score Path",
+              "difficulty_rating": "1836",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "CHEFGIFT",
+              "name": "Birthday Gift",
+              "difficulty_rating": "1868",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "N1",
+              "name": "Treasure Hunting",
+              "difficulty_rating": "1634",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "K3",
+              "name": "Maze of Digits",
+              "difficulty_rating": "1859",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "M3",
+              "name": "Soccer League",
+              "difficulty_rating": "1906",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13547",
+              "code": "BYTEISLE",
+              "name": "Byteknights and Byteknaves",
+              "difficulty_rating": "1919",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 20
+    },
+    {
+      "assessment": null,
+      "name": "Number Theory - Sieving",
+      "description": "Number Theory - Sieving",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1662,
+          "contest_code": "LP3TO404",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 13,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO404/problems/PTUPLES",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 13,
+          "problems_with_status": [
+            {
+              "contest_id": "13548",
+              "code": "PTUPLES",
+              "name": "Prime Tuples",
+              "difficulty_rating": "1809",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "ODDDIV",
+              "name": "Odd Divisors",
+              "difficulty_rating": "1657",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "KPRIME",
+              "name": "Count K-Primes",
+              "difficulty_rating": "1549",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "NUMFACT",
+              "name": "Number of Factors",
+              "difficulty_rating": "1710",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "SPCTRIPS",
+              "name": "Special Triplets",
+              "difficulty_rating": "1673",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "LEVY",
+              "name": "Levy Conjecture",
+              "difficulty_rating": "1510",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "COOLGUYS",
+              "name": "Cool Guys",
+              "difficulty_rating": "1758",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "MODEQ",
+              "name": "Modular Equation",
+              "difficulty_rating": "1761",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "CBALLS",
+              "name": "Churu and Balls",
+              "difficulty_rating": "1697",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "PRIGAME",
+              "name": "Prime Game",
+              "difficulty_rating": "1792",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "PRETNUM",
+              "name": "Yet Another Cute Girl",
+              "difficulty_rating": "1850",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "EARTSEQ",
+              "name": "Yet Another Problem About Sequences",
+              "difficulty_rating": "2011",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13548",
+              "code": "DESTCELL",
+              "name": "Destroy Cells",
+              "difficulty_rating": "2297",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 13
+    },
+    {
+      "assessment": null,
+      "name": "Dynamic Programming - Knapsack",
+      "description": "Dynamic Programming - Knapsack",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1663,
+          "contest_code": "LP3TO405",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO405/problems/PPTEST",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "13549",
+              "code": "PPTEST",
+              "name": "Polo the Penguin and the Test",
+              "difficulty_rating": "1603",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "MARCHA1",
+              "name": "Paying up",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "MCHEF",
+              "name": "MasterChef",
+              "difficulty_rating": "2016",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "PERMSPL",
+              "name": "Permutation Split",
+              "difficulty_rating": "2996",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "COINPART",
+              "name": "Coin Partition",
+              "difficulty_rating": "2804",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "PEPPERA",
+              "name": "Chef and Pepperoni Pizza Again",
+              "difficulty_rating": "2516",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "BLKJK",
+              "name": "Blackjack",
+              "difficulty_rating": "2903",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13549",
+              "code": "MEANMEDI",
+              "name": "Mean Mean Medians",
+              "difficulty_rating": "2719",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Dynamic Programming",
+      "description": "Dynamic Programming",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1664,
+          "contest_code": "LP3TO406",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 34,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO406/problems/SUBINC",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 34,
+          "problems_with_status": [
+            {
+              "contest_id": "13550",
+              "code": "SUBINC",
+              "name": "Count Subarrays",
+              "difficulty_rating": "1478",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "E1",
+              "name": "The White Knight",
+              "difficulty_rating": "1530",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "FROGV",
+              "name": "Chef and Frogs",
+              "difficulty_rating": "1668",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "DISHDIS",
+              "name": "Dish Distribution",
+              "difficulty_rating": "1596",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "COUNTPAL",
+              "name": "Count palindromes",
+              "difficulty_rating": "1631",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "FCBARCA",
+              "name": "Barcelona Gameplay Tactics",
+              "difficulty_rating": "1658",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "MAXCROSS",
+              "name": "Maximal crosses",
+              "difficulty_rating": "1570",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "DBOY",
+              "name": "Pizza Delivery",
+              "difficulty_rating": "1666",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "VK18",
+              "name": "Total Diamonds",
+              "difficulty_rating": "1786",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "SQUIRREL",
+              "name": "Squirrel and chestnut",
+              "difficulty_rating": "1611",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "TRIP",
+              "name": "Trip",
+              "difficulty_rating": "2005",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "WSTRING",
+              "name": "W String",
+              "difficulty_rating": "1809",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "STRMRG",
+              "name": "String Merging",
+              "difficulty_rating": "1965",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "CHGLSTGT",
+              "name": "Girl Friend and String Gift",
+              "difficulty_rating": "1986",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "MATRIX2",
+              "name": "Matrix",
+              "difficulty_rating": "2209",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "DELISH",
+              "name": "Dessert Wizard",
+              "difficulty_rating": "1804",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "LEMOUSE",
+              "name": "Little Elephant and Mouses",
+              "difficulty_rating": "1941",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "CHSQARR",
+              "name": "Chef and Rectangle Array",
+              "difficulty_rating": "2088",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "CHEFTWOS",
+              "name": "Chef and Two String",
+              "difficulty_rating": "2233",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "PHCUL",
+              "name": "Physical Exercise",
+              "difficulty_rating": "1865",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "GERMANDE",
+              "name": "Gerrymander",
+              "difficulty_rating": "1904",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "SEARRAYS",
+              "name": "Sereja and Arrays",
+              "difficulty_rating": "1999",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "TAASEQ",
+              "name": "The Lost Arithmetic Sequences",
+              "difficulty_rating": "2012",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "KIRLAB",
+              "name": "Kirito in labyrinth",
+              "difficulty_rating": "2047",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "CHEFOFR",
+              "name": "Offer for Chef",
+              "difficulty_rating": "2100",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "N3",
+              "name": "K-important Strings",
+              "difficulty_rating": "1729",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "AEHASH",
+              "name": "A-E Hash Function",
+              "difficulty_rating": "1832",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "F2",
+              "name": "Bytelandian Robots",
+              "difficulty_rating": "1844",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "LUCKY3",
+              "name": "Lucky Sum",
+              "difficulty_rating": "1875",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "RDF",
+              "name": "Random decreasing function",
+              "difficulty_rating": "1975",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "MEDIAN",
+              "name": "Little Elephant and Median",
+              "difficulty_rating": "2023",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "WORLDCUP",
+              "name": "Strategy for the World Cup",
+              "difficulty_rating": "2055",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "RRPLAYER",
+              "name": "Player",
+              "difficulty_rating": "2067",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13550",
+              "code": "ODDBIN",
+              "name": "Odd Binomial Coefficients",
+              "difficulty_rating": "2107",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 34
+    },
+    {
+      "assessment": null,
+      "name": "Segment Trees",
+      "description": "Segment Trees",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1665,
+          "contest_code": "LP3TO407",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 7,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO407/problems/WOUT",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 7,
+          "problems_with_status": [
+            {
+              "contest_id": "13551",
+              "code": "WOUT",
+              "name": "Way Out",
+              "difficulty_rating": "1845",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "CHFQUEUE",
+              "name": "Chefs in Queue",
+              "difficulty_rating": "2146",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "HMAPPY1",
+              "name": "Appy Loves One",
+              "difficulty_rating": "1932",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "STRQ",
+              "name": "Chef and Strings",
+              "difficulty_rating": "1930",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "SEACO",
+              "name": "Sereja and Commands",
+              "difficulty_rating": "1990",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "CHEFSUBA",
+              "name": "Chef and Sub Array ",
+              "difficulty_rating": "1908",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13551",
+              "code": "CSUBQ",
+              "name": "Chef and Subarray Queries",
+              "difficulty_rating": "2345",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 7
+    },
+    {
+      "assessment": null,
+      "name": "Modulo Multiplicative Inverse",
+      "description": "Modulo Multiplicative Inverse",
+      "submodules": [
+        {
+          "name": "Practice problems",
+          "submodule_id": 1666,
+          "contest_code": "LP3TO408",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/3to4stars/LP3TO408/problems/NEWREST",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "13598",
+              "code": "NEWREST",
+              "name": "New Restaurant",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "CHEFWD",
+              "name": "Chef World",
+              "difficulty_rating": "2049",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "OLYMPIC",
+              "name": "Gifts at Olympics",
+              "difficulty_rating": "2696",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "CNTWAYS",
+              "name": "The Uncountable Ways",
+              "difficulty_rating": "1992",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "ADIMAT",
+              "name": "Adi and the Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "INFDIV",
+              "name": "E - Make it Zero",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "PTREE",
+              "name": "Perfect Tree Problem",
+              "difficulty_rating": "2900",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "TREDEG",
+              "name": "Trees and Degrees",
+              "difficulty_rating": "2783",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "13598",
+              "code": "MOBCNT",
+              "name": "Counting Mobiles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 118,
+  "total_non_pro_problems": 0,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "251",
+    "name": "1600 to 1800 difficulty problems",
+    "title": "1600 to 1800 difficulty problems",
+    "slug": "3-star-difficulty-problems",
+    "description": "Practice problems which can help you become 3 star on CodeChef.",
+    "highlight_color": "#008080",
+    "level": "Intermediate",
+    "new_version_id": null,
+    "is_practice_path": "1",
+    "prerequisite_reviews": {
+      "rating": 4,
+      "users": 28
+    },
+    "learners_count": 14400,
+    "lessons_count": 2
+  },
+  "prerequisite_type": "practice",
+  "tag_name": "Star wise paths",
+  "reviews": [
+    {
+      "user_id": "4301177",
+      "fullname": "Alex Tayenjam",
+      "review": "The concepts are well and thoroughly explained as I steadily learn the basics. The method of explaining the concepts with examples is very well defined.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "al_4al21cg005",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4858947",
+      "fullname": "Aviral Tiwari",
+      "review": "Thanks for creating courses like this; they're really needed and helpful. I just completed a module, and my confidence is peaking.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "genie_vigor_11",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    }
+  ],
+  "learners_count": 17029,
+  "path_review": {
+    "rating": 4.9,
+    "users": 14
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/become-5-star",
+  "roadmap_title": "Competitive Programming roadmap - Become 5 star"
+}

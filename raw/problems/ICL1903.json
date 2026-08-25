@@ -1,0 +1,123 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ICL1903",
+  "contest_category": "6",
+  "problem_name": "Too Many Candies",
+  "intended_contest_code": "ICL2019",
+  "body": "Luke, an intergalactic traveller went on a trip across the universe and got candies from the different planets he visited. He comes back with $N$ candies and decides to distribute them among his $M$ friends. However, Luke only wants a fair distribution of the candies as he loves everyone equally. (A fair distribution is one in which each of his friends receive an equal number of candies and each friend receives at least one candy.) If a fair distribution is not possible, he might throw away some candies and try to distribute the remaining candies in a similar manner.\n \nIf he can throw away exactly $K$ candies at a time (he can throw away candies multiple times), what is the minimum number of times he will need to throw away candies before achieving a fair distribution?\n \n###Input:\n \n- First line will contain $T$, number of testcases. Then the testcases follow.\n- Each testcase contains of a single line of input, three integers $N, M, K$.\n \n###Output:\nFor each testcase, output a single integer denoting the minimum number of times he will need to throw away candies before achieving a fair distribution. If a fair distribution is not possible, print   -1.\n \n \n###Constraints\n- $1 \\leq T \\leq 10^5$\n- $2 \\leq N,M,K \\leq 10^9$\n \n###Sample Input:\n2          \n28 6 2        \n78 5 3         \n \n###Sample Output:\n2        \n1        \n               \n###EXPLANATION:\nTest case 1: There are 28 candies and 6 friends. He can distribute 24 candies fairly among his friends, each getting 4 candies. He then throws away the remaining 4 candies 2 at a time.\n \n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Luke, an intergalactic traveller went on a trip across the universe and got candies from the different planets he visited. He comes back with $N$ candies and decides to distribute them among his $M$ friends. However, Luke only wants a fair distribution of the candies as he loves everyone equally. (A fair distribution is one in which each of his friends receive an equal number of candies and each friend receives at least one candy.) If a fair distribution is not possible, he might throw away some candies and try to distribute the remaining candies in a similar manner.\n \nIf he can throw away exactly $K$ candies at a time (he can throw away candies multiple times), what is the minimum number of times he will need to throw away candies before achieving a fair distribution?\n \n###Input:\n \n- First line will contain $T$, number of testcases. Then the testcases follow.\n- Each testcase contains of a single line of input, three integers $N, M, K$.\n \n###Output:\nFor each testcase, output a single integer denoting the minimum number of times he will need to throw away candies before achieving a fair distribution. If a fair distribution is not possible, print   -1.\n \n \n###Constraints\n- $1 \\leq T \\leq 10^5$\n- $2 \\leq N,M,K \\leq 10^9$",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2     \n28 6 2       \n78 5 3",
+        "output": "2\n1",
+        "explanation": "Test case 1: There are 28 candies and 6 friends. He can distribute 24 candies fairly among his friends, each getting 4 candies. He then throws away the remaining 4 candies 2 at a time.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 23055,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "la_flame_",
+  "problem_display_authors": [
+    "la_flame_"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/la_flame_'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #684273;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>4&#9733;</span><span class='m-username--link'>la_flame_</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "yashdeepgupta",
+  "date_added": "20-03-2019",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "GCD"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Number Theory"
+  ],
+  "difficulty_rating": "1754",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610871
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ICL1903",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

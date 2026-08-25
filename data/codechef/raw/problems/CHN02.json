@@ -1,0 +1,125 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "CHN02",
+  "contest_category": "6",
+  "problem_name": "Animesh decides to settle down",
+  "intended_contest_code": null,
+  "body": "<p>\nAfter trying his luck in programming contests, Animesh has decided to accept his fate and settle down the good old-fashioned way. He has decided to own a farm and be a shepherd. He knows of <b>n</b> grass varieties, each of which grows in a convex polygon area. Some of these polygons may intersect each other. Each grass is lush green and nutritious, and he cannot make up his mind on where he should settle. \n</p>\n\n<p>\nHis friend Malvika, a long time shepherd herself (this is <em>the other</em> Malvika), suggested that he buy a piece of land where he can find all the <b>n</b> grass varieties, so that his sheep will be fat and produce lots of wool. Animesh liked the idea and wants to buy as much of such a pasture as possible. However, being short on money, he decided to be judicious, and only buy land which is covered by all the <b>n</b> grasses. That is, he would not buy even a bit of land which isn't part of all <b>n</b> of the grassy polygons. Can you please help in finding out the maximum area of land he can buy?\n</p>\n\n<h3>Input</h3>\n\t<ul>\n\t\t<li>First line will contain an integer <b>n</b>, denoting the number of polygons.</li>\n\t\t<li>Then, the next lines will contain description of <b>n</b> polygons, description of the <b>i</b><sup>th</sup> polygon is given as below.\n\t\t\t<ul>\n\t\t\t<li>First line will contains a single integer <b>c</b> denoting number of points in the polygon.\n\t\t\t<li>each of the next <b>c</b> lines will have two space separated integers <b>x[j], y[j]</b> denoting <b>x</b> and <b>y</b> coordinate respectively of the <b>j</b>-th point of the polygon. These points will be given in anti-clockwise order.\n\t\t\t</ul>\n\t</ul>\n</ul>\n\n<h3>Output</h3>\n<ul>\n<li>Output your answer in a separate line. Your answer will be considered correct if it has an absolute error less than <b>1e-2</b>.</li>\n</ul>\n</ul>\n\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> &le; <b>n</b> &le; <b>30</b></li>\n<li><b>3</b> &le; <b>c</b> &le; <b>30</b></li>\n<li><b>-10<sup>5</sup></b> &le; <b>x, y</b> &le; <b>10<sup>5</sup></b></li>\n</ul>\n\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n3\n4\n15 0\n15 5\n0 5\n0 0\n4\n2 3\n15 3\n15 10\n2 10\n4\n19 7\n5 7\n5 -1\n19 -1\n\n<b>Output:</b>\n20.000\n</pre>\n\n\n<h3>Explanation</h3>\n<p>\nEach region in the current case is rectangular in shape. You can check that the area of intersection of all the three input rectangles is another rectangle with corners at <b>(5,3), (15,3), (15,5)</b> and <b>(5,5)</b>. This is the place Animesh is going to settle in. The area of this rectangle is 10 * 2 = 20. \n</p>\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- **1** \u2264 **n** \u2264 **30**\n- **3** \u2264 **c** \u2264 **30**\n- **-10^5** \u2264 **x, y** \u2264 **10^5**\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "After trying his luck in programming contests, Animesh has decided to accept his fate and settle down the good old-fashioned way. He has decided to own a farm and be a shepherd. He knows of **n** grass varieties, each of which grows in a convex polygon area. Some of these polygons may intersect each other. Each grass is lush green and nutritious, and he cannot make up his mind on where he should settle.\n\nHis friend Malvika, a long time shepherd herself (this is *the other* Malvika), suggested that he buy a piece of land where he can find all the **n** grass varieties, so that his sheep will be fat and produce lots of wool. Animesh liked the idea and wants to buy as much of such a pasture as possible. However, being short on money, he decided to be judicious, and only buy land which is covered by all the **n** grasses. That is, he would not buy even a bit of land which isn't part of all **n** of the grassy polygons. Can you please help in finding out the maximum area of land he can buy?\n",
+    "inputFormat": "- First line will contain an integer **n**, denoting the number of polygons.\n- Then, the next lines will contain description of **n** polygons, description of the **i**-th polygon is given as below.\n  - First line will contains a single integer **c** denoting number of points in the polygon.\n  - Each of the next **c** lines will have two space separated integers **x[j], y[j]** denoting **x** and **y** coordinate respectively of the **j**-th point of the polygon. These points will be given in anti-clockwise order.\n",
+    "inputFormatState": true,
+    "outputFormat": "- Output your answer in a separate line. Your answer will be considered correct if it has an absolute error less than **1e-2**.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\n4\n15 0\n15 5\n0 5\n0 0\n4\n2 3\n15 3\n15 10\n2 10\n4\n19 7\n5 7\n5 -1\n19 -1\n",
+        "output": "20.000\n",
+        "explanation": "Each region in the current case is rectangular in shape. You can check that the area of intersection of all the three input rectangles is another rectangle with corners at **(5,3), (15,3), (15,5)** and **(5,5)**. This is the place Animesh is going to settle in. The area of this rectangle is 10 * 2 = 20.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin2",
+  "problem_display_authors": [
+    "admin2"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin2'>admin2</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "17-01-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Computational Geometry",
+    "Convex Hull",
+    "Half-plane intersection"
+  ],
+  "computed_tags": [
+    "Advanced Algorithms",
+    "Polygons"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610677
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=CHN02",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

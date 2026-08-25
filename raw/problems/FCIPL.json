@@ -1,0 +1,125 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "FCIPL",
+  "contest_category": "6",
+  "problem_name": "IPL Begins",
+  "intended_contest_code": null,
+  "body": "This year $p$ footballers and $q$ cricketers have been invited to participate in IPL (Indian Programming League) as guests. You have to accommodate them in $r$ rooms such that-\r\n- No room may remain empty.\r\n- A room may contain either only footballers or only cricketers, not both.\r\n- No cricketers are allowed to stay alone in a room.\r\n\r\nFind the number of ways to place the players. Note though, that all the rooms are identical. But each of the cricketers and footballers are unique. \r\n\r\nSince the number of ways can be very large, print the answer modulo $998,244,353$.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first and only line of each test case contains three space-separated integers $p$, $q$ and $r$ denoting the number of footballers, cricketers and rooms.\r\n\r\n### Output\r\nFor each test case, output the number of ways to place the players modulo $998,244,353$.\r\n\r\n### Constraints \r\n- $1 \\le T \\le 100$\r\n- $1 \\le p, q, r \\le 100$\r\n\r\n### Example Input\r\n```\r\n4\r\n2 1 4\r\n2 4 4\r\n2 5 4\r\n2 8 4\r\n```\r\n\r\n### Example Output\r\n```\r\n0\r\n3\r\n10\r\n609\r\n```\r\n\r\n### Explanation\r\n**Example case 2:** Three possible ways are:\r\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 2}, {Cricketer 3, Cricketer 4}\r\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 3}, {Cricketer 2, Cricketer 4}\r\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 4}, {Cricketer 2, Cricketer 3}    \r\n\r\nPlease note that the rooms are identical.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\le T \\le 100$\n- $1 \\le p, q, r \\le 100$\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "This year $p$ footballers and $q$ cricketers have been invited to participate in IPL (Indian Programming League) as guests. You have to accommodate them in $r$ rooms such that:\n- No room may remain empty.\n- A room may contain either only footballers or only cricketers, not both.\n- No cricketers are allowed to stay alone in a room.\n\nFind the number of ways to place the players. Note though, that all the rooms are identical. But each of the cricketers and footballers are unique.\n\nSince the number of ways can be very large, print the answer modulo $998,244,353$.\n",
+    "inputFormat": "- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\n- The first and only line of each test case contains three space-separated integers $p$, $q$ and $r$ denoting the number of footballers, cricketers and rooms.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output the number of ways to place the players modulo $998,244,353$.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "4\n2 1 4\n2 4 4\n2 5 4\n2 8 4\n",
+        "output": "0\n3\n10\n609\n",
+        "explanation": "**Example case 2:** Three possible ways are:\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 2}, {Cricketer 3, Cricketer 4}\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 3}, {Cricketer 2, Cricketer 4}\n- {Footballer 1}, {Footballer 2}, {Cricketer 1, Cricketer 4}, {Cricketer 2, Cricketer 3}\n\nPlease note that the rooms are identical.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "msi_cse_buet",
+  "problem_display_authors": [
+    "msi_cse_buet"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/msi_cse_buet'>msi_cse_buet</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "5-12-2019",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "Modular Arithmetic",
+    "Combinatorics",
+    "Dynamic Programming"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms"
+  ],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610846
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=FCIPL",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 1,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

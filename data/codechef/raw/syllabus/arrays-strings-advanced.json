@@ -1,0 +1,478 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "arrays-strings-advanced",
+  "name": "Advanced Arrays and Strings",
+  "title": "Advanced Arrays and Strings",
+  "level": "Advanced",
+  "description": "Solve advanced coding problems on Arrays and strings to continue learning data structures and algorithms.",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:45",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/arrays-strings-advanced/ARRAYSP06/problems/THREESUM",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Arrays - advanced",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Arrays",
+          "submodule_id": 25865,
+          "contest_code": "ARRAYSP06",
+          "start_date": "2026-05-07 15:16:07",
+          "total_problems": 29,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/arrays-strings-advanced/ARRAYSP06/problems/THREESUM",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 29,
+          "problems_with_status": [
+            {
+              "contest_id": "55020",
+              "code": "THREESUM",
+              "name": "Zero Sum Triplets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MAXPROSUBARR",
+              "name": "Chef and the Magical Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MAXSUBARR",
+              "name": "Maximum Subarray ",
+              "difficulty_rating": "1613",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "DSCPPAS262",
+              "name": "Count max Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MERGEINTER",
+              "name": "Merge Overlapping intervals",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "NEXTPERM",
+              "name": "Next Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MISSNDREPEAT",
+              "name": "Find the repeating and missing number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "CNTINVERSION",
+              "name": "Count Inversions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "REVERSEPAIRS",
+              "name": "Count Reverse Pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MINVOTE",
+              "name": "Minions and Voting",
+              "difficulty_rating": "1830",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "SUMQ",
+              "name": "Triplets",
+              "difficulty_rating": "1772",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MINNOTES",
+              "name": "Optimal Denomination",
+              "difficulty_rating": "1759",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "PREFPRO3",
+              "name": "Good subarrays",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "PREFPRO4",
+              "name": "Good Subarrays 2",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "RECTQUER",
+              "name": "Rectangular Queries",
+              "difficulty_rating": "1778",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "SEGFAULT",
+              "name": "Segmentation Fault",
+              "difficulty_rating": "1815",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "CONSECUTIVE",
+              "name": "Longest Consecutive Numbers in an Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "PRINTSUBARAY",
+              "name": "Print subarray with maximum subarray sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MATMAXSQ",
+              "name": "Maximal square of all ones",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MATROTAPPLE",
+              "name": "Rotting Apples",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MATNEARESTO",
+              "name": "Distance to Nearest 0",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MATMEDIAN",
+              "name": "Median in Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "SEACO",
+              "name": "Sereja and Commands",
+              "difficulty_rating": "1990",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "STRQ",
+              "name": "Chef and Strings",
+              "difficulty_rating": "1930",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "MAXREMOV",
+              "name": "Max Range Queries",
+              "difficulty_rating": "2057",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "AGCY",
+              "name": "Angry Cyborg",
+              "difficulty_rating": "2072",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "CENS20A",
+              "name": "Cherry and Bits",
+              "difficulty_rating": "2179",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55020",
+              "code": "SUMOFCUBE",
+              "name": "Sum of Cube ",
+              "difficulty_rating": "2259",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 29
+    },
+    {
+      "assessment": null,
+      "name": "Strings - advanced",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Strings",
+          "submodule_id": 25867,
+          "contest_code": "STRINGSP06",
+          "start_date": "2026-05-07 15:16:58",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/arrays-strings-advanced/STRINGSP06/problems/SUBSTRINGP",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "55021",
+              "code": "SUBSTRINGP",
+              "name": "Check if a string is a substring of another",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "STRINGMATCH",
+              "name": "Repeated String Match",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "COUNTSAY",
+              "name": "Count-and-Say Sequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "ISOMORPHICST",
+              "name": "Check Isomorphic Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "SUBSTRINGSUM",
+              "name": "Sum of Beauty of All Substrings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "LONGESTPALIN",
+              "name": "Longest Palindromic Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "HAPPYNUMBER",
+              "name": "Longest Happy Prefix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "ZFUNCTION",
+              "name": "First Occurrence of Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "SHORTPALINDR",
+              "name": "Shortest Palindrome",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "55021",
+              "code": "TYPE",
+              "name": "Typing Letter",
+              "difficulty_rating": "1250",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 39,
+  "total_non_pro_problems": 39,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Algorithms",
+  "reviews": [],
+  "learners_count": 297,
+  "path_review": {
+    "rating": 0,
+    "users": 0
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms",
+  "roadmap_title": "Data Structures & Algorithms"
+}

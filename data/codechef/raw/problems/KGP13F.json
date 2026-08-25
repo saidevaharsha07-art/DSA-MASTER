@@ -1,0 +1,122 @@
+{
+  "category_name": "extcontest",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "KGP13F",
+  "contest_category": "6",
+  "problem_name": "Ant Colony",
+  "intended_contest_code": null,
+  "body": "<p>In an ants' colony spread over a flat surface, the ants can reside at integral coordinates as close as unit distance apart from each other (but no closer). The colony has the shape of a quadrilateral<b> ABCD </b>where one ant must reside at each of <b>A</b>, <b>B</b>, <b>C</b>, and <b>D</b>, and all other ants can be on any integral coordinate on its perimeter and its interior. Given the integral positions of <b>A</b>, <b>B</b>, <b>C</b>, and <b>D</b>, print the maximum number of ants that can reside in the colony (including the ants that can reside on the four corners and the perimeter).</p>\n<h3>Input</h3>\n<p>The first line contains the number of test cases, <b>N</b>.</p>\n<p>For each test case, a single line contains the <b>x</b> and <b>y</b> coordinates of the four corners of the quadrilateral in clockwise order starting with the left-most, bottom-most point.</p>\n<h3>Output</h3>\n<p>For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the maximum number of ants.</p>\n<h3>Constraints</h3>\n<p>0 &lt; <b>N</b> &#8804; 3</p>\n<p><b>|x|, |y|</b> &#8804; 10,000</p>\n<h3>Example</h3>\n<pre><b>Input:</b>\n2\n1 1 3 4 5 3 6 1\n1 3 5 6 6 3 3 1\n\n<b>Output:</b>\nCase 1: 14\nCase 2: 16\n\n</pre>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- \\(0 < N \\leq 3\\)\n- \\(|x|, |y| \\leq 10,000\\)\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "In an ants' colony spread over a flat surface, the ants can reside at integral coordinates as close as unit distance apart from each other (but no closer). The colony has the shape of a quadrilateral **ABCD** where one ant must reside at each of **A**, **B**, **C**, and **D**, and all other ants can be on any integral coordinate on its perimeter and its interior. Given the integral positions of **A**, **B**, **C**, and **D**, print the maximum number of ants that can reside in the colony (including the ants that can reside on the four corners and the perimeter).\n",
+    "inputFormat": "The first line contains the number of test cases, **N**.\n\nFor each test case, a single line contains the **x** and **y** coordinates of the four corners of the quadrilateral in clockwise order starting with the left-most, bottom-most point.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, print the case number, followed by a colon, followed by a single space, followed by a single integer indicating the maximum number of ants.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n1 1 3 4 5 3 6 1\n1 3 5 6 6 3 3 1\n",
+        "output": "Case 1: 14\nCase 2: 16\n",
+        "explanation": "The first test case represents a quadrilateral with vertices at (1, 1), (3, 4), (5, 3), and (6, 1). The maximum number of ants that can reside in this colony is 14.\n\nThe second test case represents a quadrilateral with vertices at (1, 3), (5, 6), (6, 3), and (3, 1). The maximum number of ants that can reside in this colony is 16.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"http://www.codechef.com/problems/KGP13F\" rel=\"nofollow noopener\">Practice</a><br>\n<a href=\"http://www.codechef.com/KGP13ACM/problems/KGP13F\" rel=\"nofollow noopener\">Contest</a></p>\n<p><strong>Editorialist:</strong> <a href=\"http://www.codechef.com/users/shangjingbo\" rel=\"nofollow noopener\">Jingbo Shang</a></p>\n<h3>DIFFICULTY:</h3>\n<p>Easy</p>\n<h3>PREREQUISITES:</h3>\n<p>Pick\u2019s Theorem</p>\n<h3>PROBLEM:</h3>\n<p>Give a 4-point polygon (integer coordinates), find out how many integer points inside or on the border of that polygon.</p>\n<h3>EXPLANATION:</h3>\n<p>This problem is really classical. Let me introduce the <a href=\"http://en.wikipedia.org/wiki/Pick%27s_theorem\" rel=\"nofollow noopener\">Pick\u2019s Theorem</a> first.</p>\n<pre><code>Area = # Inner Integer Points + # Border Integer Points / 2 - 1\n</code></pre>\n<p>To calculate the <b>Area</b>, we can use <a href=\"http://en.wikipedia.org/wiki/Cross_product\" rel=\"nofollow noopener\">cross product</a>.</p>\n<p>So the remain part is to get the number of integer points on its border. That equals to count how many integer points on the segment (0,0) - (dx, dy). This can be solved by <a href=\"http://en.wikipedia.org/wiki/Greatest_Common_Divisor\" rel=\"nofollow noopener\">Greatest Common Divisor</a> (gcd).</p>\n<pre><code># Integer Points on Segment = gcd(dx, dy) + 1\n</code></pre>\n<p>which including the two ends.</p>\n<p>Combining these together and applying the Pick\u2019s Theorem, we finally get the total integer points inside or on the border.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 4050,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP",
+  "max_timelimit": "0.51",
+  "source_sizelimit": "50000",
+  "problem_author": "jingbo_adm",
+  "problem_display_authors": [
+    "jingbo_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/jingbo_adm'>jingbo_adm</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "admin",
+  "date_added": "18-12-2013",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "easy",
+    "jingbo_adm",
+    "kgp13acm"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/KGP13F",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610963
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=KGP13F",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

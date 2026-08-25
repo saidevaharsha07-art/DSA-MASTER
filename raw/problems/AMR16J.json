@@ -1,0 +1,122 @@
+{
+  "category_name": "medium",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "AMR16J",
+  "contest_category": "6",
+  "problem_name": "Bob vs ATM",
+  "intended_contest_code": null,
+  "body": "<p>\nDue to shortage of ATMs, a bank decided to convert some arcade gaming machines into ATMs. Unfortunately, due to a bug, the converted machine will only dispense cash if the withdrawer can win the game. \nThe game is played over a valid bracket sequence. Formally a valid bracket sequence is defined as:</p>\n\n<p>\n<ol>\n<li> An empty string is valid</li>\n<li> If A is a valid bracket sequence, then (A) is also valid</li>\n<li> If A and B are valid, AB is also valid</li>\n</ol>\n</p>\n\n<p>\nIn each move a player can erase such a non-empty valid sub-string of the remaining brackets such that they cannot be formed by concatenating 2 valid sequences. E.g. a player can erase (()) or (()()) but not ()() or (())(). The ATM always plays first. The player that is not able to make a move will lose the game. Assume that both the players play optimally.\n</p>\n\n<p>\nBob is trying to withdraw money and is frustrated as he keeps losing against the machine. He suspects the machine is rigged and always wins the game. So, he has asked you to help him out. Given a valid bracket sequence, can you determine who wins the game?\n</p>\n\n<h3>Input</h3>\n<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>\n<p>Each of the test case consists of a single line containing the string <b>S</b> - the initial bracket sequence. </p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing the winner - either \"ATM\" or \"Bob\" without quotes.</p>\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1</b> \u2264 <b>T</b> \u2264 <b>10<sup>5</sup></b></li>\n<li><b>2</b> \u2264 <b>length of S</b> \u2264 <b>10<sup>5</sup></b></li>\n<li>The sum of all lengths of <b>S</b> will be not more than <b>10<sup>6</sup></b>\n<li><b>S</b> will be a valid bracket sequence</li>\n</ul>\n\n<h3>Example</h3>\n<pre><b>Input:</b>\n5\n()\n(()()(()))\n()()\n(())()\n(()()(()))((()))\n\n<b>Output:</b>\nATM\nATM\nBob\nATM\nBob\n</pre>\n\n<h3>Explanation</h3>\n<p><b>Example case 1.</b> The ATM will erase the entire sequence and win the game </p>\n<p><b>Example case 2.</b> The ATM will again erase the entire sequence and win the game </p>\n<p><b>Example case 3.</b> The ATM can erase either the first or the second (), Bob will erase the other one and win</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- `1 \u2264 T \u2264 10^5`\n- `2 \u2264 length of S \u2264 10^5`\n- The sum of all lengths of `S` will be not more than `10^6`\n- `S` will be a valid bracket sequence\n",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "Due to a shortage of ATMs, a bank decided to convert some arcade gaming machines into ATMs. Unfortunately, due to a bug, the converted machine will only dispense cash if the withdrawer can win the game. The game is played over a valid bracket sequence. Formally, a valid bracket sequence is defined as:\n\n1. An empty string is valid.\n2. If `A` is a valid bracket sequence, then `(A)` is also valid.\n3. If `A` and `B` are valid, `AB` is also valid.\n\nIn each move, a player can erase a non-empty valid substring of the remaining brackets such that it cannot be formed by concatenating two valid sequences. For example, a player can erase `(())` or `(()())` but not `()()` or `(())()`. The ATM always plays first. The player that is not able to make a move will lose the game. Assume that both players play optimally.\n\nBob is trying to withdraw money and is frustrated as he keeps losing against the machine. He suspects the machine is rigged and always wins the game. So, he has asked you to help him out. Given a valid bracket sequence, can you determine who wins the game?\n",
+    "inputFormat": "The first line of the input contains an integer `T` denoting the number of test cases. The description of `T` test cases follows.\n\nEach test case consists of a single line containing the string `S` - the initial bracket sequence.\n",
+    "inputFormatState": true,
+    "outputFormat": "For each test case, output a single line containing the winner - either \"ATM\" or \"Bob\" without quotes.\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "5\n()\n(()()(()))\n()()\n(())()\n(()()(()))((()))\n",
+        "output": "ATM\nATM\nBob\nATM\nBob\n",
+        "explanation": "**Example case 1:** The ATM will erase the entire sequence and win the game.\n\n**Example case 2:** The ATM will again erase the entire sequence and win the game.\n\n**Example case 3:** The ATM can erase either the first or the second `()`, Bob will erase the other one and win.\n",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "<h3>PROBLEM LINK:</h3>\n<p><a href=\"https://www.codechef.com/AMR16MOS/problems/AMR16J\" rel=\"nofollow noopener\">Contest(Mirror)</a><br>\n<a href=\"https://www.codechef.com/problems/AMR16J\" rel=\"nofollow noopener\">Practice</a></p>\n<p><strong>Setter</strong>-<br>\n<strong>Tester</strong>-<br>\n<strong>Editorialist</strong>- <a href=\"https://www.codechef.com/users/vijju123\" rel=\"nofollow noopener\">Abhishek Pandey</a></p>\n<h3>DIFFICULTY:</h3>\n<p>EASY-MEDIUM</p>\n<h3>PRE-REQUISITES:</h3>\n<p>Game Theory, Grundy Numbers, <a href=\"https://en.wikipedia.org/wiki/Sprague%E2%80%93Grundy_theorem\" rel=\"nofollow noopener\">Sprague Grundy Theorem</a></p>\n<h3>RESOURCES:</h3>\n<p>Before reading the editorial, you <strong>MUST</strong> have an idea of the pre-requisites involved in order to make sense of what is being done.Hence, in case you are not well versed with the pre-requisites, I recommend that you first learn the pre-requisites from the sites below-</p>\n<p><a href=\"http://www.geeksforgeeks.org/combinatorial-game-theory-set-3-grundy-numbersnimbers-and-mex/\" rel=\"nofollow noopener\">Grundy Numbers- GFG</a>  - Please pay close attention to calculation of grundy number for normal Nim.<br>\n<a href=\"http://www.geeksforgeeks.org/combinatorial-game-theory-set-4-sprague-grundy-theorem/\" rel=\"nofollow noopener\">Sprague Grundy Theorem</a> - Pay some attention to definition and application.<br>\n<a href=\"https://discuss.codechef.com/questions/79515/grundy-number\">This answer</a> which beautifully deals with Grundy numbers and how to apply them.<br>\n<a href=\"https://www.hackerrank.com/topics/game-theory-and-grundy-numbers\" rel=\"nofollow noopener\">This</a> tutorial at Hackerrank in the end.</p>\n<p>With this knowledge, now you are more than capable of understanding and appreciating what the editorial will convey to you.</p>\n<h3>PROBLEM:</h3>\n<p>It is nothing but a standard Game Theory problem where we need to find winner from initial conditions, assuming both play optimally.</p>\n<h3>QUICK EXPLANATION:</h3>\n<p>On careful observation we see that this bracket game is nothing but Nim game with possibly multiple piles. We know that for a game of nim, the Grundy Number is <span class=\"math\">xor</span> of coins in all piles. We hence \u201cconvert\u201d the given bracket sequence equivalent piles of coins and proceed to find Grundy Number. If its non-zero, first player (i.e. ATM) wins, else he loses.</p>\n<h3>EXPLANATION:</h3>\n<p>So, we are given a valid bracket string, and are told that each player can remove any valid, non-empty sub-string per turn. How do we proceed to find the winner?</p>\n<p>The very first instinct which any contestant gets when he encounters a game theory question is to make observations and hence try to find condition which leads to first player winning. But that is just one type of Game Theory question, and the same strategy isn\u2019t applicable here.</p>\n<p>If you\u2019ve gone through the resources, you will appreciate that we cannot determine winner in Game of Nim without Grundy numbers. There are simply too many factors, depending solely on observations to determine winning conditions is more or less likely to miss out on something. This is the category of questions where we need to focus on and appreciate the mathematical concepts of Game Theory.</p>\n<p>Of course, we <em>have</em> to make some observations at the end of the day. But those observations have a different direction. You will see when you read below.</p>\n<p>With above, I hope its clear that why the approach of finding winning conditions by pure observations is not going to work.</p>\n<p><strong>First Step towards finding the winner-</strong></p>\n<p>Recall the Sprague Grundy Theorem. It states that-</p>\n<pre><code>In combinatorial game theory, the Sprague\u2013Grundy theorem states that every impartial game under the normal play convention is equivalent to a nimber. \n-wikipedia\n</code></pre>\n<p>So the first step towards solving this is seeing if we can reduce this game to game of nim or not. And if yes, then how?</p>\n<p><strong>Converting the game to nim-</strong></p>\n<p>So, at first sight it kind of sounds hard. Like, we are given a bracket sequence, and somehow we have to look if we can reduce it to nim or not. But soon you will see, that mere <span class=\"math\">3</span> observations and their proper application allow us to easily convert this bracket game to game of nim!</p>\n<p>Firstly, let me will categorize brackets into 3 types, for convenience during later explanation-</p>\n<ol>\n<li>Simple <code>()</code> valid sequence with no other sequence inside it.</li>\n<li>A bracket sequence with valid sequence inside it. The valid sequence inside it is NOT concatenation of 2 valid sequences. Eg- <code>(())</code> or <code>((()))</code>. Here, we face no restriction while removing brackets/sequence and can remove any sequence as we wish in a single turn.</li>\n<li>A bracket sequence with valid sequence inside it. The valid sequence inside it is concatenation of 2 or more valid sub-sequences. Eg- <code>(()())</code> or <code>(()()(()))</code>. In this case there are some restrictions while removing brackets, eg- We cannot remove <code>()()(())</code> in a single turn.</li>\n</ol>\n<p>Now, lets start with the first type of sequence. Lets take and analyse the following exemplar sequences-</p>\n<ol>\n<li>\n<code>()</code> - Here we have only 1 bracket sequence, and the only option is to remove it. Just like removing a coin from single pile of Nim! But well, only 1 case doesnt take us anywhere!</li>\n<li>\n<code>()()</code> - Here we can remove either the first <code>()</code> or second <code>()</code> (in a single turn) but not both. Hmm, its the same situation as if we have 2 piles with 1 coin in each in game of nim!</li>\n<li>\n<code>()()()</code> - Again, same restriction as above. we can remove exactly 1 of them per turn. It seems so similar to a game of nim with 3 piles of 1 coins!</li>\n</ol>\n<p><strong>Observation 1-</strong><br>\nThe observation to make is that, if we have a sequence of <span class=\"math\">N</span> <code>()</code> brackets concatenated together, its equivalent to <span class=\"math\">N</span> piles with 1 coin in game of nim.</p>\n<p>What happens if we add Type 2 brackets as well?</p>\n<ol>\n<li>\n<code>(())</code> - Here, we can either remove inner sequence, or outer sequence. Rephrasing that, we can either remove 1 or 2 valid sequences. Following the direction of previous directions, it seems similar to removing coins from a <em>single</em> pile of 2 coins in nim.</li>\n<li>\n<code>((()))</code> - Again, we can remove 1, 2 or 3 bracket sequences. Exactly same as removing coins from a single pile of 3 coins in nimber.</li>\n<li>\n<code>(())((()))</code>- As discussed above, it is equivalent to <span class=\"math\">2</span> piles of coins with 2,3 coins in them respectively.</li>\n</ol>\n<p><strong>Observation 2-</strong><br>\nThe second observation to make was that, for a single sequence of type 2, which has a total of <span class=\"math\">N</span> valid sequences, then it is equivalent to a single pile with <span class=\"math\">N</span> coins in game of nim. Concatenation of multiple type 2 sequences is equivalent to multiple piles.</p>\n<p>Till now, things have been going very easy. We have seen equivalence of type 1 and type 2 bracket sequences with game of nim with some trivial observations. But you will see that things will not be not so comfortable when dealing with type 3 bracket sequence. Why? One may wonder whats so special in it.</p>\n<p>Hence, I request the readers to give a try in finding equivalence of type 3 sequence with game of nim. Everyone wants to be a good coder and top the leaderboard. You can do it only when you train yourself to think like them during the contest. Hence, I urge you all to give it a try. The third observation is <strong>nothing new</strong>. It is just a combination of first and second observation, provided you went through the resources I posted. Hence, I sincerely request to try reducing the third to equivalent game of nim by yourselves first so that you get more involved into the problem and its solution.</p>\n<p><strong>Equivalence of Type 3 Brackets with Nim-</strong><br>\n.<br>\n.<br>\n.<br>\n.<br>\n.<br>\n.<br>\n.<br>\n.<br>\n.<br>\n<strong>Left as an exercise for Reader <img src=\"https://discuss.codechef.com/images/emoji/apple/smiley.png?v=9\" title=\":smiley:\" class=\"emoji\" alt=\":smiley:\"></strong><br>\n.<br>\n.<br>\n.<br>\n.</p>\n<p>(PS: The above line is a joke. The detailed explanation is given below <img src=\"https://discuss.codechef.com/images/emoji/apple/stuck_out_tongue.png?v=9\" title=\":stuck_out_tongue:\" class=\"emoji\" alt=\":stuck_out_tongue:\"> )<br>\n(PPS: Another observation you can make is that you can never predict whats coming next in my editorial. Is it a detailed explanation? A joke? A flying dinosaur meme? You never know! XD <img src=\"https://discuss.codechef.com/images/emoji/apple/stuck_out_tongue.png?v=9\" title=\":stuck_out_tongue:\" class=\"emoji\" alt=\":stuck_out_tongue:\"> )</p>\n<p>If you guys did give a shot in converting third type of brackets to equivalent of nim, you guys would see whats the problem we\u2019re facing. What most of you must have faced is, problem in finding the number of coins in a pile when converting bracket sequence to equivalent nimber game.  For type 1 and type 2, it was quite easy to observe. But type 3, we are stuck. Indeed, its not so straightforward to convert <code>(()()(()))</code> into a pile of coins. This is what gives this question a bit of medium difficulty.</p>\n<p>As a hint, we will be using the fact that in a game of nim, Grundy number of a pile with <span class=\"math\">N</span> stones is <span class=\"math\">N</span> (The derivation is given in the first link in resources section. So please check it out or have a relook if you need to!)</p>\n<p>For now, remove/ignore the outer brackets from <code>(()()(()))</code>. So we are left with <code>()()(())</code> . We can easily see that its equivalent to a nim game with piles <code>1 1 2</code> . We can easily calculate the equivalent Grundy number of this combination. Its <code>1^1^2=2</code>.</p>\n<p>Now comes my favorite part\u2026</p>\n<p>We know that in nim, a Grundy number for a pile with <span class=\"math\">N</span> coins is <span class=\"math\">N</span>. We also see that sequence <code>()()(())</code> has grundy number of 2. Grundy number of a pile with 2 coins, is also 2. Does this not mean that this combination is having the <span class=\"math\">same</span> effect on game as a <span class=\"math\">single</span> <span class=\"math\">pile</span> with 2 coins? At the end of day we have to find answer by <span class=\"math\">xoring</span> all Grundy numbers. The combination, ordering etc. doesnt matter once we get the Grundy numbers.</p>\n<p>So can I not conclude that the sequence <code>()()(())</code> has <span class=\"math\">same</span> effect on game as a sequence <code>(())</code> since both have same Grundy numbers? I can, and this allows me to <span class=\"math\">replace</span> <code>()()(())</code> with <code>(())</code> and have no effect on answer!</p>\n<p>Now, we had initially ignored the outer brackets, its time to bring them in! Our original sequence of <code>(()()(()))</code> can be converted to <code>((()))</code>. We can easily find equivalent of this in nim! (In fact we already did that :p) Our final answer is <code>1+Grundy_Number of inner brackets</code></p>\n<p>Similarly, another example-</p>\n<p>In <code>(((()()()((())))))</code> after peeling off all outer brackets of type 2, we get <code>()()()((()))</code> , we can again replace this by <code>(())</code> (Grundy number is <code>1^1^1^3=1^3=2</code>) and convert it to <code>((((()))))</code>. Here the answer is <code>Grundy number of inner brackets +1+1+1</code> We are adding 1s equal to number of outer brackets of type 2 which we ignored. Why I wrote it as <code>+1+1+1</code> instead of <code>+3</code> will be clear if you see my Recursive solution.</p>\n<p>Now we have logic clear, we can discuss the implementation. I have discussed the implementation as comment in my solution, so that the editorial doesnt become verbose. In case you people specifically want more explanation, please comment and I will add it accordingly <img src=\"https://discuss.codechef.com/images/emoji/apple/slight_smile.png?v=9\" title=\":slight_smile:\" class=\"emoji\" alt=\":slight_smile:\"></p>\n<h3>EDITORIALIST\u2019S SOLUTION:</h3>\n<p><a href=\"https://www.codechef.com/viewsolution/15287043\" rel=\"nofollow noopener\">Recursive</a><br>\n<a href=\"https://www.codechef.com/viewsolution/15287123\" rel=\"nofollow noopener\">Iterative</a></p>\n<p><span class=\"math\">TimeComplexity=O(N)</span></p>\n<h3>CHEF VIJJU\u2019S CORNER <img src=\"https://discuss.codechef.com/images/emoji/apple/smiley.png?v=9\" title=\":smiley:\" class=\"emoji\" alt=\":smiley:\">\n</h3>\n<p>Although I have discussed the question in great detail, I made sure to keep some delicious lip smacking mysteries for you guys.</p>\n<p>1.Go through the time taken by my recursive and iterative solution. Recursive works in 0.08 while iterative takes 0.52 seconds! Points for anyone coming up with the correct explanation :D.</p>\n<p>2.I have said in recursive solution that dont pass string to function as an argument? Why? Well, check out <a href=\"https://www.codechef.com/viewsolution/15248961\" rel=\"nofollow noopener\">this</a> solution of mine. Its exactly same as the one I gave under Editorialist\u2019s solution, <strong>except that here I passed string as an argument and got TLE</strong>. This is a very common implementation error we see. Strings are not passed by reference, they are passed by <span class=\"math\">value</span>. This means, for EVERY call of function, entire string is copied again and again. It takes <span class=\"math\">O(N)</span> to copy the string for each function call. And function is called for <span class=\"math\">O(N)</span> times in worst case. So it actually a becomes <span class=\"math\">O({N}^{2})</span> time complexity!!</p>\n<p>3.Now that you have read the editorial and (hopefully) gone through the resources and acquired the required knowledge on game theory, I am sure you all want some questions to strengthen this new found knowledge! There is a good section of problems related to Game Theory <a href=\"https://www.hackerrank.com/domains/core-cs/game-theory\" rel=\"nofollow noopener\">here</a> . You can practice all you want there.</p>\n<p>4.There are some conceptual questions to feed your brain as well. Give a try at the questions below-</p>\n<p>a. The <span class=\"math\">X</span> and the <span class=\"math\">Y</span> axis form four quadrants. I have one coin placed in second quadrant at <span class=\"math\">(-N,M)</span>. The graph is infinite. The players can move coins either vertically down or horizontally right. First player to bring coin at origin wins. If player A plays first, what is the condition that he will win?</p>\n<p>b. In a game of nim, I have put a restriction that a player can remove only 3,4 or 5 coins. Determine the Grundy numbers for upto <span class=\"math\">N=20</span>. Assume number of pile to be a) 1, b)2 , c)<span class=\"math\">N</span> [Hint: Extend conclusion of base/smaller cases!]</p>\n<p>5.There is a 1 liner iterative solution to this problem as well! Just 1 statement inside the for loop. Feeling upto the challenge? <img src=\"https://discuss.codechef.com/images/emoji/apple/smiley.png?v=9\" title=\":smiley:\" class=\"emoji\" alt=\":smiley:\"></p>\n<p>.<br>\n.<br>\n.<br>\n.<br>\n<strong>Answers of questions above</strong></p>\n<p>Left as an exercise to you guys! Seriously! I made sure that if you went through resources, you dont get stuck. Leaving these as open ended questions, anyone answering questions decently gets 10 points :D. (25 if you answer both decently <img src=\"https://discuss.codechef.com/images/emoji/apple/wink.png?v=9\" title=\":wink:\" class=\"emoji\" alt=\":wink:\"> )</p>\n<p>I will update this section later with best selected answers :).</p>\n<h3>FURTHER READING ON GAME THEORY:</h3>\n<p><a href=\"http://www.cs.cmu.edu/afs/cs/academic/class/15859-f01/www/notes/comb.pdf\" rel=\"nofollow noopener\">This</a> paper is beautiful when dealing with Game theory.</p>",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 16392,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "vijju123",
+  "date_added": "20-12-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3",
+    "amr16",
+    "icpc2016"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "https://discuss.codechef.com/problems/AMR16J",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610602
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=AMR16J",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

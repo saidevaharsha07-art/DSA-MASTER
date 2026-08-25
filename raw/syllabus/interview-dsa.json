@@ -1,0 +1,2023 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "interview-dsa",
+  "name": "Data Structures Interview Questions",
+  "title": "Data Structures Interview Questions",
+  "level": "Beginner",
+  "description": "Prepare yourselves for technical interview with a carefully curated set of problems that appeared in companies like Google, Facebook, Amazon, Microsoft, Adobe, Flipkart, OLX Group, Walmart Labs, eBay, Ola, LinkedIn & more",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:48",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/interview-dsa/DSAPREP_01/problems/MONSTER1",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Basic programming - 1",
+      "description": "Fundamental concepts and skills in writing code. Includes variables, data types, control structures, and functions.",
+      "submodules": [
+        {
+          "name": "Basic programming-1",
+          "submodule_id": 2195,
+          "contest_code": "DSAPREP_01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_01/problems/MONSTER1",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "20271",
+              "code": "MONSTER1",
+              "name": "Defeat The Monster 1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "KNGATK",
+              "name": "Attack on Kingdom",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "EXPRESSION_3",
+              "name": "Three Number Expression",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "LUCNUM",
+              "name": "Lucky Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "PIXDAM",
+              "name": "Pixel Damage",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "EMPR",
+              "name": "Emotional Proximity",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "COLOR8TEST",
+              "name": "Color the Cube",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "RAIN8TEST",
+              "name": "Taxi Cost",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "NUMREC",
+              "name": "Number of Rectangles",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "PMD7",
+              "name": " Power M divisibility by 7",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "FNDINT",
+              "name": "Find Integer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20271",
+              "code": "ASTHIT",
+              "name": "Asteroid Hit",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Basic programming - 2",
+      "description": "More advanced problems on basic programming concepts.",
+      "submodules": [
+        {
+          "name": "Basic programming-2",
+          "submodule_id": 2196,
+          "contest_code": "DSAPREP_02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_02/problems/ASMBLY",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "20272",
+              "code": "ASMBLY",
+              "name": "School Assembly",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "CNTBIN",
+              "name": "0xxx1",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "DIVNDIV",
+              "name": "Divisible and not divisible",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "SHARE",
+              "name": "RestroPay",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "GUESNUMK",
+              "name": "Kth Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "MONSTER2",
+              "name": "Defeat The Monster 2",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "SUB_007",
+              "name": "Subsequences_007",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "RECPERM",
+              "name": "Recover The Permutation",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "MNINT",
+              "name": "Minimum Integer",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "MSB",
+              "name": "Make smaller bigger",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "MAXPEAK",
+              "name": "Maximum Peak",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20272",
+              "code": "STWK8TEST",
+              "name": "Strongest still weakest",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Arrays",
+      "description": "Arrays are data structures that store elements of the same type in contiguous memory locations. They allow for efficient access and manipulation of multiple items.",
+      "submodules": [
+        {
+          "name": "Arrays",
+          "submodule_id": 2197,
+          "contest_code": "DSAPREP_03",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_03/problems/PREP01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "20273",
+              "code": "JUMPEND",
+              "name": "Jump To The End",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "PREP01",
+              "name": "Array - Pascals or Khayyams triangle",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "MXPART",
+              "name": "Maximum Partition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "PREP06",
+              "name": "Array - Wave Array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "PTRLP",
+              "name": "Petrol ki Problem",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "MINHOUS",
+              "name": "Tunnel Switch",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "MAX2POW",
+              "name": "Maximum power of two",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "PREP05",
+              "name": "Array - Addition",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "LTP",
+              "name": "Locate The Product",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20273",
+              "code": "PREP02",
+              "name": "Array - Matrix operations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Sorting",
+      "description": "Sorting refers to algorithms for arranging elements in a specific order (e.g., ascending or descending). It includes methods like bubble sort, quicksort, and merge sort.",
+      "submodules": [
+        {
+          "name": "Sorting",
+          "submodule_id": 2198,
+          "contest_code": "DSAPREP_04",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_04/problems/LSTKELE",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "20276",
+              "code": "LSTKELE",
+              "name": "Least pair sum k elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "ARRAYREOR",
+              "name": "Array Reordering",
+              "difficulty_rating": "1250",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "SEATING",
+              "name": "Seating Arrangement",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "TOYDESIRE",
+              "name": "Alice and Bob",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "ALLMAX",
+              "name": "Sum of Maximums",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "SRT",
+              "name": "Sort the array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "REORDERING",
+              "name": "Reordering Strings",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "OPTIMRDR",
+              "name": "Optimal Soldier Reorder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "SMLSUM",
+              "name": "Sum of Smaller Elements",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "GOODQU",
+              "name": "Good Queue",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "KLISTS",
+              "name": "Lists in ranges",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20276",
+              "code": "ABSDIF",
+              "name": "Minimize the Absolute Difference",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Strings",
+      "description": "Strings are sequences of characters used to represent text. They involve operations like concatenation, substring search, and pattern matching.",
+      "submodules": [
+        {
+          "name": "Strings",
+          "submodule_id": 2199,
+          "contest_code": "DSAPREP_05",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_05/problems/PATSEARCH",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "20274",
+              "code": "PATSEARCH",
+              "name": "Find the Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "ADDONE",
+              "name": "Add One",
+              "difficulty_rating": "940",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "PSWDCHEF",
+              "name": "Password Chef",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "PAL_STRING",
+              "name": "Dispute Resolving",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "BALSTR",
+              "name": "Balance the String ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "RESTR",
+              "name": "Rearrange String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "TYPE",
+              "name": "Typing Letter",
+              "difficulty_rating": "1250",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "MTM",
+              "name": "Merge The Milk",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "MKVLD",
+              "name": "Make Valid",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "RSA",
+              "name": "Really Secret Algorithm",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20274",
+              "code": "JNP",
+              "name": "John Nash Pattern",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Linkedlist",
+      "description": "Linkedlist is a data structure consisting of nodes, each containing data and a reference to the next node. It allows for efficient insertion and deletion of elements.",
+      "submodules": [
+        {
+          "name": "Linkedlist",
+          "submodule_id": 2200,
+          "contest_code": "DSAPREP_08",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 21,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_08/problems/RTLL",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 21,
+          "problems_with_status": [
+            {
+              "contest_id": "20278",
+              "code": "RTLL",
+              "name": "Reverse a Linked List",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "LLMID",
+              "name": "Find Middle Element of Linked List",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "REMDUP",
+              "name": "Remove Duplicates",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "ROTLIST",
+              "name": "Rotate the List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "NODEAD",
+              "name": "Insert Remove Nodes",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "SEGEO",
+              "name": "Separate Even and Odd values in a linked list",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "INSDELDLL",
+              "name": "Insert and Delete in Doubly Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "LINKLP",
+              "name": "Count loop length in Linked List",
+              "difficulty_rating": "1300",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "REVSEG",
+              "name": "Reverse the Segment",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "DR",
+              "name": "Duplicate Removal",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "KGRPREV",
+              "name": "Reverse m size groups",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "CRITLIST",
+              "name": "Critical points in a Linked List",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "SRTLL",
+              "name": "Sort a linked list",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "STRANGELIST",
+              "name": "Flatten a Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "NSELL",
+              "name": "Find Next Smaller value in Linked List",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "TRAINLOOP",
+              "name": "Train Loop ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "PREP55",
+              "name": "Remove Duplicates from Sorted List",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "PREP58",
+              "name": "Cycle in a linked list",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "PREP56",
+              "name": "Linked List - Intersection of Linked Lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "PREP57",
+              "name": "Linked List - Add Two Numbers As Lists",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20278",
+              "code": "PREP54",
+              "name": "Linked List - Swap nodes in pairs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 21
+    },
+    {
+      "assessment": null,
+      "name": "Stacks",
+      "description": "Stacks are Last-In-First-Out (LIFO) data structures. They support push and pop operations, useful for tracking function calls and undo operations.",
+      "submodules": [
+        {
+          "name": "Stacks",
+          "submodule_id": 2201,
+          "contest_code": "DSAPREP_10",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 12,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_10/problems/STKSORT",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 12,
+          "problems_with_status": [
+            {
+              "contest_id": "20279",
+              "code": "STKSORT",
+              "name": "Stack Sort",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "BRFISE",
+              "name": "BFS Ordering",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "MXWATR",
+              "name": "Maximum water in a section",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "MAXREC",
+              "name": "Maximum Area",
+              "difficulty_rating": "1800",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "BRACQUER",
+              "name": "Bracket Sequence Queries",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "SUBASUM",
+              "name": "Sub-array Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "MXMIN",
+              "name": "Maximum of Minimum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "PREP21",
+              "name": "Evaluate Expression",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "PREP22",
+              "name": "Largest Rectangle in Histogram",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "PREP23",
+              "name": "Sliding Window Maximum",
+              "difficulty_rating": "1600",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "PREP59",
+              "name": "Valid Parenthesis",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20279",
+              "code": "PREP60",
+              "name": "Previous smaller element",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 12
+    },
+    {
+      "assessment": null,
+      "name": "Queues",
+      "description": "Queues are First-In-First-Out (FIFO) data structures. They support enqueue and dequeue operations, useful for managing tasks and buffering data.",
+      "submodules": [
+        {
+          "name": "Queues",
+          "submodule_id": 2202,
+          "contest_code": "DSAPREP_09",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 8,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_09/problems/NEC",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 8,
+          "problems_with_status": [
+            {
+              "contest_id": "20280",
+              "code": "NEC",
+              "name": "Necklace",
+              "difficulty_rating": "800",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "EVNMX",
+              "name": "Even-Max",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "STONE_PILE",
+              "name": "Stone Pile",
+              "difficulty_rating": "1200",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "ARRBUF",
+              "name": "Arrange via Buffer",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "CHNGCOL",
+              "name": "Minimum Color Changes ",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "INC_HEIGHTS",
+              "name": "Parallel World",
+              "difficulty_rating": "1700",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "MINDIG",
+              "name": "Minimum Divisible Digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20280",
+              "code": "AIRTRAV",
+              "name": "Chef Airlines",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 8
+    },
+    {
+      "assessment": null,
+      "name": "Binary Search",
+      "description": "Binary Search is an efficient algorithm for finding an element in a sorted array. It repeatedly divides the search space in half to locate the target.",
+      "submodules": [
+        {
+          "name": "Binary Search",
+          "submodule_id": 2203,
+          "contest_code": "DSAPREP_06",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 11,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_06/problems/DIVNUMB",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 11,
+          "problems_with_status": [
+            {
+              "contest_id": "20275",
+              "code": "DIVNUMB",
+              "name": "Good Numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "ARRINT",
+              "name": "Array Intersection",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "PRTSCH",
+              "name": "Partner Search",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "IIT",
+              "name": "Is It There",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "SMININD",
+              "name": "Sum with min index",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "INCDECS",
+              "name": "Increasing-Decreasing Sequence",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "SDIGIT",
+              "name": "Selected Digits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "PREP11",
+              "name": "Binary Search - Books in Library",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "PREP08",
+              "name": "Binary Search - Paint Walls",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "PREP38",
+              "name": "Binary Search - Range Search",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20275",
+              "code": "PREP39",
+              "name": "Binary Search - Power Function",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 11
+    },
+    {
+      "assessment": null,
+      "name": "Graphs",
+      "description": "Graphs are data structures representing relationships between objects. They consist of vertices (nodes) and edges, used to model networks and connections.",
+      "submodules": [
+        {
+          "name": "Graphs",
+          "submodule_id": 2204,
+          "contest_code": "DSAPREP_12",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_12/problems/PREP35",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24988",
+              "code": "PREP35",
+              "name": "Graphs - Capture Regions",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24988",
+              "code": "PREP36",
+              "name": "Graphs - Word Ladder",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24988",
+              "code": "PREP37",
+              "name": "Graphs - Red Blue Lakes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24988",
+              "code": "PREP50",
+              "name": "Graphs - Clone a graph",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24988",
+              "code": "PREP49",
+              "name": "Graphs - Valid Path",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Trees",
+      "description": "Trees are hierarchical data structures with a root node and child nodes. They include variants like binary trees, used for efficient searching and organizing data.\n",
+      "submodules": [
+        {
+          "name": "Trees",
+          "submodule_id": 2205,
+          "contest_code": "DSAPREP_07",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_07/problems/SUBTCH",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "20277",
+              "code": "SUBTCH",
+              "name": "Find the Subtree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "RECTREE",
+              "name": "Reconstruct the Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "CNTND",
+              "name": "Counting Nodes",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "REGTRE",
+              "name": "Regenerate Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "LCAN3",
+              "name": "Triplet LCA",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "PREP64",
+              "name": "Trees - Inorder Traversal",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "PREP29",
+              "name": "Trees - Branch Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "PREP65",
+              "name": "Trees - Path Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "PREP67",
+              "name": "Trees - Lowest Common Ancestor",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20277",
+              "code": "PREP66",
+              "name": "Trees - Height of a Tree",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Hashing",
+      "description": "Hashing is a technique for mapping data to a fixed-size array using a hash function. It enables fast data retrieval and is used in implementing hash tables.",
+      "submodules": [
+        {
+          "name": "Hashing",
+          "submodule_id": 2206,
+          "contest_code": "DSAPREP_13",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_13/problems/PREP27",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24989",
+              "code": "PREP27",
+              "name": "Hashing - Four Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24989",
+              "code": "PREP28",
+              "name": "Hashing - Points on Line",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24989",
+              "code": "PREP53",
+              "name": "Hashing - Copy List",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24989",
+              "code": "PREP51",
+              "name": "Hashing - Minimum Window Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24989",
+              "code": "PREP52",
+              "name": "Hashing - Valid Sudoku",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Two pointers",
+      "description": "Two pointers is a technique using two references to traverse data structures. It is often used to solve problems with arrays or linked lists efficiently.",
+      "submodules": [
+        {
+          "name": "Two pointers",
+          "submodule_id": 2207,
+          "contest_code": "DSAPREP_11",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 9,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_11/problems/DTS",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 9,
+          "problems_with_status": [
+            {
+              "contest_id": "20281",
+              "code": "DTS",
+              "name": "Divide The String",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "SPSBTR",
+              "name": "Special Substring",
+              "difficulty_rating": "1400",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "MINSIM",
+              "name": "Minimum Similar Substring",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "LGDSTR",
+              "name": "Longest Good Substring",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "PREP17",
+              "name": "Maximum Common Elements",
+              "difficulty_rating": "1100",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "PREP19",
+              "name": "Trapping Rainwater",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "PREP69",
+              "name": "Remove Duplicates",
+              "difficulty_rating": "900",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "PREP68",
+              "name": "Difference Pairs",
+              "difficulty_rating": "1000",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "20281",
+              "code": "PREP18",
+              "name": "Find Array Min",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 9
+    },
+    {
+      "assessment": null,
+      "name": "Dynamic Programming",
+      "description": "Dynamic Programming is a method for solving complex problems by breaking them into simpler subproblems. It uses memoization or tabulation to optimize solutions.\n",
+      "submodules": [
+        {
+          "name": "DP",
+          "submodule_id": 2208,
+          "contest_code": "DSAPREP_14",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_14/problems/PREP32",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24990",
+              "code": "PREP32",
+              "name": "Dynamic Programming - String Distance",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24990",
+              "code": "PREP31",
+              "name": "Dynamic Programming - Minimum Jumps",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24990",
+              "code": "PREP34",
+              "name": "Dynamic Programming - Rod Cutting",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24990",
+              "code": "PREP33",
+              "name": "Dynamic Programming - Longest Valid Parentheses",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24990",
+              "code": "PREP48",
+              "name": "Maximum Product Subarray",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Bit Manipulation",
+      "description": "Bit Manipulation involves operations performed on individual bits of binary numbers. It is used for optimizing algorithms and low-level system programming.",
+      "submodules": [
+        {
+          "name": "Bit Manipulation",
+          "submodule_id": 2209,
+          "contest_code": "DSAPREP_15",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_15/problems/PREP44",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24991",
+              "code": "PREP44",
+              "name": "Bit Manipulation - Count set bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24991",
+              "code": "PREP45",
+              "name": "Bit Manipulation - Single Number",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24991",
+              "code": "PREP16",
+              "name": "Bit Manipulation - Sum of Bits",
+              "difficulty_rating": "1500",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24991",
+              "code": "PREP46",
+              "name": "Bit Manipulation - Reverse Bits",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24991",
+              "code": "PREP47",
+              "name": "Bit Manipulation - Divide Integers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Backtracking",
+      "description": "Backtracking is an algorithm technique that builds solutions incrementally. It abandons partial solutions that cannot lead to a valid final solution.",
+      "submodules": [
+        {
+          "name": "Backtracking",
+          "submodule_id": 2210,
+          "contest_code": "DSAPREP_16",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/interview-dsa/DSAPREP_16/problems/PREP24",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24992",
+              "code": "PREP24",
+              "name": "Backtracking - Find Unique Permutations",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24992",
+              "code": "PREP42",
+              "name": "Backtracking - Subsets",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24992",
+              "code": "PREP41",
+              "name": "Backtracking - Find Valid Parenthesis",
+              "difficulty_rating": "-1",
+              "difficulty_type": "hard",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24992",
+              "code": "PREP40",
+              "name": "Backtracking - Unique Combinations Sum",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24992",
+              "code": "PREP43",
+              "name": "Backtracking - Palindrome Partitioning",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "basic",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 153,
+  "total_non_pro_problems": 24,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Interview Questions",
+  "reviews": [
+    {
+      "user_id": "4683014",
+      "fullname": "Shivani Joshi",
+      "review": "The range of problems was excellent, catering to different skill levels and encouraging both learning and problem-solving.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "gleam_team_81",
+      "country_code": "in"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4721897",
+      "fullname": "Ed Site",
+      "review": "The step-by-step process is great for learning, and the explanations help me understand the lessons better. Additionally, the email notifications are excellent reminders to keep me on track.",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "acute_skunks",
+      "country_code": "ph"
+    },
+    {
+      "user_id": "4077306",
+      "fullname": "Tejas Kolhe",
+      "review": "A nice initiative to give learners the confidence that they can do anything and learn anything they want. Really nice work, Team CodeChef.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "tejas098",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 18033,
+  "path_review": {
+    "rating": 4.6,
+    "users": 271
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-structures-and-algorithms-old",
+  "roadmap_title": "Learn Data Structures and Algorithms - Roadmap"
+}

@@ -6,8 +6,8 @@ import { Brain, Activity, ShieldCheck, Zap, Flame, Play, AlertCircle } from 'luc
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
 
-// Import Modular Revision Engine & Components
-import { revisionEngine } from '@/src/engines/revision';
+// Import Canonical Revision Adapter & Components
+import { RevisionAdapterService } from '@/src/features/revision/services/revision-adapter.service';
 import { RevisionStatCards } from '@/components/revision/RevisionStatCards';
 import { RevisionQueueTable } from '@/components/revision/RevisionQueueTable';
 import { KingdomMasteryPanel } from '@/components/revision/KingdomMasteryPanel';
@@ -17,43 +17,34 @@ import { RevisionTimeline } from '@/components/revision/RevisionTimeline';
 export default function MemorySanctuaryPage() {
   const { settings } = useSettings();
   const { toast } = useToast();
-  const { masteryThreshold } = settings.learningEngine;
 
   // Reactive state for review submissions & filters
   const [refreshCount, setRefreshCount] = useState<number>(0);
   const [selectedDateFilter, setSelectedDateFilter] = useState<string | null>(null);
 
-  // Fetch 100% Dynamic Engine Data
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const dueTodayProblems = useMemo(() => revisionEngine.getDueTodayProblems(), [refreshCount]);
-  const upcomingQueue = useMemo(() => {
-    const queue = revisionEngine.getUpcomingQueue();
-    if (selectedDateFilter) {
-      return queue.filter((p) => p.revisionData.nextReview && p.revisionData.nextReview.split('T')[0] === selectedDateFilter);
-    }
-    return queue;
+  // Fetch 100% Dynamic Engine Data via RevisionAdapterService
+  const revisionSummary = useMemo(() => {
+    return RevisionAdapterService.getRevisionSummary('default_user');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [refreshCount, selectedDateFilter]);
+  }, [refreshCount]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const kingdoms = useMemo(() => revisionEngine.getKingdomMasteries(), [refreshCount]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const streakStats = useMemo(() => revisionEngine.getStreakStats(), [refreshCount]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const xpStats = useMemo(() => revisionEngine.getXpStats(), [refreshCount]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const timelineStages = useMemo(() => revisionEngine.getTimelineStages(), [refreshCount]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const rewards = useMemo(() => revisionEngine.getUnlockedRewards(), [refreshCount]);
+  const { dueTodayProblems, upcomingQueue: rawQueue, kingdoms, streakStats, xpStats, timelineStages, unlockedRewards } = revisionSummary;
+
+  const upcomingQueue = useMemo(() => {
+    if (selectedDateFilter) {
+      return rawQueue.filter((p) => p.revisionData.nextReview && p.revisionData.nextReview.split('T')[0] === selectedDateFilter);
+    }
+    return rawQueue;
+  }, [rawQueue, selectedDateFilter]);
 
   const nextReward = useMemo(() => {
-    return rewards.find((r) => !r.unlocked) || rewards[rewards.length - 1];
-  }, [rewards]);
+    return unlockedRewards.find((r) => !r.unlocked) || unlockedRewards[unlockedRewards.length - 1];
+  }, [unlockedRewards]);
 
   // Handle Review Completion
   const handleReviewCompleted = (problemId: string, rating: 'easy' | 'medium' | 'hard') => {
-    const result = revisionEngine.recordReview(problemId, rating);
-    toast(`Review Recorded! +${result.xpEarned} XP awarded! Next review in ${result.updated.interval} days.`, 'success');
+    const result = RevisionAdapterService.recordReview('default_user', problemId, rating);
+    toast(`Review Recorded! +${result.xpEarned} XP awarded!`, 'success');
     setRefreshCount((prev) => prev + 1);
   };
 

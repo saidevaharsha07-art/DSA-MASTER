@@ -1,0 +1,266 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "arrays-strings-sorting",
+  "name": "Arrays, Strings & Sorting",
+  "title": "Arrays, Strings & Sorting",
+  "level": "Intermediate",
+  "description": "Practice programming problems using Intemediate level DSA concepts of Arrays, Strings and Sorting",
+  "time_to_complete": null,
+  "difficulty_range": "1000 - 1600",
+  "current_date": "2026-08-02 00:25:43",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/arrays-strings-sorting/INTARR01/problems/MISSP",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "Arrays, Strings, and Sorting",
+      "description": "Practice intermediate level problems on Arrays, Sorting and Strings",
+      "submodules": [
+        {
+          "name": "Practice",
+          "submodule_id": 1240,
+          "contest_code": "INTARR01",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/arrays-strings-sorting/INTARR01/problems/MISSP",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24269",
+              "code": "MISSP",
+              "name": "Chef and Dolls",
+              "difficulty_rating": "1012",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24269",
+              "code": "CFRTEST",
+              "name": "Devu and friendship testing",
+              "difficulty_rating": "1061",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24269",
+              "code": "EQUALELE",
+              "name": "Equal Elements",
+              "difficulty_rating": "1123",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24269",
+              "code": "DOMINANT2",
+              "name": "Dominant Element",
+              "difficulty_rating": "1171",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24269",
+              "code": "DISTINCTCOL",
+              "name": "Distinct Colors",
+              "difficulty_rating": "760",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        },
+        {
+          "name": "Pro Practice",
+          "submodule_id": 1241,
+          "contest_code": "INTARR02",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Practice",
+          "redirect_url": "/practice/course/arrays-strings-sorting/INTARR02/problems/LAPIN",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "24270",
+              "code": "LAPIN",
+              "name": "Lapindromes",
+              "difficulty_rating": "1159",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24270",
+              "code": "LELEMON",
+              "name": "Little Elephant and Lemonade",
+              "difficulty_rating": "1472",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24270",
+              "code": "EQDIS",
+              "name": "Equal Distinct",
+              "difficulty_rating": "1288",
+              "difficulty_type": "easy",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24270",
+              "code": "MAXEXP",
+              "name": "Maximum Expression",
+              "difficulty_rating": "1494",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "24270",
+              "code": "LISTLIST",
+              "name": "List of Lists",
+              "difficulty_rating": "1567",
+              "difficulty_type": "medium",
+              "displayType": "review",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 10,
+  "total_non_pro_problems": 5,
+  "up_next": [
+    {
+      "name": "Number theory",
+      "title": "Number theory",
+      "slug": "number-theory",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 10424,
+      "review": {
+        "rating": 4.5,
+        "users": 154
+      },
+      "course_count": 2,
+      "description": "Practice problems on number theory concepts like Euclid\u2019s algorithm for GCD, LCM, prime factorization etc\n"
+    },
+    {
+      "name": "Greedy Algorithms",
+      "title": "Greedy Algorithms",
+      "slug": "greedy-algorithms",
+      "level": "Intermediate",
+      "is_practice_path": true,
+      "learners_count": 13498,
+      "review": {
+        "rating": 4.6,
+        "users": 161
+      },
+      "course_count": 2,
+      "description": "Understanding Greedy algorithms helps in solving many complex problems where choosing the best option at each step provides the best solution.\n"
+    }
+  ],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": {
+    "id": "964",
+    "name": "Practice Sorting",
+    "title": "Practice Sorting",
+    "slug": "sorting-new",
+    "description": "Practice problems which require you to use sorting algorithms to solve the task at hand. These questions help you understand the different patters of sorting problems and how to identify them.",
+    "highlight_color": "#4d71cc",
+    "level": "Beginner",
+    "new_version_id": null,
+    "is_practice_path": "1",
+    "prerequisite_reviews": {
+      "rating": 4.5,
+      "users": 483
+    },
+    "learners_count": 32767,
+    "lessons_count": 2
+  },
+  "prerequisite_type": "practice",
+  "tag_name": "Algorithms",
+  "reviews": [
+    {
+      "user_id": "4792964",
+      "fullname": "ADITYA SHINDE",
+      "review": "It is an amazing lesson that helped me enhance my knowledge of arrays, maps, sets, strings, and sorting algorithms. Thank you so much for this amazing platform.",
+      "review_order": "1",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "merry_tear_96",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4662299",
+      "fullname": "Shaifa Urooj",
+      "review": "This website is extremely useful. The courses are easy to learn and very comprehensible. The language used on this website is simple, making it easy to understand.",
+      "review_order": "2",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "worm_lodge_02",
+      "country_code": "in"
+    },
+    {
+      "user_id": "4686213",
+      "fullname": "Mohsen Chegini",
+      "review": "The teaching method on this website is the best I've seen so far. Thank you so much!",
+      "review_order": "3",
+      "designation": "Student",
+      "star_rating": "5",
+      "username": "rag_gaze_23",
+      "country_code": "de"
+    },
+    {
+      "user_id": "3177625",
+      "fullname": "akhil1636",
+      "review": "For beginners starting their journey into programming without any prior knowledge, this will definitely be helpful. With the aid of AI, you can get clearer explanations. Those who already have some knowledge can also refer to these resources.",
+      "review_order": "4",
+      "designation": "Student",
+      "star_rating": "4",
+      "username": "akhil1636",
+      "country_code": "in"
+    }
+  ],
+  "learners_count": 31487,
+  "path_review": {
+    "rating": 4.4,
+    "users": 551
+  },
+  "faqs": [],
+  "roadmap_link": null,
+  "roadmap_title": null
+}

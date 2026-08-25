@@ -1,0 +1,124 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "BLKJK",
+  "contest_category": "6",
+  "problem_name": "Blackjack",
+  "intended_contest_code": "JAN21",
+  "body": "\r\nChef is playing a card game called Blackjack. He starts with a deck of $N$ cards (numbered $1$ through $N$), where for each valid $i$, the $i$-th card has an integer $A_i$ written on it. Then he starts dealing the cards one by one in the order from card $1$ to card $N$. Chef wins if at some moment in time, the sum of all the cards dealt so far is between $X$ and $Y$ inclusive; if this never happens, Chef loses.\r\n\r\nWe want Chef to win the game, so without him noticing, we will swap some pairs of cards (possibly none) before the game starts. Find the smallest number of swaps we need so that Chef would win the game, or determine that it is impossible to make Chef win.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains three space-separated integers $N$, $X$ and $Y$.\r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the smallest required number of swaps or $-1$ if Chef cannot win.\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 100$\r\n- $1 \\leq N,X,Y \\leq 10^3$\r\n- $X \\leq Y$\r\n- $1 \\leq A_i \\leq 10^3$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $10^4$\r\n\r\n### Subtasks\r\n**Subtask #1 (22 points):** Chef can win if we make up to $2$ swaps\r\n\r\n**Subtask #2 (34 points):**\r\n- $1 \\leq N,X,Y \\leq 400$\r\n- $1 \\leq A_i \\leq 400$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $4,000$\r\n\r\n**Subtask #3 (44 points):** original constraints\r\n\r\n### Example Input\r\n```\r\n3\r\n3 4 5\r\n1 2 3\r\n3 3 4\r\n1 2 3\r\n2 20 30\r\n40 10\r\n```\r\n\r\n### Example Output\r\n```\r\n1\r\n0\r\n-1\r\n```\r\n\r\n### Explanation\r\n**Example case 1:** We can swap the last card with one of the first two cards.\r\n\r\n**Example case 2:** No swaps are necessary, Chef wins after dealing the first two cards.\r\n\r\n**Example case 3:** The order of the cards in the deck does not matter, Chef cannot win.\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "\r\nChef is playing a card game called Blackjack. He starts with a deck of $N$ cards (numbered $1$ through $N$), where for each valid $i$, the $i$-th card has an integer $A_i$ written on it. Then he starts dealing the cards one by one in the order from card $1$ to card $N$. Chef wins if at some moment in time, the sum of all the cards dealt so far is between $X$ and $Y$ inclusive; if this never happens, Chef loses.\r\n\r\nWe want Chef to win the game, so without him noticing, we will swap some pairs of cards (possibly none) before the game starts. Find the smallest number of swaps we need so that Chef would win the game, or determine that it is impossible to make Chef win.\r\n\r\n### Input\r\n- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.\r\n- The first line of each test case contains three space-separated integers $N$, $X$ and $Y$.\r\n- The second line contains $N$ space-separated integers $A_1, A_2, \\ldots, A_N$.\r\n\r\n### Output\r\nFor each test case, print a single line containing one integer \u2015 the smallest required number of swaps or $-1$ if Chef cannot win.\r\n\r\n### Constraints \r\n- $1 \\leq T \\leq 100$\r\n- $1 \\leq N,X,Y \\leq 10^3$\r\n- $X \\leq Y$\r\n- $1 \\leq A_i \\leq 10^3$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $10^4$\r\n\r\n### Subtasks\r\n**Subtask #1 (22 points):** Chef can win if we make up to $2$ swaps\r\n\r\n**Subtask #2 (34 points):**\r\n- $1 \\leq N,X,Y \\leq 400$\r\n- $1 \\leq A_i \\leq 400$ for each valid $i$\r\n- the sum of $N$ over all test cases does not exceed $4,000$\r\n\r\n**Subtask #3 (44 points):** original constraints",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "3\r\n3 4 5\r\n1 2 3\r\n3 3 4\r\n1 2 3\r\n2 20 30\r\n40 10",
+        "output": "1\r\n0\r\n-1",
+        "explanation": "**Example case 1:** We can swap the last card with one of the first two cards.\r\n\r\n**Example case 2:** No swaps are necessary, Chef wins after dealing the first two cards.\r\n\r\n**Example case 3:** The order of the cards in the deck does not matter, Chef cannot win.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 83432,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "triplem5ds"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/triplem5ds'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #D0011B;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>7&#9733;</span><span class='m-username--link'>triplem5ds</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": "triplem5ds",
+  "date_added": "7-12-2020",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Bit Manipulation",
+    "0-1 Knapsack"
+  ],
+  "computed_tags": [
+    "Mathematics",
+    "Algorithms",
+    "Dynamic Programming",
+    "Knapsack"
+  ],
+  "difficulty_rating": "2903",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610642
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=BLKJK",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 6,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

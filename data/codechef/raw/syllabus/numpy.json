@@ -1,0 +1,756 @@
+{
+  "status": "success",
+  "message": "Syllabus fetched successfully",
+  "slug": "numpy",
+  "name": "Practice NumPy - Coding Problems and Challenges",
+  "title": "Practice NumPy - Coding Problems and Challenges",
+  "level": "Intermediate",
+  "description": "Practice the essential Python library for scientific computing. Master array manipulation, statistical operations, and start your journey to efficient, data-driven insights today!",
+  "time_to_complete": null,
+  "difficulty_range": null,
+  "current_date": "2026-08-02 00:25:51",
+  "lastUpdatedOn": "2023-01-01 00:00:00",
+  "showProblemsList": false,
+  "pathStartTime": null,
+  "hasUserReceivedCertificate": false,
+  "redirect_url": "/practice/course/numpy/KXQVQK/problems/FKLJMW01",
+  "modules": [
+    {
+      "assessment": null,
+      "name": "NumPy Array creation",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "NumPy Array creation",
+          "submodule_id": 9724,
+          "contest_code": "KXQVQK",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/KXQVQK/problems/FKLJMW01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34166",
+              "code": "FKLJMW01",
+              "name": "Create NumPy array from exam scores\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34166",
+              "code": "FKLJMW02",
+              "name": "Random Dice Roll Simulator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34166",
+              "code": "FKLJMW03",
+              "name": "Generate a sequence of odd numbers\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Numpy datatypes",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Numpy datatypes",
+          "submodule_id": 9725,
+          "contest_code": "EGLLKF",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 2,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/EGLLKF/problems/QCROZK01",
+          "is_restricted_to_pro": false,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 2,
+          "problems_with_status": [
+            {
+              "contest_id": "34167",
+              "code": "QCROZK01",
+              "name": "Even Number Boolean Mapper\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34167",
+              "code": "QCROZK02",
+              "name": "Convert numeric scores to letter grades\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 2
+    },
+    {
+      "assessment": null,
+      "name": "Numpy array indexing and slicing",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Numpy array indexing and slicing",
+          "submodule_id": 9726,
+          "contest_code": "CYSHDC",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/CYSHDC/problems/GFOLDX01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "34168",
+              "code": "GFOLDX01",
+              "name": "Extract every third element from an array\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34168",
+              "code": "GFOLDX02",
+              "name": "Reverse a NumPy array using slicing\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34168",
+              "code": "GFOLDX03",
+              "name": "Mask negative numbers in a NumPy array\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34168",
+              "code": "GFOLDX04",
+              "name": "Filter temperatures above 50 and even numbers",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34168",
+              "code": "GFOLDX05",
+              "name": "Create a playlist from song indices\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "N-dimensional NumPy arrays",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "N-dimensional NumPy arrays",
+          "submodule_id": 9727,
+          "contest_code": "TFQXVG",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 5,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/TFQXVG/problems/JGCFSS01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 5,
+          "problems_with_status": [
+            {
+              "contest_id": "34169",
+              "code": "JGCFSS01",
+              "name": "Generate 3D array of ones with custom dimensions\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34169",
+              "code": "JGCFSS02",
+              "name": "Reshape array to user specs",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34169",
+              "code": "JGCFSS03",
+              "name": "Chessboard Square Extractor\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34169",
+              "code": "JGCFSS04",
+              "name": "Extract a cube from within a 3D array\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34169",
+              "code": "JGCFSS05",
+              "name": "Extract specific rows from all layers of 3D array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 5
+    },
+    {
+      "assessment": null,
+      "name": "Basic arithmetic operations",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Basic arithmetic operations",
+          "submodule_id": 9728,
+          "contest_code": "FWQDDB",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/FWQDDB/problems/RWQVQU01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "34170",
+              "code": "RWQVQU01",
+              "name": "Combine Scores from Two Exams\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34170",
+              "code": "RWQVQU02",
+              "name": "Recipe Ingredient Adjuster\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34170",
+              "code": "RWQVQU03",
+              "name": "Calculate Factorial Using Numpy Array Product\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34170",
+              "code": "RWQVQU04",
+              "name": "Calculate Cumulative Exam Scores\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "Comparison / Logical functions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Comparison / Logical functions",
+          "submodule_id": 9729,
+          "contest_code": "LBILGG",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/LBILGG/problems/HZBXOB01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "34171",
+              "code": "HZBXOB01",
+              "name": "Compare Athlete Performance with Qualifying Times\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34171",
+              "code": "HZBXOB02",
+              "name": "Combine student scores from two tests\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34171",
+              "code": "HZBXOB03",
+              "name": "Compare student grades across subjects\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34171",
+              "code": "HZBXOB04",
+              "name": "Student Grade Filtering System\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "Statistical functions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Statistical functions",
+          "submodule_id": 9730,
+          "contest_code": "VLUUOH",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 4,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/VLUUOH/problems/SBZUNI01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 4,
+          "problems_with_status": [
+            {
+              "contest_id": "34172",
+              "code": "SBZUNI01",
+              "name": "Analyze Temperature Data with Mean and Median\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34172",
+              "code": "SBZUNI02",
+              "name": "Analyze spread of test scores across subjects\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34172",
+              "code": "SBZUNI03",
+              "name": "Calculate percentiles of student heights\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34172",
+              "code": "SBZUNI04",
+              "name": "Calculate class performance metrics\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 4
+    },
+    {
+      "assessment": null,
+      "name": "String functions",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "String functions",
+          "submodule_id": 9731,
+          "contest_code": "TAIWZC",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 10,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/TAIWZC/problems/RLQUIY01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 10,
+          "problems_with_status": [
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY01",
+              "name": "Merge Student Scores from Two Classes\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY02",
+              "name": "Create a repeating DNA sequence\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY03",
+              "name": "Convert country names to uppercase\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY04",
+              "name": "Title Case Converter for Movie Titles\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY05",
+              "name": "Parse CSV - Split CSV data into a NumPy array",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY06",
+              "name": "Join Student Names for Attendance\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY07",
+              "name": "Find occurrences of a substring in a NumPy array\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY08",
+              "name": "Replace vowels in a NumPy array of strings\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY09",
+              "name": "Remove spaces from scientist names\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34173",
+              "code": "RLQUIY10",
+              "name": "Character Type Counter\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 10
+    },
+    {
+      "assessment": null,
+      "name": "Array broadcasting",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Array broadcasting",
+          "submodule_id": 9732,
+          "contest_code": "VTJWXQ",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 3,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/VTJWXQ/problems/ZGOROH01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 3,
+          "problems_with_status": [
+            {
+              "contest_id": "34174",
+              "code": "ZGOROH01",
+              "name": "Temperature Conversion Calculator\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34174",
+              "code": "ZGOROH02",
+              "name": "Temperature Conversion Grid\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34174",
+              "code": "ZGOROH03",
+              "name": "Array Broadcasting for Temperature Conversion",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 3
+    },
+    {
+      "assessment": null,
+      "name": "Matrix operations",
+      "description": " ",
+      "submodules": [
+        {
+          "name": "Matrix operations",
+          "submodule_id": 9733,
+          "contest_code": "OXAQDA",
+          "start_date": "2025-01-01 00:00:00",
+          "total_problems": 6,
+          "solved_count": 0,
+          "type": "Lesson",
+          "redirect_url": "/practice/course/numpy/OXAQDA/problems/SFRSHO01",
+          "is_restricted_to_pro": true,
+          "user_has_temporary_access": false,
+          "temporary_access_end_time": null,
+          "submission_deadline": false,
+          "all_type_problem_count": 6,
+          "problems_with_status": [
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO01",
+              "name": "Compare weather data between two cities\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO02",
+              "name": "Calculate Product Sales Across Stores\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO03",
+              "name": "Symmetric Matrix Checker\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO04",
+              "name": "Decode a secret message using matrix inversion\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO05",
+              "name": "Matrix Stability Analyzer\n",
+              "difficulty_rating": "-1",
+              "difficulty_type": "medium",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            },
+            {
+              "contest_id": "34175",
+              "code": "SFRSHO06",
+              "name": "Check Orthogonal Matrix",
+              "difficulty_rating": "-1",
+              "difficulty_type": "easy",
+              "displayType": "practice",
+              "contentType": "default",
+              "status": "unattempted"
+            }
+          ]
+        }
+      ],
+      "solved_count": 0,
+      "total_problems": 6
+    }
+  ],
+  "problems_solved": 0,
+  "total_problems": 46,
+  "total_non_pro_problems": 5,
+  "up_next": [],
+  "old_version_slug": "",
+  "new_version_slug": "",
+  "prerequisite_details": "",
+  "tag_name": "Other Practice Paths",
+  "reviews": [],
+  "learners_count": 2381,
+  "path_review": {
+    "rating": 4.8,
+    "users": 342
+  },
+  "faqs": [],
+  "roadmap_link": "/roadmap/data-analysis-using-python",
+  "roadmap_title": "Data analysis using Python"
+}

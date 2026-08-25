@@ -1,0 +1,122 @@
+{
+  "category_name": "school",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "INTEST",
+  "contest_category": "6",
+  "problem_name": "Enormous Input Test",
+  "intended_contest_code": "",
+  "body": "<p>The purpose of this problem is to verify whether the method you are using to read input data is sufficiently fast to handle problems branded with the <b>enormous Input/Output</b> warning. You are expected to be able to process at least 2.5MB of input data per second at runtime.\r\n\r\n<h3>Input</h3>\r\n<p>The input begins with two positive integers n k (n, k<=10<sup>7</sup>). The next n lines of input contain one positive integer t<sub>i</sub>, not greater than 10<sup>9</sup>, each.\r\n\r\n<h3>Output</h3>\r\n<p>Write a single integer to output, denoting how many integers t<sub>i</sub> are divisible by k.\r\n\r\n<h3>Example</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n7 3\r\n1\r\n51\r\n966369\r\n7\r\n9\r\n999996\r\n11\r\n\r\n<b>Output:</b>\r\n4\r\n</pre>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "- $1 \\leq N, K \\leq 10^7$\n- $1 \\leq A_i \\leq 10^9$",
+    "constraintsState": true,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "You are given $N$ integers. Find the count of numbers divisible by $K$.",
+    "inputFormat": "The input begins with two positive integers $N$, $K$. The next $N$ lines contains one positive integer each denoted by $A_i$.",
+    "inputFormatState": true,
+    "outputFormat": "Output a single number denoting how many integers are divisible by $K$.\n\n",
+    "outputFormatState": true,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "7 3\n1\n51\n966369\n7\n9\n999996\n11\n",
+        "output": "4",
+        "explanation": "The integers divisible by $3$ are $51, 966369, 9,$ and $999996$. Thus, there are $4$ integers in total.",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": "",
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 121135,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "8",
+  "source_sizelimit": "50000",
+  "problem_author": "u_admin_codechef_pw",
+  "problem_display_authors": [
+    "u_admin_codechef_pw"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/u_admin_codechef_pw'>u_admin_codechef_pw</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "1-12-2008",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Conditional Statements"
+  ],
+  "computed_tags": [
+    "Basic Programming Concepts"
+  ],
+  "difficulty_rating": "464",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610881
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=INTEST",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": true,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 22,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 255,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 2,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

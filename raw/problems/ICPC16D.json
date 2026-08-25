@@ -1,0 +1,120 @@
+{
+  "category_name": "White",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "ICPC16D",
+  "contest_category": "6",
+  "problem_name": "Good Sets",
+  "intended_contest_code": null,
+  "body": "<p>You are given array <b>a</b> consisting of <b>n</b> distinct integers. A set <b>s</b> of numbers is called <i>good</i> if you can rearrange the elements in such a way that each element divides the next element in the order, i.e. <b>s<sub>i</sub> | s<sub>i + 1</sub></b>, such that <b>i < |s|</b>, where <b>|s|</b> denotes size of set <b>|s|</b>.\r\n</p>\r\n\r\n\r\n<p>Find out number of distinct <i>good</i> sets that you can create using the values of the array. You can use one value only once in a particular set; ie. a set cannot have duplicate values. Two sets are said to be different from each other if there exists an element in one set, which does not exist in the other.</p>\r\n\r\n<p>As the answer could be large, print your answer modulo <b>10<sup>9</sup> + 7</b>.</p> \r\n\r\n<h3>Input</h3>\r\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\r\n<p>First line of each test case contains an integer <b>n</b> denoting number of elements in array <b>a</b>.</p>\r\n<p>Next line contains <b>n</b> space separated integers denoting the elements of array <b>a</b>.</p>\r\n\r\n<h3>Output</h3>\r\n<p>For each test case, output a single line containing the corresponding answer.</p>\r\n\r\n\r\n<h3>Constraints</h3>\r\n<ul>\r\n<li><b>1 \u2264 T \u2264 3</b></li>\r\n<li><b>1 \u2264 n \u2264 7.5 * 10<sup>5</sup></b></li>\r\n<li><b>1 \u2264 a<sub>i</sub> \u2264 7.5 * 10<sup>5</sup></b></li>\r\n<li>All the elements of array <b>a</b> are distinct.</li>\r\n</ul>\r\n\r\n<h3>Example</h3>\r\n<pre><b>Input</b>\r\n2\r\n2\r\n1 2\r\n3\r\n6 2 3\r\n\r\n<b>Output:</b>\r\n3\r\n5\r\n</pre>\r\n\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Test case 1.</b> There are three sets which are good <b>{1}</b>, <b>{2}</b>, <b>{1, 2}</b>.</p>\r\n<p><b>Test case 2.</b> There are five sets which are good <b>{6}</b>, <b>{2}</b>, <b>{3}</b>, <b>{6 2}</b>, <b>{6, 3}</b>.</p>\r\n\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>You are given array <b>a</b> consisting of <b>n</b> distinct integers. A set <b>s</b> of numbers is called <i>good</i> if you can rearrange the elements in such a way that each element divides the next element in the order, i.e. <b>s<sub>i</sub> | s<sub>i + 1</sub></b>, such that <b>i < |s|</b>, where <b>|s|</b> denotes size of set <b>|s|</b>.\n</p>\n\n\n<p>Find out number of distinct <i>good</i> sets that you can create using the values of the array. You can use one value only once in a particular set; ie. a set cannot have duplicate values. Two sets are said to be different from each other if there exists an element in one set, which does not exist in the other.</p>\n\n<p>As the answer could be large, print your answer modulo <b>10<sup>9</sup> + 7</b>.</p> \n\n<h3>Input</h3>\n<p>First line of the input contains an integer <b>T</b> denoting the number of test cases. <b>T</b> test cases follow.</p>\n<p>First line of each test case contains an integer <b>n</b> denoting number of elements in array <b>a</b>.</p>\n<p>Next line contains <b>n</b> space separated integers denoting the elements of array <b>a</b>.</p>\n\n<h3>Output</h3>\n<p>For each test case, output a single line containing the corresponding answer.</p>\n\n\n<h3>Constraints</h3>\n<ul>\n<li><b>1 \u2264 T \u2264 3</b></li>\n<li><b>1 \u2264 n \u2264 7.5 * 10<sup>5</sup></b></li>\n<li><b>1 \u2264 a<sub>i</sub> \u2264 7.5 * 10<sup>5</sup></b></li>\n<li>All the elements of array <b>a</b> are distinct.</li>\n</ul>\n",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n2\n1 2\n3\n6 2 3",
+        "output": "3\n5",
+        "explanation": "<p><b>Test case 1.</b> There are three sets which are good <b>{1}</b>, <b>{2}</b>, <b>{1, 2}</b>.</p>\n<p><b>Test case 2.</b> There are five sets which are good <b>{6}</b>, <b>{2}</b>, <b>{3}</b>, <b>{6 2}</b>, <b>{6, 3}</b>.</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": null,
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 0,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3",
+  "max_timelimit": "2",
+  "source_sizelimit": "50000",
+  "problem_author": "admin3",
+  "problem_display_authors": [
+    "admin3"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/admin3'>admin3</a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": null,
+  "problem_tester_html_handle": null,
+  "problem_editorialist": null,
+  "date_added": "18-10-2016",
+  "ready_for_debug": false,
+  "problem_stats": null,
+  "user_tags": [
+    "admin3"
+  ],
+  "computed_tags": [],
+  "difficulty_rating": "-1",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610873
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "user_recommended_learning_url": "learn",
+  "user_selected_language_name": "",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=ICPC16D",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": true,
+  "canAccessVideoEditorial": true,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}

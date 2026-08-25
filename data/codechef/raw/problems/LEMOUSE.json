@@ -1,0 +1,122 @@
+{
+  "category_name": "easy",
+  "status": "success",
+  "submit_error": "You need to login to submit.",
+  "is_verified": false,
+  "problem_code": "LEMOUSE",
+  "contest_category": "6",
+  "problem_name": "Little Elephant and Mouses",
+  "intended_contest_code": "JUNE13",
+  "body": "<p>It is well-known that the elephants are afraid of mouses. The Little Elephant from the Zoo of Lviv is not an exception.\r\n\r\n<p>The Little Elephant is on a board <b>A</b> of <b>n</b> rows and <b>m</b> columns (0-based numeration). At the beginning he is in cell with coordinates <b>(0; 0)</b> and he wants to go to cell with coordinates <b>(n-1; m-1)</b>. From cell <b>(x; y)</b> Little Elephant can go either to <b>(x+1; y)</b> or <b>(x; y+1)</b>.\r\n\r\n<p>Each cell of the board contains either <b>1</b> or <b>0</b>. If <b>A[i][j] = 1</b>, then there is a single mouse in cell <b>(i; j)</b>. Mouse at cell <b>(i; j)</b> scared Little Elephants if and only if during the path there was at least one such cell <b>(x; y)</b> (which belongs to that path) and <b>|i-x| + |j-y| <= 1</b>.\r\n\r\n<p>Little Elephant wants to find some correct path from <b>(0; 0)</b> to <b>(n-1; m-1)</b> such that the number of mouses that have scared the Little Elephant is minimal possible. Print that number.\r\n\r\n<h3>Input</h3>\r\n<p>First line contains single integer <b>T</b> - the number of test cases. Then <b>T</b> test cases follow. First line of each test case contain pair of integers <b>n</b> and <b>m</b> - the size of the board. Next <b>n</b> lines contain <b>n</b> strings, each of size <b>m</b> and consisted of digits <b>0</b> and <b>1</b>.\r\n\r\n<h3>Output</h3>\r\n<p>In <b>T</b> lines print <b>T</b> integer - the answers for the corresponding test.\r\n\r\n<h3>Constraints</h3>\r\n<p>\r\n<b>1</b> <= <b>T</b> <= <b>50</b>\r\n<p>\r\n<b>2</b> <= <b>n, m</b> <= <b>100</b>\r\n\r\n<h3>Example</h3>\r\n\r\n<pre>\r\n<b>Input:</b>\r\n2\r\n3 9\r\n001000001\r\n111111010\r\n100100100\r\n7 9\r\n010101110\r\n110110111\r\n010011111\r\n100100000\r\n000010100\r\n011011000\r\n000100101\r\n\r\n<b>Output:</b>\r\n9\r\n10\r\n\r\n</pre>\r\n\r\n<h3>Explanation</h3>\r\n<p><b>Example case 1: </b>\r\nThe optimized path is: (0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (0, 4) -> (0, 5) -> (0, 6) -> (0, 7) -> (0, 8) -> (1, 8) -> (2, 8). The mouses that scared the Little Elephant are at the following cells: (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 7), (0, 2), (0, 8).\r\n</p>\r\n\r\n<p><b>Example case 2: </b>\r\nThe optimized path is: (0, 0) -> (1, 0) -> (1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3) -> (4, 3) -> (4, 4) -> (5, 4) -> (5, 5) -> (6, 5) -> (6, 6) -> (6, 7) -> (6, 8). The 10 mouses that scared the Little Elephant are at the following cells: (0, 1), (1, 0), (1, 1), (2, 1), (3, 3), (4, 4), (5, 4), (5, 5), (6, 6), (6, 8).\r\n</p>\n<aside style='background: #f8f8f8;padding: 10px 15px;'><div>All submissions for this problem are available.</div></aside>",
+  "problemComponents": {
+    "constraints": "",
+    "constraintsState": false,
+    "subtasks": "",
+    "subtasksState": false,
+    "statement": "<p>It is well-known that the elephants are afraid of mouses. The Little Elephant from the Zoo of Lviv is not an exception.\n\n</p><p>The Little Elephant is on a board <b>A</b> of <b>n</b> rows and <b>m</b> columns (0-based numeration). At the beginning he is in cell with coordinates <b>(0; 0)</b> and he wants to go to cell with coordinates <b>(n-1; m-1)</b>. From cell <b>(x; y)</b> Little Elephant can go either to <b>(x+1; y)</b> or <b>(x; y+1)</b>.\n\n</p><p>Each cell of the board contains either <b>1</b> or <b>0</b>. If <b>A[i][j] = 1</b>, then there is a single mouse in cell <b>(i; j)</b>. Mouse at cell <b>(i; j)</b> scared Little Elephants if and only if during the path there was at least one such cell <b>(x; y)</b> (which belongs to that path) and <b>|i-x| + |j-y| <= 1</b>.\n\n</p><p>Little Elephant wants to find some correct path from <b>(0; 0)</b> to <b>(n-1; m-1)</b> such that the number of mouses that have scared the Little Elephant is minimal possible. Print that number.\n\n</p><h3>Input</h3>\n<p>First line contains single integer <b>T</b> - the number of test cases. Then <b>T</b> test cases follow. First line of each test case contain pair of integers <b>n</b> and <b>m</b> - the size of the board. Next <b>n</b> lines contain <b>n</b> strings, each of size <b>m</b> and consisted of digits <b>0</b> and <b>1</b>.\n\n</p><h3>Output</h3>\n<p>In <b>T</b> lines print <b>T</b> integer - the answers for the corresponding test.\n\n</p><h3>Constraints</h3>\n<p>\n<b>1</b> <= <b>T</b> <= <b>50</b>\n</p><p>\n<b>2</b> <= <b>n, m</b> <= <b>100</b>\n</p>",
+    "inputFormat": "",
+    "inputFormatState": false,
+    "outputFormat": "",
+    "outputFormatState": false,
+    "sampleTestCases": [
+      {
+        "id": "1",
+        "input": "2\n3 9\n001000001\n111111010\n100100100\n7 9\n010101110\n110110111\n010011111\n100100000\n000010100\n011011000\n000100101",
+        "output": "9\n10\n",
+        "explanation": "<p><b>Example case 1: </b>\nThe optimized path is: (0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (0, 4) -> (0, 5) -> (0, 6) -> (0, 7) -> (0, 8) -> (1, 8) -> (2, 8). The mouses that scared the Little Elephant are at the following cells: (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 7), (0, 2), (0, 8).\n</p>\n\n<p><b>Example case 2: </b>\nThe optimized path is: (0, 0) -> (1, 0) -> (1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3) -> (4, 3) -> (4, 4) -> (5, 4) -> (5, 5) -> (6, 5) -> (6, 6) -> (6, 7) -> (6, 8). The 10 mouses that scared the Little Elephant are at the following cells: (0, 1), (1, 0), (1, 1), (2, 1), (3, 3), (4, 4), (5, 4), (5, 5), (6, 6), (6, 8).\n</p>",
+        "isDeleted": false
+      }
+    ]
+  },
+  "gumlet_video_url": null,
+  "video_editorial_url": "",
+  "text_editorial_body": "",
+  "text_editorial_is_markdown": 0,
+  "text_editorial_topic_id": 2347,
+  "languages_supported": "CPP20, PYTH 3, C, JAVA, PYP3, CS2, NODEJS, GO, PHP, kotlin, rust, R, SQL",
+  "max_timelimit": "1",
+  "source_sizelimit": "50000",
+  "problem_author": "admin",
+  "problem_display_authors": [
+    "witaliy_adm"
+  ],
+  "problem_display_authors_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/witaliy_adm'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #666666;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>1&#9733;</span><span class='m-username--link'>witaliy_adm</span></a></div>",
+  "problem_tester": null,
+  "problem_testers_usernames": [
+    "tuananh93"
+  ],
+  "problem_tester_html_handle": "<div class=\"multiple-usernames-container\"><a href='/users/tuananh93'><span \n            class='rating' \n            style='display: inline-block; \n                    font-size: 10px; \n                    background: #FFBF00;\n                    padding: 0 3px; \n                    line-height: 1.3; \n                    color: white;\n                    margin-right: 2px;'>5&#9733;</span><span class='m-username--link'>tuananh93</span></a></div>",
+  "problem_editorialist": "pragrame",
+  "date_added": "20-03-2012",
+  "ready_for_debug": true,
+  "problem_stats": null,
+  "user_tags": [
+    "Dynamic Programming"
+  ],
+  "computed_tags": [
+    "Algorithms"
+  ],
+  "difficulty_rating": "1941",
+  "best_tag": "",
+  "editorial_url": "",
+  "time": {
+    "view_start_date": 1771484294,
+    "submit_start_date": 1771484294,
+    "visible_start_date": -62170007400,
+    "end_date": 2279170694,
+    "current": 1785610979
+  },
+  "user": {
+    "username": null,
+    "access": "default",
+    "isPremiumUser": false
+  },
+  "bookmark_status": false,
+  "contest_problem_status": "unattempted",
+  "problem_status": "unattempted",
+  "is_direct_submittable": false,
+  "problemDiscussURL": "https://discuss.codechef.com/search?q=LEMOUSE",
+  "is_a_practice_or_college_contest": true,
+  "practice_special_banner": {
+    "id": "4",
+    "banner_type": "Practice Problem Page",
+    "title": "Open a CodeChef Chapter In Your College today!",
+    "description": "",
+    "image": "1699252500.png",
+    "link": "https://www.codechef.com/collegechapter",
+    "state": false,
+    "updated_at": "2023-11-09 10:46:16",
+    "is_external": false
+  },
+  "hints": [],
+  "specialTestCases": [],
+  "cheatCodes": [],
+  "difficultyThreshold": 100,
+  "isVideoRestrictionEnabled": true,
+  "shouldShowHintsTab": false,
+  "canAccessHints": false,
+  "canAccessVideoEditorial": false,
+  "canAccessWA": false,
+  "votes_data": {
+    "SolutionVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "HintsVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "ProblemStatementVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    },
+    "DoubtSupportVoteData": {
+      "upvote_count": 0,
+      "user_vote": 0
+    }
+  },
+  "is_proctored": false,
+  "is_user_verified_for_proctoring": false,
+  "visitedContests": [],
+  "isSupportedByJudge": true
+}
