@@ -198,6 +198,35 @@ export class SupabaseAuthProvider implements IAuthProvider {
     }
   }
 
+  private getAppBaseUrl(): string {
+    if (typeof window !== 'undefined' && window.location.origin) {
+      return window.location.origin;
+    }
+    const envUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      process.env.NEXT_PUBLIC_APP_URL ||
+      (process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : undefined) ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined);
+
+    if (envUrl) {
+      return envUrl.replace(/\/+$/, '');
+    }
+    return 'https://dsa-master-7boq.vercel.app';
+  }
+
+  private getCallbackUrl(customPathOrUrl?: string): string {
+    if (customPathOrUrl) {
+      if (customPathOrUrl.startsWith('http://') || customPathOrUrl.startsWith('https://')) {
+        return customPathOrUrl;
+      }
+      const baseUrl = this.getAppBaseUrl();
+      const path = customPathOrUrl.startsWith('/') ? customPathOrUrl : `/${customPathOrUrl}`;
+      return `${baseUrl}${path}`;
+    }
+    const baseUrl = this.getAppBaseUrl();
+    return `${baseUrl}/auth/callback`;
+  }
+
   /**
    * Google OAuth Initiation
    */
@@ -211,9 +240,7 @@ export class SupabaseAuthProvider implements IAuthProvider {
     }
 
     try {
-      const redirectUrl =
-        redirectTo ||
-        (typeof window !== 'undefined' ? `${window.location.origin}/auth/callback` : '/auth/callback');
+      const redirectUrl = this.getCallbackUrl(redirectTo || '/auth/callback');
 
       const { data, error } = await client.auth.signInWithOAuth({
         provider: 'google',
@@ -363,9 +390,9 @@ export class SupabaseAuthProvider implements IAuthProvider {
     }
 
     try {
-      const origin = typeof window !== 'undefined' ? window.location.origin : '';
+      const resetRedirectUrl = this.getCallbackUrl('/login?tab=forgot');
       const { error } = await client.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
-        redirectTo: `${origin}/login?tab=forgot`,
+        redirectTo: resetRedirectUrl,
       });
 
       if (error) {
