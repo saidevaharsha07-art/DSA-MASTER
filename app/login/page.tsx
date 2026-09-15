@@ -102,6 +102,8 @@ function LoginContent() {
         const res = await signUp({ email, password, displayName: fullName });
         if (!res.success) {
           setFormError(res.error || 'Account creation failed. That email address may already be registered.');
+        } else if (res.error === 'EMAIL_CONFIRMATION_REQUIRED' || !res.session) {
+          setFormSuccess('Account registered successfully! A verification email has been sent to ' + email + '. Please verify your email before logging in.');
         } else {
           const target = searchParams?.get('redirect') || '/dashboard';
           setFormSuccess('Account created successfully! Directing to application...');

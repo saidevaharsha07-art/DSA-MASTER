@@ -112,8 +112,7 @@ export class AuthService {
     if (oauthRes.url) {
       return { success: true, url: oauthRes.url };
     }
-    const res = await this.signIn('google');
-    return res;
+    return { success: false, error: oauthRes.error || 'Failed to initiate Google sign-in.' };
   }
 
   public async handleOAuthCallback(params: {
@@ -121,7 +120,6 @@ export class AuthService {
     accessToken?: string;
     refreshToken?: string;
     expiresIn?: number;
-    mockUserId?: string;
     error?: string;
   }): Promise<AuthResult> {
     const res = await this.supabaseProvider.handleOAuthCallback(params);
@@ -132,10 +130,10 @@ export class AuthService {
         isAuthenticated: true,
         user: res.user,
         session: res.session,
-        activeProviderName: 'google',
+        activeProviderName: 'supabase',
       });
 
-      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: 'google' });
+      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: 'supabase' });
     }
     return res;
   }
@@ -161,11 +159,36 @@ export class AuthService {
   }
 
   public async restoreSession(): Promise<boolean> {
+    // 1. Try to restore directly from active Supabase client session
+    const sbSession = await this.supabaseProvider.restoreSession();
+    if (sbSession && sbSession.user) {
+      this.initializeUserAccount(sbSession.user);
+      await this.sessionService.saveSession(sbSession);
+      this.stateService.setState({
+        isAuthenticated: true,
+        user: sbSession.user,
+        session: sbSession,
+        activeProviderName: 'supabase',
+      });
+      return true;
+    }
+
+    // 2. Try to restore cached session from local storage
     const session = await this.sessionService.restoreSession();
-    if (session) {
-      if (session.user) {
-        this.initializeUserAccount(session.user);
+    if (session && session.user) {
+      if (session.provider === 'supabase') {
+        // If it was a supabase session but active client returned null, token is expired/invalid
+        await this.sessionService.clearSession();
+        this.stateService.setState({
+          isAuthenticated: false,
+          user: null,
+          session: null,
+          activeProviderName: 'none',
+        });
+        return false;
       }
+
+      this.initializeUserAccount(session.user);
       this.stateService.setState({
         isAuthenticated: true,
         user: session.user,
@@ -174,6 +197,13 @@ export class AuthService {
       });
       return true;
     }
+
+    this.stateService.setState({
+      isAuthenticated: false,
+      user: null,
+      session: null,
+      activeProviderName: 'none',
+    });
     return false;
   }
 

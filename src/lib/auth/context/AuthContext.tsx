@@ -3,17 +3,25 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { AuthService } from '../services/auth.service';
 import { AuthState } from '../services/auth-state.service';
-import { AuthProviderType } from '../models/user.models';
+import { AuthProviderType, AuthUser } from '../models/user.models';
 import { AuthResult, SignInCredentials } from '../models/auth.models';
+import { AuthSession } from '../models/session.models';
 import { SignUpCredentials } from '../providers/supabase.provider';
 import { Container } from '@/src/core/container/container';
+import { getSupabaseClient } from '@/src/lib/supabase/client';
 
 export interface AuthContextType extends AuthState {
   readonly isLoading: boolean;
   signIn: (providerType?: AuthProviderType, credentials?: SignInCredentials) => Promise<AuthResult>;
   signUp: (credentials: SignUpCredentials) => Promise<AuthResult>;
   signInWithGoogle: () => Promise<AuthResult & { url?: string }>;
-  handleOAuthCallback: (params: { code?: string; accessToken?: string; refreshToken?: string; expiresIn?: number; mockUserId?: string; error?: string }) => Promise<AuthResult>;
+  handleOAuthCallback: (params: {
+    code?: string;
+    accessToken?: string;
+    refreshToken?: string;
+    expiresIn?: number;
+    error?: string;
+  }) => Promise<AuthResult>;
   resetPassword: (email: string) => Promise<{ success: boolean; message?: string; error?: string }>;
   signOut: () => Promise<void>;
   linkAccount: (providerType: AuthProviderType) => Promise<void>;
@@ -34,18 +42,90 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const unsub = authService.getStateService().subscribe((nextState) => {
-      setState(nextState);
+    let isMounted = true;
+
+    const unsubState = authService.getStateService().subscribe((nextState) => {
+      if (isMounted) {
+        setState(nextState);
+      }
     });
 
-    let isMounted = true;
+    // 1. Restore existing session on mount
     authService.restoreSession().finally(() => {
-      if (isMounted) setIsLoading(false);
+      if (isMounted) {
+        setIsLoading(false);
+      }
     });
+
+    // 2. Real-time Supabase Auth state listener
+    const client = getSupabaseClient();
+    let authListenerSubscription: { unsubscribe: () => void } | null = null;
+
+    if (client) {
+      const { data } = client.auth.onAuthStateChange(async (event, sbSession) => {
+        if (!isMounted) return;
+
+        if (event === 'SIGNED_IN' && sbSession?.user) {
+          const authUser: AuthUser = {
+            id: sbSession.user.id,
+            username: sbSession.user.email ? sbSession.user.email.split('@')[0] : `user_${sbSession.user.id.substring(0, 8)}`,
+            email: sbSession.user.email || '',
+            displayName:
+              sbSession.user.user_metadata?.display_name ||
+              sbSession.user.user_metadata?.full_name ||
+              sbSession.user.user_metadata?.name ||
+              (sbSession.user.email ? sbSession.user.email.split('@')[0] : 'User'),
+            avatarUrl:
+              sbSession.user.user_metadata?.avatar_url ||
+              sbSession.user.user_metadata?.picture ||
+              `https://api.dicebear.com/7.x/bottts/svg?seed=${sbSession.user.id}`,
+            isGuest: false,
+            roles: ['user'],
+            linkedAccounts: [
+              {
+                provider: 'supabase',
+                providerUserId: sbSession.user.id,
+                email: sbSession.user.email,
+                linkedAt: new Date().toISOString(),
+              },
+            ],
+            createdAt: sbSession.user.created_at || new Date().toISOString(),
+          };
+
+          const session: AuthSession = {
+            sessionId: `sess_${sbSession.access_token.substring(0, 16)}`,
+            user: authUser,
+            provider: 'supabase',
+            accessToken: sbSession.access_token,
+            refreshToken: sbSession.refresh_token,
+            expiresAt: sbSession.expires_at ? sbSession.expires_at * 1000 : Date.now() + 3600 * 1000,
+            rememberMe: true,
+            createdAt: new Date().toISOString(),
+          };
+
+          authService.getStateService().setState({
+            isAuthenticated: true,
+            user: authUser,
+            session,
+            activeProviderName: 'supabase',
+          });
+        } else if (event === 'SIGNED_OUT') {
+          authService.getStateService().setState({
+            isAuthenticated: false,
+            user: null,
+            session: null,
+            activeProviderName: 'none',
+          });
+        }
+      });
+
+      authListenerSubscription = data.subscription;
+    }
 
     return () => {
       isMounted = false;
-      unsub();
+      unsubState();
+      authListenerSubscription?.unsubscribe();
     };
   }, [authService]);
 
@@ -76,7 +156,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const handleOAuthCallback = async (params: { code?: string; accessToken?: string; refreshToken?: string; expiresIn?: number; mockUserId?: string; error?: string }): Promise<AuthResult> => {
+  const handleOAuthCallback = async (params: {
+    code?: string;
+    accessToken?: string;
+    refreshToken?: string;
+    expiresIn?: number;
+    error?: string;
+  }): Promise<AuthResult> => {
     setIsLoading(true);
     try {
       return await authService.handleOAuthCallback(params);

@@ -20,11 +20,9 @@ function AuthCallbackContent() {
         let refreshToken: string | undefined;
         let expiresIn: number | undefined;
         let errorMsg: string | undefined;
-        let mockUserId: string | undefined;
 
         if (searchParams) {
           code = searchParams.get('code') || undefined;
-          mockUserId = searchParams.get('mock_user_id') || undefined;
           errorMsg = searchParams.get('error_description') || searchParams.get('error') || undefined;
           accessToken = searchParams.get('access_token') || undefined;
           refreshToken = searchParams.get('refresh_token') || undefined;
@@ -40,17 +38,28 @@ function AuthCallbackContent() {
           else if (hashParams.get('error')) errorMsg = hashParams.get('error')!;
         }
 
-        const res = await handleOAuthCallback({ code, accessToken, refreshToken, expiresIn, mockUserId, error: errorMsg });
+        if (errorMsg) {
+          setError(errorMsg);
+          return;
+        }
+
+        if (!code && !accessToken) {
+          setError('No authentication code or access token found in callback URL. Please sign in again.');
+          return;
+        }
+
+        const res = await handleOAuthCallback({ code, accessToken, refreshToken, expiresIn });
         if (!res.success) {
-          setError(res.error || 'Sign-in couldn&apos;t be completed. Please try again.');
+          setError(res.error || 'Authentication could not be completed. Please try again.');
         } else {
           setIsDone(true);
+          const next = searchParams?.get('next') || '/dashboard';
           setTimeout(() => {
-            router.replace('/dashboard');
+            router.replace(next);
           }, 500);
         }
       } catch (err: any) {
-        setError(err?.message || 'Sign-in couldn&apos;t be completed. Please try again.');
+        setError(err?.message || 'Authentication could not be completed. Please try again.');
       }
     }
 
@@ -77,7 +86,7 @@ function AuthCallbackContent() {
         </div>
 
         <h1 className="text-2xl font-extrabold tracking-tight text-white flex items-center justify-center gap-2 mb-6">
-          DSA <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">MASTER</span>
+          DSA <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">CRACKER</span>
         </h1>
 
         {error ? (
@@ -85,16 +94,16 @@ function AuthCallbackContent() {
           <div className="space-y-4">
             <div className="p-4 bg-red-950/50 border border-red-800/60 rounded-xl text-red-300 text-xs flex flex-col items-center gap-2">
               <AlertCircle className="w-6 h-6 text-red-400" />
-              <p className="font-semibold text-sm text-red-200">Sign-in couldn&apos;t be completed.</p>
-              <p className="text-center text-red-300/90">Please try again.</p>
+              <p className="font-semibold text-sm text-red-200">Sign-in could not be completed.</p>
+              <p className="text-center text-red-300/90">{error}</p>
             </div>
             <button
               type="button"
               onClick={() => router.replace('/login')}
-              className="w-full h-12 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm rounded-xl transition-all border border-slate-700 flex items-center justify-center gap-2"
+              className="w-full h-12 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm rounded-xl transition-all border border-slate-700 flex items-center justify-center gap-2 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Try Again</span>
+              <span>Back to Login</span>
             </button>
           </div>
         ) : isDone ? (
@@ -104,7 +113,7 @@ function AuthCallbackContent() {
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h2 className="text-lg font-bold text-white">Sign in complete!</h2>
-            <p className="text-xs text-slate-400">Loading Command Center...</p>
+            <p className="text-xs text-slate-400">Directing to dashboard...</p>
           </div>
         ) : (
           /* Loading Transition State */
@@ -115,9 +124,9 @@ function AuthCallbackContent() {
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-white mb-1">Completing authentication</h2>
+              <h2 className="text-lg font-bold text-white mb-1">Authenticating</h2>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Securely signing you in with Google...
+                Verifying secure session with Supabase...
               </p>
             </div>
 
