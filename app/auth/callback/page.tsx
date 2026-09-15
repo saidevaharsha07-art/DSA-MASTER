@@ -49,14 +49,14 @@ function AuthCallbackContent() {
         }
 
         const res = await handleOAuthCallback({ code, accessToken, refreshToken, expiresIn });
-        if (!res.success) {
-          setError(res.error || 'Authentication could not be completed. Please try again.');
-        } else {
+        if (res.success) {
           setIsDone(true);
           const next = searchParams?.get('next') || '/dashboard';
           setTimeout(() => {
             router.replace(next);
-          }, 500);
+          }, 300);
+        } else {
+          setError(res.error || 'Authentication could not be completed. Please try again.');
         }
       } catch (err: any) {
         setError(err?.message || 'Authentication could not be completed. Please try again.');

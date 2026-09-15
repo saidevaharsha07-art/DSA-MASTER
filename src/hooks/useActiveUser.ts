@@ -7,12 +7,14 @@
 import { useState, useEffect } from 'react';
 import { AuthService } from '@/src/lib/auth/services/auth.service';
 import { EventBus } from '@/src/core/events/event-bus';
+import { Container } from '@/src/core/container/container';
 
-let authServiceInstance: AuthService | null = null;
 function getAuthService(): AuthService {
-  if (!authServiceInstance) {
-    authServiceInstance = new AuthService();
+  if (Container.has('AuthService')) {
+    return Container.resolve<AuthService>('AuthService');
   }
+  const authServiceInstance = new AuthService();
+  Container.registerSingleton('AuthService', authServiceInstance);
   return authServiceInstance;
 }
 
@@ -33,7 +35,7 @@ export function useActiveUser(): { userId: string; isAuthenticated: boolean; use
 
   useEffect(() => {
     const authService = getAuthService();
-    
+
     const updateState = () => {
       const state = authService.getStateService().getState();
       if (state.isAuthenticated && state.user?.id) {

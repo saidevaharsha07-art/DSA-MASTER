@@ -11,6 +11,7 @@ import { GuestProvider } from '../providers/guest.provider';
 import { SupabaseAuthProvider, SignUpCredentials } from '../providers/supabase.provider';
 
 import { AuthProviderType, AuthUser } from '../models/user.models';
+import { AuthSession } from '../models/session.models';
 import { AuthResult, SignInCredentials } from '../models/auth.models';
 import { SessionService } from './session.service';
 import { AuthStateService } from './auth-state.service';
@@ -62,6 +63,19 @@ export class AuthService {
     }
     // Ensures clean progress state is loaded or initialized idempotently
     progressService.getState(user.id);
+  }
+
+  public syncAuthenticatedSession(session: AuthSession): void {
+    if (!session || !session.user) return;
+    this.initializeUserAccount(session.user);
+    this.sessionService.saveSession(session);
+    this.stateService.setState({
+      isAuthenticated: true,
+      user: session.user,
+      session,
+      activeProviderName: session.provider || 'supabase',
+    });
+    EventBus.publish('UserSignedIn', { userId: session.user.id, provider: session.provider || 'supabase' });
   }
 
   public async signIn(providerType: AuthProviderType = 'supabase', credentials?: SignInCredentials): Promise<AuthResult> {

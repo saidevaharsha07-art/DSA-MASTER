@@ -292,32 +292,34 @@ export class SupabaseAuthProvider implements IAuthProvider {
 
       // 1. Exchange PKCE Code
       if (params.code) {
-        const { data, error } = await client.auth.exchangeCodeForSession(params.code);
-        if (error) {
-          return { success: false, error: error.message };
-        }
-        if (data?.session && data?.user) {
-          sbSession = data.session;
-          sbUser = data.user;
+        try {
+          const { data, error } = await client.auth.exchangeCodeForSession(params.code);
+          if (data?.session && data?.user) {
+            sbSession = data.session;
+            sbUser = data.user;
+          }
+        } catch (e) {
+          // Proceed to session check
         }
       }
 
       // 2. Set tokens if received from URL fragment
       if (!sbUser && params.accessToken) {
-        const { data, error } = await client.auth.setSession({
-          access_token: params.accessToken,
-          refresh_token: params.refreshToken || '',
-        });
-        if (error) {
-          return { success: false, error: error.message };
-        }
-        if (data?.session && data?.user) {
-          sbSession = data.session;
-          sbUser = data.user;
+        try {
+          const { data, error } = await client.auth.setSession({
+            access_token: params.accessToken,
+            refresh_token: params.refreshToken || '',
+          });
+          if (data?.session && data?.user) {
+            sbSession = data.session;
+            sbUser = data.user;
+          }
+        } catch (e) {
+          // Proceed to session check
         }
       }
 
-      // 3. Fallback to active session check
+      // 3. Check active session (handles detectSessionInUrl auto-exchange)
       if (!sbUser) {
         const { data, error } = await client.auth.getSession();
         if (!error && data?.session?.user) {
@@ -326,8 +328,18 @@ export class SupabaseAuthProvider implements IAuthProvider {
         }
       }
 
+      // 4. Fallback: check getUser directly
+      if (!sbUser) {
+        const { data, error } = await client.auth.getUser();
+        if (!error && data?.user) {
+          sbUser = data.user;
+          const { data: sData } = await client.auth.getSession();
+          sbSession = sData?.session;
+        }
+      }
+
       if (!sbUser || !sbSession) {
-        return { success: false, error: 'No authorization code or active session was found.' };
+        return { success: false, error: 'No authenticated user session was established by Supabase.' };
       }
 
       const authUser: AuthUser = {

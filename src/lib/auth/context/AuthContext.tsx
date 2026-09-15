@@ -65,7 +65,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { data } = client.auth.onAuthStateChange(async (event, sbSession) => {
         if (!isMounted) return;
 
-        if (event === 'SIGNED_IN' && sbSession?.user) {
+        if (
+          (event === 'SIGNED_IN' || event === 'INITIAL_SESSION' || event === 'TOKEN_REFRESHED' || event === 'USER_UPDATED') &&
+          sbSession?.user
+        ) {
           const authUser: AuthUser = {
             id: sbSession.user.id,
             username: sbSession.user.email ? sbSession.user.email.split('@')[0] : `user_${sbSession.user.id.substring(0, 8)}`,
@@ -103,12 +106,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             createdAt: new Date().toISOString(),
           };
 
-          authService.getStateService().setState({
-            isAuthenticated: true,
-            user: authUser,
-            session,
-            activeProviderName: 'supabase',
-          });
+          authService.syncAuthenticatedSession(session);
         } else if (event === 'SIGNED_OUT') {
           authService.getStateService().setState({
             isAuthenticated: false,
