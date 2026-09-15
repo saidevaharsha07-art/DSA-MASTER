@@ -5,6 +5,7 @@
 
 import { storage } from '@/src/core/storage/LocalStorageAdapter';
 import { EventBus, AppEvent } from '@/src/core/events/event-bus';
+import { serverPersistenceBridge } from '@/src/core/storage/server-persistence.bridge';
 import { progressService } from '../progress/progress.service';
 import {
   CanonicalActivityRecord,
@@ -121,6 +122,7 @@ export class ActivityStoreService {
 
     this.memoryLogs.set(userId, updatedLog);
     storage.save(this.getStorageKey(userId), updatedLog);
+    serverPersistenceBridge.saveDurableData('activities', userId, updatedLog).catch(() => {});
 
     return record;
   }

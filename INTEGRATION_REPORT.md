@@ -1,14 +1,14 @@
 # MASTER SYSTEM INTEGRATION REPORT (PHASE 6.0)
 
 **Date**: 2026-07-30  
-**Project**: DSA MASTER ROADMAP  
+**Project**: DSA CRACKER  
 **Status**: Comprehensive Discovery & Integration Architecture Analysis  
 
 ---
 
 ## 1. Executive Summary & Architecture Overview
 
-The DSA MASTER ROADMAP application features a rich multi-tier architecture spanning:
+The DSA CRACKER application features a rich multi-tier architecture spanning:
 1. **Core System Infrastructure (`src/core/`)**:
    - IoC Container (`Container` in `src/core/container/container.ts`)
    - Decoupled Pub/Sub EventBus (`EventBus` in `src/core/events/event-bus.ts`)

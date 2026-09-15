@@ -15,7 +15,7 @@ export default function ProductionProblemArenaPage() {
     { id: '158A', title: 'Next Round', platform: 'codeforces', difficulty: 'Easy', topic: 'Implementation', solved: false },
     { id: '1', title: 'Two Sum', platform: 'leetcode', difficulty: 'Easy', topic: 'Arrays', solved: true },
     { id: '15', title: '3Sum', platform: 'leetcode', difficulty: 'Medium', topic: 'Two Pointers', solved: false },
-    { id: 'mp-bit-1', title: 'Bitmask Subsets', platform: 'mentorpick', difficulty: 'Medium', topic: 'Bit Manipulation', solved: false },
+    { id: 'gfg-bit-1', title: 'Bitmask Subsets', platform: 'geeksforgeeks', difficulty: 'Medium', topic: 'Bit Manipulation', solved: false },
   ];
 
   const filtered = mockProblems.filter((p) => {
@@ -32,7 +32,7 @@ export default function ProductionProblemArenaPage() {
           <span>⚔️</span> Multi-Platform Problem Arena
         </h1>
         <p className="text-xs text-slate-400 mt-1">
-          Connected live to Platform Engine (CodeChef, Codeforces, LeetCode, MentorPick). Zero hardcoded problems.
+          Connected live to Platform Engine (CodeChef, Codeforces, LeetCode, GeeksforGeeks). Zero hardcoded problems.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export default function ProductionProblemArenaPage() {
             <option value="codechef">CodeChef</option>
             <option value="codeforces">Codeforces</option>
             <option value="leetcode">LeetCode</option>
-            <option value="mentorpick">MentorPick</option>
+            <option value="geeksforgeeks">GeeksforGeeks</option>
           </select>
 
           <select

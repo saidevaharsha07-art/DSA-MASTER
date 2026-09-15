@@ -1,47 +1,69 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { judgeEvaluator } from '@/src/services/judge/evaluator';
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { problemId, language, code, customInput } = body;
+    const { problemId, language, code, customInput, sampleIndex } = body;
 
-    const startTime = performance.now();
+    const headerUserId = req.headers.get('x-user-id');
 
-    // Sandboxed Code Execution Evaluator
-    let output = '';
-    let status: 'accepted' | 'wrong_answer' | 'compile_error' = 'accepted';
-    let errorMessage = '';
-
-    // Check for syntax errors
-    if (code.includes('SyntaxError') || code.includes('throw new Error')) {
-      status = 'compile_error';
-      errorMessage = 'SyntaxError: Unexpected identifier or syntax in user code.';
-    } else if (code.trim().length === 0) {
-      status = 'compile_error';
-      errorMessage = 'Compilation Error: Empty solution provided.';
-    } else {
-      // Execute JS/TS logic safely in isolated scope
-      try {
-        const sampleOutput = '[0, 1]';
-        output = sampleOutput;
-      } catch (err: any) {
-        status = 'compile_error';
-        errorMessage = err.message || 'Execution error during runtime.';
-      }
+    if (!code || typeof code !== 'string' || code.trim().length === 0) {
+      return NextResponse.json({
+        status: 'compile_error',
+        stdout: '',
+        stderr: 'Compilation Error: No source code provided.',
+        compileOutput: 'Empty source code.',
+        runtimeMs: 0,
+        memoryMb: 0,
+        exitCode: 1,
+        totalTestcases: 0,
+        passedTestcases: 0,
+        testcaseResults: [],
+        providerUsed: 'DSA Sandboxed Engine',
+      });
     }
 
-    const endTime = performance.now();
-    const runtimeMs = Math.max(1, Math.round(endTime - startTime));
+    if (code.length > 50000) {
+      return NextResponse.json({
+        status: 'compile_error',
+        stdout: '',
+        stderr: 'Compilation Error: Code payload exceeds maximum allowed size (50KB).',
+        compileOutput: 'Payload too large.',
+        runtimeMs: 0,
+        memoryMb: 0,
+        exitCode: 1,
+        totalTestcases: 0,
+        passedTestcases: 0,
+        testcaseResults: [],
+        providerUsed: 'DSA Sandboxed Engine',
+      }, { status: 400 });
+    }
 
-    return NextResponse.json({
-      status,
-      output: status === 'accepted' ? output : null,
-      error: errorMessage || null,
-      runtimeMs: runtimeMs + 3,
-      memoryMb: Number((40 + Math.random() * 4).toFixed(1)),
-      inputUsed: customInput || 'nums = [2,7,11,15], target = 9',
+    const result = await judgeEvaluator.evaluateRun({
+      problemId: problemId || 'two-sum',
+      language: language || 'python',
+      code,
+      customInput,
+      sampleIndex,
     });
+
+    return NextResponse.json(result);
   } catch (error: any) {
-    return NextResponse.json({ error: error.message || 'Internal Execution Error' }, { status: 500 });
+    return NextResponse.json(
+      {
+        status: 'runtime_error',
+        stdout: '',
+        stderr: error.message || 'Internal Execution Sandbox Error',
+        runtimeMs: 0,
+        memoryMb: 0,
+        exitCode: 1,
+        totalTestcases: 0,
+        passedTestcases: 0,
+        testcaseResults: [],
+        providerUsed: 'DSA Sandboxed Engine',
+      },
+      { status: 500 }
+    );
   }
 }

@@ -1,6 +1,6 @@
 # Engine Guide
 
-Engines are the brain of DSA Master Roadmap. They contain all business logic and orchestrate data flow. UI components should only read from engines, never manipulate raw data directly.
+Engines are the brain of DSA CRACKER. They contain all business logic and orchestrate data flow. UI components should only read from engines, never manipulate raw data directly.
 
 ## 1. Curriculum Engine
 `src/engines/curriculum/`

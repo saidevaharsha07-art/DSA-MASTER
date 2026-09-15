@@ -10,15 +10,15 @@ import { CheckCircle2, Circle, ChevronDown, Code2 } from 'lucide-react';
 // ---------------------------
 export function CodeBlockComponent({ block }: { block: CodeBlock }) {
   return (
-    <div className="flex flex-col bg-slate-900 rounded-2xl border border-white/5 overflow-hidden mb-6 shadow-xl">
-      <div className="flex items-center gap-3 px-4 py-3 bg-slate-950 border-b border-white/5">
-        <Code2 className="w-5 h-5 text-slate-400" />
-        <span className="text-xs font-semibold text-slate-300 uppercase tracking-widest">
+    <div style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col rounded-2xl overflow-hidden mb-6 shadow-md">
+      <div style={{ background: 'var(--surface-secondary)', borderBottom: '1px solid var(--border)' }} className="flex items-center gap-3 px-4 py-3">
+        <Code2 style={{ color: 'var(--text-muted)' }} className="w-5 h-5" />
+        <span style={{ color: 'var(--text-secondary)' }} className="text-xs font-semibold uppercase tracking-widest">
           {block.content.fileName || block.content.language}
         </span>
       </div>
       <div className="p-5 overflow-x-auto">
-        <pre className="font-mono text-sm leading-relaxed text-slate-300">
+        <pre style={{ color: 'var(--text-primary)' }} className="font-mono text-sm leading-relaxed">
           <code>{block.content.code}</code>
         </pre>
       </div>
@@ -37,8 +37,8 @@ export function InteractiveQuizBlockComponent({ block }: { block: InteractiveQui
   const isCorrect = selectedOption?.isCorrect;
 
   return (
-    <div className="flex flex-col gap-4 p-6 bg-slate-900/40 rounded-3xl border border-white/5 mb-6">
-      <h4 className="text-lg font-bold text-white mb-2">{block.content.question}</h4>
+    <div style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col gap-4 p-6 rounded-3xl mb-6 shadow-md">
+      <h4 style={{ color: 'var(--text-primary)' }} className="text-lg font-bold mb-2">{block.content.question}</h4>
       
       <div className="flex flex-col gap-3">
         {block.content.options.map(option => (
@@ -46,12 +46,16 @@ export function InteractiveQuizBlockComponent({ block }: { block: InteractiveQui
             key={option.id}
             onClick={() => !isSubmitted && setSelectedId(option.id)}
             disabled={isSubmitted}
-            className={`text-left p-4 rounded-xl border transition-colors ${
-              selectedId === option.id
-                ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-50'
-                : 'bg-slate-800/50 border-white/5 text-slate-300 hover:bg-slate-800'
-            } ${isSubmitted && option.isCorrect ? 'bg-green-500/20 border-green-500/50 text-green-300' : ''}
-            ${isSubmitted && selectedId === option.id && !option.isCorrect ? 'bg-red-500/20 border-red-500/50 text-red-300' : ''}`}
+            style={{
+              background: selectedId === option.id ? 'var(--accent-soft)' : 'var(--surface-secondary)',
+              borderColor: selectedId === option.id ? 'var(--accent-primary)' : 'var(--border)',
+              color: selectedId === option.id ? 'var(--accent-primary)' : 'var(--text-primary)',
+            }}
+            className={`text-left p-4 rounded-xl border transition-colors hover:border-[var(--accent-border)] ${
+              isSubmitted && option.isCorrect ? '!bg-green-500/20 !border-green-500/50 !text-green-600 dark:!text-green-300' : ''
+            } ${
+              isSubmitted && selectedId === option.id && !option.isCorrect ? '!bg-red-500/20 !border-red-500/50 !text-red-600 dark:!text-red-300' : ''
+            }`}
           >
             {option.text}
           </button>
@@ -61,7 +65,8 @@ export function InteractiveQuizBlockComponent({ block }: { block: InteractiveQui
       {!isSubmitted && selectedId && (
         <button
           onClick={() => setIsSubmitted(true)}
-          className="mt-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-colors self-end"
+          style={{ background: 'var(--accent-primary)', color: '#FFFFFF' }}
+          className="mt-2 px-6 py-3 font-bold rounded-xl transition-all self-end shadow-md"
         >
           Check Answer
         </button>
@@ -73,7 +78,7 @@ export function InteractiveQuizBlockComponent({ block }: { block: InteractiveQui
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             className={`mt-4 p-4 rounded-xl border ${
-              isCorrect ? 'bg-green-500/10 border-green-500/20 text-green-300' : 'bg-red-500/10 border-red-500/20 text-red-300'
+              isCorrect ? 'bg-green-500/10 border-green-500/20 text-green-600 dark:text-green-300' : 'bg-red-500/10 border-red-500/20 text-red-600 dark:text-red-300'
             }`}
           >
             <span className="font-bold block mb-1">
@@ -98,9 +103,9 @@ export function ChecklistBlockComponent({ block }: { block: ChecklistBlock }) {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-6 bg-slate-900/40 rounded-3xl border border-white/5 mb-6">
+    <div style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col gap-4 p-6 rounded-3xl mb-6 shadow-md">
       {block.content.title && (
-        <h4 className="text-lg font-bold text-white">{block.content.title}</h4>
+        <h4 style={{ color: 'var(--text-primary)' }} className="text-lg font-bold">{block.content.title}</h4>
       )}
       <div className="flex flex-col gap-3">
         {items.map(item => (
@@ -111,12 +116,12 @@ export function ChecklistBlockComponent({ block }: { block: ChecklistBlock }) {
           >
             <div className="mt-0.5 shrink-0">
               {item.completed ? (
-                <CheckCircle2 className="w-5 h-5 text-green-400" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
               ) : (
-                <Circle className="w-5 h-5 text-slate-500 group-hover:text-slate-400 transition-colors" />
+                <Circle style={{ color: 'var(--text-muted)' }} className="w-5 h-5 transition-colors" />
               )}
             </div>
-            <span className={`text-lg transition-colors ${item.completed ? 'text-slate-500 line-through' : 'text-slate-300'}`}>
+            <span style={{ color: item.completed ? 'var(--text-muted)' : 'var(--text-primary)' }} className={`text-lg transition-colors ${item.completed ? 'line-through' : ''}`}>
               {item.text}
             </span>
           </button>
@@ -137,13 +142,13 @@ export function AccordionBlockComponent({ block }: { block: AccordionBlock }) {
       {block.content.items.map(item => {
         const isOpen = openId === item.id;
         return (
-          <div key={item.id} className="flex flex-col bg-slate-900/40 rounded-2xl border border-white/5 overflow-hidden">
+          <div key={item.id} style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col rounded-2xl overflow-hidden shadow-sm">
             <button
               onClick={() => setOpenId(isOpen ? null : item.id)}
-              className="flex items-center justify-between p-5 text-left hover:bg-slate-800/50 transition-colors"
+              className="flex items-center justify-between p-5 text-left hover:bg-[var(--accent-soft)] transition-colors"
             >
-              <span className="font-bold text-white text-lg">{item.title}</span>
-              <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+              <span style={{ color: 'var(--text-primary)' }} className="font-bold text-lg">{item.title}</span>
+              <ChevronDown style={{ color: 'var(--text-muted)' }} className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             <AnimatePresence>
               {isOpen && (
@@ -151,7 +156,8 @@ export function AccordionBlockComponent({ block }: { block: AccordionBlock }) {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="px-5 pb-5 text-slate-300 leading-relaxed"
+                  style={{ color: 'var(--text-secondary)' }}
+                  className="px-5 pb-5 leading-relaxed"
                 >
                   {item.content}
                 </motion.div>

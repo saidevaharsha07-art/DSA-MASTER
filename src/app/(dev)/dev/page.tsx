@@ -45,7 +45,7 @@ export default function DevOverviewPage() {
 
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <MetricCard title="Registered Platforms" value={4} subtext="CodeChef, Codeforces, LeetCode, MentorPick" icon="🔌" />
+        <MetricCard title="Registered Platforms" value={4} subtext="CodeChef, Codeforces, LeetCode, GeeksforGeeks" icon="🔌" />
         <MetricCard title="Total Dataset Problems" value="2,166" subtext="1,371 CodeChef + 792 Codeforces + 3 LeetCode" icon="📚" />
         <MetricCard title="User Solved Problems" value={profile.solvedProblemIds.size} subtext={`XP: ${profile.totalXp} | Streak: ${profile.streakInfo.currentStreak}d`} icon="👤" />
         <MetricCard title="Contests Attended" value={contestHistory.length} subtext={`Cache Hit Ratio: ${performanceStats.cacheHitRatio}%`} icon="🏆" />

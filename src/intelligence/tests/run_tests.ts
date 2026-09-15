@@ -61,6 +61,10 @@ import { testFinalProductionReadiness } from './final-production-readiness.test'
 import { testCanonicalActivityRealIntegration } from './canonical-activity-real-integration.test';
 import { testProductionPersistenceRealIntegration } from './production-persistence-real-integration.test';
 import { testPlatformIntelligenceRealIntegration } from './platform-intelligence-real-integration.test';
+import { testPhase13CloudProductionRealIntegration } from './phase13-cloud-production-real-integration.test';
+import { runJourneyHeatmapCalendarTests } from './journey-heatmap-calendar-integration.test';
+import { testEndToEndDataConsistencyIntegration } from './end-to-end-data-consistency-integration.test';
+import { testProductionAuthIntegration } from './production-auth-integration.test';
 
 export async function runAllIntelligenceTests(): Promise<void> {
   console.log('==================================================');
@@ -190,6 +194,18 @@ export async function runAllIntelligenceTests(): Promise<void> {
     console.log('\n=== PHASE 12.0: PRODUCTION PERSISTENCE, REAL PLATFORM SYNC & RELIABILITY ===');
     await testProductionPersistenceRealIntegration();
     await testPlatformIntelligenceRealIntegration();
+
+    console.log('\n=== PHASE 13.0: REAL CLOUD DEPLOYMENT, AUTHENTICATED MULTI-DEVICE SYNC & PLATFORM CONNECTIONS ===');
+    await testPhase13CloudProductionRealIntegration();
+
+    console.log('\n=== JOURNEY HEATMAP MONTHLY CALENDAR INTEGRATION ===');
+    await runJourneyHeatmapCalendarTests();
+
+    console.log('\n=== END-TO-END DATA CONSISTENCY INTEGRATION ===');
+    await testEndToEndDataConsistencyIntegration();
+
+    console.log('\n=== PRODUCTION AUTHENTICATION & IDENTITY INTEGRATION ===');
+    await testProductionAuthIntegration();
 
     await runMasterProductionSuite();
 

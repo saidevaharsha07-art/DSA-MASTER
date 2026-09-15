@@ -27,6 +27,23 @@ export const CurriculumRepository = {
     ALL_PROBLEMS.filter(p => p.categorySlug === categorySlug || p.categoryId === categorySlug)
       .sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
 
+  // Platform Catalog & Totals
+  getProblemsByPlatform: (platform: string): ProblemModel[] => {
+    if (platform === 'geeksforgeeks' || platform === 'mentorpick') return [];
+    if (platform === 'codechef') return ALL_PROBLEMS.filter(p => p.url.includes('codechef.com'));
+    if (platform === 'codeforces') return ALL_PROBLEMS.filter(p => p.url.includes('codeforces.com'));
+    return ALL_PROBLEMS.filter(p => !p.url.includes('codeforces.com') && !p.url.includes('codechef.com') && !p.url.includes('geeksforgeeks.org'));
+  },
+  getPlatformCount: (platform: string): number => {
+    if (platform === 'geeksforgeeks' || platform === 'mentorpick') return 0;
+    if (platform === 'codechef') return ALL_PROBLEMS.filter(p => p.url.includes('codechef.com')).length;
+    if (platform === 'codeforces') return ALL_PROBLEMS.filter(p => p.url.includes('codeforces.com')).length;
+    return ALL_PROBLEMS.filter(p => !p.url.includes('codeforces.com') && !p.url.includes('codechef.com') && !p.url.includes('geeksforgeeks.org')).length;
+  },
+  getTotalCanonicalProblems: (): number => {
+    return ALL_PROBLEMS.length;
+  },
+
   // Search
   searchCurriculum: (query: string): { problems: ProblemModel[]; patterns: PatternModel[]; categories: CategoryModel[] } => {
     const q = query.toLowerCase().trim();

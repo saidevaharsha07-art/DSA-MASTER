@@ -4,10 +4,17 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
 import { AuthService } from '../services/auth.service';
 import { AuthState } from '../services/auth-state.service';
 import { AuthProviderType } from '../models/user.models';
+import { AuthResult, SignInCredentials } from '../models/auth.models';
+import { SignUpCredentials } from '../providers/supabase.provider';
 import { Container } from '@/src/core/container/container';
 
-interface AuthContextType extends AuthState {
-  signIn: (providerType: AuthProviderType) => Promise<void>;
+export interface AuthContextType extends AuthState {
+  readonly isLoading: boolean;
+  signIn: (providerType?: AuthProviderType, credentials?: SignInCredentials) => Promise<AuthResult>;
+  signUp: (credentials: SignUpCredentials) => Promise<AuthResult>;
+  signInWithGoogle: () => Promise<AuthResult & { url?: string }>;
+  handleOAuthCallback: (params: { code?: string; accessToken?: string; refreshToken?: string; expiresIn?: number; mockUserId?: string; error?: string }) => Promise<AuthResult>;
+  resetPassword: (email: string) => Promise<{ success: boolean; message?: string; error?: string }>;
   signOut: () => Promise<void>;
   linkAccount: (providerType: AuthProviderType) => Promise<void>;
   unlinkAccount: (providerType: AuthProviderType) => Promise<void>;
@@ -24,21 +31,71 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   });
 
   const [state, setState] = useState<AuthState>(() => authService.getStateService().getState());
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const unsub = authService.getStateService().subscribe((nextState) => {
       setState(nextState);
     });
-    authService.restoreSession();
-    return unsub;
+
+    let isMounted = true;
+    authService.restoreSession().finally(() => {
+      if (isMounted) setIsLoading(false);
+    });
+
+    return () => {
+      isMounted = false;
+      unsub();
+    };
   }, [authService]);
 
-  const signIn = async (providerType: AuthProviderType) => {
-    await authService.signIn(providerType);
+  const signIn = async (providerType: AuthProviderType = 'supabase', credentials?: SignInCredentials): Promise<AuthResult> => {
+    setIsLoading(true);
+    try {
+      return await authService.signIn(providerType, credentials);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const signUp = async (credentials: SignUpCredentials): Promise<AuthResult> => {
+    setIsLoading(true);
+    try {
+      return await authService.signUp(credentials);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const signInWithGoogle = async (): Promise<AuthResult & { url?: string }> => {
+    setIsLoading(true);
+    try {
+      return await authService.signInWithGoogle();
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleOAuthCallback = async (params: { code?: string; accessToken?: string; refreshToken?: string; expiresIn?: number; mockUserId?: string; error?: string }): Promise<AuthResult> => {
+    setIsLoading(true);
+    try {
+      return await authService.handleOAuthCallback(params);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const resetPassword = async (email: string): Promise<{ success: boolean; message?: string; error?: string }> => {
+    return await authService.resetPassword(email);
   };
 
   const signOut = async () => {
-    await authService.signOut();
+    setIsLoading(true);
+    try {
+      await authService.signOut();
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const linkAccount = async (providerType: AuthProviderType) => {
@@ -50,7 +107,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ ...state, signIn, signOut, linkAccount, unlinkAccount }}>
+    <AuthContext.Provider
+      value={{
+        ...state,
+        isLoading,
+        signIn,
+        signUp,
+        signInWithGoogle,
+        handleOAuthCallback,
+        resetPassword,
+        signOut,
+        linkAccount,
+        unlinkAccount,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

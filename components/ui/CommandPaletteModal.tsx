@@ -17,7 +17,7 @@ export function CommandPaletteModal({ isOpen, onClose }: { isOpen: boolean; onCl
     { title: "Statistics", subtitle: "Learning velocity & analytics", href: "/statistics", icon: BarChart3 },
     { title: "Achievements", subtitle: "Badges and unlockable rewards", href: "/achievements", icon: Trophy },
     { title: "Settings", subtitle: "Appearance, learning engine & privacy", href: "/settings", icon: Settings },
-    { title: "Profile", subtitle: "User credentials and account status", href: "/profile", icon: UserRound },
+    { title: "Developer Profile", subtitle: "User credentials, level & platform handles", href: "/dashboard", icon: UserRound },
   ];
 
   const filtered = items.filter(

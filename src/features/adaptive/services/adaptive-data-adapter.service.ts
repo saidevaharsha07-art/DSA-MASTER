@@ -28,7 +28,7 @@ export class AdaptiveDataAdapterService {
    * Reconstructs canonical PracticeAttempt array from ProgressService activity log.
    */
   public static getCanonicalAttempts(userId = 'default_user'): PracticeAttempt[] {
-    const logs = progressService.getActivityLog();
+    const logs = progressService.getActivityLog(userId);
     return logs.map((l, idx) => ({
       id: `att-${l.timestamp}-${idx}`,
       userId,

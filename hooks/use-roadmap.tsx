@@ -15,6 +15,7 @@ const empty: UserState = {
   awardedXp: [],
   xp: 0,
   dailyGoal: 3,
+  completedProblemIds: [],
 };
 
 const ProblemSchema = z.object({
@@ -39,6 +40,7 @@ const StoredStateSchema = z.object({
   awardedXp: z.array(z.number().int()).optional(),
   xp: z.number().int().nonnegative().optional(),
   dailyGoal: z.number().int().positive().optional(),
+  completedProblemIds: z.array(z.string()).optional(),
 });
 
 type Roadmap = {
@@ -97,15 +99,18 @@ function stateFromStorage(raw: string | null, validIds: Set<number>): UserState 
   }
 }
 
+import { useActiveUser } from "@/src/hooks/useActiveUser";
+
 export function RoadmapProvider({ children }: { children: React.ReactNode }) {
+  const { userId } = useActiveUser();
   const [problems, setProblems] = useState<Problem[]>([]);
-  const [state, setState] = useState<UserState>(() => progressService.getState());
+  const [state, setState] = useState<UserState>(() => progressService.getState(userId));
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const syncStateFromService = useCallback(() => {
-    setState(progressService.getState());
-  }, []);
+    setState(progressService.getState(userId));
+  }, [userId]);
 
   const load = useCallback(async () => {
     setReady(false);
@@ -141,7 +146,7 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
       syncStateFromService();
     });
     return () => unsub();
-  }, [load, syncStateFromService]);
+  }, [load, syncStateFromService, userId]);
 
   const value = useMemo(
     () => ({
@@ -151,19 +156,19 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
       error,
       retry: load,
       toggle: (key: "completed" | "favorites", id: number) => {
-        const next = progressService.toggle(key, id);
+        const next = progressService.toggle(key, id, userId);
         setState(next);
       },
       schedule: (id: number, days: number) => {
-        const next = progressService.schedule(id, days);
+        const next = progressService.schedule(id, days, userId);
         setState(next);
       },
       markRevised: (id: number) => {
-        const next = progressService.markRevised(id);
+        const next = progressService.markRevised(id, userId);
         setState(next);
       },
       note: (id: number, value: string) => {
-        const next = progressService.note(id, value);
+        const next = progressService.note(id, value, userId);
         setState(next);
       },
       search: (query: string) =>
@@ -176,11 +181,11 @@ export function RoadmapProvider({ children }: { children: React.ReactNode }) {
               .map((result) => result.item)
           : problems,
       setDailyGoal: (value: number) => {
-        const next = progressService.setDailyGoal(value);
+        const next = progressService.setDailyGoal(value, userId);
         setState(next);
       },
     }),
-    [error, load, problems, ready, state],
+    [error, load, problems, ready, state, userId],
   );
 
   return <RoadmapContext.Provider value={value}>{children}</RoadmapContext.Provider>;

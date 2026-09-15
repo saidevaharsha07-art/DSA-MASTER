@@ -3,7 +3,7 @@
  * Centralized immutable values eliminating hardcoded strings and magic numbers.
  */
 
-export const APP_NAME = 'DSA Master';
+export const APP_NAME = 'DSA CRACKER';
 export const APP_VERSION = '4.0.0';
 
 export const ENGINE_VERSIONS = Object.freeze({

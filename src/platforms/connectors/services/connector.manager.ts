@@ -8,6 +8,7 @@ import { CodeforcesConnector } from '../providers/codeforces.connector';
 import { LeetCodeConnector } from '../providers/leetcode.connector';
 import { CodeChefConnector } from '../providers/codechef.connector';
 import { MentorPickConnector } from '../providers/mentorpick.connector';
+import { GeeksForGeeksConnector } from '../providers/geeksforgeeks.connector';
 import { PluginManager } from '@/src/core/plugins/plugin.manager';
 
 export class ConnectorManager {
@@ -21,8 +22,9 @@ export class ConnectorManager {
     const lc = new LeetCodeConnector();
     const cc = new CodeChefConnector();
     const mp = new MentorPickConnector();
+    const gfg = new GeeksForGeeksConnector();
 
-    [mock, cf, lc, cc, mp].forEach((c) => {
+    [mock, cf, lc, cc, mp, gfg].forEach((c) => {
       ConnectorRegistry.register(c);
       PluginManager.registerPlugin({
         id: `plugin-connector-${c.platformId}`,

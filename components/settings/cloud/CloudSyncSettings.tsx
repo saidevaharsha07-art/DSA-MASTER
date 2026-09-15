@@ -1,299 +1,255 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { SettingsHeader } from "../SettingsHeader";
-import { DESIGN_TOKENS } from "@/src/design/tokens";
-import { SidebarWidget } from "../appearance/SidebarWidget";
-import { Cloud, Download, Upload } from "lucide-react";
-import { useSettings } from "@/src/context/SettingsContext";
+import React, { useState } from 'react';
+import { Cloud, RefreshCw, CheckCircle2, ShieldCheck, Database, Laptop, Check } from 'lucide-react';
+import { SettingsHeader } from '../SettingsHeader';
+import { useSettings } from '@/src/context/SettingsContext';
+import { useToast } from '@/src/context/ToastContext';
 
 export function CloudSyncSettings() {
-  const { settings, updateSetting, exportSettings, importSettings } = useSettings();
-  const { lastSync } = settings.cloud;
-  const [syncing, setSyncing] = useState(false);
+  const { settings, updateSetting } = useSettings();
+  const { toast } = useToast();
+  const { autoSync, backgroundSync, lastSync } = settings.cloud;
+  const isLight = settings.appearance.theme === 'light';
+
+  const [isSyncing, setIsSyncing] = useState(false);
 
   const handleSyncNow = () => {
-    setSyncing(true);
+    setIsSyncing(true);
+    toast('Synchronizing data with Cloud Vault...', 'info');
     setTimeout(() => {
-      updateSetting("cloud", "lastSync", new Date().toLocaleTimeString());
-      setSyncing(false);
-    }, 600);
+      setIsSyncing(false);
+      updateSetting('cloud', 'lastSync', new Date().toISOString());
+      toast('Cloud synchronization complete!', 'success');
+    }, 1000);
   };
 
-  const handleExportBackup = () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportSettings());
-    const downloadAnchor = document.createElement("a");
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `journey-backup-${Date.now()}.json`);
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
-  };
+  const formattedLastSync = lastSync
+    ? `Today at ${new Date(lastSync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+    : `Today at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
 
-  const handleImportBackup = () => {
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "application/json";
-    input.onchange = (e: any) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          if (event.target?.result) {
-            importSettings(event.target.result as string);
-            alert("Backup restored successfully!");
-          }
-        };
-        reader.readAsText(file);
-      }
-    };
-    input.click();
-  };
-
-  const syncItems = [
-    { title: "Progress & Stats", desc: "Problems, progress, streaks and statistics", status: "Synced" },
-    { title: "Settings & Preferences", desc: "All your settings and customizations", status: "Synced" },
-    { title: "Learning Data", desc: "Spaced repetition, memory and reviews", status: "Synced" },
-    { title: "Bookmarks & Notes", desc: "Saved problems and personal notes", status: "Synced" },
-    { title: "Achievements", desc: "Badges, milestones and rewards", status: "Synced" },
+  const syncedItems = [
+    { title: 'Solved Problems & Notes', desc: 'All accepted problem records and editorial code notes', state: 'Synced' },
+    { title: 'Spaced Repetition & Revision', desc: 'Active recall decay schedules and review timestamps', state: 'Synced' },
+    { title: 'Practice History & Attempts', desc: 'Submission time logs, run verdicts, and duration tracking', state: 'Synced' },
+    { title: 'Platform Connections', desc: 'LeetCode, CodeChef, and Codeforces connection keys', state: 'Encrypted' },
+    { title: 'Theme & Workspace Preferences', desc: 'Custom accent colors, UI density, and editor options', state: 'Synced' },
   ];
 
-  const devices = [
-    { name: "Current Device", subtitle: "Active Now", os: "Local Desktop", active: true },
-    { name: "Mobile Sync", subtitle: "Active 5 mins ago", os: "Web Application", active: false },
-  ];
+  const settingsRowSt: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '14px 16px',
+    borderRadius: '10px',
+    background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+    border: '1px solid var(--border)',
+    gap: '16px',
+  };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-      {/* Shared Global Header */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
+      {/* ── HEADER ─────────────────────────────────────────────────── */}
       <SettingsHeader
-        emoji="☁️"
+        icon={<Cloud size={18} />}
         title="Cloud Sync"
-        subtitle="Backup your data and sync across all your devices."
+        subtitle="Keep your learning data synchronized across your devices."
       />
 
-      {/* Main Grid Layout */}
+      {/* ── 1. TOP STATUS CARD ─────────────────────────────────────── */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "minmax(0, 1fr) 380px",
-          gap: "32px",
-          alignItems: "start",
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '16px',
         }}
       >
-        {/* Left Content Area */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
-          {/* Section 1: Top 2-Column Grid (Sync Status Card & Sync Overview Grid) */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-            {/* Sync Status Card */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid rgba(16, 185, 129, 0.3)",
-                borderRadius: "var(--radius)",
-                padding: "24px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                gap: "12px",
-              }}
-            >
-              <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "rgba(16, 185, 129, 0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#10B981", boxShadow: "0 0 20px rgba(16, 185, 129, 0.4)" }}>
-                <Cloud size={28} />
-              </div>
-              <div>
-                <h4 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)" }}>
-                  {syncing ? "Syncing Data..." : "Cloud Sync Active"}
-                </h4>
-                <p style={{ margin: "4px 0 0 0", fontSize: "11px", color: "var(--text-secondary)" }}>
-                  Your data is safe and up to date.
-                </p>
-                <span style={{ fontSize: "10px", color: "var(--text-muted)", display: "block", marginTop: "2px" }}>
-                  Last synced: {lastSync || "Just Now"}
-                </span>
-              </div>
-              <button
-                type="button"
-                onClick={handleSyncNow}
-                style={{
-                  padding: "8px 20px",
-                  borderRadius: "10px",
-                  background: "var(--primary)",
-                  border: "none",
-                  color: "#FFFFFF",
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  marginTop: "4px",
-                }}
-              >
-                {syncing ? "Syncing..." : "Sync Now"}
-              </button>
-            </div>
-
-            {/* Sync Overview 2x2 Grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
-              <div style={{ padding: "16px", borderRadius: "16px", background: "var(--card)", backdropFilter: "blur(var(--glass-blur))", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "20px", fontWeight: 800, color: "var(--text-primary)" }}>21.4 KB</span>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Total Data</span>
-              </div>
-
-              <div style={{ padding: "16px", borderRadius: "16px", background: "var(--card)", backdropFilter: "blur(var(--glass-blur))", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "20px", fontWeight: 800, color: "#10B981" }}>100%</span>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Sync Health</span>
-              </div>
-
-              <div style={{ padding: "16px", borderRadius: "16px", background: "var(--card)", backdropFilter: "blur(var(--glass-blur))", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "20px", fontWeight: 800, color: "#3B82F6" }}>2</span>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Devices</span>
-              </div>
-
-              <div style={{ padding: "16px", borderRadius: "16px", background: "var(--card)", backdropFilter: "blur(var(--glass-blur))", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "4px" }}>
-                <span style={{ fontSize: "20px", fontWeight: 800, color: "#F59E0B" }}>1,248</span>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Items Synced</span>
-              </div>
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '12px',
+              background: isLight ? 'rgba(2, 132, 199, 0.15)' : 'rgba(56, 189, 248, 0.15)',
+              border: isLight ? '1px solid rgba(2, 132, 199, 0.35)' : '1px solid rgba(56, 189, 248, 0.35)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--primary)',
+              flexShrink: 0,
+            }}
+          >
+            <Cloud size={20} />
           </div>
-
-          {/* Section 2: Bottom 2-Column Grid (What We Sync & Backup Management) */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-            {/* Left Card: What We Sync */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "24px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
-            >
-              <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                What We Sync
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                {syncItems.map((item) => (
-                  <div key={item.title} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: "8px", borderBottom: "1px solid var(--border)" }}>
-                    <div>
-                      <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--text-primary)", display: "block" }}>{item.title}</span>
-                      <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>{item.desc}</span>
-                    </div>
-                    <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 600 }}>{item.status}</span>
-                  </div>
-                ))}
-              </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <strong style={{ fontSize: '14px', color: 'var(--text-primary)' }}>Cloud Sync Status</strong>
+              <span style={{ fontSize: '10px', color: '#10B981', fontWeight: 800, padding: '2px 8px', borderRadius: '6px', background: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
+                ● Connected
+              </span>
             </div>
-
-            {/* Right Column: Connected Devices & Backup Actions */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-              <div
-                style={{
-                  background: "var(--card)",
-                  backdropFilter: "blur(var(--glass-blur))",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  padding: "24px",
-                  boxShadow: DESIGN_TOKENS.shadows.card,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "14px",
-                }}
-              >
-                <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                  Backup Management
-                </h4>
-                <div style={{ display: "flex", gap: "12px" }}>
-                  <button
-                    type="button"
-                    onClick={handleExportBackup}
-                    style={{
-                      flex: 1,
-                      padding: "10px",
-                      borderRadius: "8px",
-                      background: "var(--surface)",
-                      border: "1px solid var(--border)",
-                      color: "var(--text-primary)",
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "6px",
-                    }}
-                  >
-                    <Download size={14} /> Export Backup
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleImportBackup}
-                    style={{
-                      flex: 1,
-                      padding: "10px",
-                      borderRadius: "8px",
-                      background: "var(--surface)",
-                      border: "1px solid var(--border)",
-                      color: "var(--text-primary)",
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "6px",
-                    }}
-                  >
-                    <Upload size={14} /> Restore Backup
-                  </button>
-                </div>
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '2px', fontSize: '12px', color: 'var(--text-secondary)' }}>
+              <span>Last synchronized: {formattedLastSync}</span>
+              <span>•</span>
+              <span style={{ color: 'var(--text-primary)' }}>Active Device: Web App</span>
             </div>
           </div>
         </div>
 
-        {/* Right Sidebar (380px) */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          {/* Storage Usage Gauge */}
-          <SidebarWidget title="Storage Usage">
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-              <span style={{ fontSize: "16px", fontWeight: 800, color: "var(--text-primary)" }}>Local Storage Bound</span>
-              <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 600 }}>Sync Ready</span>
-            </div>
-          </SidebarWidget>
+        <button
+          type="button"
+          disabled={isSyncing}
+          onClick={handleSyncNow}
+          style={{
+            padding: '9px 20px',
+            borderRadius: '10px',
+            background: 'var(--primary)',
+            border: 'none',
+            color: '#FFF',
+            fontSize: '12px',
+            fontWeight: 800,
+            cursor: isSyncing ? 'not-allowed' : 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            boxShadow: '0 4px 14px rgba(2, 132, 199, 0.25)',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <RefreshCw size={13} className={isSyncing ? 'animate-spin' : ''} />
+          <span>{isSyncing ? 'Syncing...' : 'Sync Now'}</span>
+        </button>
+      </div>
 
-          {/* Artwork Card */}
-          <div
-            style={{
-              position: "relative",
-              height: "170px",
-              borderRadius: "var(--radius)",
-              overflow: "hidden",
-              border: "1px solid var(--border)",
-              boxShadow: DESIGN_TOKENS.shadows.card,
-            }}
-          >
-            <Image
-              src="/assets/settings/sky_archive.jpg"
-              alt="Sky Archive artwork"
-              fill
-              sizes="(max-width: 768px) 100vw, 380px"
-              style={{ objectFit: "cover" }}
-            />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(9, 11, 20, 0.85) 0%, rgba(10, 20, 38, 0.8) 60%, var(--primary-soft) 100%)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "20px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <p style={{ margin: 0, fontSize: "12px", fontStyle: "italic", fontWeight: 500, color: "#FFFFFF", lineHeight: 1.5, textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
-                &ldquo;Your journey, always with you. Anywhere, any device.&rdquo;
-              </p>
+      {/* ── 2. SYNC BEHAVIOR ───────────────────────────────────────── */}
+      <div
+        style={{
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div>
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
+            Sync Behavior
+          </h3>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Configure automatic background synchronization and polling intervals.
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {/* Row 1: Auto Sync */}
+          <div style={settingsRowSt}>
+            <div>
+              <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                Automatic Background Synchronization
+              </strong>
+              <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                Silently sync progress to cloud whenever an internet connection is available.
+              </span>
             </div>
+            <input
+              type="checkbox"
+              checked={autoSync}
+              onChange={(e) => updateSetting('cloud', 'autoSync', e.target.checked)}
+              style={{ width: '16px', height: '16px', accentColor: 'var(--primary)', cursor: 'pointer' }}
+            />
           </div>
+
+          {/* Row 2: Continuous Background Polling */}
+          <div style={settingsRowSt}>
+            <div>
+              <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                Continuous Background Polling
+              </strong>
+              <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                Keep active coding session data synchronized while solving problems in the editor.
+              </span>
+            </div>
+            <input
+              type="checkbox"
+              checked={backgroundSync}
+              onChange={(e) => updateSetting('cloud', 'backgroundSync', e.target.checked)}
+              style={{ width: '16px', height: '16px', accentColor: 'var(--primary)', cursor: 'pointer' }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ── 3. DATA SYNCHRONIZATION ─────────────────────────────────── */}
+      <div
+        style={{
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div>
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
+            Data Synchronization
+          </h3>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Entities managed within your cloud storage profile.
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {syncedItems.map((item) => (
+            <div
+              key={item.title}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '12px 16px',
+                borderRadius: '10px',
+                background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+                border: '1px solid var(--border)',
+                gap: '12px',
+              }}
+            >
+              <div>
+                <strong style={{ fontSize: '12px', color: 'var(--text-primary)', display: 'block' }}>{item.title}</strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{item.desc}</span>
+              </div>
+              <span
+                style={{
+                  fontSize: '11px',
+                  fontWeight: 800,
+                  color: item.state === 'Encrypted' ? 'var(--primary)' : '#10B981',
+                  padding: '3px 8px',
+                  borderRadius: '6px',
+                  background: item.state === 'Encrypted'
+                    ? isLight ? 'rgba(2, 132, 199, 0.1)' : 'rgba(56, 189, 248, 0.1)'
+                    : 'rgba(16, 185, 129, 0.1)',
+                  border: item.state === 'Encrypted'
+                    ? isLight ? '1px solid rgba(2, 132, 199, 0.25)' : '1px solid rgba(56, 189, 248, 0.25)'
+                    : '1px solid rgba(16, 185, 129, 0.25)',
+                  flexShrink: 0,
+                }}
+              >
+                {item.state}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

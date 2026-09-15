@@ -2,6 +2,7 @@ export type LanguageId =
   | 'java' 
   | 'python' 
   | 'cpp' 
+  | 'c'
   | 'javascript' 
   | 'typescript' 
   | 'go' 
@@ -37,8 +38,23 @@ export interface ExecutionRequest {
   language: LanguageId;
   code: string;
   stdin?: string;
+  customInput?: string;
+  sampleIndex?: number;
   timeoutMs?: number;
   memoryLimitMb?: number;
+}
+
+export interface TestcaseResult {
+  testcaseIndex: number;
+  passed: boolean;
+  input: string;
+  expectedOutput: string;
+  actualOutput: string;
+  status: 'Passed' | 'Wrong Answer' | 'Runtime Error' | 'Time Limit Exceeded' | 'Compilation Error';
+  runtimeMs: number;
+  memoryMb: number;
+  diff?: string;
+  error?: string;
 }
 
 export interface ExecutionResponse {
@@ -50,6 +66,9 @@ export interface ExecutionResponse {
   memoryMb: number;
   exitCode: number;
   providerUsed: string;
+  testcaseResults?: TestcaseResult[];
+  totalTestcases?: number;
+  passedTestcases?: number;
 }
 
 export interface SubmissionRequest {
@@ -57,17 +76,6 @@ export interface SubmissionRequest {
   language: LanguageId;
   code: string;
   userId?: string;
-}
-
-export interface TestcaseResult {
-  testcaseIndex: number;
-  passed: boolean;
-  input: string;
-  expectedOutput: string;
-  actualOutput: string;
-  runtimeMs: number;
-  memoryMb: number;
-  diff?: string;
 }
 
 export interface SubmissionResponse {
@@ -81,6 +89,13 @@ export interface SubmissionResponse {
   beatsRuntimePct: number;
   beatsMemoryPct: number;
   testcaseDetails: TestcaseResult[];
+  failedTestcase?: {
+    testcaseIndex: number;
+    input: string;
+    expectedOutput: string;
+    actualOutput: string;
+    error?: string;
+  };
   errorLog?: string;
   providerUsed: string;
   timestamp: string;

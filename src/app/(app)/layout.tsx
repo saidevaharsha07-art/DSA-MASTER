@@ -30,8 +30,8 @@ function ProductionNavigationHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-6">
-            <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-wider bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              <span>🚀</span> DSA MASTER
+            <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-wider bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+              <span>🎯</span> DSA CRACKER
             </Link>
             <nav className="hidden md:flex items-center gap-1">
               {navItems.map((item) => {

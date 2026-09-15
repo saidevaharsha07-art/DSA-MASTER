@@ -110,13 +110,13 @@ export function CommandPalette() {
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             style={{
               position: 'fixed', top: '20vh', left: '50%', width: '90%', maxWidth: '640px',
-              background: colors.card, border: `1px solid ${colors.border}`, borderRadius: radius.xl,
-              boxShadow: shadows.xl, zIndex: zIndex.modal + 1, overflow: 'hidden',
+              background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '16px',
+              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.25)', zIndex: zIndex.modal + 1, overflow: 'hidden',
               display: 'flex', flexDirection: 'column'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', padding: '16px 20px', borderBottom: `1px solid ${colors.border}` }}>
-              <Search size={20} color={colors.muted} style={{ marginRight: '16px' }} />
+            <div style={{ display: 'flex', alignItems: 'center', padding: '16px 20px', borderBottom: '1px solid var(--border)' }}>
+              <Search size={20} color="var(--text-muted)" style={{ marginRight: '16px' }} />
               <input
                 ref={inputRef}
                 type="text"
@@ -125,16 +125,16 @@ export function CommandPalette() {
                 onKeyDown={handleKeyDown}
                 placeholder="Search problems, patterns, notes, or commands..."
                 style={{
-                  flex: 1, background: 'transparent', border: 'none', color: colors.foreground,
-                  fontSize: typography.fontSize.body, fontFamily: typography.fontFamily.sans, outline: 'none'
+                  flex: 1, background: 'transparent', border: 'none', color: 'var(--text-primary)',
+                  fontSize: '14px', outline: 'none'
                 }}
               />
-              <Badge variant="outline" style={{ fontSize: '10px' }}>ESC</Badge>
+              <span style={{ fontSize: '10px', padding: '2px 8px', borderRadius: '4px', border: '1px solid var(--border)', color: 'var(--text-muted)' }}>ESC</span>
             </div>
 
             <div style={{ padding: '12px', maxHeight: '400px', overflowY: 'auto' }}>
               {searchResults.length === 0 ? (
-                <div style={{ padding: '32px', textAlign: 'center', color: colors.muted, fontSize: typography.fontSize.caption }}>
+                <div style={{ padding: '32px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '13px' }}>
                   No results found for &quot;{query}&quot;
                 </div>
               ) : (
@@ -145,28 +145,28 @@ export function CommandPalette() {
                     onClick={() => { result.action(); setIsOpen(false); }}
                     style={{
                       display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px',
-                      borderRadius: radius.md, cursor: 'pointer',
-                      background: i === activeIndex ? colors.mutedBg : 'transparent',
-                      color: i === activeIndex ? colors.foreground : colors.muted,
+                      borderRadius: '10px', cursor: 'pointer',
+                      background: i === activeIndex ? 'var(--accent-soft)' : 'transparent',
+                      color: i === activeIndex ? 'var(--text-primary)' : 'var(--text-secondary)',
                       transition: 'background 0.1s'
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                      <div style={{ color: i === activeIndex ? colors.primary : 'inherit' }}>{result.icon}</div>
-                      <span style={{ fontSize: typography.fontSize.caption, fontWeight: i === activeIndex ? 600 : 500 }}>{result.title}</span>
+                      <div style={{ color: i === activeIndex ? 'var(--accent-primary)' : 'var(--text-muted)' }}>{result.icon}</div>
+                      <span style={{ fontSize: '13px', fontWeight: i === activeIndex ? 700 : 500 }}>{result.title}</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <span style={{ fontSize: typography.fontSize.label, color: colors.muted }}>{result.type}</span>
-                      {i === activeIndex && <ChevronRight size={16} color={colors.muted} />}
+                      <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{result.type}</span>
+                      {i === activeIndex && <ChevronRight size={16} color="var(--accent-primary)" />}
                     </div>
                   </div>
                 ))
               )}
             </div>
             
-            <div style={{ padding: '8px 16px', borderTop: `1px solid ${colors.border}`, display: 'flex', gap: '16px', background: colors.mutedBg }}>
-              <span style={{ fontSize: typography.fontSize.label, color: colors.muted }}>↑↓ to navigate</span>
-              <span style={{ fontSize: typography.fontSize.label, color: colors.muted }}>↵ to select</span>
+            <div style={{ padding: '8px 16px', borderTop: '1px solid var(--border)', display: 'flex', gap: '16px', background: 'var(--surface-secondary)' }}>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>↑↓ to navigate</span>
+              <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>↵ to select</span>
             </div>
           </motion.div>
         </>

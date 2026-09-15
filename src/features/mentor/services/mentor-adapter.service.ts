@@ -147,7 +147,7 @@ export class MentorAdapterService {
     }
 
     const state = progressService.getState(userId);
-    const logs = progressService.getActivityLog();
+    const logs = progressService.getActivityLog(userId);
 
     const xp = state.xp || 0;
     const level = ProgressService.calculateLevel(xp);

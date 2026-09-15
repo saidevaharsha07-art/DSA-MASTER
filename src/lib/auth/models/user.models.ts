@@ -2,7 +2,7 @@
  * User Identity Models
  */
 
-export type AuthProviderType = 'google' | 'github' | 'email' | 'guest' | 'mock';
+export type AuthProviderType = 'google' | 'github' | 'email' | 'guest' | 'mock' | 'supabase';
 
 export interface LinkedAccount {
   readonly provider: AuthProviderType;

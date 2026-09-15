@@ -1,8 +1,5 @@
-'use client';
-
-import React from 'react';
-import { KingdomOfBeginningsView } from '@/src/features/learn/components/KingdomOfBeginningsView';
+import { redirect } from 'next/navigation';
 
 export default function KingdomOfBeginningsPage() {
-  return <KingdomOfBeginningsView />;
+  redirect('/practice/basic-arrays');
 }

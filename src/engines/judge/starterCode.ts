@@ -6,6 +6,7 @@ export interface StarterCodeMap {
   python: string;
   java: string;
   cpp: string;
+  c: string;
   go: string;
   rust: string;
   csharp: string;
@@ -22,6 +23,7 @@ export function getStarterCode(problemTitle: string, problemSlug: string): Start
     python: TemplateService.getTemplate(problemSlug, 'python'),
     java: TemplateService.getTemplate(problemSlug, 'java'),
     cpp: TemplateService.getTemplate(problemSlug, 'cpp'),
+    c: TemplateService.getTemplate(problemSlug, 'c'),
     go: TemplateService.getTemplate(problemSlug, 'go'),
     rust: TemplateService.getTemplate(problemSlug, 'rust'),
     csharp: TemplateService.getTemplate(problemSlug, 'csharp'),

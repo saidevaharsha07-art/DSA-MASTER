@@ -1,6 +1,6 @@
 # System Architecture
 
-DSA Master Roadmap is designed as an Engine-Driven, Event-Driven application.
+DSA CRACKER is designed as an Engine-Driven, Event-Driven application.
 
 ## Core Principles
 1. **Data-driven**: No hardcoded learning logic in UI components.

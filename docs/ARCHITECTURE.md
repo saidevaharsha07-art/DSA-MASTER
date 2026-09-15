@@ -1,6 +1,6 @@
 # Architecture
 
-The DSA Master Roadmap relies on a **Universal Content Engine** instead of hardcoded React components.
+The DSA CRACKER relies on a **Universal Content Engine** instead of hardcoded React components.
 
 ## Core Concepts
 

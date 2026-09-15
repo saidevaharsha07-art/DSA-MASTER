@@ -1,62 +1,76 @@
-"use client";
+'use client';
 
-import React from "react";
-import { SidebarWidget } from "./SidebarWidget";
-import { Cloud, Clock, Database, Info, CheckCircle2 } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { useSettings } from '@/src/context/SettingsContext';
+import { ShieldCheck, Cloud, HardDrive, Cpu, CheckCircle2 } from 'lucide-react';
 
 export function SystemStatusCard() {
-  const rows = [
-    { label: "Cloud Sync", value: "Synced", icon: Cloud, isBadge: true },
-    { label: "Last Updated", value: "2 minutes ago", icon: Clock },
-    { label: "Storage Used", value: "14.2 MB / 1 GB", icon: Database },
-    { label: "App Version", value: "Journey 5.0.0", icon: Info },
-  ];
+  const { settings } = useSettings();
+  const [storageUsage, setStorageUsage] = useState<string>('~148 KB');
+
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        let total = 0;
+        for (const x in localStorage) {
+          if (Object.prototype.hasOwnProperty.call(localStorage, x)) {
+            total += (localStorage[x].length + x.length) * 2;
+          }
+        }
+        setStorageUsage(`${Math.round(total / 1024)} KB`);
+      }
+    } catch {
+      setStorageUsage('Local Storage');
+    }
+  }, []);
+
+  const lastSyncStr = settings.cloud?.lastSync
+    ? new Date(settings.cloud.lastSync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    : 'Active';
 
   return (
-    <SidebarWidget title="System Status">
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        {rows.map((row) => {
-          const IconComponent = row.icon;
-          return (
-            <div
-              key={row.label}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                fontSize: "12px",
-                padding: "6px 0",
-                borderBottom: "1px solid rgba(255,255,255,0.04)",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#9AA4B2" }}>
-                <IconComponent size={14} />
-                <span>{row.label}</span>
-              </div>
-              {row.isBadge ? (
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    color: "#10B981",
-                    background: "rgba(16, 185, 129, 0.12)",
-                    padding: "2px 8px",
-                    borderRadius: "12px",
-                    border: "1px solid rgba(16, 185, 129, 0.3)",
-                  }}
-                >
-                  <CheckCircle2 size={11} /> {row.value}
-                </span>
-              ) : (
-                <span style={{ fontWeight: 500, color: "#FFFFFF" }}>{row.value}</span>
-              )}
-            </div>
-          );
-        })}
+    <div
+      style={{
+        padding: '20px',
+        borderRadius: '18px',
+        background: 'var(--card)',
+        border: '1px solid var(--border)',
+        boxShadow: 'var(--card-shadow)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <h3 style={{ margin: 0, fontSize: '13px', fontWeight: 900, color: 'var(--text-primary)' }}>SYSTEM TELEMETRY</h3>
+        <span style={{ fontSize: '10px', fontWeight: 800, color: '#10B981', background: 'rgba(16, 185, 129, 0.15)', padding: '2px 6px', borderRadius: '4px' }}>
+          ONLINE
+        </span>
       </div>
-    </SidebarWidget>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+          <span>Cloud Sync:</span>
+          <strong style={{ color: settings.cloud?.autoSync ? '#10B981' : 'var(--text-secondary)' }}>
+            {settings.cloud?.autoSync ? 'Connected / Auto' : 'Manual'}
+          </strong>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+          <span>Last Synchronized:</span>
+          <strong style={{ color: 'var(--text-primary)' }}>{lastSyncStr}</strong>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+          <span>Client Storage:</span>
+          <strong style={{ color: 'var(--text-primary)' }}>{storageUsage}</strong>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+          <span>Build Version:</span>
+          <strong style={{ color: 'var(--accent-primary)' }}>v1.0.0 (Production)</strong>
+        </div>
+      </div>
+    </div>
   );
 }

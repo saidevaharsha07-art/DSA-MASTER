@@ -21,8 +21,11 @@ import {
   Zap,
   Grid
 } from 'lucide-react';
+import { useSettings } from '@/src/context/SettingsContext';
 
 export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?: () => void }) {
+  const { settings } = useSettings();
+  const isLight = settings.appearance.theme === 'light';
   const [zoomingPortal, setZoomingPortal] = useState<string | null>(null);
 
   const kingdoms = [
@@ -566,11 +569,12 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
       style={{
         width: '100%',
         minHeight: '100vh',
-        background: '#040208',
-        color: '#FFF',
+        background: 'var(--background)',
+        color: 'var(--text-primary)',
         overflowY: 'auto',
         paddingBottom: '100px',
         position: 'relative',
+        transition: 'background-color 0.2s ease, color 0.2s ease',
       }}
     >
       {/* MAGICAL PORTAL ENTERING OVERLAY */}
@@ -585,7 +589,9 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
               position: 'fixed',
               inset: 0,
               zIndex: 9999,
-              background: 'radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(7, 5, 18, 0.99) 70%)',
+              background: isLight
+                ? 'radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(245, 247, 251, 0.99) 70%)'
+                : 'radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(7, 5, 18, 0.99) 70%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -594,7 +600,7 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
             }}
           >
             <Sparkles size={80} style={{ color: '#FDE047', filter: 'drop-shadow(0 0 30px #FDE047)' }} />
-            <h1 style={{ fontSize: '36px', fontWeight: 900, color: '#FFF', letterSpacing: '0.05em' }}>
+            <h1 style={{ fontSize: '36px', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '0.05em' }}>
               ENTERING REALM GATE...
             </h1>
           </motion.div>
@@ -605,8 +611,10 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
       <div
         style={{
           padding: '24px 40px',
-          background: 'linear-gradient(180deg, rgba(20, 16, 38, 0.98) 0%, rgba(10, 8, 22, 0.95) 100%)',
-          borderBottom: '1px solid rgba(168, 85, 247, 0.25)',
+          background: isLight
+            ? 'rgba(255, 255, 255, 0.95)'
+            : 'linear-gradient(180deg, rgba(20, 16, 38, 0.98) 0%, rgba(10, 8, 22, 0.95) 100%)',
+          borderBottom: isLight ? '1px solid #E2E8F0' : '1px solid rgba(168, 85, 247, 0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -615,10 +623,10 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
         }}
       >
         <div>
-          <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 900, color: '#FFF', letterSpacing: '0.04em' }}>
+          <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '0.04em' }}>
             THE ALGORITHMIC JOURNEY (5 × 5 SERPENTINE CAMPAIGN MAP)
           </h1>
-          <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 700, letterSpacing: '0.06em' }}>
+          <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.06em' }}>
             ALL 25 KINGDOMS VISIBLE AT A GLANCE • DYNAMIC IMAGE LOAD FROM /assets/journey/kingdoms/
           </span>
         </div>

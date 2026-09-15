@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LayoutDashboard, Code2, BookOpen, RotateCcw, UserRound } from "lucide-react";
+import { LayoutDashboard, Code2, BookOpen, RotateCcw, Settings } from "lucide-react";
 
 interface MobileNavProps {
   pathname: string;
@@ -12,8 +12,8 @@ export function MobileNav({ pathname }: MobileNavProps) {
     { label: "Dash", href: "/dashboard", icon: LayoutDashboard },
     { label: "Practice", href: "/practice", icon: BookOpen },
     { label: "Revision", href: "/revision", icon: RotateCcw },
-    { label: "Problems", href: "/problems", icon: Code2 },
-    { label: "Profile", href: "/profile", icon: UserRound },
+    { label: "Journey", href: "/journey", icon: Code2 },
+    { label: "Settings", href: "/settings", icon: Settings },
   ] as const;
 
   return (

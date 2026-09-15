@@ -14,10 +14,13 @@ import {
   CheckCircle2, 
   Sparkles,
   Layers,
-  Shield
+  Shield,
+  ExternalLink
 } from 'lucide-react';
 import { ProblemModel } from '@/src/curriculum/types';
 import { CurriculumRepository } from '@/src/curriculum/repository';
+import { getPlatformMeta } from '@/src/curriculum/services';
+import { useSettings } from '@/src/context/SettingsContext';
 
 interface PracticeIDENavbarProps {
   problem: ProblemModel;
@@ -35,13 +38,15 @@ export function PracticeIDENavbar({
   onToggleLike,
 }: PracticeIDENavbarProps) {
   const router = useRouter();
+  const { settings } = useSettings();
+  const isLight = settings?.appearance?.theme === 'light';
 
   // Fetch Category and Pattern metadata
   const category = CurriculumRepository.getCategoryBySlug(problem.categorySlug);
   const pattern = CurriculumRepository.getPatternBySlug(problem.patternSlug);
 
-  const kingdomTitle = category ? category.kingdomTitle : 'Kingdom of Beginnings';
-  const patternTitle = pattern ? pattern.title : 'Array Fundamentals';
+  const kingdomTitle = category ? category.kingdomTitle : (problem.kingdomTitle || 'Kingdom of Beginnings');
+  const patternTitle = pattern ? pattern.title : (problem.patternTitle || 'Array Fundamentals');
 
   // Dynamic Previous and Next problem calculation across CurriculumRepository
   const allProblems = CurriculumRepository.getAllProblems();
@@ -52,55 +57,67 @@ export function PracticeIDENavbar({
 
   const handleNavigatePrev = () => {
     if (prevProblem) {
-      router.push(`/practice/${prevProblem.slug}`);
+      router.push(`/practice/${prevProblem.slug || prevProblem.id}`);
     }
   };
 
   const handleNavigateNext = () => {
     if (nextProblem) {
-      router.push(`/practice/${nextProblem.slug}`);
+      router.push(`/practice/${nextProblem.slug || nextProblem.id}`);
     }
   };
+
+  const diffColor =
+    (problem.difficulty || '').toLowerCase() === 'easy'
+      ? '#10B981'
+      : (problem.difficulty || '').toLowerCase() === 'hard'
+      ? '#EF4444'
+      : '#F59E0B';
 
   return (
     <header style={{
       height: '52px',
       padding: '0 20px',
-      background: 'rgba(13, 10, 25, 0.98)',
+      background: isLight ? '#FFFFFF' : 'rgba(15, 23, 42, 0.95)',
       backdropFilter: 'blur(16px)',
-      borderBottom: '1px solid rgba(168, 85, 247, 0.3)',
+      borderBottom: isLight ? '1px solid #E2E8F0' : '1px solid rgba(148, 163, 184, 0.15)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
+      boxShadow: isLight ? '0 2px 8px rgba(0, 0, 0, 0.04)' : '0 4px 20px rgba(0, 0, 0, 0.4)',
       fontSize: '12px',
+      color: 'var(--text-primary)',
+      transition: 'background-color 0.2s ease, border-color 0.2s ease',
     }}>
-      {/* Left Navigation: Glowing Previous Button -> Breadcrumbs -> Glowing Next Button */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+      {/* Left Navigation: Previous Button -> Breadcrumbs -> Next Button */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         
         {/* Previous Problem Button */}
         <motion.button
-          whileHover={{ scale: prevProblem ? 1.05 : 1 }}
-          whileTap={{ scale: prevProblem ? 0.95 : 1 }}
+          whileHover={{ scale: prevProblem ? 1.04 : 1 }}
+          whileTap={{ scale: prevProblem ? 0.96 : 1 }}
           type="button"
           onClick={handleNavigatePrev}
           disabled={!prevProblem}
           style={{
             padding: '6px 12px',
             borderRadius: '8px',
-            background: prevProblem ? 'rgba(168, 85, 247, 0.2)' : 'rgba(255, 255, 255, 0.03)',
-            border: prevProblem ? '1px solid #C084FC' : '1px solid rgba(255, 255, 255, 0.06)',
-            color: prevProblem ? '#FFFFFF' : '#475569',
+            background: prevProblem
+              ? isLight ? 'var(--surface-secondary, #F1F5F9)' : 'rgba(255, 255, 255, 0.05)'
+              : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+            border: prevProblem
+              ? isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.12)'
+              : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.05)',
+            color: prevProblem ? 'var(--text-primary)' : 'var(--text-muted)',
             fontSize: '11px',
             fontWeight: 800,
             cursor: prevProblem ? 'pointer' : 'not-allowed',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
-            boxShadow: prevProblem ? '0 0 14px rgba(168, 85, 247, 0.3)' : 'none',
             opacity: prevProblem ? 1 : 0.4,
           }}
         >
@@ -108,43 +125,46 @@ export function PracticeIDENavbar({
         </motion.button>
 
         {/* Current Path Breadcrumbs */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#94A3B8', fontWeight: 600 }}>
-          <Link href="/practice" style={{ color: '#C084FC', textDecoration: 'none', fontWeight: 800 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)', fontWeight: 600 }}>
+          <Link href="/practice" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 800 }}>
             Practice
           </Link>
           <ChevronRight size={12} />
 
-          <Link href={`/knowledge/${problem.categorySlug}`} style={{ color: '#CBD5E1', textDecoration: 'none' }}>
+          <Link href={`/knowledge/${problem.categorySlug}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
             {kingdomTitle}
           </Link>
           <ChevronRight size={12} />
 
-          <span style={{ color: '#CBD5E1' }}>{patternTitle}</span>
+          <span style={{ color: 'var(--text-muted)' }}>{patternTitle}</span>
           <ChevronRight size={12} />
 
-          <span style={{ color: '#FFFFFF', fontWeight: 800 }}>{problem.title}</span>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 800 }}>{problem.title}</span>
         </div>
 
         {/* Next Problem Button */}
         <motion.button
-          whileHover={{ scale: nextProblem ? 1.05 : 1 }}
-          whileTap={{ scale: nextProblem ? 0.95 : 1 }}
+          whileHover={{ scale: nextProblem ? 1.04 : 1 }}
+          whileTap={{ scale: nextProblem ? 0.96 : 1 }}
           type="button"
           onClick={handleNavigateNext}
           disabled={!nextProblem}
           style={{
             padding: '6px 12px',
             borderRadius: '8px',
-            background: nextProblem ? 'rgba(168, 85, 247, 0.2)' : 'rgba(255, 255, 255, 0.03)',
-            border: nextProblem ? '1px solid #C084FC' : '1px solid rgba(255, 255, 255, 0.06)',
-            color: nextProblem ? '#FFFFFF' : '#475569',
+            background: nextProblem
+              ? isLight ? 'var(--surface-secondary, #F1F5F9)' : 'rgba(255, 255, 255, 0.05)'
+              : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+            border: nextProblem
+              ? isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.12)'
+              : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.05)',
+            color: nextProblem ? 'var(--text-primary)' : 'var(--text-muted)',
             fontSize: '11px',
             fontWeight: 800,
             cursor: nextProblem ? 'pointer' : 'not-allowed',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
-            boxShadow: nextProblem ? '0 0 14px rgba(168, 85, 247, 0.3)' : 'none',
             opacity: nextProblem ? 1 : 0.4,
           }}
         >
@@ -154,62 +174,123 @@ export function PracticeIDENavbar({
       </div>
 
       {/* Right Header Badges Strip & Quick Controls */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
         
         {/* Difficulty Badge */}
         <span style={{
           fontSize: '11px',
           fontWeight: 800,
-          color: problem.difficulty === 'Easy' ? '#10B981' : problem.difficulty === 'Medium' ? '#F59E0B' : '#EF4444',
-          background: 'rgba(255, 255, 255, 0.05)',
+          color: diffColor,
+          background: `${diffColor}15`,
           padding: '3px 8px',
           borderRadius: '6px',
-          border: `1px solid ${problem.difficulty === 'Easy' ? 'rgba(16, 185, 129, 0.3)' : problem.difficulty === 'Medium' ? 'rgba(245, 158, 11, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
+          border: `1px solid ${diffColor}40`,
         }}>
           {problem.difficulty}
         </span>
 
         {/* Kingdom Badge */}
-        <span style={{ fontSize: '11px', fontWeight: 700, color: '#C084FC', background: 'rgba(168, 85, 247, 0.15)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(168, 85, 247, 0.3)' }}>
+        <span style={{
+          fontSize: '11px',
+          fontWeight: 700,
+          color: 'var(--primary)',
+          background: isLight ? 'rgba(56, 189, 248, 0.1)' : 'rgba(56, 189, 248, 0.15)',
+          padding: '3px 8px',
+          borderRadius: '6px',
+          border: '1px solid var(--border)',
+        }}>
           🏰 {kingdomTitle}
         </span>
 
-        {/* Pattern Badge */}
-        <span style={{ fontSize: '11px', fontWeight: 700, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.15)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
-          📘 {patternTitle}
-        </span>
-
         {/* XP Reward */}
-        <span style={{ fontSize: '11px', fontWeight: 800, color: '#F59E0B', background: 'rgba(245, 158, 11, 0.15)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(245, 158, 11, 0.3)', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
-          <Sparkles size={11} /> +{problem.xp || 35} XP
-        </span>
-
-        {/* Acceptance % */}
-        <span style={{ fontSize: '11px', fontWeight: 600, color: '#94A3B8', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
-          <CheckCircle2 size={11} style={{ color: '#10B981' }} /> {problem.acceptanceRate ? `${(problem.acceptanceRate * 100).toFixed(1)}%` : '74.8%'}
+        <span style={{
+          fontSize: '11px',
+          fontWeight: 800,
+          color: '#F59E0B',
+          background: isLight ? '#FFFBEB' : 'rgba(245, 158, 11, 0.15)',
+          padding: '3px 8px',
+          borderRadius: '6px',
+          border: '1px solid rgba(245, 158, 11, 0.3)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '3px',
+        }}>
+          <Sparkles size={11} /> +{problem.xp || 50} XP
         </span>
 
         {/* Estimated Time */}
-        <span style={{ fontSize: '11px', fontWeight: 600, color: '#94A3B8', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+        <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
           <Clock size={11} /> {problem.estimatedTimeMin || 15}m
         </span>
+
+        {/* Platform External Link Button */}
+        {(() => {
+          const platformMeta = getPlatformMeta(problem);
+          return (
+            <a
+              href={platformMeta.canonicalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Open original problem on ${platformMeta.name}`}
+              style={{
+                padding: '4px 10px',
+                borderRadius: '6px',
+                background: isLight ? `${platformMeta.color}15` : `${platformMeta.color}22`,
+                border: `1px solid ${platformMeta.color}50`,
+                color: platformMeta.color,
+                fontSize: '11px',
+                fontWeight: 800,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                transition: 'all 0.15s ease',
+              }}
+            >
+              <span>{platformMeta.name}</span>
+              <ExternalLink size={11} />
+            </a>
+          );
+        })()}
 
         {/* Bookmark Action */}
         <button
           type="button"
           onClick={onToggleBookmark}
-          style={{ background: 'transparent', border: 'none', color: isBookmarked ? '#C084FC' : '#94A3B8', cursor: 'pointer', padding: '4px' }}
+          aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark problem'}
+          style={{
+            background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.04)',
+            border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '6px',
+            color: isBookmarked ? 'var(--primary)' : 'var(--text-muted)',
+            cursor: 'pointer',
+            padding: '5px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
         >
-          <Bookmark size={16} fill={isBookmarked ? 'currentColor' : 'none'} />
+          <Bookmark size={15} fill={isBookmarked ? 'currentColor' : 'none'} />
         </button>
 
         {/* Like Action */}
         <button
           type="button"
           onClick={onToggleLike}
-          style={{ background: 'transparent', border: 'none', color: isLiked ? '#EF4444' : '#94A3B8', cursor: 'pointer', padding: '4px' }}
+          aria-label={isLiked ? 'Remove favorite' : 'Add to favorites'}
+          style={{
+            background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.04)',
+            border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '6px',
+            color: isLiked ? '#EF4444' : 'var(--text-muted)',
+            cursor: 'pointer',
+            padding: '5px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
         >
-          <Heart size={16} fill={isLiked ? 'currentColor' : 'none'} />
+          <Heart size={15} fill={isLiked ? 'currentColor' : 'none'} />
         </button>
 
       </div>

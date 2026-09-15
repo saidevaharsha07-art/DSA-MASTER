@@ -3,7 +3,7 @@
  * Provides strict TypeScript models for real coding platform telemetry, daily snapshots, and UI card metrics.
  */
 
-export type PlatformKey = 'leetcode' | 'codechef' | 'codeforces' | 'mentorpick';
+export type PlatformKey = 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks' | 'mentorpick';
 
 export interface PlatformDailySnapshot {
   userId: string;
@@ -44,6 +44,11 @@ export interface PlatformTelemetryCard {
   lastSyncedText: string; // e.g. "Just now", "12 min ago", "Aug 25, 2:14 PM"
   lastSyncedAt: string | null;
   historicalSnapshots: PlatformDailySnapshot[];
+  practiceSolved?: number;
+  totalProblems?: number;
+  practiceSolvedCount?: number;
+  practiceProblemTotal?: number;
+  externalSolvedCount?: number | null;
   isStale?: boolean;
   solvedCount?: number | null;
   successRate?: string | null;

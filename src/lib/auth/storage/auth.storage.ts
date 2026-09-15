@@ -4,6 +4,7 @@
  */
 
 import { IStorageProvider } from '@/src/core/storage/storage-provider.interface';
+import { LocalStorageProvider } from '@/src/core/storage/local.storage';
 import { MemoryStorageProvider } from '@/src/core/storage/memory.storage';
 import { AuthSession } from '../models/session.models';
 
@@ -11,7 +12,7 @@ export class AuthStorage {
   private storage: IStorageProvider;
 
   constructor(storage?: IStorageProvider) {
-    this.storage = storage || new MemoryStorageProvider();
+    this.storage = storage || (typeof window !== 'undefined' ? new LocalStorageProvider() : new MemoryStorageProvider());
   }
 
   public async getSession(): Promise<AuthSession | null> {

@@ -1,6 +1,6 @@
 # Content Guide
 
-Welcome to the Universal Content Engine. This guide explains how to add and edit content for the DSA Master Roadmap.
+Welcome to the Universal Content Engine. This guide explains how to add and edit content for the DSA CRACKER.
 
 ## 1. Folder Structure
 All raw content lives in `src/content`. It is strictly organized by Curriculum Phase -> Topic -> Module.

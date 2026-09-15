@@ -22,6 +22,10 @@ export interface UserState {
   awardedXp: number[];
   xp: number;
   dailyGoal: number;
+  completedProblemIds?: string[];
+  currentStreak?: number;
+  longestStreak?: number;
+  lastActiveDate?: string;
 }
 
 export const TOPICS = [

@@ -1,77 +1,178 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import {
-  Compass,
-  Trophy,
   Flame,
   Shield,
-  Sparkles,
-  ChevronRight,
-  BookOpen,
-  Swords,
-  Clock,
+  Zap,
   CheckCircle2,
   Lock,
-  Zap,
-  Target,
-  BarChart3,
-  Brain,
-  Award,
-  Star,
-  Activity,
-  Heart,
-  Bot,
-  Landmark,
   Layers,
-  ArrowUpRight,
-  RefreshCw,
-  TrendingUp,
-  Sword,
-  Crown,
-  Search,
-  BookMarked,
-  Lightbulb,
+  Edit3,
+  Settings as SettingsIcon,
+  X,
+  Save,
+  Check,
+  Mail,
+  User,
+  Calendar,
 } from 'lucide-react';
-import { CAMPAIGN_KINGDOMS } from '@/src/features/learn/data/campaignKingdoms';
-import { CurriculumRepository } from '@/src/curriculum/repository';
 import { useRoadmap } from '@/hooks/use-roadmap';
 import { DashboardAdapterService, DashboardSummary } from '@/src/features/dashboard/services/dashboard-adapter.service';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
+import { useSettings } from '@/src/context/SettingsContext';
+import { useToast } from '@/src/context/ToastContext';
+import { EventBus } from '@/src/core/events/event-bus';
+import { canonicalDb } from '@/src/core/storage/db/canonical-db.service';
+import { PlatformTrainJourneys } from './PlatformTrainJourneys';
+import { DashboardActionHub } from './DashboardActionHub';
 
 export function CommandCenterView() {
   const { state: roadmapState } = useRoadmap();
-  const { userId } = useActiveUser();
-  const [hudSearch, setHudSearch] = useState('');
+  const { userId, username: activeUsername } = useActiveUser();
+  const { settings, updateSetting } = useSettings();
+  const { toast } = useToast();
+
+  const isLight = settings.appearance.theme === 'light';
 
   const [summary, setSummary] = useState<DashboardSummary>(() =>
     DashboardAdapterService.getDashboardSummary(userId)
   );
 
+  // Profile Information State
+  const [profileName, setProfileName] = useState<string>('Developer');
+  const [profileEmail, setProfileEmail] = useState<string>('developer@dsacracker.dev');
+  const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
+  const [isSaving, setIsSaving] = useState<boolean>(false);
+
+  // Edit Form Fields
+  const [editName, setEditName] = useState<string>('');
+  const [editEmail, setEditEmail] = useState<string>('');
+  const [editLcUser, setEditLcUser] = useState<string>('');
+  const [editCcUser, setEditCcUser] = useState<string>('');
+  const [editCfUser, setEditCfUser] = useState<string>('');
+  const [editGfgUser, setEditGfgUser] = useState<string>('');
+
   useEffect(() => {
-    const fresh = DashboardAdapterService.getDashboardSummary(userId);
-    setSummary(fresh);
-  }, [roadmapState, userId]);
+    const userRec = canonicalDb.getUser(userId);
+    const savedName = userRec?.displayName || localStorage.getItem(`dsa-user-name_${userId}`) || localStorage.getItem('dsa-user-name');
+    const savedEmail = userRec?.email || localStorage.getItem(`dsa-user-email_${userId}`) || localStorage.getItem('dsa-user-email');
+
+    if (savedName) {
+      setProfileName(savedName);
+    } else if (activeUsername && activeUsername !== 'Guest') {
+      setProfileName(activeUsername);
+    } else {
+      setProfileName('Developer');
+    }
+
+    if (savedEmail) {
+      setProfileEmail(savedEmail);
+    } else {
+      setProfileEmail('developer@dsacracker.dev');
+    }
+
+    const refresh = () => {
+      DashboardAdapterService.clearCache();
+      const fresh = DashboardAdapterService.getDashboardSummary(userId);
+      setSummary(fresh);
+    };
+
+    refresh();
+
+    const unsubProblem = EventBus.subscribe('ProblemSolved', refresh);
+    const unsubMemory = EventBus.subscribe('MemoryReviewed', refresh);
+    const unsubProfile = EventBus.subscribe('ProfileUpdated', refresh);
+    const unsubPlatform = EventBus.subscribe('PlatformSynced', refresh);
+
+    return () => {
+      unsubProblem();
+      unsubMemory();
+      unsubProfile();
+      unsubPlatform();
+    };
+  }, [roadmapState, userId, activeUsername]);
 
   // Extract Player HUD metrics
   const { totalXp: xp, level, currentLevelXp, nextLevelXp, levelPct, currentStreak: streak, solvedCount } = summary.playerHud;
-  const { targetTitle, currentSolves, targetSolves, percentage: activePct, recommendedFocus } = summary.dailyQuest;
-  const { topStrength, primaryWeakness, summaryReasoning, confidenceScore } = summary.oracleInsights;
-  const { revisionDueCount } = summary.srsMemory;
 
-  // Active Kingdom Data from dynamic summary
-  const activeKingdom = summary.kingdomProgression[0] || {
-    slug: 'beginnings',
-    title: 'Kingdom of Beginnings',
-    solvedCount: 0,
-    totalCount: 20,
-    percentage: 0,
+  const getRankTitle = (lvl: number) => {
+    if (lvl >= 10) return 'Competitive Master';
+    if (lvl >= 6) return 'Advanced Problem Solver';
+    if (lvl >= 3) return 'Algorithm Practitioner';
+    return 'DSA Explorer';
   };
 
-  const activeSolved = activeKingdom.solvedCount;
-  const activeTotal = activeKingdom.totalCount;
+  const handleOpenEditModal = () => {
+    setEditName(profileName);
+    setEditEmail(profileEmail);
+
+    const userRec = canonicalDb.getUser(userId);
+    const handles = userRec?.settings?.handles || {};
+
+    setEditLcUser(handles.leetcode || localStorage.getItem(`dsa-handle-leetcode_${userId}`) || localStorage.getItem('dsa-handle-leetcode') || '');
+    setEditCcUser(handles.codechef || localStorage.getItem(`dsa-handle-codechef_${userId}`) || localStorage.getItem('dsa-handle-codechef') || '');
+    setEditCfUser(handles.codeforces || localStorage.getItem(`dsa-handle-codeforces_${userId}`) || localStorage.getItem('dsa-handle-codeforces') || '');
+    setEditGfgUser(handles.geeksforgeeks || localStorage.getItem(`dsa-handle-gfg_${userId}`) || localStorage.getItem('dsa-handle-gfg') || '');
+
+    setIsEditModalOpen(true);
+  };
+
+  const handleSaveProfile = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSaving(true);
+
+    const trimmedName = editName.trim() || 'Developer';
+    const trimmedEmail = editEmail.trim() || 'developer@dsacracker.dev';
+
+    localStorage.setItem(`dsa-user-name_${userId}`, trimmedName);
+    localStorage.setItem(`dsa-user-email_${userId}`, trimmedEmail);
+    localStorage.setItem(`dsa-handle-leetcode_${userId}`, editLcUser.trim());
+    localStorage.setItem(`dsa-handle-codechef_${userId}`, editCcUser.trim());
+    localStorage.setItem(`dsa-handle-codeforces_${userId}`, editCfUser.trim());
+    localStorage.setItem(`dsa-handle-gfg_${userId}`, editGfgUser.trim());
+
+    canonicalDb.saveUser({
+      userId,
+      username: activeUsername || trimmedName,
+      displayName: trimmedName,
+      email: trimmedEmail,
+      settings: {
+        handles: {
+          leetcode: editLcUser.trim(),
+          codechef: editCcUser.trim(),
+          codeforces: editCfUser.trim(),
+          geeksforgeeks: editGfgUser.trim(),
+        },
+      },
+      createdAt: canonicalDb.getUser(userId)?.createdAt || new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    });
+
+    setProfileName(trimmedName);
+    setProfileEmail(trimmedEmail);
+
+    setTimeout(() => {
+      EventBus.publish('ProfileUpdated', {
+        userId,
+        name: trimmedName,
+        email: trimmedEmail,
+        timestamp: new Date().toISOString(),
+      });
+
+      EventBus.publish('PlatformSynced', {
+        userId,
+        platform: 'all',
+        timestamp: new Date().toISOString(),
+      });
+
+      setIsSaving(false);
+      setIsEditModalOpen(false);
+      toast('Profile updated successfully!', 'success');
+    }, 300);
+  };
 
   return (
     <div
@@ -81,630 +182,721 @@ export function CommandCenterView() {
         gap: '24px',
         width: '100%',
         minHeight: '100vh',
-        background: '#070512',
-        color: '#FFF',
+        background: 'var(--background)',
+        color: 'var(--text-primary)',
         padding: '24px 32px',
         overflowY: 'auto',
         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
+        transition: 'background-color 0.2s ease, color 0.2s ease',
       }}
     >
-      {/* ── 1. GAME HUD TOP NAVIGATION BAR ───────────────────────────── */}
-      <div
-        style={{
-          padding: '12px 24px',
-          borderRadius: '16px',
-          background: 'rgba(14, 10, 32, 0.94)',
-          border: '1.5px solid rgba(168, 85, 247, 0.3)',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
-          backdropFilter: 'blur(16px)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '16px',
-        }}
-      >
-        {/* HUD Quick Search */}
-        <div style={{ position: 'relative', width: '320px' }}>
-          <Search size={15} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: '#C084FC', pointerEvents: 'none' }} />
-          <input
-            type="text"
-            placeholder="Search quests, kingdoms, patterns..."
-            value={hudSearch}
-            onChange={(e) => setHudSearch(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '8px 12px 8px 36px',
-              borderRadius: '10px',
-              background: 'rgba(0, 0, 0, 0.5)',
-              border: '1px solid rgba(168, 85, 247, 0.3)',
-              color: '#FFF',
-              fontSize: '12px',
-              outline: 'none',
-              boxSizing: 'border-box',
-            }}
-          />
-        </div>
-
-        {/* Top HUD Badges */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>
-            <Zap size={16} /> <span>{xp} XP</span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#F97316' }}>
-            <Flame size={16} /> <span>{streak}d Streak</span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#C084FC' }}>
-            <Trophy size={16} /> <span>Rank #{solvedCount > 0 ? Math.max(1, 100 - solvedCount) : 'Unranked'}</span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 900, color: '#10B981' }}>
-            <Shield size={16} /> <span>Level {level}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* ── 2. PLAYER PROFILE HERO SECTION ───────────────────────────── */}
+      {/* ── 1. DEVELOPER OVERVIEW (INTEGRATED PROFILE + COMMAND CENTER) ── */}
       <motion.div
-        initial={{ opacity: 0, y: -12 }}
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35 }}
+        transition={{ duration: 0.3 }}
         style={{
+          width: '100%',
+          boxSizing: 'border-box',
           position: 'relative',
-          padding: '28px 36px',
+          padding: '28px 32px',
           borderRadius: '24px',
-          background: 'linear-gradient(135deg, rgba(32, 22, 64, 0.96) 0%, rgba(14, 10, 32, 0.98) 60%, rgba(8, 6, 18, 1) 100%)',
-          border: '1.5px solid rgba(168, 85, 247, 0.45)',
-          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 45px rgba(168, 85, 247, 0.15)',
+          background: isLight
+            ? 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%)'
+            : 'linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(20, 28, 45, 0.98) 60%, rgba(15, 23, 42, 1) 100%)',
+          border: isLight
+            ? '1.5px solid rgba(56, 189, 248, 0.35)'
+            : '1.5px solid var(--panel-border, rgba(255, 255, 255, 0.12))',
+          boxShadow: isLight
+            ? '0 12px 36px rgba(56, 189, 248, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04)'
+            : '0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08)',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '24px',
+          flexDirection: 'column',
+          gap: '22px',
           overflow: 'hidden',
         }}
       >
-        <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '280px', height: '280px', background: 'radial-gradient(circle, rgba(168,85,247,0.22) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        {/* Subtle illuminated accent aura */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '-60px',
+            right: '-60px',
+            width: '320px',
+            height: '320px',
+            background: isLight
+              ? 'radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%)'
+              : 'radial-gradient(circle, var(--accent-glow, rgba(168, 85, 247, 0.18)) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
 
-        {/* Player Profile Identity */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px', zIndex: 1 }}>
-          {/* Avatar Crest */}
-          <div style={{ position: 'relative' }}>
-            <div
-              style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #A855F7 0%, #4F46E5 100%)',
-                border: '3px solid #C084FC',
-                boxShadow: '0 0 35px rgba(192, 132, 252, 0.75), inset 0 0 20px rgba(255, 255, 255, 0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '32px',
-                fontWeight: 900,
-                color: '#FFF',
-              }}
-            >
-              A
-            </div>
-            <div
-              style={{
-                position: 'absolute',
-                bottom: '-6px',
-                right: '-6px',
-                background: 'linear-gradient(135deg, #10B981, #059669)',
-                borderRadius: '99px',
-                padding: '3px 10px',
-                fontSize: '11px',
-                fontWeight: 900,
-                color: '#000',
-                border: '2px solid #070512',
-                boxShadow: '0 4px 12px rgba(16, 185, 129, 0.5)',
-              }}
-            >
-              Lvl {level}
-            </div>
-          </div>
-
-          {/* Player Title & Location */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
-              <h1 style={{ margin: 0, fontSize: '28px', fontWeight: 900, color: '#FFF', letterSpacing: '-0.01em' }}>
-                Arjun&apos;s Command Center 2.0
-              </h1>
-              <span
-                style={{
-                  fontSize: '11px',
-                  fontWeight: 900,
-                  padding: '4px 14px',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.15))',
-                  border: '1.5px solid #F59E0B',
-                  color: '#FDE047',
-                  letterSpacing: '0.06em',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  boxShadow: '0 0 16px rgba(245, 158, 11, 0.35)',
-                }}
-              >
-                <Crown size={12} /> Grandmaster Architect
-              </span>
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '13px', color: '#94A3B8', fontWeight: 600 }}>
-              <span>
-                Current Realm: <strong style={{ color: '#38BDF8' }}>{activeKingdom.title}</strong>
-              </span>
-              <span>•</span>
-              <span>
-                Pattern: <strong style={{ color: '#C084FC' }}>{recommendedFocus}</strong>
-              </span>
-            </div>
-
-            {/* Level XP Progress Bar */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '12px', maxWidth: '400px' }}>
-              <div style={{ flex: 1, height: '9px', borderRadius: '99px', background: 'rgba(255, 255, 255, 0.08)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <div style={{ height: '100%', width: `${levelPct}%`, background: 'linear-gradient(90deg, #A855F7, #10B981)', borderRadius: '99px', transition: 'width 0.4s ease', boxShadow: '0 0 12px rgba(16, 185, 129, 0.7)' }} />
-              </div>
-              <span style={{ fontSize: '11px', fontWeight: 900, color: '#10B981', whiteSpace: 'nowrap' }}>
-                {currentLevelXp} / {nextLevelXp} XP ({levelPct}%)
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Hero HUD Stat Tiles */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', zIndex: 1 }}>
-          <div style={hudTileSt('rgba(249, 115, 22, 0.16)', 'rgba(249, 115, 22, 0.4)', 'rgba(249, 115, 22, 0.2)')}>
-            <Flame size={22} style={{ color: '#F97316' }} />
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#FFF', display: 'block', lineHeight: 1.1 }}>{streak} Days</span>
-              <span style={{ fontSize: '10px', color: '#F97316', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Learning Streak</span>
-            </div>
-          </div>
-
-          <div style={hudTileSt('rgba(168, 85, 247, 0.16)', 'rgba(168, 85, 247, 0.4)', 'rgba(168, 85, 247, 0.2)')}>
-            <Trophy size={22} style={{ color: '#C084FC' }} />
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#FFF', display: 'block', lineHeight: 1.1 }}>#{solvedCount > 0 ? Math.max(1, 100 - solvedCount) : 'Unranked'}</span>
-              <span style={{ fontSize: '10px', color: '#C084FC', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Grandmaster Rank</span>
-            </div>
-          </div>
-
-          <div style={hudTileSt('rgba(16, 185, 129, 0.16)', 'rgba(16, 185, 129, 0.4)', 'rgba(16, 185, 129, 0.2)')}>
-            <CheckCircle2 size={22} style={{ color: '#10B981' }} />
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#10B981', display: 'block', lineHeight: 1.1 }}>{solvedCount} Solved</span>
-              <span style={{ fontSize: '10px', color: '#6EE7B7', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Mastered Problems</span>
-            </div>
-          </div>
-
-          <div style={hudTileSt('rgba(245, 158, 11, 0.16)', 'rgba(245, 158, 11, 0.4)', 'rgba(245, 158, 11, 0.2)')}>
-            <Zap size={22} style={{ color: '#F59E0B' }} />
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#F59E0B', display: 'block', lineHeight: 1.1 }}>+{xp} XP</span>
-              <span style={{ fontSize: '10px', color: '#FDE68A', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Earned XP</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* ── 3. ACTIVE CAMPAIGN QUEST SPOTLIGHT PANEL ─────────────────── */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.35, delay: 0.1 }}
-        style={{
-          position: 'relative',
-          padding: '32px 36px',
-          borderRadius: '24px',
-          background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(22, 16, 44, 0.97) 65%, rgba(10, 8, 22, 0.98) 100%)',
-          border: '2px solid #F59E0B',
-          boxShadow: '0 20px 50px rgba(245, 158, 11, 0.28), inset 0 0 30px rgba(245, 158, 11, 0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '24px',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ maxWidth: '640px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-            <span
-              style={{
-                fontSize: '11px',
-                fontWeight: 900,
-                color: '#F59E0B',
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                padding: '5px 14px',
-                borderRadius: '12px',
-                background: 'rgba(245, 158, 11, 0.2)',
-                border: '1.5px solid #F59E0B',
-                boxShadow: '0 0 14px rgba(245, 158, 11, 0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-              }}
-            >
-              <Sword size={13} /> ACTIVE CAMPAIGN QUEST
-            </span>
-            <span style={{ fontSize: '13px', fontWeight: 900, color: '#10B981' }}>
-              {activeSolved} / {activeTotal} Completed ({activePct}%)
-            </span>
-          </div>
-
-          <h2 style={{ margin: '0 0 8px 0', fontSize: '28px', fontWeight: 900, color: '#FFF', letterSpacing: '-0.01em' }}>
-            🏰 {activeKingdom.title}
-          </h2>
-
-          <p style={{ margin: '0 0 18px 0', fontSize: '14px', color: '#CBD5E1', lineHeight: '1.6' }}>
-            Objective: <strong>{targetTitle}</strong>. Master variable lens bounds and sliding window logic to unlock algorithm mastery.
-          </p>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '22px', fontSize: '13px', color: '#94A3B8', fontWeight: 700 }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Clock size={15} style={{ color: '#38BDF8' }} /> Est. Time: <strong style={{ color: '#FFF' }}>25 mins</strong>
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Zap size={15} style={{ color: '#F59E0B' }} /> Reward: <strong style={{ color: '#F59E0B' }}>+300 XP</strong>
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Shield size={15} style={{ color: '#10B981' }} /> Tier: <strong style={{ color: '#10B981' }}>Learn</strong>
-            </span>
-          </div>
-        </div>
-
-        <Link href="/learn/beginnings" style={{ textDecoration: 'none' }}>
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 12px 36px rgba(245, 158, 11, 0.6)' }}
-            whileTap={{ scale: 0.95 }}
-            type="button"
-            style={{
-              padding: '18px 36px',
-              borderRadius: '18px',
-              background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-              border: 'none',
-              color: '#FFF',
-              fontSize: '16px',
-              fontWeight: 900,
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              boxShadow: '0 8px 30px rgba(245, 158, 11, 0.45)',
-              letterSpacing: '0.02em',
-            }}
-          >
-            Continue Campaign Quest <ChevronRight size={22} />
-          </motion.button>
-        </Link>
-      </motion.div>
-
-      {/* ── 4. 25-KINGDOM CAMPAIGN MAP ───────────────────────────────── */}
-      <div style={commandPanelSt}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
-          <div>
-            <h3 style={{ margin: 0, fontSize: '17px', fontWeight: 900, color: '#FFF', letterSpacing: '-0.01em', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Landmark size={20} style={{ color: '#C084FC' }} /> 25 KINGDOMS CAMPAIGN MAP
-            </h3>
-            <span style={{ fontSize: '12px', color: '#94A3B8', fontWeight: 600 }}>Active campaign progress across all 25 realms of Algorithmia</span>
-          </div>
-          <Link href="/learn" style={{ fontSize: '13px', color: '#C084FC', fontWeight: 800, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Master Campaign Map <ArrowUpRight size={15} />
-          </Link>
-        </div>
-
-        {/* Kingdom Nodes Horizontal Grid */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', overflowX: 'auto', paddingBottom: '12px' }}>
-          {summary.kingdomProgression.map((k, idx) => {
-            const isMastered = k.percentage >= 100;
-            const isCurrent = idx === 0;
-
-            return (
+        {/* Top Row: Identity, Actions & HUD Stats */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '24px',
+            width: '100%',
+            zIndex: 1,
+          }}
+        >
+          {/* Identity & Level Progress */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap', flex: '1 1 380px' }}>
+            {/* Avatar Crest */}
+            <div style={{ position: 'relative', flexShrink: 0 }}>
               <div
-                key={k.slug}
                 style={{
-                  minWidth: '46px',
-                  height: '46px',
+                  width: '74px',
+                  height: '74px',
                   borderRadius: '50%',
-                  background: isMastered
-                    ? 'linear-gradient(135deg, #F59E0B, #D97706)'
-                    : isCurrent
-                    ? 'linear-gradient(135deg, #38BDF8, #0284C7)'
-                    : 'rgba(255, 255, 255, 0.05)',
-                  border: isMastered
-                    ? '2.5px solid #FDE047'
-                    : isCurrent
-                    ? '2.5px solid #7DD3FC'
-                    : '1.5px solid rgba(255, 255, 255, 0.1)',
-                  boxShadow: isMastered
-                    ? '0 0 16px rgba(245, 158, 11, 0.7)'
-                    : isCurrent
-                    ? '0 0 18px rgba(56, 189, 248, 0.7)'
-                    : 'none',
+                  background: 'linear-gradient(135deg, #38BDF8 0%, #0284C7 100%)',
+                  border: isLight ? '3px solid #FFFFFF' : '2px solid rgba(255, 255, 255, 0.3)',
+                  boxShadow: isLight
+                    ? '0 6px 20px rgba(2, 132, 199, 0.35)'
+                    : '0 0 28px rgba(56, 189, 248, 0.5)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '13px',
+                  fontSize: '28px',
                   fontWeight: 900,
-                  color: isMastered || isCurrent ? '#000' : '#64748B',
-                  cursor: 'pointer',
-                  flexShrink: 0,
-                  transition: 'all 0.2s ease',
+                  color: '#FFF',
                 }}
-                title={`${idx + 1}. ${k.title} (${k.solvedCount}/${k.totalCount})`}
               >
-                {idx + 1}
+                {profileName.charAt(0).toUpperCase()}
               </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* ── 5. DAILY MISSIONS & TACTICAL QUEST LOG ──────────────────── */}
-      <div style={commandPanelSt}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
-          <h3 style={{ margin: 0, fontSize: '17px', fontWeight: 900, color: '#FFF', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Target size={20} style={{ color: '#F59E0B' }} /> DAILY MISSIONS & TACTICAL QUEST LOG
-          </h3>
-          <span style={{ fontSize: '11px', color: '#10B981', fontWeight: 900, background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.35)', borderRadius: '10px', padding: '4px 10px' }}>
-            {currentSolves} / {targetSolves} Solved Today
-          </span>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
-          {/* Mission 1 */}
-          <div style={{ padding: '18px 22px', borderRadius: '18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.09)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <CheckCircle2 size={22} style={{ color: currentSolves >= targetSolves ? '#10B981' : '#94A3B8' }} />
-              <div>
-                <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>{targetTitle}</h4>
-                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>Daily Campaign Quest</span>
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '-4px',
+                  right: '-4px',
+                  background: '#10B981',
+                  borderRadius: '99px',
+                  padding: '2px 8px',
+                  fontSize: '10px',
+                  fontWeight: 900,
+                  color: '#FFFFFF',
+                  border: isLight ? '2px solid #FFFFFF' : '2px solid var(--surface)',
+                  boxShadow: '0 2px 8px rgba(16, 185, 129, 0.4)',
+                }}
+              >
+                Lvl {level}
               </div>
             </div>
-            <span style={{ fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>+300 XP</span>
-          </div>
 
-          {/* Mission 2 */}
-          <div style={{ padding: '18px 22px', borderRadius: '18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.09)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <RefreshCw size={22} style={{ color: '#38BDF8' }} />
-              <div>
-                <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>Complete Memory Cleanse</h4>
-                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>{revisionDueCount} Overdue SRS Items</span>
+            {/* Name, Email, Rank & Progress */}
+            <div style={{ flex: '1 1 260px', minWidth: '240px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                <h1
+                  style={{
+                    margin: 0,
+                    fontSize: '22px',
+                    fontWeight: 900,
+                    color: 'var(--text-primary, #FFF)',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  {profileName}
+                </h1>
+                <span
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: 800,
+                    padding: '2px 10px',
+                    borderRadius: '8px',
+                    background: isLight ? 'rgba(2, 132, 199, 0.1)' : 'rgba(255, 255, 255, 0.06)',
+                    border: isLight
+                      ? '1px solid rgba(2, 132, 199, 0.25)'
+                      : '1px solid var(--panel-border, rgba(255, 255, 255, 0.12))',
+                    color: isLight ? '#0284C7' : '#CBD5E1',
+                  }}
+                >
+                  {getRankTitle(level)}
+                </span>
+              </div>
+
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  marginTop: '4px',
+                  fontSize: '12px',
+                  color: 'var(--text-secondary, #94A3B8)',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <span>{profileEmail}</span>
+                <span>•</span>
+                <span>Member since Aug 2026</span>
+              </div>
+
+              {/* XP Progress Bar */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '10px', width: '100%', maxWidth: '440px' }}>
+                <div
+                  style={{
+                    flex: 1,
+                    height: '8px',
+                    borderRadius: '4px',
+                    background: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)',
+                    overflow: 'hidden',
+                    border: isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.06)',
+                  }}
+                >
+                  <div
+                    style={{
+                      height: '100%',
+                      width: `${levelPct}%`,
+                      background: 'linear-gradient(90deg, #0284C7, #10B981)',
+                      borderRadius: '4px',
+                      transition: 'width 0.4s ease',
+                      boxShadow: '0 0 10px rgba(16, 185, 129, 0.6)',
+                    }}
+                  />
+                </div>
+                <span
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: 800,
+                    color: 'var(--text-secondary, #94A3B8)',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Next Lvl: <strong style={{ color: '#10B981' }}>{currentLevelXp}</strong> / {nextLevelXp} XP ({levelPct}%)
+                </span>
               </div>
             </div>
-            <span style={{ fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>+200 XP</span>
           </div>
 
-          {/* Mission 3 */}
-          <div style={{ padding: '18px 22px', borderRadius: '18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.09)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <Brain size={22} style={{ color: '#C084FC' }} />
-              <div>
-                <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: '#FFF' }}>Review 1 Weak Topic</h4>
-                <span style={{ fontSize: '11px', color: '#94A3B8', fontWeight: 600 }}>{primaryWeakness}</span>
-              </div>
-            </div>
-            <span style={{ fontSize: '13px', fontWeight: 900, color: '#F59E0B' }}>+150 XP</span>
-          </div>
-        </div>
-      </div>
-
-      {/* ── 6. UPGRADED ORACLE AI RECOMMENDATION ENGINE PANEL ───────── */}
-      <div
-        style={{
-          padding: '28px 34px',
-          borderRadius: '24px',
-          background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(20, 14, 44, 0.98) 60%, rgba(10, 8, 26, 1) 100%)',
-          border: '2px solid #38BDF8',
-          boxShadow: '0 20px 50px rgba(56, 189, 248, 0.22), inset 0 0 35px rgba(56, 189, 248, 0.12)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '18px',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-          {/* AI Header with Avatar */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div
-              style={{
-                padding: '14px',
-                borderRadius: '20px',
-                background: 'linear-gradient(135deg, rgba(56,189,248,0.3) 0%, rgba(3,105,161,0.2) 100%)',
-                border: '2px solid #38BDF8',
-                boxShadow: '0 0 20px rgba(56,189,248,0.4)',
-              }}
-            >
-              <Bot size={34} style={{ color: '#38BDF8' }} />
-            </div>
-            <div>
-              <span style={{ fontSize: '11px', fontWeight: 900, color: '#38BDF8', textTransform: 'uppercase', letterSpacing: '0.14em', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Sparkles size={12} /> ORACLE AI RECOMMENDATION ENGINE
-              </span>
-              <h3 style={{ margin: '4px 0 0 0', fontSize: '20px', fontWeight: 900, color: '#FFF' }}>
-                Target: {recommendedFocus}
-              </h3>
-            </div>
-          </div>
-
-          <Link href="/practice" style={{ textDecoration: 'none' }}>
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(56,189,248,0.5)' }}
-              whileTap={{ scale: 0.95 }}
+          {/* Action CTAs: Edit Profile & Settings */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', zIndex: 1 }}>
+            <button
               type="button"
+              onClick={handleOpenEditModal}
               style={{
-                padding: '14px 28px',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, #38BDF8 0%, #0284C7 100%)',
-                border: 'none',
-                color: '#000',
-                fontSize: '14px',
-                fontWeight: 900,
+                padding: '9px 18px',
+                borderRadius: '10px',
+                background: isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.06)',
+                border: isLight ? '1.5px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.12)',
+                color: 'var(--text-primary, #FFF)',
+                fontSize: '12px',
+                fontWeight: 700,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                boxShadow: '0 6px 22px rgba(56,189,248,0.35)',
+                gap: '7px',
+                boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.05)' : 'none',
+                transition: 'all 0.15s ease',
               }}
             >
-              Start Practice Arena <ChevronRight size={18} />
-            </motion.button>
-          </Link>
-        </div>
+              <Edit3 size={14} style={{ color: '#0284C7' }} /> Edit Profile
+            </button>
 
-        {/* Reasoning & Recommendation Box */}
-        <div style={{ padding: '16px 22px', borderRadius: '16px', background: 'rgba(0, 0, 0, 0.4)', border: '1px solid rgba(56, 189, 248, 0.25)', display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-          <Lightbulb size={20} style={{ color: '#FDE047', flexShrink: 0, marginTop: '2px' }} />
-          <div>
-            <span style={{ fontSize: '11px', fontWeight: 900, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '4px' }}>
-              ORACLE TACTICAL REASONING ({typeof confidenceScore === 'number' ? `Score: ${confidenceScore}` : confidenceScore})
-            </span>
-            <p style={{ margin: 0, fontSize: '13px', color: '#CBD5E1', lineHeight: '1.6' }}>
-              &quot;{summaryReasoning}&quot;
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* ── 7. HORIZONTAL COMMAND HUD CONSOLE STRIP (4 PANELS) ───────── */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '20px',
-          width: '100%',
-        }}
-      >
-        {/* PANEL 1: 🐲 BYTE THE CYBER DRAKE COMPANION */}
-        <div style={hudConsolePanelSt}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-            <span style={{ fontSize: '38px' }}>🐲</span>
-            <div>
-              <h4 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: '#FFF' }}>Byte the Cyber Drake</h4>
-              <span style={{ fontSize: '11px', color: '#10B981', fontWeight: 800 }}>Mood: Energetic (+15% XP Boost)</span>
-            </div>
+            <Link href="/settings" style={{ textDecoration: 'none' }}>
+              <button
+                type="button"
+                style={{
+                  padding: '9px 18px',
+                  borderRadius: '10px',
+                  background: isLight ? 'rgba(2, 132, 199, 0.1)' : 'rgba(56, 189, 248, 0.15)',
+                  border: isLight ? '1.5px solid #0284C7' : '1px solid #38BDF8',
+                  color: isLight ? '#0284C7' : '#38BDF8',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  boxShadow: isLight ? '0 2px 8px rgba(2, 132, 199, 0.15)' : 'none',
+                  transition: 'all 0.15s ease',
+                }}
+              >
+                <SettingsIcon size={14} /> Settings
+              </button>
+            </Link>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '8px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#94A3B8', fontWeight: 900 }}>
-              <span>EVOLUTION LEVEL {level}</span>
-              <span>Phase {Math.min(4, Math.floor(level / 3) + 1)} / 4</span>
+          {/* Quick Performance Metric Tiles with Distinct Colorful Visual Personalities */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+              gap: '12px',
+              width: '100%',
+              zIndex: 1,
+            }}
+          >
+            {/* 1. Problems Solved (Emerald) */}
+            <div style={hudMetricSt('#10B981', isLight, '#ECFDF5')}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(16, 185, 129, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <CheckCircle2 size={18} style={{ color: '#10B981' }} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '17px', color: 'var(--text-primary, #FFF)', display: 'block', lineHeight: 1.1 }}>
+                  {solvedCount}
+                </strong>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted, #64748B)', fontWeight: 700 }}>
+                  Problems Solved
+                </span>
+              </div>
             </div>
-            <div style={{ width: '100%', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,0.08)', overflow: 'hidden' }}>
-              <div style={{ width: `${levelPct}%`, height: '100%', background: 'linear-gradient(90deg, #10B981, #34D399)', boxShadow: '0 0 10px rgba(16, 185, 129, 0.6)' }} />
+
+            {/* 2. Total Experience (Amber/Gold) */}
+            <div style={hudMetricSt('#F59E0B', isLight, '#FFFBEB')}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(245, 158, 11, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <Zap size={18} style={{ color: '#F59E0B' }} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '17px', color: 'var(--text-primary, #FFF)', display: 'block', lineHeight: 1.1 }}>
+                  {xp} XP
+                </strong>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted, #64748B)', fontWeight: 700 }}>
+                  Total Experience
+                </span>
+              </div>
+            </div>
+
+            {/* 3. Current Streak (Orange/Flame) */}
+            <div style={hudMetricSt('#F97316', isLight, '#FFF7ED')}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(249, 115, 22, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <Flame size={18} style={{ color: '#F97316' }} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '17px', color: 'var(--text-primary, #FFF)', display: 'block', lineHeight: 1.1 }}>
+                  {streak} Days
+                </strong>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted, #64748B)', fontWeight: 700 }}>
+                  Current Streak
+                </span>
+              </div>
+            </div>
+
+            {/* 4. Connected Platforms (Cyan/Blue) */}
+            <div style={hudMetricSt('#0284C7', isLight, '#F0F9FF')}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(2, 132, 199, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <Layers size={18} style={{ color: '#0284C7' }} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '17px', color: 'var(--text-primary, #FFF)', display: 'block', lineHeight: 1.1 }}>
+                  3 / 4
+                </strong>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted, #64748B)', fontWeight: 700 }}>
+                  Connected Platforms
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* PANEL 2: 📊 LEARNING INSIGHTS HUD */}
-        <div style={hudConsolePanelSt}>
-          <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', fontWeight: 900, color: '#FFF', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <BarChart3 size={16} style={{ color: '#A855F7' }} /> LEARNING INSIGHTS
-          </h4>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Strongest:</span>
-              <strong style={{ color: '#10B981', fontWeight: 800 }}>{topStrength}</strong>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Weakest:</span>
-              <strong style={{ color: '#EF4444', fontWeight: 800 }}>{primaryWeakness}</strong>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Solved Count:</span>
-              <strong style={{ color: '#FFF', fontWeight: 800 }}>{solvedCount} Probs</strong>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94A3B8', fontWeight: 600 }}>Contest Index:</span>
-              <strong style={{ color: '#F59E0B', fontWeight: 800 }}>{solvedCount > 0 ? 'Top 15%' : 'Unrated'}</strong>
-            </div>
-          </div>
-        </div>
-
-        {/* PANEL 3: 🏆 HALL OF CHAMPIONS & TROPHIES */}
-        <div style={hudConsolePanelSt}>
-          <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', fontWeight: 900, color: '#FFF', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Award size={16} style={{ color: '#F59E0B' }} /> TROPHY VAULT
-          </h4>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '11px', color: '#CBD5E1' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Award size={16} style={{ color: '#F59E0B', flexShrink: 0 }} />
-              <span>Unlocked: <strong style={{ color: '#FFF' }}>Compass of Contiguous Truth</strong></span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Swords size={16} style={{ color: '#EF4444', flexShrink: 0 }} />
-              <span>Defeated: <strong style={{ color: '#FFF' }}>Array Colossus Boss</strong></span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Flame size={16} style={{ color: '#F97316', flexShrink: 0 }} />
-              <span>Streak Titan: <strong style={{ color: '#FFF' }}>{streak} Days Active</strong></span>
-            </div>
-          </div>
-        </div>
-
-        {/* PANEL 4: 📖 CHRONICLE OF LEGENDS (LORE BOOK) */}
-        <div style={hudConsolePanelSt}>
-          <span style={{ fontSize: '10px', fontWeight: 900, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <BookMarked size={12} style={{ color: '#38BDF8' }} /> CHRONICLE OF LEGENDS
+        {/* Platform Coverage Full-Width Ribbon */}
+        <div
+          style={{
+            width: '100%',
+            boxSizing: 'border-box',
+            padding: '12px 20px',
+            borderRadius: '14px',
+            background: isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.025)',
+            border: isLight ? '1px solid rgba(56, 189, 248, 0.25)' : '1px solid rgba(255, 255, 255, 0.06)',
+            boxShadow: isLight ? '0 2px 10px rgba(0, 0, 0, 0.03)' : 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '16px',
+            zIndex: 1,
+          }}
+        >
+          <span
+            style={{
+              fontSize: '11px',
+              fontWeight: 800,
+              color: 'var(--text-secondary, #94A3B8)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.06em',
+            }}
+          >
+            Platform Progress Snapshot:
           </span>
-          <h5 style={{ margin: '4px 0 2px 0', fontSize: '14px', fontWeight: 900, color: '#FFF' }}>
-            Chapter 4: Moving Horizon Sands
-          </h5>
-          <p style={{ margin: 0, fontSize: '11px', color: '#CBD5E1', lineHeight: '1.5' }}>
-            &quot;As stargazers adjusted the glass lens, desert sands revealed ancient subarray vaults...&quot;
-          </p>
-        </div>
-      </div>
 
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
+            {summary.platformSnapshot.map((p) => (
+              <div key={p.platformKey} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div
+                  style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    background: p.color,
+                    boxShadow: `0 0 6px ${p.color}`,
+                  }}
+                />
+                <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-primary, #FFF)' }}>
+                  {p.name}:
+                </span>
+                <strong style={{ fontSize: '12px', fontWeight: 900, color: p.color }}>
+                  {p.solved} / {p.total}
+                </strong>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted, #94A3B8)' }}>({p.percentage}%)</span>
+              </div>
+            ))}
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', opacity: 0.65 }}>
+              <Lock size={12} style={{ color: 'var(--text-muted, #94A3B8)' }} />
+              <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted, #94A3B8)' }}>GeeksForGeeks:</span>
+              <span style={{ fontSize: '10px', color: 'var(--text-muted, #94A3B8)', fontStyle: 'italic' }}>Locked</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ── 2. PLATFORM CAMPAIGN RAILWAY TRACKS ────────────────────── */}
+      <PlatformTrainJourneys platformTrains={summary.platformTrains} />
+
+      {/* ── 3. ACTIONABLE DASHBOARD MODULES & RECENT ACTIVITY ──────── */}
+      <DashboardActionHub summary={summary} />
+
+      {/* ── 4. INTEGRATED EDIT PROFILE MODAL ───────────────────────── */}
+      <AnimatePresence>
+        {isEditModalOpen && (
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100vh',
+              background: 'rgba(0, 0, 0, 0.75)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 9999,
+              padding: '20px',
+              boxSizing: 'border-box',
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.94, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.94, opacity: 0 }}
+              style={{
+                width: '100%',
+                maxWidth: '520px',
+                background: isLight ? '#FFFFFF' : 'var(--surface)',
+                border: isLight
+                  ? '1.5px solid rgba(56, 189, 248, 0.35)'
+                  : '1.5px solid var(--panel-border, rgba(255, 255, 255, 0.15))',
+                borderRadius: '24px',
+                padding: '28px 32px',
+                boxShadow: isLight
+                  ? '0 24px 60px rgba(0, 0, 0, 0.15)'
+                  : '0 24px 60px rgba(0, 0, 0, 0.85)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                color: 'var(--text-primary, #FFF)',
+              }}
+            >
+              {/* Header */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '10px',
+                      background: 'rgba(56, 189, 248, 0.15)',
+                      border: '1px solid rgba(56, 189, 248, 0.3)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#0284C7',
+                    }}
+                  >
+                    <User size={18} />
+                  </div>
+                  <div>
+                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 900, color: 'var(--text-primary)' }}>
+                      Edit Developer Profile
+                    </h3>
+                    <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                      Manage your profile information and connected handles
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setIsEditModalOpen(false)}
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    color: 'var(--text-muted)',
+                    cursor: 'pointer',
+                    padding: '4px',
+                  }}
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <form onSubmit={handleSaveProfile} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div>
+                  <label
+                    style={{
+                      display: 'block',
+                      fontSize: '12px',
+                      fontWeight: 800,
+                      color: 'var(--text-secondary)',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    Display Name
+                  </label>
+                  <input
+                    type="text"
+                    value={editName}
+                    onChange={(e) => setEditName(e.target.value)}
+                    placeholder="Enter your name"
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '10px 14px',
+                      borderRadius: '10px',
+                      background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                      border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                      color: 'var(--text-primary)',
+                      fontSize: '13px',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label
+                    style={{
+                      display: 'block',
+                      fontSize: '12px',
+                      fontWeight: 800,
+                      color: 'var(--text-secondary)',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    value={editEmail}
+                    onChange={(e) => setEditEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '10px 14px',
+                      borderRadius: '10px',
+                      background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                      border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                      color: 'var(--text-primary)',
+                      fontSize: '13px',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label
+                    style={{
+                      display: 'block',
+                      fontSize: '12px',
+                      fontWeight: 800,
+                      color: 'var(--text-secondary)',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    Connected Handles
+                  </label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                    <input
+                      type="text"
+                      placeholder="LeetCode username"
+                      value={editLcUser}
+                      onChange={(e) => setEditLcUser(e.target.value)}
+                      style={{
+                        padding: '8px 12px',
+                        borderRadius: '8px',
+                        background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                        border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                        color: 'var(--text-primary)',
+                        fontSize: '12px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="CodeChef username"
+                      value={editCcUser}
+                      onChange={(e) => setEditCcUser(e.target.value)}
+                      style={{
+                        padding: '8px 12px',
+                        borderRadius: '8px',
+                        background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                        border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                        color: 'var(--text-primary)',
+                        fontSize: '12px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Codeforces username"
+                      value={editCfUser}
+                      onChange={(e) => setEditCfUser(e.target.value)}
+                      style={{
+                        padding: '8px 12px',
+                        borderRadius: '8px',
+                        background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                        border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                        color: 'var(--text-primary)',
+                        fontSize: '12px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                    <input
+                      type="text"
+                      placeholder="GeeksForGeeks username"
+                      value={editGfgUser}
+                      onChange={(e) => setEditGfgUser(e.target.value)}
+                      style={{
+                        padding: '8px 12px',
+                        borderRadius: '8px',
+                        background: isLight ? '#F8FAFC' : 'var(--input-bg)',
+                        border: isLight ? '1px solid #CBD5E1' : '1px solid var(--border)',
+                        color: 'var(--text-primary)',
+                        fontSize: '12px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Footer Buttons */}
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
+                  <button
+                    type="button"
+                    onClick={() => setIsEditModalOpen(false)}
+                    style={{
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      background: 'transparent',
+                      border: '1px solid var(--border)',
+                      color: 'var(--text-secondary)',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={isSaving}
+                    style={{
+                      padding: '8px 20px',
+                      borderRadius: '8px',
+                      background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%)',
+                      border: 'none',
+                      color: '#FFFFFF',
+                      fontSize: '12px',
+                      fontWeight: 800,
+                      cursor: isSaving ? 'not-allowed' : 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      boxShadow: '0 2px 10px var(--accent-glow)',
+                    }}
+                  >
+                    {isSaving ? <Save size={14} className="animate-spin" /> : <Check size={14} />}
+                    {isSaving ? 'Saving...' : 'Save Profile'}
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
-// Helper styling for top hero HUD tiles
-function hudTileSt(bg: string, border: string, glowBg: string): React.CSSProperties {
+// Helper styling for HUD metric chips with distinct colorful accents
+function hudMetricSt(accentColor: string, isLight: boolean, lightBgTint: string): React.CSSProperties {
   return {
-    padding: '14px 22px',
-    borderRadius: '18px',
-    background: bg,
-    border: `1.5px solid ${border}`,
-    boxShadow: `0 8px 24px ${glowBg}`,
+    padding: '12px 16px',
+    borderRadius: '14px',
+    background: isLight
+      ? `linear-gradient(135deg, #FFFFFF 0%, ${lightBgTint} 100%)`
+      : 'rgba(255, 255, 255, 0.03)',
+    border: isLight
+      ? `1.5px solid ${accentColor}40`
+      : `1px solid ${accentColor}33`,
     display: 'flex',
     alignItems: 'center',
-    gap: '14px',
+    gap: '12px',
+    boxShadow: isLight
+      ? `0 4px 16px ${accentColor}15, 0 1px 3px rgba(0, 0, 0, 0.03)`
+      : `0 4px 16px ${accentColor}10`,
   };
 }
-
-// Helper styling for connected command center panels
-const commandPanelSt: React.CSSProperties = {
-  padding: '26px 30px',
-  borderRadius: '22px',
-  background: 'rgba(14, 10, 32, 0.92)',
-  border: '1.5px solid rgba(168, 85, 247, 0.3)',
-  boxShadow: '0 16px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(168, 85, 247, 0.08)',
-  backdropFilter: 'blur(20px)',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '16px',
-};
-
-// Helper styling for horizontal HUD console strip panels
-const hudConsolePanelSt: React.CSSProperties = {
-  padding: '22px 24px',
-  borderRadius: '20px',
-  background: 'rgba(14, 10, 32, 0.92)',
-  border: '1.5px solid rgba(168, 85, 247, 0.3)',
-  boxShadow: '0 12px 32px rgba(0,0,0,0.6), inset 0 0 15px rgba(168, 85, 247, 0.08)',
-  backdropFilter: 'blur(20px)',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '12px',
-};

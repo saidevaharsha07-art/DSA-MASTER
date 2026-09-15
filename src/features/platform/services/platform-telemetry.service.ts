@@ -14,6 +14,8 @@ import { ConnectorRegistry } from '@/src/platforms/connectors/providers/connecto
 import { ConnectorManager } from '@/src/platforms/connectors/services/connector.manager';
 import { EventBus } from '@/src/core/events/event-bus';
 import { progressService } from '@/src/services/progress/progress.service';
+import { canonicalDb } from '@/src/core/storage/db/canonical-db.service';
+import { CurriculumRepository } from '@/src/curriculum/repository';
 
 const SNAPSHOTS_STORAGE_KEY = 'dsa-platform-snapshots-v1';
 const SYNC_STORAGE_KEY = 'dsa-platform-sync-v1';
@@ -24,7 +26,50 @@ const SYNTHETIC_DATES = new Set(['Apr 20', 'Apr 27', 'May 4', 'May 11', 'May 18'
 export class PlatformTelemetryService {
   private static inMemorySnapshots: Map<string, Map<PlatformKey, PlatformDailySnapshot[]>> = new Map();
   private static inMemorySyncState: Map<string, Map<PlatformKey, PlatformSyncState>> = new Map();
+  private static userHandles: Map<string, Record<string, string>> = new Map();
   private static initialized = false;
+
+  public static getUserHandles(userId: string): Record<string, string> {
+    if (this.userHandles.has(userId)) {
+      return this.userHandles.get(userId)!;
+    }
+    const user = canonicalDb.getUser(userId);
+    let handles: Record<string, string> = { ...user?.settings?.platformHandles };
+    
+    if (typeof window !== 'undefined' && window.localStorage) {
+      try {
+        const rawSettings = localStorage.getItem('journey-settings') || localStorage.getItem('dsa_settings');
+        if (rawSettings) {
+          const parsed = JSON.parse(rawSettings);
+          if (parsed?.integrations) {
+            if (!handles.leetcode && parsed.integrations.leetcode?.username) handles.leetcode = parsed.integrations.leetcode.username;
+            if (!handles.codeforces && parsed.integrations.codeforces?.username) handles.codeforces = parsed.integrations.codeforces.username;
+            if (!handles.codechef && parsed.integrations.codechef?.username) handles.codechef = parsed.integrations.codechef.username;
+            if (!handles.geeksforgeeks && parsed.integrations.gfg?.username) handles.geeksforgeeks = parsed.integrations.gfg.username;
+          }
+        }
+      } catch (e) {}
+    }
+    return handles;
+  }
+
+  public static saveUserHandles(userId: string, handles: Record<string, string>): void {
+    const existing = this.getUserHandles(userId);
+    const updated = { ...existing, ...handles };
+    this.userHandles.set(userId, updated);
+    const user = canonicalDb.getUser(userId) || {
+      userId,
+      username: userId,
+      displayName: userId,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    canonicalDb.saveUser({
+      ...user,
+      settings: { ...user.settings, platformHandles: updated },
+      updatedAt: new Date().toISOString(),
+    });
+  }
 
   private static ensureInitialized(): void {
     if (this.initialized) return;
@@ -306,7 +351,7 @@ export class PlatformTelemetryService {
    * Synchronizes all registered platforms for a user.
    */
   public static async syncAllPlatforms(userId: string): Promise<void> {
-    const platforms: PlatformKey[] = ['leetcode', 'codechef', 'codeforces', 'mentorpick'];
+    const platforms: PlatformKey[] = ['codechef', 'leetcode', 'codeforces', 'geeksforgeeks'];
     await Promise.all(platforms.map((p) => this.syncPlatform(userId, p)));
   }
 
@@ -378,18 +423,16 @@ export class PlatformTelemetryService {
     this.ensureInitialized();
 
     const platformsConfig: Array<{ key: PlatformKey; name: string; color: string }> = [
+      { key: 'codechef', name: 'CodeChef', color: '#F97316' },
       { key: 'leetcode', name: 'LeetCode', color: '#10B981' },
-      { key: 'codechef', name: 'CodeChef', color: '#F59E0B' },
       { key: 'codeforces', name: 'Codeforces', color: '#3B82F6' },
-      { key: 'mentorpick', name: 'MentorPick', color: 'var(--primary)' },
+      { key: 'geeksforgeeks', name: 'GeeksforGeeks', color: '#A855F7' },
     ];
 
     const userSyncMap = this.inMemorySyncState.get(userId);
     const state = progressService.getState(userId);
-    const solvedSet = new Set<string>([
-      ...state.completed.map((num) => `leetcode:${num}`),
-      ...(state.completedProblemIds || []),
-    ]);
+    const completedNums = state.completed || [];
+    const completedIds = state.completedProblemIds || [];
 
     return platformsConfig.map((cfg) => {
       const historicalSnapshots = this.getHistoricalSnapshots(userId, cfg.key, timeframe);
@@ -400,22 +443,41 @@ export class PlatformTelemetryService {
         : null;
 
       let localSolved = 0;
-      solvedSet.forEach((id) => {
-        if (cfg.key === 'leetcode') {
-          if (id.startsWith('leetcode:') || id.startsWith('lc-')) localSolved++;
-        } else if (cfg.key === 'codechef') {
-          if (id.startsWith('codechef:')) localSolved++;
-        } else if (cfg.key === 'codeforces') {
-          if (id.startsWith('codeforces:')) localSolved++;
-        } else if (cfg.key === 'mentorpick') {
-          if (id.startsWith('mentorpick:')) localSolved++;
+      completedNums.forEach((num) => {
+        if (cfg.key === 'codechef' && num >= 150000) localSolved++;
+        else if (cfg.key === 'codeforces' && num >= 90000 && num < 150000) localSolved++;
+        else if (cfg.key === 'leetcode' && num < 90000) localSolved++;
+      });
+
+      completedIds.forEach((id) => {
+        const idLower = id.toLowerCase();
+        if (cfg.key === 'codechef' && (idLower.startsWith('codechef:') || idLower.startsWith('cc-'))) {
+          const num = parseInt(idLower.replace(/\D/g, ''), 10);
+          if (isNaN(num) || !completedNums.includes(num)) localSolved++;
+        } else if (cfg.key === 'codeforces' && (idLower.startsWith('codeforces:') || idLower.startsWith('cf-'))) {
+          const num = parseInt(idLower.replace(/\D/g, ''), 10);
+          if (isNaN(num) || !completedNums.includes(num)) localSolved++;
+        } else if (cfg.key === 'leetcode' && (idLower.startsWith('leetcode:') || idLower.startsWith('lc-'))) {
+          const num = parseInt(idLower.replace(/\D/g, ''), 10);
+          if (isNaN(num) || !completedNums.includes(num)) localSolved++;
+        } else if (cfg.key === 'geeksforgeeks' && (idLower.startsWith('geeksforgeeks:') || idLower.startsWith('gfg:') || idLower.startsWith('gfg-'))) {
+          localSolved++;
         }
       });
 
-      // Solved count
+      const totalProblems = CurriculumRepository.getPlatformCount(cfg.key);
+      const practiceSolvedCount = localSolved;
+      const practiceProblemTotal = totalProblems;
+      const externalSolvedCount = latestSnapshot && latestSnapshot.solvedCount !== null ? latestSnapshot.solvedCount : null;
+
+      // Solved count (external solved if snapshot exists, or local practice solved)
       const solved = latestSnapshot && latestSnapshot.solvedCount !== null
         ? latestSnapshot.solvedCount
         : localSolved;
+
+      // Status
+      let status: 'Connected' | 'Disconnected' | 'Syncing' | 'Sync Failed' | 'Stale' =
+        cfg.key === 'geeksforgeeks' ? 'Disconnected' : syncState?.status || (historicalSnapshots.length > 0 ? 'Connected' : 'Disconnected');
 
       // Rating calculation & Trend
       let rating: number | string = 'N/A';
@@ -439,13 +501,13 @@ export class PlatformTelemetryService {
         isEstimated = true;
         ratingLabel = 'Est. Rating';
         const solvedNum = typeof solved === 'number' ? solved : 0;
-        rating = solvedNum > 0 ? 1400 + solvedNum * 15 : 'Unrated';
+        rating = solvedNum > 0 ? 1400 + solvedNum * 15 : (status === 'Connected' ? 'Unrated' : 'N/A');
       }
 
       // Contests
       const contests = latestSnapshot && latestSnapshot.contestCount !== null
         ? latestSnapshot.contestCount
-        : 'Contest data unavailable';
+        : status === 'Connected' ? 0 : 'N/A';
 
       // Success
       const success = latestSnapshot && latestSnapshot.successRate !== null
@@ -455,14 +517,10 @@ export class PlatformTelemetryService {
       // Rank
       const rank = latestSnapshot && latestSnapshot.rank !== null
         ? latestSnapshot.rank
-        : 'Unranked';
-
-      // Status
-      let status: 'Connected' | 'Disconnected' | 'Syncing' | 'Sync Failed' | 'Stale' =
-        syncState?.status || (historicalSnapshots.length > 0 ? 'Connected' : 'Disconnected');
+        : status === 'Connected' ? 'Unranked' : 'N/A';
 
       const lastSyncedAt = syncState?.lastSyncedAt || (latestSnapshot ? latestSnapshot.timestamp : null);
-      const lastSyncedText = this.getLastSyncedText(lastSyncedAt);
+      const lastSyncedText = status === 'Connected' ? this.getLastSyncedText(lastSyncedAt) : 'Not Connected';
 
       return {
         name: cfg.name,
@@ -472,6 +530,11 @@ export class PlatformTelemetryService {
         isEstimated,
         trend,
         solved,
+        practiceSolved: localSolved,
+        practiceSolvedCount,
+        practiceProblemTotal,
+        externalSolvedCount,
+        totalProblems,
         contests,
         success,
         rank,

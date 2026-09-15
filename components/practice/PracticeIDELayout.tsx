@@ -10,10 +10,15 @@ import { BottomConsolePanel } from './BottomConsolePanel';
 import { PracticeActionBar } from './PracticeActionBar';
 import { ThinkingPhaseModal } from './ThinkingPhaseModal';
 import { SubmissionResultModal } from './SubmissionResultModal';
-import { getStarterCode } from '@/src/engines/judge/starterCode';
+import { getStarterCode, StarterCodeMap } from '@/src/engines/judge/starterCode';
 import { judgeEngine, ThinkingPrediction, SubmissionRecord } from '@/src/engines/judge';
 import { runCode, submitSolution, cancelActiveExecution, LanguageId } from '@/src/services/judge';
 import { useToast } from '@/src/context/ToastContext';
+import { useSettings } from '@/src/context/SettingsContext';
+import { useActiveUser } from '@/src/hooks/useActiveUser';
+import { progressService } from '@/src/services/progress/progress.service';
+import { EventBus } from '@/src/core/events/event-bus';
+import { getPlatformMeta } from '@/src/curriculum/services';
 
 interface PracticeIDELayoutProps {
   problem: ProblemModel;
@@ -24,6 +29,10 @@ const STORAGE_HEIGHT_KEY = 'dsa_ide_console_height_px';
 
 export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
   const { toast } = useToast();
+  const { settings } = useSettings();
+  const { userId } = useActiveUser();
+
+  const isLight = settings?.appearance?.theme === 'light';
   
   // Left Panel Width % (Persisted in localStorage, default 45%)
   const [leftPanelWidthPct, setLeftPanelWidthPct] = useState<number>(45);
@@ -36,10 +45,12 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
   const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
   const [isLiked, setIsLiked] = useState<boolean>(false);
 
-  // Language & Starter Code State
-  const [language, setLanguage] = useState<string>('typescript');
-  const starterCodeMap = useRef(getStarterCode(problem.title, problem.slug));
-  const [code, setCode] = useState<string>(starterCodeMap.current['typescript']);
+  // Language & Starter Code State (Default to Python 3 / TypeScript)
+  const [language, setLanguage] = useState<string>('python');
+  const [code, setCode] = useState<string>(() => {
+    const savedDraft = judgeEngine.loadDraft(problem.id, 'python', userId);
+    return savedDraft || getStarterCode(problem.title, problem.slug)['python'];
+  });
 
   // Thinking Phase Prediction State
   const [isThinkingModalOpen, setIsThinkingModalOpen] = useState<boolean>(false);
@@ -48,27 +59,41 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
   // Submission Result Modal State
   const [submissionModal, setSubmissionModal] = useState<{
     isOpen: boolean;
-    verdict: 'Accepted' | 'Wrong Answer' | 'Time Limit Exceeded' | 'Compile Error';
+    verdict: 'Accepted' | 'Wrong Answer' | 'Time Limit Exceeded' | 'Compile Error' | 'Runtime Error';
     runtimeMs: number;
     memoryMb: number;
     xpEarned: number;
+    testcasesPassed?: number;
+    totalTestcases?: number;
+    failedTestcase?: {
+      testcaseIndex: number;
+      input: string;
+      expectedOutput: string;
+      actualOutput: string;
+      error?: string;
+    };
+    errorLog?: string;
   }>({
     isOpen: false,
     verdict: 'Accepted',
-    runtimeMs: 4,
-    memoryMb: 41.2,
-    xpEarned: 35,
+    runtimeMs: 0,
+    memoryMb: 0,
+    xpEarned: problem.xp || 50,
   });
 
   // 7 Console Tabs State
   const [consoleTab, setConsoleTab] = useState<'testcases' | 'custom-input' | 'output' | 'test-results' | 'analytics' | 'debug' | 'history'>('testcases');
-  const [customInputText, setCustomInputText] = useState<string>('nums = [2,7,11,15]\ntarget = 9');
+  const [customInputText, setCustomInputText] = useState<string>('nums = [1,2,3,1]');
   
   const [evaluationResult, setEvaluationResult] = useState<{
     status: 'idle' | 'running' | 'accepted' | 'wrong_answer' | 'compile_error' | 'time_limit' | 'runtime_error';
     runtimeMs?: number;
     memoryMb?: number;
     outputDetails?: string;
+    compileOutput?: string;
+    testcaseResults?: any[];
+    totalTestcases?: number;
+    passedTestcases?: number;
   }>({ status: 'idle' });
 
   const [isRunning, setIsRunning] = useState<boolean>(false);
@@ -86,15 +111,29 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
     }
   }, []);
 
-  // Load draft code for problem and language
+  // Update starter code and custom input when problem changes
   useEffect(() => {
-    const savedDraft = judgeEngine.loadDraft(problem.id, language);
+    const savedDraft = judgeEngine.loadDraft(problem.id, language, userId);
     if (savedDraft) {
       setCode(savedDraft);
     } else {
-      setCode(starterCodeMap.current[language as keyof typeof starterCodeMap.current] || starterCodeMap.current['typescript']);
+      const freshStarter = getStarterCode(problem.title, problem.slug)[language as keyof StarterCodeMap] || getStarterCode(problem.title, problem.slug)['python'];
+      setCode(freshStarter);
     }
-  }, [language, problem.id]);
+  }, [problem.id, problem.slug, language, userId]);
+
+  // Language switch handler with draft preservation
+  const handleLanguageChange = (newLang: string) => {
+    judgeEngine.saveDraft(problem.id, language, code, userId);
+    setLanguage(newLang);
+    const savedDraft = judgeEngine.loadDraft(problem.id, newLang, userId);
+    if (savedDraft) {
+      setCode(savedDraft);
+    } else {
+      const freshStarter = getStarterCode(problem.title, problem.slug)[newLang as keyof StarterCodeMap] || '';
+      setCode(freshStarter);
+    }
+  };
 
   // Handle Dragging Splitter
   const containerRef = useRef<HTMLDivElement>(null);
@@ -122,7 +161,7 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
     window.addEventListener('mouseup', handleMouseUp);
   };
 
-  // Run Code via Clean Judge Service Architecture Layer
+  // Run Code via Real Online Judge Sandbox Pipeline
   const handleRunCode = async () => {
     setIsRunning(true);
     setEvaluationResult({ status: 'running' });
@@ -130,83 +169,126 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
 
     try {
       const result = await runCode({
-        problemId: problem.id,
+        problemId: problem.slug || problem.id,
         language: language as LanguageId,
         code,
-        stdin: customInputText,
+        customInput: customInputText,
       });
 
       setIsRunning(false);
 
+      setEvaluationResult({
+        status: result.status,
+        runtimeMs: result.runtimeMs,
+        memoryMb: result.memoryMb,
+        outputDetails: result.stderr || result.stdout,
+        compileOutput: result.compileOutput,
+        testcaseResults: result.testcaseResults,
+        totalTestcases: result.totalTestcases,
+        passedTestcases: result.passedTestcases,
+      });
+
       if (result.status === 'accepted') {
-        setEvaluationResult({
-          status: 'accepted',
-          runtimeMs: result.runtimeMs,
-          memoryMb: result.memoryMb,
-          outputDetails: result.stdout,
-        });
-        toast(`Executed via ${result.providerUsed} in ${result.runtimeMs}ms!`, 'success');
+        toast(`All ${result.passedTestcases || 0} sample tests passed!`, 'success');
+      } else if (result.status === 'compile_error') {
+        toast('Compilation Error: See compiler output in console', 'error');
+      } else if (result.status === 'runtime_error') {
+        toast('Runtime Error during test execution', 'error');
+      } else if (result.status === 'time_limit') {
+        toast('Time Limit Exceeded (> 3000ms)', 'error');
       } else {
-        setEvaluationResult({
-          status: result.status,
-          outputDetails: result.stderr,
-        });
-        toast(result.stderr || 'Execution failed', 'error');
+        toast(`Sample tests failed (${result.passedTestcases || 0}/${result.totalTestcases || 0} passed)`, 'warning');
       }
     } catch (err: any) {
       setIsRunning(false);
-      toast(err.message || 'Execution error', 'error');
+      setEvaluationResult({
+        status: 'runtime_error',
+        outputDetails: err?.message || 'Sandbox execution runtime error.',
+      });
+      toast('Execution failed to run in sandbox', 'error');
     }
   };
 
-  // Submit Solution via Clean Judge Service Architecture Layer
+  // Submit Solution via Full Hidden Test Suite Judge
   const handleSubmitSolution = async () => {
     setIsRunning(true);
-    setConsoleTab('output');
+    setEvaluationResult({ status: 'running' });
+    setConsoleTab('test-results');
 
     try {
       const result = await submitSolution({
-        problemId: problem.id,
+        problemId: problem.slug || problem.id,
         language: language as LanguageId,
         code,
+        userId,
       });
 
       setIsRunning(false);
 
-      const verdict = result.verdict as SubmissionRecord['verdict'];
+      const isAccepted = result.verdict === 'Accepted';
+      const xpToEarn = isAccepted ? (problem.xp || 50) : 0;
 
+      // 1. Record authentic submission in JudgeEngine
       judgeEngine.recordSubmission({
         problemId: problem.id,
         language,
-        verdict: verdict || 'Accepted',
-        runtimeMs: result.runtimeMs || 4,
-        memoryMb: result.memoryMb || 41.2,
+        verdict: result.verdict as SubmissionRecord['verdict'],
+        runtimeMs: result.runtimeMs,
+        memoryMb: result.memoryMb,
         codeSnapshot: code,
         prediction,
-        testcasesPassed: result.testcasesPassed || 55,
-        totalTestcases: result.totalTestcases || 55,
-        xpEarned: result.xpEarned || 35,
-      });
+        testcasesPassed: result.testcasesPassed,
+        totalTestcases: result.totalTestcases,
+        xpEarned: xpToEarn,
+      }, userId);
 
+      // 2. Set submission modal state
       setSubmissionModal({
         isOpen: true,
-        verdict: verdict === 'Accepted' ? 'Accepted' : 'Wrong Answer',
-        runtimeMs: result.runtimeMs || 4,
-        memoryMb: result.memoryMb || 41.2,
-        xpEarned: result.xpEarned || 35,
+        verdict: result.verdict as any,
+        runtimeMs: result.runtimeMs,
+        memoryMb: result.memoryMb,
+        xpEarned: xpToEarn,
+        testcasesPassed: result.testcasesPassed,
+        totalTestcases: result.totalTestcases,
+        failedTestcase: result.failedTestcase,
+        errorLog: result.errorLog,
       });
 
-      if (verdict === 'Accepted') {
-        setEvaluationResult({
+      // 3. Update evaluation result
+      setEvaluationResult({
+        status: isAccepted ? 'accepted' : result.verdict === 'Compilation Error' ? 'compile_error' : result.verdict === 'Time Limit Exceeded' ? 'time_limit' : 'wrong_answer',
+        runtimeMs: result.runtimeMs,
+        memoryMb: result.memoryMb,
+        outputDetails: result.errorLog,
+        totalTestcases: result.totalTestcases,
+        passedTestcases: result.testcasesPassed,
+        testcaseResults: result.testcaseDetails,
+      });
+
+      // 4. ONLY ON GENUINE ACCEPTED: Publish ProblemSolved event across EventBus
+      if (isAccepted) {
+        const platformMeta = getPlatformMeta(problem);
+        const canonicalId = `${platformMeta.id}:${problem.id}`;
+
+        EventBus.publish('ProblemSolved', {
+          id: result.submissionId || `sub_${Date.now()}_${problem.id}`,
+          userId,
+          problemId: canonicalId,
+          leetcodeNumber: problem.leetcodeNumber || 0,
+          platform: platformMeta.id,
           status: 'accepted',
-          runtimeMs: result.runtimeMs,
-          memoryMb: result.memoryMb,
+          timestamp: new Date().toISOString(),
+          durationSeconds: result.runtimeMs ? Math.round(result.runtimeMs / 1000) : 10,
+          xpEarned: xpToEarn,
+          topic: problem.topics?.[0] || problem.categoryTitle || 'General',
+          pattern: problem.patternTitle || 'General',
+          difficulty: problem.difficulty || 'Medium',
         });
+
+        toast(`Accepted! +${xpToEarn} XP added to your profile`, 'success');
       } else {
-        setEvaluationResult({
-          status: 'wrong_answer',
-          outputDetails: result.errorLog,
-        });
+        toast(`Verdict: ${result.verdict} (${result.testcasesPassed}/${result.totalTestcases} passed)`, 'error');
       }
     } catch (err: any) {
       setIsRunning(false);
@@ -215,34 +297,28 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
   };
 
   const handleResetCode = () => {
-    const defaultCode = starterCodeMap.current[language as keyof typeof starterCodeMap.current] || '';
+    const defaultCode = getStarterCode(problem.title, problem.slug)[language as keyof StarterCodeMap] || '';
     setCode(defaultCode);
-    judgeEngine.saveDraft(problem.id, language, defaultCode);
+    judgeEngine.saveDraft(problem.id, language, defaultCode, userId);
     toast('Reset code to starter template', 'info');
   };
 
   const handleSaveDraft = () => {
-    judgeEngine.saveDraft(problem.id, language, code);
+    judgeEngine.saveDraft(problem.id, language, code, userId);
     toast('Draft code saved automatically!', 'success');
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.99 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
+    <div
       style={{
-        width: '100vw',
-        height: '100vh',
-        maxHeight: '100vh',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        background: '#09090B',
+        background: isLight ? '#F5F7FB' : '#0F172A',
+        color: 'var(--text-primary)',
         overflow: 'hidden',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        zIndex: 1000,
+        fontFamily: 'var(--font-sans, sans-serif)',
       }}
     >
       {/* 1. TOP NAVIGATION BAR */}
@@ -274,7 +350,11 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
           style={{
             width: '6px',
             height: '100%',
-            background: isDraggingSplitter ? '#C084FC' : 'rgba(168, 85, 247, 0.25)',
+            background: isDraggingSplitter
+              ? 'var(--primary)'
+              : isLight
+              ? '#CBD5E1'
+              : 'rgba(148, 163, 184, 0.25)',
             cursor: 'col-resize',
             zIndex: 30,
             transition: 'background 0.2s ease',
@@ -291,10 +371,7 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
               onChangeCode={setCode}
               onResetCode={handleResetCode}
               language={language}
-              onChangeLanguage={(lang) => {
-                judgeEngine.saveDraft(problem.id, language, code);
-                setLanguage(lang);
-              }}
+              onChangeLanguage={handleLanguageChange}
             />
           </div>
 
@@ -304,6 +381,7 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
               activeTab={consoleTab}
               onSelectTab={setConsoleTab}
               evaluationResult={evaluationResult}
+              submissionState={submissionModal.isOpen ? submissionModal : null}
               customInputText={customInputText}
               onChangeCustomInput={setCustomInputText}
               problemId={problem.id}
@@ -345,6 +423,6 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
         xpEarned={submissionModal.xpEarned}
       />
 
-    </motion.div>
+    </div>
   );
 }

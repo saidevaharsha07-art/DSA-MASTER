@@ -1,6 +1,6 @@
-# DSA Master UI System
+# DSA CRACKER UI System
 
-This document outlines the UI architecture and primitive components that make up the DSA Master Roadmap application.
+This document outlines the UI architecture and primitive components that make up the DSA CRACKER application.
 The UI is strictly token-driven, leveraging Radix UI for accessibility and behavior, and a custom inline/global CSS design system for aesthetics.
 
 ## Design Foundations

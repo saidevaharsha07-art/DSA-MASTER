@@ -1,6 +1,5 @@
-import JourneyPage from "@/components/homepage/JourneyPage";
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return <JourneyPage />;
+  redirect('/dashboard');
 }
-

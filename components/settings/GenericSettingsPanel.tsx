@@ -3,20 +3,24 @@
 import React from "react";
 import { SettingsHeader } from "./SettingsHeader";
 import { SidebarWidget } from "./appearance/SidebarWidget";
-import { DESIGN_TOKENS } from "@/src/design/tokens";
+import { useSettings } from "@/src/context/SettingsContext";
 import { ShieldCheck, Cloud, Zap, Info } from "lucide-react";
 
 interface GenericSettingsPanelProps {
-  emoji: string;
+  emoji?: string;
+  icon?: React.ReactNode;
   title: string;
   subtitle: string;
 }
 
-export function GenericSettingsPanel({ emoji, title, subtitle }: GenericSettingsPanelProps) {
+export function GenericSettingsPanel({ emoji, icon, title, subtitle }: GenericSettingsPanelProps) {
+  const { settings } = useSettings();
+  const isLight = settings.appearance.theme === 'light';
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Shared Global Settings Header */}
-      <SettingsHeader emoji={emoji} title={title} subtitle={subtitle} />
+      <SettingsHeader emoji={emoji} icon={icon} title={title} subtitle={subtitle} />
 
       {/* Main Grid Layout */}
       <div
@@ -30,41 +34,41 @@ export function GenericSettingsPanel({ emoji, title, subtitle }: GenericSettings
         {/* Main Panel */}
         <div
           style={{
-            background: "rgba(18, 22, 38, 0.72)",
+            background: "var(--card)",
             backdropFilter: "blur(20px)",
-            border: `1px solid ${DESIGN_TOKENS.colors.border}`,
+            border: "1px solid var(--border)",
             borderRadius: "24px",
             padding: "32px",
-            boxShadow: DESIGN_TOKENS.shadows.card,
+            boxShadow: "var(--card-shadow)",
             display: "flex",
             flexDirection: "column",
             gap: "24px",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <ShieldCheck size={24} style={{ color: "#7C4DFF" }} />
+            <ShieldCheck size={24} style={{ color: "var(--primary)" }} />
             <div>
-              <h4 style={{ margin: 0, fontSize: "16px", fontWeight: 600, color: "#FFFFFF" }}>
+              <h4 style={{ margin: 0, fontSize: "16px", fontWeight: 600, color: "var(--text-primary)" }}>
                 {title} Active
               </h4>
-              <p style={{ margin: "2px 0 0 0", fontSize: "12px", color: "#9AA4B2" }}>
+              <p style={{ margin: "2px 0 0 0", fontSize: "12px", color: "var(--text-secondary)" }}>
                 All systems configured for optimal performance and security.
               </p>
             </div>
           </div>
 
-          <div style={{ height: "1px", background: "rgba(255, 255, 255, 0.06)" }} />
+          <div style={{ height: "1px", background: "var(--border)" }} />
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
             <div
               style={{
                 padding: "20px",
                 borderRadius: "14px",
-                background: "rgba(10, 14, 26, 0.6)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: isLight ? "#F8FAFC" : "rgba(10, 14, 26, 0.6)",
+                border: "1px solid var(--border)",
               }}
             >
-              <span style={{ fontSize: "12px", color: "#9AA4B2" }}>Status</span>
+              <span style={{ fontSize: "12px", color: "var(--text-secondary)" }}>Status</span>
               <span style={{ fontSize: "18px", fontWeight: 700, color: "#10B981", display: "block", marginTop: "4px" }}>
                 Operational
               </span>
@@ -74,12 +78,12 @@ export function GenericSettingsPanel({ emoji, title, subtitle }: GenericSettings
               style={{
                 padding: "20px",
                 borderRadius: "14px",
-                background: "rgba(10, 14, 26, 0.6)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: isLight ? "#F8FAFC" : "rgba(10, 14, 26, 0.6)",
+                border: "1px solid var(--border)",
               }}
             >
-              <span style={{ fontSize: "12px", color: "#9AA4B2" }}>Latency</span>
-              <span style={{ fontSize: "18px", fontWeight: 700, color: "#A970FF", display: "block", marginTop: "4px" }}>
+              <span style={{ fontSize: "12px", color: "var(--text-secondary)" }}>Latency</span>
+              <span style={{ fontSize: "18px", fontWeight: 700, color: "var(--primary)", display: "block", marginTop: "4px" }}>
                 12 ms
               </span>
             </div>
@@ -89,10 +93,10 @@ export function GenericSettingsPanel({ emoji, title, subtitle }: GenericSettings
         {/* Right Sidebar */}
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <SidebarWidget title="Module Overview" subtitle="System details">
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12px", color: "#9AA4B2" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12px", color: "var(--text-secondary)" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span>Engine Version</span>
-                <span style={{ color: "#FFFFFF", fontWeight: 600 }}>v6.2.0</span>
+                <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>v6.2.0</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span>Security Shield</span>

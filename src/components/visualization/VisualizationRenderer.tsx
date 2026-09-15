@@ -68,26 +68,28 @@ export function VisualizationRenderer({ model }: VisualizationRendererProps) {
   return (
     <div className="flex flex-col gap-6 w-full">
       <div className="flex items-center gap-3 mb-2">
-        <div className="p-2 bg-blue-500/10 rounded-xl border border-blue-500/20">
-          <Layers className="w-6 h-6 text-blue-400" />
+        <div style={{ background: 'var(--accent-soft)', border: '1px solid var(--accent-border)' }} className="p-2 rounded-xl">
+          <Layers style={{ color: 'var(--accent-primary)' }} className="w-6 h-6" />
         </div>
-        <h2 className="text-2xl font-bold text-white">Interactive Animation</h2>
+        <h2 style={{ color: 'var(--text-primary)' }} className="text-2xl font-bold">Interactive Animation</h2>
       </div>
 
-      <div className="flex flex-col bg-slate-900/40 rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative min-h-[500px]">
+      <div style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col rounded-3xl overflow-hidden shadow-2xl relative min-h-[500px]">
         {/* Title Header */}
-        <div className="flex justify-between items-center p-6 border-b border-white/5 bg-slate-950/50">
-          <h3 className="text-lg font-bold text-white">
+        <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--surface-secondary)' }} className="flex justify-between items-center p-6">
+          <h3 style={{ color: 'var(--text-primary)' }} className="text-lg font-bold">
             {currentFrame.title || `Step ${currentFrameIndex + 1}`}
           </h3>
-          <div className="flex items-center gap-2 bg-slate-800 rounded-lg p-1">
+          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)' }} className="flex items-center gap-2 rounded-lg p-1">
             {SPEEDS.map(speed => (
               <button
                 key={speed}
                 onClick={() => setSpeedMultiplier(speed)}
-                className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${
-                  speedMultiplier === speed ? 'bg-cyan-500 text-slate-950' : 'text-slate-400 hover:text-white'
-                }`}
+                style={{
+                  background: speedMultiplier === speed ? 'var(--accent-primary)' : 'transparent',
+                  color: speedMultiplier === speed ? '#FFFFFF' : 'var(--text-muted)',
+                }}
+                className="px-3 py-1 text-xs font-bold rounded-md transition-colors"
               >
                 {speed}x
               </button>
@@ -96,18 +98,17 @@ export function VisualizationRenderer({ model }: VisualizationRendererProps) {
         </div>
 
         {/* Renderer Area */}
-        <div className="flex-1 flex flex-col items-center justify-center p-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/20 via-slate-900/20 to-transparent relative">
+        <div className="flex-1 flex flex-col items-center justify-center p-8 relative">
           {model.type === 'array' && currentFrame.state.arrays && (
             <ArrayRenderer 
               arrays={currentFrame.state.arrays} 
               pointers={currentFrame.state.pointers} 
             />
           )}
-          {/* Add MatrixRenderer, TreeRenderer, etc. here later */}
         </div>
 
         {/* Explanation Banner */}
-        <div className="p-6 bg-slate-950/80 border-t border-white/5 min-h-[100px] flex items-center justify-center relative z-10">
+        <div style={{ background: 'var(--surface-secondary)', borderTop: '1px solid var(--border)' }} className="p-6 min-h-[100px] flex items-center justify-center relative z-10">
           <AnimatePresence mode="wait">
             <motion.p
               key={currentFrame.id}
@@ -115,7 +116,8 @@ export function VisualizationRenderer({ model }: VisualizationRendererProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="text-lg font-medium text-slate-200 text-center max-w-3xl leading-relaxed"
+              style={{ color: 'var(--text-primary)' }}
+              className="text-lg font-medium text-center max-w-3xl leading-relaxed"
             >
               {currentFrame.explanation}
             </motion.p>
@@ -123,7 +125,7 @@ export function VisualizationRenderer({ model }: VisualizationRendererProps) {
         </div>
 
         {/* Playback Controls Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 border-t border-white/5 bg-slate-950">
+        <div style={{ background: 'var(--surface-secondary)', borderTop: '1px solid var(--border)' }} className="flex flex-col md:flex-row items-center justify-between gap-6 p-6">
           <PlaybackControls
             isPlaying={isPlaying}
             onPlayPause={() => setIsPlaying(!isPlaying)}

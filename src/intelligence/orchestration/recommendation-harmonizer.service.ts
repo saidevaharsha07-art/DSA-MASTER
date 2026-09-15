@@ -59,6 +59,8 @@ export class UnifiedRecommendationHarmonizer {
     EventBus.subscribe('ProblemSolved', () => this.clearCache());
     EventBus.subscribe('MemoryReviewed', () => this.clearCache());
     EventBus.subscribe('InterviewCompleted', () => this.clearCache());
+    EventBus.subscribe('ProfileUpdated', () => this.clearCache());
+    EventBus.subscribe('PlatformSynced', () => this.clearCache());
 
     this.isSubscribed = true;
   }

@@ -21,14 +21,14 @@ export function RevisionStatCards({ dueTodayCount, streakStats, xpStats, nextRew
       
       {/* Card 1: Due Today */}
       <motion.div
-        whileHover={{ y: -4, boxShadow: '0 16px 36px rgba(168, 85, 247, 0.25)' }}
+        whileHover={{ y: -4, boxShadow: '0 16px 36px var(--accent-glow, rgba(16, 185, 129, 0.25))' }}
         transition={{ duration: 0.2 }}
         style={{
           padding: '24px',
           borderRadius: '24px',
           background: 'rgba(20, 16, 38, 0.7)',
           backdropFilter: 'blur(16px)',
-          border: '1px solid rgba(168, 85, 247, 0.3)',
+          border: '1px solid var(--primary-border, rgba(168, 85, 247, 0.3))',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
@@ -36,11 +36,11 @@ export function RevisionStatCards({ dueTodayCount, streakStats, xpStats, nextRew
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#C084FC' }}>
+          <span style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--primary)' }}>
             ✓ Due Today
           </span>
-          <div style={{ padding: '10px', borderRadius: '14px', background: 'rgba(168, 85, 247, 0.2)', border: '1px solid rgba(168, 85, 247, 0.4)' }}>
-            <CheckCircle2 size={20} style={{ color: '#C084FC' }} />
+          <div style={{ padding: '10px', borderRadius: '14px', background: 'var(--primary-bg, rgba(168, 85, 247, 0.2))', border: '1px solid var(--primary-border, rgba(168, 85, 247, 0.4))' }}>
+            <CheckCircle2 size={20} style={{ color: 'var(--primary)' }} />
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export function RevisionStatCards({ dueTodayCount, streakStats, xpStats, nextRew
             width: '100%',
             padding: '10px 16px',
             borderRadius: '12px',
-            background: 'linear-gradient(135deg, #A855F7 0%, #7E22CE 100%)',
+            background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%)',
             border: 'none',
             color: '#FFFFFF',
             fontSize: '13px',
@@ -66,7 +66,7 @@ export function RevisionStatCards({ dueTodayCount, streakStats, xpStats, nextRew
             alignItems: 'center',
             justifyContent: 'center',
             gap: '8px',
-            boxShadow: '0 4px 16px rgba(168, 85, 247, 0.4)',
+            boxShadow: '0 4px 16px var(--accent-glow, rgba(16, 185, 129, 0.4))',
           }}
         >
           <Play size={14} fill="#FFF" /> Review Now

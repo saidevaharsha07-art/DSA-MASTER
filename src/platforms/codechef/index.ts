@@ -1,6 +1,6 @@
 /**
  * CodeChef Platform Module
- * Clean Platform API for CodeChef Practice System inside DSA MASTER ROADMAP.
+ * Clean Platform API for CodeChef Practice System inside DSA CRACKER.
  */
 
 export * from './types';

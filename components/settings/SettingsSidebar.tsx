@@ -1,200 +1,258 @@
-// components/settings/SettingsSidebar.tsx
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import styles from "./SettingsSidebar.module.css";
+'use client';
+
+import React from 'react';
 import {
+  UserRound,
   Palette,
+  Layout,
   Brain,
   Sword,
   Target,
   BookOpen,
-  Bell,
   Link2,
-  Cloud,
+  Bell,
   Shield,
-  Zap,
-  Settings as SettingsIcon,
-  CircleHelp,
-} from "lucide-react";
+  Cloud,
+} from 'lucide-react';
 
-/**
- * Data structures – future‑proof, scalable.
- */
- type Item = {
-  key: string;
+export type SettingsTabKey =
+  | 'profile'
+  | 'appearance'
+  | 'interface'
+  | 'learning'
+  | 'practice'
+  | 'goals'
+  | 'revision'
+  | 'integrations'
+  | 'notifications'
+  | 'privacy'
+  | 'cloud';
+
+interface NavItem {
+  key: SettingsTabKey;
   title: string;
   subtitle: string;
-  icon: React.ComponentType<any>;
-  /** Optional tiny status badge */
-  status?: React.ReactNode;
- };
+  icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>;
+}
 
- type Section = {
+interface NavSection {
   title: string;
-  items: Item[];
- };
+  items: NavItem[];
+}
 
- const SETTINGS_SECTIONS: Section[] = [
+export const SETTINGS_NAV_SECTIONS: NavSection[] = [
   {
-    title: "PERSONALIZATION",
+    title: 'PROFILE',
     items: [
       {
-        key: "appearance",
-        title: "Appearance",
-        subtitle: "Customize themes, colors and layout",
-        icon: Palette,
-      },
-      {
-        key: "learning",
-        title: "Learning Engine",
-        subtitle: "Spaced repetition, review and retention",
-        icon: Brain,
+        key: 'profile',
+        title: 'Developer Profile',
+        subtitle: 'Identity & platform handles',
+        icon: UserRound,
       },
     ],
   },
   {
-    title: "LEARNING",
+    title: 'APPEARANCE',
     items: [
       {
-        key: "practice",
-        title: "Practice",
-        subtitle: "Problem solving preferences",
+        key: 'appearance',
+        title: 'Appearance & Themes',
+        subtitle: 'Themes & accent palette',
+        icon: Palette,
+      },
+      {
+        key: 'interface',
+        title: 'Layout & Interface',
+        subtitle: 'Density, radius & animations',
+        icon: Layout,
+      },
+    ],
+  },
+  {
+    title: 'LEARNING',
+    items: [
+      {
+        key: 'learning',
+        title: 'Learning Preferences',
+        subtitle: 'Engine & hint settings',
+        icon: Brain,
+      },
+      {
+        key: 'practice',
+        title: 'Practice',
+        subtitle: 'Problem solving defaults',
         icon: Sword,
       },
       {
-        key: "goals",
-        title: "Goals & Progress",
-        subtitle: "Track milestones and achievements",
+        key: 'goals',
+        title: 'Goals & Targets',
+        subtitle: 'Daily & weekly targets',
         icon: Target,
       },
       {
-        key: "revision",
-        title: "Revision Center",
-        subtitle: "Smart revision settings",
+        key: 'revision',
+        title: 'Revision Center',
+        subtitle: 'SRS memory parameters',
         icon: BookOpen,
       },
     ],
   },
   {
-    title: "SYSTEM",
+    title: 'PLATFORMS',
     items: [
       {
-        key: "notifications",
-        title: "Notifications",
-        subtitle: "Alerts, reminders and updates",
-        icon: Bell,
-        status: <span className={styles.badge}>2 pending</span>,
-      },
-      {
-        key: "integrations",
-        title: "Integrations",
-        subtitle: "Connect external platforms",
+        key: 'integrations',
+        title: 'Platforms & Sync',
+        subtitle: 'LeetCode, CodeChef, Codeforces',
         icon: Link2,
-      },
-      {
-        key: "cloud",
-        title: "Cloud Sync",
-        subtitle: "Backup and synchronize",
-        icon: Cloud,
-        status: <span className={styles.badgeSuccess}>🟢 Connected</span>,
       },
     ],
   },
   {
-    title: "APPLICATION",
+    title: 'SYSTEM',
     items: [
       {
-        key: "privacy",
-        title: "Privacy & Data",
-        subtitle: "Security and permissions",
+        key: 'notifications',
+        title: 'Notifications',
+        subtitle: 'Alerts & practice reminders',
+        icon: Bell,
+      },
+      {
+        key: 'privacy',
+        title: 'Data & Privacy',
+        subtitle: 'Data export & cache controls',
         icon: Shield,
-        status: <span className={styles.badgeInfo}>Protected</span>,
       },
       {
-        key: "performance",
-        title: "Performance",
-        subtitle: "Visual quality and optimization",
-        icon: Zap,
-        status: <span className={styles.badgeInfo}>Balanced</span>,
-      },
-      {
-        key: "advanced",
-        title: "Advanced",
-        subtitle: "Developer and experimental features",
-        icon: SettingsIcon,
+        key: 'cloud',
+        title: 'Cloud Sync',
+        subtitle: 'Background synchronization',
+        icon: Cloud,
       },
     ],
   },
- ];
+];
 
-/**
- * SettingsSidebar – polished AAA‑quality component with smooth scroll support.
- */
- export const SettingsSidebar: React.FC<{ activeKey?: string; onSelect?: (key: string) => void }> = ({ activeKey = "appearance", onSelect }) => {
-  const [internalActive, setInternalActive] = useState(activeKey);
+import { useSettings } from '@/src/context/SettingsContext';
 
-  const handleSelect = (key: string) => {
-    if (onSelect) {
-      onSelect(key);
-    } else {
-      setInternalActive(key);
-    }
-  };
+interface SettingsSidebarProps {
+  activeTab: SettingsTabKey;
+  onSelectTab: (tab: SettingsTabKey) => void;
+  searchQuery?: string;
+  onSearchChange?: (q: string) => void;
+}
+
+export function SettingsSidebar({
+  activeTab,
+  onSelectTab,
+}: SettingsSidebarProps) {
+  const { settings } = useSettings();
+  const isLight = settings.appearance.theme === 'light';
 
   return (
-    <aside className={styles.sidebar} aria-label="Settings navigation">
-      {/* Header (fixed at top of sidebar) */}
-      <header className={styles.header}>CONTROL CENTER</header>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '18px',
+        width: '100%',
+        boxSizing: 'border-box',
+      }}
+    >
+      {/* Navigation Sections */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+        {SETTINGS_NAV_SECTIONS.map((sec) => (
+          <div key={sec.title} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span
+              style={{
+                fontSize: '10px',
+                fontWeight: 800,
+                color: 'var(--text-muted)',
+                letterSpacing: '0.06em',
+                paddingLeft: '10px',
+                textTransform: 'uppercase',
+              }}
+            >
+              {sec.title}
+            </span>
 
-      {/* Smooth Scrollable Container */}
-      <div className={styles.scrollContainer}>
-        {/* Sections */}
-        <nav className={styles.nav}>
-          {SETTINGS_SECTIONS.map((section) => (
-            <div key={section.title} className={styles.section}>
-              <div className={styles.sectionTitle}>{section.title}</div>
-              {section.items.map((item) => {
-                const isActive = (onSelect ? activeKey : internalActive) === item.key;
-                const ItemIcon = item.icon;
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              {sec.items.map((item) => {
+                const isActive = activeTab === item.key;
+                const Icon = item.icon;
+
                 return (
-                  <motion.button
+                  <button
                     key={item.key}
-                    className={`${styles.item} ${isActive ? styles.active : ""}`}
-                    onClick={() => handleSelect(item.key)}
-                    whileHover={{ y: -2 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20, duration: 0.18 }}
+                    type="button"
+                    onClick={() => onSelectTab(item.key)}
+                    style={{
+                      padding: '8px 10px',
+                      borderRadius: '10px',
+                      background: isActive
+                        ? isLight
+                          ? 'rgba(2, 132, 199, 0.12)'
+                          : 'rgba(56, 189, 248, 0.15)'
+                        : 'transparent',
+                      border: isActive
+                        ? isLight
+                          ? '1px solid rgba(2, 132, 199, 0.3)'
+                          : '1px solid rgba(56, 189, 248, 0.35)'
+                        : '1px solid transparent',
+                      color: isActive ? 'var(--primary)' : 'var(--text-secondary)',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      textAlign: 'left',
+                      transition: 'background 0.15s ease',
+                      outline: 'none',
+                      width: '100%',
+                    }}
                   >
-                    <ItemIcon
-                      className={styles.icon}
-                      size={22}
-                      strokeWidth={1.75}
-                    />
-                    <div className={styles.texts}>
-                      <span className={styles.title}>{item.title}</span>
-                      <span className={styles.subtitle}>{item.subtitle}</span>
+                    <div
+                      style={{
+                        width: '24px',
+                        height: '24px',
+                        borderRadius: '6px',
+                        background: isActive
+                          ? 'var(--primary)'
+                          : isLight
+                          ? '#F1F5F9'
+                          : 'rgba(255, 255, 255, 0.04)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: isActive ? '#FFF' : 'var(--text-secondary)',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Icon size={13} />
                     </div>
-                    {item.status && <div className={styles.status}>{item.status}</div>}
-                  </motion.button>
+                    <div style={{ minWidth: 0 }}>
+                      <strong
+                        style={{
+                          fontSize: '12px',
+                          color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
+                          fontWeight: isActive ? 800 : 600,
+                          display: 'block',
+                          lineHeight: 1.2,
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                        }}
+                      >
+                        {item.title}
+                      </strong>
+                    </div>
+                  </button>
                 );
               })}
-              <div className={styles.divider} />
-            </div>
-          ))}
-        </nav>
-
-        {/* Bottom support card */}
-        <section className={styles.bottomCard} role="button" tabIndex={0}>
-          <div className={styles.bottomDivider} />
-          <div className={styles.bottomContent}>
-            <CircleHelp className={styles.bottomIcon} size={20} strokeWidth={1.75} />
-            <div className={styles.bottomTexts}>
-              <span className={styles.bottomTitle}>Need Help?</span>
-              <span className={styles.bottomSubtitle}>Documentation • Community • Contact Support</span>
             </div>
           </div>
-          <div className={styles.bottomDivider} />
-        </section>
+        ))}
       </div>
-    </aside>
+    </div>
   );
-};
+}

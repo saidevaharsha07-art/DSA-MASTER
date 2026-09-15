@@ -37,24 +37,25 @@ export function CodeTemplates({ templates }: CodeTemplatesProps) {
   return (
     <div id="code" className="flex flex-col gap-6 scroll-mt-24">
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-blue-500/10 rounded-xl border border-blue-500/20">
-          <Code2 className="w-6 h-6 text-blue-400" />
+        <div style={{ background: 'var(--accent-soft)', border: '1px solid var(--accent-border)' }} className="p-2 rounded-xl">
+          <Code2 style={{ color: 'var(--accent-primary)' }} className="w-6 h-6" />
         </div>
-        <h2 className="text-2xl font-bold text-white">Code Templates</h2>
+        <h2 style={{ color: 'var(--text-primary)' }} className="text-2xl font-bold">Code Templates</h2>
       </div>
 
-      <div className="flex flex-col bg-slate-900 rounded-2xl border border-white/5 overflow-hidden shadow-2xl">
-        <div className="flex items-center justify-between px-4 py-3 bg-slate-950 border-b border-white/5">
+      <div style={{ background: 'var(--card)', border: '1px solid var(--border)' }} className="flex flex-col rounded-2xl overflow-hidden shadow-lg">
+        <div style={{ background: 'var(--surface-secondary)', borderBottom: '1px solid var(--border)' }} className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             {availableLangs.map((lang) => (
               <button
                 key={lang.id}
                 onClick={() => setActiveLang(lang.id)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  activeLang === lang.id 
-                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent'
-                }`}
+                style={{
+                  background: activeLang === lang.id ? 'var(--accent-soft)' : 'transparent',
+                  color: activeLang === lang.id ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                  border: activeLang === lang.id ? '1px solid var(--accent-border)' : '1px solid transparent',
+                }}
+                className="px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-[var(--accent-soft)]"
               >
                 {lang.label}
               </button>
@@ -63,10 +64,11 @@ export function CodeTemplates({ templates }: CodeTemplatesProps) {
           
           <button 
             onClick={handleCopy}
-            className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors border border-transparent hover:border-white/10"
+            style={{ color: 'var(--text-muted)' }}
+            className="p-2 rounded-lg hover:text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
             title="Copy Code"
           >
-            {copied ? <Check className="w-5 h-5 text-green-400" /> : <Copy className="w-5 h-5" />}
+            {copied ? <Check className="w-5 h-5 text-emerald-500" /> : <Copy className="w-5 h-5" />}
           </button>
         </div>
 
@@ -78,7 +80,8 @@ export function CodeTemplates({ templates }: CodeTemplatesProps) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -10 }}
               transition={{ duration: 0.2 }}
-              className="font-mono text-sm leading-relaxed text-slate-300"
+              style={{ color: 'var(--text-primary)' }}
+              className="font-mono text-sm leading-relaxed"
             >
               <code>{templates[activeLang]}</code>
             </motion.pre>

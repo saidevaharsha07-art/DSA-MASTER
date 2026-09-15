@@ -36,6 +36,18 @@ export const SUPPORTED_LANGUAGES: Record<LanguageId, LanguageConfig> = {
     timeoutSeconds: 2,
     memoryLimitMb: 128,
   },
+  c: {
+    id: 'c',
+    name: 'C (GCC 13)',
+    version: '13.2.0',
+    fileExtension: 'c',
+    judge0LanguageId: 50,
+    pistonLanguage: 'c',
+    compileCommand: 'gcc -O3 solution.c -o solution',
+    runCommand: './solution',
+    timeoutSeconds: 2,
+    memoryLimitMb: 128,
+  },
   javascript: {
     id: 'javascript',
     name: 'JavaScript (Node 20)',

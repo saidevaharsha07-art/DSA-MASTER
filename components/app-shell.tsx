@@ -41,7 +41,6 @@ const nav = [
   ["Statistics", "/statistics", BarChart3],
   ["Achievements", "/achievements", Trophy],
   ["Settings", "/settings", Settings],
-  ["Profile", "/profile", UserRound],
 ] as const;
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -134,7 +133,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       {/* Main Content Pane */}
       <div className="main-content">
         {/* Sticky Topbar */}
-        <header className="topbar">
+        <header className="topbar" style={{ height: "52px", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <button
               className="button ghost"
@@ -143,62 +142,19 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               onClick={() => setSidebarOpen(true)}
               aria-label="Open sidebar"
             >
-              <Menu size={20} />
-            </button>
-
-            {/* Quick Command Trigger */}
-            <button
-              type="button"
-              onClick={() => setCommandPaletteOpen(true)}
-              style={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "6px 14px",
-                borderRadius: "99px",
-                border: "1px solid var(--border)",
-                background: "var(--surface)",
-                color: "var(--text-secondary)",
-                fontSize: 12,
-                cursor: "pointer",
-                outline: "none",
-              }}
-            >
-              <Search size={14} style={{ color: "var(--primary)" }} />
-              <span>Search commands...</span>
-              <kbd style={{ fontSize: 10, background: "rgba(255,255,255,0.1)", padding: "2px 6px", borderRadius: 4, color: "var(--text-primary)" }}>⌘K</kbd>
+              <Menu size={18} />
             </button>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            {/* Daily Goal Streak Counter */}
-            <div
-              title="Daily Goal Target"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                background: "var(--primary-soft)",
-                color: "var(--primary)",
-                padding: "6px 12px",
-                borderRadius: "99px",
-                fontWeight: 600,
-                fontSize: 13,
-              }}
-            >
-              <Flame size={16} fill="currentColor" />
-              <span>Target: {settings.goals.dailyTarget}/day</span>
-            </div>
-
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             {/* Global Theme Selector */}
-            <div style={{ display: "flex", background: "var(--surface)", padding: 3, borderRadius: 8, border: "1px solid var(--border)" }}>
-              {(["dark", "midnight", "oled", "fantasy"] as const).map((t) => {
+            <div style={{ display: "flex", background: "var(--surface)", padding: 2, borderRadius: 8, border: "1px solid var(--border)" }}>
+              {(["dark", "light"] as const).map((t) => {
                 const active = currentTheme === t;
                 return (
                   <button
                     key={t}
-                    onClick={() => handleThemeChange(t)}
+                    onClick={() => handleThemeChange(t as any)}
                     title={`Set theme to ${t}`}
                     style={{
                       background: active ? "var(--primary)" : "transparent",
@@ -244,7 +200,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
             {/* Profile Avatar */}
             <Link
-              href="/profile"
+              href="/dashboard"
               style={{
                 display: "flex",
                 alignItems: "center",

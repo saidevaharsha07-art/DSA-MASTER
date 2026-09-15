@@ -1,8 +1,8 @@
 {
-  "name": "DSA Master Roadmap",
-  "short_name": "DSA Roadmap",
+  "name": "DSA CRACKER — Learn • Practice • Track • Crack",
+  "short_name": "DSA CRACKER",
   "start_url": "/dashboard",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#6366f1"
+  "background_color": "#070512",
+  "theme_color": "#38BDF8"
 }

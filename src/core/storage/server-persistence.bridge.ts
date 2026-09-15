@@ -93,7 +93,56 @@ export class ServerPersistenceBridge {
       status: 'synced',
     });
 
+    this.syncWithServer(domain, userId, payload).catch(() => {});
+
     EventBus.publish('SyncCompleted', { domain, userId, timestamp: new Date().toISOString() });
+  }
+
+  /**
+   * Syncs data to remote server database API.
+   */
+  public async syncWithServer<T>(domain: string, userId: string, payload: T): Promise<void> {
+    if (typeof fetch !== 'undefined') {
+      try {
+        await fetch('/api/db/sync', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-user-id': userId,
+          },
+          body: JSON.stringify({ domain, userId, payload }),
+        });
+      } catch {
+        // Offline-tolerant fallback
+      }
+    }
+  }
+
+  /**
+   * Fetches remote data from server database with fallback to local cache.
+   */
+  public async fetchRemoteData<T>(domain: string, userId: string): Promise<T | null> {
+    if (typeof fetch !== 'undefined') {
+      try {
+        const res = await fetch(`/api/db/sync?userId=${encodeURIComponent(userId)}&domain=${encodeURIComponent(domain)}`, {
+          headers: {
+            'x-user-id': userId,
+          },
+        });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.data) {
+            const key = `dsa-${domain}-v1_${userId}`;
+            this.memoryStore.set(key, json.data);
+            storage.save(key, json.data);
+            return json.data as T;
+          }
+        }
+      } catch {
+        // Offline-tolerant
+      }
+    }
+    return this.getDurableData<T>(domain, userId);
   }
 
   /**

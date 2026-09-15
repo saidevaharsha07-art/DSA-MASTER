@@ -122,7 +122,7 @@ export class RevisionAdapterService {
     }
 
     const state = progressService.getState(userId);
-    const logs = progressService.getActivityLog();
+    const logs = progressService.getActivityLog(userId);
     const concepts = this.memoryEngine.getAllConcepts(userId);
     const revisionQueue = this.memoryEngine.getRevisionQueue(userId);
     const allProblems = CurriculumRepository.getAllProblems();

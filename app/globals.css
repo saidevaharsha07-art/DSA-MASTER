@@ -1,52 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
 
 /* 1. Global Centralized Theme Tokens & CSS Custom Properties */
-:root {
-  /* Default Theme Tokens */
-  --background: #0B0E14;
-  --background-secondary: #0F131C;
-  --surface: #121626;
-  --surface-hover: #1A2035;
-  --card: rgba(18, 22, 38, var(--glass-opacity, 0.72));
-  --card-hover: rgba(26, 32, 53, var(--glass-opacity, 0.8));
-  --sidebar: rgba(10, 14, 26, var(--glass-opacity, 0.85));
-  --sidebar-hover: rgba(20, 26, 45, 0.9);
-  --header: rgba(10, 14, 26, var(--glass-opacity, 0.85));
-  --panel: #0F131C;
-  --border: rgba(255, 255, 255, 0.08);
+:root,
+[data-theme="dark"],
+.dark {
+  /* Dark Slate Navy Theme Tokens (Sophisticated Navy & Slate Layers) */
+  --background: #0F172A;
+  --background-secondary: #0B1120;
+  --surface: #1E293B;
+  --surface-secondary: #243044;
+  --surface-hover: #2E3D56;
+  --card: rgba(30, 41, 59, 0.88);
+  --card-hover: rgba(45, 59, 85, 0.92);
+  --sidebar: #111827;
+  --sidebar-hover: #1E293B;
+  --header: rgba(15, 23, 42, 0.95);
+  --panel: rgba(30, 41, 59, 0.92);
+  --panel-border: rgba(56, 189, 248, 0.25);
+  --panel-border-hover: rgba(56, 189, 248, 0.45);
+  --border: rgba(148, 163, 184, 0.14);
+  --border-subtle: rgba(148, 163, 184, 0.08);
   --border-active: var(--primary);
 
-  --text-primary: #FFFFFF;
-  --text-secondary: #9AA4B2;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
   --text-muted: #64748B;
-  --foreground: #FFFFFF;
-  --muted: #9AA4B2;
-  --muted-bg: rgba(255, 255, 255, 0.06);
+  --foreground: #F8FAFC;
+  --muted: #94A3B8;
+  --muted-bg: rgba(148, 163, 184, 0.08);
 
-  /* Accent Color Tokens */
-  --primary: #7C4DFF;
-  --primary-hover: #A970FF;
-  --primary-bg: rgba(124, 77, 255, 0.15);
-  --primary-soft: rgba(124, 77, 255, 0.25);
-  --accent-primary: #7C4DFF;
-  --accent-glow: rgba(124, 77, 255, 0.4);
+  /* Accent Color Tokens (Default: Ocean Blue, dynamic via SettingsContext) */
+  --primary: #38BDF8;
+  --primary-rgb: 56, 189, 248;
+  --primary-hover: #60A5FA;
+  --primary-bg: rgba(56, 189, 248, 0.15);
+  --primary-soft: rgba(56, 189, 248, 0.22);
+  --primary-border: rgba(56, 189, 248, 0.35);
+  --accent: #38BDF8;
+  --accent-rgb: 56, 189, 248;
+  --accent-primary: #38BDF8;
+  --accent-secondary: #60A5FA;
+  --accent-soft: rgba(56, 189, 248, 0.22);
+  --accent-border: rgba(56, 189, 248, 0.35);
+  --accent-glow: rgba(56, 189, 248, 0.4);
+  --accent-text: #38BDF8;
 
   /* Semantic Colors */
   --success: #10B981;
   --warning: #F59E0B;
   --danger: #EF4444;
 
+  /* Theme Special Gradients */
+  --hero-gradient: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+  --modal-bg: #1E293B;
+  --input-bg: rgba(15, 23, 42, 0.65);
+  --input-border: rgba(148, 163, 184, 0.2);
+  --card-shadow: 0 14px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+
   /* Layout & Glass Tokens */
   --radius: 16px;
   --border-radius: 16px;
-  --glass-opacity: 0.72;
+  --glass-opacity: 0.88;
   --glass-blur: 20px;
   --glow-strength: 0.5;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'Fira Code', monospace;
   --sidebar-width: 280px;
   --ui-density: 16px;
-  --transition-speed: 250ms;
+  --transition-speed: 200ms;
+}
+
+/* Vibrant, Crisp Light Theme */
+[data-theme="light"],
+.light {
+  --background: #F5F7FB;
+  --background-secondary: #EEF2F6;
+  --surface: #FFFFFF;
+  --surface-secondary: #F8FAFC;
+  --surface-hover: #F1F5F9;
+  --card: #FFFFFF;
+  --card-hover: #F8FAFC;
+  --sidebar: #FFFFFF;
+  --sidebar-hover: #F8FAFC;
+  --header: rgba(255, 255, 255, 0.96);
+  --panel: #FFFFFF;
+  --panel-border: rgba(2, 132, 199, 0.25);
+  --panel-border-hover: rgba(2, 132, 199, 0.45);
+  --border: #E2E8F0;
+  --border-subtle: #F1F5F9;
+  --border-active: var(--primary);
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --foreground: #0F172A;
+  --muted: #475569;
+  --muted-bg: rgba(15, 23, 42, 0.05);
+
+  --primary: #0284C7;
+  --primary-rgb: 2, 132, 199;
+  --primary-hover: #0369A1;
+  --primary-bg: rgba(2, 132, 199, 0.1);
+  --primary-soft: rgba(2, 132, 199, 0.18);
+  --primary-border: rgba(2, 132, 199, 0.3);
+  --accent: #0284C7;
+  --accent-rgb: 2, 132, 199;
+  --accent-primary: #0284C7;
+  --accent-secondary: #0369A1;
+  --accent-soft: rgba(2, 132, 199, 0.18);
+  --accent-border: rgba(2, 132, 199, 0.3);
+  --accent-glow: rgba(2, 132, 199, 0.3);
+  --accent-text: #0284C7;
+
+  --hero-gradient: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%);
+  --modal-bg: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --input-border: #CBD5E1;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 /* 2. Global Resets & Body Styling */
@@ -56,9 +127,9 @@
 
 body {
   margin: 0;
-  background: var(--background) !important;
-  color: var(--text-primary) !important;
-  font-family: var(--font-sans) !important;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   min-height: 100vh;
 }
@@ -68,107 +139,21 @@ a {
   text-decoration: none;
 }
 
-button, input, select, textarea {
-  font-family: inherit;
-}
-
-/* 3. Global Dynamic Glass & Card Overrides */
-.card, aside, header, div[style*="backdropFilter"], div[style*="backdrop-filter"] {
-  backdrop-filter: blur(var(--glass-blur, 20px)) !important;
-  -webkit-backdrop-filter: blur(var(--glass-blur, 20px)) !important;
-  border-radius: var(--border-radius, 16px);
-}
-
-/* 4. Reduce Motion Mode */
-.reduce-motion *,
-.reduce-motion *::before,
-.reduce-motion *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-  transform: none !important;
-}
-
-/* 5. Utility Classes */
-.layout-stack { display: flex; flex-direction: column; gap: 24px; }
-.layout-stack-sm { display: flex; flex-direction: column; gap: 12px; }
-.layout-row { display: flex; align-items: center; gap: 16px; }
-.layout-row-between { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-
-.button {
-  cursor: pointer;
-  border: 0;
-  border-radius: var(--border-radius, 10px);
-  padding: 10px 18px;
-  background: var(--primary);
-  color: #fff;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition-speed) cubic-bezier(.2,.8,.2,1);
-}
-.button:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 0 16px var(--primary-soft);
-}
-.button.ghost {
-  background: var(--muted-bg);
-  color: var(--text-primary);
-}
-
-/* 6. AppShell Layout Structure */
-.shell {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background: var(--background);
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.content {
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* Radix UI Tabs Active State */
-[data-radix-collection-item][data-state="active"] {
-  background-color: var(--card) !important;
-  color: var(--text-primary) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* 7. Global Custom JOURNEY Scrollbar Theme */
+/* Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  opacity: 0.8;
-  border-radius: 999px;
-  border: 2px solid var(--background);
+  background: var(--border);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 0 12px var(--primary-soft);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) var(--background);
+  background: var(--muted);
 }

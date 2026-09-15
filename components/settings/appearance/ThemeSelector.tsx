@@ -1,137 +1,146 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Check } from "lucide-react";
-import { THEMES, ThemeConfig } from "@/src/design/tokens";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, Moon, Sun } from 'lucide-react';
+import { useSettings } from '@/src/context/SettingsContext';
 
-interface ThemeCardProps {
-  theme: ThemeConfig;
-  isSelected: boolean;
-  onSelect: (id: string) => void;
+interface ThemeOption {
+  id: 'dark' | 'light';
+  name: string;
+  description: string;
+  bgPreview: string;
+  textColor: string;
+  icon: typeof Moon;
 }
 
-export function ThemeCard({ theme, isSelected, onSelect }: ThemeCardProps) {
-  return (
-    <motion.button
-      type="button"
-      role="radio"
-      aria-checked={isSelected}
-      aria-label={`Select ${theme.name} theme`}
-      onClick={() => onSelect(theme.id)}
-      whileHover={{ scale: 1.02, y: -4 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
-      style={{
-        position: "relative",
-        height: "130px",
-        borderRadius: "14px",
-        overflow: "hidden",
-        border: isSelected
-          ? "2px solid #7C4DFF"
-          : "1px solid rgba(255, 255, 255, 0.1)",
-        boxShadow: isSelected
-          ? "0 0 25px rgba(124, 77, 255, 0.4), inset 0 0 15px rgba(124, 77, 255, 0.2)"
-          : "0 8px 20px rgba(0,0,0,0.3)",
-        background: theme.bgDark,
-        cursor: "pointer",
-        outline: "none",
-        textAlign: "left",
-      }}
-    >
-      <Image
-        src={theme.artwork}
-        alt={`${theme.name} theme artwork`}
-        fill
-        sizes="(max-width: 768px) 100vw, 250px"
-        style={{ objectFit: "cover", opacity: isSelected ? 0.9 : 0.7 }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(to top, rgba(9, 11, 20, 0.9) 0%, rgba(9, 11, 20, 0.2) 60%, transparent 100%)",
-        }}
-      />
-
-      {/* Selection Check Circle */}
-      <div
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "10px",
-          width: "22px",
-          height: "22px",
-          borderRadius: "50%",
-          background: isSelected ? "#7C4DFF" : "rgba(0, 0, 0, 0.4)",
-          border: isSelected ? "none" : "1px solid rgba(255, 255, 255, 0.4)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#FFFFFF",
-          transition: "250ms cubic-bezier(.2,.8,.2,1)",
-        }}
-      >
-        {isSelected ? (
-          <Check size={13} strokeWidth={3} />
-        ) : (
-          <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "transparent" }} />
-        )}
-      </div>
-
-      {/* Theme Name Label */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "12px",
-          left: "14px",
-          fontSize: "13px",
-          fontWeight: 600,
-          color: "#FFFFFF",
-          textShadow: "0 2px 4px rgba(0,0,0,0.8)",
-        }}
-      >
-        {theme.name}
-      </div>
-    </motion.button>
-  );
-}
+const THEME_OPTIONS: ThemeOption[] = [
+  {
+    id: 'dark',
+    name: 'Dark Theme',
+    description: 'Deep slate navy interface with glowing vibrant accents.',
+    bgPreview: '#0F172A',
+    textColor: '#F8FAFC',
+    icon: Moon,
+  },
+  {
+    id: 'light',
+    name: 'Light Theme',
+    description: 'Crisp, high-contrast colorful modern workspace with soft shadows.',
+    bgPreview: '#F5F7FB',
+    textColor: '#0F172A',
+    icon: Sun,
+  },
+];
 
 interface ThemeSelectorProps {
-  currentTheme: string;
-  onThemeChange: (themeId: string) => void;
+  currentTheme: 'dark' | 'light' | string;
+  onThemeChange: (id: 'dark' | 'light') => void;
 }
 
 export function ThemeSelector({ currentTheme, onThemeChange }: ThemeSelectorProps) {
+  const activeTheme = currentTheme === 'light' ? 'light' : 'dark';
+
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-      <div>
-        <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "#FFFFFF" }}>
-          Theme
-        </h4>
-        <p style={{ margin: "2px 0 0 0", fontSize: "12px", color: "#9AA4B2" }}>
-          Choose your preferred theme
-        </p>
-      </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <label style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+        Workspace Theme
+      </label>
 
       <div
-        role="radiogroup"
-        aria-label="Theme selection"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-          gap: "14px",
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gap: '14px',
         }}
       >
-        {Object.values(THEMES).map((t) => (
-          <ThemeCard
-            key={t.id}
-            theme={t}
-            isSelected={currentTheme === t.id}
-            onSelect={onThemeChange}
-          />
-        ))}
+        {THEME_OPTIONS.map((th) => {
+          const isSelected = activeTheme === th.id;
+          const IconComp = th.icon;
+
+          return (
+            <button
+              key={th.id}
+              type="button"
+              onClick={() => onThemeChange(th.id)}
+              style={{
+                padding: '16px',
+                borderRadius: '14px',
+                background: th.bgPreview,
+                border: isSelected
+                  ? '2px solid var(--accent-primary)'
+                  : '1px solid var(--border)',
+                boxShadow: isSelected
+                  ? '0 0 20px var(--accent-glow)'
+                  : '0 4px 14px rgba(0, 0, 0, 0.08)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '110px',
+                textAlign: 'left',
+                cursor: 'pointer',
+                outline: 'none',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                      borderRadius: '6px',
+                      background: 'var(--accent-soft)',
+                      color: 'var(--accent-text)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <IconComp size={14} />
+                  </div>
+                  <strong style={{ fontSize: '14px', color: th.textColor, fontWeight: 800 }}>{th.name}</strong>
+                </div>
+                {isSelected ? (
+                  <div
+                    style={{
+                      width: '18px',
+                      height: '18px',
+                      borderRadius: '50%',
+                      background: 'var(--accent-primary)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#FFF',
+                    }}
+                  >
+                    <Check size={11} strokeWidth={3.5} />
+                  </div>
+                ) : (
+                  <div
+                    style={{
+                      width: '18px',
+                      height: '18px',
+                      borderRadius: '50%',
+                      border: '1.5px solid var(--border)',
+                    }}
+                  />
+                )}
+              </div>
+
+              <span
+                style={{
+                  fontSize: '11px',
+                  color: th.id === 'light' ? '#475569' : '#94A3B8',
+                  lineHeight: '1.4',
+                  fontWeight: 500,
+                }}
+              >
+                {th.description}
+              </span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

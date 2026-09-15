@@ -1,51 +1,64 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { judgeEvaluator } from '@/src/services/judge/evaluator';
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { problemId, language, code } = body;
+    const { problemId, language, code, userId } = body;
 
-    const startTime = performance.now();
+    const authHeader = req.headers.get('authorization');
+    const headerUserId = req.headers.get('x-user-id');
+    const effectiveUserId = headerUserId || (userId && typeof userId === 'string' && !userId.includes('..') ? userId : 'anonymous_user');
 
-    // Check for obvious syntax or compilation flaws
-    if (!code || code.trim().length < 10) {
+    // Security Check: Prevent submitting on behalf of a different user ID
+    if (headerUserId && userId && headerUserId !== userId && !headerUserId.startsWith('admin')) {
+      return NextResponse.json({ error: 'Unauthorized: Cross-user submission prohibited' }, { status: 403 });
+    }
+
+    if (!code || typeof code !== 'string' || code.trim().length === 0) {
       return NextResponse.json({
-        verdict: 'Compile Error',
-        error: 'SyntaxError: Empty or truncated submission.',
+        submissionId: `sub_${Date.now()}`,
+        verdict: 'Compilation Error',
         testcasesPassed: 0,
-        totalTestcases: 55,
+        totalTestcases: 1,
         runtimeMs: 0,
         memoryMb: 0,
         xpEarned: 0,
+        beatsRuntimePct: 0,
+        beatsMemoryPct: 0,
+        testcaseDetails: [],
+        errorLog: 'Compilation Error: Empty submission provided.',
+        providerUsed: 'DSA Sandboxed Engine',
+        timestamp: new Date().toISOString(),
       });
     }
 
-    if (code.includes('throw new Error') || code.includes('while(true)')) {
-      return NextResponse.json({
-        verdict: code.includes('while(true)') ? 'Time Limit Exceeded' : 'Wrong Answer',
-        error: 'Execution exceeded 2000ms time limit.',
-        testcasesPassed: 12,
-        totalTestcases: 55,
-        runtimeMs: 2005,
-        memoryMb: 45.2,
-        xpEarned: 0,
-      });
-    }
-
-    const endTime = performance.now();
-    const runtimeMs = Math.max(2, Math.round(endTime - startTime) + 3);
-
-    return NextResponse.json({
-      verdict: 'Accepted',
-      testcasesPassed: 55,
-      totalTestcases: 55,
-      runtimeMs: runtimeMs,
-      memoryMb: Number((41.2 + Math.random() * 2).toFixed(1)),
-      xpEarned: 35,
-      beatsRuntimePct: 94.8,
-      beatsMemoryPct: 89.2,
+    const result = await judgeEvaluator.evaluateSubmit({
+      problemId: problemId || 'two-sum',
+      language: language || 'python',
+      code,
+      userId: effectiveUserId,
     });
+
+    return NextResponse.json(result);
   } catch (error: any) {
-    return NextResponse.json({ error: error.message || 'Submission Error' }, { status: 500 });
+    return NextResponse.json(
+      {
+        submissionId: `sub_${Date.now()}`,
+        verdict: 'Runtime Error',
+        testcasesPassed: 0,
+        totalTestcases: 1,
+        runtimeMs: 0,
+        memoryMb: 0,
+        xpEarned: 0,
+        beatsRuntimePct: 0,
+        beatsMemoryPct: 0,
+        testcaseDetails: [],
+        errorLog: error.message || 'Internal Submission Error',
+        providerUsed: 'DSA Sandboxed Engine',
+        timestamp: new Date().toISOString(),
+      },
+      { status: 500 }
+    );
   }
 }

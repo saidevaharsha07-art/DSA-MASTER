@@ -1,141 +1,124 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { Eye, Flame, Zap, ShieldCheck } from "lucide-react";
-import { SidebarWidget } from "./SidebarWidget";
-import { useSettings } from "@/src/context/SettingsContext";
+import React from 'react';
+import { useSettings } from '@/src/context/SettingsContext';
+import { Sparkles, CheckCircle2, ChevronRight, Code2 } from 'lucide-react';
 
-interface LivePreviewPanelProps {
-  content?: React.ReactNode;
-}
-
-export function LivePreviewPanel({ content }: LivePreviewPanelProps) {
+export function LivePreviewPanel() {
   const { settings } = useSettings();
-  const { theme, accentColor, radius, glow, fontFamily, blur, transparency } = settings.appearance;
+  const app = settings.appearance;
+  const isLight = app.theme === 'light';
 
-  // Compute live preview accent color
-  const accentHexMap: Record<string, string> = {
-    purple: "#7C4DFF",
-    blue: "#3B82F6",
-    emerald: "#10B981",
-    gold: "#F59E0B",
-    pink: "#EC4899",
+  const radiusMap = {
+    small: '6px',
+    medium: '12px',
+    large: '18px',
   };
-  const activeAccent = accentHexMap[accentColor] || accentColor || "#7C4DFF";
-
-  const radiusMap: Record<string, string> = { small: "8px", medium: "14px", large: "22px" };
-  const currentRadius = radiusMap[radius] || "14px";
-
-  const themeBgMap: Record<string, string> = {
-    dark: "#0F131C",
-    midnight: "#080C19",
-    oled: "#000000",
-    fantasy: "#130E26",
-  };
-  const activeBg = themeBgMap[theme] || "#0F131C";
+  const cardRadius = radiusMap[app.radius] || '12px';
 
   return (
-    <SidebarWidget
-      title="Live Preview"
-      subtitle="See changes in real-time"
-      icon={<Eye size={18} />}
+    <div
+      style={{
+        padding: '20px',
+        borderRadius: '18px',
+        background: 'var(--card)',
+        border: '1px solid var(--border)',
+        boxShadow: 'var(--card-shadow)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px',
+      }}
     >
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div>
+          <h3 style={{ margin: 0, fontSize: '14px', fontWeight: 900, color: 'var(--text-primary)' }}>LIVE PREVIEW</h3>
+          <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Changes appear instantly</span>
+        </div>
+        <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-primary)', boxShadow: '0 0 8px var(--accent-glow)' }} />
+      </div>
+
+      {/* Realistic Mini IDE Interface Preview */}
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "190px",
-          borderRadius: currentRadius,
-          overflow: "hidden",
-          border: `2px solid ${activeAccent}`,
-          boxShadow: `0 0 ${glow / 4}px ${activeAccent}, 0 10px 30px rgba(0,0,0,0.5)`,
-          background: activeBg,
-          fontFamily: fontFamily,
-          transition: "all 250ms cubic-bezier(.2,.8,.2,1)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "16px",
+          width: '100%',
+          height: '210px',
+          borderRadius: cardRadius,
+          background: isLight ? '#F5F7FB' : '#0F172A',
+          border: '1px solid var(--border)',
+          overflow: 'hidden',
+          display: 'flex',
+          boxShadow: isLight
+            ? '0 8px 24px rgba(0, 0, 0, 0.06)'
+            : '0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow)',
         }}
       >
-        {content ? (
-          content
-        ) : (
-          <>
-            <Image
-              src="/assets/homepage/continent.jpg"
-              alt="Campaign map real-time preview"
-              fill
-              sizes="(max-width: 768px) 100vw, 380px"
-              style={{ objectFit: "cover", opacity: Math.max(0.3, transparency / 100) }}
-            />
-            {/* Live Interactive UI Overlay */}
-            <div
-              style={{
-                position: "relative",
-                zIndex: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  padding: "4px 10px",
-                  borderRadius: "20px",
-                  background: "rgba(10, 14, 26, 0.75)",
-                  backdropFilter: `blur(${blur}px)`,
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  color: "#FFFFFF",
-                }}
-              >
-                <Flame size={14} style={{ color: activeAccent }} />
-                <span>23 Streak</span>
-              </div>
+        {/* Mini Sidebar */}
+        <div
+          style={{
+            width: app.sidebarStyle === 'compact' ? '32px' : '65px',
+            background: isLight ? '#FFFFFF' : '#111827',
+            borderRight: '1px solid var(--border)',
+            padding: '10px 6px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            transition: 'width 0.2s ease',
+          }}
+        >
+          <div style={{ width: '16px', height: '16px', borderRadius: '4px', background: 'var(--accent-primary)' }} />
+          <div style={{ width: '100%', height: '4px', borderRadius: '2px', background: 'var(--muted-bg)' }} />
+          <div style={{ width: '100%', height: '4px', borderRadius: '2px', background: 'var(--muted-bg)' }} />
+          <div style={{ width: '100%', height: '4px', borderRadius: '2px', background: 'var(--muted-bg)' }} />
+        </div>
 
-              <div
-                style={{
-                  padding: "4px 10px",
-                  borderRadius: "20px",
-                  background: activeAccent,
-                  color: "#FFFFFF",
-                  fontSize: "10px",
-                  fontWeight: 800,
-                  boxShadow: `0 0 12px ${activeAccent}`,
-                  textTransform: "uppercase",
-                }}
-              >
-                {theme} Mode
-              </div>
+        {/* Mini Main Area */}
+        <div style={{ flex: 1, padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Mini Header */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ width: '60px', height: '6px', borderRadius: '3px', background: 'var(--text-primary)' }} />
+            <div style={{ width: '30px', height: '6px', borderRadius: '3px', background: 'var(--accent-primary)' }} />
+          </div>
+
+          {/* Mini Card */}
+          <div
+            style={{
+              padding: '10px',
+              borderRadius: cardRadius,
+              background: 'var(--card)',
+              border: '1px solid var(--accent-border)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '6px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: 'var(--accent-primary)' }} />
+              <div style={{ width: '80px', height: '5px', borderRadius: '2px', background: 'var(--text-primary)' }} />
             </div>
 
-            <div
-              style={{
-                position: "relative",
-                zIndex: 1,
-                padding: "12px",
-                borderRadius: "10px",
-                background: "rgba(10, 14, 26, 0.8)",
-                backdropFilter: `blur(${blur}px)`,
-                border: "1px solid rgba(255,255,255,0.12)",
-              }}
-            >
-              <span style={{ fontSize: "11px", fontWeight: 700, color: "#FFFFFF", display: "block" }}>
-                Active Font: {fontFamily}
-              </span>
-              <span style={{ fontSize: "9px", color: "#9AA4B2" }}>
-                Accent: {accentColor} • Radius: {radius}
-              </span>
+            {/* Mini Progress */}
+            <div style={{ width: '100%', height: '4px', borderRadius: '2px', background: 'var(--muted-bg)' }}>
+              <div style={{ width: '68%', height: '100%', background: 'var(--accent-primary)', borderRadius: '2px' }} />
             </div>
-          </>
-        )}
+
+            {/* Mini Button */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2px' }}>
+              <div
+                style={{
+                  padding: '3px 8px',
+                  borderRadius: '4px',
+                  background: 'var(--accent-primary)',
+                  fontSize: '8px',
+                  color: '#FFFFFF',
+                  fontWeight: 900,
+                }}
+              >
+                Action
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </SidebarWidget>
+    </div>
   );
 }

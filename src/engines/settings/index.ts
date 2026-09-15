@@ -2,7 +2,7 @@ import { eventBus } from '@/src/core/events';
 import { LocalStorageAdapter } from '@/src/core/storage/LocalStorageAdapter';
 
 export interface AppSettings {
-  theme: 'dark' | 'light' | 'oled' | 'high-contrast';
+  theme: 'dark' | 'light';
   vimMode: boolean;
   offlineMode: boolean;
   autoSave: boolean;

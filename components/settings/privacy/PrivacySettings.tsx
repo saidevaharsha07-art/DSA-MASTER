@@ -1,216 +1,415 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { SettingsHeader } from "../SettingsHeader";
-import { DESIGN_TOKENS } from "@/src/design/tokens";
-import { ToggleSwitch } from "../appearance/ToggleSwitch";
-import { SidebarWidget } from "../appearance/SidebarWidget";
-import { ShieldCheck, ChevronDown, Shield } from "lucide-react";
-import { useSettings } from "@/src/context/SettingsContext";
+import React, { useState } from 'react';
+import { Shield, Download, FileJson, AlertTriangle, Globe, Lock, Activity } from 'lucide-react';
+import { SettingsHeader } from '../SettingsHeader';
+import { useSettings } from '@/src/context/SettingsContext';
+import { useToast } from '@/src/context/ToastContext';
 
 export function PrivacySettings() {
-  const { settings, updateSetting, exportSettings, resetAllSettings } = useSettings();
-  const { profileVisibility, anonymousMode, analyticsEnabled, leaderboardsVisible } = settings.privacy;
+  const { settings, updateSetting, resetAllSettings } = useSettings();
+  const { toast } = useToast();
+  const { profileVisibility, anonymousMode, analyticsEnabled } = settings.privacy;
+  const isLight = settings.appearance.theme === 'light';
 
-  const handleExport = () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportSettings());
-    const downloadAnchor = document.createElement("a");
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `journey-data-${Date.now()}.json`);
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
-  };
+  const [showConfirmReset, setShowConfirmReset] = useState(false);
 
-  const handleClearLocalData = () => {
-    if (confirm("Are you sure you want to reset all settings and local data?")) {
-      resetAllSettings();
-      alert("Local data cleared successfully!");
+  const handleExportData = (type: string) => {
+    try {
+      const exportObject = {
+        exportedAt: new Date().toISOString(),
+        type,
+        settings,
+        progress: localStorage.getItem('dsa-canonical-progress-v1') || localStorage.getItem('dsa-state'),
+        activityLog: localStorage.getItem('dsa-activity-log'),
+      };
+      const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(exportObject, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute('href', dataStr);
+      downloadAnchor.setAttribute('download', `journey-backup-${type.toLowerCase()}-${Date.now()}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      toast(`Exported ${type} successfully!`, 'success');
+    } catch {
+      toast('Failed to export data', 'error');
     }
   };
 
+  const handleClearLocalData = () => {
+    try {
+      localStorage.removeItem('dsa-activity-log');
+      localStorage.removeItem('journey-settings');
+      resetAllSettings();
+      setShowConfirmReset(false);
+      toast('Local cache and settings cleared successfully', 'info');
+      setTimeout(() => {
+        window.location.reload();
+      }, 800);
+    } catch {
+      toast('Failed to clear local data', 'error');
+    }
+  };
+
+  const exportBtnSt: React.CSSProperties = {
+    padding: '7px 14px',
+    borderRadius: '8px',
+    background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.06)',
+    border: '1px solid var(--border)',
+    color: 'var(--text-primary)',
+    fontSize: '12px',
+    fontWeight: 700,
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '6px',
+    flexShrink: 0,
+  };
+
+  const privacyRowSt: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '12px 16px',
+    borderRadius: '10px',
+    background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+    border: '1px solid var(--border)',
+    gap: '16px',
+  };
+
+  const iconBoxSt = (bg: string, color: string): React.CSSProperties => ({
+    width: '32px',
+    height: '32px',
+    borderRadius: '8px',
+    background: bg,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color,
+    flexShrink: 0,
+  });
+
+  const selectSt: React.CSSProperties = {
+    padding: '6px 12px',
+    borderRadius: '8px',
+    background: isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.05)',
+    border: '1px solid var(--border)',
+    color: 'var(--text-primary)',
+    fontSize: '12px',
+    outline: 'none',
+    cursor: 'pointer',
+  };
+
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-      {/* Shared Global Header */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
+      {/* ── HEADER ─────────────────────────────────────────────────── */}
       <SettingsHeader
-        emoji="🛡️"
-        title="Privacy & Data"
-        subtitle="You are in control. Manage your data, privacy and security."
+        icon={<Shield size={18} />}
+        title="Data & Privacy"
+        subtitle="Manage your data, exports, privacy, and analytics preferences."
       />
 
-      {/* Main Grid Layout */}
+      {/* ── 1. DATA & BACKUPS ──────────────────────────────────────── */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "minmax(0, 1fr) 380px",
-          gap: "32px",
-          alignItems: "start",
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
         }}
       >
-        {/* Left Content Area */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
-          {/* Section 1: 2-Column Grid (Privacy Controls & Data & Security) */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-            {/* Privacy Controls */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "24px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
-            >
-              <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                Privacy Controls
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                {/* Profile Visibility */}
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <div>
-                    <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--text-primary)", display: "block" }}>Profile Visibility</span>
-                    <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Control who can see your profile</span>
-                  </div>
-                  <div style={{ position: "relative" }}>
-                    <select
-                      value={profileVisibility}
-                      onChange={(e) => updateSetting("privacy", "profileVisibility", e.target.value as any)}
-                      style={{
-                        background: "var(--surface)",
-                        border: "1px solid var(--border)",
-                        borderRadius: "8px",
-                        color: "var(--text-secondary)",
-                        fontSize: "11px",
-                        padding: "4px 20px 4px 8px",
-                        appearance: "none",
-                        outline: "none",
-                      }}
-                    >
-                      <option value="only_me">Only Me</option>
-                      <option value="private">Private</option>
-                      <option value="public">Public</option>
-                    </select>
-                    <ChevronDown size={12} style={{ position: "absolute", right: "6px", top: "50%", transform: "translateY(-50%)", color: "var(--text-secondary)", pointerEvents: "none" }} />
-                  </div>
-                </div>
-
-                <ToggleSwitch
-                  label="Anonymous Mode"
-                  description="Hide username on global feeds"
-                  checked={anonymousMode}
-                  onChange={(val) => updateSetting("privacy", "anonymousMode", val)}
-                />
-
-                <ToggleSwitch
-                  label="Analytics Enabled"
-                  description="Help us improve performance"
-                  checked={analyticsEnabled}
-                  onChange={(val) => updateSetting("privacy", "analyticsEnabled", val)}
-                />
-
-                <ToggleSwitch
-                  label="Leaderboards Visible"
-                  description="Appear in global leaderboards"
-                  checked={leaderboardsVisible}
-                  onChange={(val) => updateSetting("privacy", "leaderboardsVisible", val)}
-                />
-              </div>
-            </div>
-
-            {/* Data Management */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "24px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
-            >
-              <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                Data Management
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <div>
-                    <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--text-primary)", display: "block" }}>Export My Data</span>
-                    <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Download a copy of all your data</span>
-                  </div>
-                  <button type="button" onClick={handleExport} style={{ padding: "5px 14px", borderRadius: "8px", background: "var(--primary-soft)", border: "1px solid var(--primary-soft)", color: "var(--text-primary)", fontSize: "11px", fontWeight: 600, cursor: "pointer" }}>Export</button>
-                </div>
-
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <div>
-                    <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--text-primary)", display: "block" }}>Clear Local Data</span>
-                    <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Reset settings and cache</span>
-                  </div>
-                  <button type="button" onClick={handleClearLocalData} style={{ padding: "5px 14px", borderRadius: "8px", background: "rgba(239, 68, 68, 0.15)", border: "1px solid rgba(239, 68, 68, 0.3)", color: "#EF4444", fontSize: "11px", fontWeight: 600, cursor: "pointer" }}>Reset</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div>
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
+            Data &amp; Backups
+          </h3>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Download portable JSON backups of your solved problems and workspace configuration.
+          </span>
         </div>
 
-        {/* Right Sidebar (380px) */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          {/* Security Status */}
-          <SidebarWidget title="Security Status">
-            <div
-              style={{
-                position: "relative",
-                height: "120px",
-                borderRadius: "14px",
-                background: "radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.25) 0%, var(--background) 80%)",
-                border: "1px solid rgba(16, 185, 129, 0.3)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "8px",
-                padding: "16px",
-                textAlign: "center",
-              }}
-            >
-              <ShieldCheck size={28} style={{ color: "#10B981" }} />
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--text-primary)" }}>Your account is secure</span>
-              <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Privacy Profile: {profileVisibility}</span>
-            </div>
-          </SidebarWidget>
-
-          {/* Artwork Card */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
+          {/* Card 1: Export Progress */}
           <div
             style={{
-              position: "relative",
-              height: "170px",
-              borderRadius: "var(--radius)",
-              overflow: "hidden",
-              border: "1px solid var(--border)",
-              boxShadow: DESIGN_TOKENS.shadows.card,
+              padding: '16px 18px',
+              borderRadius: '12px',
+              background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid var(--border)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px',
             }}
           >
-            <Image
-              src="/assets/settings/guardian_vault.jpg"
-              alt="Guardian Vault artwork"
-              fill
-              sizes="(max-width: 768px) 100vw, 380px"
-              style={{ objectFit: "cover" }}
-            />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(9, 11, 20, 0.85) 0%, rgba(35, 25, 10, 0.8) 60%, rgba(16, 185, 129, 0.4) 100%)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "20px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <p style={{ margin: 0, fontSize: "12px", fontStyle: "italic", fontWeight: 500, color: "#FFFFFF", lineHeight: 1.5, textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
-                &ldquo;Your data. Your rules. Your journey.&rdquo;
-              </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '10px',
+                  background: isLight ? 'rgba(2, 132, 199, 0.15)' : 'rgba(56, 189, 248, 0.15)',
+                  border: isLight ? '1px solid rgba(2, 132, 199, 0.3)' : '1px solid rgba(56, 189, 248, 0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--primary)',
+                  flexShrink: 0,
+                }}
+              >
+                <FileJson size={18} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>Export Progress</strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Solved problems, XP &amp; streaks (JSON)</span>
+              </div>
             </div>
+
+            <button
+              type="button"
+              onClick={() => handleExportData('Progress')}
+              style={exportBtnSt}
+            >
+              <Download size={13} />
+              <span>Export</span>
+            </button>
           </div>
+
+          {/* Card 2: Export Settings */}
+          <div
+            style={{
+              padding: '16px 18px',
+              borderRadius: '12px',
+              background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid var(--border)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '10px',
+                  background: 'rgba(16, 185, 129, 0.15)',
+                  border: '1px solid rgba(16, 185, 129, 0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#10B981',
+                  flexShrink: 0,
+                }}
+              >
+                <Download size={18} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>Export Settings</strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>Themes, algorithms &amp; preferences</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => handleExportData('Settings')}
+              style={exportBtnSt}
+            >
+              <Download size={13} />
+              <span>Export</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* ── 2. PRIVACY & TELEMETRY ─────────────────────────────────── */}
+      <div
+        style={{
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div>
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
+            Privacy &amp; Telemetry
+          </h3>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Control visibility of your developer profile and performance telemetry.
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {/* Row 1: Profile Visibility */}
+          <div style={privacyRowSt}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={iconBoxSt(isLight ? 'rgba(2, 132, 199, 0.15)' : 'rgba(56, 189, 248, 0.15)', 'var(--primary)')}>
+                <Globe size={16} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                  Public Developer Profile
+                </strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                  Allow other coders to view your solved counts and contest rating badges.
+                </span>
+              </div>
+            </div>
+
+            <select
+              value={profileVisibility}
+              onChange={(e) => updateSetting('privacy', 'profileVisibility', e.target.value as any)}
+              style={selectSt}
+            >
+              <option value="public">Public</option>
+              <option value="private">Private</option>
+              <option value="only_me">Only Me</option>
+            </select>
+          </div>
+
+          {/* Row 2: Anonymous Mode */}
+          <div style={privacyRowSt}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={iconBoxSt(isLight ? 'rgba(2, 132, 199, 0.15)' : 'rgba(56, 189, 248, 0.15)', 'var(--primary)')}>
+                <Lock size={16} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                  Anonymous Mode
+                </strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                  Hide your real name from public leaderboards and mentor interaction channels.
+                </span>
+              </div>
+            </div>
+
+            <input
+              type="checkbox"
+              checked={anonymousMode}
+              onChange={(e) => updateSetting('privacy', 'anonymousMode', e.target.checked)}
+              style={{ width: '16px', height: '16px', accentColor: 'var(--primary)', cursor: 'pointer' }}
+            />
+          </div>
+
+          {/* Row 3: Performance Analytics */}
+          <div style={privacyRowSt}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={iconBoxSt('rgba(16, 185, 129, 0.15)', '#10B981')}>
+                <Activity size={16} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                  Performance Analytics Collection
+                </strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                  Collect anonymized solve telemetry to improve AI recommendations and revision algorithms.
+                </span>
+              </div>
+            </div>
+
+            <input
+              type="checkbox"
+              checked={analyticsEnabled}
+              onChange={(e) => updateSetting('privacy', 'analyticsEnabled', e.target.checked)}
+              style={{ width: '16px', height: '16px', accentColor: 'var(--primary)', cursor: 'pointer' }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ── 3. DANGER ZONE ─────────────────────────────────────────── */}
+      <div
+        style={{
+          padding: '22px 24px',
+          borderRadius: '18px',
+          background: isLight ? '#FFF5F5' : 'rgba(239, 68, 68, 0.03)',
+          border: '1.5px solid rgba(239, 68, 68, 0.28)',
+          boxShadow: 'var(--card-shadow)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <AlertTriangle size={16} style={{ color: '#EF4444' }} />
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: '#EF4444' }}>
+            Danger Zone
+          </h3>
+        </div>
+        <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+          Irreversible actions. Please ensure you have exported a backup before proceeding.
+        </span>
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', paddingTop: '4px' }}>
+          <div>
+            <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>Reset Local Progress &amp; Cache</strong>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+              Deletes all local problem records, notes, and resets settings to default.
+            </span>
+          </div>
+
+          {!showConfirmReset ? (
+            <button
+              type="button"
+              onClick={() => setShowConfirmReset(true)}
+              style={{
+                padding: '8px 16px',
+                borderRadius: '8px',
+                background: 'rgba(239, 68, 68, 0.12)',
+                border: '1px solid rgba(239, 68, 68, 0.4)',
+                color: '#EF4444',
+                fontSize: '12px',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+              }}
+            >
+              Reset Data
+            </button>
+          ) : (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <button
+                type="button"
+                onClick={handleClearLocalData}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  background: '#EF4444',
+                  border: 'none',
+                  color: '#FFF',
+                  fontSize: '12px',
+                  fontWeight: 800,
+                  cursor: 'pointer',
+                }}
+              >
+                Confirm Reset
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowConfirmReset(false)}
+                style={{
+                  padding: '8px 14px',
+                  borderRadius: '8px',
+                  background: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)',
+                  border: 'none',
+                  color: 'var(--text-primary)',
+                  fontSize: '12px',
+                  cursor: 'pointer',
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

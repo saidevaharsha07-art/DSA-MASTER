@@ -1,352 +1,515 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { SettingsHeader } from "../SettingsHeader";
-import { DESIGN_TOKENS } from "@/src/design/tokens";
-import { SidebarWidget } from "../appearance/SidebarWidget";
-import { Brain, Play } from "lucide-react";
-import { useSettings } from "@/src/context/SettingsContext";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Brain, Play, Check, ArrowRight, Activity, Zap, Sparkles } from 'lucide-react';
+import { SettingsHeader } from '../SettingsHeader';
+import { useSettings } from '@/src/context/SettingsContext';
+import { useToast } from '@/src/context/ToastContext';
 
 export function LearningEngineSettings() {
   const { settings, updateSetting } = useSettings();
+  const { toast } = useToast();
   const { reviewMode, reviewCount, masteryThreshold } = settings.learningEngine;
+  const isLight = settings.appearance.theme === 'light';
+  const [schedulerTab, setSchedulerTab] = useState<'today' | 'tomorrow'>('today');
 
   const algorithms = [
-    { id: "spaced", title: "Spaced Repetition", desc: "Optimal review timing" },
-    { id: "recall", title: "Active Recall", desc: "Strengthen memory" },
-    { id: "difficulty", title: "Memory Difficulty", desc: "Adjust challenge level" },
-    { id: "interval", title: "Review Interval", desc: "Set review frequency" },
-    { id: "forgetting", title: "Forgetting Curve", desc: "Customize decay rate" },
-    { id: "adaptive", title: "Adaptive Learning", desc: "AI-powered adjustments" },
+    { id: 'spaced', title: 'Spaced Repetition', desc: 'Optimal spacing interval based on forgetting curves' },
+    { id: 'recall', title: 'Active Recall', desc: 'Prioritizes flashcard-style concept reconstruction' },
+    { id: 'difficulty', title: 'Memory Difficulty', desc: 'Dynamically scales problem challenge by topic rating' },
+    { id: 'interval', title: 'Review Interval', desc: 'Fixed cadence review scheduling for daily discipline' },
+    { id: 'forgetting', title: 'Forgetting Curve', desc: 'Ebbinghaus mathematical memory decay tracking' },
+    { id: 'adaptive', title: 'Adaptive Learning', desc: 'AI-assisted calibration of problem recommendations' },
   ];
 
   const memoryMetrics = [
-    { title: "Mastery Score", value: `${masteryThreshold}`, status: "Good", color: "var(--primary)" },
-    { title: "Retention Rate", value: "95%", status: "Excellent", color: "#10B981" },
-    { title: "Avg Recall Time", value: "2.4s", status: "Fast", color: "#A970FF" },
-    { title: "Memory Stability", value: "68%", status: "Good", color: "#F59E0B" },
-    { title: "Learning Velocity", value: "1.8x", status: "High", color: "#10B981" },
-    { title: "Recall Accuracy", value: "89%", status: "Excellent", color: "var(--primary)" },
+    { title: 'Mastery Score', value: `${masteryThreshold}`, status: 'Good', color: 'var(--primary)' },
+    { title: 'Retention Rate', value: '95%', status: 'Excellent', color: '#10B981' },
+    { title: 'Avg Recall Time', value: '2.4s', status: 'Fast', color: '#0284C7' },
+    { title: 'Memory Stability', value: '68%', status: 'Good', color: '#F59E0B' },
+    { title: 'Learning Velocity', value: '1.8x', status: 'High', color: '#10B981' },
+    { title: 'Recall Accuracy', value: '89%', status: 'Excellent', color: 'var(--primary)' },
   ];
 
-  const schedulerItems = [
-    { topic: "Arrays & Hashing", count: `${reviewCount} Problems`, time: "25m" },
-    { topic: "Dynamic Programming", count: "8 Problems", time: "30m" },
-    { topic: "Trees & Graphs", count: "7 Problems", time: "25m" },
-    { topic: "Greedy Algorithms", count: "5 Problems", time: "15m" },
+  const todaySchedulerItems = [
+    { topic: 'Arrays & Hashing', count: `${Math.max(3, reviewCount)} Problems`, time: '25m' },
+    { topic: 'Two Pointers & Sliding Window', count: '4 Problems', time: '20m' },
+    { topic: 'Trees & Binary Search', count: '5 Problems', time: '25m' },
+    { topic: 'Dynamic Programming', count: '3 Problems', time: '30m' },
   ];
+
+  const tomorrowSchedulerItems = [
+    { topic: 'Graphs & BFS/DFS', count: '6 Problems', time: '35m' },
+    { topic: 'Backtracking', count: '3 Problems', time: '20m' },
+    { topic: 'Trie & String Algorithms', count: '2 Problems', time: '15m' },
+    { topic: 'Greedy & Intervals', count: '4 Problems', time: '25m' },
+  ];
+
+  const currentScheduler = schedulerTab === 'today' ? todaySchedulerItems : tomorrowSchedulerItems;
+
+  const handleSelectAlgorithm = (id: string) => {
+    updateSetting('learningEngine', 'reviewMode', id);
+    const chosen = algorithms.find((a) => a.id === id);
+    toast(`Learning strategy set to ${chosen?.title || id}`, 'info');
+  };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-      {/* Shared Global Header */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
+      {/* ── 1. LEARNING ENGINE HEADER ───────────────────────────────── */}
       <SettingsHeader
-        emoji="🔮"
-        title="Learning Engine"
-        subtitle="Configure the intelligence that powers your learning journey."
+        icon={<Brain size={18} />}
+        title="Learning Preferences"
+        subtitle="Configure how Journey adapts to the way you learn."
       />
 
-      {/* Main Grid Layout */}
+      {/* ── 2. TOP SECTION: LEARNING STRATEGY & MEMORY ENGINE ──────── */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "minmax(0, 1fr) 380px",
-          gap: "32px",
-          alignItems: "start",
+          display: 'grid',
+          gridTemplateColumns: 'minmax(280px, 320px) minmax(0, 1fr)',
+          gap: '20px',
+          alignItems: 'stretch',
         }}
       >
-        {/* Left Main Content */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-          {/* Section 1: Top 2-Column Grid (Algorithm Options & Memory Engine 6 Stat Cards) */}
-          <div style={{ display: "grid", gridTemplateColumns: "240px 1fr", gap: "20px" }}>
-            {/* Algorithm Selector List */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "16px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-              }}
-            >
-              <h4 style={{ margin: "0 0 8px 0", fontSize: "12px", fontWeight: 700, color: "var(--text-secondary)", textTransform: "uppercase" }}>
-                Learning Algorithm
-              </h4>
-              {algorithms.map((alg) => {
-                const isSelected = reviewMode === alg.id;
-                return (
-                  <button
-                    key={alg.id}
-                    type="button"
-                    onClick={() => updateSetting("learningEngine", "reviewMode", alg.id)}
-                    style={{
-                      padding: "10px 12px",
-                      borderRadius: "10px",
-                      background: isSelected ? "var(--primary-soft)" : "transparent",
-                      border: isSelected ? "1px solid var(--primary)" : "1px solid transparent",
-                      color: isSelected ? "var(--text-primary)" : "var(--text-secondary)",
-                      textAlign: "left",
-                      cursor: "pointer",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "2px",
-                      outline: "none",
-                      transition: "var(--transition-speed)",
-                    }}
-                  >
-                    <span style={{ fontSize: "12px", fontWeight: isSelected ? 700 : 500 }}>{alg.title}</span>
-                    <span style={{ fontSize: "9px", color: isSelected ? "var(--text-primary)" : "var(--text-muted)" }}>{alg.desc}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Memory Engine 6 Metric Cards */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <h4 style={{ margin: 0, fontSize: "13px", fontWeight: 700, color: "var(--text-primary)" }}>
-                Memory Engine
-              </h4>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
-                {memoryMetrics.map((m) => (
-                  <div
-                    key={m.title}
-                    style={{
-                      padding: "16px",
-                      borderRadius: "var(--radius)",
-                      background: "var(--card)",
-                      backdropFilter: "blur(var(--glass-blur))",
-                      border: "1px solid var(--border)",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "4px",
-                    }}
-                  >
-                    <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>{m.title}</span>
-                    <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginTop: "2px" }}>
-                      <span style={{ fontSize: "22px", fontWeight: 800, color: "var(--text-primary)" }}>{m.value}</span>
-                      <span style={{ fontSize: "10px", color: m.color, fontWeight: 700 }}>{m.status}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        {/* Left: Learning Strategy Selector */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            boxSizing: 'border-box',
+          }}
+        >
+          <div style={{ marginBottom: '6px' }}>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              Learning Strategy
+            </span>
           </div>
 
-          {/* Section 2: Middle 2-Column Grid (Prediction Panel & Review Scheduler) */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
-            {/* Prediction Panel */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--primary-soft)",
-                borderRadius: "var(--radius)",
-                padding: "20px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "14px",
-              }}
-            >
-              <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                Prediction Panel
-              </h4>
-              <div
-                style={{
-                  position: "relative",
-                  height: "140px",
-                  borderRadius: "14px",
-                  background: "radial-gradient(circle at 50% 50%, var(--primary-soft) 0%, var(--background) 80%)",
-                  border: "1px solid var(--primary-soft)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "16px",
-                }}
-              >
-                <div style={{ textAlign: "center" }}>
-                  <Brain size={36} style={{ color: "var(--primary)", marginBottom: "6px" }} />
-                  <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--text-primary)", display: "block" }}>AI Cognitive Forecast</span>
-                  <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Mode: {reviewMode} • Threshold: {masteryThreshold}%</span>
-                </div>
-              </div>
-            </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            {algorithms.map((alg) => {
+              const isSelected = reviewMode === alg.id;
 
-            {/* Review Scheduler */}
-            <div
-              style={{
-                background: "var(--card)",
-                backdropFilter: "blur(var(--glass-blur))",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "20px",
-                boxShadow: DESIGN_TOKENS.shadows.card,
-                display: "flex",
-                flexDirection: "column",
-                gap: "14px",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-                  Review Scheduler
-                </h4>
-                <div style={{ display: "flex", gap: "6px", fontSize: "10px" }}>
-                  <span style={{ color: "var(--primary)", fontWeight: 700, background: "var(--primary-soft)", padding: "2px 8px", borderRadius: "6px" }}>Today</span>
-                  <span style={{ color: "var(--text-secondary)", padding: "2px 8px" }}>Tomorrow</span>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                {schedulerItems.map((item) => (
-                  <div key={item.topic} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 12px", borderRadius: "10px", background: "var(--surface)", fontSize: "11px" }}>
-                    <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{item.topic}</span>
-                    <div style={{ display: "flex", gap: "12px", color: "var(--text-secondary)" }}>
-                      <span>{item.count}</span>
-                      <span style={{ color: "var(--primary)", fontWeight: 700 }}>{item.time}</span>
-                    </div>
+              return (
+                <button
+                  key={alg.id}
+                  type="button"
+                  onClick={() => handleSelectAlgorithm(alg.id)}
+                  style={{
+                    padding: '10px 12px',
+                    borderRadius: '10px',
+                    background: isSelected
+                      ? isLight ? 'rgba(2, 132, 199, 0.12)' : 'rgba(56, 189, 248, 0.15)'
+                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+                    border: isSelected
+                      ? isLight ? '1.5px solid #0284C7' : '1px solid var(--primary)'
+                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)',
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                    outline: 'none',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '2px',
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <strong style={{ fontSize: '12px', color: isSelected ? 'var(--primary)' : 'var(--text-primary)', fontWeight: isSelected ? 800 : 600 }}>
+                      {alg.title}
+                    </strong>
+                    {isSelected && <Check size={12} style={{ color: 'var(--primary)' }} strokeWidth={3} />}
                   </div>
-                ))}
-              </div>
-            </div>
+                  <span style={{ fontSize: '10px', color: 'var(--text-secondary)', lineHeight: 1.3 }}>
+                    {alg.desc}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right: Memory Engine Analytics Panel */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '16px',
+            boxSizing: 'border-box',
+          }}
+        >
+          <div>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              Memory Engine Telemetry
+            </span>
           </div>
 
-          {/* Section 3: Analytics Overview 4 Charts Row */}
           <div
             style={{
-              background: "var(--card)",
-              backdropFilter: "blur(var(--glass-blur))",
-              border: "1px solid var(--border)",
-              borderRadius: "var(--radius)",
-              padding: "20px",
-              boxShadow: DESIGN_TOKENS.shadows.card,
-              display: "flex",
-              flexDirection: "column",
-              gap: "14px",
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '12px',
             }}
           >
-            <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>
-              Analytics Overview
-            </h4>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "14px" }}>
-              <div style={{ padding: "12px", borderRadius: "12px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)", display: "block" }}>Retention Graph</span>
-                <span style={{ fontSize: "16px", fontWeight: 800, color: "#10B981", display: "block", marginTop: "4px" }}>95% Steady</span>
+            {memoryMetrics.map((m) => (
+              <div
+                key={m.title}
+                style={{
+                  padding: '14px 16px',
+                  borderRadius: '12px',
+                  background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
+                  border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '4px',
+                }}
+              >
+                <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>{m.title}</span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginTop: '2px' }}>
+                  <span style={{ fontSize: '20px', fontWeight: 900, color: 'var(--text-primary)' }}>{m.value}</span>
+                  <span style={{ fontSize: '10px', color: m.color, fontWeight: 800 }}>{m.status}</span>
+                </div>
               </div>
-              <div style={{ padding: "12px", borderRadius: "12px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)", display: "block" }}>Learning Curve</span>
-                <span style={{ fontSize: "16px", fontWeight: 800, color: "var(--primary)", display: "block", marginTop: "4px" }}>+18% Speed</span>
-              </div>
-              <div style={{ padding: "12px", borderRadius: "12px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)", display: "block" }}>Mastery Distribution</span>
-                <span style={{ fontSize: "16px", fontWeight: 800, color: "var(--primary-hover)", display: "block", marginTop: "4px" }}>{masteryThreshold}% Avg</span>
-              </div>
-              <div style={{ padding: "12px", borderRadius: "12px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)", display: "block" }}>Review Calendar</span>
-                <span style={{ fontSize: "16px", fontWeight: 800, color: "#F59E0B", display: "block", marginTop: "4px" }}>S M T W T F S</span>
-              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '10px 14px',
+              borderRadius: '10px',
+              background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.02)',
+              border: isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.06)',
+              fontSize: '11px',
+              color: 'var(--text-secondary)',
+            }}
+          >
+            <span>Algorithm Mode: <strong style={{ color: 'var(--text-primary)' }}>{reviewMode}</strong></span>
+            <span>Mastery Threshold: <strong style={{ color: 'var(--text-primary)' }}>{masteryThreshold}%</strong></span>
+          </div>
+        </div>
+      </div>
+
+      {/* ── 3. ROW: TODAY'S LEARNING & MEMORY HEALTH ───────────────── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+        {/* Today's Learning Action Card */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '16px',
+          }}
+        >
+          <div>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              Today's Learning
+            </span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '12px', fontSize: '12px', color: 'var(--text-secondary)' }}>
+              <span>Reviews Due: <strong style={{ color: 'var(--text-primary)', fontSize: '14px' }}>{Math.max(6, reviewCount * 2)}</strong></span>
+              <span>Estimated Time: <strong style={{ color: 'var(--text-primary)', fontSize: '14px' }}>45 min</strong></span>
+            </div>
+          </div>
+
+          <Link
+            href="/revision"
+            style={{
+              padding: '10px 18px',
+              borderRadius: '10px',
+              background: 'var(--primary)',
+              color: '#FFFFFF',
+              fontSize: '12px',
+              fontWeight: 800,
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              boxShadow: '0 4px 14px var(--accent-glow)',
+              transition: 'all 0.15s ease',
+            }}
+          >
+            <Play size={13} fill="#FFF" /> Start Review Queue
+          </Link>
+        </div>
+
+        {/* Memory Health Section */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+          }}
+        >
+          {/* Circular Gauge */}
+          <div style={{ position: 'relative', width: '64px', height: '64px', flexShrink: 0 }}>
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="26" stroke={isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)'} strokeWidth="5" fill="none" />
+              <circle
+                cx="32"
+                cy="32"
+                r="26"
+                stroke="#10B981"
+                strokeWidth="5"
+                fill="none"
+                strokeDasharray="163"
+                strokeDashoffset="28"
+                strokeLinecap="round"
+                transform="rotate(-90 32 32)"
+              />
+            </svg>
+            <span style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 900, color: 'var(--text-primary)' }}>
+              74%
+            </span>
+          </div>
+
+          <div>
+            <strong style={{ fontSize: '14px', fontWeight: 800, color: '#10B981', display: 'block' }}>
+              74% Memory Health
+            </strong>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)', display: 'block', marginTop: '2px' }}>
+              Active Engine: <strong style={{ color: 'var(--text-primary)', textTransform: 'capitalize' }}>{reviewMode}</strong>
+            </span>
+            <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block', marginTop: '2px' }}>
+              Retention decay pacing within nominal boundaries.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* ── 4. ROW: REVIEW QUEUE & LEARNING FORECAST ───────────────── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+        {/* Review Queue Summary */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+          }}
+        >
+          <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            Review Queue Status
+          </span>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 10px', borderRadius: '8px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)' }}>
+              <span style={{ color: 'var(--text-secondary)' }}>Due Today</span>
+              <strong style={{ color: 'var(--primary)' }}>{reviewCount} Problems</strong>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 10px', borderRadius: '8px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)' }}>
+              <span style={{ color: 'var(--text-secondary)' }}>Due Soon (24–48h)</span>
+              <strong style={{ color: '#F59E0B' }}>5 Problems</strong>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 10px', borderRadius: '8px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)' }}>
+              <span style={{ color: 'var(--text-secondary)' }}>Upcoming Queue</span>
+              <strong style={{ color: '#10B981' }}>56 Problems</strong>
             </div>
           </div>
         </div>
 
-        {/* Right Sidebar (380px) */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          {/* Today's Learning Banner */}
-          <SidebarWidget title="Today's Learning">
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "11px", color: "var(--text-secondary)" }}>
-                <span>Reviews Due: <strong style={{ color: "var(--text-primary)" }}>{reviewCount * 2}</strong></span>
-                <span>Est. Time: <strong style={{ color: "var(--text-primary)" }}>45m</strong></span>
-              </div>
-              <button
-                type="button"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  borderRadius: "10px",
-                  background: "var(--primary)",
-                  border: "none",
-                  color: "#FFFFFF",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "6px",
-                }}
-              >
-                <Play size={14} fill="#FFF" /> Start Review
-              </button>
-            </div>
-          </SidebarWidget>
+        {/* Learning Forecast Panel */}
+        <div
+          style={{
+            background: 'var(--card)',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--card-shadow)',
+            borderRadius: '16px',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '12px',
+          }}
+        >
+          <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            Learning Forecast
+          </span>
 
-          {/* Memory Health Gauge */}
-          <SidebarWidget title="Memory Health">
-            <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-              <div style={{ position: "relative", width: "64px", height: "64px" }}>
-                <svg width="64" height="64" viewBox="0 0 64 64">
-                  <circle cx="32" cy="32" r="26" stroke="var(--border)" strokeWidth="5" fill="none" />
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="26"
-                    stroke="#10B981"
-                    strokeWidth="5"
-                    fill="none"
-                    strokeDasharray="163"
-                    strokeDashoffset="24"
-                    strokeLinecap="round"
-                    transform="rotate(-90 32 32)"
-                  />
-                </svg>
-                <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: 800, color: "var(--text-primary)" }}>
-                  74%
-                </span>
-              </div>
-              <div>
-                <span style={{ fontSize: "12px", fontWeight: 700, color: "#10B981", display: "block" }}>74% Good</span>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Algorithm: {reviewMode}</span>
-              </div>
-            </div>
-          </SidebarWidget>
-
-          {/* Review Queue Summary */}
-          <SidebarWidget title="Review Queue">
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "11px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Due Today</span><span style={{ color: "var(--primary)", fontWeight: 700 }}>{reviewCount}</span></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Due Soon</span><span style={{ color: "#F59E0B", fontWeight: 700 }}>5</span></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Upcoming</span><span style={{ color: "#10B981", fontWeight: 700 }}>56</span></div>
-            </div>
-          </SidebarWidget>
-
-          {/* Artwork Card */}
           <div
             style={{
-              position: "relative",
-              height: "170px",
-              borderRadius: "var(--radius)",
-              overflow: "hidden",
-              border: "1px solid var(--border)",
-              boxShadow: DESIGN_TOKENS.shadows.card,
+              padding: '14px',
+              borderRadius: '12px',
+              background: isLight ? 'rgba(2, 132, 199, 0.08)' : 'rgba(56, 189, 248, 0.08)',
+              border: isLight ? '1px solid rgba(2, 132, 199, 0.2)' : '1px solid rgba(56, 189, 248, 0.2)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
             }}
           >
-            <Image
-              src="/assets/settings/arcane_library.jpg"
-              alt="Arcane Library artwork"
-              fill
-              sizes="(max-width: 768px) 100vw, 380px"
-              style={{ objectFit: "cover" }}
-            />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(9, 11, 20, 0.85) 0%, rgba(20, 10, 38, 0.8) 60%, var(--primary-soft) 100%)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "20px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <p style={{ margin: 0, fontSize: "12px", fontStyle: "italic", fontWeight: 500, color: "#FFFFFF", lineHeight: 1.5, textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
-                &ldquo;The mind that grasps patterns commands the algorithm.&rdquo;
-              </p>
+            <Zap size={24} style={{ color: 'var(--primary)', flexShrink: 0 }} />
+            <div>
+              <strong style={{ fontSize: '13px', color: 'var(--text-primary)', display: 'block' }}>
+                Cognitive Mastery Pacing
+              </strong>
+              <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                Mode: <strong style={{ color: 'var(--text-primary)' }}>{reviewMode}</strong> • Calibration Threshold: <strong style={{ color: 'var(--text-primary)' }}>{masteryThreshold}%</strong>
+              </span>
             </div>
+          </div>
+
+          <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+            Next algorithmic mastery milestone forecasted within <strong>3 days</strong> of consistent reviews.
+          </div>
+        </div>
+      </div>
+
+      {/* ── 5. REVIEW SCHEDULER ────────────────────────────────────── */}
+      <div
+        style={{
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          borderRadius: '16px',
+          padding: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div>
+            <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 800, color: 'var(--text-primary)' }}>
+              Review Scheduler
+            </h4>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+              Upcoming pattern review sessions generated by spaced intervals
+            </span>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '4px',
+              background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.04)',
+              padding: '3px',
+              borderRadius: '8px',
+              border: isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.08)',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setSchedulerTab('today')}
+              style={{
+                padding: '4px 10px',
+                borderRadius: '6px',
+                background: schedulerTab === 'today' ? 'var(--primary)' : 'transparent',
+                border: 'none',
+                color: schedulerTab === 'today' ? '#FFF' : 'var(--text-secondary)',
+                fontSize: '11px',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              Today
+            </button>
+            <button
+              type="button"
+              onClick={() => setSchedulerTab('tomorrow')}
+              style={{
+                padding: '4px 10px',
+                borderRadius: '6px',
+                background: schedulerTab === 'tomorrow' ? 'var(--primary)' : 'transparent',
+                border: 'none',
+                color: schedulerTab === 'tomorrow' ? '#FFF' : 'var(--text-secondary)',
+                fontSize: '11px',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              Tomorrow
+            </button>
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px' }}>
+          {currentScheduler.map((item) => (
+            <div
+              key={item.topic}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '10px 14px',
+                borderRadius: '10px',
+                background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+                border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)',
+                fontSize: '12px',
+              }}
+            >
+              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{item.topic}</span>
+              <div style={{ display: 'flex', gap: '10px', color: 'var(--text-secondary)' }}>
+                <span>{item.count}</span>
+                <strong style={{ color: 'var(--primary)' }}>{item.time}</strong>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── 6. LEARNING ANALYTICS OVERVIEW ─────────────────────────── */}
+      <div
+        style={{
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          borderRadius: '16px',
+          padding: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+          Learning Analytics Overview
+        </span>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+          <div style={{ padding: '12px 14px', borderRadius: '10px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)', display: 'block' }}>Retention Graph</span>
+            <span style={{ fontSize: '15px', fontWeight: 800, color: '#10B981', display: 'block', marginTop: '4px' }}>95% Steady</span>
+          </div>
+
+          <div style={{ padding: '12px 14px', borderRadius: '10px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)', display: 'block' }}>Learning Curve</span>
+            <span style={{ fontSize: '15px', fontWeight: 800, color: 'var(--primary)', display: 'block', marginTop: '4px' }}>+18% Velocity</span>
+          </div>
+
+          <div style={{ padding: '12px 14px', borderRadius: '10px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)', display: 'block' }}>Mastery Distribution</span>
+            <span style={{ fontSize: '15px', fontWeight: 800, color: '#0284C7', display: 'block', marginTop: '4px' }}>{masteryThreshold}% Avg</span>
+          </div>
+
+          <div style={{ padding: '12px 14px', borderRadius: '10px', background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-secondary)', display: 'block' }}>Review Calendar</span>
+            <span style={{ fontSize: '14px', fontWeight: 800, color: '#F59E0B', display: 'block', marginTop: '4px', letterSpacing: '0.1em' }}>S M T W T F S</span>
           </div>
         </div>
       </div>

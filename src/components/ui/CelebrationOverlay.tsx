@@ -46,7 +46,8 @@ export function CelebrationOverlay({ session, onClose, onNext }: CelebrationProp
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
+          style={{ background: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(4px)' }}
+          className="fixed inset-0"
           onClick={onClose}
         />
         
@@ -55,17 +56,22 @@ export function CelebrationOverlay({ session, onClose, onNext }: CelebrationProp
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden my-auto z-10 flex flex-col"
+          style={{
+            background: 'var(--surface)',
+            border: '1px solid var(--border)',
+            boxShadow: '0 24px 70px rgba(0, 0, 0, 0.3)',
+          }}
+          className="relative w-full max-w-2xl rounded-3xl overflow-hidden my-auto z-10 flex flex-col"
         >
           {/* Header */}
-          <div className="pt-10 pb-6 px-8 text-center border-b border-slate-800/50 bg-gradient-to-b from-cyan-500/10 to-transparent">
-            <motion.div variants={itemVariants} className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-500/20 text-cyan-400 mb-4 ring-1 ring-cyan-500/50">
+          <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--surface-secondary)' }} className="pt-10 pb-6 px-8 text-center">
+            <motion.div variants={itemVariants} style={{ background: 'var(--accent-soft)', color: 'var(--accent-primary)' }} className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ring-1 ring-[var(--accent-border)]">
               <CheckCircle2 className="w-8 h-8" />
             </motion.div>
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-2 tracking-tight">
+            <motion.h2 variants={itemVariants} style={{ color: 'var(--text-primary)' }} className="text-3xl font-bold mb-2 tracking-tight">
               Problem Solved!
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-slate-400 text-lg">
+            <motion.p variants={itemVariants} style={{ color: 'var(--text-secondary)' }} className="text-lg">
               Excellent work. Your learning memory has been updated.
             </motion.p>
           </div>
@@ -76,10 +82,10 @@ export function CelebrationOverlay({ session, onClose, onNext }: CelebrationProp
             {/* XP & Streak */}
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
               <StatCard 
-                icon={<Star className="w-5 h-5 text-yellow-400" />}
+                icon={<Star className="w-5 h-5 text-yellow-500" />}
                 title="XP Earned"
                 value={`+${session.experiencePoints}`}
-                highlight="text-yellow-400"
+                highlight="text-yellow-500"
                 bg="bg-yellow-500/10"
               />
               <StatCard 
@@ -94,58 +100,60 @@ export function CelebrationOverlay({ session, onClose, onNext }: CelebrationProp
             {/* Mastery & Graph */}
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
               <StatCard 
-                icon={<Brain className="w-5 h-5 text-purple-400" />}
+                icon={<Brain className="w-5 h-5 text-purple-500" />}
                 title="Recognition Score"
                 value={`${session.recognitionScore || 0}%`}
-                highlight="text-purple-400"
+                highlight="text-purple-500"
                 bg="bg-purple-500/10"
               />
               <StatCard 
-                icon={<TrendingUp className="w-5 h-5 text-emerald-400" />}
+                icon={<TrendingUp className="w-5 h-5 text-emerald-500" />}
                 title="Mastery Increase"
                 value={`+${masteryDelta.toFixed(1)}%`}
-                highlight="text-emerald-400"
+                highlight="text-emerald-500"
                 bg="bg-emerald-500/10"
               />
             </motion.div>
 
             {/* Concepts Updated */}
-            <motion.div variants={itemVariants} className="sm:col-span-2 mt-2 bg-slate-950 rounded-2xl p-5 border border-slate-800">
+            <motion.div variants={itemVariants} style={{ background: 'var(--surface-secondary)', border: '1px solid var(--border)' }} className="sm:col-span-2 mt-2 rounded-2xl p-5">
               <div className="flex items-center gap-3 mb-4">
-                <Network className="w-5 h-5 text-blue-400" />
-                <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Knowledge Graph Updated</h4>
+                <Network style={{ color: 'var(--accent-primary)' }} className="w-5 h-5" />
+                <h4 style={{ color: 'var(--text-secondary)' }} className="text-sm font-semibold uppercase tracking-wider">Knowledge Graph Updated</h4>
               </div>
               <div className="flex flex-wrap gap-2">
                 {session.conceptsImproved.length > 0 ? (
                   session.conceptsImproved.map(c => (
-                    <span key={c} className="px-3 py-1.5 bg-blue-500/10 text-blue-300 rounded-lg text-sm border border-blue-500/20">
+                    <span key={c} style={{ background: 'var(--accent-soft)', color: 'var(--accent-primary)', border: '1px solid var(--accent-border)' }} className="px-3 py-1.5 rounded-lg text-sm">
                       {c.replace('-', ' ').toUpperCase()}
                     </span>
                   ))
                 ) : (
-                  <span className="text-slate-500 text-sm">Maintained mastery of current concepts.</span>
+                  <span style={{ color: 'var(--text-muted)' }} className="text-sm">Maintained mastery of current concepts.</span>
                 )}
               </div>
             </motion.div>
           </div>
 
           {/* Footer Actions */}
-          <div className="px-8 py-6 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 text-slate-400 text-sm">
+          <div style={{ background: 'var(--surface-secondary)', borderTop: '1px solid var(--border)' }} className="px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div style={{ color: 'var(--text-muted)' }} className="flex items-center gap-3 text-sm">
               <Calendar className="w-4 h-4" />
-              <span>Next Revision: <strong className="text-slate-200">Tomorrow</strong></span>
+              <span>Next Revision: <strong style={{ color: 'var(--text-primary)' }}>Tomorrow</strong></span>
             </div>
             
             <div className="flex w-full sm:w-auto items-center gap-3">
               <button 
                 onClick={onClose}
-                className="flex-1 sm:flex-none px-6 py-3 rounded-xl font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 transition-colors"
+                style={{ color: 'var(--text-secondary)', background: 'var(--surface)', border: '1px solid var(--border)' }}
+                className="flex-1 sm:flex-none px-6 py-3 rounded-xl font-semibold hover:bg-[var(--surface-hover)] transition-colors"
               >
                 Close
               </button>
               <button 
                 onClick={() => onNext(nextProblem)}
-                className="flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-slate-950 bg-cyan-500 hover:bg-cyan-400 transition-colors flex items-center justify-center gap-2 group"
+                style={{ background: 'var(--accent-primary)', color: '#FFFFFF' }}
+                className="flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 group shadow-md"
               >
                 Next Problem
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -160,12 +168,12 @@ export function CelebrationOverlay({ session, onClose, onNext }: CelebrationProp
 
 function StatCard({ icon, title, value, highlight, bg }: { icon: React.ReactNode, title: string, value: string, highlight: string, bg: string }) {
   return (
-    <div className="flex items-center gap-4 bg-slate-950 p-4 rounded-2xl border border-slate-800">
+    <div style={{ background: 'var(--surface-secondary)', border: '1px solid var(--border)' }} className="flex items-center gap-4 p-4 rounded-2xl">
       <div className={`p-3 rounded-xl ${bg}`}>
         {icon}
       </div>
       <div>
-        <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">{title}</h4>
+        <h4 style={{ color: 'var(--text-muted)' }} className="text-xs font-semibold uppercase tracking-wider mb-1">{title}</h4>
         <div className={`text-xl font-bold ${highlight}`}>{value}</div>
       </div>
     </div>

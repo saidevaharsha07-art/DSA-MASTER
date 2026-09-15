@@ -5,6 +5,8 @@
 
 import { EventBus, AppEvent } from '@/src/core/events/event-bus';
 import { storage } from '@/src/core/storage/LocalStorageAdapter';
+import { canonicalDb } from '@/src/core/storage/db/canonical-db.service';
+import { serverPersistenceBridge } from '@/src/core/storage/server-persistence.bridge';
 import { PracticeAttempt } from '@/src/intelligence/models/practice-history';
 import { activityStoreService } from '@/src/services/activity/activity-store.service';
 import { z } from 'zod';
@@ -180,6 +182,18 @@ export class ProgressService {
   private saveState(userId: string, nextState: UserState): void {
     this.userStates.set(userId, nextState);
     storage.save(this.getCanonicalKey(userId), nextState);
+    canonicalDb.saveProgress({
+      userId,
+      xp: nextState.xp,
+      level: ProgressService.calculateLevel(nextState.xp),
+      currentStreak: nextState.currentStreak || 0,
+      longestStreak: nextState.longestStreak || 0,
+      completedProblemIds: nextState.completedProblemIds || [],
+      favorites: nextState.favorites || [],
+      notes: nextState.notes || {},
+      lastActiveDate: nextState.lastActiveDate || new Date().toISOString(),
+    });
+    serverPersistenceBridge.saveDurableData('progress', userId, nextState).catch(() => {});
     if (userId === 'default_user') {
       storage.save(STORAGE_KEY_LEGACY, {
         completed: nextState.completed,
@@ -475,14 +489,19 @@ export class ProgressService {
 
   public unmarkSolved(problemId: string | number, userId = 'default_user'): UserState {
     const state = this.getState(userId);
-    const targetStr = typeof problemId === 'number' ? `leetcode:${problemId}` : problemId;
+    const targetStr = String(problemId);
     const numId = typeof problemId === 'number' ? problemId : parseInt(problemId.replace(/\D/g, ''), 10);
     const nextCompleted = !isNaN(numId)
       ? state.completed.filter((n) => n !== numId)
       : state.completed;
-    const nextProblemIds = (state.completedProblemIds || []).filter(
-      (id) => id !== targetStr && id !== `leetcode:${numId}`
-    );
+    
+    const nextProblemIds = (state.completedProblemIds || []).filter((id) => {
+      if (id === targetStr) return false;
+      if (!isNaN(numId)) {
+        if (id === `leetcode:${numId}` || id === `codechef:${numId}` || id === `codeforces:${numId}` || id === String(numId)) return false;
+      }
+      return true;
+    });
 
     const nextState: UserState = {
       ...state,
@@ -492,13 +511,17 @@ export class ProgressService {
 
     this.saveState(userId, nextState);
 
+    const platform = typeof problemId === 'number'
+      ? (problemId >= 150000 ? 'codechef' : problemId >= 90000 ? 'codeforces' : 'leetcode')
+      : targetStr.startsWith('codechef:') ? 'codechef' : targetStr.startsWith('codeforces:') ? 'codeforces' : 'leetcode';
+
     activityStoreService.recordActivity({
       eventId: `act_unsolve_${Date.now()}`,
       userId,
       action: 'run',
       timestamp: new Date().toISOString(),
       problemId: targetStr,
-      platform: 'leetcode',
+      platform,
       status: 'unsolved',
       xpEarned: 0,
     });
@@ -511,6 +534,9 @@ export class ProgressService {
     const items = state[key];
     const hasItem = items.includes(id);
 
+    const platform = id >= 150000 ? 'codechef' : id >= 90000 ? 'codeforces' : 'leetcode';
+    const canonicalPrefix = `${platform}:${id}`;
+
     if (key === 'favorites') {
       const nextFavorites = hasItem ? items.filter((item) => item !== id) : [...items, id];
       const nextState = { ...state, favorites: nextFavorites };
@@ -518,7 +544,7 @@ export class ProgressService {
 
       EventBus.publish('FavoriteToggled', {
         userId,
-        problemId: `leetcode:${id}`,
+        problemId: canonicalPrefix,
         isFavorite: !hasItem,
         timestamp: new Date().toISOString(),
       });
@@ -529,10 +555,32 @@ export class ProgressService {
     if (hasItem) {
       // Transition: Solved -> Unsolved
       const nextCompleted = items.filter((item) => item !== id);
-      const targetStr = `leetcode:${id}`;
-      const nextProblemIds = (state.completedProblemIds || []).filter((item) => item !== targetStr && item !== String(id));
+      const nextProblemIds = (state.completedProblemIds || []).filter(
+        (item) => item !== canonicalPrefix && item !== String(id) && item !== `leetcode:${id}` && item !== `codechef:${id}` && item !== `codeforces:${id}`
+      );
       const nextState = { ...state, completed: nextCompleted, completedProblemIds: nextProblemIds };
       this.saveState(userId, nextState);
+
+      activityStoreService.recordActivity({
+        eventId: `act_unsolve_${Date.now()}`,
+        userId,
+        action: 'run',
+        timestamp: new Date().toISOString(),
+        problemId: canonicalPrefix,
+        platform,
+        status: 'unsolved',
+        xpEarned: 0,
+      });
+
+      EventBus.publish('ProblemSolved', {
+        userId,
+        problemId: canonicalPrefix,
+        leetcodeNumber: id,
+        platform,
+        timestamp: new Date().toISOString(),
+        status: 'unsolved',
+      });
+
       return this.getState(userId);
     }
 
@@ -547,7 +595,7 @@ export class ProgressService {
       completed: nextCompleted,
       awardedXp: nextAwarded,
       xp: nextXp,
-      completedProblemIds: [...(state.completedProblemIds || []), `leetcode:${id}`],
+      completedProblemIds: [...(state.completedProblemIds || []), canonicalPrefix],
       lastActiveDate: new Date().toISOString().split('T')[0],
     };
 
@@ -555,9 +603,9 @@ export class ProgressService {
 
     EventBus.publish('ProblemSolved', {
       userId,
-      problemId: `leetcode:${id}`,
+      problemId: canonicalPrefix,
       leetcodeNumber: id,
-      platform: 'leetcode',
+      platform,
       timestamp: new Date().toISOString(),
       xpEarned: firstCompletion ? 50 : 0,
     });

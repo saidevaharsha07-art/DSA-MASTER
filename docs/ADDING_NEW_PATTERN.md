@@ -1,6 +1,6 @@
 # Adding a New Pattern
 
-To add a new algorithmic pattern to DSA Master Roadmap, you must follow the Engine-Driven data model. Do NOT add hardcoded JSX components for new patterns.
+To add a new algorithmic pattern to DSA CRACKER, you must follow the Engine-Driven data model. Do NOT add hardcoded JSX components for new patterns.
 
 ## Step 1: Create the Pattern Module
 1. Navigate to `src/content/phase-XX/` (where XX is the phase number).

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, 
@@ -19,218 +19,62 @@ import {
   Award, 
   Calendar, 
   ChevronRight, 
+  ChevronLeft,
   TrendingUp, 
+  TrendingDown,
   ShieldAlert, 
   Bot, 
-  Layers, 
   Gift, 
   HelpCircle,
   ArrowUpRight,
   Filter,
-  Info
+  Info,
+  ExternalLink,
+  LayoutGrid
 } from 'lucide-react';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
 import { AnalyticsViewAdapter } from '@/src/adapters/analytics-view.adapter';
 import { PlatformTelemetryService } from '@/src/features/platform/services/platform-telemetry.service';
-import { PlatformTelemetryCard, PlatformDailySnapshot } from '@/src/features/platform/types/platform-telemetry.types';
+import { PlatformTelemetryCard } from '@/src/features/platform/types/platform-telemetry.types';
+import { PatternOrbMetric } from '@/src/features/analytics/services/analytics-adapter.service';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
+import { JourneyCalendarHeatmap } from '@/components/analytics/JourneyCalendarHeatmap';
+import { EventBus } from '@/src/core/events/event-bus';
+import { CurriculumRepository } from '@/src/curriculum/repository';
 
-function PlatformPerformanceGraph({ platform }: { platform: PlatformTelemetryCard }) {
-  const hexColor = platform.color === 'var(--primary)' ? '#06B6D4' : platform.color;
-  const gradientId = `platform-grad-${platform.name.replace(/\s+/g, '-')}`;
-  const [hoveredSnapshot, setHoveredSnapshot] = useState<PlatformDailySnapshot | null>(null);
-
-  const snapshots = platform.historicalSnapshots || [];
-
-  if (snapshots.length === 0) {
+function PlatformIcon({ platformKey, color }: { platformKey: string; color: string }) {
+  if (platformKey === 'leetcode') {
     return (
-      <div style={{ padding: '16px 8px', textAlign: 'center', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', border: '1px border var(--border)' }}>
-        <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-primary)', display: 'block' }}>
-          Not enough historical data
-        </span>
-        <span style={{ fontSize: '10px', color: 'var(--text-secondary)', display: 'block', marginTop: '2px' }}>
-          Sync over multiple days to build your history.
-        </span>
-      </div>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 18l6-6-6-6" />
+        <path d="M8 6l-6 6 6 6" />
+      </svg>
     );
   }
-
-  // Dynamic Y-axis scale calculation
-  const numericRatings = snapshots
-    .map((s) => s.rating)
-    .filter((r): r is number => r !== null && typeof r === 'number');
-
-  let yMin = numericRatings.length > 0 ? Math.min(...numericRatings) : 1000;
-  let yMax = numericRatings.length > 0 ? Math.max(...numericRatings) : 2000;
-  if (yMin === yMax) {
-    yMin = Math.max(0, yMin - 200);
-    yMax = yMax + 200;
+  if (platformKey === 'codechef') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 10.58 0A4 4 0 0 1 18 13.87V21H6z" />
+        <line x1="6" y1="17" x2="18" y2="17" />
+      </svg>
+    );
   }
-  const yTicks = [
-    yMax,
-    Math.round(yMin + (yMax - yMin) * 0.75),
-    Math.round(yMin + (yMax - yMin) * 0.5),
-    Math.round(yMin + (yMax - yMin) * 0.25),
-    yMin,
-  ];
-
-  const width = 200;
-  const height = 130;
-  const paddingY = 12;
-  const usableHeight = height - paddingY * 2;
-
-  const getY = (val: number | null) => {
-    if (val === null) return height - paddingY;
-    const ratio = Math.max(0, Math.min(1, (val - yMin) / (yMax - yMin)));
-    return height - paddingY - ratio * usableHeight;
-  };
-
-  const getX = (index: number) => {
-    if (snapshots.length === 1) return width / 2;
-    return 10 + (index * (width - 20)) / (snapshots.length - 1);
-  };
-
-  const points = snapshots.map((s, i) => ({
-    x: getX(i),
-    y: getY(s.rating),
-    snapshot: s,
-  }));
-
-  let linePath = '';
-  if (points.length === 1) {
-    linePath = `M ${points[0].x - 15},${points[0].y} L ${points[0].x + 15},${points[0].y}`;
-  } else {
-    linePath = points.reduce((acc, pt, i, arr) => {
-      if (i === 0) return `M ${pt.x},${pt.y}`;
-      const prev = arr[i - 1];
-      const cp1x = prev.x + (pt.x - prev.x) / 2;
-      const cp1y = prev.y;
-      const cp2x = prev.x + (pt.x - prev.x) / 2;
-      const cp2y = pt.y;
-      return `${acc} C ${cp1x},${cp1y} ${cp2x},${cp2y} ${pt.x},${pt.y}`;
-    }, '');
+  if (platformKey === 'codeforces') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="18" y="3" width="4" height="18" rx="1" />
+        <rect x="10" y="8" width="4" height="13" rx="1" />
+        <rect x="2" y="13" width="4" height="8" rx="1" />
+      </svg>
+    );
   }
-
-  const areaPath = points.length > 1
-    ? `${linePath} L ${points[points.length - 1].x},${height} L ${points[0].x},${height} Z`
-    : '';
-
+  // geeksforgeeks
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', width: '100%', position: 'relative' }}>
-      {/* Tooltip Overlay */}
-      {hoveredSnapshot && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '-65px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            background: 'rgba(18, 19, 26, 0.95)',
-            border: `1px solid ${hexColor}`,
-            boxShadow: `0 8px 24px rgba(0,0,0,0.6)`,
-            borderRadius: '8px',
-            padding: '6px 10px',
-            fontSize: '10px',
-            color: '#FFF',
-            zIndex: 20,
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-          }}
-        >
-          <div style={{ fontWeight: 700, color: hexColor, marginBottom: '2px' }}>{hoveredSnapshot.date}</div>
-          <div>Rating: <strong>{hoveredSnapshot.rating ?? 'N/A'}</strong></div>
-          <div>Solved: <strong>{hoveredSnapshot.solvedCount ?? 'N/A'}</strong> | Contests: <strong>{hoveredSnapshot.contestCount ?? 'N/A'}</strong></div>
-          <div>Success: <strong>{hoveredSnapshot.successRate ?? 'N/A'}</strong> | Rank: <strong>{hoveredSnapshot.rank ?? 'Unranked'}</strong></div>
-        </div>
-      )}
-
-      <div style={{ display: 'flex', gap: '4px', alignItems: 'stretch', width: '100%' }}>
-        {/* Left Rotated Y-Axis Label */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '12px' }}>
-          <span style={{ transform: 'rotate(-90deg)', transformOrigin: 'center', fontSize: '9px', color: 'var(--text-secondary)', whiteSpace: 'nowrap', fontWeight: 600 }}>
-            Rating
-          </span>
-        </div>
-
-        {/* Y-Axis Ticks */}
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: `${height}px`, fontSize: '9px', color: 'var(--text-secondary)', paddingRight: '4px', textAlign: 'right', width: '28px', flexShrink: 0, fontWeight: 500 }}>
-          {yTicks.map((tick, idx) => (
-            <span key={idx}>{tick}</span>
-          ))}
-        </div>
-
-        {/* Graph Canvas Box */}
-        <div style={{ flex: 1, height: `${height}px`, position: 'relative', background: 'rgba(0,0,0,0.25)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.08)', padding: '2px' }}>
-          <svg width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" style={{ overflow: 'visible' }}>
-            <defs>
-              <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={hexColor} stopOpacity="0.35" />
-                <stop offset="100%" stopColor={hexColor} stopOpacity="0.0" />
-              </linearGradient>
-            </defs>
-
-            {/* Horizontal Gridlines */}
-            {yTicks.map((tick, idx) => {
-              const y = getY(tick);
-              return (
-                <line
-                  key={idx}
-                  x1="0"
-                  y1={y}
-                  x2={width}
-                  y2={y}
-                  stroke="rgba(255,255,255,0.07)"
-                  strokeDasharray="3 3"
-                  strokeWidth="1"
-                />
-              );
-            })}
-
-            {/* Border Axes Lines */}
-            <line x1="0" y1="0" x2="0" y2={height} stroke="rgba(255,255,255,0.18)" strokeWidth="1" />
-            <line x1="0" y1={height} x2={width} y2={height} stroke="rgba(255,255,255,0.18)" strokeWidth="1" />
-
-            {/* Area Fill */}
-            {areaPath && <path d={areaPath} fill={`url(#${gradientId})`} />}
-
-            {/* Trend Line */}
-            <path d={linePath} fill="none" stroke={hexColor} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-
-            {/* Nodes with Hover State */}
-            {points.map((pt, i) => {
-              const isLatest = i === points.length - 1;
-              return (
-                <circle
-                  key={i}
-                  cx={pt.x}
-                  cy={pt.y}
-                  r={isLatest ? '5' : '4'}
-                  fill={hexColor}
-                  stroke="#12131A"
-                  strokeWidth="2"
-                  style={{ cursor: 'pointer', transition: 'transform 0.15s ease' }}
-                  onMouseEnter={() => setHoveredSnapshot(pt.snapshot)}
-                  onMouseLeave={() => setHoveredSnapshot(null)}
-                />
-              );
-            })}
-          </svg>
-        </div>
-      </div>
-
-      {/* X-Axis Ticks & Bottom Date Label */}
-      <div style={{ paddingLeft: '44px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '9px', color: 'var(--text-secondary)', fontWeight: 500 }}>
-          {snapshots.map((s) => (
-            <span key={s.date}>{s.date.length > 5 ? s.date.slice(5) : s.date}</span>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', fontSize: '9px', color: 'var(--text-secondary)', fontWeight: 600 }}>
-          Date
-        </div>
-      </div>
-    </div>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+    </svg>
   );
 }
 
@@ -238,30 +82,123 @@ export default function AnalyticsPage() {
   const { settings } = useSettings();
   const { toast } = useToast();
   const { userId } = useActiveUser();
+  const isLight = settings.appearance.theme === 'light';
 
   const [timeframe, setTimeframe] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
   const [refreshing, setRefreshing] = useState(false);
+  const [eventSeq, setEventSeq] = useState(0);
+
+  useEffect(() => {
+    const unsub1 = EventBus.subscribe('ProblemSolved', () => setEventSeq((c) => c + 1));
+    const unsub2 = EventBus.subscribe('PlatformSynced', () => setEventSeq((c) => c + 1));
+    const unsub3 = EventBus.subscribe('ProfileUpdated', () => setEventSeq((c) => c + 1));
+    return () => {
+      unsub1();
+      unsub2();
+      unsub3();
+    };
+  }, []);
 
   const analytics = useMemo(() => {
     return AnalyticsViewAdapter.getAnalyticsSummary(userId, timeframe);
-  }, [timeframe, refreshing, userId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, timeframe, eventSeq]);
 
   const platformTelemetryCards = useMemo(() => {
-    return PlatformTelemetryService.getTelemetryCards(userId);
-  }, [refreshing, userId]);
+    return PlatformTelemetryService.getTelemetryCards(userId, timeframe);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, timeframe, eventSeq]);
+
+  const handles = useMemo(() => {
+    return PlatformTelemetryService.getUserHandles(userId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, eventSeq]);
 
   const handleRefresh = async () => {
     setRefreshing(true);
-    toast("Synchronizing multi-platform telemetry...", "info");
     try {
       await PlatformTelemetryService.syncAllPlatforms(userId);
-      toast("Platform telemetry successfully synchronized!", "success");
-    } catch (err) {
-      toast("Platform sync completed with some warnings.", "warning");
+      setEventSeq((c) => c + 1);
+      toast('Platform telemetry successfully refreshed!', 'success');
+    } catch {
+      toast('Failed to refresh telemetry', 'error');
     } finally {
       setRefreshing(false);
     }
   };
+
+  // Total problems across connected platforms (excluding unreleased platforms)
+  const totalProblemsCount = useMemo(() => {
+    const platformSum = platformTelemetryCards
+      .filter((p) => p.platformKey !== 'geeksforgeeks')
+      .reduce((sum, p) => {
+        const cnt = typeof p.solved === 'number' ? p.solved : 0;
+        return sum + cnt;
+      }, 0);
+    return Math.max(platformSum, analytics.solvedCount);
+  }, [platformTelemetryCards, analytics.solvedCount]);
+
+  const connectedPlatformsCount = useMemo(() => {
+    return platformTelemetryCards.filter((p) => p.platformKey !== 'geeksforgeeks' && p.status === 'Connected').length;
+  }, [platformTelemetryCards]);
+
+  const latestSyncTimeText = useMemo(() => {
+    const connectedCard = platformTelemetryCards.find((p) => p.platformKey !== 'geeksforgeeks' && p.lastSyncedText && p.lastSyncedText !== 'Sync unavailable');
+    return connectedCard?.lastSyncedText || 'Just now';
+  }, [platformTelemetryCards]);
+
+  // Derived Bottom Summary Strip items
+  const mostActivePlatform = useMemo(() => {
+    const activeCards = platformTelemetryCards.filter((p) => p.platformKey !== 'geeksforgeeks');
+    let maxSolved = -1;
+    let best = activeCards[0];
+    for (const card of activeCards) {
+      const num = typeof card.solved === 'number' ? card.solved : 0;
+      if (num > maxSolved) {
+        maxSolved = num;
+        best = card;
+      }
+    }
+    return {
+      name: best ? best.name : 'LeetCode',
+      solved: maxSolved > 0 ? maxSolved : (analytics.solvedCount || '0'),
+    };
+  }, [platformTelemetryCards, analytics.solvedCount]);
+
+  const bestProgressPlatform = useMemo(() => {
+    const activeCards = platformTelemetryCards.filter((p) => p.platformKey !== 'geeksforgeeks');
+    const cardWithTrend = activeCards.find((c) => c.trend && c.trend !== '0' && c.trend !== 'N/A');
+    if (cardWithTrend) {
+      return {
+        name: cardWithTrend.name,
+        subtext: `↑ ${cardWithTrend.trend} vs 30d`,
+      };
+    }
+    const topCard = activeCards[0];
+    return {
+      name: topCard ? topCard.name : 'LeetCode',
+      subtext: 'Active practice',
+    };
+  }, [platformTelemetryCards]);
+
+  const highestSuccessPlatform = useMemo(() => {
+    const activeCards = platformTelemetryCards.filter((p) => p.platformKey !== 'geeksforgeeks');
+    let maxRate = -1;
+    let best = activeCards[0];
+    for (const card of activeCards) {
+      if (card.success && card.success.includes('%')) {
+        const val = parseInt(card.success.replace('%', ''), 10);
+        if (!isNaN(val) && val > maxRate) {
+          maxRate = val;
+          best = card;
+        }
+      }
+    }
+    return {
+      name: best ? best.name : 'LeetCode',
+      rate: best?.success && best.success !== 'N/A' ? best.success : (analytics.acceptanceRate || 'N/A'),
+    };
+  }, [platformTelemetryCards, analytics.acceptanceRate]);
 
   return (
     <div style={{ width: '100%', maxWidth: '1600px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px', paddingBottom: '40px' }}>
@@ -275,9 +212,15 @@ export default function AnalyticsPage() {
           position: "relative",
           borderRadius: "var(--radius, 20px)",
           overflow: "hidden",
-          border: "1px solid var(--primary-soft)",
-          boxShadow: "0 20px 60px rgba(0, 0, 0, 0.4)",
-          background: "linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(20, 15, 45, 0.9) 60%, rgba(124, 77, 255, 0.18) 100%)",
+          border: isLight
+            ? "1.5px solid rgba(2, 132, 199, 0.35)"
+            : "1px solid var(--primary-soft)",
+          boxShadow: isLight
+            ? "0 10px 30px rgba(2, 132, 199, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)"
+            : "0 20px 60px rgba(0, 0, 0, 0.4)",
+          background: isLight
+            ? "linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%)"
+            : "linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(20, 15, 45, 0.9) 60%, rgba(124, 77, 255, 0.18) 100%)",
           padding: "24px 32px",
         }}
       >
@@ -340,126 +283,421 @@ export default function AnalyticsPage() {
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               style={{ position: "absolute", inset: -4, borderRadius: "50%", border: "2px dashed var(--primary)", opacity: 0.6 }}
             />
-            <div style={{ width: "100%", height: "100%", borderRadius: "50%", background: "radial-gradient(circle, var(--primary) 0%, rgba(10,14,26,1) 85%)", display: "flex", alignItems: "center", justifyContent: "center", color: "#FFFFFF", boxShadow: "0 0 30px var(--primary-soft)" }}>
+            <div style={{ width: "100%", height: "100%", borderRadius: "50%", background: isLight ? "radial-gradient(circle, #0284C7 0%, #0369A1 85%)" : "radial-gradient(circle, var(--primary) 0%, rgba(10,14,26,1) 85%)", display: "flex", alignItems: "center", justifyContent: "center", color: "#FFFFFF", boxShadow: "0 0 30px var(--primary-soft)" }}>
               <BarChart3 size={48} />
             </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Workspace Grid (75% Content Area / 25% Sidebar) */}
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 350px", gap: "24px", alignItems: "start" }}>
-        
-        {/* Left Main Content Stack */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-          
-          {/* SECTION 1 — Platform Intelligence */}
-          <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <div>
-                <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)" }}>Platform Intelligence</h3>
-                <span style={{ fontSize: "11px", color: "var(--text-secondary)" }}>Unified statistics from every connected coding realm</span>
+      {/* Workspace Stack (Full Width) */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "24px", width: "100%" }}>
+        {/* SECTION 1 — Platform Intelligence */}
+        <div style={{ padding: "26px", borderRadius: "20px", background: isLight ? "#FFFFFF" : "rgba(14, 10, 32, 0.88)", border: isLight ? "1px solid #E2E8F0" : "1px solid var(--primary-border, rgba(255, 255, 255, 0.08))", display: "flex", flexDirection: "column", gap: "22px", boxShadow: isLight ? "0 8px 24px rgba(0,0,0,0.04)" : "0 16px 48px rgba(0,0,0,0.5)", backdropFilter: "blur(20px)" }}>
+          {/* Header Row */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <h3 style={{ margin: 0, fontSize: "18px", fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>Platform Intelligence</h3>
+                <span style={{ fontSize: "10px", fontWeight: 700, color: "#10B981", background: "rgba(16,185,129,0.12)", border: "1px solid rgba(16,185,129,0.25)", padding: "2px 8px", borderRadius: "99px" }}>
+                  ● Unified Telemetry Active
+                </span>
+              </div>
+              <span style={{ fontSize: "12px", color: "var(--text-secondary)", marginTop: "4px", display: "block" }}>Normalized statistics and real-time activity across connected platforms</span>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "var(--text-secondary)", background: isLight ? "#F1F5F9" : "rgba(0,0,0,0.4)", padding: "6px 12px", borderRadius: "8px", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255,255,255,0.06)" }}>
+                <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10B981", boxShadow: "0 0 6px #10B981" }} />
+                <span>Last Synced: <strong style={{ color: "var(--text-primary)" }}>{latestSyncTimeText}</strong></span>
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>Last Synced: Just now</span>
-                <button type="button" onClick={handleRefresh} style={{ padding: "6px 12px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--text-primary)", fontSize: "11px", cursor: "pointer", display: "flex", alignItems: "center", gap: "6px" }}>
-                  <RefreshCw size={12} className={refreshing ? "spin" : ""} /> Refresh
-                </button>
+              <button
+                type="button"
+                onClick={handleRefresh}
+                style={{
+                  padding: "7px 16px",
+                  borderRadius: "10px",
+                  background: isLight ? "rgba(2, 132, 199, 0.08)" : "var(--primary-bg, rgba(255, 255, 255, 0.05))",
+                  border: isLight ? "1px solid rgba(2, 132, 199, 0.3)" : "1px solid var(--primary-border, rgba(255, 255, 255, 0.1))",
+                  color: isLight ? "#0284C7" : "var(--text-primary, #FFF)",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  transition: "all 0.18s ease",
+                }}
+              >
+                <RefreshCw size={13} className={refreshing ? "spin" : ""} /> Refresh Telemetry
+              </button>
+            </div>
+          </div>
+
+          {/* Main 5-Column Grid Layout: [Summary Sidebar] + [4 Platform Cards] */}
+          <div style={{ display: "grid", gridTemplateColumns: "180px repeat(4, 1fr)", gap: "16px", alignItems: "stretch" }}>
+            {/* Left Summary Sidebar */}
+            <div
+              style={{
+                padding: "20px 16px",
+                borderRadius: "16px",
+                background: isLight ? "linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%)" : "linear-gradient(135deg, rgba(20, 16, 44, 0.9) 0%, rgba(12, 9, 26, 0.95) 100%)",
+                border: isLight ? "1px solid #E2E8F0" : "1px solid var(--primary-border, rgba(255, 255, 255, 0.08))",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                gap: "16px",
+              }}
+            >
+              <div style={{ width: "42px", height: "42px", borderRadius: "12px", background: "var(--primary-bg, rgba(16, 185, 129, 0.15))", border: "1px solid var(--primary-border, rgba(16, 185, 129, 0.3))", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <LayoutGrid size={20} style={{ color: "var(--primary)" }} />
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                <div>
+                  <span style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.04em" }}>Total Solved</span>
+                  <div style={{ fontSize: "28px", fontWeight: 900, color: "var(--text-primary)", marginTop: "2px", lineHeight: 1 }}>{analytics.solvedCount}</div>
+                  <span style={{ fontSize: "10px", color: "var(--text-secondary)", fontWeight: 600, marginTop: "4px", display: "block" }}>
+                    out of {CurriculumRepository.getTotalCanonicalProblems()} catalog
+                  </span>
+                </div>
+
+                <div>
+                  <span style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.04em" }}>Platforms</span>
+                  <div style={{ fontSize: "22px", fontWeight: 900, color: "var(--text-primary)", marginTop: "2px", lineHeight: 1 }}>{connectedPlatformsCount}</div>
+                  <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 700, marginTop: "4px", display: "block" }}>Connected</span>
+                </div>
+
+                <div>
+                  <span style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.04em" }}>Last Synced</span>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#10B981", marginTop: "4px", display: "flex", alignItems: "center", gap: "4px" }}>
+                    <span>{latestSyncTimeText}</span>
+                    <CheckCircle2 size={12} style={{ color: "#10B981" }} />
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* 4 Platform Cards */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "14px" }}>
-              {platformTelemetryCards.map((p: any) => (
-                <div key={p.name} style={{ padding: "14px", borderRadius: "12px", background: "var(--surface)", border: `1px solid ${p.color === 'var(--primary)' ? 'rgba(6,182,212,0.3)' : p.color + '44'}`, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px" }}>
-                  <div>
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "6px" }}>
-                      <span style={{ fontSize: "13px", fontWeight: 700, color: p.color === 'var(--primary)' ? '#06B6D4' : p.color }}>{p.name}</span>
-                      <span style={{ fontSize: "9px", fontWeight: 700, color: "#10B981", background: "rgba(16,185,129,0.15)", padding: "2px 4px", borderRadius: "4px" }}>{p.status}</span>
-                    </div>
+            {platformTelemetryCards.map((p: any) => {
+              const getProfileUrl = (platformKey: string): string => {
+                const handle = handles[platformKey] || '';
+                if (!handle) return '#';
+                if (platformKey === 'leetcode') return `https://leetcode.com/${handle}`;
+                if (platformKey === 'codeforces') return `https://codeforces.com/profile/${handle}`;
+                if (platformKey === 'codechef') return `https://www.codechef.com/users/${handle}`;
+                if (platformKey === 'geeksforgeeks') return `https://auth.geeksforgeeks.org/user/${handle}`;
+                return '#';
+              };
 
-                    <div style={{ display: "flex", alignItems: "baseline", gap: "6px" }}>
-                      <span style={{ fontSize: "20px", fontWeight: 800, color: "var(--text-primary)" }}>{p.rating}</span>
-                      <span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>({p.ratingLabel})</span>
-                      <span style={{ fontSize: "10px", color: "#10B981", fontWeight: 700 }}>{p.trend}</span>
-                    </div>
+              const profileUrl = getProfileUrl(p.platformKey);
+              const isTrendPositive = typeof p.trend === 'string' && p.trend.startsWith('+');
+              const isTrendNegative = typeof p.trend === 'string' && p.trend.startsWith('-');
 
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px", margin: "8px 0", fontSize: "10px", color: "var(--text-secondary)" }}>
-                      <div>Solved: <strong style={{ color: "var(--text-primary)", display: "block" }}>{p.solved}</strong></div>
-                      <div>Contests: <strong style={{ color: "var(--text-primary)", display: "block" }}>{p.contests}</strong></div>
-                      <div>Success: <strong style={{ color: "#10B981", display: "block" }}>{p.success}</strong></div>
-                      <div>Rank: <strong style={{ color: p.color === 'var(--primary)' ? '#06B6D4' : p.color, display: "block" }}>{p.rank}</strong></div>
-                    </div>
-                  </div>
+              const isLocked = p.platformKey === 'geeksforgeeks';
+              const isConnected = p.status === 'Connected';
 
-                  {/* Progress Over Time Graph */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: "8px", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "10px" }}>
-                    <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-secondary)" }}>Progress Over Time</span>
-                    <PlatformPerformanceGraph platform={p} />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Estimated Ratings Info Note */}
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 14px", borderRadius: "8px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", fontSize: "11px", color: "var(--text-secondary)" }}>
-              <Info size={14} style={{ color: "#3B82F6", flexShrink: 0 }} />
-              <span>Ratings are estimated and may differ from official platform calculations.</span>
-            </div>
-          </div>
-
-          {/* SECTION 2 — Practice Analytics */}
-          <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
-                <Activity size={18} style={{ color: "var(--primary)" }} /> Practice Analytics & Velocity
-              </h3>
-
-              {/* Timeframe Toggle Buttons */}
-              <div style={{ display: "flex", background: "var(--surface)", padding: "3px", borderRadius: "8px", border: "1px solid var(--border)" }}>
-                {(["7d", "30d", "90d", "1y"] as const).map((t) => (
-                  <button
-                    key={t}
-                    type="button"
-                    onClick={() => setTimeframe(t)}
+              if (isLocked) {
+                return (
+                  <div
+                    key={p.name}
                     style={{
-                      background: timeframe === t ? "var(--primary)" : "transparent",
-                      border: 0,
-                      color: timeframe === t ? "#FFF" : "var(--text-secondary)",
-                      padding: "4px 10px",
-                      borderRadius: "6px",
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      cursor: "pointer",
-                      textTransform: "uppercase",
+                      padding: "20px",
+                      borderRadius: "16px",
+                      background: isLight ? "#F8FAFC" : "rgba(16, 12, 32, 0.5)",
+                      border: isLight ? "1px dashed #CBD5E1" : "1px dashed rgba(245, 158, 11, 0.25)",
+                      boxShadow: isLight ? "0 2px 8px rgba(0, 0, 0, 0.04)" : "0 8px 24px rgba(0, 0, 0, 0.25)",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      gap: "16px",
+                      position: "relative",
+                      overflow: "hidden",
+                      opacity: 0.88,
                     }}
                   >
-                    {t}
-                  </button>
-                ))}
+                    {/* Header */}
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                          <div style={{ padding: "6px", borderRadius: "8px", background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.25)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <PlatformIcon platformKey={p.platformKey} color="#F59E0B" />
+                          </div>
+                          <span style={{ fontSize: "15px", fontWeight: 800, color: "var(--text-secondary)" }}>{p.name}</span>
+                        </div>
+
+                        <span
+                          style={{
+                            fontSize: "10px",
+                            fontWeight: 800,
+                            color: "#F59E0B",
+                            background: "rgba(245, 158, 11, 0.12)",
+                            padding: "3px 8px",
+                            borderRadius: "6px",
+                            border: "1px solid rgba(245, 158, 11, 0.3)",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "4px",
+                          }}
+                        >
+                          <span>🔒 Coming Soon</span>
+                        </span>
+                      </div>
+
+                      {/* Main Metric */}
+                      <div style={{ marginTop: "16px" }}>
+                        <div style={{ fontSize: "26px", fontWeight: 900, color: "var(--text-muted)", lineHeight: 1 }}>Coming Soon</div>
+                        <div style={{ display: "flex", alignItems: "center", gap: "6px", marginTop: "6px", fontSize: "11px" }}>
+                          <span style={{ color: "var(--text-muted)", fontWeight: 600 }}>Integration planned</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Secondary Information Grid */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                      <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#FFFFFF" : "rgba(255, 255, 255, 0.02)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.04)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                        <span style={{ fontSize: "12px", color: "var(--text-muted)", fontWeight: 600 }}>Problems Solved</span>
+                        <strong style={{ fontSize: "15px", color: "var(--text-muted)" }}>--</strong>
+                      </div>
+
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+                        <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#FFFFFF" : "rgba(255, 255, 255, 0.02)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.04)" }}>
+                          <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Contests</span>
+                          <strong style={{ fontSize: "14px", color: "var(--text-muted)", marginTop: "2px", display: "block" }}>--</strong>
+                        </div>
+
+                        <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#FFFFFF" : "rgba(255, 255, 255, 0.02)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.04)" }}>
+                          <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Last Seen</span>
+                          <strong style={{ fontSize: "12px", color: "var(--text-muted)", marginTop: "2px", display: "block" }}>Unreleased</strong>
+                        </div>
+                      </div>
+
+                      <div style={{ padding: "8px 12px", borderRadius: "8px", background: "rgba(245, 158, 11, 0.08)", border: "1px solid rgba(245, 158, 11, 0.2)", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
+                        <span style={{ fontSize: "11px", color: "#D97706", fontWeight: 700 }}>GeeksForGeeks integration is coming soon.</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <div
+                  key={p.name}
+                  style={{
+                    padding: "20px",
+                    borderRadius: "16px",
+                    background: isLight ? "linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)" : "var(--card)",
+                    border: isLight ? "1.5px solid #E2E8F0" : `1px solid ${p.color}44`,
+                    boxShadow: isLight ? "0 4px 16px rgba(0, 0, 0, 0.04)" : "0 8px 28px rgba(0, 0, 0, 0.25)",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    gap: "16px",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  {/* Header */}
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <div style={{ padding: "6px", borderRadius: "8px", background: `${p.color}15`, border: `1px solid ${p.color}35`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <PlatformIcon platformKey={p.platformKey} color={p.color} />
+                        </div>
+                        <span style={{ fontSize: "15px", fontWeight: 800, color: "var(--text-primary)" }}>{p.name}</span>
+                        {profileUrl !== '#' && isConnected && (
+                          <a href={profileUrl} target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", display: "flex", alignItems: "center" }} title="View external profile">
+                            <ExternalLink size={13} />
+                          </a>
+                        )}
+                      </div>
+
+                      <span
+                        style={{
+                          fontSize: "10px",
+                          fontWeight: 800,
+                          color: isConnected ? p.color : 'var(--text-muted)',
+                          background: isConnected ? `${p.color}20` : isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.05)',
+                          padding: "3px 8px",
+                          borderRadius: "6px",
+                          border: `1px solid ${isConnected ? p.color + '44' : isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.1)'}`,
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "4px",
+                        }}
+                      >
+                        {isConnected ? '● Connected' : 'Not Connected'}
+                      </span>
+                    </div>
+
+                    {/* Main Metric */}
+                    <div style={{ marginTop: "16px" }}>
+                      <div style={{ fontSize: "30px", fontWeight: 900, color: isConnected ? "var(--text-primary)" : "var(--text-muted)", lineHeight: 1 }}>
+                        {p.rating}
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", marginTop: "6px", fontSize: "11px" }}>
+                        {isTrendNegative ? (
+                          <span style={{ color: "#EF4444", fontWeight: 700, display: "flex", alignItems: "center", gap: "2px" }}>
+                            <TrendingDown size={12} /> {p.trend}
+                          </span>
+                        ) : isTrendPositive ? (
+                          <span style={{ color: "#10B981", fontWeight: 700, display: "flex", alignItems: "center", gap: "2px" }}>
+                            <TrendingUp size={12} /> {p.trend}
+                          </span>
+                        ) : null}
+                        <span style={{ color: "var(--text-muted)", fontWeight: 600 }}>
+                          {isConnected
+                            ? p.isEstimated
+                              ? 'Est. Rating'
+                              : p.trend && p.trend !== '0' && p.trend !== 'N/A'
+                              ? 'vs last 30 days'
+                              : p.ratingLabel || 'Platform Rating'
+                            : 'Connect in Settings'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Secondary Information Grid */}
+                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#F1F5F9" : "rgba(255, 255, 255, 0.03)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.06)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "12px", color: "var(--text-secondary)", fontWeight: 600 }}>Problems Solved</span>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: "3px" }}>
+                        <strong style={{ fontSize: "16px", color: isConnected ? "var(--text-primary)" : "var(--text-muted)" }}>
+                          {p.practiceSolvedCount ?? p.solved}
+                        </strong>
+                        {(p.practiceProblemTotal || p.totalProblems) ? (
+                          <span style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: 600 }}>
+                            / {p.practiceProblemTotal || p.totalProblems}
+                          </span>
+                        ) : null}
+                      </div>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+                      <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#F1F5F9" : "rgba(255, 255, 255, 0.03)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.06)" }}>
+                        <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Contests</span>
+                        <strong style={{ fontSize: "14px", color: isConnected ? "var(--text-primary)" : "var(--text-muted)", marginTop: "2px", display: "block" }}>{p.contests}</strong>
+                      </div>
+
+                      <div style={{ padding: "10px 12px", borderRadius: "10px", background: isLight ? "#F1F5F9" : "rgba(255, 255, 255, 0.03)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.06)" }}>
+                        <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Last Seen</span>
+                        <strong style={{ fontSize: "12px", color: p.lastSyncedText === 'Just now' ? '#10B981' : isConnected ? "var(--text-primary)" : "var(--text-muted)", marginTop: "2px", display: "block" }}>
+                          {p.lastSyncedText === 'Just now' ? 'Just now' : p.lastSyncedText || '--'}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom Summary Strip */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "14px", marginTop: "4px" }}>
+            <div style={{ padding: "16px 18px", borderRadius: "14px", background: isLight ? "#F8FAFC" : "var(--surface)", border: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "12px" }}>
+              <div style={{ width: "38px", height: "38px", borderRadius: "10px", background: "rgba(16, 185, 129, 0.15)", border: "1px solid rgba(16, 185, 129, 0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <Trophy size={18} style={{ color: "#10B981" }} />
+              </div>
+              <div>
+                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Most Active Platform</span>
+                <strong style={{ fontSize: "14px", color: "#10B981", display: "block" }}>{mostActivePlatform.name}</strong>
+                <span style={{ fontSize: "10px", color: "var(--text-muted)" }}>{mostActivePlatform.solved} problems solved</span>
               </div>
             </div>
 
-            {/* Metrics Overview Strip */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "10px", padding: "12px", background: "var(--surface)", borderRadius: "12px" }}>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Problems Solved</span><span style={{ fontSize: "16px", fontWeight: 800, color: "var(--text-primary)", display: "block" }}>{analytics.solvedCount}</span></div>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Acceptance Rate</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#10B981", display: "block" }}>{analytics.acceptanceRate}</span></div>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Avg Solve Time</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#3B82F6", display: "block" }}>{analytics.avgSolveTime}</span></div>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Coding Hours</span><span style={{ fontSize: "16px", fontWeight: 800, color: "var(--primary)", display: "block" }}>{analytics.codingHours}</span></div>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Velocity</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#F59E0B", display: "block" }}>{analytics.velocityPercentText}</span></div>
-              <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Contest Rank</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#EC4899", display: "block" }}>{analytics.contestRankText}</span></div>
+            <div style={{ padding: "16px 18px", borderRadius: "14px", background: isLight ? "#F8FAFC" : "var(--surface)", border: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "12px" }}>
+              <div style={{ width: "38px", height: "38px", borderRadius: "10px", background: "rgba(249, 115, 22, 0.15)", border: "1px solid rgba(249, 115, 22, 0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <Target size={18} style={{ color: "#F97316" }} />
+              </div>
+              <div>
+                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Best Progress</span>
+                <strong style={{ fontSize: "14px", color: "#F97316", display: "block" }}>{bestProgressPlatform.name}</strong>
+                <span style={{ fontSize: "10px", color: "var(--text-muted)" }}>{bestProgressPlatform.subtext}</span>
+              </div>
+            </div>
+
+            <div style={{ padding: "16px 18px", borderRadius: "14px", background: isLight ? "#F8FAFC" : "var(--surface)", border: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "12px" }}>
+              <div style={{ width: "38px", height: "38px", borderRadius: "10px", background: "var(--accent-soft)", border: "1px solid var(--accent-border)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <Award size={18} style={{ color: "var(--accent-primary)" }} />
+              </div>
+              <div>
+                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Highest Success Rate</span>
+                <strong style={{ fontSize: "14px", color: "var(--accent-primary)", display: "block" }}>{highestSuccessPlatform.name}</strong>
+                <span style={{ fontSize: "10px", color: "var(--text-muted)" }}>{highestSuccessPlatform.rate} success rate</span>
+              </div>
+            </div>
+
+            <div style={{ padding: "16px 18px", borderRadius: "14px", background: isLight ? "#F8FAFC" : "var(--surface)", border: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "12px" }}>
+              <div style={{ width: "38px", height: "38px", borderRadius: "10px", background: "rgba(59, 130, 246, 0.15)", border: "1px solid rgba(59, 130, 246, 0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <Activity size={18} style={{ color: "#3B82F6" }} />
+              </div>
+              <div>
+                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Connected Realms</span>
+                <strong style={{ fontSize: "14px", color: "#3B82F6", display: "block" }}>{connectedPlatformsCount} Active</strong>
+                <span style={{ fontSize: "10px", color: "var(--text-muted)" }}>Real-time telemetry</span>
+              </div>
             </div>
           </div>
 
-          {/* SECTION 3 — Pattern Mastery (Circular Mastery Orbs) */}
-          <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
+          {/* Info Note Footer */}
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 14px", borderRadius: "8px", background: isLight ? "#F8FAFC" : "rgba(255, 255, 255, 0.02)", border: isLight ? "1px solid #E2E8F0" : "1px solid rgba(255, 255, 255, 0.06)", fontSize: "11px", color: "var(--text-secondary)" }}>
+            <Info size={14} style={{ color: "#3B82F6", flexShrink: 0 }} />
+            <span>Ratings are estimated and may differ from official platform calculations.</span>
+          </div>
+        </div>
+
+        {/* SECTION 2 — Practice Analytics */}
+        <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
+              <Activity size={18} style={{ color: "var(--primary)" }} /> Practice Analytics & Velocity
+            </h3>
+
+            {/* Timeframe Toggle Buttons */}
+            <div style={{ display: "flex", background: "var(--surface)", padding: "3px", borderRadius: "8px", border: "1px solid var(--border)" }}>
+              {(["7d", "30d", "90d", "1y"] as const).map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  onClick={() => setTimeframe(t)}
+                  style={{
+                    background: timeframe === t ? "var(--primary)" : "transparent",
+                    border: 0,
+                    color: timeframe === t ? "#FFF" : "var(--text-secondary)",
+                    padding: "4px 10px",
+                    borderRadius: "6px",
+                    fontSize: "11px",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Metrics Overview Strip */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "10px", padding: "12px", background: "var(--surface)", borderRadius: "12px" }}>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Problems Solved</span><span style={{ fontSize: "16px", fontWeight: 800, color: "var(--text-primary)", display: "block" }}>{analytics.solvedCount}</span></div>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Acceptance Rate</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#10B981", display: "block" }}>{analytics.acceptanceRate}</span></div>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Avg Solve Time</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#3B82F6", display: "block" }}>{analytics.avgSolveTime}</span></div>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Coding Hours</span><span style={{ fontSize: "16px", fontWeight: 800, color: "var(--primary)", display: "block" }}>{analytics.codingHours}</span></div>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Velocity</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#F59E0B", display: "block" }}>{analytics.velocityPercentText}</span></div>
+            <div><span style={{ fontSize: "9px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Contest Rank</span><span style={{ fontSize: "16px", fontWeight: 800, color: "#EC4899", display: "block" }}>{analytics.contestRankText}</span></div>
+          </div>
+        </div>
+
+        {/* SECTION 3 — Pattern Mastery (Circular Mastery Orbs) */}
+        <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
               <Brain size={18} style={{ color: "var(--primary)" }} /> Pattern Mastery Orbs
             </h3>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "14px" }}>
-              {analytics.patternOrbs.map((orb) => (
+              {analytics.patternOrbs.map((orb: PatternOrbMetric) => (
                 <div key={orb.name} style={{ padding: "14px", borderRadius: "12px", background: "var(--surface)", border: `1px solid ${orb.color}33`, display: "flex", alignItems: "center", gap: "14px" }}>
                   <div style={{ position: "relative", width: "54px", height: "54px", flexShrink: 0 }}>
                     <svg width="54" height="54" viewBox="0 0 54 54">
@@ -479,159 +717,8 @@ export default function AnalyticsPage() {
             </div>
           </div>
 
-          {/* SECTION 4 — Difficulty Distribution & SECTION 5 — Learning Heatmap */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "20px" }}>
-            
-            {/* Difficulty Distribution */}
-            <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "14px" }}>
-              <h3 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "var(--text-primary)" }}>Difficulty Distribution</h3>
-              
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "11px", marginBottom: "4px" }}>
-                    <span style={{ color: "#10B981", fontWeight: 700 }}>Easy Problems</span>
-                    <strong style={{ color: "var(--text-primary)" }}>{analytics.difficultyDistribution.easy.solved} / {analytics.difficultyDistribution.easy.total}</strong>
-                  </div>
-                  <div style={{ width: "100%", height: "8px", background: "rgba(255,255,255,0.08)", borderRadius: "4px" }}>
-                    <div style={{ width: `${analytics.difficultyDistribution.easy.percentage}%`, height: "100%", background: "#10B981", borderRadius: "4px" }} />
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "11px", marginBottom: "4px" }}>
-                    <span style={{ color: "#F59E0B", fontWeight: 700 }}>Medium Problems</span>
-                    <strong style={{ color: "var(--text-primary)" }}>{analytics.difficultyDistribution.medium.solved} / {analytics.difficultyDistribution.medium.total}</strong>
-                  </div>
-                  <div style={{ width: "100%", height: "8px", background: "rgba(255,255,255,0.08)", borderRadius: "4px" }}>
-                    <div style={{ width: `${analytics.difficultyDistribution.medium.percentage}%`, height: "100%", background: "#F59E0B", borderRadius: "4px" }} />
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "11px", marginBottom: "4px" }}>
-                    <span style={{ color: "#EF4444", fontWeight: 700 }}>Hard Problems</span>
-                    <strong style={{ color: "var(--text-primary)" }}>{analytics.difficultyDistribution.hard.solved} / {analytics.difficultyDistribution.hard.total}</strong>
-                  </div>
-                  <div style={{ width: "100%", height: "8px", background: "rgba(255,255,255,0.08)", borderRadius: "4px" }}>
-                    <div style={{ width: `${analytics.difficultyDistribution.hard.percentage}%`, height: "100%", background: "#EF4444", borderRadius: "4px" }} />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Learning Heatmap */}
-            <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "14px" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <h3 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "var(--text-primary)" }}>Journey Heatmap</h3>
-                <span style={{ fontSize: "10px", color: "var(--primary)", fontWeight: 700 }}>{analytics.currentStreak} Day Active Streak 🔥</span>
-              </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(16, 1fr)", gap: "4px", padding: "8px", background: "var(--surface)", borderRadius: "8px" }}>
-                {analytics.heatmapCells.map((cell) => (
-                  <div 
-                    key={cell.dayIndex} 
-                    title={`${cell.dateStr}: ${cell.level} solves`}
-                    style={{ 
-                      width: "100%", 
-                      height: "12px", 
-                      borderRadius: "2px", 
-                      background: cell.level === 3 ? "#10B981" : cell.level === 2 ? "var(--primary)" : cell.level === 1 ? "rgba(124, 77, 255, 0.4)" : "rgba(255,255,255,0.06)" 
-                    }} 
-                  />
-                ))}
-              </div>
-            </div>
-
-          </div>
-
-          {/* SECTION 6 — AI Performance Insights */}
-          <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--primary-soft)", display: "flex", flexDirection: "column", gap: "14px" }}>
-            <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
-              <Sparkles size={18} style={{ color: "var(--primary)" }} /> AI Performance Insights & Predictions
-            </h3>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "14px", fontSize: "11px" }}>
-              <div style={{ padding: "12px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <strong style={{ color: "#10B981", display: "block" }}>Top Strengths</strong>
-                <span style={{ color: "var(--text-primary)" }}>{analytics.insights.topStrength}</span>
-              </div>
-              <div style={{ padding: "12px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <strong style={{ color: "#EF4444", display: "block" }}>Primary Weakness</strong>
-                <span style={{ color: "var(--text-primary)" }}>{analytics.insights.primaryWeakness}</span>
-              </div>
-              <div style={{ padding: "12px", borderRadius: "8px", background: "var(--surface)", border: "1px solid var(--border)" }}>
-                <strong style={{ color: "var(--primary)", display: "block" }}>Predicted Rating</strong>
-                <span style={{ color: "var(--text-primary)" }}>{analytics.insights.predictedRating}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* SECTION 8 — Achievement Timeline */}
-          <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "14px" }}>
-            <h3 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
-              <Award size={18} style={{ color: "#F59E0B" }} /> Achievement Timeline
-            </h3>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "10px", textAlign: "center" }}>
-              {analytics.achievements.map((m) => {
-                return (
-                  <div key={m.title} style={{ padding: "10px", borderRadius: "8px", background: "var(--surface)", border: `1px solid ${m.unlocked ? "var(--primary)" : "var(--border)"}`, opacity: m.unlocked ? 1 : 0.4 }}>
-                    <CheckCircle2 size={18} style={{ color: m.unlocked ? "#10B981" : "var(--text-secondary)", margin: "0 auto 4px" }} />
-                    <span style={{ fontSize: "10px", fontWeight: 700, color: "var(--text-primary)", display: "block" }}>{m.title}</span>
-                    <span style={{ fontSize: "9px", color: "var(--text-secondary)" }}>{m.day}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-        </div>
-
-        {/* Right Sidebar — AI Mentor Intelligence (350px Fixed Width) */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          
-          {/* AI Mentor Intelligence Card */}
-          <div style={{ padding: "18px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--primary-soft)", display: "flex", flexDirection: "column", gap: "12px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "var(--primary)", display: "flex", alignItems: "center", justifyContent: "center", color: "#FFF" }}>
-                <Bot size={20} />
-              </div>
-              <div>
-                <h4 style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "var(--text-primary)" }}>AI Intelligence</h4>
-                <span style={{ fontSize: "9px", color: "#10B981", fontWeight: 600 }}>Active Telemetry</span>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "11px", paddingTop: "8px", borderTop: "1px solid var(--border)" }}>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Today&apos;s Rec:</span><strong style={{ color: "var(--text-primary)" }}>{analytics.sidebar.todaysRec}</strong></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Prediction:</span><strong style={{ color: "#10B981" }}>{analytics.sidebar.winRatePrediction}</strong></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Revision Due:</span><strong style={{ color: "#F59E0B" }}>{analytics.sidebar.revisionDueCount} Items</strong></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Retention:</span><strong style={{ color: "var(--primary)" }}>{analytics.sidebar.retentionRate}%</strong></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>Productivity:</span><strong style={{ color: "#10B981" }}>{analytics.sidebar.productivityScore} / 100</strong></div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}><span style={{ color: "var(--text-secondary)" }}>XP Forecast:</span><strong style={{ color: "#F59E0B" }}>{analytics.sidebar.xpForecast}</strong></div>
-            </div>
-          </div>
-
-          {/* Today's Quest Card */}
-          <div style={{ padding: "16px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "8px" }}>
-            <h4 style={{ margin: 0, fontSize: "13px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "6px" }}>
-              <Gift size={14} style={{ color: "#F59E0B" }} /> Today&apos;s Quest
-            </h4>
-            <span style={{ fontSize: "11px", color: "var(--text-primary)" }}>{analytics.sidebar.questProgress.title} ({analytics.sidebar.questProgress.current}/{analytics.sidebar.questProgress.target})</span>
-            <div style={{ width: "100%", height: "6px", background: "rgba(255,255,255,0.08)", borderRadius: "3px" }}>
-              <div style={{ width: `${analytics.sidebar.questProgress.percentage}%`, height: "100%", background: "var(--primary)", borderRadius: "3px" }} />
-            </div>
-          </div>
-
-          {/* Upcoming Contest */}
-          <div style={{ padding: "16px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "8px" }}>
-            <h4 style={{ margin: 0, fontSize: "13px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "6px" }}>
-              <Calendar size={14} style={{ color: "#3B82F6" }} /> Upcoming Contest
-            </h4>
-            <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--text-primary)" }}>LeetCode Weekly Contest 392</span>
-            <span style={{ fontSize: "10px", color: "var(--text-secondary)" }}>In 2 days, 14 hours • Expected +45 Rating</span>
-          </div>
-
-        </div>
+          {/* SECTION 4 — Journey Heatmap */}
+          <JourneyCalendarHeatmap />
 
       </div>
 

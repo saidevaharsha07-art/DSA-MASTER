@@ -100,7 +100,8 @@ export function CommandPalette() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={close}
-          className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm"
+          style={{ background: 'rgba(0, 0, 0, 0.4)', backdropFilter: 'blur(4px)' }}
+          className="fixed inset-0"
         />
         
         <motion.div 
@@ -108,21 +109,27 @@ export function CommandPalette() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: -10 }}
           transition={{ duration: 0.15 }}
-          className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+          style={{
+            background: 'var(--surface)',
+            border: '1px solid var(--border)',
+            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.25)',
+          }}
+          className="relative w-full max-w-2xl rounded-2xl overflow-hidden flex flex-col"
         >
           {/* Search Input */}
-          <div className="flex items-center px-4 py-4 border-b border-slate-800">
-            <Search className="w-6 h-6 text-slate-500 mr-3 shrink-0" />
+          <div style={{ borderBottom: '1px solid var(--border)' }} className="flex items-center px-4 py-4">
+            <Search style={{ color: 'var(--text-muted)' }} className="w-6 h-6 mr-3 shrink-0" />
             <input
               ref={inputRef}
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search patterns, problems, companies..."
-              className="flex-1 bg-transparent border-none outline-none text-lg text-slate-200 placeholder-slate-500"
+              style={{ color: 'var(--text-primary)' }}
+              className="flex-1 bg-transparent border-none outline-none text-lg placeholder:text-[var(--text-muted)]"
             />
             <div className="flex items-center gap-2 ml-3">
-              <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold text-slate-500 bg-slate-800 rounded">
+              <kbd style={{ color: 'var(--text-muted)', background: 'var(--surface-secondary)', border: '1px solid var(--border)' }} className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded">
                 ESC
               </kbd>
             </div>
@@ -135,7 +142,7 @@ export function CommandPalette() {
               <div className="p-2">
                 {pinnedResults.length > 0 && (
                   <div className="mb-4">
-                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                    <div style={{ color: 'var(--text-muted)' }} className="px-3 py-2 text-xs font-semibold uppercase tracking-wider">
                       Pinned
                     </div>
                     {pinnedResults.map((result, idx) => (
@@ -156,17 +163,18 @@ export function CommandPalette() {
 
                 {recentSearches.length > 0 && (
                   <div>
-                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                    <div style={{ color: 'var(--text-muted)' }} className="px-3 py-2 text-xs font-semibold uppercase tracking-wider">
                       Recent Searches
                     </div>
                     {recentSearches.map((q) => (
                       <button
                         key={q}
                         onClick={() => setQuery(q)}
-                        className="w-full flex items-center px-3 py-3 text-left hover:bg-slate-800/50 rounded-lg group"
+                        style={{ color: 'var(--text-primary)' }}
+                        className="w-full flex items-center px-3 py-3 text-left hover:bg-[var(--accent-soft)] rounded-lg group transition-colors"
                       >
-                        <Clock className="w-4 h-4 text-slate-500 mr-3 group-hover:text-cyan-500" />
-                        <span className="text-slate-300 group-hover:text-cyan-50">{q}</span>
+                        <Clock style={{ color: 'var(--text-muted)' }} className="w-4 h-4 mr-3 group-hover:text-[var(--accent-primary)]" />
+                        <span className="group-hover:text-[var(--accent-primary)]">{q}</span>
                       </button>
                     ))}
                   </div>
@@ -197,26 +205,26 @@ export function CommandPalette() {
             )}
             
             {query.trim() && displayResults.length === 0 && !isSearching && (
-              <div className="py-12 text-center text-slate-500">
-                No results found for <span className="text-slate-300 font-semibold">&quot;{query}&quot;</span>
+              <div style={{ color: 'var(--text-muted)' }} className="py-12 text-center">
+                No results found for <span style={{ color: 'var(--text-primary)' }} className="font-semibold">&quot;{query}&quot;</span>
               </div>
             )}
           </div>
 
           {/* Footer */}
-          <div className="px-4 py-3 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500">
+          <div style={{ background: 'var(--surface-secondary)', borderTop: '1px solid var(--border)', color: 'var(--text-muted)' }} className="px-4 py-3 flex items-center justify-between text-xs">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700">↑</kbd>
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700">↓</kbd>
+                <kbd style={{ background: 'var(--surface)', border: '1px solid var(--border)' }} className="px-1.5 py-0.5 rounded">↑</kbd>
+                <kbd style={{ background: 'var(--surface)', border: '1px solid var(--border)' }} className="px-1.5 py-0.5 rounded">↓</kbd>
                 navigate
               </span>
               <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700">↵</kbd>
+                <kbd style={{ background: 'var(--surface)', border: '1px solid var(--border)' }} className="px-1.5 py-0.5 rounded">↵</kbd>
                 select
               </span>
             </div>
-            <span>DSA Master Roadmap Search</span>
+            <span>DSA CRACKER Search</span>
           </div>
         </motion.div>
       </div>
@@ -240,27 +248,32 @@ function ResultRow({
   return (
     <div
       onClick={onSelect}
-      className={`flex items-center justify-between px-3 py-3 rounded-xl cursor-pointer group transition-colors ${
-        isSelected ? 'bg-cyan-500/10' : 'hover:bg-slate-800/50'
-      }`}
+      style={{
+        background: isSelected ? 'var(--accent-soft)' : 'transparent',
+      }}
+      className="flex items-center justify-between px-3 py-3 rounded-xl cursor-pointer group transition-colors hover:bg-[var(--accent-soft)]"
     >
       <div className="flex items-start gap-4">
-        <div className={`p-2 rounded-lg mt-0.5 ${
-          isSelected ? 'bg-cyan-500/20 text-cyan-400' : 'bg-slate-800 text-slate-400'
-        }`}>
+        <div 
+          style={{
+            background: isSelected ? 'var(--accent-soft)' : 'var(--surface-secondary)',
+            color: isSelected ? 'var(--accent-primary)' : 'var(--text-muted)',
+          }}
+          className="p-2 rounded-lg mt-0.5"
+        >
           {getIconForType(result.type)}
         </div>
         <div>
           <div className="flex items-center gap-2">
-            <span className={`font-semibold ${isSelected ? 'text-cyan-50' : 'text-slate-200'}`}>
+            <span style={{ color: 'var(--text-primary)' }} className="font-semibold">
               {result.title}
             </span>
-            <span className="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase bg-slate-800 text-slate-400 border border-white/5">
+            <span style={{ background: 'var(--surface-secondary)', color: 'var(--text-muted)', border: '1px solid var(--border)' }} className="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase">
               {result.type}
             </span>
           </div>
           {result.preview && (
-            <p className="text-sm text-slate-500 line-clamp-1 mt-0.5">
+            <p style={{ color: 'var(--text-secondary)' }} className="text-sm line-clamp-1 mt-0.5">
               {result.preview}
             </p>
           )}
@@ -269,9 +282,10 @@ function ResultRow({
       
       <button 
         onClick={onTogglePin}
-        className={`p-2 rounded-lg transition-colors ${
-          isPinned ? 'text-cyan-400 hover:bg-cyan-500/20' : 'text-slate-600 hover:text-slate-300 hover:bg-slate-800 opacity-0 group-hover:opacity-100'
-        } ${isSelected && !isPinned ? 'opacity-100' : ''}`}
+        style={{
+          color: isPinned ? 'var(--accent-primary)' : 'var(--text-muted)',
+        }}
+        className={`p-2 rounded-lg transition-colors hover:bg-[var(--accent-soft)] ${isSelected && !isPinned ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
       >
         <Pin className="w-4 h-4" />
       </button>
