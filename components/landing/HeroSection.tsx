@@ -40,22 +40,33 @@ export function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
-                href="/signup"
+                href="/learn"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-6 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-sky-500/25 hover:bg-sky-400 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all"
               >
-                <span>Start Learning Free</span>
+                <span>Start Learning</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                href="/practice"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:border-slate-600 hover:text-white transition-all"
+              <a
+                href="#problem"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:border-slate-600 hover:text-white transition-all cursor-pointer"
               >
-                Explore Practice
+                Explore the Platform
+              </a>
+            </div>
+
+            {/* Subtle Login Link */}
+            <div className="pt-1">
+              <Link
+                href="/login"
+                className="text-xs text-slate-400 hover:text-sky-400 transition-colors inline-flex items-center gap-1"
+              >
+                <span>Already have an account?</span>
+                <span className="text-sky-400 font-semibold underline underline-offset-2">Log in</span>
               </Link>
             </div>
 
             {/* Feature Pills */}
-            <div className="grid grid-cols-3 gap-3 pt-4 border-t border-slate-800/80 max-w-lg">
+            <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-800/80 max-w-lg">
               <div className="flex items-center gap-2 rounded-lg bg-slate-900/40 p-2 border border-slate-800/60">
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-sky-500/10 text-sky-400">
                   <BookOpen className="h-3.5 w-3.5" />
@@ -78,9 +89,9 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Sub-quote */}
+            {/* Emotional Companion Note */}
             <p className="text-xs italic text-slate-400 tracking-wide pt-1">
-              &ldquo;Discipline today, dream job tomorrow.&rdquo;
+              &ldquo;You don&apos;t have to figure it all out alone.&rdquo;
             </p>
 
           </div>

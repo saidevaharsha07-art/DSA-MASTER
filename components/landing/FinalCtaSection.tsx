@@ -1,13 +1,13 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export function FinalCtaSection() {
   return (
-    <section className="relative py-28 overflow-hidden">
-      {/* Deep night sky / mountain landscape SVG background */}
+    <section id="final-cta" className="relative py-28 overflow-hidden border-t border-slate-800/80 bg-[#06090F]">
+      {/* Deep night sky / mountain landscape background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-gradient-to-b from-[#070A0F] via-[#0A1124] to-[#04060A]">
         {/* Starfield dots */}
         <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#38BDF8_1px,transparent_1px)] [background-size:24px_24px]" />
@@ -15,7 +15,7 @@ export function FinalCtaSection() {
         {/* Ambient top glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sky-500/10 blur-[130px] rounded-full" />
 
-        {/* Mountain Silhouette Silhouette at the bottom */}
+        {/* Mountain Silhouette at the bottom */}
         <svg
           className="absolute bottom-0 left-0 w-full h-48 sm:h-64 object-cover text-[#030508] opacity-80"
           viewBox="0 0 1440 320"
@@ -35,10 +35,9 @@ export function FinalCtaSection() {
           />
         </svg>
 
-        {/* Mountain Climber Silhouette on the left ridge */}
+        {/* Mountain Climber Silhouette */}
         <div className="absolute bottom-12 left-10 sm:left-24 lg:left-40 hidden sm:block opacity-60">
           <svg width="48" height="64" viewBox="0 0 24 32" fill="none" className="text-slate-400">
-            {/* Climber with walking stick / backpack */}
             <circle cx="12" cy="6" r="3" fill="currentColor" />
             <path d="M9 9L15 9L16 18L13 18L12 28L10 28L10 18L8 18L9 9Z" fill="currentColor" />
             <path d="M6 11L9 14L8 20" stroke="currentColor" strokeWidth="1.5" />
@@ -56,24 +55,31 @@ export function FinalCtaSection() {
 
         {/* Subtitle */}
         <p className="max-w-xl mx-auto text-base sm:text-lg text-slate-300">
-          Build consistency. Understand patterns. Solve with confidence.
+          Learn something. Solve something. Improve something.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
           <Link
-            href="/signup"
-            className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-sky-500/25 hover:bg-sky-400 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all"
+            href="/learn"
+            className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-8 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-sky-500/25 hover:bg-sky-400 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all"
           >
-            <span>Start Learning Free</span>
+            <span>Start Learning</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/practice"
-            className="inline-flex items-center rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all"
+            href="/signup"
+            className="inline-flex items-center rounded-xl border border-slate-700 bg-slate-900/80 px-8 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all"
           >
-            Explore Practice
+            Create Free Account
           </Link>
+        </div>
+
+        {/* Small reassurance text */}
+        <div className="pt-2">
+          <span className="text-xs text-slate-400 font-mono">
+            No credit card. No lock-in. Just start learning.
+          </span>
         </div>
 
         {/* Stylized Quote on the right */}

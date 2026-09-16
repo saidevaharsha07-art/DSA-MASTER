@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import { Github, Twitter, Linkedin, Youtube } from 'lucide-react';
 export function LandingFooter() {
   return (
     <footer className="border-t border-slate-800/80 bg-[#06090F] text-slate-400 text-xs">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Brand Col */}
@@ -20,9 +20,10 @@ export function LandingFooter() {
                 DSA <span className="text-sky-400">MASTER</span>
               </span>
             </Link>
-            <div className="text-slate-400 text-xs leading-relaxed space-y-1">
-              <p className="font-semibold text-slate-300">Learn. Practice. Grow.</p>
-              <p>Your journey to becoming a better problem solver.</p>
+            <div className="text-slate-400 text-xs leading-relaxed space-y-1.5">
+              <p className="font-semibold text-slate-300">LEARN · PRACTICE · TRACK · CRACK</p>
+              <p className="italic text-slate-400">&ldquo;You don&apos;t have to figure it all out alone.&rdquo;</p>
+              <p className="text-slate-500 text-[11px] pt-1">A companion for your daily problem-solving journey.</p>
             </div>
           </div>
 
@@ -32,17 +33,22 @@ export function LandingFooter() {
             <ul className="space-y-2">
               <li>
                 <Link href="/learn" className="hover:text-sky-400 transition-colors">
-                  Learn
+                  Structured Roadmap
                 </Link>
               </li>
               <li>
                 <Link href="/practice" className="hover:text-sky-400 transition-colors">
-                  Practice
+                  Practice Arena
                 </Link>
               </li>
               <li>
                 <Link href="/analytics" className="hover:text-sky-400 transition-colors">
-                  Analytics
+                  Intelligent Analytics
+                </Link>
+              </li>
+              <li>
+                <Link href="/revision" className="hover:text-sky-400 transition-colors">
+                  Smart Revision
                 </Link>
               </li>
               <li>
@@ -50,41 +56,46 @@ export function LandingFooter() {
                   AI Mentor
                 </Link>
               </li>
-              <li>
-                <Link href="/revision" className="hover:text-sky-400 transition-colors">
-                  Revision
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Company Col */}
+          {/* Platform / Account Col */}
           <div className="md:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Platform</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#about" className="hover:text-sky-400 transition-colors">
-                  About
+                <a href="#features" className="hover:text-sky-400 transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#how-it-works" className="hover:text-sky-400 transition-colors">
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="#why-dsa-master" className="hover:text-sky-400 transition-colors">
+                  Why DSA Master
+                </a>
+              </li>
+              <li>
+                <Link href="/login" className="hover:text-sky-400 transition-colors">
+                  Login
                 </Link>
               </li>
               <li>
-                <Link href="#privacy" className="hover:text-sky-400 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#terms" className="hover:text-sky-400 transition-colors">
-                  Terms of Service
+                <Link href="/signup" className="hover:text-sky-400 transition-colors">
+                  Sign Up
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Stay Connected Col */}
+          {/* Community / Legal Col */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Stay Connected</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Connect & Trust</h4>
             <p className="text-xs text-slate-400">
-              Build your skills. One problem at a time.
+              Build problem-solving ability with consistency and clarity.
             </p>
             <div className="flex items-center gap-3 pt-1">
               <a
@@ -123,6 +134,11 @@ export function LandingFooter() {
               >
                 <Youtube className="h-4 w-4" />
               </a>
+            </div>
+            <div className="pt-2 flex items-center gap-4 text-[11px] text-slate-500">
+              <a href="#privacy" className="hover:underline">Privacy Policy</a>
+              <span>·</span>
+              <a href="#terms" className="hover:underline">Terms of Service</a>
             </div>
           </div>
 

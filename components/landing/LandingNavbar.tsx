@@ -11,10 +11,8 @@ export function LandingNavbar() {
 
   const navLinks = [
     { label: 'Features', href: '#features' },
-    { label: 'Learn', href: '/learn' },
-    { label: 'Practice', href: '/practice' },
-    { label: 'Analytics', href: '/analytics' },
-    { label: 'AI Mentor', href: '/mentor' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Why DSA Master', href: '#why-dsa-master' },
   ];
 
   return (
