@@ -48,6 +48,90 @@ export interface PlatformTrainJourney {
   nodes: PlatformTrainNode[];
 }
 
+export interface TodaysMission {
+  learn: {
+    title: string;
+    topic: string;
+    url: string;
+    statusText: string;
+  };
+  practice: {
+    solvedToday: number;
+    dailyGoal: number;
+    targetTopic: string;
+    url: string;
+    isCompleted: boolean;
+  };
+  revise: {
+    dueCount: number;
+    urgentTopic?: string;
+    url: string;
+    hasDueItems: boolean;
+  };
+  mentor: {
+    insight: string;
+    recommendedTopic: string;
+    url: string;
+  };
+}
+
+export interface RoadmapTopicStatus {
+  slug: string;
+  title: string;
+  solved: number;
+  total: number;
+  percentage: number;
+  accuracy: number;
+  status: 'mastered' | 'strong' | 'learning' | 'weak' | 'upcoming';
+  url: string;
+}
+
+export interface AdaptiveRoadmapState {
+  masteredTopics: RoadmapTopicStatus[];
+  strongTopics: RoadmapTopicStatus[];
+  learningTopics: RoadmapTopicStatus[];
+  weakTopics: RoadmapTopicStatus[];
+  upcomingTopics: RoadmapTopicStatus[];
+  nextBestTopic: {
+    slug: string;
+    title: string;
+    reason: string;
+    estimatedMinutes: number;
+    url: string;
+  };
+}
+
+export interface MistakePattern {
+  id: string;
+  topic: string;
+  pattern: string;
+  failureCount: number;
+  failureType: 'Wrong Answer' | 'Time Limit' | 'Runtime Error' | 'Compilation' | 'Decay';
+  observation: string;
+  remedy: string;
+  practiceUrl: string;
+  severity: 'high' | 'medium' | 'low';
+}
+
+export interface MistakeIntelligenceState {
+  hasData: boolean;
+  totalMistakesAnalyzed: number;
+  commonPatterns: MistakePattern[];
+  summaryNote: string;
+}
+
+export interface PrimaryRecommendation {
+  problemId: string;
+  title: string;
+  topic: string;
+  difficulty: string;
+  reason: string;
+  actionLabel: string;
+  url: string;
+  xp: number;
+  estimatedMinutes: number;
+}
+
 export interface DashboardSummary {
   playerHud: {
     totalXp: number;
@@ -85,6 +169,11 @@ export interface DashboardSummary {
 
   kingdomProgression: KingdomProgression[];
   platformTrains: PlatformTrainJourney[];
+
+  todaysMission: TodaysMission;
+  adaptiveRoadmap: AdaptiveRoadmapState;
+  mistakeIntelligence: MistakeIntelligenceState;
+  primaryRecommendation: PrimaryRecommendation;
 
   continueLearning: {
     platformName: string;
@@ -727,6 +816,163 @@ export class DashboardAdapterService {
       };
     });
 
+    // 14. ADAPTIVE ROADMAP (Categorization: Mastered, Strong, Learning, Weak, Upcoming)
+    const masteredTopics: RoadmapTopicStatus[] = [];
+    const strongTopics: RoadmapTopicStatus[] = [];
+    const learningTopics: RoadmapTopicStatus[] = [];
+    const weakTopics: RoadmapTopicStatus[] = [];
+    const upcomingTopics: RoadmapTopicStatus[] = [];
+    // Reuse existing attempts and categories already declared above
+    categories.forEach((cat) => {
+      const catProblems = allProblems.filter(
+        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
+      );
+      const solved = catProblems.filter((p) => isProblemSolved(p)).length;
+      const total = Math.max(1, catProblems.length);
+      const percentage = Math.round((solved / total) * 100);
+
+      const catAttempts = attempts.filter(
+        (a) => a.topic === cat.title || a.topic === cat.slug || (a.topic && a.topic.toLowerCase().includes(cat.title.toLowerCase()))
+      );
+      const accuracy = catAttempts.length > 0
+        ? catAttempts.filter((a) => a.status === 'accepted').length / catAttempts.length
+        : (solved > 0 ? 0.85 : 0);
+
+      const isWeak = weakness.weakTopics.some(w => w.topic.toLowerCase().includes(cat.title.toLowerCase())) || (catAttempts.length >= 2 && accuracy < 0.6);
+
+      if (isWeak && solved < total) {
+        weakTopics.push({ slug: cat.slug, title: cat.kingdomTitle || cat.title, solved, total, percentage, accuracy, status: 'weak', url: `/practice/${cat.slug}` });
+      } else if (percentage >= 85 || (accuracy >= 0.85 && solved >= 3)) {
+        masteredTopics.push({ slug: cat.slug, title: cat.kingdomTitle || cat.title, solved, total, percentage, accuracy, status: 'mastered', url: `/practice/${cat.slug}` });
+      } else if (percentage >= 50 || (accuracy >= 0.70 && solved >= 2)) {
+        strongTopics.push({ slug: cat.slug, title: cat.kingdomTitle || cat.title, solved, total, percentage, accuracy, status: 'strong', url: `/practice/${cat.slug}` });
+      } else if (solved > 0) {
+        learningTopics.push({ slug: cat.slug, title: cat.kingdomTitle || cat.title, solved, total, percentage, accuracy, status: 'learning', url: `/practice/${cat.slug}` });
+      } else {
+        upcomingTopics.push({ slug: cat.slug, title: cat.kingdomTitle || cat.title, solved, total, percentage, accuracy, status: 'upcoming', url: `/practice/${cat.slug}` });
+      }
+    });
+
+    // Determine Next Best Topic
+    let nextBestTopicSlug = 'beginnings';
+    let nextBestTopicTitle = 'Arrays & Hashing (Kingdom of Beginnings)';
+    let nextBestReason = 'Master foundational linear data structure patterns to build your problem-solving baseline.';
+    let nextBestMinutes = 20;
+
+    if (weakTopics.length > 0) {
+      nextBestTopicSlug = weakTopics[0].slug;
+      nextBestTopicTitle = weakTopics[0].title;
+      nextBestReason = `Repair accuracy gap in ${weakTopics[0].title} before moving forward.`;
+      nextBestMinutes = 25;
+    } else if (learningTopics.length > 0) {
+      nextBestTopicSlug = learningTopics[0].slug;
+      nextBestTopicTitle = learningTopics[0].title;
+      nextBestReason = `Continue your active progression in ${learningTopics[0].title} (${learningTopics[0].percentage}% completed).`;
+      nextBestMinutes = 30;
+    } else if (upcomingTopics.length > 0) {
+      nextBestTopicSlug = upcomingTopics[0].slug;
+      nextBestTopicTitle = upcomingTopics[0].title;
+      nextBestReason = `Unlock new algorithmic patterns in ${upcomingTopics[0].title}.`;
+      nextBestMinutes = 20;
+    }
+
+    const adaptiveRoadmap: AdaptiveRoadmapState = {
+      masteredTopics,
+      strongTopics,
+      learningTopics,
+      weakTopics,
+      upcomingTopics,
+      nextBestTopic: {
+        slug: nextBestTopicSlug,
+        title: nextBestTopicTitle,
+        reason: nextBestReason,
+        estimatedMinutes: nextBestMinutes,
+        url: `/practice/${nextBestTopicSlug}`,
+      },
+    };
+
+    // 15. MISTAKE INTELLIGENCE (Grounded recorded events)
+    const mistakePatterns: MistakePattern[] = [];
+    const failedAttempts = attempts.filter((a) => a.status !== 'accepted');
+
+    if (failedAttempts.length > 0) {
+      const topicFailures = new Map<string, number>();
+      failedAttempts.forEach((fa) => {
+        const t = fa.topic || 'General Algorithms';
+        topicFailures.set(t, (topicFailures.get(t) || 0) + 1);
+      });
+
+      let patternIdx = 1;
+      topicFailures.forEach((count, topic) => {
+        mistakePatterns.push({
+          id: `mistake-${patternIdx++}`,
+          topic,
+          pattern: topic.includes('Dynamic') ? 'Overlapping Subproblems & State Transitions' : topic.includes('Tree') ? 'Base Condition / Null Checks' : 'Boundary / Edge Case Conditions',
+          failureCount: count,
+          failureType: count >= 3 ? 'Wrong Answer' : 'Runtime Error',
+          observation: `${count} recorded struggle${count > 1 ? 's' : ''} on test case verification in ${topic}.`,
+          remedy: `Re-check edge case constraints (n=0, n=1, duplicates) before submitting.`,
+          practiceUrl: `/practice`,
+          severity: count >= 3 ? 'high' : 'medium',
+        });
+      });
+    }
+
+    const mistakeIntelligence: MistakeIntelligenceState = {
+      hasData: mistakePatterns.length > 0,
+      totalMistakesAnalyzed: failedAttempts.length,
+      commonPatterns: mistakePatterns.slice(0, 3),
+      summaryNote: mistakePatterns.length > 0
+        ? `Identified ${mistakePatterns.length} recurring friction pattern${mistakePatterns.length > 1 ? 's' : ''} from your test submissions.`
+        : solvedCount > 0
+        ? 'No recurring error patterns detected. Clean execution track record!'
+        : 'Complete practice problems in the Arena to unlock personalized mistake telemetry.',
+    };
+
+    // 16. TODAY'S MISSION
+    const todaysMission: TodaysMission = {
+      learn: {
+        title: continueLearning.kingdomTitle,
+        topic: continueLearning.nextPattern,
+        url: '/learn',
+        statusText: continueLearning.percentage > 0 ? `${continueLearning.percentage}% completed` : 'Ready to start',
+      },
+      practice: {
+        solvedToday: currentSolves,
+        dailyGoal: targetSolves,
+        targetTopic: todayFocus.recommendedTopic,
+        url: '/practice',
+        isCompleted: currentSolves >= targetSolves,
+      },
+      revise: {
+        dueCount: revisionDueCount,
+        urgentTopic: revisionItems[0]?.topic,
+        url: '/revision',
+        hasDueItems: revisionDueCount > 0,
+      },
+      mentor: {
+        insight: summaryReasoning,
+        recommendedTopic: recommendedFocus,
+        url: '/mentor',
+      },
+    };
+
+    // 17. PRIMARY UNIFIED RECOMMENDATION
+    const topRec = recommendations[0];
+    const primaryRecommendation: PrimaryRecommendation = {
+      problemId: topRec?.problemId || 'p-1',
+      title: topRec?.title || 'Two Sum',
+      topic: topRec?.topic || 'Arrays & Hashing',
+      difficulty: topRec?.difficulty || 'Easy',
+      reason: topRec?.reason
+        ? `${topRec.reason}. Directly aligned with your active roadmap.`
+        : 'Foundational problem to build your core array lookup and hashing intuition.',
+      actionLabel: 'Solve Problem',
+      url: topRec?.url ? `/practice?problem=${topRec.problemId}` : '/practice',
+      xp: topRec?.xp || 25,
+      estimatedMinutes: topRec?.estimatedDurationMinutes || 20,
+    };
+
     const summary: DashboardSummary = {
       playerHud: {
         totalXp,
@@ -764,6 +1010,11 @@ export class DashboardAdapterService {
 
       kingdomProgression,
       platformTrains,
+
+      todaysMission,
+      adaptiveRoadmap,
+      mistakeIntelligence,
+      primaryRecommendation,
 
       continueLearning,
       todayFocus,

@@ -18,6 +18,8 @@ import {
   Mail,
   User,
   Calendar,
+  Compass,
+  Sparkles,
 } from 'lucide-react';
 import { useRoadmap } from '@/hooks/use-roadmap';
 import { DashboardAdapterService, DashboardSummary } from '@/src/features/dashboard/services/dashboard-adapter.service';
@@ -26,6 +28,10 @@ import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
 import { EventBus } from '@/src/core/events/event-bus';
 import { canonicalDb } from '@/src/core/storage/db/canonical-db.service';
+import { TodaysMissionCoordinator } from './TodaysMissionCoordinator';
+import { UnifiedRecommendationCard } from './UnifiedRecommendationCard';
+import { AdaptiveRoadmapWidget } from './AdaptiveRoadmapWidget';
+import { MistakeIntelligenceWidget } from './MistakeIntelligenceWidget';
 import { PlatformTrainJourneys } from './PlatformTrainJourneys';
 import { DashboardActionHub } from './DashboardActionHub';
 
@@ -190,7 +196,7 @@ export function CommandCenterView() {
         transition: 'background-color 0.2s ease, color 0.2s ease',
       }}
     >
-      {/* ── 1. DEVELOPER OVERVIEW (INTEGRATED PROFILE + COMMAND CENTER) ── */}
+      {/* ── 1. DEVELOPER OVERVIEW (GREETING + PERSONAL HUD METRICS) ── */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -298,7 +304,7 @@ export function CommandCenterView() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  {profileName}
+                  Welcome back, {profileName}
                 </h1>
                 <span
                   style={{
@@ -330,7 +336,7 @@ export function CommandCenterView() {
               >
                 <span>{profileEmail}</span>
                 <span>•</span>
-                <span>Member since Aug 2026</span>
+                <span>DSA Command Center</span>
               </div>
 
               {/* XP Progress Bar */}
@@ -595,13 +601,32 @@ export function CommandCenterView() {
         </div>
       </motion.div>
 
-      {/* ── 2. PLATFORM CAMPAIGN RAILWAY TRACKS ────────────────────── */}
+      {/* ── 2. TODAY'S MISSION COORDINATOR (4 PILLARS: LEARN, PRACTICE, REVISE, MENTOR) ── */}
+      <TodaysMissionCoordinator mission={summary.todaysMission} isLight={isLight} />
+
+      {/* ── 3. UNIFIED RECOMMENDED NEXT STEP HERO ──────────────────── */}
+      <UnifiedRecommendationCard recommendation={summary.primaryRecommendation} isLight={isLight} />
+
+      {/* ── 4. ADAPTIVE ROADMAP & MISTAKE INTELLIGENCE ──────────────── */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+          gap: '22px',
+          width: '100%',
+        }}
+      >
+        <AdaptiveRoadmapWidget adaptiveRoadmap={summary.adaptiveRoadmap} isLight={isLight} />
+        <MistakeIntelligenceWidget mistakeIntelligence={summary.mistakeIntelligence} isLight={isLight} />
+      </div>
+
+      {/* ── 5. PLATFORM CAMPAIGN RAILWAY TRACKS ────────────────────── */}
       <PlatformTrainJourneys platformTrains={summary.platformTrains} />
 
-      {/* ── 3. ACTIONABLE DASHBOARD MODULES & RECENT ACTIVITY ──────── */}
+      {/* ── 6. ACTIONABLE DASHBOARD MODULES & RECENT ACTIVITY ──────── */}
       <DashboardActionHub summary={summary} />
 
-      {/* ── 4. INTEGRATED EDIT PROFILE MODAL ───────────────────────── */}
+      {/* ── 7. INTEGRATED EDIT PROFILE MODAL ───────────────────────── */}
       <AnimatePresence>
         {isEditModalOpen && (
           <div
