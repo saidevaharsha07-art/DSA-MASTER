@@ -224,7 +224,7 @@ export function CommandPalette() {
                 select
               </span>
             </div>
-            <span>DSA CRACKER Search</span>
+            <span>DSA MASTER Search</span>
           </div>
         </motion.div>
       </div>

@@ -49,7 +49,7 @@ export function CommandCenterView() {
 
   // Profile Information State
   const [profileName, setProfileName] = useState<string>('Developer');
-  const [profileEmail, setProfileEmail] = useState<string>('developer@dsacracker.dev');
+  const [profileEmail, setProfileEmail] = useState<string>('developer@dsamaster.dev');
   const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
   const [isSaving, setIsSaving] = useState<boolean>(false);
 
@@ -77,7 +77,7 @@ export function CommandCenterView() {
     if (savedEmail) {
       setProfileEmail(savedEmail);
     } else {
-      setProfileEmail('developer@dsacracker.dev');
+      setProfileEmail('developer@dsamaster.dev');
     }
 
     const refresh = () => {
@@ -131,7 +131,7 @@ export function CommandCenterView() {
     setIsSaving(true);
 
     const trimmedName = editName.trim() || 'Developer';
-    const trimmedEmail = editEmail.trim() || 'developer@dsacracker.dev';
+    const trimmedEmail = editEmail.trim() || 'developer@dsamaster.dev';
 
     localStorage.setItem(`dsa-user-name_${userId}`, trimmedName);
     localStorage.setItem(`dsa-user-email_${userId}`, trimmedEmail);

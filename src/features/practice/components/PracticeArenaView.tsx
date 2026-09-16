@@ -1356,7 +1356,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                       <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <Link
                           href={`/practice/${prob.slug || prob.id}`}
-                          title={`Solve ${prob.title} inside DSA CRACKER`}
+                          title={`Solve ${prob.title} inside DSA MASTER`}
                           style={{
                             padding: '6px 12px',
                             borderRadius: '8px',

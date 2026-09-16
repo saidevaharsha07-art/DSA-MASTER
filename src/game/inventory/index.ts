@@ -7,7 +7,7 @@ export const INITIAL_INVENTORY: PlayerInventoryItem[] = [
     type: 'title',
     icon: '🎖️',
     rarity: 'Common',
-    description: 'Granted to all brave coders embarking on DSA CRACKER.',
+    description: 'Granted to all brave coders embarking on DSA MASTER.',
     unlockedAt: '2026-07-01',
     equipped: true,
   },

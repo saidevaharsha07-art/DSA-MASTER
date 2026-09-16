@@ -88,7 +88,7 @@ function AuthCallbackContent() {
         </div>
 
         <h1 className="text-2xl font-extrabold tracking-tight text-white flex items-center justify-center gap-2 mb-6">
-          DSA <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">CRACKER</span>
+          DSA <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">MASTER</span>
         </h1>
 
         {error ? (
@@ -154,7 +154,7 @@ export default function AuthCallbackPage() {
     <Suspense fallback={
       <div className="min-h-screen w-full bg-[#0B0E14] text-slate-100 flex items-center justify-center p-4">
         <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4" />
-        <p className="text-xs text-slate-400 font-mono tracking-wider uppercase animate-pulse">Connecting to DSA CRACKER...</p>
+        <p className="text-xs text-slate-400 font-mono tracking-wider uppercase animate-pulse">Connecting to DSA MASTER...</p>
       </div>
     }>
       <AuthCallbackContent />

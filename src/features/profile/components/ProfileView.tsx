@@ -44,7 +44,7 @@ export function ProfileView() {
 
   // Local Profile Override for Display Name & Email (persisted in localStorage)
   const [profileName, setProfileName] = useState<string>('Developer');
-  const [profileEmail, setProfileEmail] = useState<string>('developer@dsacracker.dev');
+  const [profileEmail, setProfileEmail] = useState<string>('developer@dsamaster.dev');
   const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
   const [isSaving, setIsSaving] = useState<boolean>(false);
 
@@ -123,7 +123,7 @@ export function ProfileView() {
     setIsSaving(true);
     setTimeout(() => {
       const trimmedName = editName.trim();
-      const trimmedEmail = editEmail.trim() || 'developer@dsacracker.dev';
+      const trimmedEmail = editEmail.trim() || 'developer@dsamaster.dev';
 
       setProfileName(trimmedName);
       setProfileEmail(trimmedEmail);

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <linearGradient id="pyramidGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#0B1120" />
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="url(#bgGrad)" stroke-width="1.5" />
+  <path
+    d="M16 5L5 25H27L16 5Z"
+    stroke="#0284C7"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="url(#pyramidGrad)"
+    fill-opacity="0.3"
+  />
+  <path
+    d="M16 12L10 22H22L16 12Z"
+    fill="#38BDF8"
+  />
+</svg>
