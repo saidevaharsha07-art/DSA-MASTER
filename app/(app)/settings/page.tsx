@@ -17,6 +17,7 @@ import { CloudSyncSettings } from '@/components/settings/cloud/CloudSyncSettings
 import { PrivacySettings } from '@/components/settings/privacy/PrivacySettings';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
+import { AuthGuard } from '@/src/lib/auth/guards/AuthGuard';
 
 export default function SettingsPage() {
   const { settings, resetSection, resetAllSettings, importSettings } = useSettings();
@@ -190,22 +191,23 @@ export default function SettingsPage() {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        width: '100%',
-        minHeight: 'calc(100vh - 64px)',
-        background: 'var(--background)',
-        color: 'var(--text-primary)',
-        padding: '24px 32px 0 32px',
-        boxSizing: 'border-box',
-        fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
-        overflowX: 'hidden',
-        transition: 'background-color 0.2s ease, color 0.2s ease',
-      }}
-    >
+    <AuthGuard>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          width: '100%',
+          minHeight: 'calc(100vh - 64px)',
+          background: 'var(--background)',
+          color: 'var(--text-primary)',
+          padding: '24px 32px 0 32px',
+          boxSizing: 'border-box',
+          fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
+          overflowX: 'hidden',
+          transition: 'background-color 0.2s ease, color 0.2s ease',
+        }}
+      >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }}>
         {/* ── TOP HEADER ─────────────────────────────────────────────── */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', width: '100%' }}>
@@ -365,5 +367,6 @@ export default function SettingsPage() {
         </div>
       </div>
     </div>
+    </AuthGuard>
   );
 }

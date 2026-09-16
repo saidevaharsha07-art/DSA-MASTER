@@ -40,9 +40,10 @@ import { RevisionAdapterService } from '@/src/features/revision/services/revisio
 import { useToast } from '@/src/context/ToastContext';
 import { ProblemModel } from '@/src/curriculum/types';
 import { useSettings } from '@/src/context/SettingsContext';
+import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
 
 export function AIMentorCoachingCenterView() {
-  const { userId } = useActiveUser();
+  const { userId, isAuthenticated } = useActiveUser();
   const { toast } = useToast();
   const { settings } = useSettings();
   const isLight = settings.appearance.theme === 'light';
@@ -351,6 +352,14 @@ export function AIMentorCoachingCenterView() {
         transition: 'background-color 0.2s ease, color 0.2s ease',
       }}
     >
+      {!isAuthenticated && (
+        <GuestPreviewBanner
+          featureName="AI Mentor"
+          description="Explore the DSA Master intelligent AI Mentor in demo mode. Create a free account or log in to receive personalized problem coaching, tailored hints, and weakness elimination based on your actual coding history."
+          redirectPath="/mentor"
+        />
+      )}
+
       {/* ── 1. HERO — AI MENTOR COACHING CENTER ────────────────────── */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}

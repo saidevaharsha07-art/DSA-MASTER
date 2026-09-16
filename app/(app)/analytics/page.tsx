@@ -42,6 +42,7 @@ import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { JourneyCalendarHeatmap } from '@/components/analytics/JourneyCalendarHeatmap';
 import { EventBus } from '@/src/core/events/event-bus';
 import { CurriculumRepository } from '@/src/curriculum/repository';
+import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
 
 function PlatformIcon({ platformKey, color }: { platformKey: string; color: string }) {
   if (platformKey === 'leetcode') {
@@ -81,7 +82,7 @@ function PlatformIcon({ platformKey, color }: { platformKey: string; color: stri
 export default function AnalyticsPage() {
   const { settings } = useSettings();
   const { toast } = useToast();
-  const { userId } = useActiveUser();
+  const { userId, isAuthenticated } = useActiveUser();
   const isLight = settings.appearance.theme === 'light';
 
   const [timeframe, setTimeframe] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
@@ -202,6 +203,13 @@ export default function AnalyticsPage() {
 
   return (
     <div style={{ width: '100%', maxWidth: '1600px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px', paddingBottom: '40px' }}>
+      {!isAuthenticated && (
+        <GuestPreviewBanner
+          featureName="Intelligent Analytics"
+          description="You are exploring the live DSA Master Analytics dashboard. Create a free account or log in to record your solves, compute personal accuracy, and sync platform activity."
+          redirectPath="/analytics"
+        />
+      )}
       
       {/* HERO SECTION — Command Intelligence Center */}
       <motion.div

@@ -16,6 +16,8 @@ import { runCode, submitSolution, cancelActiveExecution, LanguageId } from '@/sr
 import { useToast } from '@/src/context/ToastContext';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
+import { useAuth } from '@/src/lib/auth/hooks/useAuth';
+import { AuthPromptModal } from '@/src/lib/auth/components/AuthPromptModal';
 import { progressService } from '@/src/services/progress/progress.service';
 import { EventBus } from '@/src/core/events/event-bus';
 import { getPlatformMeta } from '@/src/curriculum/services';
@@ -31,6 +33,13 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
   const { toast } = useToast();
   const { settings } = useSettings();
   const { userId } = useActiveUser();
+  const { isAuthenticated } = useAuth();
+
+  const [isAuthPromptOpen, setIsAuthPromptOpen] = useState<boolean>(false);
+  const [authPromptConfig, setAuthPromptConfig] = useState<{
+    title?: string;
+    description?: string;
+  }>({});
 
   const isLight = settings?.appearance?.theme === 'light';
   
@@ -305,7 +314,15 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
 
   const handleSaveDraft = () => {
     judgeEngine.saveDraft(problem.id, language, code, userId);
-    toast('Draft code saved automatically!', 'success');
+    if (!isAuthenticated) {
+      setAuthPromptConfig({
+        title: 'Save your code to the cloud',
+        description: 'Your code draft is currently stored in your browser session. Create a free account or sign in to sync your drafts and access them from any device.',
+      });
+      setIsAuthPromptOpen(true);
+    } else {
+      toast('Draft code saved automatically!', 'success');
+    }
   };
 
   return (
@@ -327,8 +344,17 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
         isBookmarked={isBookmarked}
         isLiked={isLiked}
         onToggleBookmark={() => {
-          setIsBookmarked(!isBookmarked);
-          toast(!isBookmarked ? 'Problem bookmarked!' : 'Removed bookmark', 'info');
+          const nextState = !isBookmarked;
+          setIsBookmarked(nextState);
+          if (nextState && !isAuthenticated) {
+            setAuthPromptConfig({
+              title: 'Bookmark problems to your profile',
+              description: 'Create a free account or sign in to save bookmarks and organize your custom practice list across devices.',
+            });
+            setIsAuthPromptOpen(true);
+          } else {
+            toast(nextState ? 'Problem bookmarked!' : 'Removed bookmark', 'info');
+          }
         }}
         onToggleLike={() => {
           setIsLiked(!isLiked);
@@ -421,6 +447,15 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
         runtimeMs={submissionModal.runtimeMs}
         memoryMb={submissionModal.memoryMb}
         xpEarned={submissionModal.xpEarned}
+      />
+
+      {/* Guest Account Prompt Modal */}
+      <AuthPromptModal
+        isOpen={isAuthPromptOpen}
+        onClose={() => setIsAuthPromptOpen(false)}
+        title={authPromptConfig.title}
+        description={authPromptConfig.description}
+        redirectPath={`/practice/${problem.slug || problem.id}`}
       />
 
     </div>

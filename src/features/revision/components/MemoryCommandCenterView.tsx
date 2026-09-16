@@ -34,9 +34,10 @@ import { progressService } from '@/src/services/progress/progress.service';
 import { useToast } from '@/src/context/ToastContext';
 import { ProblemModel, RevisionData } from '@/src/curriculum/types';
 import { useSettings } from '@/src/context/SettingsContext';
+import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
 
 export function MemoryCommandCenterView() {
-  const { userId } = useActiveUser();
+  const { userId, isAuthenticated } = useActiveUser();
   const { toast } = useToast();
   const { settings } = useSettings();
   const isLight = settings.appearance.theme === 'light';
@@ -286,6 +287,14 @@ export function MemoryCommandCenterView() {
         transition: 'background-color 0.2s ease, color 0.2s ease',
       }}
     >
+      {!isAuthenticated && (
+        <GuestPreviewBanner
+          featureName="Smart Revision"
+          description="You are exploring the DSA Master Spaced Repetition engine. Create a free account or log in to track your personal forgetting curves and scheduled reviews."
+          redirectPath="/revision"
+        />
+      )}
+
       {/* ── 1. TOP HERO: MEMORY COMMAND CENTER ──────────────────────── */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
