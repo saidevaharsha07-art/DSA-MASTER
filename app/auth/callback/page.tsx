@@ -3,6 +3,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/src/lib/auth/hooks/useAuth';
+import { getSafeRedirect } from '@/src/lib/auth/components/AuthForm';
 import { Shield, Sparkles, AlertCircle, ArrowLeft, CheckCircle2 } from 'lucide-react';
 
 function AuthCallbackContent() {
@@ -51,7 +52,8 @@ function AuthCallbackContent() {
         const res = await handleOAuthCallback({ code, accessToken, refreshToken, expiresIn });
         if (res.success) {
           setIsDone(true);
-          const next = searchParams?.get('next') || '/dashboard';
+          const rawTarget = searchParams?.get('next') || searchParams?.get('redirect');
+          const next = getSafeRedirect(rawTarget);
           setTimeout(() => {
             router.replace(next);
           }, 300);
