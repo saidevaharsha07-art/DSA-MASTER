@@ -1,16 +1,24 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Link from 'next/link';
-import { BookOpen, Zap, BarChart3, ArrowRight } from 'lucide-react';
+import { BookOpen, Zap, BarChart3, ArrowRight, Compass } from 'lucide-react';
+import { useSettings } from '@/src/context/SettingsContext';
 import { LandingDashboardPreview } from './previews/LandingDashboardPreview';
 
 export function HeroSection() {
+  const { settings } = useSettings();
+  const isLight = settings?.appearance?.theme === 'light';
+
   return (
     <section className="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
       {/* Background ambient lighting */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-sky-500/15 via-blue-600/10 to-transparent blur-[120px] rounded-full" />
-      <div className="pointer-events-none absolute top-1/3 -right-40 w-[400px] h-[400px] bg-purple-600/10 blur-[140px] rounded-full" />
+      <div className={`pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] blur-[120px] rounded-full transition-opacity ${
+        isLight ? 'bg-sky-400/10' : 'bg-sky-500/15'
+      }`} />
+      <div className={`pointer-events-none absolute top-1/3 -right-40 w-[400px] h-[400px] blur-[140px] rounded-full transition-opacity ${
+        isLight ? 'bg-indigo-300/10' : 'bg-purple-600/10'
+      }`} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -19,23 +27,39 @@ export function HeroSection() {
           <div className="lg:col-span-6 space-y-6 text-left">
             
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-3.5 py-1 text-xs font-mono font-semibold tracking-wider text-sky-400 shadow-sm shadow-sky-500/10">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse" />
-              <span>LEARN • PRACTICE • TRACK • CRACK</span>
+            <div className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1 text-xs font-mono font-semibold tracking-wider ${
+              isLight
+                ? 'border-sky-300 bg-sky-50 text-sky-700 shadow-sm'
+                : 'border-sky-500/30 bg-sky-950/40 text-sky-400 shadow-sm shadow-sky-500/10'
+            }`}>
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-500 animate-pulse" />
+              <span>LEARN · PRACTICE · TRACK · CRACK</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] ${
+              isLight ? 'text-slate-900' : 'text-white'
+            }`}>
               Master DSA. <br />
-              <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
                 Build the Mindset.
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="max-w-xl text-base sm:text-lg text-slate-300 leading-relaxed">
-              Learn patterns, solve problems, track your progress, and turn consistent practice into real problem-solving ability.
+            <p className={`max-w-xl text-base sm:text-lg leading-relaxed ${
+              isLight ? 'text-slate-600' : 'text-slate-300'
+            }`}>
+              Learn patterns, solve problems, understand your mistakes, and build the daily consistency that turns practice into genuine problem-solving ability.
             </p>
+
+            {/* Target Audience Note */}
+            <div className={`inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-lg border ${
+              isLight ? 'bg-slate-100/80 border-slate-200 text-slate-700' : 'bg-slate-900/60 border-slate-800 text-slate-400'
+            }`}>
+              <Compass className="h-3.5 w-3.5 text-sky-500" />
+              <span>Designed for students & engineers preparing for technical interviews.</span>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -48,7 +72,11 @@ export function HeroSection() {
               </Link>
               <a
                 href="#problem"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:border-slate-600 hover:text-white transition-all cursor-pointer"
+                className={`inline-flex items-center justify-center rounded-xl border px-6 py-3.5 text-sm font-semibold transition-all cursor-pointer ${
+                  isLight 
+                    ? 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-400 shadow-sm' 
+                    : 'border-slate-700/80 bg-slate-900/60 text-slate-200 hover:bg-slate-800 hover:border-slate-600 hover:text-white'
+                }`}
               >
                 Explore the Platform
               </a>
@@ -58,40 +86,58 @@ export function HeroSection() {
             <div className="pt-1">
               <Link
                 href="/login"
-                className="text-xs text-slate-400 hover:text-sky-400 transition-colors inline-flex items-center gap-1"
+                className={`text-xs transition-colors inline-flex items-center gap-1 ${
+                  isLight ? 'text-slate-500 hover:text-sky-600' : 'text-slate-400 hover:text-sky-400'
+                }`}
               >
                 <span>Already have an account?</span>
-                <span className="text-sky-400 font-semibold underline underline-offset-2">Log in</span>
+                <span className="text-sky-500 font-semibold underline underline-offset-2">Log in</span>
               </Link>
             </div>
 
             {/* Feature Pills */}
-            <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-800/80 max-w-lg">
-              <div className="flex items-center gap-2 rounded-lg bg-slate-900/40 p-2 border border-slate-800/60">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-sky-500/10 text-sky-400">
+            <div className={`grid grid-cols-3 gap-3 pt-3 border-t max-w-lg ${
+              isLight ? 'border-slate-200' : 'border-slate-800/80'
+            }`}>
+              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
+                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              }`}>
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-sky-500/10 text-sky-500">
                   <BookOpen className="h-3.5 w-3.5" />
                 </div>
-                <div className="text-xs font-semibold text-slate-300 leading-tight">Structured Learning</div>
+                <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
+                  Structured Learning
+                </div>
               </div>
 
-              <div className="flex items-center gap-2 rounded-lg bg-slate-900/40 p-2 border border-slate-800/60">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-blue-400">
+              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
+                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              }`}>
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-blue-500">
                   <Zap className="h-3.5 w-3.5" />
                 </div>
-                <div className="text-xs font-semibold text-slate-300 leading-tight">Hands-on Practice</div>
+                <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
+                  Hands-on Practice
+                </div>
               </div>
 
-              <div className="flex items-center gap-2 rounded-lg bg-slate-900/40 p-2 border border-slate-800/60">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-indigo-500/10 text-indigo-400">
+              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
+                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              }`}>
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-indigo-500/10 text-indigo-500">
                   <BarChart3 className="h-3.5 w-3.5" />
                 </div>
-                <div className="text-xs font-semibold text-slate-300 leading-tight">Measurable Progress</div>
+                <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
+                  Measurable Progress
+                </div>
               </div>
             </div>
 
             {/* Emotional Companion Note */}
-            <p className="text-xs italic text-slate-400 tracking-wide pt-1">
-              &ldquo;You don&apos;t have to figure it all out alone.&rdquo;
+            <p className={`text-xs italic tracking-wide pt-1 ${
+              isLight ? 'text-slate-500' : 'text-slate-400'
+            }`}>
+              &ldquo;Don&apos;t worry. You don&apos;t have to figure out your DSA journey alone.&rdquo;
             </p>
 
           </div>
@@ -99,8 +145,12 @@ export function HeroSection() {
           {/* Right Hero Laptop IDE Showcase */}
           <div className="lg:col-span-6 relative">
             <LandingDashboardPreview />
-            {/* Laptop Base Stand / Shadow effect */}
-            <div className="mx-auto h-3 w-4/5 rounded-b-xl bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 shadow-xl" />
+            {/* Laptop Base Stand */}
+            <div className={`mx-auto h-3 w-4/5 rounded-b-xl shadow-xl transition-colors ${
+              isLight 
+                ? 'bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300' 
+                : 'bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800'
+            }`} />
           </div>
 
         </div>

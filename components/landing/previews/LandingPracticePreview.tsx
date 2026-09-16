@@ -1,37 +1,33 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
-import { Search, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { useSettings } from '@/src/context/SettingsContext';
 import { LANDING_PREVIEW_DATA } from '../preview-constants';
 
 export function LandingPracticePreview() {
+  const { settings } = useSettings();
+  const isLight = settings?.appearance?.theme === 'light';
   const data = LANDING_PREVIEW_DATA.practice;
 
-  const categories = [
-    { name: 'Array', active: true },
-    { name: 'String', active: false },
-    { name: 'Linked List', active: false },
-    { name: 'Stack', active: false },
-    { name: 'Queue', active: false },
-    { name: 'Tree', active: false },
-    { name: 'Graph', active: false },
-    { name: 'Dynamic Programming', active: false },
-    { name: 'Greedy', active: false },
-    { name: 'Binary Search', active: false },
-  ];
-
   return (
-    <div className="rounded-2xl border border-slate-800 bg-[#0B0F19] p-4 shadow-2xl shadow-black/60">
+    <div className={`rounded-2xl border p-4 shadow-2xl transition-colors duration-200 ${
+      isLight ? 'border-slate-200/90 bg-white shadow-slate-200/60 text-slate-800' : 'border-slate-800 bg-[#0B0F19] shadow-black/60 text-slate-200'
+    }`}>
       
       {/* Arena Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 pb-3 mb-3">
+      <div className={`flex flex-wrap items-center justify-between gap-3 border-b pb-3 mb-3 ${
+        isLight ? 'border-slate-200' : 'border-slate-800/80'
+      }`}>
         <div className="flex items-center gap-2">
-          <div className="text-xs font-bold text-white tracking-wider flex items-center gap-1">
-            <span className="text-sky-400">▲</span> DSA MASTER
+          <div className={`text-xs font-bold tracking-wider flex items-center gap-1 ${isLight ? 'text-slate-900' : 'text-white'}`}>
+            <span className="text-sky-500">▲</span> DSA MASTER
           </div>
-          <span className="text-xs text-slate-500">|</span>
-          <span className="text-xs font-semibold text-slate-300">Problems</span>
-          <span className="hidden sm:inline-flex items-center rounded bg-slate-800/80 px-1.5 py-0.5 text-[9px] font-medium text-slate-400 border border-slate-700/50">
+          <span className="text-xs text-slate-400">|</span>
+          <span className={`text-xs font-semibold ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>Practice Arena</span>
+          <span className={`hidden sm:inline-flex items-center rounded px-1.5 py-0.5 text-[9px] font-medium border ${
+            isLight ? 'bg-slate-100 text-slate-600 border-slate-200' : 'bg-slate-800/80 text-slate-400 border-slate-700/50'
+          }`}>
             Product preview
           </span>
         </div>
@@ -39,19 +35,27 @@ export function LandingPracticePreview() {
         {/* Filter Pills */}
         <div className="flex items-center gap-1.5">
           <span className="rounded bg-sky-500 px-2 py-0.5 text-[10px] font-bold text-slate-950 cursor-pointer">All</span>
-          <span className="rounded bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-400 hover:text-white cursor-pointer">Easy</span>
-          <span className="rounded bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-400 hover:text-white cursor-pointer">Medium</span>
-          <span className="rounded bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-400 hover:text-white cursor-pointer">Hard</span>
+          <span className={`rounded px-2 py-0.5 text-[10px] font-medium cursor-pointer ${
+            isLight ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' : 'bg-slate-800/80 text-slate-400 hover:text-white'
+          }`}>Easy</span>
+          <span className={`rounded px-2 py-0.5 text-[10px] font-medium cursor-pointer ${
+            isLight ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' : 'bg-slate-800/80 text-slate-400 hover:text-white'
+          }`}>Medium</span>
+          <span className={`rounded px-2 py-0.5 text-[10px] font-medium cursor-pointer ${
+            isLight ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' : 'bg-slate-800/80 text-slate-400 hover:text-white'
+          }`}>Hard</span>
         </div>
 
         {/* Search Bar */}
         <div className="relative w-36">
-          <Search className="absolute left-2 top-2 h-3 w-3 text-slate-500" />
+          <Search className="absolute left-2 top-2 h-3 w-3 text-slate-400" />
           <input
             type="text"
-            placeholder="Search problems..."
+            placeholder="Search..."
             readOnly
-            className="w-full rounded bg-slate-900/90 pl-7 pr-2 py-1 text-[10px] text-slate-300 border border-slate-800 focus:outline-none"
+            className={`w-full rounded pl-7 pr-2 py-1 text-[10px] border focus:outline-none ${
+              isLight ? 'bg-slate-50 border-slate-200 text-slate-800' : 'bg-slate-900/90 border-slate-800 text-slate-300'
+            }`}
           />
         </div>
       </div>
@@ -59,100 +63,60 @@ export function LandingPracticePreview() {
       {/* Arena Grid */}
       <div className="grid grid-cols-12 gap-3">
         
-        {/* Category Sidebar */}
-        <div className="hidden sm:block sm:col-span-3 border-r border-slate-800/80 pr-2 space-y-1">
-          {categories.map((cat) => (
-            <div
-              key={cat.name}
-              className={`flex items-center justify-between px-2 py-1 text-[10px] rounded font-medium cursor-pointer transition ${
-                cat.active
-                  ? 'bg-sky-500/10 text-sky-400 font-semibold'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
-              }`}
-            >
-              <span>{cat.name}</span>
-              <span className="text-[8px] text-slate-600">›</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Problems Table */}
-        <div className="col-span-12 sm:col-span-6 space-y-1">
-          {data.sampleProblems.map((prob) => (
+        {/* Left Problem List */}
+        <div className="col-span-12 md:col-span-8 space-y-1.5">
+          {data.sampleProblems.slice(0, 5).map((prob, idx) => (
             <div
               key={prob.title}
-              className="flex items-center justify-between rounded bg-slate-900/50 hover:bg-slate-800/60 p-2 border border-slate-800/40 transition cursor-pointer"
+              className={`flex items-center justify-between rounded-lg p-2 text-xs border transition ${
+                isLight 
+                  ? 'bg-slate-50/80 border-slate-200 hover:bg-slate-100/80' 
+                  : 'bg-slate-900/60 border-slate-800/60 hover:bg-slate-800/50'
+              }`}
             >
-              <span className="text-[11px] font-medium text-slate-200 truncate pr-2">
-                {prob.title}
-              </span>
-              <div className="flex items-center gap-2 shrink-0">
+              <div className="flex items-center gap-2.5">
+                <span className="font-mono text-[10px] text-slate-400 w-4">{idx + 1}</span>
+                <span className={`font-semibold text-xs ${isLight ? 'text-slate-800' : 'text-slate-200'}`}>{prob.title}</span>
+              </div>
+              
+              <div className="flex items-center gap-3">
                 <span className={`rounded px-1.5 py-0.5 text-[9px] font-bold border ${prob.diffColor}`}>
                   {prob.diff}
                 </span>
-                <span className="text-[10px] font-mono text-slate-400">
-                  {prob.rate}
-                </span>
+                <span className="text-[10px] font-mono text-slate-400">{prob.rate}</span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right Progress Gauge Widget */}
-        <div className="hidden sm:flex sm:col-span-3 flex-col justify-between rounded-xl bg-[#090D16] p-3 border border-slate-800/80 text-center">
+        {/* Right Progress Summary Mini-Card */}
+        <div className={`col-span-12 md:col-span-4 rounded-xl p-3 border flex flex-col justify-between ${
+          isLight ? 'bg-slate-50 border-slate-200' : 'bg-[#080C14] border-slate-800/80'
+        }`}>
           <div>
-            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-300 mb-2">
-              <span>Your Progress</span>
-              <ChevronDown className="h-3 w-3 text-slate-500" />
+            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Solved Progress</div>
+            <div className="flex items-baseline gap-1.5">
+              <span className={`text-2xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>{data.solvedCount}</span>
+              <span className="text-xs text-slate-400 font-semibold">/ {data.totalCount}</span>
             </div>
-
-            {/* Circular SVG Gauge */}
-            <div className="relative mx-auto my-2 flex h-20 w-20 items-center justify-center">
-              <svg className="h-full w-full -rotate-90 transform" viewBox="0 0 36 36">
-                <path
-                  className="text-slate-800"
-                  strokeWidth="3.5"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <path
-                  className="text-sky-400"
-                  strokeDasharray={`${data.progressPercentage}, 100`}
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-              </svg>
-              <span className="absolute text-sm font-extrabold text-white">{data.progressPercentage}%</span>
+            
+            {/* Progress Bar */}
+            <div className={`mt-2 h-1.5 w-full rounded-full overflow-hidden ${isLight ? 'bg-slate-200' : 'bg-slate-800'}`}>
+              <div className="h-full bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" style={{ width: `${data.progressPercentage}%` }} />
             </div>
-
-            <div className="mt-1">
-              <div className="text-xs font-bold text-white">{data.solvedCount} / {data.totalCount}</div>
-              <div className="text-[9px] text-slate-400">Problems Solved</div>
-            </div>
+            <div className="mt-1 text-[10px] text-sky-500 font-bold text-right">{data.progressPercentage}% complete</div>
           </div>
 
-          {/* Mini Weekly Bar Chart */}
-          <div className="pt-3 border-t border-slate-800/80">
-            <div className="flex items-end justify-between gap-1 h-10 px-1">
-              {data.weeklyActivity.map((item) => (
-                <div key={item.day} className="flex flex-col items-center gap-1 flex-1">
-                  <div
-                    className="w-full rounded-t bg-sky-400 hover:bg-sky-300 transition-all"
-                    style={{ height: `${item.percentage}%` }}
-                  />
-                  <span className="text-[7px] text-slate-500">{item.day}</span>
-                </div>
-              ))}
-            </div>
+          <div className={`pt-3 border-t mt-3 flex items-center justify-between text-[10px] ${
+            isLight ? 'border-slate-200 text-slate-600' : 'border-slate-800 text-slate-400'
+          }`}>
+            <span>Multi-Language IDE</span>
+            <span className="text-emerald-500 font-semibold">● Ready</span>
           </div>
-
         </div>
 
       </div>
+
     </div>
   );
 }
