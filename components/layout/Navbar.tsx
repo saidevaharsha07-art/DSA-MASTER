@@ -139,7 +139,7 @@ export function Navbar({
           <Menu size={18} />
         </Button>
 
-        {/* DSA CRACKER Logo Brand Link (Mobile) */}
+        {/* DSA MASTER Logo Brand Link (Mobile) */}
         <Link
           href={isAuthenticated ? "/dashboard" : "/login"}
           style={{
@@ -148,34 +148,59 @@ export function Navbar({
             gap: "10px",
             textDecoration: "none",
           }}
-          title="DSA CRACKER"
+          title="DSA MASTER"
         >
           <div
             style={{
               width: "34px",
               height: "34px",
-              borderRadius: "8px",
-              overflow: "hidden",
-              border: "1.5px solid rgba(56, 189, 248, 0.5)",
-              boxShadow: isDark
-                ? "0 0 12px rgba(56, 189, 248, 0.35)"
-                : "0 2px 8px rgba(2, 132, 199, 0.25)",
-              background: "#000",
+              borderRadius: "10px",
+              background: "linear-gradient(135deg, #38BDF8 0%, #3B82F6 50%, #6366F1 100%)",
+              padding: "1.5px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              boxShadow: "0 2px 10px rgba(56, 189, 248, 0.25)",
               flexShrink: 0,
             }}
           >
-            <img
-              src="/images/dsa-cracker-logo.jpg"
-              alt="DSA CRACKER"
+            <div
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                borderRadius: "8.5px",
+                background: "var(--surface, #0B1120)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-            />
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                style={{ width: "18px", height: "18px" }}
+              >
+                <path
+                  d="M12 2L2 22H22L12 2Z"
+                  stroke="#0284C7"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="url(#nav-logo-grad)"
+                  fillOpacity="0.25"
+                />
+                <path
+                  d="M12 9L7 19H17L12 9Z"
+                  fill="#38BDF8"
+                />
+                <defs>
+                  <linearGradient id="nav-logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#38BDF8" />
+                    <stop offset="1" stopColor="#6366F1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span
@@ -188,7 +213,7 @@ export function Navbar({
                 lineHeight: 1.1,
               }}
             >
-              DSA <span style={{ color: "#38BDF8" }}>CRACKER</span>
+              DSA <span style={{ color: "#38BDF8" }}>MASTER</span>
             </span>
             <span
               style={{
@@ -199,7 +224,7 @@ export function Navbar({
                 textTransform: "uppercase",
               }}
             >
-              LEARN • PRACTICE • TRACK • CRACK
+              LEARN • PRACTICE • MASTER
             </span>
           </div>
         </Link>

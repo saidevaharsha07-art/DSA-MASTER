@@ -177,19 +177,37 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
       {/* Brand Header */}
       <div className="mb-8 flex flex-col items-center">
         <Link href="/" className="flex flex-col items-center group">
-          <div className="w-12 h-12 rounded-xl overflow-hidden border-2 border-[var(--accent-border)] shadow-md shadow-[var(--accent-glow)] bg-black flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-            <img
-              src="/images/dsa-cracker-logo.jpg"
-              alt="DSA MASTER"
-              className="w-full h-full object-cover"
-            />
+          <div className="w-12 h-12 rounded-xl p-[2px] bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 shadow-md shadow-sky-500/20 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+            <div className="w-full h-full rounded-[10px] bg-[var(--surface)] flex items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+                <path
+                  d="M12 2L2 22H22L12 2Z"
+                  stroke="#0284C7"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="url(#auth-logo-grad)"
+                  fillOpacity="0.25"
+                />
+                <path
+                  d="M12 9L7 19H17L12 9Z"
+                  fill="#38BDF8"
+                />
+                <defs>
+                  <linearGradient id="auth-logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#38BDF8" />
+                    <stop offset="1" stopColor="#6366F1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
           <span className="text-xl font-black tracking-tight text-[var(--text-primary)]">
             DSA <span style={{ color: 'var(--accent-primary)' }}>MASTER</span>
           </span>
         </Link>
         <span className="text-[9px] font-extrabold tracking-widest text-[var(--text-muted)] uppercase mt-0.5">
-          LEARN • PRACTICE • TRACK • CRACK
+          LEARN • PRACTICE • MASTER
         </span>
       </div>
 
