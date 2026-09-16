@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -64,7 +64,7 @@ export function PhilosophySection() {
 
         {/* The Equation Formula Visualization */}
         <div className={`rounded-3xl border p-6 sm:p-8 backdrop-blur-md shadow-2xl transition-colors ${
-          isLight ? 'border-slate-200 bg-slate-50/80 shadow-slate-200/50' : 'border-slate-800/90 bg-[#090D16]/90 shadow-black/40'
+          isLight ? 'border-slate-200 bg-white shadow-slate-200/50' : 'border-slate-800/90 bg-[#090D16]/90 shadow-black/40'
         }`}>
           <h3 className={`text-xs font-mono font-bold tracking-widest uppercase text-center mb-6 ${
             isLight ? 'text-sky-700' : 'text-sky-400'
@@ -76,7 +76,7 @@ export function PhilosophySection() {
             {formulaItems.map((item, idx) => (
               <React.Fragment key={item.label}>
                 <div className={`rounded-2xl border px-4 py-3 min-w-[120px] shadow-sm ${
-                  isLight ? 'border-slate-200 bg-white text-slate-800' : 'border-slate-800/80 bg-[#0B0F1C] text-white'
+                  isLight ? 'border-slate-200 bg-slate-50/70 text-slate-800' : 'border-slate-800/80 bg-[#0B0F1C] text-white'
                 }`}>
                   <div className="text-sm font-extrabold">{item.label}</div>
                   <div className={`text-[10px] mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>{item.desc}</div>

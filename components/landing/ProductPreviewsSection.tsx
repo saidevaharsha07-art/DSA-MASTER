@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { Code2, BarChart3, BrainCircuit } from 'lucide-react';
@@ -14,7 +14,7 @@ export function ProductPreviewsSection() {
 
   return (
     <section id="previews" className={`py-24 relative border-t transition-colors duration-200 ${
-      isLight ? 'border-slate-200/80 bg-slate-50/50' : 'border-slate-800/80 bg-[#06090F]'
+      isLight ? 'border-slate-200/80 bg-[#FAFBFD]' : 'border-slate-800/80 bg-[#06090F]'
     }`}>
       
       {/* Background ambient glow */}

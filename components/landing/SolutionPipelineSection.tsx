@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { BookOpen, Lightbulb, Code2, BarChart3, RotateCcw, TrendingUp, Trophy, ArrowRight } from 'lucide-react';
@@ -104,7 +104,7 @@ export function SolutionPipelineSection() {
 
         {/* Continuous Pipeline Visualization */}
         <div className={`rounded-3xl border p-6 sm:p-8 backdrop-blur-md shadow-2xl transition-colors ${
-          isLight ? 'border-slate-200 bg-slate-50/70 shadow-slate-200/60' : 'border-slate-800/90 bg-[#090D16]/90 shadow-black/50'
+          isLight ? 'border-slate-200/90 bg-white shadow-slate-200/50' : 'border-slate-800/90 bg-[#090D16]/90 shadow-black/50'
         }`}>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 lg:gap-2">
@@ -115,14 +115,16 @@ export function SolutionPipelineSection() {
                   key={step.label}
                   className={`flex flex-col justify-between rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-0.5 group relative ${
                     isLight 
-                      ? 'border-slate-200 bg-white hover:border-slate-300 shadow-sm' 
+                      ? 'border-slate-200/80 bg-slate-50/70 hover:bg-white hover:border-sky-300 hover:shadow-md shadow-sm' 
                       : 'border-slate-800/60 bg-[#0B0F1A]/80 hover:border-slate-700 hover:bg-[#0E1424]'
                   }`}
                 >
                   <div>
                     {/* Step Top badge */}
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase">
+                      <span className={`text-[10px] font-mono font-bold tracking-wider uppercase ${
+                        isLight ? 'text-slate-500' : 'text-slate-400'
+                      }`}>
                         {step.badge}
                       </span>
                       {idx < pipeline.length - 1 && (
@@ -147,7 +149,7 @@ export function SolutionPipelineSection() {
                   </div>
 
                   <p className={`text-[11px] leading-relaxed pt-2 border-t ${
-                    isLight ? 'border-slate-100 text-slate-500' : 'border-slate-800/50 text-slate-400'
+                    isLight ? 'border-slate-200/60 text-slate-600' : 'border-slate-800/50 text-slate-400'
                   }`}>
                     {step.desc}
                   </p>
@@ -165,7 +167,7 @@ export function SolutionPipelineSection() {
               <span className={`font-semibold ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>Real-Time Feedback Loop:</span>
               <span>Every problem you solve automatically updates your memory queue and coaching recommendations.</span>
             </div>
-            <div className="font-mono text-[11px] text-slate-400 font-bold">
+            <div className={`font-mono text-[11px] font-bold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
               ZERO DISCONNECTED SILOS
             </div>
           </div>

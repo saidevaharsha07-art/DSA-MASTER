@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
       {/* Background ambient lighting */}
-      <div className={`pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] blur-[120px] rounded-full transition-opacity ${
+      <div className={`pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] blur-[130px] rounded-full transition-opacity ${
         isLight ? 'bg-sky-400/10' : 'bg-sky-500/15'
       }`} />
       <div className={`pointer-events-none absolute top-1/3 -right-40 w-[400px] h-[400px] blur-[140px] rounded-full transition-opacity ${
@@ -53,15 +53,15 @@ export function HeroSection() {
               Learn patterns, solve problems, understand your mistakes, and build the daily consistency that turns practice into genuine problem-solving ability.
             </p>
 
-            {/* Target Audience Note */}
-            <div className={`inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-lg border ${
-              isLight ? 'bg-slate-100/80 border-slate-200 text-slate-700' : 'bg-slate-900/60 border-slate-800 text-slate-400'
+            {/* Emotional Companion Reassurance */}
+            <div className={`inline-flex items-center gap-2 text-xs font-medium px-3.5 py-1.5 rounded-lg border ${
+              isLight ? 'bg-white border-slate-200 text-slate-700 shadow-sm' : 'bg-slate-900/60 border-slate-800 text-slate-300'
             }`}>
-              <Compass className="h-3.5 w-3.5 text-sky-500" />
-              <span>Designed for students & engineers preparing for technical interviews.</span>
+              <Compass className="h-3.5 w-3.5 text-sky-500 shrink-0" />
+              <span>&ldquo;Don&apos;t worry. You don&apos;t have to figure out your DSA journey alone.&rdquo;</span>
             </div>
 
-            {/* CTAs */}
+            {/* CTAs Hierarchy */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/learn"
@@ -70,19 +70,19 @@ export function HeroSection() {
                 <span>Start Learning</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href="#problem"
-                className={`inline-flex items-center justify-center rounded-xl border px-6 py-3.5 text-sm font-semibold transition-all cursor-pointer ${
+              <Link
+                href="/practice"
+                className={`inline-flex items-center justify-center rounded-xl border px-6 py-3.5 text-sm font-semibold transition-all ${
                   isLight 
                     ? 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-400 shadow-sm' 
                     : 'border-slate-700/80 bg-slate-900/60 text-slate-200 hover:bg-slate-800 hover:border-slate-600 hover:text-white'
                 }`}
               >
                 Explore the Platform
-              </a>
+              </Link>
             </div>
 
-            {/* Subtle Login Link */}
+            {/* Small Login Link */}
             <div className="pt-1">
               <Link
                 href="/login"
@@ -95,14 +95,14 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Feature Pills */}
+            {/* Feature Highlights */}
             <div className={`grid grid-cols-3 gap-3 pt-3 border-t max-w-lg ${
               isLight ? 'border-slate-200' : 'border-slate-800/80'
             }`}>
-              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
-                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              <div className={`flex items-center gap-2 rounded-xl p-2.5 border transition-all ${
+                isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/50 border-slate-800/70'
               }`}>
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-sky-500/10 text-sky-500">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-sky-500/10 text-sky-500">
                   <BookOpen className="h-3.5 w-3.5" />
                 </div>
                 <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
@@ -110,10 +110,10 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
-                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              <div className={`flex items-center gap-2 rounded-xl p-2.5 border transition-all ${
+                isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/50 border-slate-800/70'
               }`}>
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-blue-500">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
                   <Zap className="h-3.5 w-3.5" />
                 </div>
                 <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
@@ -121,10 +121,10 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className={`flex items-center gap-2 rounded-lg p-2 border ${
-                isLight ? 'bg-white border-slate-200' : 'bg-slate-900/40 border-slate-800/60'
+              <div className={`flex items-center gap-2 rounded-xl p-2.5 border transition-all ${
+                isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/50 border-slate-800/70'
               }`}>
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-indigo-500/10 text-indigo-500">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500">
                   <BarChart3 className="h-3.5 w-3.5" />
                 </div>
                 <div className={`text-xs font-semibold leading-tight ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>
@@ -132,13 +132,6 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-
-            {/* Emotional Companion Note */}
-            <p className={`text-xs italic tracking-wide pt-1 ${
-              isLight ? 'text-slate-500' : 'text-slate-400'
-            }`}>
-              &ldquo;Don&apos;t worry. You don&apos;t have to figure out your DSA journey alone.&rdquo;
-            </p>
 
           </div>
 

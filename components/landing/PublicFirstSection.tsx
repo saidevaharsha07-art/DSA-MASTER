@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -29,7 +29,7 @@ export function PublicFirstSection() {
 
   return (
     <section id="public-first" className={`py-24 relative border-t transition-colors duration-200 ${
-      isLight ? 'border-slate-200/80 bg-slate-50/50' : 'border-slate-800/80 bg-[#06090F]'
+      isLight ? 'border-slate-200/80 bg-[#FAFBFD]' : 'border-slate-800/80 bg-[#06090F]'
     }`}>
       
       {/* Background ambient lighting */}

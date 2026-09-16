@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { MapPin, Lightbulb, Code2, RefreshCw } from 'lucide-react';
@@ -41,7 +41,7 @@ export function HowItWorksSection() {
 
   return (
     <section id="how-it-works" className={`py-24 relative border-t transition-colors duration-200 ${
-      isLight ? 'border-slate-200/80 bg-slate-50/50' : 'border-slate-800/80 bg-[#06090F]'
+      isLight ? 'border-slate-200/80 bg-[#FAFBFD]' : 'border-slate-800/80 bg-[#06090F]'
     }`}>
       
       {/* Subtle ambient lighting */}

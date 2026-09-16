@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -111,7 +111,7 @@ export function PersonalJourneySection() {
                 key={b.title}
                 className={`rounded-2xl border p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 ${
                   isLight
-                    ? 'border-slate-200/90 bg-slate-50/70 shadow-sm hover:shadow-md hover:bg-white hover:border-slate-300'
+                    ? 'border-slate-200/90 bg-white shadow-sm hover:shadow-md hover:border-slate-300'
                     : 'border-slate-800/80 bg-[#090D16]/90 shadow-lg shadow-black/40 hover:border-slate-700 hover:bg-[#0E1424]'
                 }`}
               >
@@ -131,7 +131,7 @@ export function PersonalJourneySection() {
 
         {/* Reassurance Callout Card */}
         <div className={`mt-14 max-w-2xl mx-auto rounded-2xl border p-6 text-center space-y-4 shadow-xl transition-colors ${
-          isLight ? 'border-slate-200 bg-slate-50 text-slate-800' : 'border-slate-800/90 bg-[#0B0F1C]/90 text-slate-200'
+          isLight ? 'border-slate-200 bg-white text-slate-800 shadow-sm' : 'border-slate-800/90 bg-[#0B0F1C]/90 text-slate-200'
         }`}>
           <p className={`text-xs sm:text-sm leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
             Authentication is a convenience and privacy feature, not a paywall. Explore first, code freely, and sign up whenever you are ready to persist your journey.
