@@ -120,6 +120,26 @@ CREATE TABLE IF NOT EXISTS public.settings (
     CONSTRAINT unique_user_settings UNIQUE (user_id)
 );
 
+-- 9. USER ONBOARDING TABLE (1:1 with Auth User)
+CREATE TABLE IF NOT EXISTS public.user_onboarding (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+    status TEXT NOT NULL DEFAULT 'ONBOARDING_NOT_STARTED' CHECK (status IN ('ONBOARDING_NOT_STARTED', 'ONBOARDING_IN_PROGRESS', 'ONBOARDING_COMPLETED', 'ONBOARDING_SKIPPED')),
+    current_step INTEGER NOT NULL DEFAULT 1 CHECK (current_step >= 1 AND current_step <= 6),
+    self_reported_level TEXT,
+    learning_goal TEXT,
+    selected_topics JSONB NOT NULL DEFAULT '[]'::jsonb,
+    assessment_score INTEGER,
+    assessment_evidence JSONB NOT NULL DEFAULT '[]'::jsonb,
+    assessment_result JSONB,
+    first_mission JSONB,
+    completed_at TIMESTAMPTZ,
+    skipped_at TIMESTAMPTZ,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    CONSTRAINT unique_user_onboarding UNIQUE (user_id)
+);
+
 -- ==============================================================================
 -- ROW LEVEL SECURITY (RLS) POLICIES
 -- ==============================================================================
@@ -131,6 +151,7 @@ ALTER TABLE public.drafts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.activities ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.memory_progress ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.settings ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.user_onboarding ENABLE ROW LEVEL SECURITY;
 
 -- 1. Profiles RLS
 CREATE POLICY "Users can view own profile" ON public.profiles FOR SELECT USING (auth.uid() = id);
@@ -172,6 +193,12 @@ CREATE POLICY "Users can insert own settings" ON public.settings FOR INSERT WITH
 CREATE POLICY "Users can update own settings" ON public.settings FOR UPDATE USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
 CREATE POLICY "Users can delete own settings" ON public.settings FOR DELETE USING (auth.uid() = user_id);
 
+-- 8. User Onboarding RLS
+CREATE POLICY "Users can view own onboarding" ON public.user_onboarding FOR SELECT USING (auth.uid() = user_id);
+CREATE POLICY "Users can insert own onboarding" ON public.user_onboarding FOR INSERT WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "Users can update own onboarding" ON public.user_onboarding FOR UPDATE USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "Users can delete own onboarding" ON public.user_onboarding FOR DELETE USING (auth.uid() = user_id);
+
 -- ==============================================================================
 -- AUTOMATIC USER INITIALIZATION TRIGGER
 -- ==============================================================================
@@ -199,6 +226,11 @@ BEGIN
     VALUES (NEW.id, 'light', '#38BDF8')
     ON CONFLICT (user_id) DO NOTHING;
 
+    -- 4. Initialize Clean Onboarding Profile (NOT_STARTED)
+    INSERT INTO public.user_onboarding (user_id, status, current_step)
+    VALUES (NEW.id, 'ONBOARDING_NOT_STARTED', 1)
+    ON CONFLICT (user_id) DO NOTHING;
+
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public;
@@ -208,3 +240,4 @@ DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
     AFTER INSERT ON auth.users
     FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+

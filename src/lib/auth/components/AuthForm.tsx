@@ -6,12 +6,28 @@ import Link from 'next/link';
 import { useAuth } from '../hooks/useAuth';
 import { Eye, EyeOff, CheckCircle2, AlertCircle } from 'lucide-react';
 
+import { OnboardingService } from '@/src/intelligence/onboarding';
+
 export function getSafeRedirect(url: string | null | undefined): string {
   if (!url) return '/dashboard';
   const trimmed = url.trim();
   // Ensure it's a relative path starting with / and not // or containing ://
   if (trimmed.startsWith('/') && !trimmed.startsWith('//') && !trimmed.includes('://')) {
     return trimmed;
+  }
+  return '/dashboard';
+}
+
+export function resolveUserDestination(userId?: string, rawTarget?: string | null, isSignUp = false): string {
+  if (rawTarget) {
+    return getSafeRedirect(rawTarget);
+  }
+  if (!userId) {
+    return isSignUp ? '/onboarding' : '/dashboard';
+  }
+  const obProfile = OnboardingService.getProfile(userId);
+  if (obProfile.status === 'ONBOARDING_NOT_STARTED' || (isSignUp && obProfile.status === 'ONBOARDING_IN_PROGRESS')) {
+    return '/onboarding';
   }
   return '/dashboard';
 }
@@ -23,7 +39,7 @@ export interface AuthFormProps {
 export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { isAuthenticated, signIn, signUp, resetPassword, signInWithGoogle, isLoading } = useAuth();
+  const { isAuthenticated, user, signIn, signUp, resetPassword, signInWithGoogle, isLoading } = useAuth();
 
   const [tab, setTab] = useState<'signin' | 'signup' | 'forgot'>(() => {
     const qTab = searchParams?.get('tab');
@@ -48,7 +64,6 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
 
   // Extract destination redirect target
   const rawTarget = searchParams?.get('redirect') || searchParams?.get('next');
-  const destination = getSafeRedirect(rawTarget);
 
   // Sync tab with URL if param changes
   useEffect(() => {
@@ -61,9 +76,10 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
   // Redirect authenticated user directly to destination
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      router.replace(destination);
+      const dest = resolveUserDestination(user?.id, rawTarget, false);
+      router.replace(dest);
     }
-  }, [isAuthenticated, isLoading, router, destination]);
+  }, [isAuthenticated, isLoading, user?.id, router, rawTarget]);
 
   const switchTab = (newTab: 'signin' | 'signup' | 'forgot') => {
     setTab(newTab);
@@ -121,7 +137,8 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
           setFormError(res.error || 'Username/email or password is incorrect. Please try again.');
         } else {
           setFormSuccess('Authentication successful! Directing to application...');
-          setTimeout(() => router.replace(destination), 500);
+          const target = resolveUserDestination(res.user?.id, rawTarget, false);
+          setTimeout(() => router.replace(target), 500);
         }
       } else if (tab === 'signup') {
         const res = await signUp({ email, password, displayName: fullName });
@@ -130,8 +147,9 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
         } else if (res.error === 'EMAIL_CONFIRMATION_REQUIRED' || !res.session) {
           setFormSuccess('Account registered successfully! A verification email has been sent to ' + email + '. Please verify your email before logging in.');
         } else {
-          setFormSuccess('Account created successfully! Directing to application...');
-          setTimeout(() => router.replace(destination), 500);
+          setFormSuccess('Account created successfully! Directing to your personalized setup...');
+          const target = resolveUserDestination(res.user?.id, rawTarget, true);
+          setTimeout(() => router.replace(target), 500);
         }
       } else if (tab === 'forgot') {
         const res = await resetPassword(email);
@@ -158,7 +176,8 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
         window.location.href = res.url;
       } else if (res.success) {
         setFormSuccess('Google sign in successful!');
-        setTimeout(() => router.replace(destination), 500);
+        const target = resolveUserDestination(user?.id, rawTarget, false);
+        setTimeout(() => router.replace(target), 500);
       } else {
         setFormError(res.error || 'Google sign-in could not be completed. Please try again.');
         setIsGoogleLoading(false);

@@ -88,7 +88,7 @@ export default function OnboardingPage() {
   const [answers, setAnswers] = useState<AssessmentAnswer[]>([]);
   const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now());
 
-  // Initialize and load saved state
+  // Initialize and load saved state with async remote synchronization
   useEffect(() => {
     const currentProfile = OnboardingService.getProfile(userId);
     setProfile(currentProfile);
@@ -97,6 +97,21 @@ export default function OnboardingPage() {
     if (currentProfile.learningGoal) setSelectedGoal(currentProfile.learningGoal);
     if (currentProfile.selectedTopics) setSelectedTopics([...currentProfile.selectedTopics]);
     setQuestionStartTime(Date.now());
+
+    // Asynchronously synchronize with server/Supabase
+    OnboardingService.loadProfileAsync(userId).then((synced) => {
+      if (synced && synced.userId === userId) {
+        setProfile(synced);
+        if (synced.currentStep && synced.currentStep > (currentProfile.currentStep || 1)) {
+          setStep(synced.currentStep);
+        }
+        if (synced.selfReportedLevel) setSelectedLevel(synced.selfReportedLevel);
+        if (synced.learningGoal) setSelectedGoal(synced.learningGoal);
+        if (synced.selectedTopics && synced.selectedTopics.length > 0) {
+          setSelectedTopics([...synced.selectedTopics]);
+        }
+      }
+    }).catch(() => {});
   }, [userId]);
 
   const goToStep = (nextStep: number, partialUpdate: Partial<OnboardingProfile> = {}) => {
@@ -161,7 +176,7 @@ export default function OnboardingPage() {
   const handleFinishAndStartMission = () => {
     const completed = OnboardingService.completeOnboarding(userId);
     setProfile(completed);
-    const destination = completed.firstMission?.destinationRoute || '/learn/beginnings';
+    const destination = completed.firstMission?.destinationRoute || '/practice/contains-duplicate';
     router.push(destination);
   };
 
@@ -182,6 +197,7 @@ export default function OnboardingPage() {
         flexDirection: 'column',
         alignItems: 'center',
         padding: '24px 16px',
+        overflowX: 'hidden',
       }}
     >
       {/* Top Header & Progress Indicator */}
@@ -210,6 +226,7 @@ export default function OnboardingPage() {
           {step < 6 && (
             <button
               onClick={handleSkip}
+              aria-label="Skip onboarding for now"
               style={{
                 background: 'none',
                 border: 'none',
@@ -227,7 +244,14 @@ export default function OnboardingPage() {
         </div>
 
         {/* Steps Bar */}
-        <div style={{ display: 'flex', gap: '6px', width: '100%' }}>
+        <div
+          role="progressbar"
+          aria-valuenow={step}
+          aria-valuemin={1}
+          aria-valuemax={6}
+          aria-label={`Onboarding Step ${step} of 6: ${STEPS_NAV[step - 1]?.label}`}
+          style={{ display: 'flex', gap: '6px', width: '100%' }}
+        >
           {STEPS_NAV.map((s) => {
             const isCurrent = step === s.num;
             const isDone = step > s.num;
@@ -359,12 +383,14 @@ export default function OnboardingPage() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Self-reported DSA level" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {LEVEL_OPTIONS.map((opt) => {
                 const isSelected = selectedLevel === opt.id;
                 return (
                   <button
                     key={opt.id}
+                    role="radio"
+                    aria-checked={isSelected}
                     onClick={() => setSelectedLevel(opt.id)}
                     style={{
                       background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
@@ -441,12 +467,14 @@ export default function OnboardingPage() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            <div role="group" aria-label="Prior DSA topic exposure" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               {TOPIC_LIST.map((t) => {
                 const isSelected = selectedTopics.includes(t.label);
                 return (
                   <button
                     key={t.id}
+                    role="checkbox"
+                    aria-checked={isSelected}
                     onClick={() => handleToggleTopic(t.label)}
                     style={{
                       background: isSelected ? 'rgba(99, 102, 241, 0.12)' : 'transparent',
@@ -464,6 +492,8 @@ export default function OnboardingPage() {
                 );
               })}
               <button
+                role="checkbox"
+                aria-checked={noneTopicsSelected}
                 onClick={handleSelectNoneTopics}
                 style={{
                   background: noneTopicsSelected ? 'rgba(239, 68, 68, 0.12)' : 'transparent',
@@ -532,12 +562,14 @@ export default function OnboardingPage() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Learning goals" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {GOAL_OPTIONS.map((g) => {
                 const isSelected = selectedGoal === g.id;
                 return (
                   <button
                     key={g.id}
+                    role="radio"
+                    aria-checked={isSelected}
                     onClick={() => setSelectedGoal(g.id)}
                     style={{
                       background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
@@ -632,12 +664,14 @@ export default function OnboardingPage() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Diagnostic question options" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {questions[currentQuestionIndex].options.map((opt) => {
                 const isSelected = selectedOptionId === opt.id;
                 return (
                   <button
                     key={opt.id}
+                    role="radio"
+                    aria-checked={isSelected}
                     onClick={() => setSelectedOptionId(opt.id)}
                     style={{
                       background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',

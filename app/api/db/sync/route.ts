@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Return all user domains
-    const domains = ['profile', 'progress', 'submissions', 'drafts', 'activities', 'settings', 'memory_progress'];
+    const domains = ['profile', 'progress', 'submissions', 'drafts', 'activities', 'settings', 'memory_progress', 'onboarding'];
     const userPayload: Record<string, any> = {};
     for (const d of domains) {
       const key = `${d}:${userId}`;

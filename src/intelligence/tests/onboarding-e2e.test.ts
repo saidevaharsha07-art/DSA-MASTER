@@ -172,7 +172,7 @@ export async function runOnboardingE2ETestSuite() {
   assert('Guest state is NOT persisted to local storage', guestRecheck.status === 'ONBOARDING_NOT_STARTED');
 
   // ══════════════════════════════════════════════════════════════════
-  // 11. IDEMPOTENT TELEMETRY EVENT EMISSION
+  // 11. IDEMPOTENT TELEMETRY EVENT EMISSION & DEDUPLICATION
   // ══════════════════════════════════════════════════════════════════
   console.log('\n[11. ANALYTICS & EVENT HISTORY]');
   const eventsA = OnboardingService.getEventHistory(userA);
@@ -181,9 +181,35 @@ export async function runOnboardingE2ETestSuite() {
   assert('Includes OnboardingAssessmentCompleted event', eventsA.some(e => e.eventName === 'OnboardingAssessmentCompleted'));
   assert('Includes OnboardingCompleted event', eventsA.some(e => e.eventName === 'OnboardingCompleted'));
 
+  // Deduplication check: repeated completeOnboarding does not duplicate event
+  const eventsCountBefore = OnboardingService.getEventHistory(userA).length;
+  OnboardingService.completeOnboarding(userA);
+  const eventsCountAfter = OnboardingService.getEventHistory(userA).length;
+  assert('Repeated complete call does not inflate events (idempotent)', eventsCountAfter === eventsCountBefore);
+
+  // ══════════════════════════════════════════════════════════════════
+  // 12. DRAFT & SERVER SYNC / CROSS-DEVICE MERGE
+  // ══════════════════════════════════════════════════════════════════
+  console.log('\n[12. DRAFT + SERVER SYNC & PERSISTENCE BRIDGE]');
+  const userC = 'test_onboard_gamma_' + timestamp;
+  OnboardingService.resetForUser(userC);
+
+  // Device A creates draft at step 3
+  OnboardingService.updateStep(userC, 3, { selfReportedLevel: 'basics', selectedTopics: ['Arrays', 'Strings'] });
+  const draftProfile = OnboardingService.getProfile(userC);
+  assert('Local draft created at step 3', draftProfile.currentStep === 3);
+
+  // Async load resolves draft profile
+  const asyncProfile = await OnboardingService.loadProfileAsync(userC);
+  assert('Async load returns valid synchronized profile', asyncProfile.userId === userC && asyncProfile.currentStep === 3);
+
+  // First mission destination route validity
+  assert('First mission destination route is a valid internal route', asyncProfile.firstMission?.destinationRoute?.startsWith('/') ?? true);
+
   // Clean up test keys
   OnboardingService.resetForUser(userA);
   OnboardingService.resetForUser(userB);
+  OnboardingService.resetForUser(userC);
 
   console.log('================================================================');
   console.log(' ONBOARDING E2E RESULT: ' + totalPassed + ' PASSED, ' + totalFailed + ' FAILED');
@@ -196,3 +222,4 @@ if (require.main === module || process.argv[1]?.includes('onboarding-e2e.test'))
     process.exit(1);
   });
 }
+

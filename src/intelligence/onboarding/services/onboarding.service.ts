@@ -6,6 +6,8 @@
 
 import { storage } from '@/src/core/storage/LocalStorageAdapter';
 import { EventBus } from '@/src/core/events/event-bus';
+import { serverPersistenceBridge } from '@/src/core/storage/server-persistence.bridge';
+import { getSupabaseClient } from '@/src/lib/supabase/client';
 import {
   OnboardingProfile,
   OnboardingStatus,
@@ -119,15 +121,136 @@ export class OnboardingService {
     return defaultProfile;
   }
 
+  /**
+   * Asynchronously loads and synchronizes onboarding profile between local storage cache and remote server/Supabase.
+   * Deterministically handles cross-device drafts, completed states, and last-write timestamps.
+   */
+  public static async loadProfileAsync(userId: string): Promise<OnboardingProfile> {
+    const localProfile = this.getProfile(userId);
+    if (!userId || userId === 'guest' || userId === 'guest-user' || userId === 'default_user') {
+      return localProfile;
+    }
+
+    try {
+      // 1. Try fetching from Supabase directly if client available
+      let remoteProfile: OnboardingProfile | null = null;
+      const supabase = getSupabaseClient();
+      if (supabase) {
+        try {
+          const { data, error } = await supabase
+            .from('user_onboarding')
+            .select('*')
+            .eq('user_id', userId)
+            .maybeSingle();
+
+          if (!error && data) {
+            remoteProfile = {
+              userId: data.user_id,
+              status: data.status,
+              currentStep: data.current_step,
+              selfReportedLevel: data.self_reported_level,
+              learningGoal: data.learning_goal,
+              selectedTopics: Array.isArray(data.selected_topics) ? data.selected_topics : [],
+              assessmentScore: data.assessment_score,
+              assessmentEvidence: Array.isArray(data.assessment_evidence) ? data.assessment_evidence : [],
+              assessmentResult: data.assessment_result || undefined,
+              firstMission: data.first_mission || undefined,
+              completedAt: data.completed_at || undefined,
+              skippedAt: data.skipped_at || undefined,
+              createdAt: data.created_at || localProfile.createdAt,
+              updatedAt: data.updated_at || new Date().toISOString(),
+            };
+          }
+        } catch {
+          // Fallback to ServerPersistenceBridge
+        }
+      }
+
+      // 2. Fallback to ServerPersistenceBridge if remoteProfile not yet found
+      if (!remoteProfile) {
+        remoteProfile = await serverPersistenceBridge.fetchRemoteData<OnboardingProfile>('onboarding', userId);
+      }
+
+      // 3. Deterministic Merge Logic
+      if (remoteProfile) {
+        const remoteIsFinal = remoteProfile.status === 'ONBOARDING_COMPLETED' || remoteProfile.status === 'ONBOARDING_SKIPPED';
+        const localIsFinal = localProfile.status === 'ONBOARDING_COMPLETED' || localProfile.status === 'ONBOARDING_SKIPPED';
+
+        const remoteTime = new Date(remoteProfile.updatedAt || remoteProfile.createdAt || 0).getTime();
+        const localTime = new Date(localProfile.updatedAt || localProfile.createdAt || 0).getTime();
+
+        if (remoteIsFinal && !localIsFinal) {
+          // Remote is completed on another device, overwrite local draft
+          const key = STORAGE_KEY_PREFIX + userId;
+          storage.save(key, remoteProfile);
+          return remoteProfile;
+        } else if (localIsFinal && !remoteIsFinal) {
+          // Local is completed, push to remote
+          this.saveProfile(localProfile);
+          return localProfile;
+        } else if (remoteTime > localTime) {
+          // Remote is newer draft
+          const key = STORAGE_KEY_PREFIX + userId;
+          storage.save(key, remoteProfile);
+          return remoteProfile;
+        } else if (localTime > remoteTime) {
+          // Local is newer draft, push to remote
+          this.saveProfile(localProfile);
+          return localProfile;
+        }
+        return remoteProfile;
+      }
+    } catch (err) {
+      console.warn('[OnboardingService] loadProfileAsync fallback to local cache:', err);
+    }
+
+    return localProfile;
+  }
+
   public static saveProfile(profile: OnboardingProfile): void {
     if (!profile.userId || profile.userId === 'guest' || profile.userId === 'guest-user') {
       return;
     }
     const key = STORAGE_KEY_PREFIX + profile.userId;
-    storage.save(key, {
+    const now = new Date().toISOString();
+    const updatedProfile: OnboardingProfile = {
       ...profile,
-      updatedAt: new Date().toISOString(),
-    });
+      updatedAt: now,
+    };
+
+    // 1. Immediate local draft cache
+    storage.save(key, updatedProfile);
+
+    // 2. Server persistence bridge sync
+    serverPersistenceBridge.saveDurableData('onboarding', profile.userId, updatedProfile).catch(() => {});
+
+    // 3. Supabase direct sync if authenticated
+    const supabase = getSupabaseClient();
+    if (supabase) {
+      try {
+        Promise.resolve(
+          supabase
+            .from('user_onboarding')
+            .upsert({
+              user_id: profile.userId,
+              status: profile.status,
+              current_step: profile.currentStep,
+              self_reported_level: profile.selfReportedLevel || null,
+              learning_goal: profile.learningGoal || null,
+              selected_topics: profile.selectedTopics || [],
+              assessment_score: profile.assessmentScore ?? null,
+              assessment_evidence: profile.assessmentEvidence || [],
+              assessment_result: profile.assessmentResult || null,
+              first_mission: profile.firstMission || null,
+              completed_at: profile.completedAt || null,
+              skipped_at: profile.skippedAt || null,
+              updated_at: now,
+            })
+        ).catch(() => {});
+      } catch {
+        // Safe failover
+      }
+    }
   }
 
   public static updateStep(
@@ -145,7 +268,7 @@ export class OnboardingService {
     };
 
     this.saveProfile(updated);
-    this.emitEvent(userId, 'OnboardingStepCompleted', { step, status: updated.status });
+    this.emitEvent(userId, 'OnboardingStepCompleted', { step: updated.currentStep, status: updated.status });
     return updated;
   }
 
@@ -309,7 +432,7 @@ export class OnboardingService {
         'Solve your first foundational problem: Contains Duplicate or Two Sum',
         'Observe your Adaptive Roadmap unlock subsequent graph nodes based on genuine solves',
       ],
-      destinationRoute: '/learn/beginnings',
+      destinationRoute: '/practice/contains-duplicate',
       estimatedMinutes: 15,
       whySelected: [
         'Foundational prerequisite for all 14 canonical DSA topics',
@@ -329,6 +452,13 @@ export class OnboardingService {
     if (!userId || userId === 'guest' || userId === 'guest-user') return;
     const eventsKey = STORAGE_EVENTS_KEY_PREFIX + userId;
     const existingEvents = storage.get<any[]>(eventsKey) || [];
+
+    // Deduplication check: Do not emit duplicate step completion or identical terminal events in immediate succession
+    const lastEvent = existingEvents[existingEvents.length - 1];
+    if (lastEvent && lastEvent.eventName === eventName && JSON.stringify(lastEvent.data) === JSON.stringify(data)) {
+      return;
+    }
+
     const eventRecord = {
       eventName,
       userId,
@@ -349,3 +479,4 @@ export class OnboardingService {
     return storage.get<any[]>(STORAGE_EVENTS_KEY_PREFIX + userId) || [];
   }
 }
+
