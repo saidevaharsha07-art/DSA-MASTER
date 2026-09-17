@@ -76,7 +76,15 @@ export type AppEventType =
   | 'InterviewStarted'
   | 'InterviewQuestionAttempted'
   | 'InterviewQuestionCompleted'
-  | 'InterviewCompleted';
+  | 'InterviewCompleted'
+  | 'OnboardingStarted'
+  | 'OnboardingStepCompleted'
+  | 'OnboardingAssessmentStarted'
+  | 'OnboardingAssessmentCompleted'
+  | 'OnboardingSkipped'
+  | 'OnboardingCompleted'
+  | 'FirstMissionStarted'
+  | 'FirstMissionCompleted';
 
 export interface AppEvent<T = unknown> {
   readonly id: string;

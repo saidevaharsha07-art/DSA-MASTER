@@ -134,4 +134,10 @@ export interface AdaptiveRoadmapState {
   blockers: LearningBlocker[];
   weeklyPlan: DailyScheduleItem[];
   isZeroState: boolean;
+  onboardingPrior?: {
+    status: string;
+    assessmentScore?: number;
+    baselineEvidence: string[];
+    isBaselineOnly: boolean;
+  };
 }

@@ -19,6 +19,7 @@ import { ContestArenaService } from '@/src/features/contest/services/contest-are
 import { RevisionAdapterService } from '@/src/features/revision/services/revision-adapter.service';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { EventBus } from '@/src/core/events/event-bus';
+import { OnboardingService } from '@/src/intelligence/onboarding/services/onboarding.service';
 import {
   UnifiedRecommendation,
   RecommendationActionType,
@@ -60,6 +61,28 @@ export class RecommendationEngineService {
         evidence: { practiceSolved: 0, practiceAttempted: 0 },
       };
 
+      let onboardingProfile: any = null;
+      try {
+        onboardingProfile = OnboardingService.getProfile(cleanUserId);
+      } catch {
+        // safe fallback
+      }
+
+      const supportingEvidence = [
+        'Foundation topic with no prior attempts',
+        'Core prerequisite for Two Pointers, Stacks, and Trees',
+        'Optimal entry point for beginner and intermediate patterns',
+      ];
+
+      const sourceSignals = ['AdaptiveRoadmap:Foundation'];
+
+      if (onboardingProfile?.status === 'ONBOARDING_COMPLETED' || onboardingProfile?.status === 'ONBOARDING_SKIPPED') {
+        sourceSignals.push('Onboarding:BaselineSignal');
+        if (onboardingProfile.assessmentEvidence && onboardingProfile.assessmentEvidence.length > 0) {
+          supportingEvidence.push(...onboardingProfile.assessmentEvidence);
+        }
+      }
+
       const zeroStateRec: UnifiedRecommendation = {
         id: `rec_zero_${firstTopic.id}_${cleanUserId}`,
         actionType: 'LEARN',
@@ -69,13 +92,9 @@ export class RecommendationEngineService {
         priorityRank: 2,
         topic: firstTopic.title,
         topicId: firstTopic.id,
-        sourceSignals: ['AdaptiveRoadmap:Foundation'],
+        sourceSignals,
         destinationRoute: '/learn/beginnings',
-        supportingEvidence: [
-          'Foundation topic with no prior attempts',
-          'Core prerequisite for Two Pointers, Stacks, and Trees',
-          'Optimal entry point for beginner and intermediate patterns',
-        ],
+        supportingEvidence,
         createdAt: new Date().toISOString(),
         userId: cleanUserId,
         confidenceStrength: 'high',
@@ -93,7 +112,9 @@ export class RecommendationEngineService {
           recentAccuracy: 0,
           srsRetention: 0,
           recommendedAction: 'LEARN',
-          contextSummary: 'Fresh learner starting Arrays & Hashing foundational patterns.',
+          contextSummary: onboardingProfile?.assessmentScore !== undefined
+            ? `Learner completed baseline assessment (${onboardingProfile.assessmentScore}% score). Zero verified solves.`
+            : 'Fresh learner starting Arrays & Hashing foundational patterns.',
         },
         isZeroState: true,
         isGuest,

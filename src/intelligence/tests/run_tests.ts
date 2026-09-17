@@ -65,6 +65,7 @@ import { testPhase13CloudProductionRealIntegration } from './phase13-cloud-produ
 import { runJourneyHeatmapCalendarTests } from './journey-heatmap-calendar-integration.test';
 import { testEndToEndDataConsistencyIntegration } from './end-to-end-data-consistency-integration.test';
 import { testProductionAuthIntegration } from './production-auth-integration.test';
+import { runOnboardingE2ETestSuite } from './onboarding-e2e.test';
 
 export async function runAllIntelligenceTests(): Promise<void> {
   console.log('==================================================');
@@ -206,6 +207,9 @@ export async function runAllIntelligenceTests(): Promise<void> {
 
     console.log('\n=== PRODUCTION AUTHENTICATION & IDENTITY INTEGRATION ===');
     await testProductionAuthIntegration();
+
+    console.log('\n=== FIRST-TIME LEARNER ONBOARDING 1.0 INTEGRATION ===');
+    await runOnboardingE2ETestSuite();
 
     await runMasterProductionSuite();
 

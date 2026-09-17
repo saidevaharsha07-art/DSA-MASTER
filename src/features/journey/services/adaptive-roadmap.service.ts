@@ -12,6 +12,7 @@ import { InterviewArenaService } from '@/src/features/interview/services/intervi
 import { ContestArenaService } from '@/src/features/contest/services/contest-arena.service';
 import { progressService } from '@/src/services/progress/progress.service';
 import { storage } from '@/src/core/storage/LocalStorageAdapter';
+import { OnboardingService } from '@/src/intelligence/onboarding/services/onboarding.service';
 import {
   TopicStatus,
   NextActionType,
@@ -664,6 +665,22 @@ export class AdaptiveRoadmapService {
       blockers: blockers.slice(0, 3),
       weeklyPlan,
       isZeroState,
+      onboardingPrior: (() => {
+        try {
+          const onboarding = OnboardingService.getProfile(userId);
+          if (onboarding.status === 'ONBOARDING_COMPLETED' || onboarding.status === 'ONBOARDING_SKIPPED') {
+            return {
+              status: onboarding.status,
+              assessmentScore: onboarding.assessmentScore,
+              baselineEvidence: [...onboarding.assessmentEvidence],
+              isBaselineOnly: isZeroState,
+            };
+          }
+        } catch {
+          // safe fallback
+        }
+        return undefined;
+      })(),
     };
   }
 }

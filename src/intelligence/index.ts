@@ -78,3 +78,4 @@ export * from './services/intelligence.service';
 
 export * from './utils/metrics.calculator';
 export * from './utils/data-helpers';
+export * from './onboarding';
