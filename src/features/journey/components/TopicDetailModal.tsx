@@ -30,40 +30,17 @@ export function TopicDetailModal({ topic, onClose }: TopicDetailModalProps) {
   const { settings } = useSettings();
   const isLight = settings.appearance.theme === 'light';
 
-  if (!topic) return null;
-
-  const mentorQuery = `I'm working on the "${topic.title}" topic on DSA MASTER.
-Current Mastery: ${topic.masteryScore}% (Status: ${topic.status}).
-Evidence: ${topic.evidence.practiceSolved} solved, ${topic.evidence.failedAttemptsCount} failed attempts, Accuracy: ${topic.evidence.recentAccuracyPercent}%, Revision Retention: ${topic.evidence.revisionRetentionPercent}%.
-Reason: ${topic.statusReason}
-Recommended Action: ${topic.recommendedAction}.
-Please explain how I can address my weak areas in this topic and guide me through the most crucial patterns.`;
-
-  const mentorUrl = `/mentor?context=roadmap&topic=${encodeURIComponent(
-    topic.title
-  )}&mastery=${topic.masteryScore}&status=${topic.status}`;
-
-  const statusColor =
-    topic.status === 'MASTERED'
-      ? '#10B981'
-      : topic.status === 'STRONG'
-      ? '#3B82F6'
-      : topic.status === 'PRACTICING'
-      ? '#EC4899'
-      : topic.status === 'NEEDS_REVIEW'
-      ? '#EF4444'
-      : topic.status === 'BLOCKED'
-      ? '#64748B'
-      : '#F59E0B';
-
   // Close on Escape key
   React.useEffect(() => {
+    if (!topic) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+  }, [topic, onClose]);
+
+  if (!topic) return null;
 
   return (
     <div

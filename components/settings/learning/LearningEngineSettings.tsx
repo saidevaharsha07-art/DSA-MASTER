@@ -221,7 +221,7 @@ export function LearningEngineSettings() {
         >
           <div>
             <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Today's Learning
+              Today&apos;s Learning
             </span>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '12px', fontSize: '12px', color: 'var(--text-secondary)' }}>
               <span>Reviews Due: <strong style={{ color: 'var(--text-primary)', fontSize: '14px' }}>{Math.max(6, reviewCount * 2)}</strong></span>
