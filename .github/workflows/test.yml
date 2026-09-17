@@ -16,6 +16,6 @@ jobs:
         with:
           node-version: 22.x
           cache: 'npm'
-      - run: npm ci
+      - run: npm install --no-audit
       - name: Run Master Intelligence Test Suite
         run: npx tsx src/intelligence/tests/run_tests.ts
