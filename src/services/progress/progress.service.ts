@@ -295,7 +295,7 @@ export class ProgressService {
    */
   private handleProblemSolvedEvent(event: AppEvent): void {
     const payload = event.payload as PracticeAttempt | any;
-    if (!payload) return;
+    if (!payload || payload.status === 'unsolved' || payload.action === 'unsolve') return;
 
     const userId = String(payload.userId || 'default_user');
     const state = this.getState(userId);
@@ -378,9 +378,25 @@ export class ProgressService {
       this.activityLog.splice(0, this.activityLog.length - MAX_ACTIVITY_LOG_SIZE);
     }
     storage.save(STORAGE_KEY_ACTIVITY_LOG, this.activityLog);
+    activityStoreService.recordActivity({
+      eventId: record.id,
+      userId: 'default_user',
+      action: record.action === 'solve' ? 'solved' : record.action === 'review' ? 'review' : 'run',
+      timestamp: record.timestamp,
+      problemId: record.problemId,
+      platform: record.platform,
+      xpEarned: record.xpEarned,
+      topic: record.topic,
+      pattern: record.pattern,
+      difficulty: record.difficulty,
+      durationSeconds: record.durationSeconds,
+    });
   }
 
   public getActivityLog(userId = 'default_user'): ActivityRecord[] {
+    if (userId === 'default_user' && this.activityLog.length > 0) {
+      return [...this.activityLog];
+    }
     const canonical = activityStoreService.getActivityLog(userId);
     return canonical.map((r) => ({
       id: r.eventId,
@@ -560,17 +576,6 @@ export class ProgressService {
       );
       const nextState = { ...state, completed: nextCompleted, completedProblemIds: nextProblemIds };
       this.saveState(userId, nextState);
-
-      activityStoreService.recordActivity({
-        eventId: `act_unsolve_${Date.now()}`,
-        userId,
-        action: 'run',
-        timestamp: new Date().toISOString(),
-        problemId: canonicalPrefix,
-        platform,
-        status: 'unsolved',
-        xpEarned: 0,
-      });
 
       EventBus.publish('ProblemSolved', {
         userId,

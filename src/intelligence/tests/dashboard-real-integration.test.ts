@@ -14,6 +14,7 @@ export async function testDashboardRealIntegration(): Promise<void> {
   console.log('--- Testing Dashboard Command Center Integration (Tests 1-10) ---');
 
   // Reset services before test run
+  progressService.resetState('test_user_empty');
   progressService.resetState();
   if (!Container.has('MemoryEngine')) {
     Container.registerSingleton('MemoryEngine', new MemoryEngine());

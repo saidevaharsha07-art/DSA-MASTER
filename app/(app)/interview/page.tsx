@@ -1,5 +1,8 @@
 'use client';
 
+/**
+ * Real Adaptive Mock Interview Simulator — Interview Arena
+ */
 import React, { useState, useEffect, useMemo } from 'react';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { useSettings } from '@/src/context/SettingsContext';

@@ -41,6 +41,10 @@ export class AuthService {
     this.providers.set(provider.providerType, provider);
   }
 
+  public getSupabaseProvider(): SupabaseAuthProvider {
+    return this.supabaseProvider;
+  }
+
   public getStateService(): AuthStateService {
     return this.stateService;
   }

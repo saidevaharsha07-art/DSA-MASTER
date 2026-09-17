@@ -46,6 +46,18 @@ export class LocalStorageAdapter implements StorageAdapter {
       console.warn(`Error removing localStorage key "${key}":`, e);
     }
   }
+
+  clear(): void {
+    if (typeof window === 'undefined') {
+      LocalStorageAdapter.memoryStore.clear();
+      return;
+    }
+    try {
+      window.localStorage.clear();
+    } catch (e) {
+      console.warn('Error clearing localStorage:', e);
+    }
+  }
 }
 
 // Global default storage instance

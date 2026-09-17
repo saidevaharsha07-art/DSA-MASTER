@@ -14,6 +14,7 @@ export async function testAnalyticsRealIntegration(): Promise<void> {
   console.log('--- Testing Real Analytics Integration (Tests 1-9) ---');
 
   // Reset services before test run
+  progressService.resetState('test_user_empty');
   progressService.resetState();
   if (!Container.has('MemoryEngine')) {
     Container.registerSingleton('MemoryEngine', new MemoryEngine());
