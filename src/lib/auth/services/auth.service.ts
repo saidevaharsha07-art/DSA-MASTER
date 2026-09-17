@@ -83,9 +83,19 @@ export class AuthService {
   }
 
   public async signIn(providerType: AuthProviderType = 'supabase', credentials?: SignInCredentials): Promise<AuthResult> {
-    const provider = this.providers.get(providerType);
+    let targetProvider = providerType;
+    if (targetProvider === 'supabase' && !this.supabaseProvider.getIsConfigured()) {
+      targetProvider = 'email';
+    }
+
+    let provider = this.providers.get(targetProvider);
+    if (!provider && targetProvider !== 'supabase') {
+      provider = this.providers.get('email');
+      targetProvider = 'email';
+    }
+
     if (!provider) {
-      return { success: false, error: `Provider '${providerType}' is not registered.` };
+      return { success: false, error: `Provider '${targetProvider}' is not registered.` };
     }
 
     const res = await provider.signIn(credentials);
@@ -96,16 +106,30 @@ export class AuthService {
         isAuthenticated: true,
         user: res.user,
         session: res.session,
-        activeProviderName: providerType,
+        activeProviderName: targetProvider,
       });
 
-      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: providerType });
+      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: targetProvider });
     }
     return res;
   }
 
   public async signUp(credentials: SignUpCredentials): Promise<AuthResult> {
-    const res = await this.supabaseProvider.signUp(credentials);
+    let res: AuthResult;
+    let providerName: AuthProviderType = 'supabase';
+
+    if (this.supabaseProvider.getIsConfigured()) {
+      res = await this.supabaseProvider.signUp(credentials);
+    } else {
+      const emailProvider = this.providers.get('email') as EmailProvider;
+      if (emailProvider) {
+        res = await emailProvider.signUp(credentials);
+        providerName = 'email';
+      } else {
+        res = await this.supabaseProvider.signUp(credentials);
+      }
+    }
+
     if (res.success && res.session && res.user) {
       this.initializeUserAccount(res.user);
       await this.sessionService.saveSession(res.session);
@@ -113,10 +137,10 @@ export class AuthService {
         isAuthenticated: true,
         user: res.user,
         session: res.session,
-        activeProviderName: 'supabase',
+        activeProviderName: providerName,
       });
 
-      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: 'supabase' });
+      EventBus.publish('UserSignedIn', { userId: res.user.id, provider: providerName });
     }
     return res;
   }

@@ -18,14 +18,14 @@ export function getSafeRedirect(url: string | null | undefined): string {
   return '/dashboard';
 }
 
-export function resolveUserDestination(userId?: string, rawTarget?: string | null, isSignUp = false): string {
+export async function resolveUserDestination(userId?: string, rawTarget?: string | null, isSignUp = false): Promise<string> {
   if (rawTarget) {
     return getSafeRedirect(rawTarget);
   }
   if (!userId) {
     return isSignUp ? '/onboarding' : '/dashboard';
   }
-  const obProfile = OnboardingService.getProfile(userId);
+  const obProfile = await OnboardingService.loadProfileAsync(userId);
   if (obProfile.status === 'ONBOARDING_NOT_STARTED' || (isSignUp && obProfile.status === 'ONBOARDING_IN_PROGRESS')) {
     return '/onboarding';
   }
@@ -63,7 +63,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
 
   // Extract destination redirect target
-  const rawTarget = searchParams?.get('redirect') || searchParams?.get('next');
+  const rawTarget = searchParams?.get('redirect') || searchParams?.get('returnUrl');
 
   // Sync tab with URL if param changes
   useEffect(() => {
@@ -75,9 +75,16 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
 
   // Redirect authenticated user directly to destination
   useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      const dest = resolveUserDestination(user?.id, rawTarget, false);
-      router.replace(dest);
+    if (!isLoading && isAuthenticated && user?.id) {
+      let isSubscribed = true;
+      resolveUserDestination(user.id, rawTarget, false).then((dest) => {
+        if (isSubscribed) {
+          router.replace(dest);
+        }
+      });
+      return () => {
+        isSubscribed = false;
+      };
     }
   }, [isAuthenticated, isLoading, user?.id, router, rawTarget]);
 
@@ -137,7 +144,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
           setFormError(res.error || 'Username/email or password is incorrect. Please try again.');
         } else {
           setFormSuccess('Authentication successful! Directing to application...');
-          const target = resolveUserDestination(res.user?.id, rawTarget, false);
+          const target = await resolveUserDestination(res.user?.id, rawTarget, false);
           setTimeout(() => router.replace(target), 500);
         }
       } else if (tab === 'signup') {
@@ -148,7 +155,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
           setFormSuccess('Account registered successfully! A verification email has been sent to ' + email + '. Please verify your email before logging in.');
         } else {
           setFormSuccess('Account created successfully! Directing to your personalized setup...');
-          const target = resolveUserDestination(res.user?.id, rawTarget, true);
+          const target = await resolveUserDestination(res.user?.id, rawTarget, true);
           setTimeout(() => router.replace(target), 500);
         }
       } else if (tab === 'forgot') {
@@ -176,7 +183,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
         window.location.href = res.url;
       } else if (res.success) {
         setFormSuccess('Google sign in successful!');
-        const target = resolveUserDestination(user?.id, rawTarget, false);
+        const target = await resolveUserDestination(user?.id, rawTarget, false);
         setTimeout(() => router.replace(target), 500);
       } else {
         setFormError(res.error || 'Google sign-in could not be completed. Please try again.');
