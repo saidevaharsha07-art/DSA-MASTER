@@ -10,6 +10,8 @@ import {
   Settings,
   Compass,
   Sparkles,
+  Timer,
+  Trophy,
 } from "lucide-react";
 import { useRoadmap } from "@/hooks/use-roadmap";
 import { useCodeforces } from "@/hooks/use-codeforces";
@@ -23,6 +25,8 @@ const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],
   ["Journey", "/journey", Compass],
   ["Practice", "/practice", Code2],
+  ["Interview", "/interview", Timer],
+  ["Contest", "/contest", Trophy],
   ["Revision", "/revision", RotateCcw],
   ["Analytics", "/analytics", BarChart3],
   ["AI Mentor", "/mentor", Sparkles],

@@ -447,6 +447,9 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
         runtimeMs={submissionModal.runtimeMs}
         memoryMb={submissionModal.memoryMb}
         xpEarned={submissionModal.xpEarned}
+        problemId={problem.slug || problem.id}
+        topic={problem.topics?.[0] || problem.categoryTitle || 'General'}
+        userId={userId}
       />
 
       {/* Guest Account Prompt Modal */}

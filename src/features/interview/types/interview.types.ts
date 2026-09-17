@@ -190,3 +190,122 @@ export interface InterviewProgressSummary {
   readonly recommendations: ReadonlyArray<InterviewRecommendation>;
   readonly history: UserInterviewHistorySummary;
 }
+
+// ==================================================
+// PHASE 12 — INTERVIEW ARENA LIVE MODELS
+// ==================================================
+
+export type InterviewTopicType =
+  | 'General DSA'
+  | 'Arrays & Hashing'
+  | 'Trees & Graphs'
+  | 'Dynamic Programming'
+  | 'Mixed Patterns';
+
+export type InterviewArenaDifficulty = 'Easy' | 'Medium' | 'Hard' | 'Mixed';
+export type InterviewDurationMinutes = 20 | 30 | 45 | 60;
+export type InterviewProblemCount = 1 | 2 | 3 | 4;
+export type InterviewLanguage = 'java' | 'python' | 'cpp' | 'javascript' | 'typescript';
+
+export interface InterviewConfig {
+  type: InterviewTopicType;
+  difficulty: InterviewArenaDifficulty;
+  durationMinutes: InterviewDurationMinutes;
+  problemCount: InterviewProblemCount;
+  language: InterviewLanguage;
+  useWeakness: boolean;
+}
+
+export interface InterviewArenaProblemAttempt {
+  problemId: string;
+  title: string;
+  difficulty: string;
+  pattern: string;
+  categorySlug: string;
+  description: string;
+  examples: Array<{ input: string; output: string; explanation?: string }>;
+  constraints: string[];
+  hints: string[];
+  starterCode: string;
+  userCode: string;
+  language: InterviewLanguage;
+  status: 'unattempted' | 'attempted' | 'passed' | 'failed';
+  attemptsCount: number;
+  timeSpentSeconds: number;
+  lastVerdict?: string;
+  lastOutput?: string;
+  runtimeMs?: number;
+  memoryMb?: number;
+  testcasesPassed?: number;
+  totalTestcases?: number;
+}
+
+export interface InterviewArenaReport {
+  id: string;
+  sessionId: string;
+  userId: string;
+  date: string;
+  interviewType: InterviewTopicType;
+  difficulty: InterviewArenaDifficulty;
+  durationSeconds: number;
+  timeUsedSeconds: number;
+  overallScore: number;
+  grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
+  verdict: string;
+  metrics: {
+    accuracy: number; // 0-100
+    problemSolving: number; // 0-100
+    timeManagement: number; // 0-100
+    patternRecognition: number; // 0-100
+    consistency: number; // 0-100
+  };
+  problemBreakdown: Array<{
+    problemId: string;
+    title: string;
+    difficulty: string;
+    pattern: string;
+    result: 'Passed' | 'Incomplete' | 'Failed';
+    attempts: number;
+    timeSpentMinutes: number;
+    testcasesPassed: number;
+    totalTestcases: number;
+  }>;
+  whatWentWell: string[];
+  whatNeedsWork: string[];
+  recommendedNextSteps: Array<{
+    title: string;
+    type: 'practice' | 'revision';
+    url: string;
+    reason: string;
+  }>;
+  mentorQueryContext: string;
+}
+
+export interface InterviewArenaSession {
+  id: string;
+  userId: string;
+  config: InterviewConfig;
+  startedAt: string;
+  expiresAt: string;
+  durationSeconds: number;
+  problems: InterviewArenaProblemAttempt[];
+  activeProblemIndex: number;
+  status: 'in_progress' | 'completed' | 'expired';
+  completedAt?: string;
+  report?: InterviewArenaReport;
+}
+
+export interface InterviewHistoryRecord {
+  id: string;
+  userId: string;
+  date: string;
+  type: InterviewTopicType;
+  difficulty: InterviewArenaDifficulty;
+  score: number;
+  grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
+  durationMinutes: number;
+  timeUsedMinutes: number;
+  problemsCompleted: number;
+  totalProblems: number;
+  report: InterviewArenaReport;
+}

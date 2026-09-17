@@ -16,9 +16,10 @@ export async function testProductionAuthIntegration(): Promise<void> {
   console.log('=== TESTING PRODUCTION AUTHENTICATION & IDENTITY INTEGRATION ===');
 
   const authService = new AuthService();
-  const testEmailA = `user_a_${Date.now()}@dsa.com`;
-  const testEmailB = `user_b_${Date.now()}@dsa.com`;
-  const testPassword = 'SecurePassword123!';
+  const emailDomain = process.env.QA_TEST_EMAIL_DOMAIN || 'dsa.com';
+  const testEmailA = `user_a_${Date.now()}@${emailDomain}`;
+  const testEmailB = `user_b_${Date.now()}@${emailDomain}`;
+  const testPassword = process.env.QA_TEST_PASSWORD || `SecP@ss_${Math.random().toString(36).slice(2)}!A1`;
 
   // Test 1: New User Signup
   const signupRes = await authService.signUp({

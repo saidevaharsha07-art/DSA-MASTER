@@ -48,10 +48,15 @@ export function JourneyCalendarHeatmap() {
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => today.toISOString().split('T')[0], [today]);
 
+  const [mounted, setMounted] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date>(() => new Date(today.getFullYear(), today.getMonth(), 1));
   const [selectedCellDateStr, setSelectedCellDateStr] = useState<string>(todayStr);
   const [activityVersion, setActivityVersion] = useState<number>(0);
   const [hoveredCell, setHoveredCell] = useState<DayCellData | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Subscribe to EventBus updates to refresh heatmap in real-time
   useEffect(() => {
@@ -293,6 +298,31 @@ export function JourneyCalendarHeatmap() {
       };
     }
   };
+
+  if (!mounted) {
+    return (
+      <div
+        style={{
+          padding: '24px',
+          borderRadius: 'var(--radius, 16px)',
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          minHeight: '380px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '12px',
+          color: 'var(--text-secondary)',
+          width: '100%',
+          boxSizing: 'border-box',
+        }}
+      >
+        <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: '2px solid var(--primary)', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }} />
+        <span style={{ fontSize: '13px', fontWeight: 600 }}>Loading learning journey heatmap...</span>
+      </div>
+    );
+  }
 
   return (
     <div

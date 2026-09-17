@@ -13,6 +13,10 @@ import { AdaptiveRecommendationService, PracticeRecommendation } from '@/src/fea
 import { WeaknessAnalyzer } from '@/src/intelligence/analyzers/weakness.analyzer';
 import { StrengthAnalyzer } from '@/src/intelligence/analyzers/strength.analyzer';
 import { EventBus } from '@/src/core/events/event-bus';
+import {
+  RecommendationEngineService,
+  UnifiedRecommendation,
+} from '@/src/intelligence/recommendations';
 
 export interface KingdomProgression {
   slug: string;
@@ -249,6 +253,8 @@ export interface DashboardSummary {
   }>;
 
   recommendations: PracticeRecommendation[];
+  unifiedRecommendations: UnifiedRecommendation[];
+  topRecommendation: UnifiedRecommendation;
 }
 
 export class DashboardAdapterService {
@@ -929,48 +935,53 @@ export class DashboardAdapterService {
         : 'Complete practice problems in the Arena to unlock personalized mistake telemetry.',
     };
 
-    // 16. TODAY'S MISSION
+    // 16. SHARED RECOMMENDATION ENGINE INTEGRATION (Single Source of Truth)
+    const unifiedRecommendations = RecommendationEngineService.getRecommendations(userId, 6);
+    const topUnifiedRec = RecommendationEngineService.getTopRecommendation(userId);
+
+    const learnRec = unifiedRecommendations.find((r) => r.actionType === 'LEARN');
+    const practiceRec = unifiedRecommendations.find((r) => r.actionType === 'PRACTICE' || r.actionType === 'REVIEW_MISTAKE');
+    const reviseRec = unifiedRecommendations.find((r) => r.actionType === 'REVISE');
+
+    // 17. TODAY'S MISSION (Coordinated from Recommendation Engine)
     const todaysMission: TodaysMission = {
       learn: {
-        title: continueLearning.kingdomTitle,
-        topic: continueLearning.nextPattern,
-        url: '/learn',
-        statusText: continueLearning.percentage > 0 ? `${continueLearning.percentage}% completed` : 'Ready to start',
+        title: learnRec?.title || continueLearning.kingdomTitle,
+        topic: learnRec?.topic || continueLearning.nextPattern,
+        url: learnRec?.destinationRoute || '/learn',
+        statusText: learnRec ? `${learnRec.estimatedMinutes}m • ${learnRec.priority}` : continueLearning.percentage > 0 ? `${continueLearning.percentage}% completed` : 'Ready to start',
       },
       practice: {
         solvedToday: currentSolves,
         dailyGoal: targetSolves,
-        targetTopic: todayFocus.recommendedTopic,
-        url: '/practice',
+        targetTopic: practiceRec?.topic || todayFocus.recommendedTopic,
+        url: practiceRec?.destinationRoute || '/practice',
         isCompleted: currentSolves >= targetSolves,
       },
       revise: {
         dueCount: revisionDueCount,
-        urgentTopic: revisionItems[0]?.topic,
-        url: '/revision',
-        hasDueItems: revisionDueCount > 0,
+        urgentTopic: reviseRec?.topic || revisionItems[0]?.topic,
+        url: reviseRec?.destinationRoute || '/revision',
+        hasDueItems: revisionDueCount > 0 || !!reviseRec,
       },
       mentor: {
-        insight: summaryReasoning,
-        recommendedTopic: recommendedFocus,
-        url: '/mentor',
+        insight: topUnifiedRec.mentorContextPayload?.contextSummary || summaryReasoning,
+        recommendedTopic: topUnifiedRec.topic || recommendedFocus,
+        url: `/mentor?context=recommendation&topic=${encodeURIComponent(topUnifiedRec.topic)}`,
       },
     };
 
-    // 17. PRIMARY UNIFIED RECOMMENDATION
-    const topRec = recommendations[0];
+    // 18. PRIMARY UNIFIED RECOMMENDATION
     const primaryRecommendation: PrimaryRecommendation = {
-      problemId: topRec?.problemId || 'p-1',
-      title: topRec?.title || 'Two Sum',
-      topic: topRec?.topic || 'Arrays & Hashing',
-      difficulty: topRec?.difficulty || 'Easy',
-      reason: topRec?.reason
-        ? `${topRec.reason}. Directly aligned with your active roadmap.`
-        : 'Foundational problem to build your core array lookup and hashing intuition.',
-      actionLabel: 'Solve Problem',
-      url: topRec?.url ? `/practice?problem=${topRec.problemId}` : '/practice',
-      xp: topRec?.xp || 25,
-      estimatedMinutes: topRec?.estimatedDurationMinutes || 20,
+      problemId: topUnifiedRec.targetProblemId || recommendations[0]?.problemId || 'p-1',
+      title: topUnifiedRec.title,
+      topic: topUnifiedRec.topic,
+      difficulty: topUnifiedRec.targetDifficulty || 'Medium',
+      reason: topUnifiedRec.explanation,
+      actionLabel: topUnifiedRec.actionType === 'REVISE' ? 'Revise Now' : topUnifiedRec.actionType === 'LEARN' ? 'Start Learning' : 'Solve Challenge',
+      url: topUnifiedRec.destinationRoute,
+      xp: 25,
+      estimatedMinutes: topUnifiedRec.estimatedMinutes,
     };
 
     const summary: DashboardSummary = {
@@ -1025,6 +1036,8 @@ export class DashboardAdapterService {
       recentActivity,
 
       recommendations,
+      unifiedRecommendations,
+      topRecommendation: topUnifiedRec,
     };
 
     this.cache.set(userId, summary);

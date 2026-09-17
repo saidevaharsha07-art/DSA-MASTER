@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle, Award, Sparkles, Flame, Coins, ArrowRight, X } from 'lucide-react';
 import { useSettings } from '@/src/context/SettingsContext';
+import { RecommendationEngineService } from '@/src/intelligence/recommendations/services/recommendation-engine.service';
 
 interface SubmissionResultModalProps {
   isOpen: boolean;
@@ -12,6 +13,9 @@ interface SubmissionResultModalProps {
   runtimeMs: number;
   memoryMb: number;
   xpEarned: number;
+  problemId?: string;
+  topic?: string;
+  userId?: string;
 }
 
 export function SubmissionResultModal({
@@ -21,6 +25,9 @@ export function SubmissionResultModal({
   runtimeMs,
   memoryMb,
   xpEarned,
+  problemId = 'unknown',
+  topic = 'General',
+  userId = 'user',
 }: SubmissionResultModalProps) {
   const { settings } = useSettings();
   const isLight = settings?.appearance?.theme === 'light';
@@ -105,6 +112,77 @@ export function SubmissionResultModal({
           </div>
         )}
 
+        {/* Post-Practice Unified Recommendation Card */}
+        {(() => {
+          const rec = RecommendationEngineService.getPostPracticeRecommendation(userId, {
+            problemId,
+            topic,
+            outcome: isSuccess ? 'SOLVED' : 'FAILED',
+            durationSeconds: Math.round(runtimeMs / 1000) || 30,
+            failCount: isSuccess ? 0 : 1,
+          });
+
+          return (
+            <div style={{
+              width: '100%',
+              padding: '12px 14px',
+              borderRadius: '12px',
+              background: isLight ? '#F8FAFC' : 'rgba(255,255,255,0.03)',
+              border: '1px solid var(--border)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '6px',
+              textAlign: 'left',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{
+                  fontSize: '10px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  color: isSuccess ? '#10B981' : '#F59E0B',
+                  letterSpacing: '0.05em',
+                }}>
+                  Next Recommended Action • {rec.actionType}
+                </span>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>~{rec.estimatedMinutes}m</span>
+              </div>
+              <div style={{ fontSize: '13px', fontWeight: 800, color: 'var(--text-primary)' }}>
+                {rec.title}
+              </div>
+              <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+                {rec.explanation}
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px', paddingTop: '6px', borderTop: '1px solid var(--border)' }}>
+                <a
+                  href={`/mentor?context=recommendation&topic=${encodeURIComponent(rec.topic)}&action=${rec.actionType}`}
+                  style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', textDecoration: 'none' }}
+                >
+                  Ask Mentor
+                </a>
+                <a
+                  href={rec.destinationRoute}
+                  onClick={() => RecommendationEngineService.recordStart(userId, rec.id)}
+                  style={{
+                    padding: '4px 10px',
+                    borderRadius: '6px',
+                    background: isSuccess ? '#10B981' : '#6366F1',
+                    color: '#FFFFFF',
+                    fontSize: '11px',
+                    fontWeight: 800,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                  }}
+                >
+                  <span>Continue</span>
+                  <ArrowRight size={11} />
+                </a>
+              </div>
+            </div>
+          );
+        })()}
+
         <button
           type="button"
           onClick={onClose}
@@ -112,15 +190,15 @@ export function SubmissionResultModal({
             width: '100%',
             padding: '10px',
             borderRadius: '10px',
-            background: isSuccess ? 'linear-gradient(135deg, #10B981, #059669)' : (isLight ? '#F1F5F9' : 'rgba(255,255,255,0.1)'),
-            border: isSuccess ? 'none' : '1px solid var(--border)',
-            color: isSuccess ? '#FFFFFF' : 'var(--text-primary)',
+            background: isLight ? '#F1F5F9' : 'rgba(255,255,255,0.1)',
+            border: '1px solid var(--border)',
+            color: 'var(--text-primary)',
             fontSize: '13px',
             fontWeight: 800,
             cursor: 'pointer',
           }}
         >
-          {isSuccess ? 'Continue' : 'Close'}
+          Dismiss
         </button>
 
       </motion.div>

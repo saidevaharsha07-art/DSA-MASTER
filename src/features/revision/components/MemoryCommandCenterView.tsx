@@ -35,6 +35,8 @@ import { useToast } from '@/src/context/ToastContext';
 import { ProblemModel, RevisionData } from '@/src/curriculum/types';
 import { useSettings } from '@/src/context/SettingsContext';
 import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
+import { RecommendationEngineService } from '@/src/intelligence/recommendations/services/recommendation-engine.service';
+import { RecommendationCard } from '@/src/intelligence/recommendations/components/RecommendationCard';
 
 export function MemoryCommandCenterView() {
   const { userId, isAuthenticated } = useActiveUser();
@@ -813,27 +815,19 @@ export function MemoryCommandCenterView() {
                 Your memory queue is clear.
               </strong>
               <span style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
-                Nothing needs review right now. Keep solving problems and the system will schedule future reviews automatically.
+                All spaced repetition reviews are up to date! Here is your next optimal learning action:
               </span>
             </div>
-            <Link href="/practice" style={{ textDecoration: 'none' }}>
-              <button
-                type="button"
-                style={{
-                  marginTop: '8px',
-                  padding: '8px 18px',
-                  borderRadius: '10px',
-                  background: 'var(--primary, #8B5CF6)',
-                  border: 'none',
-                  color: '#FFF',
-                  fontSize: '12px',
-                  fontWeight: 800,
-                  cursor: 'pointer',
-                }}
-              >
-                Go to Practice Arena →
-              </button>
-            </Link>
+            
+            <div style={{ width: '100%', maxWidth: '480px', marginTop: '8px' }}>
+              <RecommendationCard
+                recommendation={RecommendationEngineService.getPostRevisionRecommendation(userId, {
+                  reviewedCount: reviewsToday,
+                  decayedCount: overdueCount,
+                })}
+                variant="compact"
+              />
+            </div>
           </div>
         )}
       </div>

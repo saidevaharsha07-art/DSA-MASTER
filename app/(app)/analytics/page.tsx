@@ -43,6 +43,7 @@ import { JourneyCalendarHeatmap } from '@/components/analytics/JourneyCalendarHe
 import { EventBus } from '@/src/core/events/event-bus';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
+import { RecommendationEngineService } from '@/src/intelligence/recommendations/services/recommendation-engine.service';
 
 function PlatformIcon({ platformKey, color }: { platformKey: string; color: string }) {
   if (platformKey === 'leetcode') {
@@ -88,6 +89,11 @@ export default function AnalyticsPage() {
   const [timeframe, setTimeframe] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
   const [refreshing, setRefreshing] = useState(false);
   const [eventSeq, setEventSeq] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const unsub1 = EventBus.subscribe('ProblemSolved', () => setEventSeq((c) => c + 1));
@@ -727,6 +733,42 @@ export default function AnalyticsPage() {
 
           {/* SECTION 4 — Journey Heatmap */}
           <JourneyCalendarHeatmap />
+
+          {/* SECTION 5 — Recommendation Intelligence Performance */}
+          {(() => {
+            const recAnalytics = RecommendationEngineService.getAnalytics(userId);
+            return (
+              <div style={{ padding: "20px", borderRadius: "var(--radius, 16px)", background: "var(--card)", border: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: "16px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "8px" }}>
+                  <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <Sparkles size={18} style={{ color: "var(--primary)" }} /> Recommendation Engine Telemetry
+                  </h3>
+                  <span style={{ fontSize: "11px", fontWeight: 700, padding: "3px 8px", borderRadius: "6px", background: "rgba(99, 102, 241, 0.1)", color: "#818CF8", border: "1px solid rgba(99, 102, 241, 0.2)" }}>
+                    {recAnalytics.completionRatePct}% Goal Adherence
+                  </span>
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px" }}>
+                  <div style={{ padding: "12px", borderRadius: "10px", background: "var(--surface)", border: "1px solid var(--border)" }}>
+                    <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Total Generated</span>
+                    <span style={{ fontSize: "18px", fontWeight: 800, color: "var(--text-primary)", display: "block", marginTop: "2px" }}>{recAnalytics.totalGenerated}</span>
+                  </div>
+                  <div style={{ padding: "12px", borderRadius: "10px", background: "var(--surface)", border: "1px solid var(--border)" }}>
+                    <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Actions Started</span>
+                    <span style={{ fontSize: "18px", fontWeight: 800, color: "#3B82F6", display: "block", marginTop: "2px" }}>{recAnalytics.totalStarted}</span>
+                  </div>
+                  <div style={{ padding: "12px", borderRadius: "10px", background: "var(--surface)", border: "1px solid var(--border)" }}>
+                    <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Completed</span>
+                    <span style={{ fontSize: "18px", fontWeight: 800, color: "#10B981", display: "block", marginTop: "2px" }}>{recAnalytics.totalCompleted}</span>
+                  </div>
+                  <div style={{ padding: "12px", borderRadius: "10px", background: "var(--surface)", border: "1px solid var(--border)" }}>
+                    <span style={{ fontSize: "10px", color: "var(--text-secondary)", textTransform: "uppercase", fontWeight: 700 }}>Top Action Mode</span>
+                    <span style={{ fontSize: "14px", fontWeight: 800, color: "#EC4899", display: "block", marginTop: "4px" }}>{recAnalytics.topActionType}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
 
       </div>
 
