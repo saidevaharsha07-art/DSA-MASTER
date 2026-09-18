@@ -17,6 +17,11 @@ import {
   RecommendationEngineService,
   UnifiedRecommendation,
 } from '@/src/intelligence/recommendations';
+import { PracticeEngineService, PracticeSession } from '@/src/features/practice/services/practice-engine.service';
+import { AdaptiveRoadmapService } from '@/src/features/journey/services/adaptive-roadmap.service';
+import { RevisionAdapterService } from '@/src/features/revision/services/revision-adapter.service';
+import { OnboardingService } from '@/src/intelligence/onboarding/services/onboarding.service';
+import { ProblemModel } from '@/src/curriculum/types';
 
 export interface KingdomProgression {
   slug: string;
@@ -228,7 +233,7 @@ export interface DashboardSummary {
   };
 
   platformSnapshot: Array<{
-    platformKey: 'leetcode' | 'codechef' | 'codeforces';
+    platformKey: 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks';
     name: string;
     color: string;
     solved: number;
@@ -255,6 +260,165 @@ export interface DashboardSummary {
   recommendations: PracticeRecommendation[];
   unifiedRecommendations: UnifiedRecommendation[];
   topRecommendation: UnifiedRecommendation;
+
+  // ── Command Center 2.0 First-Class Entities ──
+  heroMission: {
+    problem: ProblemModel;
+    platform: 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks';
+    platformName: string;
+    platformColor: string;
+    learningAreaTitle: string;
+    learningAreaSlug: string;
+    subtopicTitle: string;
+    subtopicSlug: string;
+    patternTitle: string;
+    patternSlug: string;
+    difficulty: 'Easy' | 'Medium' | 'Hard';
+    whyThisProblem: string;
+    badge: string;
+    practiceUrl: string;
+  };
+
+  activeSessionSummary: {
+    hasActiveSession: boolean;
+    session: PracticeSession | null;
+    sessionSize: number;
+    currentIndex: number;
+    completedCount: number;
+    remainingCount: number;
+    progressPercent: number;
+    currentProblem: ProblemModel | null;
+    continueUrl: string;
+  };
+
+  roadmapSnapshot: {
+    currentLearningArea: string;
+    currentAreaSlug: string;
+    currentSubtopic: string;
+    currentPattern: string;
+    masteryScore: number;
+    masterySignal: string;
+    progressToNextMilestone: number;
+    nextMilestoneTitle: string;
+    nextRecommendedConcept: string;
+    isZeroState: boolean;
+    roadmapUrl: string;
+  };
+
+  masteryOverview: {
+    masteredCount: number;
+    learningCount: number;
+    weakCount: number;
+    needsRevisionCount: number;
+    totalTopicsTracked: number;
+    learningAreas: Array<{
+      slug: string;
+      title: string;
+      masteryScore: number;
+      status: 'mastered' | 'learning' | 'weak' | 'needs_revision' | 'not_started';
+      solvedCount: number;
+      totalProblems: number;
+      subtopics: Array<{
+        slug: string;
+        title: string;
+        solvedCount: number;
+        totalProblems: number;
+        status: 'mastered' | 'learning' | 'weak' | 'needs_revision' | 'not_started';
+        patterns: Array<{
+          slug: string;
+          title: string;
+          solvedCount: number;
+          totalProblems: number;
+          status: 'mastered' | 'learning' | 'weak' | 'needs_revision' | 'not_started';
+        }>;
+      }>;
+    }>;
+  };
+
+  weakAreasList: Array<{
+    area: string;
+    areaSlug: string;
+    subtopic: string;
+    pattern: string;
+    reason: string;
+    recommendedProblem: ProblemModel | null;
+    accuracyPercent: number;
+    failedAttemptsCount: number;
+    practiceUrl: string;
+  }>;
+
+  revisionQueueSnapshot: {
+    dueNowCount: number;
+    dueTodayCount: number;
+    upcomingCount: number;
+    hasDueItems: boolean;
+    items: Array<{
+      problem: ProblemModel;
+      dueCategory: 'now' | 'today' | 'upcoming';
+      dueText: string;
+      practiceUrl: string;
+    }>;
+    reviseUrl: string;
+  };
+
+  mistakeSnapshot: {
+    hasMistakes: boolean;
+    totalMistakesCount: number;
+    recentMistakes: Array<{
+      problem: ProblemModel;
+      platform: string;
+      pattern: string;
+      date: string;
+      failureType: string;
+      failedAttemptsCount: number;
+      reason: string;
+      practiceUrl: string;
+    }>;
+    reviewMistakesUrl: string;
+  };
+
+  progressMomentum: {
+    problemsSolved: number;
+    sessionsCompleted: number;
+    currentStreak: number;
+    totalXp: number;
+    recentActivity: Array<any>;
+  };
+
+  platformMix: Array<{
+    platformKey: 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks';
+    name: string;
+    color: string;
+    solved: number;
+    total: number;
+    percentage: number;
+    practiceUrl: string;
+  }>;
+
+  canonicalLearningAreas: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    number: number;
+    category: string;
+    solvedCount: number;
+    totalCount: number;
+    percentage: number;
+    journeyUrl: string;
+    practiceUrl: string;
+  }>;
+
+  zeroState: {
+    isZeroState: boolean;
+    firstMission: {
+      title: string;
+      steps: ReadonlyArray<string>;
+      destinationRoute: string;
+      estimatedMinutes?: number;
+    } | null;
+    assessmentScore?: number;
+    explanation: string;
+  };
 }
 
 export class DashboardAdapterService {
@@ -498,6 +662,10 @@ export class DashboardAdapterService {
       cfNodes[cfCurrentIdx].isCurrent = true;
     }
 
+    // D. GeeksForGeeks Problems
+    const gfgProblems = allProblems.filter(p => p.url?.includes('geeksforgeeks.org') || p.platform === 'geeksforgeeks');
+    const gfgTotalSolved = gfgProblems.filter(p => isProblemSolved(p)).length;
+
     const platformTrains: PlatformTrainJourney[] = [
       {
         platformKey: 'leetcode',
@@ -712,6 +880,16 @@ export class DashboardAdapterService {
         percentage: cfProblems.length > 0 ? Math.round((cfTotalSolved / cfProblems.length) * 100) : 0,
         currentCampaign: cfNodes[cfCurrentIdx]?.title || 'Division 4',
         url: '/practice?platform=codeforces',
+      },
+      {
+        platformKey: 'geeksforgeeks' as const,
+        name: 'GeeksForGeeks',
+        color: '#2F9E44',
+        solved: gfgTotalSolved,
+        total: gfgProblems.length || 1000,
+        percentage: gfgProblems.length > 0 ? Math.round((gfgTotalSolved / gfgProblems.length) * 100) : 0,
+        currentCampaign: '25 Learning Areas',
+        url: '/practice?platform=geeksforgeeks',
       },
     ];
 
@@ -984,6 +1162,290 @@ export class DashboardAdapterService {
       estimatedMinutes: topUnifiedRec.estimatedMinutes,
     };
 
+    // ── 19. COMMAND CENTER 2.0 DATA SYNTHESIS ───────────────────────
+    // A. Hero "Your Next Mission"
+    const recProblems = PracticeEngineService.getRecommendedProblems(userId, { limit: 1 });
+    const topProblemRec = recProblems[0];
+    const heroProb = topProblemRec?.problem || allProblems.find(p => p.id === 'leetcode:1' || p.leetcodeNumber === 1) || allProblems[0];
+    const heroPlat = PracticeEngineService.getProblemPlatform(heroProb);
+    const heroPlatName = heroPlat === 'leetcode' ? 'LeetCode' : heroPlat === 'codechef' ? 'CodeChef' : heroPlat === 'codeforces' ? 'Codeforces' : 'GeeksForGeeks';
+    const heroPlatColor = heroPlat === 'leetcode' ? '#10B981' : heroPlat === 'codechef' ? '#F97316' : heroPlat === 'codeforces' ? '#3B82F6' : '#2F9E44';
+
+    const heroMission = {
+      problem: heroProb,
+      platform: heroPlat,
+      platformName: heroPlatName,
+      platformColor: heroPlatColor,
+      learningAreaTitle: heroProb.categoryTitle || 'Arrays & Hashing',
+      learningAreaSlug: heroProb.categorySlug || 'basic-arrays',
+      subtopicTitle: heroProb.subtopicTitle || 'Fundamentals',
+      subtopicSlug: heroProb.subtopicSlug || 'all',
+      patternTitle: heroProb.patternTitle || 'Core Pattern',
+      patternSlug: heroProb.patternSlug || 'all',
+      difficulty: (heroProb.difficulty || 'Easy') as 'Easy' | 'Medium' | 'Hard',
+      whyThisProblem: topProblemRec?.whyThisProblem || 'Foundational problem to establish your problem-solving baseline.',
+      badge: topProblemRec?.badge || 'Next Mission',
+      practiceUrl: `/practice?platform=${heroPlat}&area=${heroProb.categorySlug || 'basic-arrays'}&subtopic=${heroProb.subtopicSlug || 'all'}&pattern=${heroProb.patternSlug || 'all'}&search=${encodeURIComponent(heroProb.title)}`,
+    };
+
+    // B. Active Session Summary
+    const currentActiveSession = PracticeEngineService.loadActiveSession(userId);
+    const hasActiveSession = !!(currentActiveSession && currentActiveSession.status === 'active');
+    const sessionCurrentProblem = currentActiveSession && currentActiveSession.problems[currentActiveSession.currentIndex]
+      ? currentActiveSession.problems[currentActiveSession.currentIndex]
+      : null;
+
+    const activeSessionSummary = {
+      hasActiveSession,
+      session: currentActiveSession,
+      sessionSize: currentActiveSession?.problemCount || 0,
+      currentIndex: currentActiveSession?.currentIndex || 0,
+      completedCount: currentActiveSession?.completedProblemIds.length || 0,
+      remainingCount: currentActiveSession ? Math.max(0, currentActiveSession.problemCount - currentActiveSession.completedProblemIds.length) : 0,
+      progressPercent: currentActiveSession && currentActiveSession.problemCount > 0
+        ? Math.round((currentActiveSession.currentIndex / currentActiveSession.problemCount) * 100)
+        : 0,
+      currentProblem: sessionCurrentProblem,
+      continueUrl: '/practice',
+    };
+
+    // C. Adaptive Roadmap Snapshot
+    const roadmapGraph = AdaptiveRoadmapService.computeRoadmap(userId);
+    const activeRoadmapNode = roadmapGraph.stages.current[0] || roadmapGraph.topics[0];
+    const activeSubtopics = CurriculumRepository.getSubtopicsByCategory(activeRoadmapNode?.slug || 'basic-arrays');
+    const firstSubtopic = activeSubtopics[0];
+    const firstPattern = firstSubtopic ? CurriculumRepository.getAllPatterns().find(p => p.subtopicSlug === firstSubtopic.slug || p.subtopicId === firstSubtopic.id) : null;
+
+    const roadmapSnapshot = {
+      currentLearningArea: activeRoadmapNode?.title || 'Arrays & Hashing',
+      currentAreaSlug: activeRoadmapNode?.slug || 'basic-arrays',
+      currentSubtopic: firstSubtopic?.title || 'Fundamentals',
+      currentPattern: firstPattern?.title || 'Core Patterns',
+      masteryScore: activeRoadmapNode?.masteryScore || 0,
+      masterySignal: roadmapGraph.isZeroState ? '0% Baseline (Not Started)' : `${activeRoadmapNode?.masteryScore || 0}% Mastery (${activeRoadmapNode?.status || 'unlocked'})`,
+      progressToNextMilestone: roadmapGraph.momentum?.velocityScore || (activeRoadmapNode && activeRoadmapNode.masteryScore >= 80 ? 100 : Math.round(((activeRoadmapNode?.masteryScore || 0) / 80) * 100)),
+      nextMilestoneTitle: roadmapGraph.nextBestAction?.targetTopicTitle || 'Foundation Mastery',
+      nextRecommendedConcept: roadmapGraph.nextBestAction?.recommendedProblemTitle || 'Arrays & Hashing Fundamentals',
+      isZeroState: roadmapGraph.isZeroState,
+      roadmapUrl: `/journey/${activeRoadmapNode?.slug || 'basic-arrays'}`,
+    };
+
+    // D. Mastery Overview (Drilldown: Area -> Subtopic -> Pattern)
+    let masteredCount = 0;
+    let learningCount = 0;
+    let weakCount = 0;
+
+    const allPatternsList = CurriculumRepository.getAllPatterns();
+
+    const learningAreasMastery = categories.map((cat) => {
+      const catProblems = allProblems.filter((p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title);
+      const catSolved = catProblems.filter((p) => isProblemSolved(p)).length;
+      const catTotal = catProblems.length;
+      const catPct = catTotal > 0 ? Math.round((catSolved / catTotal) * 100) : 0;
+
+      let status: 'mastered' | 'learning' | 'weak' | 'needs_revision' | 'not_started' = 'not_started';
+      const isWeak = weakness.weakTopics.some((w) => w.topic.toLowerCase().includes(cat.title.toLowerCase()) || w.topic.toLowerCase() === cat.slug);
+
+      if (isWeak && catSolved < catTotal) {
+        status = 'weak';
+        weakCount++;
+      } else if (catPct >= 75 || catSolved >= 15) {
+        status = 'mastered';
+        masteredCount++;
+      } else if (catSolved > 0) {
+        status = 'learning';
+        learningCount++;
+      }
+
+      const subs = CurriculumRepository.getSubtopicsByCategory(cat.slug);
+      const subtopicsData = subs.map((s) => {
+        const subProblems = catProblems.filter((p) => p.subtopicSlug === s.slug || p.subtopicId === s.id);
+        const subSolved = subProblems.filter((p) => isProblemSolved(p)).length;
+        const subTotal = subProblems.length;
+        const subPct = subTotal > 0 ? Math.round((subSolved / subTotal) * 100) : 0;
+        const subStatus = subPct >= 75 ? 'mastered' : subSolved > 0 ? 'learning' : 'not_started';
+
+        const pats = allPatternsList.filter((p) => p.subtopicSlug === s.slug || p.subtopicId === s.id);
+        const patternsData = pats.map((pat) => {
+          const patProblems = subProblems.filter((p) => p.patternSlug === pat.slug || p.patternTitle === pat.title);
+          const patSolved = patProblems.filter((p) => isProblemSolved(p)).length;
+          const patTotal = patProblems.length;
+          const patPct = patTotal > 0 ? Math.round((patSolved / patTotal) * 100) : 0;
+          const patStatus = patPct >= 75 ? 'mastered' : patSolved > 0 ? 'learning' : 'not_started';
+
+          return {
+            slug: pat.slug,
+            title: pat.title,
+            solvedCount: patSolved,
+            totalProblems: patTotal,
+            status: patStatus as any,
+          };
+        });
+
+        return {
+          slug: s.slug,
+          title: s.title,
+          solvedCount: subSolved,
+          totalProblems: subTotal,
+          status: subStatus as any,
+          patterns: patternsData,
+        };
+      });
+
+      return {
+        slug: cat.slug,
+        title: cat.title,
+        masteryScore: catPct,
+        status,
+        solvedCount: catSolved,
+        totalProblems: catTotal,
+        subtopics: subtopicsData,
+      };
+    });
+
+    const masteryOverview = {
+      masteredCount,
+      learningCount,
+      weakCount,
+      needsRevisionCount: revisionDueCount,
+      totalTopicsTracked: categories.length,
+      learningAreas: learningAreasMastery,
+    };
+
+    // E. Weak Areas List
+    const rawWeakAreas = PracticeEngineService.getWeakAreas(userId);
+    const weakAreasList = rawWeakAreas.weakAreas.slice(0, 5).map((w) => ({
+      area: w.topicTitle,
+      areaSlug: w.topicId,
+      subtopic: w.subtopicTitle,
+      pattern: w.patternTitle,
+      reason: w.reason,
+      recommendedProblem: w.recommendedProblem,
+      accuracyPercent: w.accuracyPercent,
+      failedAttemptsCount: w.failedAttemptsCount,
+      practiceUrl: `/practice?mode=weakness`,
+    }));
+
+    // F. Revision Queue Snapshot
+    const revData = RevisionAdapterService.getRevisionSummary(userId);
+    const dueTodayItems = revData.dueTodayProblems || [];
+    const upcomingItems = revData.upcomingQueue || [];
+    const dueNowCount = dueTodayItems.filter((p) => (p.revisionData?.mastery || 100) < 40).length;
+
+    const revisionQueueSnapshot = {
+      dueNowCount,
+      dueTodayCount: dueTodayItems.length,
+      upcomingCount: upcomingItems.length,
+      hasDueItems: dueTodayItems.length > 0 || upcomingItems.length > 0,
+      items: dueTodayItems.slice(0, 4).map((p) => ({
+        problem: p,
+        dueCategory: (p.revisionData?.mastery < 40 ? 'now' : 'today') as 'now' | 'today' | 'upcoming',
+        dueText: `Mastery ${p.revisionData?.mastery || 0}% • Interval ${p.revisionData?.interval || 1}d`,
+        practiceUrl: `/practice?mode=mistakes`,
+      })),
+      reviseUrl: `/practice?mode=mistakes`,
+    };
+
+    // G. Mistake Snapshot
+    const mistakesList = PracticeEngineService.getMistakeReviewProblems(userId);
+    const mistakeSnapshot = {
+      hasMistakes: mistakesList.length > 0,
+      totalMistakesCount: mistakesList.length,
+      recentMistakes: mistakesList.slice(0, 5).map((m) => ({
+        problem: m.problem,
+        platform: PracticeEngineService.getProblemPlatform(m.problem),
+        pattern: m.problem.patternTitle || 'Algorithmic Pattern',
+        date: m.lastAttemptAt,
+        failureType: m.lastVerdict || 'Wrong Answer',
+        failedAttemptsCount: m.failedAttemptsCount,
+        reason: m.reason,
+        practiceUrl: `/practice?mode=mistakes`,
+      })),
+      reviewMistakesUrl: `/practice?mode=mistakes`,
+    };
+
+    // H. Platform Mix (All 4 platforms out of 1000 each)
+    const platformMix = [
+      {
+        platformKey: 'leetcode' as const,
+        name: 'LeetCode',
+        color: '#10B981',
+        solved: lcTotalSolved,
+        total: 1000,
+        percentage: Math.round((lcTotalSolved / 1000) * 100),
+        practiceUrl: '/practice?platform=leetcode',
+      },
+      {
+        platformKey: 'codechef' as const,
+        name: 'CodeChef',
+        color: '#F97316',
+        solved: ccTotalSolved,
+        total: 1000,
+        percentage: Math.round((ccTotalSolved / 1000) * 100),
+        practiceUrl: '/practice?platform=codechef',
+      },
+      {
+        platformKey: 'codeforces' as const,
+        name: 'Codeforces',
+        color: '#3B82F6',
+        solved: cfTotalSolved,
+        total: 1000,
+        percentage: Math.round((cfTotalSolved / 1000) * 100),
+        practiceUrl: '/practice?platform=codeforces',
+      },
+      {
+        platformKey: 'geeksforgeeks' as const,
+        name: 'GeeksForGeeks',
+        color: '#2F9E44',
+        solved: gfgTotalSolved,
+        total: 1000,
+        percentage: Math.round((gfgTotalSolved / 1000) * 100),
+        practiceUrl: '/practice?platform=geeksforgeeks',
+      },
+    ];
+
+    // I. Canonical Learning Areas (All 25)
+    const canonicalLearningAreas = categories.map((cat, idx) => {
+      const catProblems = allProblems.filter(
+        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
+      );
+      const catSolved = catProblems.filter((p) => isProblemSolved(p)).length;
+      const catTotal = catProblems.length;
+      const pct = catTotal > 0 ? Math.round((catSolved / catTotal) * 100) : 0;
+
+      return {
+        id: cat.slug,
+        slug: cat.slug,
+        title: cat.title,
+        number: idx + 1,
+        category: 'Core DSA',
+        solvedCount: catSolved,
+        totalCount: catTotal,
+        percentage: pct,
+        journeyUrl: `/journey/${cat.slug}`,
+        practiceUrl: `/practice?area=${cat.slug}`,
+      };
+    });
+
+    // J. Zero-State & Onboarding Profile
+    const onboardingProfile = OnboardingService.getProfile(userId);
+    const zeroState = {
+      isZeroState: solvedCount === 0,
+      firstMission: onboardingProfile?.firstMission || null,
+      assessmentScore: onboardingProfile?.assessmentResult?.scorePercentage,
+      explanation: 'Complete your first practice problem to unlock personalized adaptive guidance and roadmap progress.',
+    };
+
+    // K. Progress Momentum
+    const practiceHistory = PracticeEngineService.getPracticeHistory(userId);
+    const progressMomentum = {
+      problemsSolved: solvedCount,
+      sessionsCompleted: practiceHistory.length,
+      currentStreak,
+      totalXp,
+      recentActivity,
+    };
+
     const summary: DashboardSummary = {
       playerHud: {
         totalXp,
@@ -1038,6 +1500,19 @@ export class DashboardAdapterService {
       recommendations,
       unifiedRecommendations,
       topRecommendation: topUnifiedRec,
+
+      // Command Center 2.0 Entities
+      heroMission,
+      activeSessionSummary,
+      roadmapSnapshot,
+      masteryOverview,
+      weakAreasList,
+      revisionQueueSnapshot,
+      mistakeSnapshot,
+      progressMomentum,
+      platformMix,
+      canonicalLearningAreas,
+      zeroState,
     };
 
     this.cache.set(userId, summary);

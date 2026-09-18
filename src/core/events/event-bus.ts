@@ -45,6 +45,7 @@ export type AppEventType =
   | 'RateLimitReached'
   | 'RecommendationCompleted'
   | 'SessionFinished'
+  | 'PracticeSessionUpdated'
   | 'RatingChanged'
   | 'KingdomCompleted'
   | 'BossDefeated'

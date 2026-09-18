@@ -427,7 +427,7 @@ export class PracticeEngineService {
       return this.inMemorySessions.get(cleanUserId)!;
     }
 
-    if (!isGuest && typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       try {
         const stored = storage.get<PracticeSession>(`${STORAGE_SESSION_PREFIX}${cleanUserId}`);
         if (stored && stored.status === 'active') {
@@ -447,16 +447,18 @@ export class PracticeEngineService {
 
     if (!session) {
       this.inMemorySessions.delete(cleanUserId);
-      if (!isGuest && typeof window !== 'undefined') {
+      if (typeof window !== 'undefined') {
         storage.remove(`${STORAGE_SESSION_PREFIX}${cleanUserId}`);
       }
       return;
     }
 
     this.inMemorySessions.set(cleanUserId, session);
-    if (!isGuest && typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
       storage.save(`${STORAGE_SESSION_PREFIX}${cleanUserId}`, session);
-      serverPersistenceBridge.saveDurableData('practice_session', cleanUserId, session).catch(() => {});
+      if (!isGuest) {
+        serverPersistenceBridge.saveDurableData('practice_session', cleanUserId, session).catch(() => {});
+      }
     }
   }
 
