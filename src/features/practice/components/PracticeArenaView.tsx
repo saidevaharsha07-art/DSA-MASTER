@@ -301,9 +301,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   // ── 1. LEETCODE LEARNING AREAS (25 Areas) ──────────────────────────
   const leetcodeKingdoms = useMemo(() => {
-    const lcProblems = ALL_PROBLEMS.filter(
-      (p) => !p.url.includes('codechef.com') && !p.url.includes('codeforces.com') && !p.url.includes('geeksforgeeks.org')
-    );
+    const lcProblems = ALL_PROBLEMS.filter((p) => p.platform === 'leetcode');
 
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = lcProblems.filter(
@@ -332,7 +330,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   // ── 2. CODECHEF LEARNING AREAS (25 Areas) ──────────────────────────
   const codechefKingdoms = useMemo(() => {
-    const ccProblems = ALL_PROBLEMS.filter((p) => p.url.includes('codechef.com'));
+    const ccProblems = ALL_PROBLEMS.filter((p) => p.platform === 'codechef');
 
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = ccProblems.filter(

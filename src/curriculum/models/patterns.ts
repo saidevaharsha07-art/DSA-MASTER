@@ -2,7 +2,7 @@ import { PatternModel } from '../types';
 import { ALL_PROBLEMS } from './problems';
 import { getSubtopicForPattern } from './subtopics';
 
-const BASE_PATTERNS: Omit<PatternModel, 'learnProblemIds' | 'practiceProblemIds' | 'masterProblemIds' | 'problemIds'>[] = [
+export const BASE_PATTERNS: Omit<PatternModel, 'learnProblemIds' | 'practiceProblemIds' | 'masterProblemIds' | 'problemIds'>[] = [
   // 1. Basic Arrays
   { id: 'pattern.array-fundamentals', slug: 'array-fundamentals', title: 'Array Fundamentals', shortDescription: 'Continuous memory indexing, element swaps, and in-place transformations.', categoryId: 'cat-1', categorySlug: 'basic-arrays', categoryTitle: 'Basic Arrays', kingdomTitle: 'Kingdom of Beginnings', questTitle: 'Quest: The First Steps', order: 1, difficulty: 'Easy', estimatedHours: 4, overview: 'Array manipulation forms the fundamental building block.', intuition: 'Leverage zero-indexed memory contiguous storage for O(1) lookups.', recognitionSignals: ['Contiguous subarray', 'In-place modification'], whenToUse: ['Sequential element inspection'], whenNotToUse: ['Dynamic sizing with middle insertions'], relatedPatternIds: ['pattern.prefix-sum-basics'], commonMistakes: ['Off-by-one bounds errors'], interviewTips: ['Clarify whether space can be auxiliary or strictly in-place.'] },
   { id: 'pattern.kadanes-algorithm', slug: 'kadanes-algorithm', title: "Kadane's Algorithm", shortDescription: 'Maximum contiguous subarray sums in linear time.', categoryId: 'cat-1', categorySlug: 'basic-arrays', categoryTitle: 'Basic Arrays', kingdomTitle: 'Kingdom of Beginnings', questTitle: 'Quest: The Golden Streak', order: 2, difficulty: 'Medium', estimatedHours: 3, overview: 'Compute local vs global maximum at each position.', intuition: 'Decide whether to add element to existing sum or restart local sum.', recognitionSignals: ['Maximum contiguous sum'], whenToUse: ['Contiguous subarray optimization'], whenNotToUse: ['Non-contiguous subsequence'], relatedPatternIds: ['pattern.array-fundamentals'], commonMistakes: ['Resetting local sum to 0 instead of current element'], interviewTips: ['Mention space optimization down to O(1).'] },
@@ -167,26 +167,49 @@ const BASE_PATTERNS: Omit<PatternModel, 'learnProblemIds' | 'practiceProblemIds'
   { id: 'pattern.heavy-light-advanced-trees', slug: 'heavy-light-advanced-trees', title: 'Heavy-Light Decomposition & Advanced Trees', shortDescription: 'Heavy-Light Decomposition, Centroid Decomposition, and persistent trees.', categoryId: 'cat-25', categorySlug: 'advanced-algorithms', categoryTitle: 'Advanced Algorithms', kingdomTitle: 'The Citadel of Masters', questTitle: 'Quest: The Master Oracle', order: 113, difficulty: 'Hard', estimatedHours: 7, overview: 'Decompose tree paths into heavy chains for O(log^2 N) path query processing using Segment Trees.', intuition: 'Heavy edge connects node to child with largest subtree size.', recognitionSignals: ['Minimum score after removals on tree', 'Path queries on large trees'], whenToUse: ['Dynamic path queries and updates on general trees'], whenNotToUse: ['Simple binary search trees'], relatedPatternIds: ['pattern.segment-fenwick-trees'], commonMistakes: ['Not updating heavy chain head when jumping across light edges'], interviewTips: ['Explain why HLD decomposes tree into at most O(log N) heavy chains.'] },
 ];
 
-export const ALL_PATTERNS: PatternModel[] = BASE_PATTERNS.map((pattern) => {
-  const patternProblems = ALL_PROBLEMS.filter(
-    (p) => p.patternSlug === pattern.slug || p.patternId === pattern.id
-  );
+let _allPatterns: PatternModel[] | null = null;
 
-  const learnProblemIds = patternProblems.filter((p) => p.level === 'Learn').map((p) => p.id);
-  const practiceProblemIds = patternProblems.filter((p) => p.level === 'Practice').map((p) => p.id);
-  const masterProblemIds = patternProblems.filter((p) => p.level === 'Master').map((p) => p.id);
-  const problemIds = patternProblems.map((p) => p.id);
+function computePatterns(): PatternModel[] {
+  if (_allPatterns) return _allPatterns;
+  const problems = ALL_PROBLEMS || [];
+  _allPatterns = BASE_PATTERNS.map((pattern) => {
+    const patternProblems = problems.filter(
+      (p) => p.patternSlug === pattern.slug || p.patternId === pattern.id
+    );
 
-  const subtopic = getSubtopicForPattern(pattern.id) || getSubtopicForPattern(pattern.slug);
+    const learnProblemIds = patternProblems.filter((p) => p.level === 'Learn').map((p) => p.id);
+    const practiceProblemIds = patternProblems.filter((p) => p.level === 'Practice').map((p) => p.id);
+    const masterProblemIds = patternProblems.filter((p) => p.level === 'Master').map((p) => p.id);
+    const problemIds = patternProblems.map((p) => p.id);
 
-  return {
-    ...pattern,
-    subtopicId: subtopic?.id,
-    subtopicSlug: subtopic?.slug,
-    subtopicTitle: subtopic?.title,
-    learnProblemIds,
-    practiceProblemIds,
-    masterProblemIds,
-    problemIds,
-  };
+    const subtopic = getSubtopicForPattern(pattern.id) || getSubtopicForPattern(pattern.slug);
+
+    return {
+      ...pattern,
+      subtopicId: subtopic?.id,
+      subtopicSlug: subtopic?.slug,
+      subtopicTitle: subtopic?.title,
+      learnProblemIds,
+      practiceProblemIds,
+      masterProblemIds,
+      problemIds,
+    };
+  });
+  return _allPatterns;
+}
+
+export const ALL_PATTERNS: PatternModel[] = new Proxy([] as PatternModel[], {
+  get(_target, prop, receiver) {
+    return Reflect.get(computePatterns(), prop, receiver);
+  },
+  has(_target, prop) {
+    return Reflect.has(computePatterns(), prop);
+  },
+  ownKeys(_target) {
+    return Reflect.ownKeys(computePatterns());
+  },
+  getOwnPropertyDescriptor(_target, prop) {
+    return Reflect.getOwnPropertyDescriptor(computePatterns(), prop);
+  },
 });
+

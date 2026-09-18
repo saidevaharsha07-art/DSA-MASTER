@@ -28,12 +28,72 @@ import { CODEFORCES_PROBLEM_MODELS } from '../../repository/codeforces-db';
 import { CODECHEF_PROBLEM_MODELS } from '../../repository/codechef-rating-db';
 
 import { getSubtopicForPattern } from '../subtopics';
+import { BASE_PATTERNS } from '../patterns';
 
-function detectPlatform(url: string): 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks' {
+const CATEGORY_SLUG_TO_INFO: Record<string, { id: string; title: string }> = {
+  'basic-arrays': { id: 'cat-1', title: 'Basic Arrays' },
+  'prefix-sum': { id: 'cat-2', title: 'Prefix Sum' },
+  'two-pointers': { id: 'cat-3', title: 'Two Pointers' },
+  'sliding-window': { id: 'cat-4', title: 'Sliding Window' },
+  'hashing': { id: 'cat-5', title: 'Hashing' },
+  'binary-search': { id: 'cat-6', title: 'Binary Search' },
+  'sorting': { id: 'cat-7', title: 'Sorting' },
+  'stack': { id: 'cat-8', title: 'Stack' },
+  'queue-deque': { id: 'cat-9', title: 'Queue & Deque' },
+  'intervals': { id: 'cat-10', title: 'Intervals' },
+  'linked-list': { id: 'cat-11', title: 'Linked List' },
+  'binary-trees': { id: 'cat-12', title: 'Binary Trees' },
+  'binary-search-trees': { id: 'cat-13', title: 'Binary Search Trees' },
+  'graphs': { id: 'cat-14', title: 'Graphs' },
+  'shortest-path': { id: 'cat-15', title: 'Shortest Path Algorithms' },
+  'minimum-spanning-tree': { id: 'cat-16', title: 'Minimum Spanning Tree' },
+  'backtracking': { id: 'cat-17', title: 'Backtracking' },
+  'greedy': { id: 'cat-18', title: 'Greedy' },
+  'heap': { id: 'cat-19', title: 'Heap' },
+  'dynamic-programming': { id: 'cat-20', title: 'Dynamic Programming' },
+  'bit-manipulation': { id: 'cat-21', title: 'Bit Manipulation' },
+  'strings': { id: 'cat-22', title: 'Strings' },
+  'matrix': { id: 'cat-23', title: 'Matrix' },
+  'math-number-theory': { id: 'cat-24', title: 'Math & Number Theory' },
+  'advanced-algorithms': { id: 'cat-25', title: 'Advanced Algorithms' },
+};
+
+function detectPlatform(url: string = ''): 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks' {
   if (url.includes('codechef.com')) return 'codechef';
   if (url.includes('codeforces.com')) return 'codeforces';
   if (url.includes('geeksforgeeks.org')) return 'geeksforgeeks';
   return 'leetcode';
+}
+
+function resolveCanonicalPattern(categorySlug: string, patternRef: string = '', tags: string[] = []): typeof BASE_PATTERNS[0] {
+  const catPatterns = BASE_PATTERNS.filter(p => p.categorySlug === categorySlug);
+  if (catPatterns.length === 0) return BASE_PATTERNS[0];
+
+  // Direct match with pattern ID or slug
+  const direct = catPatterns.find(p => p.id === patternRef || p.slug === patternRef);
+  if (direct) return direct;
+
+  const normRef = patternRef.toLowerCase().replace(/[^a-z0-9]/g, '');
+  for (const pat of catPatterns) {
+    const normTitle = pat.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const normSlug = pat.slug.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (normRef === normTitle || normRef === normSlug || normRef.includes(normSlug) || normSlug.includes(normRef)) {
+      return pat;
+    }
+  }
+
+  // Tag matching
+  for (const tag of tags) {
+    const normTag = tag.toLowerCase().replace(/[^a-z0-9]/g, '');
+    for (const pat of catPatterns) {
+      const normSlug = pat.slug.toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (normTag.includes(normSlug) || normSlug.includes(normTag)) {
+        return pat;
+      }
+    }
+  }
+
+  return catPatterns[0];
 }
 
 export const ALL_PROBLEMS: ProblemModel[] = [
@@ -65,15 +125,29 @@ export const ALL_PROBLEMS: ProblemModel[] = [
   ...CODEFORCES_PROBLEM_MODELS,
   ...CODECHEF_PROBLEM_MODELS,
 ].map((p, index) => {
-  const subtopic = getSubtopicForPattern(p.patternSlug) || getSubtopicForPattern(p.patternId);
+  const platform = p.platform || detectPlatform(p.url);
+  const catSlug = p.categorySlug || 'basic-arrays';
+  const catInfo = CATEGORY_SLUG_TO_INFO[catSlug] || { id: p.categoryId || 'cat-1', title: p.categoryTitle || 'General' };
+
+  // Resolve canonical pattern
+  const canonicalPat = resolveCanonicalPattern(catSlug, p.patternSlug || p.patternId, p.topics || []);
+  const subtopic = getSubtopicForPattern(canonicalPat.id) || getSubtopicForPattern(canonicalPat.slug);
+
   return {
     ...p,
     order: p.order ?? index + 1,
-    learningAreaId: p.categoryId,
-    subtopicId: p.subtopicId || subtopic?.id,
-    subtopicSlug: p.subtopicSlug || subtopic?.slug,
-    subtopicTitle: p.subtopicTitle || subtopic?.title,
-    platform: p.platform || detectPlatform(p.url),
+    categoryId: catInfo.id,
+    categorySlug: catSlug,
+    categoryTitle: catInfo.title,
+    learningAreaId: catInfo.id,
+    patternId: canonicalPat.id,
+    patternSlug: canonicalPat.slug,
+    patternTitle: canonicalPat.title,
+    subtopicId: subtopic?.id,
+    subtopicSlug: subtopic?.slug,
+    subtopicTitle: subtopic?.title,
+    platform: platform,
   };
 });
+
 
