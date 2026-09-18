@@ -12,12 +12,14 @@ import {
   Settings,
   LogOut,
   ChevronDown,
+  Palette,
 } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { radius, animations } from "@/src/design";
+import { radius, animations, colors } from "@/src/design";
 import { Button } from "@/src/components/ui/Button";
+import { Breadcrumbs } from "@/src/components/ui/Breadcrumbs";
 import { useAuth } from "@/src/lib/auth/hooks/useAuth";
 
 interface NavbarProps {
@@ -36,6 +38,7 @@ export function Navbar({
   onThemeChange,
 }: NavbarProps) {
   const router = useRouter();
+  const pathname = usePathname() || "";
   const { isAuthenticated, user, signOut, isLoading } = useAuth();
 
   const [initials, setInitials] = useState("JD");
@@ -81,7 +84,9 @@ export function Navbar({
   }, []);
 
   const handleOpenCommandPalette = () => {
-    window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true }));
+    window.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true })
+    );
   };
 
   const handleSignOut = async () => {
@@ -99,143 +104,90 @@ export function Navbar({
     onThemeChange(nextTheme);
   };
 
+  // Known top routes that can safely be linked without 404 prefetching
+  const topRoutes = new Set([
+    "dashboard",
+    "study-plan",
+    "journey",
+    "practice",
+    "interview",
+    "contest",
+    "revision",
+    "analytics",
+    "mentor",
+    "settings",
+    "profile",
+    "design-system",
+  ]);
+
+  // Generate dynamic breadcrumb segments from pathname safely
+  const segments = pathname.split("/").filter(Boolean);
+  const breadcrumbItems = [
+    { label: "DSA Master", href: "/dashboard" },
+    ...segments.map((seg, idx) => {
+      const fullPath = "/" + segments.slice(0, idx + 1).join("/");
+      const formatted = seg
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
+      const isTopLevel = idx === 0 && topRoutes.has(seg);
+      const isJourneyArea = idx === 1 && segments[0] === "journey";
+      const href = isTopLevel || isJourneyArea ? fullPath : undefined;
+
+      return { label: formatted, href };
+    }),
+  ];
+
   return (
     <header
       style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "0 20px",
-        height: "58px",
-        backgroundColor: "var(--header, rgba(7, 5, 18, 0.95))",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        borderBottom: `1px solid var(--border, rgba(255, 255, 255, 0.1))`,
+        padding: "0 16px",
+        height: "56px",
+        backgroundColor: "var(--bg)",
+        borderBottom: "1px solid var(--border)",
         zIndex: 40,
         boxSizing: "border-box",
         width: "100%",
-        gap: "16px",
-        transition: "background-color 0.2s ease, border-color 0.2s ease",
+        gap: "12px",
+        transition: "background-color 0.15s ease, border-color 0.15s ease",
       }}
     >
-      {/* ── ZONE 1 (LEFT): MENU TOGGLE & MOBILE BRAND ── */}
-      <div className="flex md:hidden items-center gap-3" style={{ flexShrink: 0 }}>
+      {/* ── ZONE 1 (LEFT): MOBILE MENU & DESKTOP BREADCRUMBS ── */}
+      <div style={{ display: "flex", alignItems: "center", gap: "12px", minWidth: 0 }}>
         <Button
           variant="ghost"
           size="icon"
           id="open-sidebar-btn"
           onClick={onMenuClick}
           aria-label="Toggle navigation drawer"
+          className="md:hidden"
           style={{
             display: "flex",
-            width: "36px",
-            height: "36px",
-            borderRadius: "10px",
-            background: "var(--muted-bg, rgba(255, 255, 255, 0.04))",
-            border: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
-            color: "var(--text-primary, #FFF)",
+            width: "32px",
+            height: "32px",
+            borderRadius: radius.md,
+            color: "var(--text-primary)",
           }}
         >
-          <Menu size={18} />
+          <Menu size={17} />
         </Button>
 
-        {/* DSA MASTER Logo Brand Link (Mobile) */}
-        <Link
-          href={isAuthenticated ? "/dashboard" : "/login"}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            textDecoration: "none",
-          }}
-          title="DSA MASTER"
-        >
-          <div
-            style={{
-              width: "34px",
-              height: "34px",
-              borderRadius: "10px",
-              background: "linear-gradient(135deg, #38BDF8 0%, #3B82F6 50%, #6366F1 100%)",
-              padding: "1.5px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 2px 10px rgba(56, 189, 248, 0.25)",
-              flexShrink: 0,
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "8.5px",
-                background: "var(--surface, #0B1120)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                style={{ width: "18px", height: "18px" }}
-              >
-                <path
-                  d="M12 2L2 22H22L12 2Z"
-                  stroke="#0284C7"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="url(#nav-logo-grad)"
-                  fillOpacity="0.25"
-                />
-                <path
-                  d="M12 9L7 19H17L12 9Z"
-                  fill="#38BDF8"
-                />
-                <defs>
-                  <linearGradient id="nav-logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#38BDF8" />
-                    <stop offset="1" stopColor="#6366F1" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <span
-              style={{
-                fontSize: "14px",
-                fontWeight: 900,
-                letterSpacing: "0.04em",
-                color: "var(--text-primary, #FFF)",
-                fontFamily: "Inter, system-ui, sans-serif",
-                lineHeight: 1.1,
-              }}
-            >
-              DSA <span style={{ color: "#38BDF8" }}>MASTER</span>
-            </span>
-            <span
-              style={{
-                fontSize: "7px",
-                fontWeight: 800,
-                letterSpacing: "0.08em",
-                color: "var(--text-muted, #94A3B8)",
-                textTransform: "uppercase",
-              }}
-            >
-              LEARN • PRACTICE • MASTER
-            </span>
-          </div>
-        </Link>
+        {/* Desktop Dynamic Breadcrumbs */}
+        <div className="hidden md:flex" style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+          <Breadcrumbs items={breadcrumbItems} aria-label="Page Location" />
+        </div>
       </div>
 
-      {/* ── ZONE 2 (CENTER): BALANCED GLOBAL SEARCH BAR ─────────────── */}
+      {/* ── ZONE 2 (CENTER): BALANCED SEARCH BAR ── */}
       <div
         style={{
           flex: "1 1 auto",
-          maxWidth: "480px",
-          minWidth: "180px",
+          maxWidth: "420px",
+          minWidth: "140px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -251,41 +203,36 @@ export function Navbar({
           }}
         >
           <Search
-            size={15}
+            size={14}
             style={{
               position: "absolute",
-              left: "12px",
-              color: isFocused ? "var(--primary, #38BDF8)" : "var(--text-muted, #94A3B8)",
+              left: "10px",
+              color: isFocused ? "var(--accent)" : "var(--text-muted)",
               pointerEvents: "none",
-              transition: "color 0.2s ease",
+              transition: "color 0.15s ease",
             }}
           />
           <input
             type="text"
-            placeholder="Search patterns or questions..."
+            placeholder="Search problems, patterns, topics..."
             value={searchQuery}
             onChange={(e) => onSearchChange && onSearchChange(e.target.value)}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             style={{
               width: "100%",
-              height: "36px",
-              padding: "0 48px 0 34px",
-              borderRadius: "10px",
-              border: isFocused
-                ? `1.5px solid var(--accent-primary)`
-                : `1px solid var(--border)`,
-              background: isFocused
-                ? isDark
-                  ? "var(--surface)"
-                  : "#FFFFFF"
-                : "var(--muted-bg)",
+              height: "34px",
+              padding: "0 46px 0 32px",
+              borderRadius: radius.md,
+              border: `1px solid ${isFocused ? "var(--accent)" : "var(--border)"}`,
+              background: isFocused ? "var(--surface)" : "var(--bg-subtle)",
               color: "var(--text-primary)",
               fontSize: "12px",
               outline: "none",
-              boxShadow: isFocused ? "0 0 16px var(--accent-glow)" : "none",
-              transition: "all 0.2s ease",
+              boxShadow: isFocused ? "0 0 0 2px var(--accent-subtle)" : "none",
+              transition: "all 0.15s ease",
               boxSizing: "border-box",
+              fontFamily: "var(--font-sans)",
             }}
           />
 
@@ -299,15 +246,15 @@ export function Navbar({
               right: "6px",
               top: "50%",
               transform: "translateY(-50%)",
-              background: "var(--muted-bg)",
+              background: "var(--surface)",
               border: "1px solid var(--border)",
-              borderRadius: "6px",
-              padding: "2px 6px",
+              borderRadius: radius.sm,
+              padding: "2px 5px",
               display: "flex",
               alignItems: "center",
               gap: "2px",
               fontSize: "10px",
-              fontWeight: 800,
+              fontWeight: 600,
               color: "var(--text-muted)",
               cursor: "pointer",
             }}
@@ -317,8 +264,28 @@ export function Navbar({
         </div>
       </div>
 
-      {/* ── ZONE 3 (RIGHT): AUTHENTICATION & DIRECT THEME ACTIONS ───── */}
-      <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
+      {/* ── ZONE 3 (RIGHT): THEME TOGGLE, DESIGN SYSTEM LINK & AUTH ── */}
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }}>
+        {/* Quick Design System Link */}
+        <Link
+          href="/design-system"
+          title="Design System Catalog"
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            variant="ghost"
+            size="icon"
+            style={{
+              width: "32px",
+              height: "32px",
+              borderRadius: radius.md,
+              color: "var(--text-muted)",
+            }}
+          >
+            <Palette size={15} />
+          </Button>
+        </Link>
+
         {/* Direct Dark ↔ Light Mode Toggle */}
         <button
           type="button"
@@ -328,48 +295,34 @@ export function Navbar({
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "6px",
-            height: "36px",
-            padding: "0 10px",
-            borderRadius: "10px",
-            background: "var(--muted-bg)",
+            justifyContent: "center",
+            width: "32px",
+            height: "32px",
+            borderRadius: radius.md,
+            background: "transparent",
             border: "1px solid var(--border)",
-            color: isDark ? "#FACC15" : "var(--accent-text)",
+            color: isDark ? "#F59E0B" : "var(--accent)",
             cursor: "pointer",
-            fontSize: "12px",
-            fontWeight: 700,
             transition: `all ${animations.transition.fast}`,
           }}
         >
-          {isDark ? (
-            <>
-              <Sun size={15} />
-              <span style={{ fontSize: "11px", color: "var(--text-secondary)" }}>Light</span>
-            </>
-          ) : (
-            <>
-              <Moon size={15} />
-              <span style={{ fontSize: "11px", color: "var(--text-secondary)" }}>Dark</span>
-            </>
-          )}
+          {isDark ? <Sun size={15} /> : <Moon size={15} />}
         </button>
 
-        {/* Dynamic Auth Section with Hydration Protection */}
+        {/* Dynamic Auth Section */}
         {isLoading ? (
-          /* Neutral Loading State (Prevents Hydration / Auth Flicker) */
           <div
             style={{
-              width: "120px",
-              height: "34px",
-              borderRadius: "10px",
-              background: "var(--muted-bg)",
+              width: "80px",
+              height: "32px",
+              borderRadius: radius.md,
+              background: "var(--bg-subtle)",
               border: "1px solid var(--border)",
             }}
           />
         ) : isAuthenticated ? (
-          /* Authenticated User Controls: Notifications + Avatar Menu */
           <>
-            {/* Notifications Trigger */}
+            {/* Notifications */}
             <Link href="/settings?tab=notifications" style={{ textDecoration: "none" }}>
               <Button
                 variant="ghost"
@@ -377,102 +330,100 @@ export function Navbar({
                 aria-label="View notifications"
                 style={{
                   position: "relative",
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  background: "var(--muted-bg)",
-                  border: "1px solid var(--border)",
-                  color: "var(--text-primary)",
+                  width: "32px",
+                  height: "32px",
+                  borderRadius: radius.md,
+                  color: "var(--text-muted)",
                 }}
               >
-                <Bell size={16} />
+                <Bell size={15} />
                 <span
                   style={{
                     position: "absolute",
-                    top: "7px",
-                    right: "7px",
-                    width: "6px",
-                    height: "6px",
-                    background: "#10B981",
-                    boxShadow: "0 0 6px #10B981",
+                    top: "6px",
+                    right: "6px",
+                    width: "5px",
+                    height: "5px",
+                    background: "var(--success)",
                     borderRadius: radius.full,
                   }}
                 />
               </Button>
             </Link>
 
-            {/* Avatar & Account Dropdown */}
+            {/* Avatar & Dropdown */}
             <div ref={menuRef} style={{ position: "relative" }}>
               <button
                 type="button"
                 onClick={() => setAccountMenuOpen(!accountMenuOpen)}
                 style={{
-                  height: "36px",
-                  padding: "0 8px 0 4px",
-                  borderRadius: "10px",
-                  background: "var(--muted-bg)",
+                  height: "32px",
+                  padding: "0 6px 0 3px",
+                  borderRadius: radius.md,
+                  background: "var(--surface)",
                   border: "1px solid var(--border)",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                   cursor: "pointer",
-                  transition: "all 0.15s ease",
+                  transition: "border-color 0.15s ease",
                 }}
                 aria-label="Account menu"
               >
                 <div
                   style={{
-                    width: "28px",
-                    height: "28px",
-                    borderRadius: "8px",
-                    background: `linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%)`,
-                    color: "#FFFFFF",
+                    width: "24px",
+                    height: "24px",
+                    borderRadius: radius.sm,
+                    background: "var(--accent-subtle)",
+                    border: "1px solid var(--border-strong)",
+                    color: "var(--accent)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontWeight: 900,
+                    fontWeight: 700,
                     fontSize: "11px",
-                    boxShadow: "0 2px 8px var(--accent-glow)",
                   }}
                 >
                   {initials}
                 </div>
-                <ChevronDown size={12} style={{ color: "var(--text-muted)" }} />
+                <ChevronDown size={11} style={{ color: "var(--text-muted)" }} />
               </button>
 
               <AnimatePresence>
                 {accountMenuOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                    initial={{ opacity: 0, y: 4, scale: 0.98 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 6, scale: 0.96 }}
+                    exit={{ opacity: 0, y: 4, scale: 0.98 }}
+                    transition={{ duration: 0.12 }}
                     style={{
                       position: "absolute",
-                      top: "calc(100% + 8px)",
+                      top: "calc(100% + 6px)",
                       right: 0,
                       width: "210px",
                       background: "var(--surface)",
-                      backdropFilter: "blur(16px)",
-                      WebkitBackdropFilter: "blur(16px)",
-                      border: "1px solid var(--border)",
-                      borderRadius: "14px",
-                      boxShadow: "0 16px 40px rgba(0, 0, 0, 0.2)",
-                      padding: "8px",
+                      border: "1px solid var(--border-strong)",
+                      borderRadius: radius.lg,
+                      boxShadow: "var(--shadow-md)",
+                      padding: "6px",
                       zIndex: 100,
                       display: "flex",
                       flexDirection: "column",
-                      gap: "4px",
+                      gap: "2px",
                     }}
                   >
                     <div
                       style={{
                         padding: "8px 10px",
                         borderBottom: "1px solid var(--border)",
+                        marginBottom: "4px",
                       }}
                     >
                       <strong
                         style={{
                           fontSize: "12px",
+                          fontWeight: 600,
                           color: "var(--text-primary)",
                           display: "block",
                           whiteSpace: "nowrap",
@@ -492,7 +443,7 @@ export function Navbar({
                           textOverflow: "ellipsis",
                         }}
                       >
-                        {user?.email || "Active Developer"}
+                        {user?.email || "developer@dsamaster.com"}
                       </span>
                     </div>
 
@@ -503,47 +454,24 @@ export function Navbar({
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
-                        padding: "8px 10px",
-                        borderRadius: "8px",
+                        padding: "7px 10px",
+                        borderRadius: radius.md,
                         color: "var(--text-secondary)",
                         fontSize: "12px",
-                        fontWeight: 600,
+                        fontWeight: 500,
                         textDecoration: "none",
-                        transition: "background 0.15s ease",
+                        transition: "background-color 0.15s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "var(--muted-bg)";
+                        e.currentTarget.style.backgroundColor = "var(--surface-elevated)";
+                        e.currentTarget.style.color = "var(--text-primary)";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.backgroundColor = "transparent";
+                        e.currentTarget.style.color = "var(--text-secondary)";
                       }}
                     >
-                      <User size={14} style={{ color: "var(--accent-primary)" }} /> Profile
-                    </Link>
-
-                    <Link
-                      href="/dashboard"
-                      onClick={() => setAccountMenuOpen(false)}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                        padding: "8px 10px",
-                        borderRadius: "8px",
-                        color: "var(--text-secondary)",
-                        fontSize: "12px",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        transition: "background 0.15s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "var(--muted-bg)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "transparent";
-                      }}
-                    >
-                      <User size={14} style={{ color: "var(--accent-primary)" }} /> Dashboard
+                      <User size={14} style={{ color: "var(--accent)" }} /> Profile
                     </Link>
 
                     <Link
@@ -553,29 +481,31 @@ export function Navbar({
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
-                        padding: "8px 10px",
-                        borderRadius: "8px",
+                        padding: "7px 10px",
+                        borderRadius: radius.md,
                         color: "var(--text-secondary)",
                         fontSize: "12px",
-                        fontWeight: 600,
+                        fontWeight: 500,
                         textDecoration: "none",
-                        transition: "background 0.15s ease",
+                        transition: "background-color 0.15s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "var(--muted-bg)";
+                        e.currentTarget.style.backgroundColor = "var(--surface-elevated)";
+                        e.currentTarget.style.color = "var(--text-primary)";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.backgroundColor = "transparent";
+                        e.currentTarget.style.color = "var(--text-secondary)";
                       }}
                     >
-                      <Settings size={14} style={{ color: "var(--accent-primary)" }} /> Settings
+                      <Settings size={14} style={{ color: "var(--accent)" }} /> Settings
                     </Link>
 
                     <div
                       style={{
                         height: "1px",
                         background: "var(--border)",
-                        margin: "2px 0",
+                        margin: "4px 0",
                       }}
                     />
 
@@ -586,23 +516,23 @@ export function Navbar({
                         display: "flex",
                         alignItems: "center",
                         gap: "8px",
-                        padding: "8px 10px",
-                        borderRadius: "8px",
-                        color: "#EF4444",
+                        padding: "7px 10px",
+                        borderRadius: radius.md,
+                        color: "var(--danger)",
                         fontSize: "12px",
-                        fontWeight: 600,
+                        fontWeight: 500,
                         background: "transparent",
                         border: "none",
                         cursor: "pointer",
                         textAlign: "left",
                         width: "100%",
-                        transition: "background 0.15s ease",
+                        transition: "background-color 0.15s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "rgba(239, 68, 68, 0.12)";
+                        e.currentTarget.style.backgroundColor = "var(--danger-bg, rgba(239, 68, 68, 0.1))";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.backgroundColor = "transparent";
                       }}
                     >
                       <LogOut size={14} /> Log out
@@ -613,62 +543,16 @@ export function Navbar({
             </div>
           </>
         ) : (
-          /* Unauthenticated User Controls: Login (Ghost) + Sign Up (Filled) */
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
             <Link href="/login" style={{ textDecoration: "none" }}>
-              <button
-                type="button"
-                style={{
-                  padding: "7px 14px",
-                  borderRadius: "9px",
-                  background: "transparent",
-                  border: "none",
-                  color: "var(--text-secondary)",
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  transition: "all 0.15s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "var(--text-primary)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "var(--text-secondary)";
-                }}
-              >
+              <Button variant="ghost" size="sm">
                 Login
-              </button>
+              </Button>
             </Link>
-
             <Link href="/signup" style={{ textDecoration: "none" }}>
-              <button
-                type="button"
-                style={{
-                  padding: "7px 16px",
-                  borderRadius: "9px",
-                  background: "linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%)",
-                  border: "none",
-                  color: "#FFFFFF",
-                  fontSize: "13px",
-                  fontWeight: 800,
-                  cursor: "pointer",
-                  boxShadow: "0 2px 10px var(--accent-glow)",
-                  transition: "all 0.15s ease",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "4px",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-1px)";
-                  e.currentTarget.style.boxShadow = "0 4px 14px var(--accent-glow)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 2px 10px var(--accent-glow)";
-                }}
-              >
+              <Button variant="primary" size="sm">
                 Sign Up
-              </button>
+              </Button>
             </Link>
           </div>
         )}

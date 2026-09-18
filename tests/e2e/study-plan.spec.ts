@@ -200,7 +200,7 @@ test.describe('DSA MASTER — Daily Study Planner 2.0 Adaptive Learning Plan E2E
   // ── TEST M: PATTERN ACADEMY ADD-TO-PLAN ────────────────────────────────────
   test('M. Pattern Academy Add to Today Plan button injects pattern into daily schedule', async ({ page }) => {
     await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     const addBtn = page.locator('[data-testid="add-pattern-to-plan-btn"]');
     await expect(addBtn).toBeVisible();

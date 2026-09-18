@@ -95,10 +95,10 @@ export const DESIGN_TOKENS = {
     textSubtle: "#64748B",
   },
   borderRadius: {
-    sm: "8px",
-    md: "12px",
-    lg: "18px",
-    xl: "24px",
+    sm: "6px",
+    md: "8px",
+    lg: "12px",
+    xl: "14px",
     full: "9999px",
   },
   shadows: {

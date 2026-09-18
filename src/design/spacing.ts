@@ -1,10 +1,10 @@
 export const spacing = {
-  xs: '4px',
-  sm: '8px',
-  md: '16px',
-  lg: '24px',
-  xl: '32px',
-  '2xl': '48px',
+  xs: 'var(--space-1, 4px)',
+  sm: 'var(--space-2, 8px)',
+  md: 'var(--space-4, 16px)',
+  lg: 'var(--space-6, 24px)',
+  xl: 'var(--space-8, 32px)',
+  '2xl': 'var(--space-12, 48px)',
   '3xl': '64px',
   '4xl': '96px',
 };

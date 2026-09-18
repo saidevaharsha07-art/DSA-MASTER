@@ -1,137 +1,206 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
-/* 1. Global Centralized Theme Tokens & CSS Custom Properties */
+/* ═══════════════════════════════════════════════════════════════════════
+   1. GLOBAL CENTRALIZED SEMANTIC DESIGN TOKENS (Linear / Vercel Standard)
+   ═══════════════════════════════════════════════════════════════════════ */
+
 :root,
 [data-theme="dark"],
 .dark {
-  /* Dark Slate Navy Theme Tokens (Sophisticated Navy & Slate Layers) */
-  --background: #0F172A;
-  --background-secondary: #0B1120;
-  --surface: #1E293B;
-  --surface-secondary: #243044;
-  --surface-hover: #2E3D56;
-  --card: rgba(30, 41, 59, 0.88);
-  --card-hover: rgba(45, 59, 85, 0.92);
-  --sidebar: #111827;
-  --sidebar-hover: #1E293B;
-  --header: rgba(15, 23, 42, 0.95);
-  --panel: rgba(30, 41, 59, 0.92);
-  --panel-border: rgba(56, 189, 248, 0.25);
-  --panel-border-hover: rgba(56, 189, 248, 0.45);
-  --border: rgba(148, 163, 184, 0.14);
-  --border-subtle: rgba(148, 163, 184, 0.08);
-  --border-active: var(--primary);
+  /* Surface Layers (Deep, Calm Developer Dark) */
+  --bg: #0B0F17;
+  --bg-subtle: #0F1420;
+  --surface: #131B2A;
+  --surface-elevated: #1A2438;
 
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Typography Colors */
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
-  --foreground: #F8FAFC;
-  --muted: #94A3B8;
-  --muted-bg: rgba(148, 163, 184, 0.08);
+  --text-inverse: #0B0F17;
 
-  /* Accent Color Tokens (Default: Ocean Blue, dynamic via SettingsContext) */
-  --primary: #38BDF8;
-  --primary-rgb: 56, 189, 248;
-  --primary-hover: #60A5FA;
-  --primary-bg: rgba(56, 189, 248, 0.15);
-  --primary-soft: rgba(56, 189, 248, 0.22);
-  --primary-border: rgba(56, 189, 248, 0.35);
+  /* Accent / Brand (Technical Cyan-Sky) */
   --accent: #38BDF8;
-  --accent-rgb: 56, 189, 248;
-  --accent-primary: #38BDF8;
-  --accent-secondary: #60A5FA;
-  --accent-soft: rgba(56, 189, 248, 0.22);
-  --accent-border: rgba(56, 189, 248, 0.35);
-  --accent-glow: rgba(56, 189, 248, 0.4);
-  --accent-text: #38BDF8;
+  --accent-hover: #0284C7;
+  --accent-subtle: rgba(56, 189, 248, 0.12);
 
-  /* Semantic Colors */
+  /* Semantic Feedback */
   --success: #10B981;
   --warning: #F59E0B;
   --danger: #EF4444;
+  --info: #3B82F6;
 
-  /* Theme Special Gradients */
-  --hero-gradient: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
-  --modal-bg: #1E293B;
-  --input-bg: rgba(15, 23, 42, 0.65);
-  --input-border: rgba(148, 163, 184, 0.2);
-  --card-shadow: 0 14px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
 
-  /* Layout & Glass Tokens */
-  --radius: 16px;
-  --border-radius: 16px;
-  --glass-opacity: 0.88;
-  --glass-blur: 20px;
-  --glow-strength: 0.5;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', monospace;
-  --sidebar-width: 280px;
-  --ui-density: 16px;
-  --transition-speed: 200ms;
+  /* Backward Compatibility Aliases (Preserves All Existing Views) */
+  --background: var(--bg);
+  --background-secondary: var(--bg-subtle);
+  --card: var(--surface);
+  --card-hover: var(--surface-elevated);
+  --sidebar: var(--bg);
+  --sidebar-hover: var(--surface);
+  --header: rgba(11, 15, 23, 0.95);
+  --panel: var(--surface);
+  --panel-border: var(--border);
+  --panel-border-hover: var(--border-strong);
+  --foreground: var(--text-primary);
+  --muted: var(--text-secondary);
+  --muted-bg: var(--accent-subtle);
+  --primary: var(--accent);
+  --primary-rgb: 56, 189, 248;
+  --primary-hover: var(--accent-hover);
+  --primary-bg: var(--accent-subtle);
+  --primary-soft: rgba(56, 189, 248, 0.18);
+  --primary-border: var(--border-strong);
+  --accent-primary: var(--accent);
+  --accent-secondary: var(--accent-hover);
+  --accent-soft: var(--accent-subtle);
+  --accent-border: var(--border-strong);
+  --accent-glow: rgba(56, 189, 248, 0.25);
+  --accent-text: var(--accent);
+  --modal-bg: var(--surface);
+  --input-bg: rgba(11, 15, 23, 0.85);
+  --input-border: var(--border);
+  --card-shadow: var(--shadow-md);
+  --radius: 10px;
+  --border-radius: 10px;
 }
 
-/* Vibrant, Crisp Light Theme */
+/* Crisp, High-Contrast Light Theme */
 [data-theme="light"],
 .light {
-  --background: #F5F7FB;
-  --background-secondary: #EEF2F6;
+  /* Surface Layers */
+  --bg: #F8FAFC;
+  --bg-subtle: #F1F5F9;
   --surface: #FFFFFF;
-  --surface-secondary: #F8FAFC;
-  --surface-hover: #F1F5F9;
-  --card: #FFFFFF;
-  --card-hover: #F8FAFC;
-  --sidebar: #FFFFFF;
-  --sidebar-hover: #F8FAFC;
-  --header: rgba(255, 255, 255, 0.96);
-  --panel: #FFFFFF;
-  --panel-border: rgba(2, 132, 199, 0.25);
-  --panel-border-hover: rgba(2, 132, 199, 0.45);
+  --surface-elevated: #FFFFFF;
+
+  /* Borders */
   --border: #E2E8F0;
   --border-subtle: #F1F5F9;
-  --border-active: var(--primary);
+  --border-strong: #CBD5E1;
 
+  /* Typography Colors */
   --text-primary: #0F172A;
   --text-secondary: #475569;
   --text-muted: #64748B;
-  --foreground: #0F172A;
-  --muted: #475569;
-  --muted-bg: rgba(15, 23, 42, 0.05);
+  --text-inverse: #FFFFFF;
 
-  --primary: #0284C7;
-  --primary-rgb: 2, 132, 199;
-  --primary-hover: #0369A1;
-  --primary-bg: rgba(2, 132, 199, 0.1);
-  --primary-soft: rgba(2, 132, 199, 0.18);
-  --primary-border: rgba(2, 132, 199, 0.3);
+  /* Accent / Brand (Technical Precision Blue) */
   --accent: #0284C7;
-  --accent-rgb: 2, 132, 199;
-  --accent-primary: #0284C7;
-  --accent-secondary: #0369A1;
-  --accent-soft: rgba(2, 132, 199, 0.18);
-  --accent-border: rgba(2, 132, 199, 0.3);
-  --accent-glow: rgba(2, 132, 199, 0.3);
-  --accent-text: #0284C7;
+  --accent-hover: #0369A1;
+  --accent-subtle: rgba(2, 132, 199, 0.08);
 
-  --hero-gradient: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%);
-  --modal-bg: #FFFFFF;
+  /* Semantic Feedback */
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --info: #2563EB;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  /* Backward Compatibility Aliases */
+  --background: var(--bg);
+  --background-secondary: var(--bg-subtle);
+  --card: var(--surface);
+  --card-hover: var(--bg-subtle);
+  --sidebar: var(--surface);
+  --sidebar-hover: var(--bg-subtle);
+  --header: rgba(255, 255, 255, 0.96);
+  --panel: var(--surface);
+  --panel-border: var(--border);
+  --panel-border-hover: var(--border-strong);
+  --foreground: var(--text-primary);
+  --muted: var(--text-secondary);
+  --muted-bg: rgba(15, 23, 42, 0.05);
+  --primary: var(--accent);
+  --primary-rgb: 2, 132, 199;
+  --primary-hover: var(--accent-hover);
+  --primary-bg: var(--accent-subtle);
+  --primary-soft: rgba(2, 132, 199, 0.15);
+  --primary-border: var(--border-strong);
+  --accent-primary: var(--accent);
+  --accent-secondary: var(--accent-hover);
+  --accent-soft: var(--accent-subtle);
+  --accent-border: var(--border-strong);
+  --accent-glow: rgba(2, 132, 199, 0.15);
+  --accent-text: var(--accent);
+  --modal-bg: var(--surface);
   --input-bg: #FFFFFF;
-  --input-border: #CBD5E1;
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --input-border: var(--border);
+  --card-shadow: var(--shadow-md);
+  --radius: 10px;
+  --border-radius: 10px;
 }
 
-/* 2. Global Resets & Body Styling */
+/* ═══════════════════════════════════════════════════════════════════════
+   2. SCALES: SPACING, RADIUS, TYPOGRAPHY & TRANSITIONS
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Standard Radii (Clean Developer Feel — No Giant 24px Bubbles) */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-md: 1rem;        /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-display: 2.25rem;/* 36px */
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-speed: 200ms;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   3. GLOBAL RESETS, ACCESSIBILITY & UTILITIES
+   ═══════════════════════════════════════════════════════════════════════ */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: var(--background);
+  background: var(--bg);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -139,7 +208,21 @@ a {
   text-decoration: none;
 }
 
-/* Scrollbar Customization */
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Standardized Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -151,9 +234,9 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted);
+  background: var(--text-muted);
 }

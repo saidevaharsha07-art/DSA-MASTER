@@ -350,7 +350,7 @@ test.describe('DSA MASTER — Interview Arena 2.0: Realistic Adaptive Simulator 
 
     // 2. Pattern Academy -> Interview Arena
     await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     const interviewPatternBtn = page.locator('[data-testid="interview-this-pattern-btn"]');
     await expect(interviewPatternBtn).toBeVisible();
