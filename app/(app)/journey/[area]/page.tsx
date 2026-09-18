@@ -419,9 +419,12 @@ export default function JourneyAreaDetailPage() {
                                   {patSolved}/{patProblems.length} Solved
                                 </span>
                               </div>
-                              <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                              <Link
+                                href={`/journey/${category.slug}/${subtopic.slug}/${pat.slug}`}
+                                className="text-sm font-bold text-[var(--text-primary)] hover:text-indigo-500 transition-colors"
+                              >
                                 {pat.title}
-                              </h4>
+                              </Link>
                               <p className="text-xs text-[var(--text-muted)] line-clamp-2">
                                 {pat.shortDescription || pat.overview}
                               </p>
@@ -473,12 +476,22 @@ export default function JourneyAreaDetailPage() {
                                 {isPatternExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                               </button>
 
-                              <Link
-                                href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}&pattern=${pat.slug}`}
-                                className="text-xs font-bold text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-1"
-                              >
-                                Drill Pattern ›
-                              </Link>
+                              <div className="flex items-center gap-2.5">
+                                <Link
+                                  href={`/journey/${category.slug}/${subtopic.slug}/${pat.slug}`}
+                                  className="text-xs font-black text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-0.5"
+                                >
+                                  <span>Learn Pattern</span>
+                                  <span>›</span>
+                                </Link>
+                                <Link
+                                  href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}&pattern=${pat.slug}`}
+                                  className="text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-0.5"
+                                >
+                                  <span>Drill</span>
+                                  <span>›</span>
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         );

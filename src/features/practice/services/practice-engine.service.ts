@@ -343,9 +343,9 @@ export class PracticeEngineService {
 
     // 2. Select coherent problem list enforcing constraints:
     // - No duplicates
-    // - Max problems per pattern (max 2 for 5, max 3 for 10, max 5 for 20)
+    // - Max problems per pattern (max 2 for 5, max 3 for 10, max 5 for 20, unless targeted at a specific pattern)
     // - Smooth difficulty progression: Easy -> Medium -> Hard
-    const maxPerPattern = count === 5 ? 2 : count === 10 ? 3 : 5;
+    const maxPerPattern = (options?.pattern && options.pattern !== 'all') ? count : (count === 5 ? 2 : count === 10 ? 3 : 5);
     const patternCounts = new Map<string, number>();
     const selected: ProblemModel[] = [];
 
