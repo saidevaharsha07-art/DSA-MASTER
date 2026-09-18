@@ -28,17 +28,35 @@ import {
   Lock,
   RotateCcw,
   Sparkle,
+  AlertTriangle,
+  Shuffle,
+  Play,
+  History,
+  TrendingUp,
+  Brain,
+  CheckCircle,
+  HelpCircle,
+  X,
+  FastForward,
 } from 'lucide-react';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { getPlatformMeta } from '@/src/curriculum/services';
 import { ProblemModel, ProgressionLevel, FrequencyLevel } from '@/src/curriculum/types';
 import { useRoadmap } from '@/hooks/use-roadmap';
 import { EventBus } from '@/src/core/events/event-bus';
-import { AdaptiveRecommendationService, PracticeRecommendation } from '@/src/features/adaptive/services/adaptive-recommendation.service';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { progressService, ActivityRecord } from '@/src/services/progress/progress.service';
 import { useToast } from '@/src/context/ToastContext';
 import { useSettings } from '@/src/context/SettingsContext';
+import {
+  PracticeEngineService,
+  PracticeMode,
+  RecommendedProblemItem,
+  PracticeSession,
+  MistakeReviewItem,
+  WeakAreaItem,
+  PracticeHistoryItem,
+} from '../services/practice-engine.service';
 
 // ── Platform definitions ────────────────────────────────────────────
 const PLATFORMS = [
@@ -81,6 +99,20 @@ const PLATFORMS = [
 ] as const;
 
 type PlatformId = typeof PLATFORMS[number]['id'];
+
+// ── Practice Mode Navigation Options ────────────────────────────────
+const PRACTICE_MODES: { id: PracticeMode; label: string; icon: React.ReactNode; badge?: string }[] = [
+  { id: 'recommended', label: 'Recommended', icon: <Sparkles size={14} />, badge: 'AI' },
+  { id: 'area', label: 'By Learning Area', icon: <BookOpen size={14} /> },
+  { id: 'subtopic', label: 'By Subtopic', icon: <Layers size={14} /> },
+  { id: 'pattern', label: 'By Pattern', icon: <Target size={14} /> },
+  { id: 'platform', label: 'By Platform', icon: <Swords size={14} /> },
+  { id: 'mistakes', label: 'Mistake Review', icon: <AlertTriangle size={14} />, badge: 'Fix' },
+  { id: 'weakness', label: 'Weak Areas', icon: <Brain size={14} />, badge: 'Boost' },
+  { id: 'interview', label: 'Interview Practice', icon: <Trophy size={14} />, badge: 'Mock' },
+  { id: 'random', label: 'Random', icon: <Shuffle size={14} /> },
+  { id: 'history', label: 'History', icon: <History size={14} /> },
+];
 
 // ── Codeforces Division Definitions (800 - 1900+) ────────────────────
 const CODEFORCES_DIVISIONS = [
@@ -134,6 +166,9 @@ function getProblemNumber(problem: ProblemModel): string {
   if (problem.url.includes('codechef.com')) {
     return problem.id.replace(/^cc-/, '').toUpperCase();
   }
+  if (problem.url.includes('geeksforgeeks.org')) {
+    return problem.id.replace(/^gfg-/, '').toUpperCase();
+  }
   if (problem.leetcodeNumber && problem.leetcodeNumber < 90000) {
     return `#${problem.leetcodeNumber}`;
   }
@@ -152,7 +187,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // Read initial query parameters with legacy fallback
+  // ── Read Query Parameters ─────────────────────────────────────────
+  const paramMode = searchParams?.get('mode') as PracticeMode | null;
   const initialPlatform = (searchParams?.get('platform') as PlatformId) || defaultPlatform || 'leetcode';
   const initialAreaParam = searchParams?.get('area') || searchParams?.get('kingdom') || null;
   const initialSubtopicParam = searchParams?.get('subtopic') || 'all';
@@ -162,7 +198,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   const initialStatus = (searchParams?.get('status') as 'all' | 'unsolved' | 'solved') || 'all';
   const initialSearch = searchParams?.get('search') || '';
 
-  // Topic parameter fallback (e.g. from adaptive recommendation deep-links or aliases)
+  // Topic parameter fallback (e.g. from adaptive recommendation deep-links)
   const topicParam = searchParams?.get('topic');
   const resolvedInitialArea = useMemo(() => {
     const raw = initialAreaParam || topicParam;
@@ -171,11 +207,24 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return cat ? cat.slug : raw;
   }, [initialAreaParam, topicParam]);
 
+  // Determine initial active mode
+  const initialMode: PracticeMode = useMemo(() => {
+    if (paramMode) return paramMode;
+    if (initialAreaParam || topicParam) return 'area';
+    if (initialSubtopicParam && initialSubtopicParam !== 'all') return 'subtopic';
+    if (initialPattern && initialPattern !== 'all') return 'pattern';
+    if (searchParams?.get('platform')) return 'platform';
+    return 'recommended';
+  }, [paramMode, initialAreaParam, topicParam, initialSubtopicParam, initialPattern, searchParams]);
+
   const { state: roadmapState, toggle } = useRoadmap();
   const { userId } = useActiveUser();
   const { toast } = useToast();
   const { settings } = useSettings();
   const isLight = settings.appearance.theme === 'light';
+
+  // ── Practice Mode State ───────────────────────────────────────────
+  const [activeMode, setActiveMode] = useState<PracticeMode>(initialMode);
 
   // ── Solved sets from canonical progress service & roadmap hook ───
   const completedNumbersSet = useMemo(() => {
@@ -186,20 +235,18 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return new Set<string>(roadmapState?.completedProblemIds ?? []);
   }, [roadmapState?.completedProblemIds]);
 
-  const isProblemChecked = useMemo(() => {
-    return (problem: ProblemModel): boolean => {
-      if (typeof problem.leetcodeNumber === 'number' && completedNumbersSet.has(problem.leetcodeNumber)) {
-        return true;
-      }
-      if (completedIdsSet.has(problem.id) || completedIdsSet.has(String(problem.leetcodeNumber))) {
-        return true;
-      }
-      const platform = getPlatformId(problem);
-      if (completedIdsSet.has(`${platform}:${problem.id}`) || completedIdsSet.has(`${platform}:${problem.leetcodeNumber}`)) {
-        return true;
-      }
-      return false;
-    };
+  const isProblemChecked = useCallback((problem: ProblemModel): boolean => {
+    if (typeof problem.leetcodeNumber === 'number' && completedNumbersSet.has(problem.leetcodeNumber)) {
+      return true;
+    }
+    if (completedIdsSet.has(problem.id) || completedIdsSet.has(String(problem.leetcodeNumber))) {
+      return true;
+    }
+    const platform = getPlatformId(problem);
+    if (completedIdsSet.has(`${platform}:${problem.id}`) || completedIdsSet.has(`${platform}:${problem.leetcodeNumber}`)) {
+      return true;
+    }
+    return false;
   }, [completedNumbersSet, completedIdsSet]);
 
   // ── Platform & Progression Selection State ───────────────────────
@@ -219,10 +266,38 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   const chipsScrollRef = useRef<HTMLDivElement>(null);
 
-  // Reset page when platform or filters change
+  // ── Active Practice Session State ────────────────────────────────
+  const [activeSession, setActiveSession] = useState<PracticeSession | null>(() => {
+    return PracticeEngineService.loadActiveSession(userId);
+  });
+
+  // ── Next Problem Feedback State ──────────────────────────────────
+  const [nextFeedback, setNextFeedback] = useState<{
+    solvedProblem: ProblemModel;
+    verdict: string;
+    xpEarned: number;
+    nextProblem: ProblemModel | null;
+    whyReason: string;
+  } | null>(null);
+
+  // ── Random Problem Generator State ───────────────────────────────
+  const [randomProblem, setRandomProblem] = useState<ProblemModel | null>(null);
+
+  // Reset page when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedPlatform, selectedKingdomSlug, selectedSubtopicSlug, selectedDivisionId, search, difficultyFilter, patternFilter, statusFilter, sortBy]);
+  }, [
+    activeMode,
+    selectedPlatform,
+    selectedKingdomSlug,
+    selectedSubtopicSlug,
+    selectedDivisionId,
+    search,
+    difficultyFilter,
+    patternFilter,
+    statusFilter,
+    sortBy,
+  ]);
 
   // Controlled area selection with stale filter protection
   const handleSelectKingdom = useCallback((slug: string) => {
@@ -256,6 +331,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
+      const mode = (params.get('mode') as PracticeMode) || 'recommended';
       const plat = (params.get('platform') as PlatformId) || defaultPlatform || 'leetcode';
       const rawArea = params.get('area') || params.get('kingdom') || params.get('topic') || null;
       const area = rawArea ? (CurriculumRepository.getCategoryBySlug(rawArea)?.slug || rawArea) : null;
@@ -266,6 +342,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       const q = params.get('search') || '';
       const div = params.get('division') || null;
 
+      setActiveMode(mode);
       setSelectedPlatform(plat);
       setSelectedKingdomSlug(area);
       setSelectedSubtopicSlug(sub);
@@ -283,6 +360,9 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   // Sync state to URL for shareable, bookmarkable, and refresh-persistent queries
   useEffect(() => {
     const params = new URLSearchParams();
+    if (activeMode) {
+      params.set('mode', activeMode);
+    }
     if (selectedPlatform) {
       params.set('platform', selectedPlatform);
     }
@@ -316,6 +396,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       window.history.replaceState(null, '', targetUrl);
     }
   }, [
+    activeMode,
     selectedPlatform,
     selectedKingdomSlug,
     selectedSubtopicSlug,
@@ -327,10 +408,9 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     pathname,
   ]);
 
-  // ── 1. LEETCODE LEARNING AREAS (25 Areas) ──────────────────────────
+  // ── Platform Progression Buckets (All 25 Learning Areas) ──────────
   const leetcodeKingdoms = useMemo(() => {
     const lcProblems = ALL_PROBLEMS.filter((p) => p.platform === 'leetcode');
-
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = lcProblems.filter(
         (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
@@ -356,10 +436,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
   }, [isProblemChecked]);
 
-  // ── 2. CODECHEF LEARNING AREAS (25 Areas) ──────────────────────────
   const codechefKingdoms = useMemo(() => {
     const ccProblems = ALL_PROBLEMS.filter((p) => p.platform === 'codechef');
-
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = ccProblems.filter(
         (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
@@ -385,39 +463,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
   }, [isProblemChecked]);
 
-  // ── 3. CODEFORCES DIVISIONS (4 Divisions) ────────────────────────
-  const codeforcesDivisions = useMemo(() => {
-    const cfProblems = ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
-
-    return CODEFORCES_DIVISIONS.map((div, idx) => {
-      const dProblems = cfProblems.filter((p) => div.filter(p));
-      const solvedCount = dProblems.filter((p) => isProblemChecked(p)).length;
-      const totalCount = dProblems.length;
-      const isCompleted = totalCount > 0 && solvedCount >= totalCount;
-      const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
-
-      return {
-        id: div.id,
-        number: idx + 1,
-        name: div.title,
-        topic: div.ratingRange,
-        description: div.description,
-        ratingRange: div.ratingRange,
-        difficulty: div.difficulty,
-        problems: dProblems,
-        solvedCount,
-        totalCount,
-        progressPct,
-        isCompleted,
-        xpReward: div.xpReward,
-      };
-    });
-  }, [isProblemChecked]);
-
-  // ── 4. GEEKSFORGEEKS LEARNING AREAS (25 Areas) ──────────────────────
   const geeksforgeeksKingdoms = useMemo(() => {
     const gfgProblems = ALL_PROBLEMS.filter((p) => p.platform === 'geeksforgeeks');
-
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = gfgProblems.filter(
         (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
@@ -443,7 +490,34 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
   }, [isProblemChecked]);
 
-  // ── Resolve Active Progression Node ──────────────────────────────
+  const codeforcesDivisions = useMemo(() => {
+    const cfProblems = ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
+    return CODEFORCES_DIVISIONS.map((div, idx) => {
+      const dProblems = cfProblems.filter((p) => div.filter(p));
+      const solvedCount = dProblems.filter((p) => isProblemChecked(p)).length;
+      const totalCount = dProblems.length;
+      const isCompleted = totalCount > 0 && solvedCount >= totalCount;
+      const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
+
+      return {
+        id: div.id,
+        number: idx + 1,
+        name: div.title,
+        topic: div.ratingRange,
+        description: div.description,
+        ratingRange: div.ratingRange,
+        difficulty: div.difficulty,
+        problems: dProblems,
+        solvedCount,
+        totalCount,
+        progressPct,
+        isCompleted,
+        xpReward: div.xpReward,
+      };
+    });
+  }, [isProblemChecked]);
+
+  // Active progression nodes
   const activeLeetcodeKingdom = useMemo(() => {
     if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
       const found = leetcodeKingdoms.find((k) => k.id === selectedKingdomSlug);
@@ -467,7 +541,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       const found = geeksforgeeksKingdoms.find((k) => k.id === selectedKingdomSlug);
       if (found) return found;
     }
-    return geeksforgeeksKingdoms[0];
+    const currentUnfinished = geeksforgeeksKingdoms.find((k) => !k.isCompleted);
+    return currentUnfinished || geeksforgeeksKingdoms[0];
   }, [geeksforgeeksKingdoms, selectedKingdomSlug]);
 
   const activeCodeforcesDivision = useMemo(() => {
@@ -479,25 +554,19 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return currentUnfinished || codeforcesDivisions[0];
   }, [codeforcesDivisions, selectedDivisionId]);
 
-  // ── Platform-wide Problems Source ────────────────────────────────
+  // Platform meta & problem pool
   const currentPlatformMeta = useMemo(() => {
     return PLATFORMS.find((p) => p.id === selectedPlatform) || PLATFORMS[0];
   }, [selectedPlatform]);
 
   const platformProblems = useMemo(() => {
-    if (selectedPlatform === 'codechef') {
-      return ALL_PROBLEMS.filter((p) => p.platform === 'codechef');
-    }
-    if (selectedPlatform === 'codeforces') {
-      return ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
-    }
-    if (selectedPlatform === 'geeksforgeeks') {
-      return ALL_PROBLEMS.filter((p) => p.platform === 'geeksforgeeks');
-    }
+    if (selectedPlatform === 'codechef') return ALL_PROBLEMS.filter((p) => p.platform === 'codechef');
+    if (selectedPlatform === 'codeforces') return ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
+    if (selectedPlatform === 'geeksforgeeks') return ALL_PROBLEMS.filter((p) => p.platform === 'geeksforgeeks');
     return ALL_PROBLEMS.filter((p) => p.platform === 'leetcode');
   }, [selectedPlatform]);
 
-  // ── Scope Problems by Selected Learning Area / Division ──────────
+  // ── Scoped Problems by Active Learning Area ───────────────────────
   const scopedProblems = useMemo(() => {
     if (selectedPlatform === 'leetcode') {
       if (selectedKingdomSlug === 'all') return platformProblems;
@@ -520,9 +589,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       }
       if (selectedDivisionId && selectedDivisionId !== 'all') {
         const divObj = CODEFORCES_DIVISIONS.find((d) => d.id === selectedDivisionId);
-        if (divObj) {
-          cfList = cfList.filter(divObj.filter);
-        }
+        if (divObj) cfList = cfList.filter(divObj.filter);
       }
       return cfList;
     }
@@ -537,7 +604,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     platformProblems,
   ]);
 
-  // ── Subtopic & Pattern Hierarchy Scope for Filters ───────────────
+  // ── Hierarchy Scope for Filters ──────────────────────────────────
   const availableSubtopics = useMemo(() => {
     if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
       return CurriculumRepository.getSubtopicsByCategory(selectedKingdomSlug);
@@ -561,11 +628,38 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return patterns;
   }, [selectedKingdomSlug, selectedSubtopicSlug]);
 
-  // ── Apply Secondary Filters (Search, Difficulty, Subtopic, Pattern, Status, Sort) ──
+  // ── 1. RECOMMENDED MODE QUEUE ─────────────────────────────────────
+  const recommendedItems = useMemo<RecommendedProblemItem[]>(() => {
+    if (activeMode !== 'recommended') return [];
+    return PracticeEngineService.getRecommendedProblems(userId, {
+      platform: selectedPlatform,
+      targetTopic: selectedKingdomSlug || undefined,
+      limit: 30,
+    });
+  }, [activeMode, userId, selectedPlatform, selectedKingdomSlug]);
+
+  // ── 2. MISTAKE REVIEW MODE ────────────────────────────────────────
+  const mistakeReviewItems = useMemo<MistakeReviewItem[]>(() => {
+    if (activeMode !== 'mistakes') return [];
+    return PracticeEngineService.getMistakeReviewProblems(userId);
+  }, [activeMode, userId]);
+
+  // ── 3. WEAK AREAS MODE ────────────────────────────────────────────
+  const weakAreasResult = useMemo(() => {
+    if (activeMode !== 'weakness') return { isZeroState: false, weakAreas: [] };
+    return PracticeEngineService.getWeakAreas(userId);
+  }, [activeMode, userId]);
+
+  // ── 4. PRACTICE HISTORY MODE ──────────────────────────────────────
+  const practiceHistoryItems = useMemo<PracticeHistoryItem[]>(() => {
+    if (activeMode !== 'history') return [];
+    return PracticeEngineService.getPracticeHistory(userId);
+  }, [activeMode, userId]);
+
+  // ── Filtered Standard Problems Pool ───────────────────────────────
   const filteredProblems = useMemo(() => {
     let list = [...scopedProblems];
 
-    // Search query
     if (search.trim()) {
       const q = search.trim().toLowerCase();
       list = list.filter(
@@ -580,7 +674,6 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       );
     }
 
-    // Difficulty filter
     if (difficultyFilter !== 'all') {
       list = list.filter((p) => {
         const diff = p.difficulty || (p.level === 'Learn' ? 'Easy' : p.level === 'Master' ? 'Hard' : 'Medium');
@@ -588,7 +681,6 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       });
     }
 
-    // Subtopic filter
     if (selectedSubtopicSlug && selectedSubtopicSlug !== 'all') {
       list = list.filter(
         (p) =>
@@ -597,7 +689,6 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       );
     }
 
-    // Pattern filter
     if (patternFilter !== 'all') {
       list = list.filter(
         (p) =>
@@ -608,21 +699,15 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       );
     }
 
-    // Solved status filter
     if (statusFilter === 'solved') {
       list = list.filter((p) => isProblemChecked(p));
     } else if (statusFilter === 'unsolved') {
       list = list.filter((p) => !isProblemChecked(p));
     }
 
-    // Sorting
     list.sort((a, b) => {
-      if (sortBy === 'number') {
-        return (a.leetcodeNumber || 0) - (b.leetcodeNumber || 0);
-      }
-      if (sortBy === 'xp') {
-        return (b.xp || 50) - (a.xp || 50);
-      }
+      if (sortBy === 'number') return (a.leetcodeNumber || 0) - (b.leetcodeNumber || 0);
+      if (sortBy === 'xp') return (b.xp || 50) - (a.xp || 50);
       if (sortBy === 'difficulty') {
         const diffRank = (d: string) => (d === 'Hard' ? 3 : d === 'Medium' ? 2 : 1);
         return diffRank(b.difficulty || 'Medium') - diffRank(a.difficulty || 'Medium');
@@ -633,7 +718,6 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return list;
   }, [scopedProblems, search, difficultyFilter, patternFilter, selectedSubtopicSlug, statusFilter, sortBy, isProblemChecked]);
 
-  // Paginated problem slice
   const paginatedProblems = useMemo(() => {
     const start = (currentPage - 1) * pageSize;
     return filteredProblems.slice(start, start + pageSize);
@@ -670,7 +754,35 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return unsolvedInNode || scopedProblems[0] || null;
   }, [scopedProblems, isProblemChecked]);
 
-  // ── Handle Toggle Solved Action ───────────────────────────────────
+  // ── Session Generation Handlers ──────────────────────────────────
+  const handleStartSession = (count: 5 | 10 | 20) => {
+    const session = PracticeEngineService.generatePracticeSession(userId, count, {
+      mode: activeMode,
+      area: selectedKingdomSlug || undefined,
+      subtopic: selectedSubtopicSlug !== 'all' ? selectedSubtopicSlug : undefined,
+      pattern: patternFilter !== 'all' ? patternFilter : undefined,
+      platform: selectedPlatform,
+      difficulty: difficultyFilter !== 'all' ? difficultyFilter : undefined,
+    });
+    setActiveSession(session);
+    toast(`Started ${count}-problem practice session!`, 'success');
+  };
+
+  const handleEndSession = () => {
+    PracticeEngineService.saveActiveSession(userId, null);
+    setActiveSession(null);
+    toast('Practice session ended.', 'info');
+  };
+
+  const handleAdvanceSession = (action: 'solved' | 'skipped', problemId: string) => {
+    const updated = PracticeEngineService.advanceActiveSession(userId, action, problemId);
+    setActiveSession(updated);
+    if (updated?.status === 'completed') {
+      toast('🎉 Practice Session Completed!', 'success');
+    }
+  };
+
+  // ── Problem Solved Toggle & Aftermath ─────────────────────────────
   const handleToggleSolved = (problem: ProblemModel) => {
     const isCurrentlySolved = isProblemChecked(problem);
     const platform = getPlatformId(problem);
@@ -688,25 +800,51 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       return;
     }
 
-    EventBus.publish('ProblemSolved', {
-      id: `attempt_${Date.now()}_${problem.id}`,
+    // Execute submission result pipeline
+    const { xpEarned, nextRecommendation } = PracticeEngineService.recordProblemResult(
       userId,
-      problemId: canonicalId,
-      leetcodeNumber: problem.leetcodeNumber || 0,
-      platform,
-      status: 'accepted',
-      timestamp: new Date().toISOString(),
-      durationSeconds: 0,
-      xpEarned: problem.xp || 50,
-      topic: problem.topics?.[0] || problem.categoryTitle || 'General',
-      pattern: problem.patternTitle || 'General',
-      difficulty: problem.difficulty || 'Medium',
-    });
+      problem,
+      'Accepted',
+      35,
+      60
+    );
 
     if (toggle && problem.leetcodeNumber) {
       toggle('completed', problem.leetcodeNumber);
     }
-    toast(`Solved "${problem.title}" (+${problem.xp || 50} XP)`, 'success');
+
+    // Resolve next problem preview
+    const nextProb = ALL_PROBLEMS.find((p) => p.id === nextRecommendation.targetProblemId) ||
+      PracticeEngineService.getRandomProblem(userId, { platform: selectedPlatform });
+
+    setNextFeedback({
+      solvedProblem: problem,
+      verdict: 'Accepted',
+      xpEarned,
+      nextProblem: nextProb,
+      whyReason: nextRecommendation.explanation,
+    });
+
+    // Sync session state if active session is running
+    if (activeSession && activeSession.status === 'active') {
+      const updated = PracticeEngineService.loadActiveSession(userId);
+      setActiveSession(updated);
+      if (updated?.status === 'completed') {
+        toast('🎉 Practice Session Completed!', 'success');
+      }
+    }
+
+    toast(`Solved "${problem.title}" (+${xpEarned} XP)`, 'success');
+  };
+
+  // ── Random Problem Roll ───────────────────────────────────────────
+  const handleRollRandom = () => {
+    const prob = PracticeEngineService.getRandomProblem(userId, {
+      platform: selectedPlatform !== 'leetcode' ? selectedPlatform : undefined,
+      area: selectedKingdomSlug || undefined,
+      difficulty: difficultyFilter !== 'all' ? difficultyFilter : undefined,
+    });
+    setRandomProblem(prob);
   };
 
   // ── Pattern Mastery Data for Active Scope ─────────────────────────
@@ -714,7 +852,12 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     const patternsInScope = selectedPlatform === 'codeforces'
       ? ALL_PATTERNS.slice(0, 8)
       : ALL_PATTERNS.filter((pat) => {
-          const activeSlug = selectedPlatform === 'codechef' ? activeCodechefKingdom?.id : activeLeetcodeKingdom?.id;
+          const activeSlug =
+            selectedPlatform === 'codechef'
+              ? activeCodechefKingdom?.id
+              : selectedPlatform === 'geeksforgeeks'
+              ? activeGeeksforgeeksKingdom?.id
+              : activeLeetcodeKingdom?.id;
           return pat.categorySlug === activeSlug || pat.categoryId === activeSlug;
         });
 
@@ -734,42 +877,44 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
         percentage: pct,
       };
     });
-  }, [selectedPlatform, activeLeetcodeKingdom, activeCodechefKingdom, platformProblems, isProblemChecked]);
+  }, [selectedPlatform, activeLeetcodeKingdom, activeCodechefKingdom, activeGeeksforgeeksKingdom, platformProblems, isProblemChecked]);
 
   return (
     <div
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '24px',
+        gap: '20px',
         width: '100%',
+        maxWidth: '100%',
         background: 'var(--background)',
         color: 'var(--text-primary)',
-        padding: '24px 32px 60px 32px',
+        padding: '20px 24px 60px 24px',
         boxSizing: 'border-box',
         fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
         transition: 'background-color 0.2s ease, color 0.2s ease',
+        overflowX: 'hidden',
       }}
     >
-      {/* ── 1. PAGE HEADER & REAL-TIME PLATFORM TELEMETRY ─────────── */}
+      {/* ── 1. PAGE HEADER & STATS ─────────────────────────────────── */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '18px',
-          padding: '24px 28px',
-          borderRadius: '20px',
+          gap: '16px',
+          padding: '20px 24px',
+          borderRadius: '16px',
           background: isLight ? '#FFFFFF' : 'var(--card)',
           border: '1px solid var(--border)',
-          boxShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03)' : '0 14px 40px rgba(0, 0, 0, 0.35)',
+          boxShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.04)' : '0 14px 40px rgba(0, 0, 0, 0.35)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <div
               style={{
-                width: '44px',
-                height: '44px',
+                width: '42px',
+                height: '42px',
                 borderRadius: '12px',
                 background: `${currentPlatformMeta.color}1A`,
                 border: `1.5px solid ${currentPlatformMeta.color}`,
@@ -783,9 +928,9 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <Swords size={22} />
             </div>
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                 <h1 style={{ margin: 0, fontSize: '22px', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-                  Practice Arena
+                  Practice Arena 2.0
                 </h1>
                 <span
                   style={{
@@ -802,22 +947,67 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 >
                   {currentPlatformMeta.label} • {currentPlatformMeta.tagline}
                 </span>
+                <span
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 800,
+                    color: '#10B981',
+                    background: 'rgba(16, 185, 129, 0.12)',
+                    border: '1px solid rgba(16, 185, 129, 0.3)',
+                    padding: '2px 8px',
+                    borderRadius: '6px',
+                  }}
+                >
+                  4,000 Canonical Problems
+                </span>
               </div>
-              <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500 }}>
-                {selectedPlatform === 'codeforces'
-                  ? 'Master rated competitive problem solving structured by division rating bands.'
-                  : 'Master algorithmic problem solving structured by canonical DSA learning areas.'}
+              <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500, display: 'block', marginTop: '2px' }}>
+                Central adaptive practice engine answering: <em style={{ color: 'var(--text-primary)' }}>“What should I solve right now?”</em>
               </span>
             </div>
           </div>
+
+          {/* Quick Session Launchers */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              Sprint Session:
+            </span>
+            <button
+              type="button"
+              onClick={() => handleStartSession(5)}
+              style={sprintBtnStyle(isLight, '#10B981')}
+              aria-label="Start 5 problem session"
+            >
+              <Zap size={13} />
+              <span>5 Problems</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStartSession(10)}
+              style={sprintBtnStyle(isLight, '#3B82F6')}
+              aria-label="Start 10 problem session"
+            >
+              <Play size={13} />
+              <span>10 Problems</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStartSession(20)}
+              style={sprintBtnStyle(isLight, '#8B5CF6')}
+              aria-label="Start 20 problem session"
+            >
+              <Flame size={13} />
+              <span>20 Problems</span>
+            </button>
+          </div>
         </div>
 
-        {/* 4 Compact Real-Time Stat Tiles */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+        {/* 4 Real-Time Stat Tiles */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '10px' }}>
           <div style={statTileSt(isLight)}>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>Platform Solved</span>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginTop: '2px' }}>
-              <strong style={{ fontSize: '20px', fontWeight: 900, color: currentPlatformMeta.color }}>
+              <strong style={{ fontSize: '18px', fontWeight: 900, color: currentPlatformMeta.color }}>
                 {totalPlatformSolved}
               </strong>
               <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>/ {platformProblems.length}</span>
@@ -827,7 +1017,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           <div style={statTileSt(isLight)}>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>Total Solved Overall</span>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginTop: '2px' }}>
-              <strong style={{ fontSize: '20px', fontWeight: 900, color: '#10B981' }}>{totalSolvedOverall}</strong>
+              <strong style={{ fontSize: '18px', fontWeight: 900, color: '#10B981' }}>{totalSolvedOverall}</strong>
               <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>/ {ALL_PROBLEMS.length}</span>
             </div>
           </div>
@@ -835,7 +1025,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           <div style={statTileSt(isLight)}>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>Accuracy Rate</span>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginTop: '2px' }}>
-              <strong style={{ fontSize: '20px', fontWeight: 900, color: currentPlatformMeta.color }}>{accuracyPct}%</strong>
+              <strong style={{ fontSize: '18px', fontWeight: 900, color: currentPlatformMeta.color }}>{accuracyPct}%</strong>
               <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>acceptance</span>
             </div>
           </div>
@@ -843,27 +1033,349 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           <div style={statTileSt(isLight)}>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>Active Streak</span>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginTop: '2px' }}>
-              <strong style={{ fontSize: '20px', fontWeight: 900, color: '#F59E0B' }}>{currentStreak}d</strong>
+              <strong style={{ fontSize: '18px', fontWeight: 900, color: '#F59E0B' }}>{currentStreak}d</strong>
               <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>consecutive</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ── 2. PLATFORM TABS & PROGRESSION CAROUSEL/SELECTOR ───────── */}
+      {/* ── 2. ACTIVE SESSION HUD (If Session Running) ──────────────── */}
+      {activeSession && (
+        <div
+          data-testid="active-session-hud"
+          style={{
+            padding: '16px 20px',
+            borderRadius: '14px',
+            background: isLight ? 'linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%)' : 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, var(--card) 100%)',
+            border: isLight ? '1.5px solid #BFDBFE' : '1.5px solid rgba(59, 130, 246, 0.4)',
+            boxShadow: '0 8px 24px rgba(59, 130, 246, 0.12)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: '#3B82F6',
+                  color: '#FFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Play size={16} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '14px', color: 'var(--text-primary)' }}>{activeSession.title}</strong>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block' }}>
+                  {activeSession.status === 'completed'
+                    ? '🎉 Session Completed!'
+                    : `Problem ${activeSession.currentIndex + 1} of ${activeSession.problemCount} • ${activeSession.completedProblemIds.length} solved`}
+                </span>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              {activeSession.status !== 'completed' && activeSession.problems[activeSession.currentIndex] && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => handleToggleSolved(activeSession.problems[activeSession.currentIndex])}
+                    style={{
+                      padding: '6px 14px',
+                      borderRadius: '8px',
+                      background: '#10B981',
+                      border: 'none',
+                      color: '#FFF',
+                      fontSize: '12px',
+                      fontWeight: 800,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '5px',
+                    }}
+                  >
+                    <Check size={13} /> Mark Solved & Next
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleAdvanceSession('skipped', activeSession.problems[activeSession.currentIndex].id)}
+                    style={{
+                      padding: '6px 12px',
+                      borderRadius: '8px',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid var(--border)',
+                      color: 'var(--text-secondary)',
+                      fontSize: '12px',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                    }}
+                  >
+                    <FastForward size={13} /> Skip
+                  </button>
+                </>
+              )}
+              <button
+                type="button"
+                onClick={handleEndSession}
+                style={{
+                  padding: '6px 10px',
+                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '1px solid var(--border)',
+                  color: 'var(--text-muted)',
+                  fontSize: '12px',
+                  cursor: 'pointer',
+                }}
+              >
+                End Session
+              </button>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div style={{ width: '100%', height: '6px', borderRadius: '3px', background: isLight ? '#DBEAFE' : 'rgba(255, 255, 255, 0.1)', overflow: 'hidden' }}>
+            <div
+              style={{
+                width: `${Math.round((activeSession.completedProblemIds.length / activeSession.problemCount) * 100)}%`,
+                height: '100%',
+                background: '#3B82F6',
+                borderRadius: '3px',
+                transition: 'width 0.3s ease',
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* ── 3. POST-SUBMISSION / NEXT PROBLEM MODAL HUD ───────────── */}
+      {nextFeedback && (
+        <div
+          data-testid="next-problem-hud"
+          style={{
+            padding: '16px 20px',
+            borderRadius: '14px',
+            background: isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.12)',
+            border: '1.5px solid #10B981',
+            boxShadow: '0 8px 24px rgba(16, 185, 129, 0.15)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: '#10B981',
+                  color: '#FFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <CheckCircle size={18} />
+              </div>
+              <div>
+                <strong style={{ fontSize: '14px', color: '#10B981' }}>
+                  {nextFeedback.verdict}! (+{nextFeedback.xpEarned} XP)
+                </strong>
+                <span style={{ fontSize: '12px', color: 'var(--text-secondary)', display: 'block' }}>
+                  Solved “{nextFeedback.solvedProblem.title}” • Pattern: {nextFeedback.solvedProblem.patternTitle || 'Algorithmic Pattern'}
+                </span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setNextFeedback(null)}
+              style={{ background: 'transparent', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}
+              aria-label="Dismiss feedback"
+            >
+              <X size={16} />
+            </button>
+          </div>
+
+          {nextFeedback.nextProblem && (
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '10px 14px',
+                borderRadius: '10px',
+                background: isLight ? '#FFFFFF' : 'var(--card)',
+                border: '1px solid var(--border)',
+                flexWrap: 'wrap',
+                gap: '10px',
+              }}
+            >
+              <div>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>Next Recommended Problem:</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '2px' }}>
+                  <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>
+                    {nextFeedback.nextProblem.title}
+                  </strong>
+                  <span
+                    style={{
+                      fontSize: '10px',
+                      fontWeight: 800,
+                      color: '#3B82F6',
+                      background: 'rgba(59, 130, 246, 0.15)',
+                      padding: '2px 6px',
+                      borderRadius: '4px',
+                    }}
+                  >
+                    {nextFeedback.nextProblem.difficulty || 'Medium'}
+                  </span>
+                </div>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontStyle: 'italic', display: 'block', marginTop: '2px' }}>
+                  Why this problem? “{nextFeedback.whyReason}”
+                </span>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    handleToggleSolved(nextFeedback.nextProblem!);
+                  }}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    background: '#10B981',
+                    border: 'none',
+                    color: '#FFF',
+                    fontSize: '12px',
+                    fontWeight: 800,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}
+                >
+                  <Check size={13} /> Solve Next Problem
+                </button>
+                <a
+                  href={nextFeedback.nextProblem.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid var(--border)',
+                    color: 'var(--text-primary)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                  }}
+                >
+                  <span>Open Platform</span>
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── 4. PRACTICE MODES NAVIGATION BAR (9 MODES) ─────────────── */}
+      <div
+        data-testid="practice-modes-nav"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '10px 14px',
+          borderRadius: '14px',
+          background: isLight ? '#FFFFFF' : 'var(--card)',
+          border: '1px solid var(--border)',
+          overflowX: 'auto',
+          scrollbarWidth: 'none',
+          boxShadow: isLight ? '0 4px 14px rgba(0, 0, 0, 0.03)' : 'none',
+        }}
+      >
+        <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginRight: '4px', flexShrink: 0 }}>
+          Mode:
+        </span>
+        {PRACTICE_MODES.map((m) => {
+          const isSelected = activeMode === m.id;
+          return (
+            <button
+              key={m.id}
+              type="button"
+              onClick={() => setActiveMode(m.id)}
+              style={{
+                padding: '8px 14px',
+                borderRadius: '10px',
+                background: isSelected
+                  ? isLight ? '#3B82F615' : 'rgba(59, 130, 246, 0.25)'
+                  : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
+                border: isSelected
+                  ? '2px solid #3B82F6'
+                  : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
+                color: isSelected ? (isLight ? '#2563EB' : '#FFF') : 'var(--text-secondary)',
+                fontSize: '12px',
+                fontWeight: isSelected ? 900 : 700,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                flexShrink: 0,
+                transition: 'all 0.15s ease',
+              }}
+              data-testid={`mode-tab-${m.id}`}
+            >
+              {m.icon}
+              <span>{m.label}</span>
+              {m.badge && (
+                <span
+                  style={{
+                    fontSize: '9px',
+                    fontWeight: 900,
+                    padding: '1px 5px',
+                    borderRadius: '4px',
+                    background: isSelected ? '#3B82F6' : isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.1)',
+                    color: isSelected ? '#FFF' : 'var(--text-muted)',
+                  }}
+                >
+                  {m.badge}
+                </span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* ── 5. PLATFORM SELECTION TABS & QUICK PROGRESSION ─────────── */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px',
-          padding: '18px 24px',
+          gap: '14px',
+          padding: '16px 20px',
           borderRadius: '16px',
           background: isLight ? '#FFFFFF' : 'var(--card)',
           border: '1px solid var(--border)',
           boxShadow: isLight ? '0 6px 20px rgba(0, 0, 0, 0.04)' : 'none',
         }}
       >
-        {/* Platform Selector Row */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
@@ -872,14 +1384,11 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {PLATFORMS.map((p) => {
                 const isSelected = selectedPlatform === p.id;
-
                 return (
                   <button
                     key={p.id}
                     type="button"
-                    onClick={() => {
-                      setSelectedPlatform(p.id);
-                    }}
+                    onClick={() => setSelectedPlatform(p.id)}
                     style={{
                       padding: '8px 16px',
                       borderRadius: '10px',
@@ -899,10 +1408,11 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                       transition: 'all 0.15s ease',
                       boxShadow: isSelected ? `0 2px 10px ${p.color}25` : 'none',
                     }}
+                    data-testid={`platform-tab-${p.id}`}
                   >
                     <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: p.color }} />
                     <span>{p.label}</span>
-                    <span style={{ fontSize: '10px', opacity: 0.8 }}>({p.tagline})</span>
+                    <span style={{ fontSize: '10px', opacity: 0.8 }}>(1,000)</span>
                   </button>
                 );
               })}
@@ -910,13 +1420,16 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           </div>
 
           {/* Quick Dropdown Jump for Learning Areas / Divisions */}
-          {selectedPlatform === 'leetcode' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>
+              {selectedPlatform === 'codeforces' ? 'Division:' : 'Learning Area:'}
+            </span>
+            {selectedPlatform === 'leetcode' && (
               <select
                 value={selectedKingdomSlug || activeLeetcodeKingdom.id}
                 onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
+                data-testid="area-select"
               >
                 <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
                 {leetcodeKingdoms.map((k) => (
@@ -925,16 +1438,14 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                   </option>
                 ))}
               </select>
-            </div>
-          )}
+            )}
 
-          {selectedPlatform === 'codechef' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
+            {selectedPlatform === 'codechef' && (
               <select
                 value={selectedKingdomSlug || activeCodechefKingdom.id}
                 onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
+                data-testid="area-select"
               >
                 <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
                 {codechefKingdoms.map((k) => (
@@ -943,34 +1454,30 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                   </option>
                 ))}
               </select>
-            </div>
-          )}
+            )}
 
-          {selectedPlatform === 'geeksforgeeks' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
+            {selectedPlatform === 'geeksforgeeks' && (
               <select
                 value={selectedKingdomSlug || activeGeeksforgeeksKingdom.id}
                 onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
+                data-testid="area-select"
               >
-                <option value="all">📚 All 25 Learning Areas (0 problems)</option>
+                <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
                 {geeksforgeeksKingdoms.map((k) => (
                   <option key={k.id} value={k.id}>
-                    {k.number}. {k.name} (0/0 solved)
+                    {k.number}. {k.name} ({k.solvedCount}/{k.totalCount} solved)
                   </option>
                 ))}
               </select>
-            </div>
-          )}
+            )}
 
-          {selectedPlatform === 'codeforces' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Division:</span>
+            {selectedPlatform === 'codeforces' && (
               <select
                 value={selectedDivisionId || activeCodeforcesDivision.id}
                 onChange={(e) => setSelectedDivisionId(e.target.value)}
                 style={selectControlSt}
+                data-testid="division-select"
               >
                 <option value="all">🏆 All Divisions ({platformProblems.length} problems)</option>
                 {codeforcesDivisions.map((d) => (
@@ -979,282 +1486,63 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                   </option>
                 ))}
               </select>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
-        {/* Horizontal Quick-Selector Carousel of Progression Nodes */}
-        {selectedPlatform === 'leetcode' && (
-          <div
-            ref={chipsScrollRef}
-            style={{
-              display: 'flex',
-              gap: '8px',
-              overflowX: 'auto',
-              paddingBottom: '4px',
-              scrollbarWidth: 'thin',
-            }}
-          >
-            {leetcodeKingdoms.map((k) => {
-              const isSelected = (selectedKingdomSlug || activeLeetcodeKingdom.id) === k.id;
-              return (
-                <button
-                  key={k.id}
-                  type="button"
-                  onClick={() => handleSelectKingdom(k.id)}
-                  style={{
-                    padding: '8px 12px',
-                    borderRadius: '10px',
-                    background: isSelected
-                      ? isLight ? '#ECFDF5' : 'rgba(16, 185, 129, 0.2)'
-                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                    border: isSelected
-                      ? '1.5px solid #10B981'
-                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
-                    color: isSelected ? (isLight ? '#047857' : '#10B981') : 'var(--text-secondary)',
-                    fontSize: '11px',
-                    fontWeight: isSelected ? 800 : 600,
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    flexShrink: 0,
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
-                  <span>{k.name}</span>
-                  <span
-                    style={{
-                      fontSize: '9px',
-                      padding: '1px 5px',
-                      borderRadius: '4px',
-                      background: k.isCompleted ? 'rgba(16, 185, 129, 0.25)' : 'rgba(255, 255, 255, 0.08)',
-                      color: k.isCompleted ? '#10B981' : 'var(--text-muted)',
-                      fontWeight: 800,
-                    }}
-                  >
-                    {k.isCompleted ? '✓ 100%' : `${k.solvedCount}/${k.totalCount}`}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {selectedPlatform === 'codechef' && (
-          <div
-            ref={chipsScrollRef}
-            style={{
-              display: 'flex',
-              gap: '8px',
-              overflowX: 'auto',
-              paddingBottom: '4px',
-              scrollbarWidth: 'thin',
-            }}
-          >
-            {codechefKingdoms.map((k) => {
-              const isSelected = (selectedKingdomSlug || activeCodechefKingdom.id) === k.id;
-              return (
-                <button
-                  key={k.id}
-                  type="button"
-                  onClick={() => handleSelectKingdom(k.id)}
-                  style={{
-                    padding: '8px 12px',
-                    borderRadius: '10px',
-                    background: isSelected
-                      ? isLight ? '#FFF7ED' : 'rgba(249, 115, 22, 0.2)'
-                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                    border: isSelected
-                      ? '1.5px solid #F97316'
-                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
-                    color: isSelected ? (isLight ? '#C2410C' : '#F97316') : 'var(--text-secondary)',
-                    fontSize: '11px',
-                    fontWeight: isSelected ? 800 : 600,
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    flexShrink: 0,
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
-                  <span>{k.name}</span>
-                  <span
-                    style={{
-                      fontSize: '9px',
-                      padding: '1px 5px',
-                      borderRadius: '4px',
-                      background: k.isCompleted ? 'rgba(249, 115, 22, 0.25)' : 'rgba(255, 255, 255, 0.08)',
-                      color: k.isCompleted ? '#F97316' : 'var(--text-muted)',
-                      fontWeight: 800,
-                    }}
-                  >
-                    {k.isCompleted ? '✓ 100%' : `${k.solvedCount}/${k.totalCount}`}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {selectedPlatform === 'geeksforgeeks' && (
-          <div
-            ref={chipsScrollRef}
-            style={{
-              display: 'flex',
-              gap: '8px',
-              overflowX: 'auto',
-              paddingBottom: '4px',
-              scrollbarWidth: 'thin',
-            }}
-          >
-            {geeksforgeeksKingdoms.map((k) => {
-              const isSelected = (selectedKingdomSlug || activeGeeksforgeeksKingdom.id) === k.id;
-              return (
-                <button
-                  key={k.id}
-                  type="button"
-                  onClick={() => handleSelectKingdom(k.id)}
-                  style={{
-                    padding: '8px 12px',
-                    borderRadius: '10px',
-                    background: isSelected
-                      ? isLight ? '#F0FDF4' : 'rgba(47, 158, 68, 0.2)'
-                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                    border: isSelected
-                      ? '1.5px solid #2F9E44'
-                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
-                    color: isSelected ? (isLight ? '#2F9E44' : '#40C057') : 'var(--text-secondary)',
-                    fontSize: '11px',
-                    fontWeight: isSelected ? 800 : 600,
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    flexShrink: 0,
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
-                  <span>{k.name}</span>
-                  <span
-                    style={{
-                      fontSize: '9px',
-                      padding: '1px 5px',
-                      borderRadius: '4px',
-                      background: 'rgba(255, 255, 255, 0.08)',
-                      color: 'var(--text-muted)',
-                      fontWeight: 800,
-                    }}
-                  >
-                    0/0
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {selectedPlatform === 'codeforces' && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
-            {codeforcesDivisions.map((d) => {
-              const isSelected = (selectedDivisionId || activeCodeforcesDivision.id) === d.id;
-              return (
-                <button
-                  key={d.id}
-                  type="button"
-                  onClick={() => setSelectedDivisionId(d.id)}
-                  style={{
-                    padding: '12px 14px',
-                    borderRadius: '12px',
-                    background: isSelected
-                      ? isLight ? '#EFF6FF' : 'rgba(59, 130, 246, 0.2)'
-                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                    border: isSelected
-                      ? '2px solid #3B82F6'
-                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '4px',
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <strong style={{ fontSize: '12px', color: isSelected ? '#3B82F6' : 'var(--text-primary)' }}>
-                      {d.name}
-                    </strong>
-                    <span
-                      style={{
-                        fontSize: '9px',
-                        fontWeight: 800,
-                        color: d.isCompleted ? '#10B981' : '#3B82F6',
-                        background: d.isCompleted ? 'rgba(16, 185, 129, 0.15)' : 'rgba(59, 130, 246, 0.15)',
-                        padding: '1px 5px',
-                        borderRadius: '4px',
-                      }}
-                    >
-                      {d.isCompleted ? '✓ COMPLETED' : `${d.solvedCount} / ${d.totalCount}`}
-                    </span>
-                  </div>
-                  <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{d.difficulty} • +{d.xpReward} XP</span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Secondary Filter Controls Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px', alignItems: 'center' }}>
-          {/* Search */}
-          <div style={{ position: 'relative', gridColumn: 'span 2' }}>
-            <Search size={14} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+        {/* Secondary Filter Matrix */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+          {/* Search box */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.04)', borderRadius: '8px', padding: '6px 12px', border: '1px solid var(--border)', flex: '1 1 200px' }}>
+            <Search size={14} style={{ color: 'var(--text-muted)' }} />
             <input
               type="text"
-              placeholder="Search problems by title, topic, #"
+              placeholder="Search by title, pattern, topic, or #..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '8px 12px 8px 34px',
-                borderRadius: '8px',
-                background: 'var(--input-bg, rgba(255, 255, 255, 0.04))',
-                border: '1px solid var(--input-border, rgba(255, 255, 255, 0.1))',
-                color: 'var(--text-primary)',
-                fontSize: '12px',
-                outline: 'none',
-                boxSizing: 'border-box',
-              }}
+              style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)', fontSize: '12px', outline: 'none', width: '100%' }}
+              data-testid="search-input"
             />
           </div>
 
-          {/* Subtopic */}
+          {/* Subtopic Filter */}
           <select
             aria-label="Filter by subtopic"
             value={selectedSubtopicSlug}
             onChange={(e) => handleSelectSubtopic(e.target.value)}
             style={selectControlSt}
+            data-testid="subtopic-select"
           >
             <option value="all">Subtopic: All Subtopics</option>
             {availableSubtopics.map((s) => (
-              <option key={s.slug} value={s.slug}>
+              <option key={s.id} value={s.slug || s.id}>
                 {s.title}
               </option>
             ))}
           </select>
 
-          {/* Difficulty */}
+          {/* Pattern Filter */}
+          <select
+            aria-label="Filter by pattern"
+            value={patternFilter}
+            onChange={(e) => setPatternFilter(e.target.value)}
+            style={selectControlSt}
+            data-testid="pattern-select"
+          >
+            <option value="all">Pattern: All Patterns</option>
+            {availablePatterns.map((p) => (
+              <option key={p.id} value={p.slug || p.id}>
+                {p.title}
+              </option>
+            ))}
+          </select>
+
+          {/* Difficulty Filter */}
           <select
             value={difficultyFilter}
             onChange={(e) => setDifficultyFilter(e.target.value as any)}
             style={selectControlSt}
+            data-testid="difficulty-select"
           >
             <option value="all">Difficulty: All</option>
             <option value="Easy">Easy</option>
@@ -1262,546 +1550,1066 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             <option value="Hard">Hard</option>
           </select>
 
-          {/* Pattern */}
-          <select
-            value={patternFilter}
-            onChange={(e) => setPatternFilter(e.target.value)}
-            style={selectControlSt}
-          >
-            <option value="all">Pattern: All Patterns</option>
-            {availablePatterns.map((p) => (
-              <option key={p.slug} value={p.slug}>
-                {p.title}
-              </option>
-            ))}
-          </select>
-
-          {/* Solved Status */}
+          {/* Status Filter */}
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as any)}
             style={selectControlSt}
+            data-testid="status-select"
           >
             <option value="all">Status: All</option>
             <option value="unsolved">Unsolved</option>
             <option value="solved">Solved</option>
           </select>
-
-          {/* Sort */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
-            style={selectControlSt}
-          >
-            <option value="order">Sort: Curriculum Order</option>
-            <option value="number">Sort: Problem #</option>
-            <option value="difficulty">Sort: Difficulty</option>
-            <option value="xp">Sort: Highest XP</option>
-          </select>
         </div>
       </div>
 
-      {/* ── 3. MAIN 2-COLUMN TRAINING LAYOUT (72% / 28%) ───────────── */}
+      {/* ── 6. MAIN CONTENT AREA (BY ACTIVE MODE) ───────────────────── */}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'minmax(0, 1fr) 320px',
-          gap: '24px',
+          gridTemplateColumns: 'minmax(0, 1fr) 300px',
+          gap: '20px',
           alignItems: 'start',
         }}
       >
-        {/* ── LEFT MAIN: ACTIVE PROGRESSION HERO & PROBLEM QUEUE ───── */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: 0 }}>
-          
-          {/* Active Learning Area / Division Progression Hero Banner */}
-          {selectedPlatform !== 'geeksforgeeks' && (
-            <div
-              style={{
-                padding: '20px 24px',
-                borderRadius: '16px',
-                background: isLight
-                  ? `linear-gradient(135deg, #FFFFFF 0%, ${currentPlatformMeta.color}0A 60%, #F8FAFC 100%)`
-                  : `linear-gradient(135deg, ${currentPlatformMeta.color}15 0%, var(--card) 100%)`,
-                border: isLight ? `1.5px solid ${currentPlatformMeta.color}40` : `1.5px solid ${currentPlatformMeta.color}55`,
-                boxShadow: isLight ? `0 8px 24px ${currentPlatformMeta.color}12` : `0 10px 30px rgba(0, 0, 0, 0.35)`,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '14px',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      borderRadius: '10px',
-                      background: `${currentPlatformMeta.color}20`,
-                      border: `1px solid ${currentPlatformMeta.color}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: currentPlatformMeta.color,
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Trophy size={20} />
-                  </div>
-                  <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <strong style={{ fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)' }}>
-                        {selectedPlatform === 'codeforces'
-                          ? activeCodeforcesDivision.name
-                          : selectedPlatform === 'codechef'
-                          ? `${activeCodechefKingdom.number}. ${activeCodechefKingdom.name}`
-                          : `${activeLeetcodeKingdom.number}. ${activeLeetcodeKingdom.name}`}
-                      </strong>
-                      <span
-                        style={{
-                          fontSize: '10px',
-                          fontWeight: 800,
-                          color: currentPlatformMeta.color,
-                          background: `${currentPlatformMeta.color}18`,
-                          padding: '2px 8px',
-                          borderRadius: '6px',
-                        }}
-                      >
-                        {selectedPlatform === 'codeforces'
-                          ? activeCodeforcesDivision.topic
-                          : selectedPlatform === 'codechef'
-                          ? activeCodechefKingdom.topic
-                          : activeLeetcodeKingdom.topic}
-                      </span>
-                    </div>
-                    <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block', marginTop: '2px' }}>
-                      {selectedPlatform === 'codeforces'
-                        ? activeCodeforcesDivision.description
-                        : selectedPlatform === 'codechef'
-                        ? activeCodechefKingdom.description
-                        : activeLeetcodeKingdom.description}
-                    </span>
-                  </div>
+        {/* ── LEFT MAIN PANEL: CONTENT BY MODE ──────────────────────── */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', minWidth: 0 }}>
+
+          {/* ═══════════════ MODE: RECOMMENDED ═══════════════ */}
+          {activeMode === 'recommended' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="recommended-mode-container">
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+                <div>
+                  <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Sparkles size={16} style={{ color: '#3B82F6' }} />
+                    Recommended Problem Queue
+                  </h2>
+                  <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                    Ranked by active roadmap signals, weakness analysis, retention decay, and difficulty readiness.
+                  </span>
                 </div>
-
-                {/* Continue Node Action Buttons */}
-                {nextProgressionProblem && (() => {
-                  const nextMeta = getPlatformMeta(nextProgressionProblem);
-                  return (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                      <Link
-                        href={`/practice/${nextProgressionProblem.slug || nextProgressionProblem.id}`}
-                        style={{
-                          padding: '10px 18px',
-                          borderRadius: '10px',
-                          background: currentPlatformMeta.color,
-                          border: 'none',
-                          color: '#FFF',
-                          fontSize: '12px',
-                          fontWeight: 900,
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px',
-                          textDecoration: 'none',
-                          boxShadow: `0 4px 14px ${currentPlatformMeta.color}40`,
-                        }}
-                      >
-                        <Code2 size={15} />
-                        <span>
-                          {selectedPlatform === 'codeforces'
-                            ? 'Solve Division'
-                            : 'Solve Area'}
-                        </span>
-                        <ArrowRight size={14} />
-                      </Link>
-
-                      <a
-                        href={nextMeta.canonicalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          padding: '10px 14px',
-                          borderRadius: '10px',
-                          background: isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.05)',
-                          border: `1.5px solid ${nextMeta.color}66`,
-                          color: nextMeta.color,
-                          fontSize: '12px',
-                          fontWeight: 800,
-                          textDecoration: 'none',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                        }}
-                      >
-                        <span>Open {nextMeta.name}</span>
-                        <ExternalLink size={13} />
-                      </a>
-                    </div>
-                  );
-                })()}
-              </div>
-
-              {/* Progress Track Gauge */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px' }}>
-                  <span style={{ color: 'var(--text-muted)', fontWeight: 700 }}>Progression Mastery</span>
-                  <strong style={{ color: currentPlatformMeta.color }}>
-                    {selectedPlatform === 'codeforces'
-                      ? `${activeCodeforcesDivision.solvedCount} / ${activeCodeforcesDivision.totalCount} Solved (${activeCodeforcesDivision.progressPct}%)`
-                      : selectedPlatform === 'codechef'
-                      ? `${activeCodechefKingdom.solvedCount} / ${activeCodechefKingdom.totalCount} Solved (${activeCodechefKingdom.progressPct}%)`
-                      : `${activeLeetcodeKingdom.solvedCount} / ${activeLeetcodeKingdom.totalCount} Solved (${activeLeetcodeKingdom.progressPct}%)`}
-                  </strong>
-                </div>
-                <div style={{ width: '100%', height: '6px', borderRadius: '3px', background: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)', overflow: 'hidden' }}>
-                  <div
-                    style={{
-                      width: `${
-                        selectedPlatform === 'codeforces'
-                          ? activeCodeforcesDivision.progressPct
-                          : selectedPlatform === 'codechef'
-                          ? activeCodechefKingdom.progressPct
-                          : activeLeetcodeKingdom.progressPct
-                      }%`,
-                      height: '100%',
-                      background: currentPlatformMeta.color,
-                      borderRadius: '3px',
-                      transition: 'width 0.4s ease',
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Locked GeeksForGeeks Banner */}
-          {selectedPlatform === 'geeksforgeeks' && (
-            <div
-              style={{
-                padding: '24px',
-                borderRadius: '16px',
-                background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
-                border: isLight ? '1.5px solid #E2E8F0' : '1.5px solid rgba(255, 255, 255, 0.08)',
-                textAlign: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '8px',
-              }}
-            >
-              <Lock size={28} style={{ color: '#F59E0B' }} />
-              <strong style={{ fontSize: '15px', color: 'var(--text-primary)' }}>GeeksForGeeks Integration In Progress</strong>
-              <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', maxWidth: '460px' }}>
-                Curriculums, company tags, and practice arenas for GeeksForGeeks are currently being provisioned and will unlock in the upcoming release.
-              </p>
-            </div>
-          )}
-
-          {/* Problem Queue Section */}
-          <div
-            style={{
-              background: isLight ? '#FFFFFF' : 'var(--card)',
-              border: '1px solid var(--border)',
-              borderRadius: '20px',
-              padding: '22px',
-              boxShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.04)' : 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
-              <div>
-                <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)' }}>
-                  Problem Queue
-                </h3>
-                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                  Showing {filteredProblems.length} available problems in{' '}
-                  <strong style={{ color: currentPlatformMeta.color }}>
-                    {selectedPlatform === 'codeforces'
-                      ? activeCodeforcesDivision.name
-                      : selectedPlatform === 'codechef'
-                      ? activeCodechefKingdom.name
-                      : selectedPlatform === 'geeksforgeeks'
-                      ? activeGeeksforgeeksKingdom.name
-                      : activeLeetcodeKingdom.name}
-                  </strong>
+                <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>
+                  Showing top {recommendedItems.length} curated matches
                 </span>
               </div>
 
-              <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>
-                Page {currentPage} of {totalPages}
-              </span>
-            </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {recommendedItems.map((item, idx) => {
+                  const prob = item.problem;
+                  const isSolved = isProblemChecked(prob);
+                  const platMeta = getPlatformMeta(prob);
+                  const diffColor =
+                    item.targetDifficulty === 'Easy' ? '#10B981' : item.targetDifficulty === 'Hard' ? '#EF4444' : '#F59E0B';
 
-            {/* Problem Cards Table List */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {paginatedProblems.map((prob) => {
-                const isSolved = isProblemChecked(prob);
-                const platformMeta = getPlatformMeta(prob);
-                const diffColor =
-                  (prob.difficulty || prob.level || 'Medium').toLowerCase() === 'easy' || prob.level === 'Learn'
-                    ? '#10B981'
-                    : (prob.difficulty || prob.level || '').toLowerCase() === 'hard' || prob.level === 'Master'
-                    ? '#EF4444'
-                    : '#F59E0B';
-
-                return (
-                  <div
-                    key={prob.id}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      padding: '12px 16px',
-                      borderRadius: '12px',
-                      background: isSolved
-                        ? isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.05)'
-                        : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
-                      border: isSolved
-                        ? isLight ? '1px solid #BBF7D0' : '1px solid rgba(16, 185, 129, 0.25)'
-                        : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)',
-                      gap: '12px',
-                      flexWrap: 'wrap',
-                      transition: 'all 0.15s ease',
-                    }}
-                  >
-                    {/* Left: Checkbox + Number + Title + Platform/Pattern info */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: '240px', flex: '1 1 300px' }}>
-                      <button
-                        type="button"
-                        onClick={() => handleToggleSolved(prob)}
-                        aria-label={isSolved ? 'Mark as unsolved' : 'Mark as solved'}
-                        style={{
-                          width: '20px',
-                          height: '20px',
-                          borderRadius: '6px',
-                          background: isSolved ? '#10B981' : isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.04)',
-                          border: isSolved ? '1px solid #10B981' : isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.2)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: '#FFF',
-                          cursor: 'pointer',
-                          flexShrink: 0,
-                          outline: 'none',
-                        }}
-                      >
-                        {isSolved && <Check size={12} strokeWidth={3} />}
-                      </button>
-
-                      <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace', fontWeight: 800, width: '64px', flexShrink: 0 }}>
-                        {getProblemNumber(prob)}
-                      </span>
-
-                      <div style={{ minWidth: 0, flex: 1 }}>
-                        <Link
-                          href={`/practice/${prob.slug || prob.id}`}
-                          style={{
-                            fontSize: '13px',
-                            fontWeight: 700,
-                            color: isSolved ? 'var(--text-secondary)' : 'var(--text-primary)',
-                            textDecoration: 'none',
-                            display: 'block',
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                          }}
-                        >
-                          {prob.title}
-                        </Link>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '2px', fontSize: '11px', color: 'var(--text-muted)', flexWrap: 'wrap' }}>
-                          <span style={{ color: platformMeta.color, fontWeight: 700 }}>
-                            {platformMeta.name}
+                  return (
+                    <div
+                      key={item.id}
+                      data-testid="recommended-problem-card"
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '10px',
+                        padding: '16px 18px',
+                        borderRadius: '14px',
+                        background: isLight ? '#FFFFFF' : 'var(--card)',
+                        border: idx === 0
+                          ? '2px solid #3B82F6'
+                          : isLight ? '1px solid #E2E8F0' : '1px solid var(--border)',
+                        boxShadow: idx === 0
+                          ? '0 6px 20px rgba(59, 130, 246, 0.15)'
+                          : isLight ? '0 4px 12px rgba(0, 0, 0, 0.03)' : 'none',
+                        transition: 'all 0.15s ease',
+                      }}
+                    >
+                      {/* Top Row: Priority Badge + Reason Callout */}
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span
+                            style={{
+                              fontSize: '10px',
+                              fontWeight: 900,
+                              color: '#3B82F6',
+                              background: 'rgba(59, 130, 246, 0.15)',
+                              padding: '2px 8px',
+                              borderRadius: '6px',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.04em',
+                            }}
+                          >
+                            {item.badge}
                           </span>
-                          <span>•</span>
-                          <span>{prob.categoryTitle || 'General'}</span>
-                          <span>•</span>
-                          <span>{prob.patternTitle || 'Algorithmic Pattern'}</span>
+                          <span
+                            style={{
+                              fontSize: '10px',
+                              fontWeight: 800,
+                              color: item.priority === 'Critical' ? '#EF4444' : item.priority === 'High' ? '#F97316' : '#64748B',
+                            }}
+                          >
+                            {item.priority} Priority
+                          </span>
+                        </div>
+
+                        {/* Explainable Why This Problem badge */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--text-secondary)' }}>
+                          <HelpCircle size={13} style={{ color: '#3B82F6' }} />
+                          <span data-testid="why-this-problem" style={{ fontWeight: 600 }}>
+                            {item.whyThisProblem}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Main Problem Details */}
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: '240px', flex: '1 1 300px' }}>
+                          <button
+                            type="button"
+                            onClick={() => handleToggleSolved(prob)}
+                            aria-label={isSolved ? 'Mark as unsolved' : 'Mark as solved'}
+                            style={{
+                              width: '22px',
+                              height: '22px',
+                              borderRadius: '6px',
+                              background: isSolved ? '#10B981' : isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.04)',
+                              border: isSolved ? '1px solid #10B981' : isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.2)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              color: '#FFF',
+                              cursor: 'pointer',
+                              flexShrink: 0,
+                            }}
+                          >
+                            {isSolved && <Check size={13} strokeWidth={3} />}
+                          </button>
+
+                          <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace', fontWeight: 800, width: '64px', flexShrink: 0 }}>
+                            {getProblemNumber(prob)}
+                          </span>
+
+                          <div style={{ minWidth: 0, flex: 1 }}>
+                            <strong style={{ fontSize: '14px', color: 'var(--text-primary)', display: 'block' }}>
+                              {prob.title}
+                            </strong>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '2px', fontSize: '11px', color: 'var(--text-muted)', flexWrap: 'wrap' }}>
+                              <span style={{ color: platMeta.color, fontWeight: 700 }}>
+                                {platMeta.name}
+                              </span>
+                              <span>•</span>
+                              <span>{prob.categoryTitle || 'General'}</span>
+                              <span>•</span>
+                              <span>{prob.patternTitle || 'Algorithmic Pattern'}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right: Actions */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+                          <span
+                            style={{
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              color: diffColor,
+                              padding: '2px 8px',
+                              borderRadius: '6px',
+                              background: `${diffColor}14`,
+                            }}
+                          >
+                            {item.targetDifficulty}
+                          </span>
+                          <span style={{ fontSize: '11px', fontWeight: 700, color: '#F59E0B' }}>
+                            +{prob.xp || 50} XP
+                          </span>
+
+                          <button
+                            type="button"
+                            onClick={() => handleToggleSolved(prob)}
+                            style={{
+                              padding: '6px 14px',
+                              borderRadius: '8px',
+                              background: isSolved ? 'rgba(16, 185, 129, 0.15)' : '#3B82F6',
+                              border: isSolved ? '1px solid #10B981' : 'none',
+                              color: isSolved ? '#10B981' : '#FFF',
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '5px',
+                            }}
+                          >
+                            <Code2 size={12} />
+                            <span>{isSolved ? 'Solved' : 'Solve Here'}</span>
+                          </button>
+
+                          <a
+                            href={prob.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              padding: '6px 10px',
+                              borderRadius: '8px',
+                              background: isLight ? `${platMeta.color}10` : `${platMeta.color}18`,
+                              border: `1px solid ${platMeta.color}40`,
+                              color: platMeta.color,
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              textDecoration: 'none',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                            }}
+                          >
+                            <span>Open</span>
+                            <ExternalLink size={11} />
+                          </a>
                         </div>
                       </div>
                     </div>
+                  );
+                })}
 
-                    {/* Right: Difficulty + XP + Action Group */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0, flexWrap: 'wrap' }}>
-                      <span
-                        style={{
-                          fontSize: '11px',
-                          fontWeight: 800,
-                          color: diffColor,
-                          padding: '2px 8px',
-                          borderRadius: '6px',
-                          background: `${diffColor}14`,
-                        }}
-                      >
-                        {prob.difficulty || (prob.level === 'Learn' ? 'Easy' : prob.level === 'Master' ? 'Hard' : 'Medium')}
-                      </span>
+                {recommendedItems.length === 0 && (
+                  <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
+                    <p style={{ margin: 0, fontSize: '14px', fontWeight: 600 }}>
+                      All recommended problems in this scope are solved! Try another learning area or start a sprint session.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
-                      <span style={{ fontSize: '11px', fontWeight: 700, color: '#F59E0B' }}>
-                        +{prob.xp || 50} XP
-                      </span>
+          {/* ═══════════════ MODE: MISTAKE REVIEW ═══════════════ */}
+          {activeMode === 'mistakes' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="mistake-review-container">
+              <div>
+                <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <AlertTriangle size={16} style={{ color: '#EF4444' }} />
+                  Mistake Review & Error Intelligence
+                </h2>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  Targeted remediation for problems with non-accepted verdicts, edge case failures, and repeated struggles.
+                </span>
+              </div>
 
-                      {/* Action Group: Solve Here (Internal IDE) + External Platform Link */}
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <Link
-                          href={`/practice/${prob.slug || prob.id}`}
-                          title={`Solve ${prob.title} inside DSA MASTER`}
+              {mistakeReviewItems.length === 0 ? (
+                <div style={{ padding: '36px', textAlign: 'center', borderRadius: '14px', background: isLight ? '#FFFFFF' : 'var(--card)', border: '1px solid var(--border)' }}>
+                  <CheckCircle2 size={32} style={{ color: '#10B981', margin: '0 auto 10px auto' }} />
+                  <strong style={{ fontSize: '15px', color: 'var(--text-primary)' }}>Zero Active Mistakes!</strong>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--text-muted)' }}>
+                    You have no outstanding mistake signals. Continue practicing in Recommended mode to maintain mastery.
+                  </p>
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {mistakeReviewItems.map((item) => (
+                    <div
+                      key={item.problem.id}
+                      data-testid="mistake-item-card"
+                      style={{
+                        padding: '16px',
+                        borderRadius: '12px',
+                        background: isLight ? '#FFFFFF' : 'var(--card)',
+                        border: '1px solid var(--border)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '8px',
+                      }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: '10px', fontWeight: 900, color: '#EF4444', background: 'rgba(239, 68, 68, 0.12)', padding: '2px 8px', borderRadius: '6px' }}>
+                          {item.category === 'repeated' ? `Repeated Struggle (${item.failedAttemptsCount} fails)` : 'Recent Attempt'}
+                        </span>
+                        <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                          Last verdict: <strong style={{ color: '#EF4444' }}>{item.lastVerdict || 'Wrong Answer'}</strong>
+                        </span>
+                      </div>
+
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px' }}>
+                        <div>
+                          <strong style={{ fontSize: '14px', color: 'var(--text-primary)' }}>{item.problem.title}</strong>
+                          <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block' }}>
+                            {item.problem.categoryTitle} • Pattern: {item.problem.patternTitle || 'Algorithmic Pattern'}
+                          </span>
+                          <span style={{ fontSize: '11px', color: 'var(--text-secondary)', fontStyle: 'italic', display: 'block', marginTop: '2px' }}>
+                            {item.reason}
+                          </span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => handleToggleSolved(item.problem)}
                           style={{
-                            padding: '6px 12px',
+                            padding: '8px 16px',
                             borderRadius: '8px',
-                            background: isSolved
-                              ? isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.12)'
-                              : isLight ? 'var(--surface-secondary, #F1F5F9)' : 'rgba(255, 255, 255, 0.06)',
-                            border: isSolved
-                              ? '1px solid #10B981'
-                              : isLight ? '1px solid var(--border)' : '1px solid rgba(255, 255, 255, 0.12)',
-                            color: isSolved ? '#10B981' : 'var(--text-primary)',
-                            fontSize: '11px',
+                            background: '#EF4444',
+                            border: 'none',
+                            color: '#FFF',
+                            fontSize: '12px',
                             fontWeight: 800,
-                            textDecoration: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '5px',
-                            transition: 'all 0.15s ease',
+                            cursor: 'pointer',
                           }}
                         >
-                          <Code2 size={12} />
-                          <span>{isSolved ? 'View Problem' : 'Solve Here'}</span>
-                        </Link>
-
-                        <a
-                          href={platformMeta.canonicalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title={`Open original problem on ${platformMeta.name}`}
-                          style={{
-                            padding: '6px 10px',
-                            borderRadius: '8px',
-                            background: isLight ? `${platformMeta.color}10` : `${platformMeta.color}18`,
-                            border: `1px solid ${platformMeta.color}40`,
-                            color: platformMeta.color,
-                            fontSize: '11px',
-                            fontWeight: 800,
-                            textDecoration: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '4px',
-                            transition: 'all 0.15s ease',
-                          }}
-                        >
-                          <span>{platformMeta.buttonLabel}</span>
-                          <ExternalLink size={11} />
-                        </a>
+                          Debug & Retry
+                        </button>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-
-              {paginatedProblems.length === 0 && (
-                <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
-                  <p style={{ margin: 0, fontSize: '14px', fontWeight: 600 }}>
-                    {selectedPlatform === 'geeksforgeeks'
-                      ? `No mapped problems yet for GeeksForGeeks in ${activeGeeksforgeeksKingdom?.name || 'this Learning Area'}.`
-                      : 'No problems match the current filter criteria.'}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearch('');
-                      setDifficultyFilter('all');
-                      setPatternFilter('all');
-                      setSelectedSubtopicSlug('all');
-                      setStatusFilter('all');
-                    }}
-                    style={{
-                      marginTop: '12px',
-                      padding: '6px 14px',
-                      borderRadius: '8px',
-                      background: 'var(--surface-secondary, rgba(255, 255, 255, 0.08))',
-                      border: '1px solid var(--border)',
-                      color: 'var(--text-primary)',
-                      fontSize: '12px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Reset Filters
-                  </button>
+                  ))}
                 </div>
               )}
             </div>
+          )}
 
-            {/* Pagination Controls */}
-            {totalPages > 1 && (
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '12px', borderTop: '1px solid var(--border)', paddingTop: '14px' }}>
-                <button
-                  type="button"
-                  disabled={currentPage === 1}
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                  style={paginationBtnSt(currentPage === 1)}
-                >
-                  <ChevronLeft size={14} /> Previous
-                </button>
-
+          {/* ═══════════════ MODE: WEAK AREAS ═══════════════ */}
+          {activeMode === 'weakness' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="weak-areas-container">
+              <div>
+                <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Brain size={16} style={{ color: '#F59E0B' }} />
+                  Weak Areas & Skill Gaps
+                </h2>
                 <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                  Page {currentPage} of {totalPages}
+                  Performance-backed diagnosis of topics and patterns where your accuracy or speed needs reinforcement.
                 </span>
+              </div>
 
+              {weakAreasResult.isZeroState ? (
+                <div style={{ padding: '36px', textAlign: 'center', borderRadius: '14px', background: isLight ? '#FFFFFF' : 'var(--card)', border: '1px solid var(--border)' }}>
+                  <Sparkles size={32} style={{ color: '#3B82F6', margin: '0 auto 10px auto' }} />
+                  <strong style={{ fontSize: '15px', color: 'var(--text-primary)' }}>Authentic Baseline Initial State</strong>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--text-muted)', maxWidth: '460px', marginLeft: 'auto', marginRight: 'auto' }}>
+                    No critical weakness data recorded yet. Solve problems in Recommended mode or take the onboarding diagnostic assessment to reveal algorithmic gaps.
+                  </p>
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {weakAreasResult.weakAreas.map((w) => (
+                    <div
+                      key={w.topicId}
+                      data-testid="weak-area-card"
+                      style={{
+                        padding: '16px',
+                        borderRadius: '12px',
+                        background: isLight ? '#FFFFFF' : 'var(--card)',
+                        border: '1px solid var(--border)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '8px',
+                      }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+                        <strong style={{ fontSize: '14px', color: 'var(--text-primary)' }}>{w.topicTitle}</strong>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: '#EF4444' }}>
+                          Accuracy: {w.accuracyPercent}% (Weakness Score: {w.weaknessScore}/100)
+                        </span>
+                      </div>
+                      <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                        Subtopic: {w.subtopicTitle} • Pattern: {w.patternTitle}
+                      </span>
+                      <p style={{ margin: '2px 0 0 0', fontSize: '12px', color: 'var(--text-secondary)' }}>
+                        {w.reason}
+                      </p>
+
+                      {w.recommendedProblem && (
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px', paddingTop: '8px', borderTop: '1px solid var(--border)' }}>
+                          <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                            Recommended Next: <strong>{w.recommendedProblem.title}</strong> ({w.recommendedDifficulty})
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => handleToggleSolved(w.recommendedProblem!)}
+                            style={{
+                              padding: '6px 12px',
+                              borderRadius: '8px',
+                              background: '#F59E0B',
+                              border: 'none',
+                              color: '#FFF',
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              cursor: 'pointer',
+                            }}
+                          >
+                            Practice Problem
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ═══════════════ MODE: INTERVIEW PRACTICE ═══════════════ */}
+          {activeMode === 'interview' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="interview-practice-container">
+              <div>
+                <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Trophy size={16} style={{ color: '#8B5CF6' }} />
+                  Technical Mock Interview Session
+                </h2>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  Standard interview set combining Array, Trees, Graphs, and DP patterns under realistic conditions.
+                </span>
+              </div>
+
+              <div
+                style={{
+                  padding: '24px',
+                  borderRadius: '14px',
+                  background: isLight ? '#FAF5FF' : 'rgba(139, 92, 246, 0.1)',
+                  border: isLight ? '1.5px solid #E9D5FF' : '1.5px solid rgba(139, 92, 246, 0.3)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  textAlign: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Clock size={32} style={{ color: '#8B5CF6' }} />
+                <strong style={{ fontSize: '16px', color: 'var(--text-primary)' }}>Start 45-Minute Timed Mock Interview</strong>
+                <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', maxWidth: '420px' }}>
+                  A balanced 5-problem session simulating top tier engineering interviews (1 Easy warm-up + 3 Medium core + 1 Hard bonus).
+                </p>
                 <button
                   type="button"
-                  disabled={currentPage === totalPages}
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                  style={paginationBtnSt(currentPage === totalPages)}
+                  onClick={() => {
+                    const session = PracticeEngineService.generateInterviewSession(userId);
+                    setActiveSession(session);
+                    toast('Started 5-problem mock interview session!', 'success');
+                  }}
+                  style={{
+                    padding: '10px 24px',
+                    borderRadius: '10px',
+                    background: '#8B5CF6',
+                    border: 'none',
+                    color: '#FFF',
+                    fontSize: '13px',
+                    fontWeight: 900,
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 14px rgba(139, 92, 246, 0.3)',
+                  }}
+                  data-testid="start-mock-interview-btn"
                 >
-                  Next <ChevronRight size={14} />
+                  Generate & Start Interview Set
                 </button>
               </div>
-            )}
-          </div>
+            </div>
+          )}
+
+          {/* ═══════════════ MODE: RANDOM ═══════════════ */}
+          {activeMode === 'random' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="random-mode-container">
+              <div>
+                <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Shuffle size={16} style={{ color: '#EC4899' }} />
+                  Surprise Me: Random Problem Generator
+                </h2>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  Pick an unseen challenge across our 4,000 problem database matching your current difficulty preferences.
+                </span>
+              </div>
+
+              <div
+                style={{
+                  padding: '24px',
+                  borderRadius: '14px',
+                  background: isLight ? '#FDF2F8' : 'rgba(236, 72, 153, 0.1)',
+                  border: isLight ? '1.5px solid #FBCFE8' : '1.5px solid rgba(236, 72, 153, 0.3)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={handleRollRandom}
+                  style={{
+                    padding: '10px 24px',
+                    borderRadius: '10px',
+                    background: '#EC4899',
+                    border: 'none',
+                    color: '#FFF',
+                    fontSize: '13px',
+                    fontWeight: 900,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}
+                  data-testid="roll-random-btn"
+                >
+                  <Shuffle size={15} />
+                  <span>Roll Random Problem</span>
+                </button>
+
+                {randomProblem && (
+                  <div
+                    data-testid="random-problem-result"
+                    style={{
+                      marginTop: '12px',
+                      padding: '16px 20px',
+                      borderRadius: '12px',
+                      background: isLight ? '#FFFFFF' : 'var(--card)',
+                      border: '1px solid var(--border)',
+                      width: '100%',
+                      maxWidth: '480px',
+                      textAlign: 'left',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '8px',
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace' }}>
+                        {getProblemNumber(randomProblem)}
+                      </span>
+                      <span style={{ fontSize: '11px', fontWeight: 800, color: '#EC4899' }}>
+                        {randomProblem.difficulty || 'Medium'}
+                      </span>
+                    </div>
+                    <strong style={{ fontSize: '15px', color: 'var(--text-primary)' }}>
+                      {randomProblem.title}
+                    </strong>
+                    <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                      {randomProblem.categoryTitle} • {randomProblem.patternTitle || 'Algorithmic Pattern'}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => handleToggleSolved(randomProblem)}
+                      style={{
+                        marginTop: '6px',
+                        padding: '8px',
+                        borderRadius: '8px',
+                        background: '#10B981',
+                        border: 'none',
+                        color: '#FFF',
+                        fontSize: '12px',
+                        fontWeight: 800,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      Solve Now
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* ═══════════════ MODE: HISTORY ═══════════════ */}
+          {activeMode === 'history' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} data-testid="practice-history-container">
+              <div>
+                <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <History size={16} style={{ color: '#3B82F6' }} />
+                  Practice History & Solved Ledger
+                </h2>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  Chronological record of attempts, accepted submissions, and completed practice sprints.
+                </span>
+              </div>
+
+              {practiceHistoryItems.length === 0 ? (
+                <div style={{ padding: '36px', textAlign: 'center', borderRadius: '14px', background: isLight ? '#FFFFFF' : 'var(--card)', border: '1px solid var(--border)' }}>
+                  <History size={32} style={{ color: 'var(--text-muted)', margin: '0 auto 10px auto' }} />
+                  <strong style={{ fontSize: '14px', color: 'var(--text-primary)' }}>No Practice Records Yet</strong>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--text-muted)' }}>
+                    Begin practicing problems to populate your chronological solve history.
+                  </p>
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {practiceHistoryItems.slice(0, 30).map((h) => (
+                    <div
+                      key={h.id}
+                      data-testid="history-item-row"
+                      style={{
+                        padding: '12px 16px',
+                        borderRadius: '10px',
+                        background: isLight ? '#FFFFFF' : 'var(--card)',
+                        border: '1px solid var(--border)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        gap: '8px',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div
+                          style={{
+                            width: '20px',
+                            height: '20px',
+                            borderRadius: '50%',
+                            background: h.status === 'accepted' ? '#10B981' : '#EF4444',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: '#FFF',
+                          }}
+                        >
+                          {h.status === 'accepted' ? <Check size={12} /> : <X size={12} />}
+                        </div>
+                        <div>
+                          <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>{h.title}</strong>
+                          <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block' }}>
+                            {h.platform.toUpperCase()} • {h.topic} • {h.pattern}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: '#10B981' }}>
+                          +{h.xpEarned} XP
+                        </span>
+                        <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                          {new Date(h.timestamp).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ═══════════════ MODES: AREA / SUBTOPIC / PATTERN / PLATFORM ═══════════════ */}
+          {(activeMode === 'area' || activeMode === 'subtopic' || activeMode === 'pattern' || activeMode === 'platform') && (
+            <>
+              {/* Progression Hero Banner */}
+              <div
+                style={{
+                  padding: '18px 22px',
+                  borderRadius: '14px',
+                  background: isLight
+                    ? `linear-gradient(135deg, #FFFFFF 0%, ${currentPlatformMeta.color}0A 60%, #F8FAFC 100%)`
+                    : `linear-gradient(135deg, ${currentPlatformMeta.color}15 0%, var(--card) 100%)`,
+                  border: isLight ? `1.5px solid ${currentPlatformMeta.color}40` : `1.5px solid ${currentPlatformMeta.color}55`,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div
+                      style={{
+                        width: '38px',
+                        height: '38px',
+                        borderRadius: '10px',
+                        background: `${currentPlatformMeta.color}20`,
+                        border: `1px solid ${currentPlatformMeta.color}`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: currentPlatformMeta.color,
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Trophy size={18} />
+                    </div>
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <strong style={{ fontSize: '15px', fontWeight: 900, color: 'var(--text-primary)' }}>
+                          {selectedPlatform === 'codeforces'
+                            ? activeCodeforcesDivision.name
+                            : selectedPlatform === 'codechef'
+                            ? `${activeCodechefKingdom.number}. ${activeCodechefKingdom.name}`
+                            : selectedPlatform === 'geeksforgeeks'
+                            ? `${activeGeeksforgeeksKingdom.number}. ${activeGeeksforgeeksKingdom.name}`
+                            : `${activeLeetcodeKingdom.number}. ${activeLeetcodeKingdom.name}`}
+                        </strong>
+                        <span
+                          style={{
+                            fontSize: '10px',
+                            fontWeight: 800,
+                            color: currentPlatformMeta.color,
+                            background: `${currentPlatformMeta.color}18`,
+                            padding: '2px 8px',
+                            borderRadius: '6px',
+                          }}
+                        >
+                          {selectedPlatform === 'codeforces'
+                            ? activeCodeforcesDivision.topic
+                            : selectedPlatform === 'codechef'
+                            ? activeCodechefKingdom.topic
+                            : selectedPlatform === 'geeksforgeeks'
+                            ? activeGeeksforgeeksKingdom.topic
+                            : activeLeetcodeKingdom.topic}
+                        </span>
+                      </div>
+                      <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block', marginTop: '2px' }}>
+                        {selectedPlatform === 'codeforces'
+                          ? activeCodeforcesDivision.description
+                          : selectedPlatform === 'codechef'
+                          ? activeCodechefKingdom.description
+                          : selectedPlatform === 'geeksforgeeks'
+                          ? activeGeeksforgeeksKingdom.description
+                          : activeLeetcodeKingdom.description}
+                      </span>
+                    </div>
+                  </div>
+
+                  {nextProgressionProblem && (
+                    <button
+                      type="button"
+                      onClick={() => handleToggleSolved(nextProgressionProblem)}
+                      style={{
+                        padding: '8px 16px',
+                        borderRadius: '8px',
+                        background: currentPlatformMeta.color,
+                        border: 'none',
+                        color: '#FFF',
+                        fontSize: '12px',
+                        fontWeight: 800,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                      }}
+                    >
+                      <Code2 size={13} />
+                      <span>Solve Next Unsolved</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Progress Track Gauge */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px' }}>
+                    <span style={{ color: 'var(--text-muted)', fontWeight: 700 }}>Progression Mastery</span>
+                    <strong style={{ color: currentPlatformMeta.color }}>
+                      {selectedPlatform === 'codeforces'
+                        ? `${activeCodeforcesDivision.solvedCount} / ${activeCodeforcesDivision.totalCount} Solved (${activeCodeforcesDivision.progressPct}%)`
+                        : selectedPlatform === 'codechef'
+                        ? `${activeCodechefKingdom.solvedCount} / ${activeCodechefKingdom.totalCount} Solved (${activeCodechefKingdom.progressPct}%)`
+                        : selectedPlatform === 'geeksforgeeks'
+                        ? `${activeGeeksforgeeksKingdom.solvedCount} / ${activeGeeksforgeeksKingdom.totalCount} Solved (${activeGeeksforgeeksKingdom.progressPct}%)`
+                        : `${activeLeetcodeKingdom.solvedCount} / ${activeLeetcodeKingdom.totalCount} Solved (${activeLeetcodeKingdom.progressPct}%)`}
+                    </strong>
+                  </div>
+                  <div style={{ width: '100%', height: '5px', borderRadius: '3px', background: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)', overflow: 'hidden' }}>
+                    <div
+                      style={{
+                        width: `${
+                          selectedPlatform === 'codeforces'
+                            ? activeCodeforcesDivision.progressPct
+                            : selectedPlatform === 'codechef'
+                            ? activeCodechefKingdom.progressPct
+                            : selectedPlatform === 'geeksforgeeks'
+                            ? activeGeeksforgeeksKingdom.progressPct
+                            : activeLeetcodeKingdom.progressPct
+                        }%`,
+                        height: '100%',
+                        background: currentPlatformMeta.color,
+                        borderRadius: '3px',
+                        transition: 'width 0.3s ease',
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Standard Problem Queue Table */}
+              <div
+                style={{
+                  background: isLight ? '#FFFFFF' : 'var(--card)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '16px',
+                  padding: '18px',
+                  boxShadow: isLight ? '0 10px 30px rgba(0, 0, 0, 0.03)' : 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '14px',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+                  <div>
+                    <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 900, color: 'var(--text-primary)' }}>
+                      Problem Queue ({filteredProblems.length})
+                    </h3>
+                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                      Available in{' '}
+                      <strong style={{ color: currentPlatformMeta.color }}>
+                        {selectedPlatform === 'codeforces'
+                          ? activeCodeforcesDivision.name
+                          : selectedPlatform === 'codechef'
+                          ? activeCodechefKingdom.name
+                          : selectedPlatform === 'geeksforgeeks'
+                          ? activeGeeksforgeeksKingdom.name
+                          : activeLeetcodeKingdom.name}
+                      </strong>
+                    </span>
+                  </div>
+
+                  <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700 }}>
+                    Page {currentPage} of {totalPages}
+                  </span>
+                </div>
+
+                {/* Problem Cards Table List */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {paginatedProblems.map((prob) => {
+                    const isSolved = isProblemChecked(prob);
+                    const platformMeta = getPlatformMeta(prob);
+                    const diffColor =
+                      (prob.difficulty || prob.level || 'Medium').toLowerCase() === 'easy' || prob.level === 'Learn'
+                        ? '#10B981'
+                        : (prob.difficulty || prob.level || '').toLowerCase() === 'hard' || prob.level === 'Master'
+                        ? '#EF4444'
+                        : '#F59E0B';
+
+                    return (
+                      <div
+                        key={prob.id}
+                        data-testid="problem-row"
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '12px 16px',
+                          borderRadius: '10px',
+                          background: isSolved
+                            ? isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.05)'
+                            : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
+                          border: isSolved
+                            ? isLight ? '1px solid #BBF7D0' : '1px solid rgba(16, 185, 129, 0.25)'
+                            : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.06)',
+                          gap: '12px',
+                          flexWrap: 'wrap',
+                          transition: 'all 0.15s ease',
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: '240px', flex: '1 1 300px' }}>
+                          <button
+                            type="button"
+                            onClick={() => handleToggleSolved(prob)}
+                            aria-label={isSolved ? 'Mark as unsolved' : 'Mark as solved'}
+                            style={{
+                              width: '20px',
+                              height: '20px',
+                              borderRadius: '6px',
+                              background: isSolved ? '#10B981' : isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.04)',
+                              border: isSolved ? '1px solid #10B981' : isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.2)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              color: '#FFF',
+                              cursor: 'pointer',
+                              flexShrink: 0,
+                            }}
+                          >
+                            {isSolved && <Check size={12} strokeWidth={3} />}
+                          </button>
+
+                          <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace', fontWeight: 800, width: '64px', flexShrink: 0 }}>
+                            {getProblemNumber(prob)}
+                          </span>
+
+                          <div style={{ minWidth: 0, flex: 1 }}>
+                            <strong style={{ fontSize: '13px', color: isSolved ? 'var(--text-secondary)' : 'var(--text-primary)', display: 'block' }}>
+                              {prob.title}
+                            </strong>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '2px', fontSize: '11px', color: 'var(--text-muted)', flexWrap: 'wrap' }}>
+                              <span style={{ color: platformMeta.color, fontWeight: 700 }}>
+                                {platformMeta.name}
+                              </span>
+                              <span>•</span>
+                              <span>{prob.categoryTitle || 'General'}</span>
+                              <span>•</span>
+                              <span>{prob.patternTitle || 'Algorithmic Pattern'}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0, flexWrap: 'wrap' }}>
+                          <span
+                            style={{
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              color: diffColor,
+                              padding: '2px 8px',
+                              borderRadius: '6px',
+                              background: `${diffColor}14`,
+                            }}
+                          >
+                            {prob.difficulty || (prob.level === 'Learn' ? 'Easy' : prob.level === 'Master' ? 'Hard' : 'Medium')}
+                          </span>
+
+                          <span style={{ fontSize: '11px', fontWeight: 700, color: '#F59E0B' }}>
+                            +{prob.xp || 50} XP
+                          </span>
+
+                          <button
+                            type="button"
+                            onClick={() => handleToggleSolved(prob)}
+                            style={{
+                              padding: '6px 12px',
+                              borderRadius: '8px',
+                              background: isSolved ? 'rgba(16, 185, 129, 0.12)' : isLight ? 'var(--surface-secondary, #F1F5F9)' : 'rgba(255, 255, 255, 0.06)',
+                              border: isSolved ? '1px solid #10B981' : isLight ? '1px solid var(--border)' : '1px solid rgba(255, 255, 255, 0.12)',
+                              color: isSolved ? '#10B981' : 'var(--text-primary)',
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                            }}
+                          >
+                            <Code2 size={12} />
+                            <span>{isSolved ? 'Solved' : 'Solve Here'}</span>
+                          </button>
+
+                          <a
+                            href={platformMeta.canonicalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              padding: '6px 10px',
+                              borderRadius: '8px',
+                              background: isLight ? `${platformMeta.color}10` : `${platformMeta.color}18`,
+                              border: `1px solid ${platformMeta.color}40`,
+                              color: platformMeta.color,
+                              fontSize: '11px',
+                              fontWeight: 800,
+                              textDecoration: 'none',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                            }}
+                          >
+                            <span>{platformMeta.buttonLabel}</span>
+                            <ExternalLink size={11} />
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })}
+
+                  {paginatedProblems.length === 0 && (
+                    <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
+                      <p style={{ margin: 0, fontSize: '14px', fontWeight: 600 }}>
+                        No problems match the current filter criteria.
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSearch('');
+                          setDifficultyFilter('all');
+                          setPatternFilter('all');
+                          setSelectedSubtopicSlug('all');
+                          setStatusFilter('all');
+                        }}
+                        style={{
+                          marginTop: '12px',
+                          padding: '6px 14px',
+                          borderRadius: '8px',
+                          background: 'var(--surface-secondary, rgba(255, 255, 255, 0.08))',
+                          border: '1px solid var(--border)',
+                          color: 'var(--text-primary)',
+                          fontSize: '12px',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Reset Filters
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+                    <button
+                      type="button"
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                      style={paginationBtnSt(currentPage === 1)}
+                    >
+                      <ChevronLeft size={14} /> Previous
+                    </button>
+
+                    <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                      Page {currentPage} of {totalPages}
+                    </span>
+
+                    <button
+                      type="button"
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                      style={paginationBtnSt(currentPage === totalPages)}
+                    >
+                      Next <ChevronRight size={14} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </div>
 
-        {/* ── RIGHT SUPPORTING TRAINING PANEL (28%) ─────────────────── */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          
-          {/* Current Campaign Summary Card */}
+        {/* ── RIGHT SUPPORTING TRAINING SIDEBAR (300px) ──────────────── */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+
+          {/* Quick Sprint Card */}
           <div
             style={{
-              padding: '20px',
-              borderRadius: '16px',
+              padding: '16px',
+              borderRadius: '14px',
               background: isLight ? '#FFFFFF' : 'var(--card)',
               border: '1px solid var(--border)',
-              boxShadow: isLight ? '0 6px 20px rgba(0, 0, 0, 0.04)' : 'none',
               display: 'flex',
               flexDirection: 'column',
-              gap: '10px',
+              gap: '8px',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Compass size={16} style={{ color: currentPlatformMeta.color }} />
-              <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>
-                {selectedPlatform === 'codeforces' ? 'Division Ranking' : 'Learning Area Progression'}
-              </strong>
+              <Zap size={16} style={{ color: '#F59E0B' }} />
+              <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>Instant Session Sprint</strong>
             </div>
             <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
-              {selectedPlatform === 'codeforces'
-                ? `You are currently in ${activeCodeforcesDivision.name}. Master each rating tier to elevate your contest rating.`
-                : selectedPlatform === 'geeksforgeeks'
-                ? `You are exploring ${activeGeeksforgeeksKingdom.name}. Mapped GeeksForGeeks problems will appear here.`
-                : `You are exploring ${selectedPlatform === 'codechef' ? activeCodechefKingdom.name : activeLeetcodeKingdom.name}. Master all 25 learning areas in sequential progression.`}
+              Kick off a focused session with coherent difficulty progression.
             </p>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '6px', marginTop: '4px' }}>
+              <button
+                type="button"
+                onClick={() => handleStartSession(5)}
+                style={sprintBtnSmallSt}
+              >
+                5 Problems
+              </button>
+              <button
+                type="button"
+                onClick={() => handleStartSession(10)}
+                style={sprintBtnSmallSt}
+              >
+                10 Problems
+              </button>
+              <button
+                type="button"
+                onClick={() => handleStartSession(20)}
+                style={sprintBtnSmallSt}
+              >
+                20 Problems
+              </button>
+            </div>
           </div>
 
           {/* Pattern Mastery Breakdown */}
           <div
             style={{
-              padding: '20px',
-              borderRadius: '16px',
+              padding: '16px',
+              borderRadius: '14px',
               background: isLight ? '#FFFFFF' : 'var(--card)',
               border: '1px solid var(--border)',
-              boxShadow: isLight ? '0 6px 20px rgba(0, 0, 0, 0.04)' : 'none',
               display: 'flex',
               flexDirection: 'column',
-              gap: '14px',
+              gap: '12px',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -1809,7 +2617,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <span style={{ fontSize: '10px', color: currentPlatformMeta.color, fontWeight: 800 }}>LIVE</span>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {patternMasteryList.map((pm) => (
                 <div key={pm.name} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px' }}>
@@ -1824,48 +2632,19 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             </div>
           </div>
 
-          {/* Streak Boost & Rewards */}
-          <div
-            style={{
-              padding: '20px',
-              borderRadius: '16px',
-              background: isLight ? '#FFFFFF' : 'var(--card)',
-              border: '1px solid var(--border)',
-              boxShadow: isLight ? '0 6px 20px rgba(0, 0, 0, 0.04)' : 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '12px',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Flame size={16} style={{ color: '#F59E0B' }} />
-              <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>Streak Boost (1.2x Active)</strong>
-            </div>
-
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-muted)' }}>
-              <span>Total XP Multiplier:</span>
-              <strong style={{ color: '#10B981' }}>+20% bonus</strong>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-muted)' }}>
-              <span>Active Streak:</span>
-              <strong style={{ color: 'var(--text-primary)' }}>{currentStreak} Days</strong>
-            </div>
-          </div>
-
           {/* Recent Solves Activity Log */}
           <div
             style={{
-              padding: '20px',
-              borderRadius: '16px',
+              padding: '16px',
+              borderRadius: '14px',
               background: isLight ? '#FFFFFF' : 'var(--card)',
               border: '1px solid var(--border)',
-              boxShadow: isLight ? '0 6px 20px rgba(0, 0, 0, 0.04)' : 'none',
               display: 'flex',
               flexDirection: 'column',
-              gap: '12px',
+              gap: '10px',
             }}
           >
-            <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>Recent Activity</strong>
+            <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>Recent Solves</strong>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {activityLogs.slice(0, 4).map((act) => (
@@ -1903,9 +2682,10 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   );
 }
 
+// ── Styles ──────────────────────────────────────────────────────────
 const statTileSt = (isLight: boolean): React.CSSProperties => ({
-  padding: '14px 16px',
-  borderRadius: '12px',
+  padding: '12px 14px',
+  borderRadius: '10px',
   background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.02)',
   border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
   display: 'flex',
@@ -1914,7 +2694,7 @@ const statTileSt = (isLight: boolean): React.CSSProperties => ({
 });
 
 const selectControlSt: React.CSSProperties = {
-  padding: '8px 12px',
+  padding: '7px 10px',
   borderRadius: '8px',
   background: 'var(--input-bg, rgba(255, 255, 255, 0.04))',
   border: '1px solid var(--input-border, rgba(255, 255, 255, 0.1))',
@@ -1922,6 +2702,33 @@ const selectControlSt: React.CSSProperties = {
   fontSize: '12px',
   outline: 'none',
   cursor: 'pointer',
+};
+
+const sprintBtnStyle = (isLight: boolean, color: string): React.CSSProperties => ({
+  padding: '7px 12px',
+  borderRadius: '8px',
+  background: isLight ? `${color}12` : `${color}20`,
+  border: `1px solid ${color}50`,
+  color,
+  fontSize: '11px',
+  fontWeight: 800,
+  cursor: 'pointer',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '5px',
+  transition: 'all 0.15s ease',
+});
+
+const sprintBtnSmallSt: React.CSSProperties = {
+  padding: '6px 8px',
+  borderRadius: '6px',
+  background: 'rgba(255, 255, 255, 0.04)',
+  border: '1px solid var(--border)',
+  color: 'var(--text-primary)',
+  fontSize: '11px',
+  fontWeight: 700,
+  cursor: 'pointer',
+  textAlign: 'center',
 };
 
 const paginationBtnSt = (disabled: boolean): React.CSSProperties => ({
@@ -1937,4 +2744,3 @@ const paginationBtnSt = (disabled: boolean): React.CSSProperties => ({
   alignItems: 'center',
   gap: '6px',
 });
-
