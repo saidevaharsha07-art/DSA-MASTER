@@ -170,3 +170,4 @@ for (const cat of ALL_CATEGORIES) {
 
 console.log('\n=== EXACT TARGET VERIFICATION ===');
 console.log(`CodeChef Total: ${platformCounts['codechef']} (Target: 1000) => ${platformCounts['codechef'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);
+console.log(`LeetCode Total: ${platformCounts['leetcode']} (Target: 1000) => ${platformCounts['leetcode'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);

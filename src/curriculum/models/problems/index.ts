@@ -27,6 +27,7 @@ import { ADVANCED_ALGORITHMS_PROBLEMS } from './advanced-algorithms';
 import { CODEFORCES_PROBLEM_MODELS } from '../../repository/codeforces-db';
 import { CODECHEF_PROBLEM_MODELS } from '../../repository/codechef-rating-db';
 import { CODECHEF_EXPANSION_PROBLEMS } from './codechef-expansion';
+import { LEETCODE_EXPANSION_PROBLEMS } from './leetcode-expansion';
 
 import { getSubtopicForPattern } from '../subtopics';
 import { BASE_PATTERNS } from '../patterns';
@@ -126,6 +127,7 @@ export const ALL_PROBLEMS: ProblemModel[] = [
   ...CODEFORCES_PROBLEM_MODELS,
   ...CODECHEF_PROBLEM_MODELS,
   ...CODECHEF_EXPANSION_PROBLEMS,
+  ...LEETCODE_EXPANSION_PROBLEMS,
 ].map((p, index) => {
   const platform = p.platform || detectPlatform(p.url);
   const catSlug = p.categorySlug || 'basic-arrays';

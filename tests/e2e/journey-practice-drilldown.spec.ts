@@ -23,7 +23,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
 
     // 1. LeetCode Card verification
     await expect(leetcodeCard).toContainText('LeetCode');
-    await expect(leetcodeCard).toContainText('42'); // 42 mapped problems
+    await expect(leetcodeCard).toContainText('50'); // 50 mapped problems (expanded from 42)
     const lcLink = leetcodeCard.locator('a');
     await expect(lcLink).toHaveAttribute('href', '/practice?area=basic-arrays&platform=leetcode');
 
