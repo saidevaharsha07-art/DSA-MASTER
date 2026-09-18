@@ -49,6 +49,8 @@ export interface ProblemModel {
   template?: { language: string; code: string }[];
   relatedProblems?: string[];
   revisionData?: RevisionData;
+  mappingConfidence?: 'HIGH' | 'MEDIUM' | 'LOW';
+  mappingReason?: string;
 }
 
 export interface PatternModel {

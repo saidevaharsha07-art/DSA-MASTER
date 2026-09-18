@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import {
@@ -15,6 +15,9 @@ import {
   Target,
   Trophy,
   Compass,
+  ChevronDown,
+  ChevronUp,
+  ArrowRight,
 } from 'lucide-react';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { useSettings } from '@/src/context/SettingsContext';
@@ -28,6 +31,25 @@ export default function JourneyAreaDetailPage() {
   const { settings } = useSettings();
   const isLight = settings.appearance.theme === 'light';
   const { state: roadmapState } = useRoadmap();
+
+  // Progressive disclosure state
+  // Default: first subtopic is open, others can be toggled
+  const [collapsedSubtopics, setCollapsedSubtopics] = useState<Record<string, boolean>>({});
+  const [expandedPatterns, setExpandedPatterns] = useState<Record<string, boolean>>({});
+
+  const toggleSubtopic = (slug: string) => {
+    setCollapsedSubtopics((prev) => ({
+      ...prev,
+      [slug]: !prev[slug],
+    }));
+  };
+
+  const togglePattern = (slug: string) => {
+    setExpandedPatterns((prev) => ({
+      ...prev,
+      [slug]: !prev[slug],
+    }));
+  };
 
   // Find matching category/area
   const category = useMemo(() => {
@@ -81,7 +103,7 @@ export default function JourneyAreaDetailPage() {
   const totalCount = areaProblems.length;
   const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
 
-  // Exact Four-Platform Breakdown
+  // Exact Four-Platform Breakdown with equal visual weight
   const platformCards = useMemo(() => {
     const configs = [
       { id: 'leetcode', label: 'LeetCode', color: '#10B981', tag: 'Canonical DSA' },
@@ -141,7 +163,7 @@ export default function JourneyAreaDetailPage() {
                 Learning Area #{category.order}
               </span>
               <span className="text-xs text-[var(--text-muted)] font-medium">
-                {areaSubtopics.length} Subtopics • {areaPatterns.length} Patterns
+                {areaSubtopics.length} Subtopics • {areaPatterns.length} Patterns • {totalCount} Problems
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] tracking-tight">
@@ -179,7 +201,7 @@ export default function JourneyAreaDetailPage() {
               Platform Availability &amp; Drilldowns
             </span>
             <span className="text-[11px] text-[var(--text-muted)]">
-              Real problem repository mappings
+              Real problem repository mappings across all 4 platforms
             </span>
           </div>
 
@@ -217,31 +239,34 @@ export default function JourneyAreaDetailPage() {
                       </span>
                     ) : (
                       <span className="text-[10px] font-bold text-[var(--text-muted)] bg-gray-500/10 px-2 py-0.5 rounded-md">
-                        Unmapped
+                        0% Mastery
                       </span>
                     )}
                   </div>
 
-                  {p.hasProblems ? (
-                    <div className="flex flex-col gap-1">
-                      <div className="flex items-baseline justify-between text-xs">
-                        <span className="text-[var(--text-muted)] font-medium">Mapped Problems:</span>
-                        <strong className="font-bold text-[var(--text-primary)]">{p.mappedCount}</strong>
-                      </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-baseline justify-between text-xs">
+                      <span className="text-[var(--text-muted)] font-medium">Mapped Problems:</span>
+                      <strong className="font-bold text-[var(--text-primary)]">
+                        {p.mappedCount} Problems
+                      </strong>
+                    </div>
+                    {p.hasProblems ? (
                       <div className="flex items-baseline justify-between text-xs">
                         <span className="text-[var(--text-muted)] font-medium">Solved:</span>
                         <span className="font-semibold text-[var(--text-secondary)]">
-                          {p.solvedCount} / {p.mappedCount}
+                          {p.solvedCount} / {p.mappedCount} Solved
                         </span>
                       </div>
-                    </div>
-                  ) : (
-                    <div className="py-2">
-                      <p className="text-xs font-semibold text-[var(--text-muted)] italic">
-                        No mapped problems yet
-                      </p>
-                    </div>
-                  )}
+                    ) : (
+                      <div className="flex items-baseline justify-between text-xs">
+                        <span className="text-[var(--text-muted)] font-medium">Status:</span>
+                        <span className="text-xs font-semibold text-[var(--text-muted)] italic">
+                          No mapped problems yet
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <Link
@@ -253,7 +278,7 @@ export default function JourneyAreaDetailPage() {
                     border: `1px solid ${p.color}40`,
                   }}
                 >
-                  <span>Practice {category.title} on {p.label}</span>
+                  <span>Practice on {p.label} →</span>
                   <ExternalLink size={13} />
                 </Link>
               </div>
@@ -262,24 +287,46 @@ export default function JourneyAreaDetailPage() {
         </div>
       </div>
 
-      {/* Subtopic Hierarchy View: Learning Area -> Subtopic -> Pattern */}
+      {/* 4-Tier Subtopic Hierarchy Section with Progressive Disclosure */}
       <div className="flex flex-col gap-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        {/* Hierarchy Explanation Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h2 className="text-2xl font-black text-[var(--text-primary)]">
-              Subtopics &amp; Patterns ({areaSubtopics.length} Subtopics)
-            </h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-2xl font-black text-[var(--text-primary)]">
+                Subtopics &amp; Patterns ({areaSubtopics.length} Subtopics)
+              </h2>
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 font-bold">
+                Canonical 4-Tier Hierarchy
+              </span>
+            </div>
             <p className="text-xs text-[var(--text-muted)] mt-0.5">
-              Structured progressive path from foundational subtopics to mastery
+              Follow the 4-tier progressive hierarchy: Learning Area → Subtopics → Patterns → Problems
             </p>
           </div>
-          <span className="text-xs font-bold text-indigo-500 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20 self-start sm:self-auto">
-            Canonical 4-Tier Hierarchy
-          </span>
+          <div className="flex items-center gap-2 text-xs font-bold self-start sm:self-auto flex-wrap">
+            <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-500 border border-indigo-500/20">
+              Learning Area
+            </span>
+            <span className="text-[var(--text-muted)]">→</span>
+            <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-500 border border-indigo-500/20">
+              Subtopics
+            </span>
+            <span className="text-[var(--text-muted)]">→</span>
+            <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-500 border border-indigo-500/20">
+              Patterns
+            </span>
+            <span className="text-[var(--text-muted)]">→</span>
+            <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-500 border border-indigo-500/20">
+              Problems
+            </span>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-6">
-          {areaSubtopics.map((subtopic) => {
+        {/* Subtopic Accordions */}
+        <div className="flex flex-col gap-5">
+          {areaSubtopics.map((subtopic, sIdx) => {
+            const isCollapsed = collapsedSubtopics[subtopic.slug] === true;
             const subtopicPatterns = areaPatterns.filter((pat) =>
               subtopic.patternIds.includes(pat.id) ||
               subtopic.patternIds.includes(`pattern.${pat.slug}`) ||
@@ -287,89 +334,158 @@ export default function JourneyAreaDetailPage() {
               pat.subtopicId === subtopic.id
             );
 
+            const subtopicProblems = areaProblems.filter(
+              (p) => p.subtopicSlug === subtopic.slug || p.subtopicId === subtopic.id
+            );
+            const subtopicSolved = subtopicProblems.filter(isSolved).length;
+
             return (
               <div
                 key={subtopic.id}
-                className="p-6 rounded-3xl border flex flex-col gap-4 shadow-sm"
+                className="rounded-3xl border flex flex-col shadow-sm transition-all"
                 style={{
                   background: 'var(--card)',
                   borderColor: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)',
                 }}
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[var(--border)]">
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2">
+                {/* Subtopic Accordion Header (Click to toggle) */}
+                <div
+                  className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer select-none"
+                  onClick={() => toggleSubtopic(subtopic.slug)}
+                >
+                  <div className="flex flex-col gap-1.5 flex-1">
+                    <div className="flex items-center gap-2.5 flex-wrap">
                       <span className="px-2.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-indigo-500/10 text-indigo-500">
                         Subtopic #{subtopic.order}
                       </span>
-                      <h3 className="text-lg font-black text-[var(--text-primary)]">
+                      <h3 className="text-lg font-black text-[var(--text-primary)] hover:text-indigo-500 transition-colors">
                         {subtopic.title}
                       </h3>
+                      <span className="text-xs text-[var(--text-muted)] font-medium">
+                        ({subtopicPatterns.length} Patterns • {subtopicProblems.length} Problems • {subtopicSolved} Solved)
+                      </span>
                     </div>
                     <p className="text-xs text-[var(--text-muted)]">
                       {subtopic.description}
                     </p>
                   </div>
 
-                  <Link
-                    href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}`}
-                    className="text-xs font-bold text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-1 self-start sm:self-auto"
-                  >
-                    <span>Practice Subtopic</span>
-                    <span>→</span>
-                  </Link>
+                  <div className="flex items-center gap-3 self-start sm:self-auto" onClick={(e) => e.stopPropagation()}>
+                    <Link
+                      href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}`}
+                      className="text-xs font-bold text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-1 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20"
+                    >
+                      <span>Practice Subtopic</span>
+                      <ArrowRight size={12} />
+                    </Link>
+
+                    <button
+                      type="button"
+                      onClick={() => toggleSubtopic(subtopic.slug)}
+                      className="p-1.5 rounded-lg bg-[var(--surface)] text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors border border-[var(--border)]"
+                      aria-label="Toggle subtopic patterns"
+                    >
+                      {isCollapsed ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
+                    </button>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {subtopicPatterns.map((pat) => {
-                    const patProblems = areaProblems.filter(
-                      (p) => p.patternSlug === pat.slug || p.patternId === pat.id || p.patternTitle === pat.title
-                    );
-                    const patSolved = patProblems.filter(isSolved).length;
+                {/* Subtopic Patterns (Progressive Disclosure: Collapsible) */}
+                {!isCollapsed && (
+                  <div className="px-6 pb-6 pt-2 border-t border-[var(--border)] flex flex-col gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {subtopicPatterns.map((pat) => {
+                        const patProblems = areaProblems.filter(
+                          (p) => p.patternSlug === pat.slug || p.patternId === pat.id || p.patternTitle === pat.title
+                        );
+                        const patSolved = patProblems.filter(isSolved).length;
+                        const isPatternExpanded = expandedPatterns[pat.slug] === true;
 
-                    return (
-                      <div
-                        key={pat.slug}
-                        className="p-4 rounded-2xl border flex flex-col justify-between gap-3 transition-all hover:shadow-md"
-                        style={{
-                          background: 'var(--surface)',
-                          borderColor: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.06)',
-                        }}
-                      >
-                        <div className="flex flex-col gap-2">
-                          <div className="flex items-center justify-between gap-2">
-                            <span className="text-[10px] font-black uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
-                              {pat.difficulty}
-                            </span>
-                            <span className="text-xs font-bold text-[var(--text-muted)]">
-                              {patSolved}/{patProblems.length} Solved
-                            </span>
-                          </div>
-                          <h4 className="text-sm font-bold text-[var(--text-primary)]">
-                            {pat.title}
-                          </h4>
-                          <p className="text-xs text-[var(--text-muted)] line-clamp-2">
-                            {pat.shortDescription || pat.overview}
-                          </p>
-                        </div>
-
-                        <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
-                          <div className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] font-medium">
-                            <Layers size={13} className="text-indigo-400" />
-                            <span>{patProblems.length} Challenges</span>
-                          </div>
-
-                          <Link
-                            href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}&pattern=${pat.slug}`}
-                            className="text-xs font-bold text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-1"
+                        return (
+                          <div
+                            key={pat.slug}
+                            className="p-4 rounded-2xl border flex flex-col justify-between gap-3 transition-all hover:shadow-md"
+                            style={{
+                              background: 'var(--surface)',
+                              borderColor: isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.06)',
+                            }}
                           >
-                            Drill Pattern ›
-                          </Link>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                            <div className="flex flex-col gap-2">
+                              <div className="flex items-center justify-between gap-2">
+                                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                                  {pat.difficulty}
+                                </span>
+                                <span className="text-xs font-bold text-[var(--text-muted)]">
+                                  {patSolved}/{patProblems.length} Solved
+                                </span>
+                              </div>
+                              <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                                {pat.title}
+                              </h4>
+                              <p className="text-xs text-[var(--text-muted)] line-clamp-2">
+                                {pat.shortDescription || pat.overview}
+                              </p>
+                            </div>
+
+                            {/* Challenges Drawer (Tier 4: Problems) */}
+                            {isPatternExpanded && patProblems.length > 0 && (
+                              <div className="flex flex-col gap-1.5 pt-2 border-t border-[var(--border)] max-h-48 overflow-y-auto pr-1">
+                                {patProblems.slice(0, 10).map((prob) => {
+                                  const solved = isSolved(prob);
+                                  return (
+                                    <Link
+                                      key={prob.id}
+                                      href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}&pattern=${pat.slug}&search=${encodeURIComponent(prob.title)}`}
+                                      className="flex items-center justify-between gap-2 text-xs py-1 px-2 rounded-lg hover:bg-[var(--card)] transition-colors"
+                                    >
+                                      <div className="flex items-center gap-1.5 truncate">
+                                        {solved ? (
+                                          <CheckCircle2 size={12} className="text-emerald-500 shrink-0" />
+                                        ) : (
+                                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0" />
+                                        )}
+                                        <span className="text-[var(--text-primary)] truncate font-medium">
+                                          {prob.title}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase shrink-0">
+                                        {prob.platform}
+                                      </span>
+                                    </Link>
+                                  );
+                                })}
+                                {patProblems.length > 10 && (
+                                  <span className="text-[10px] text-[var(--text-muted)] italic text-center pt-1">
+                                    +{patProblems.length - 10} more problems in Arena
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
+                              <button
+                                type="button"
+                                onClick={() => togglePattern(pat.slug)}
+                                className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] font-medium cursor-pointer"
+                              >
+                                <Layers size={13} className="text-indigo-400" />
+                                <span>{patProblems.length} Challenges</span>
+                                {isPatternExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+                              </button>
+
+                              <Link
+                                href={`/practice?area=${category.slug}&subtopic=${subtopic.slug}&pattern=${pat.slug}`}
+                                className="text-xs font-bold text-indigo-500 hover:text-indigo-600 transition-colors flex items-center gap-1"
+                              >
+                                Drill Pattern ›
+                              </Link>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             );
           })}
@@ -378,4 +494,5 @@ export default function JourneyAreaDetailPage() {
     </div>
   );
 }
+
 

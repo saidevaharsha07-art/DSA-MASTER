@@ -8,7 +8,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.waitForLoadState('networkidle');
 
     // Title / header
-    await expect(page.locator('h1')).toContainText(/Basic Arrays/i);
+    await expect(page.locator('h1')).toContainText(/Array/i);
 
     // Platform cards
     const leetcodeCard = page.locator('[data-platform="leetcode"]');
@@ -29,7 +29,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
 
     // 2. CodeChef Card verification
     await expect(codechefCard).toContainText('CodeChef');
-    await expect(codechefCard).toContainText('241'); // 241 mapped problems
+    await expect(codechefCard).toContainText('274'); // 274 mapped problems (expanded from 241)
     const ccLink = codechefCard.locator('a');
     await expect(ccLink).toHaveAttribute('href', '/practice?area=basic-arrays&platform=codechef');
 
@@ -47,7 +47,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
 
     // ── Drilldown 1: LeetCode handoff ──
     await lcLink.click();
-    await page.waitForURL('**/practice?area=basic-arrays&platform=leetcode*');
+    await page.waitForURL((url) => url.pathname.includes('/practice') && url.searchParams.get('platform') === 'leetcode' && url.searchParams.get('area') === 'basic-arrays');
     expect(page.url()).toContain('area=basic-arrays');
     expect(page.url()).toContain('platform=leetcode');
     await expect(page.locator('text=LeetCode').first()).toBeVisible();
@@ -56,7 +56,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.goto('/journey/basic-arrays');
     await page.waitForLoadState('networkidle');
     await page.locator('[data-platform="codechef"] a').click();
-    await page.waitForURL('**/practice?area=basic-arrays&platform=codechef*');
+    await page.waitForURL((url) => url.pathname.includes('/practice') && url.searchParams.get('platform') === 'codechef' && url.searchParams.get('area') === 'basic-arrays');
     expect(page.url()).toContain('area=basic-arrays');
     expect(page.url()).toContain('platform=codechef');
     await expect(page.locator('text=CodeChef').first()).toBeVisible();
@@ -65,7 +65,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.goto('/journey/basic-arrays');
     await page.waitForLoadState('networkidle');
     await page.locator('[data-platform="codeforces"] a').click();
-    await page.waitForURL('**/practice?area=basic-arrays&platform=codeforces*');
+    await page.waitForURL((url) => url.pathname.includes('/practice') && url.searchParams.get('platform') === 'codeforces' && url.searchParams.get('area') === 'basic-arrays');
     expect(page.url()).toContain('area=basic-arrays');
     expect(page.url()).toContain('platform=codeforces');
     await expect(page.locator('text=Codeforces').first()).toBeVisible();
@@ -74,23 +74,23 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.goto('/journey/basic-arrays');
     await page.waitForLoadState('networkidle');
     await page.locator('[data-platform="geeksforgeeks"] a').click();
-    await page.waitForURL('**/practice?area=basic-arrays&platform=geeksforgeeks*');
+    await page.waitForURL((url) => url.pathname.includes('/practice') && url.searchParams.get('platform') === 'geeksforgeeks' && url.searchParams.get('area') === 'basic-arrays');
     expect(page.url()).toContain('area=basic-arrays');
     expect(page.url()).toContain('platform=geeksforgeeks');
-    await expect(page.getByText(/No mapped problems yet for GeeksForGeeks in Basic Arrays/i)).toBeVisible();
+    await expect(page.getByText(/No mapped problems yet for GeeksForGeeks in Array/i)).toBeVisible();
   });
 
   // ── 2. VERIFY SUBTOPIC HIERARCHY ACROSS CORE LEARNING AREAS ─────────────────
   test('2. Core Learning Areas render 4-tier Subtopic & Pattern hierarchy', async ({ page }) => {
     const areasToVerify = [
-      { slug: 'basic-arrays', name: 'Basic Arrays' },
+      { slug: 'basic-arrays', name: 'Array' },
       { slug: 'prefix-sum', name: 'Prefix Sum' },
       { slug: 'two-pointers', name: 'Two Pointers' },
       { slug: 'binary-search', name: 'Binary Search' },
       { slug: 'stack', name: 'Stack' },
       { slug: 'linked-list', name: 'Linked List' },
-      { slug: 'binary-trees', name: 'Binary Trees' },
-      { slug: 'graphs', name: 'Graphs' },
+      { slug: 'binary-trees', name: 'Binary Tree' },
+      { slug: 'graphs', name: 'Graph' },
       { slug: 'dynamic-programming', name: 'Dynamic Programming' },
     ];
 
@@ -99,7 +99,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
       await page.waitForLoadState('networkidle');
 
       await expect(page.locator('h1')).toContainText(new RegExp(area.name, 'i'));
-      await expect(page.getByText('Canonical 4-Tier Hierarchy')).toBeVisible();
+      await expect(page.getByText(/4-tier progressive hierarchy/i)).toBeVisible();
 
       // Ensure all 4 platform cards exist on each area
       await expect(page.locator('[data-platform="leetcode"]')).toBeVisible();

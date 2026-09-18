@@ -26,12 +26,13 @@ import { MATH_NUMBER_THEORY_PROBLEMS } from './math-number-theory';
 import { ADVANCED_ALGORITHMS_PROBLEMS } from './advanced-algorithms';
 import { CODEFORCES_PROBLEM_MODELS } from '../../repository/codeforces-db';
 import { CODECHEF_PROBLEM_MODELS } from '../../repository/codechef-rating-db';
+import { CODECHEF_EXPANSION_PROBLEMS } from './codechef-expansion';
 
 import { getSubtopicForPattern } from '../subtopics';
 import { BASE_PATTERNS } from '../patterns';
 
 const CATEGORY_SLUG_TO_INFO: Record<string, { id: string; title: string }> = {
-  'basic-arrays': { id: 'cat-1', title: 'Basic Arrays' },
+  'basic-arrays': { id: 'cat-1', title: 'Array' },
   'prefix-sum': { id: 'cat-2', title: 'Prefix Sum' },
   'two-pointers': { id: 'cat-3', title: 'Two Pointers' },
   'sliding-window': { id: 'cat-4', title: 'Sliding Window' },
@@ -39,20 +40,20 @@ const CATEGORY_SLUG_TO_INFO: Record<string, { id: string; title: string }> = {
   'binary-search': { id: 'cat-6', title: 'Binary Search' },
   'sorting': { id: 'cat-7', title: 'Sorting' },
   'stack': { id: 'cat-8', title: 'Stack' },
-  'queue-deque': { id: 'cat-9', title: 'Queue & Deque' },
+  'queue-deque': { id: 'cat-9', title: 'Queue / Deque' },
   'intervals': { id: 'cat-10', title: 'Intervals' },
   'linked-list': { id: 'cat-11', title: 'Linked List' },
-  'binary-trees': { id: 'cat-12', title: 'Binary Trees' },
-  'binary-search-trees': { id: 'cat-13', title: 'Binary Search Trees' },
-  'graphs': { id: 'cat-14', title: 'Graphs' },
-  'shortest-path': { id: 'cat-15', title: 'Shortest Path Algorithms' },
+  'binary-trees': { id: 'cat-12', title: 'Binary Tree' },
+  'binary-search-trees': { id: 'cat-13', title: 'Binary Search Tree' },
+  'graphs': { id: 'cat-14', title: 'Graph' },
+  'shortest-path': { id: 'cat-15', title: 'Shortest Path' },
   'minimum-spanning-tree': { id: 'cat-16', title: 'Minimum Spanning Tree' },
   'backtracking': { id: 'cat-17', title: 'Backtracking' },
   'greedy': { id: 'cat-18', title: 'Greedy' },
-  'heap': { id: 'cat-19', title: 'Heap' },
+  'heap': { id: 'cat-19', title: 'Heap / Priority Queue' },
   'dynamic-programming': { id: 'cat-20', title: 'Dynamic Programming' },
   'bit-manipulation': { id: 'cat-21', title: 'Bit Manipulation' },
-  'strings': { id: 'cat-22', title: 'Strings' },
+  'strings': { id: 'cat-22', title: 'String' },
   'matrix': { id: 'cat-23', title: 'Matrix' },
   'math-number-theory': { id: 'cat-24', title: 'Math & Number Theory' },
   'advanced-algorithms': { id: 'cat-25', title: 'Advanced Algorithms' },
@@ -124,6 +125,7 @@ export const ALL_PROBLEMS: ProblemModel[] = [
   ...ADVANCED_ALGORITHMS_PROBLEMS,
   ...CODEFORCES_PROBLEM_MODELS,
   ...CODECHEF_PROBLEM_MODELS,
+  ...CODECHEF_EXPANSION_PROBLEMS,
 ].map((p, index) => {
   const platform = p.platform || detectPlatform(p.url);
   const catSlug = p.categorySlug || 'basic-arrays';
@@ -143,10 +145,12 @@ export const ALL_PROBLEMS: ProblemModel[] = [
     patternId: canonicalPat.id,
     patternSlug: canonicalPat.slug,
     patternTitle: canonicalPat.title,
-    subtopicId: subtopic?.id,
-    subtopicSlug: subtopic?.slug,
-    subtopicTitle: subtopic?.title,
+    subtopicId: subtopic?.id || p.subtopicId,
+    subtopicSlug: subtopic?.slug || p.subtopicSlug,
+    subtopicTitle: subtopic?.title || p.subtopicTitle,
     platform: platform,
+    mappingConfidence: p.mappingConfidence || (platform === 'leetcode' ? 'HIGH' : 'MEDIUM'),
+    mappingReason: p.mappingReason || p.notes || '',
   };
 });
 

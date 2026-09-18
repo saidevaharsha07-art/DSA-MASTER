@@ -75,7 +75,7 @@ export function VerticalCinematicJourneyView() {
     );
   };
 
-  // 1. LEETCODE CURRICULUM (25 Kingdoms)
+  // 1. LEETCODE CURRICULUM (25 Learning Areas)
   const leetcodeProblems = useMemo(() => {
     return allProblems.filter(
       (p) => !p.url?.includes('codechef.com') && !p.url?.includes('codeforces.com') && !p.url?.includes('geeksforgeeks.org')
@@ -91,14 +91,16 @@ export function VerticalCinematicJourneyView() {
       const totalCount = catProblems.length;
       const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
       const isCompleted = totalCount > 0 && solvedCount >= totalCount;
+      const subtopicsCount = CurriculumRepository.getSubtopicsByCategory(cat.slug).length;
 
       return {
         id: idx + 1,
         slug: cat.slug,
-        /** DSA concept name (e.g. "Arrays") — no Kingdom fantasy names */
+        /** DSA concept name (e.g. "Array") — no fantasy names */
         title: cat.title,
         topic: cat.title,
         description: cat.description,
+        subtopicsCount,
         solvedCount,
         totalCount,
         progressPct,
@@ -110,14 +112,14 @@ export function VerticalCinematicJourneyView() {
     });
   }, [allCategories, leetcodeProblems, canonicalSolvedSet, refreshKey]);
 
-  // Keep legacy name for internal use only
+  // Keep legacy alias for internal use only
   const leetcodeKingdoms = leetcodeAreas;
 
   const lcTotalSolved = leetcodeKingdoms.reduce((sum, k) => sum + k.solvedCount, 0);
   const lcTotalProblems = leetcodeProblems.length;
   const lcPct = lcTotalProblems > 0 ? Math.round((lcTotalSolved / lcTotalProblems) * 100) : 0;
 
-  // 2. CODECHEF CURRICULUM (25 Kingdoms)
+  // 2. CODECHEF CURRICULUM (25 Learning Areas)
   const codechefProblems = useMemo(() => {
     return allProblems.filter((p) => p.url?.includes('codechef.com'));
   }, [allProblems]);
@@ -134,14 +136,16 @@ export function VerticalCinematicJourneyView() {
       const totalCount = catProblems.length;
       const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
       const isCompleted = totalCount > 0 && solvedCount >= totalCount;
+      const subtopicsCount = CurriculumRepository.getSubtopicsByCategory(cat.slug).length;
 
       return {
         id: idx + 1,
         slug: cat.slug,
-        /** DSA concept name (e.g. "Prefix Sum") — no Kingdom fantasy names */
+        /** DSA concept name (e.g. "Prefix Sum") — no fantasy names */
         title: cat.title,
         topic: cat.title,
         description: cat.description,
+        subtopicsCount,
         solvedCount,
         totalCount,
         progressPct,
@@ -309,7 +313,7 @@ export function VerticalCinematicJourneyView() {
                   gap: '8px',
                 }}
               >
-                PLATFORM CAMPAIGN CONTINENTS
+                DSA CURRICULUM &amp; PLATFORMS
               </h1>
               <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 600 }}>
                 Four Dedicated Platform Curriculums • 2,344 Total Canonical Problems
@@ -520,7 +524,7 @@ export function VerticalCinematicJourneyView() {
             </div>
           </div>
 
-          {/* LeetCode 25 Kingdoms Grid */}
+          {/* LeetCode 25 Learning Areas Grid */}
           <div
             style={{
               display: 'grid',
@@ -536,6 +540,7 @@ export function VerticalCinematicJourneyView() {
                 title={k.title}
                 topic={k.topic}
                 description={k.description}
+                subtopicsCount={k.subtopicsCount}
                 solvedCount={k.solvedCount}
                 totalCount={k.totalCount}
                 progressPct={k.progressPct}
@@ -648,7 +653,7 @@ export function VerticalCinematicJourneyView() {
             </div>
           </div>
 
-          {/* CodeChef 25 Realms Grid */}
+          {/* CodeChef 25 Learning Areas Grid */}
           <div
             style={{
               display: 'grid',
@@ -664,6 +669,7 @@ export function VerticalCinematicJourneyView() {
                 title={k.title}
                 topic={k.topic}
                 description={k.description}
+                subtopicsCount={k.subtopicsCount}
                 solvedCount={k.solvedCount}
                 totalCount={k.totalCount}
                 progressPct={k.progressPct}
@@ -899,7 +905,7 @@ export function VerticalCinematicJourneyView() {
                 GeeksForGeeks Curriculum Hub
               </strong>
               <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: '#64748B', maxWidth: '440px' }}>
-                This platform campaign is currently in development. Once connected, company-specific tracks and interview sheets will appear here.
+                This platform curriculum is currently in development. Once connected, company-specific tracks and interview sheets will appear here.
               </p>
             </div>
             <span
@@ -930,6 +936,7 @@ interface CurriculumCardProps {
   title: string;
   topic: string;
   description: string;
+  subtopicsCount: number;
   solvedCount: number;
   totalCount: number;
   progressPct: number;
@@ -947,6 +954,7 @@ function CurriculumCard({
   title,
   topic,
   description,
+  subtopicsCount,
   solvedCount,
   totalCount,
   progressPct,
@@ -983,7 +991,7 @@ function CurriculumCard({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        height: '270px',
+        minHeight: '290px',
         boxSizing: 'border-box',
         position: 'relative',
         overflow: 'hidden',
@@ -991,7 +999,7 @@ function CurriculumCard({
     >
       {/* Top Tag & Status Row */}
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
           <span
             style={{
               fontSize: '10px',
@@ -1023,7 +1031,7 @@ function CurriculumCard({
             }}
           >
             {isCompleted && <CheckCircle2 size={11} />}
-            {isCompleted ? 'COMPLETED' : progressPct > 0 ? `${progressPct}%` : 'AVAILABLE'}
+            {isCompleted ? 'Mastered' : progressPct > 0 ? `In Progress (${progressPct}%)` : 'Not Started'}
           </span>
         </div>
 
@@ -1055,7 +1063,7 @@ function CurriculumCard({
         </h3>
         <p
           style={{
-            margin: 0,
+            margin: '0 0 10px 0',
             fontSize: '12px',
             color: 'var(--text-secondary, #94A3B8)',
             lineHeight: 1.4,
@@ -1067,6 +1075,56 @@ function CurriculumCard({
         >
           {description}
         </p>
+
+        {/* 4-Tier Subtopics & Problems Metadata Strip */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '8px' }}>
+          <span
+            style={{
+              fontSize: '10px',
+              fontWeight: 800,
+              color: 'var(--text-primary)',
+              background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.05)',
+              padding: '3px 7px',
+              borderRadius: '6px',
+              border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+            }}
+          >
+            <Layers size={11} style={{ color: accentColor }} />
+            {subtopicsCount} Subtopics
+          </span>
+          <span
+            style={{
+              fontSize: '10px',
+              fontWeight: 800,
+              color: 'var(--text-primary)',
+              background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.05)',
+              padding: '3px 7px',
+              borderRadius: '6px',
+              border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+            }}
+          >
+            <Code2 size={11} style={{ color: accentColor }} />
+            {totalCount} Problems
+          </span>
+          <span
+            style={{
+              fontSize: '10px',
+              fontWeight: 800,
+              color: progressPct > 0 ? accentColor : 'var(--text-muted)',
+              background: progressPct > 0 ? `${accentColor}12` : 'transparent',
+              padding: '3px 6px',
+              borderRadius: '6px',
+            }}
+          >
+            {progressPct}% Mastery
+          </span>
+        </div>
       </div>
 
       {/* Progress & Solved Ratio */}
@@ -1110,28 +1168,57 @@ function CurriculumCard({
           />
         </div>
 
-        {/* Bottom Action CTA */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span
-            style={{
-              fontSize: '10px',
-              fontWeight: 800,
-              color: 'var(--text-muted, #94A3B8)',
-              background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.04)',
-              padding: '2px 6px',
-              borderRadius: '4px',
-            }}
-          >
-            {difficulty}
-          </span>
+        {/* Bottom Actions: Explore Area (Primary) + Practice */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
+          {slug ? (
+            <Link href={`/journey/${slug}`} style={{ textDecoration: 'none', flex: 1 }}>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="button"
+                style={{
+                  width: '100%',
+                  padding: '7px 10px',
+                  borderRadius: '8px',
+                  background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.06)',
+                  border: isLight ? '1px solid #CBD5E1' : '1px solid rgba(255, 255, 255, 0.12)',
+                  color: 'var(--text-primary)',
+                  fontSize: '11px',
+                  fontWeight: 800,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '4px',
+                }}
+              >
+                <span>Explore Area</span>
+                <ChevronRight size={12} />
+              </motion.button>
+            </Link>
+          ) : (
+            <span
+              style={{
+                fontSize: '10px',
+                fontWeight: 800,
+                color: 'var(--text-muted, #94A3B8)',
+                background: isLight ? '#F1F5F9' : 'rgba(255, 255, 255, 0.04)',
+                padding: '2px 6px',
+                borderRadius: '4px',
+              }}
+            >
+              {difficulty}
+            </span>
+          )}
 
-          <Link href={actionUrl} style={{ textDecoration: 'none' }}>
+          <Link href={actionUrl} style={{ textDecoration: 'none', flex: 1 }}>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               type="button"
               style={{
-                padding: '6px 14px',
+                width: '100%',
+                padding: '7px 10px',
                 borderRadius: '8px',
                 background: `${accentColor}25`,
                 border: `1px solid ${accentColor}66`,
@@ -1141,10 +1228,12 @@ function CurriculumCard({
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '4px',
               }}
             >
-              {actionText}
+              <span>Practice Arena</span>
+              <ArrowUpRight size={12} />
             </motion.button>
           </Link>
         </div>

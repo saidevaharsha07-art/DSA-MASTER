@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -223,6 +223,34 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   useEffect(() => {
     setCurrentPage(1);
   }, [selectedPlatform, selectedKingdomSlug, selectedSubtopicSlug, selectedDivisionId, search, difficultyFilter, patternFilter, statusFilter, sortBy]);
+
+  // Controlled area selection with stale filter protection
+  const handleSelectKingdom = useCallback((slug: string) => {
+    setSelectedKingdomSlug(slug);
+    if (slug && slug !== 'all') {
+      const areaSubtopics = CurriculumRepository.getSubtopicsByCategory(slug);
+      if (!areaSubtopics.some((s) => s.slug === selectedSubtopicSlug || s.id === selectedSubtopicSlug)) {
+        setSelectedSubtopicSlug('all');
+        setPatternFilter('all');
+      }
+    } else {
+      setSelectedSubtopicSlug('all');
+      setPatternFilter('all');
+    }
+  }, [selectedSubtopicSlug]);
+
+  // Controlled subtopic selection with stale filter protection
+  const handleSelectSubtopic = useCallback((slug: string) => {
+    setSelectedSubtopicSlug(slug);
+    if (slug && slug !== 'all') {
+      const sub = ALL_SUBTOPICS.find((s) => s.slug === slug || s.id === slug);
+      if (sub && !sub.patternIds.some((pid) => pid === patternFilter || pid === `pattern.${patternFilter}`)) {
+        setPatternFilter('all');
+      }
+    } else {
+      setPatternFilter('all');
+    }
+  }, [patternFilter]);
 
   // Listen for browser popstate (back/forward navigation)
   useEffect(() => {
@@ -887,7 +915,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
               <select
                 value={selectedKingdomSlug || activeLeetcodeKingdom.id}
-                onChange={(e) => setSelectedKingdomSlug(e.target.value)}
+                onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
               >
                 <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
@@ -905,7 +933,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
               <select
                 value={selectedKingdomSlug || activeCodechefKingdom.id}
-                onChange={(e) => setSelectedKingdomSlug(e.target.value)}
+                onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
               >
                 <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
@@ -923,7 +951,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
               <select
                 value={selectedKingdomSlug || activeGeeksforgeeksKingdom.id}
-                onChange={(e) => setSelectedKingdomSlug(e.target.value)}
+                onChange={(e) => handleSelectKingdom(e.target.value)}
                 style={selectControlSt}
               >
                 <option value="all">📚 All 25 Learning Areas (0 problems)</option>
@@ -973,7 +1001,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 <button
                   key={k.id}
                   type="button"
-                  onClick={() => setSelectedKingdomSlug(k.id)}
+                  onClick={() => handleSelectKingdom(k.id)}
                   style={{
                     padding: '8px 12px',
                     borderRadius: '10px',
@@ -1032,7 +1060,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 <button
                   key={k.id}
                   type="button"
-                  onClick={() => setSelectedKingdomSlug(k.id)}
+                  onClick={() => handleSelectKingdom(k.id)}
                   style={{
                     padding: '8px 12px',
                     borderRadius: '10px',
@@ -1091,7 +1119,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 <button
                   key={k.id}
                   type="button"
-                  onClick={() => setSelectedKingdomSlug(k.id)}
+                  onClick={() => handleSelectKingdom(k.id)}
                   style={{
                     padding: '8px 12px',
                     borderRadius: '10px',
@@ -1211,10 +1239,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           <select
             aria-label="Filter by subtopic"
             value={selectedSubtopicSlug}
-            onChange={(e) => {
-              setSelectedSubtopicSlug(e.target.value);
-              setPatternFilter('all');
-            }}
+            onChange={(e) => handleSelectSubtopic(e.target.value)}
             style={selectControlSt}
           >
             <option value="all">Subtopic: All Subtopics</option>
