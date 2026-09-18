@@ -46,6 +46,7 @@ export type AppEventType =
   | 'RecommendationCompleted'
   | 'SessionFinished'
   | 'PracticeSessionUpdated'
+  | 'StudyPlanUpdated'
   | 'RatingChanged'
   | 'KingdomCompleted'
   | 'BossDefeated'

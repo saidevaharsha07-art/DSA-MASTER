@@ -38,6 +38,7 @@ import {
   HelpCircle,
   X,
   FastForward,
+  CalendarCheck,
 } from 'lucide-react';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { getPlatformMeta } from '@/src/curriculum/services';
@@ -999,6 +1000,28 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <Flame size={13} />
               <span>20 Problems</span>
             </button>
+
+            <Link
+              href="/study-plan"
+              data-testid="continue-today-plan-btn"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '7px 14px',
+                borderRadius: '8px',
+                background: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+                color: '#10B981',
+                fontSize: '12px',
+                fontWeight: 800,
+                textDecoration: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <CalendarCheck size={14} />
+              <span>Continue Today&apos;s Plan</span>
+            </Link>
           </div>
         </div>
 

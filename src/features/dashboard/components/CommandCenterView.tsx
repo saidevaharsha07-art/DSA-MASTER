@@ -28,10 +28,14 @@ import {
   ShieldCheck,
   CheckCircle,
   Timer,
+  CalendarCheck,
+  ChevronRight,
 } from 'lucide-react';
 import { DashboardAdapterService, DashboardSummary } from '@/src/features/dashboard/services/dashboard-adapter.service';
 import { PracticeEngineService } from '@/src/features/practice/services/practice-engine.service';
 import { InterviewArenaService } from '@/src/features/interview/services/interview-arena.service';
+import { StudyPlanOrchestratorService } from '@/src/features/study-plan/services/study-plan.service';
+import { DailyStudyPlan } from '@/src/features/study-plan/types/study-plan.types';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
@@ -48,6 +52,14 @@ export function CommandCenterView() {
   const [summary, setSummary] = useState<DashboardSummary>(() =>
     DashboardAdapterService.getDashboardSummary(userId)
   );
+
+  const [studyPlan, setStudyPlan] = useState<DailyStudyPlan | null>(() => {
+    try {
+      return StudyPlanOrchestratorService.getTodayPlan(userId);
+    } catch {
+      return null;
+    }
+  });
 
   const interviewReadiness = useMemo(() => {
     return InterviewArenaService.getInterviewReadiness(userId);
@@ -95,6 +107,9 @@ export function CommandCenterView() {
       DashboardAdapterService.clearCache();
       const fresh = DashboardAdapterService.getDashboardSummary(userId);
       setSummary(fresh);
+      try {
+        setStudyPlan(StudyPlanOrchestratorService.getTodayPlan(userId));
+      } catch {}
     };
 
     refresh();
@@ -104,6 +119,7 @@ export function CommandCenterView() {
     const unsubProfile = EventBus.subscribe('ProfileUpdated', refresh);
     const unsubPlatform = EventBus.subscribe('PlatformSynced', refresh);
     const unsubPracticeSession = EventBus.subscribe('PracticeSessionUpdated', refresh);
+    const unsubStudyPlan = EventBus.subscribe('StudyPlanUpdated', refresh);
 
     return () => {
       unsubProblem();
@@ -111,6 +127,7 @@ export function CommandCenterView() {
       unsubProfile();
       unsubPlatform();
       unsubPracticeSession();
+      unsubStudyPlan();
     };
   }, [userId, activeUsername, isAuthenticated]);
 
@@ -1167,6 +1184,86 @@ export function CommandCenterView() {
           )}
         </div>
       </div>
+
+      {/* ── TODAY'S STUDY PLAN COMPACT CARD ── */}
+      {studyPlan && (
+        <div
+          data-testid="study-plan-card"
+          style={{
+            padding: '18px 22px',
+            borderRadius: '16px',
+            background: isLight
+              ? 'linear-gradient(135deg, #ECFDF5 0%, #FFFFFF 100%)'
+              : 'linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%)',
+            border: isLight ? '1.5px solid #A7F3D0' : '1px solid rgba(16, 185, 129, 0.25)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '14px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div
+              style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '10px',
+                background: 'rgba(16, 185, 129, 0.15)',
+                color: '#10B981',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <CalendarCheck size={20} />
+            </div>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800 }}>Today&apos;s Study Plan</h3>
+                <span
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    padding: '2px 8px',
+                    borderRadius: '20px',
+                    background: 'rgba(16, 185, 129, 0.15)',
+                    color: '#10B981',
+                    border: '1px solid rgba(16, 185, 129, 0.3)',
+                  }}
+                >
+                  {studyPlan.completedCount} / {studyPlan.items.length} Done ({Math.max(0, studyPlan.timeBudgetMinutes - studyPlan.actualTimeSpentMinutes)}m remaining)
+                </span>
+              </div>
+              <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>
+                <strong>Current Mission:</strong> {studyPlan.items.find((i) => i.id === studyPlan.primaryMissionId)?.title || studyPlan.items[0]?.title || 'Adaptive Practice'}
+              </div>
+            </div>
+          </div>
+
+          <Link href="/study-plan">
+            <button
+              data-testid="continue-study-plan-btn"
+              style={{
+                padding: '8px 18px',
+                borderRadius: '10px',
+                background: '#10B981',
+                color: '#0F172A',
+                border: 'none',
+                fontWeight: 700,
+                fontSize: '13px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+              }}
+            >
+              <span>Continue Today&apos;s Plan</span>
+              <ChevronRight size={15} />
+            </button>
+          </Link>
+        </div>
+      )}
 
       {/* ── INTERVIEW ARENA 2.0 SNAPSHOT CARD ── */}
       <div

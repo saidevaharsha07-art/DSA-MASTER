@@ -28,6 +28,7 @@ import {
   FolderTree,
   ChevronRight,
   Timer,
+  CalendarCheck,
 } from 'lucide-react';
 import {
   PatternLearningAdapterService,
@@ -35,6 +36,7 @@ import {
   PatternMasteryState,
 } from '../services/pattern-learning-adapter.service';
 import { PracticeEngineService } from '@/src/features/practice/services/practice-engine.service';
+import { StudyPlanOrchestratorService } from '@/src/features/study-plan/services/study-plan.service';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { useToast } from '@/src/context/ToastContext';
@@ -209,6 +211,26 @@ export function PatternConceptAcademyView({
   // Quick Sprint Generator State
   const [sprintDifficulty, setSprintDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [isGeneratingSprint, setIsGeneratingSprint] = useState(false);
+  const [addedToPlan, setAddedToPlan] = useState(false);
+
+  const handleAddToDailyPlan = () => {
+    try {
+      StudyPlanOrchestratorService.addCustomPatternActivity(userId || 'default_user', {
+        areaTitle: detail.category?.title || 'Algorithms',
+        areaSlug,
+        subtopicTitle: detail.subtopic?.title || 'Patterns',
+        subtopicSlug,
+        patternTitle: detail.pattern?.title || patternSlug,
+        patternSlug,
+        type: 'LEARN',
+      });
+      setAddedToPlan(true);
+      toast(`Added "${detail.pattern?.title || patternSlug}" to Today's Study Plan!`, 'success');
+      setTimeout(() => setAddedToPlan(false), 3000);
+    } catch {
+      toast('Failed to add pattern to daily plan', 'error');
+    }
+  };
 
   // Worked example trace for this pattern
   const workedExample = useMemo(() => {
@@ -941,6 +963,15 @@ export function PatternConceptAcademyView({
             </div>
 
             <div className="flex items-center gap-2.5 flex-wrap self-start sm:self-auto">
+              <button
+                onClick={handleAddToDailyPlan}
+                data-testid="add-pattern-to-plan-btn"
+                className="py-3 px-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-md transition-all"
+              >
+                <CalendarCheck size={15} className="text-emerald-400" />
+                <span>{addedToPlan ? 'Added to Plan ✓' : "Add to Today's Plan"}</span>
+              </button>
+
               <Link
                 href={`/interview?mode=topic&area=${encodeURIComponent(areaSlug)}&subtopic=${encodeURIComponent(subtopicSlug)}&pattern=${encodeURIComponent(patternSlug)}`}
                 data-testid="interview-this-pattern-btn"

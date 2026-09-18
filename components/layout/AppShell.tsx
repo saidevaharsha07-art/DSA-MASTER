@@ -12,6 +12,7 @@ import {
   Sparkles,
   Timer,
   Trophy,
+  CalendarCheck,
 } from "lucide-react";
 import { useRoadmap } from "@/hooks/use-roadmap";
 import { useCodeforces } from "@/hooks/use-codeforces";
@@ -23,6 +24,7 @@ import { useSettings } from "@/src/context/SettingsContext";
 
 const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],
+  ["Study Plan", "/study-plan", CalendarCheck],
   ["Journey", "/journey", Compass],
   ["Practice", "/practice", Code2],
   ["Interview", "/interview", Timer],
