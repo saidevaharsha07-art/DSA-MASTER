@@ -172,3 +172,4 @@ console.log('\n=== EXACT TARGET VERIFICATION ===');
 console.log(`CodeChef Total: ${platformCounts['codechef']} (Target: 1000) => ${platformCounts['codechef'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);
 console.log(`LeetCode Total: ${platformCounts['leetcode']} (Target: 1000) => ${platformCounts['leetcode'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);
 console.log(`Codeforces Total: ${platformCounts['codeforces']} (Target: 1000) => ${platformCounts['codeforces'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);
+console.log(`GeeksForGeeks Total: ${platformCounts['geeksforgeeks']} (Target: 1000) => ${platformCounts['geeksforgeeks'] === 1000 ? 'EXACT MATCH PASSED' : 'FAILED'}`);

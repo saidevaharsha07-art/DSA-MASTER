@@ -39,9 +39,9 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     const cfLink = codeforcesCard.locator('a');
     await expect(cfLink).toHaveAttribute('href', '/practice?area=basic-arrays&platform=codeforces');
 
-    // 4. GeeksForGeeks Card verification (empty state)
+    // 4. GeeksForGeeks Card verification
     await expect(gfgCard).toContainText('GeeksForGeeks');
-    await expect(gfgCard).toContainText('No mapped problems yet');
+    await expect(gfgCard).toContainText('80'); // 80 mapped problems
     const gfgLink = gfgCard.locator('a');
     await expect(gfgLink).toHaveAttribute('href', '/practice?area=basic-arrays&platform=geeksforgeeks');
 
@@ -77,7 +77,7 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.waitForURL((url) => url.pathname.includes('/practice') && url.searchParams.get('platform') === 'geeksforgeeks' && url.searchParams.get('area') === 'basic-arrays');
     expect(page.url()).toContain('area=basic-arrays');
     expect(page.url()).toContain('platform=geeksforgeeks');
-    await expect(page.getByText(/No mapped problems yet for GeeksForGeeks in Array/i)).toBeVisible();
+    await expect(page.locator('text=GeeksForGeeks').first()).toBeVisible();
   });
 
   // ── 2. VERIFY SUBTOPIC HIERARCHY ACROSS CORE LEARNING AREAS ─────────────────
