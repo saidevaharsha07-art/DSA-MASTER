@@ -72,11 +72,11 @@ const PLATFORMS = [
   {
     id: 'geeksforgeeks',
     label: 'GeeksForGeeks',
-    tagline: 'Practice Express',
-    type: 'locked' as const,
-    color: '#64748B',
-    badgeBg: 'rgba(100, 116, 139, 0.15)',
-    border: '#64748B',
+    tagline: 'Interview Express',
+    type: 'kingdom' as const,
+    color: '#2F9E44',
+    badgeBg: 'rgba(47, 158, 68, 0.15)',
+    border: '#2F9E44',
   },
 ] as const;
 
@@ -125,6 +125,7 @@ const CODEFORCES_DIVISIONS = [
 const ALL_PROBLEMS = CurriculumRepository.getAllProblems();
 const ALL_CATEGORIES = CurriculumRepository.getAllCategories();
 const ALL_PATTERNS = CurriculumRepository.getAllPatterns();
+const ALL_SUBTOPICS = CurriculumRepository.getAllSubtopics();
 
 function getProblemNumber(problem: ProblemModel): string {
   if (problem.url.includes('codeforces.com')) {
@@ -154,23 +155,20 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   // Read initial query parameters with legacy fallback
   const initialPlatform = (searchParams?.get('platform') as PlatformId) || defaultPlatform || 'leetcode';
   const initialAreaParam = searchParams?.get('area') || searchParams?.get('kingdom') || null;
+  const initialSubtopicParam = searchParams?.get('subtopic') || 'all';
   const initialDivision = searchParams?.get('division') || null;
   const initialPattern = searchParams?.get('pattern') || 'all';
   const initialDifficulty = (searchParams?.get('difficulty') as 'all' | 'Easy' | 'Medium' | 'Hard') || 'all';
   const initialStatus = (searchParams?.get('status') as 'all' | 'unsolved' | 'solved') || 'all';
   const initialSearch = searchParams?.get('search') || '';
 
-  // Topic parameter fallback (e.g. from adaptive recommendation deep-links)
+  // Topic parameter fallback (e.g. from adaptive recommendation deep-links or aliases)
   const topicParam = searchParams?.get('topic');
   const resolvedInitialArea = useMemo(() => {
-    if (initialAreaParam) return initialAreaParam;
-    if (topicParam) {
-      const match = ALL_CATEGORIES.find(
-        (c) => c.slug === topicParam || c.title.toLowerCase() === topicParam.toLowerCase()
-      );
-      if (match) return match.slug;
-    }
-    return null;
+    const raw = initialAreaParam || topicParam;
+    if (!raw) return null;
+    const cat = CurriculumRepository.getCategoryBySlug(raw);
+    return cat ? cat.slug : raw;
   }, [initialAreaParam, topicParam]);
 
   const { state: roadmapState, toggle } = useRoadmap();
@@ -207,6 +205,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   // ── Platform & Progression Selection State ───────────────────────
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformId>(initialPlatform);
   const [selectedKingdomSlug, setSelectedKingdomSlug] = useState<string | null>(resolvedInitialArea);
+  const [selectedSubtopicSlug, setSelectedSubtopicSlug] = useState<string>(initialSubtopicParam);
   const [selectedDivisionId, setSelectedDivisionId] = useState<string | null>(initialDivision);
 
   // ── Secondary Filters & Controls State ───────────────────────────
@@ -223,16 +222,47 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
   // Reset page when platform or filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedPlatform, selectedKingdomSlug, selectedDivisionId, search, difficultyFilter, patternFilter, statusFilter, sortBy]);
+  }, [selectedPlatform, selectedKingdomSlug, selectedSubtopicSlug, selectedDivisionId, search, difficultyFilter, patternFilter, statusFilter, sortBy]);
 
-  // Sync state to URL for shareable & bookmarkable queries
+  // Listen for browser popstate (back/forward navigation)
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const plat = (params.get('platform') as PlatformId) || defaultPlatform || 'leetcode';
+      const rawArea = params.get('area') || params.get('kingdom') || params.get('topic') || null;
+      const area = rawArea ? (CurriculumRepository.getCategoryBySlug(rawArea)?.slug || rawArea) : null;
+      const sub = params.get('subtopic') || 'all';
+      const pat = params.get('pattern') || 'all';
+      const diff = (params.get('difficulty') as 'all' | 'Easy' | 'Medium' | 'Hard') || 'all';
+      const stat = (params.get('status') as 'all' | 'unsolved' | 'solved') || 'all';
+      const q = params.get('search') || '';
+      const div = params.get('division') || null;
+
+      setSelectedPlatform(plat);
+      setSelectedKingdomSlug(area);
+      setSelectedSubtopicSlug(sub);
+      setPatternFilter(pat);
+      setDifficultyFilter(diff);
+      setStatusFilter(stat);
+      setSearch(q);
+      setSelectedDivisionId(div);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [defaultPlatform]);
+
+  // Sync state to URL for shareable, bookmarkable, and refresh-persistent queries
   useEffect(() => {
     const params = new URLSearchParams();
-    if (selectedPlatform && selectedPlatform !== 'leetcode') {
+    if (selectedPlatform) {
       params.set('platform', selectedPlatform);
     }
     if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
       params.set('area', selectedKingdomSlug);
+    }
+    if (selectedSubtopicSlug && selectedSubtopicSlug !== 'all') {
+      params.set('subtopic', selectedSubtopicSlug);
     }
     if (selectedDivisionId && selectedDivisionId !== 'all') {
       params.set('division', selectedDivisionId);
@@ -252,8 +282,22 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
     const queryString = params.toString();
     const targetUrl = queryString ? `${pathname}?${queryString}` : pathname;
-    window.history.replaceState(null, '', targetUrl);
-  }, [selectedPlatform, selectedKingdomSlug, selectedDivisionId, patternFilter, difficultyFilter, statusFilter, search, pathname]);
+    const currentUrl = `${window.location.pathname}${window.location.search}`;
+
+    if (currentUrl !== targetUrl) {
+      window.history.replaceState(null, '', targetUrl);
+    }
+  }, [
+    selectedPlatform,
+    selectedKingdomSlug,
+    selectedSubtopicSlug,
+    selectedDivisionId,
+    patternFilter,
+    difficultyFilter,
+    statusFilter,
+    search,
+    pathname,
+  ]);
 
   // ── 1. LEETCODE LEARNING AREAS (25 Areas) ──────────────────────────
   const leetcodeKingdoms = useMemo(() => {
@@ -317,7 +361,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   // ── 3. CODEFORCES DIVISIONS (4 Divisions) ────────────────────────
   const codeforcesDivisions = useMemo(() => {
-    const cfProblems = ALL_PROBLEMS.filter((p) => p.url.includes('codeforces.com'));
+    const cfProblems = ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
 
     return CODEFORCES_DIVISIONS.map((div, idx) => {
       const dProblems = cfProblems.filter((p) => div.filter(p));
@@ -344,6 +388,35 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
   }, [isProblemChecked]);
 
+  // ── 4. GEEKSFORGEEKS LEARNING AREAS (25 Areas) ──────────────────────
+  const geeksforgeeksKingdoms = useMemo(() => {
+    const gfgProblems = ALL_PROBLEMS.filter((p) => p.platform === 'geeksforgeeks');
+
+    return ALL_CATEGORIES.map((cat, idx) => {
+      const kProblems = gfgProblems.filter(
+        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
+      );
+      const solvedCount = kProblems.filter((p) => isProblemChecked(p)).length;
+      const totalCount = kProblems.length;
+      const isCompleted = totalCount > 0 && solvedCount >= totalCount;
+      const progressPct = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
+
+      return {
+        id: cat.slug,
+        number: idx + 1,
+        name: cat.title,
+        topic: cat.title,
+        description: cat.description,
+        problems: kProblems,
+        solvedCount,
+        totalCount,
+        progressPct,
+        isCompleted,
+        xpReward: 500 + idx * 40,
+      };
+    });
+  }, [isProblemChecked]);
+
   // ── Resolve Active Progression Node ──────────────────────────────
   const activeLeetcodeKingdom = useMemo(() => {
     if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
@@ -363,6 +436,14 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     return currentUnfinished || codechefKingdoms[0];
   }, [codechefKingdoms, selectedKingdomSlug]);
 
+  const activeGeeksforgeeksKingdom = useMemo(() => {
+    if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
+      const found = geeksforgeeksKingdoms.find((k) => k.id === selectedKingdomSlug);
+      if (found) return found;
+    }
+    return geeksforgeeksKingdoms[0];
+  }, [geeksforgeeksKingdoms, selectedKingdomSlug]);
+
   const activeCodeforcesDivision = useMemo(() => {
     if (selectedDivisionId && selectedDivisionId !== 'all') {
       const found = codeforcesDivisions.find((d) => d.id === selectedDivisionId);
@@ -379,23 +460,18 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   const platformProblems = useMemo(() => {
     if (selectedPlatform === 'codechef') {
-      return ALL_PROBLEMS.filter((p) => p.url.includes('codechef.com'));
+      return ALL_PROBLEMS.filter((p) => p.platform === 'codechef');
     }
     if (selectedPlatform === 'codeforces') {
-      return ALL_PROBLEMS.filter((p) => p.url.includes('codeforces.com'));
+      return ALL_PROBLEMS.filter((p) => p.platform === 'codeforces');
     }
     if (selectedPlatform === 'geeksforgeeks') {
-      return ALL_PROBLEMS.filter((p) => p.url.includes('geeksforgeeks.org'));
+      return ALL_PROBLEMS.filter((p) => p.platform === 'geeksforgeeks');
     }
-    return ALL_PROBLEMS.filter(
-      (p) =>
-        !p.url.includes('codeforces.com') &&
-        !p.url.includes('codechef.com') &&
-        !p.url.includes('geeksforgeeks.org')
-    );
+    return ALL_PROBLEMS.filter((p) => p.platform === 'leetcode');
   }, [selectedPlatform]);
 
-  // ── Scope Problems by Selected Kingdom / Division ────────────────
+  // ── Scope Problems by Selected Learning Area / Division ──────────
   const scopedProblems = useMemo(() => {
     if (selectedPlatform === 'leetcode') {
       if (selectedKingdomSlug === 'all') return platformProblems;
@@ -405,9 +481,24 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       if (selectedKingdomSlug === 'all') return platformProblems;
       return activeCodechefKingdom?.problems || platformProblems;
     }
+    if (selectedPlatform === 'geeksforgeeks') {
+      if (selectedKingdomSlug === 'all') return platformProblems;
+      return activeGeeksforgeeksKingdom?.problems || platformProblems;
+    }
     if (selectedPlatform === 'codeforces') {
-      if (selectedDivisionId === 'all') return platformProblems;
-      return activeCodeforcesDivision?.problems || platformProblems;
+      let cfList = platformProblems;
+      if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
+        cfList = cfList.filter(
+          (p) => p.categorySlug === selectedKingdomSlug || p.categoryId === selectedKingdomSlug
+        );
+      }
+      if (selectedDivisionId && selectedDivisionId !== 'all') {
+        const divObj = CODEFORCES_DIVISIONS.find((d) => d.id === selectedDivisionId);
+        if (divObj) {
+          cfList = cfList.filter(divObj.filter);
+        }
+      }
+      return cfList;
     }
     return platformProblems;
   }, [
@@ -416,11 +507,35 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     selectedDivisionId,
     activeLeetcodeKingdom,
     activeCodechefKingdom,
-    activeCodeforcesDivision,
+    activeGeeksforgeeksKingdom,
     platformProblems,
   ]);
 
-  // ── Apply Secondary Filters (Search, Difficulty, Pattern, Status, Sort) ──
+  // ── Subtopic & Pattern Hierarchy Scope for Filters ───────────────
+  const availableSubtopics = useMemo(() => {
+    if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
+      return CurriculumRepository.getSubtopicsByCategory(selectedKingdomSlug);
+    }
+    return ALL_SUBTOPICS;
+  }, [selectedKingdomSlug]);
+
+  const availablePatterns = useMemo(() => {
+    let patterns = ALL_PATTERNS;
+    if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
+      patterns = patterns.filter(
+        (pat) => pat.categorySlug === selectedKingdomSlug || pat.categoryId === selectedKingdomSlug
+      );
+    }
+    if (selectedSubtopicSlug && selectedSubtopicSlug !== 'all') {
+      const sub = ALL_SUBTOPICS.find((s) => s.slug === selectedSubtopicSlug || s.id === selectedSubtopicSlug);
+      if (sub) {
+        patterns = patterns.filter((pat) => sub.patternIds.includes(pat.id) || pat.subtopicSlug === sub.slug);
+      }
+    }
+    return patterns;
+  }, [selectedKingdomSlug, selectedSubtopicSlug]);
+
+  // ── Apply Secondary Filters (Search, Difficulty, Subtopic, Pattern, Status, Sort) ──
   const filteredProblems = useMemo(() => {
     let list = [...scopedProblems];
 
@@ -434,6 +549,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           String(p.leetcodeNumber).includes(q) ||
           p.topics.some((t) => t.toLowerCase().includes(q)) ||
           (p.categoryTitle && p.categoryTitle.toLowerCase().includes(q)) ||
+          (p.subtopicTitle && p.subtopicTitle.toLowerCase().includes(q)) ||
           (p.patternTitle && p.patternTitle.toLowerCase().includes(q))
       );
     }
@@ -444,6 +560,15 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
         const diff = p.difficulty || (p.level === 'Learn' ? 'Easy' : p.level === 'Master' ? 'Hard' : 'Medium');
         return diff.toLowerCase() === difficultyFilter.toLowerCase();
       });
+    }
+
+    // Subtopic filter
+    if (selectedSubtopicSlug && selectedSubtopicSlug !== 'all') {
+      list = list.filter(
+        (p) =>
+          p.subtopicSlug === selectedSubtopicSlug ||
+          p.subtopicId === selectedSubtopicSlug
+      );
     }
 
     // Pattern filter
@@ -480,7 +605,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
 
     return list;
-  }, [scopedProblems, search, difficultyFilter, patternFilter, statusFilter, sortBy, isProblemChecked]);
+  }, [scopedProblems, search, difficultyFilter, patternFilter, selectedSubtopicSlug, statusFilter, sortBy, isProblemChecked]);
 
   // Paginated problem slice
   const paginatedProblems = useMemo(() => {
@@ -721,20 +846,14 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {PLATFORMS.map((p) => {
                 const isSelected = selectedPlatform === p.id;
-                const isLocked = p.id === 'geeksforgeeks';
 
                 return (
                   <button
                     key={p.id}
                     type="button"
                     onClick={() => {
-                      if (!isLocked) {
-                        setSelectedPlatform(p.id);
-                        setSelectedKingdomSlug(null);
-                        setSelectedDivisionId(null);
-                      }
+                      setSelectedPlatform(p.id);
                     }}
-                    disabled={isLocked}
                     style={{
                       padding: '8px 16px',
                       borderRadius: '10px',
@@ -744,10 +863,10 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                       border: isSelected
                         ? `2px solid ${p.color}`
                         : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
-                      color: isLocked ? 'var(--text-muted)' : isSelected ? (isLight ? p.color : '#FFF') : 'var(--text-secondary)',
+                      color: isSelected ? (isLight ? p.color : '#FFF') : 'var(--text-secondary)',
                       fontSize: '12px',
                       fontWeight: isSelected ? 900 : 700,
-                      cursor: isLocked ? 'not-allowed' : 'pointer',
+                      cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '8px',
@@ -755,10 +874,9 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                       boxShadow: isSelected ? `0 2px 10px ${p.color}25` : 'none',
                     }}
                   >
-                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: isLocked ? '#64748B' : p.color }} />
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: p.color }} />
                     <span>{p.label}</span>
                     <span style={{ fontSize: '10px', opacity: 0.8 }}>({p.tagline})</span>
-                    {isLocked && <span style={{ fontSize: '9px', color: '#F59E0B', fontWeight: 800 }}>• Locked</span>}
                   </button>
                 );
               })}
@@ -796,6 +914,24 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 {codechefKingdoms.map((k) => (
                   <option key={k.id} value={k.id}>
                     {k.number}. {k.name} ({k.solvedCount}/{k.totalCount} solved)
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {selectedPlatform === 'geeksforgeeks' && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
+              <select
+                value={selectedKingdomSlug || activeGeeksforgeeksKingdom.id}
+                onChange={(e) => setSelectedKingdomSlug(e.target.value)}
+                style={selectControlSt}
+              >
+                <option value="all">📚 All 25 Learning Areas (0 problems)</option>
+                {geeksforgeeksKingdoms.map((k) => (
+                  <option key={k.id} value={k.id}>
+                    {k.number}. {k.name} (0/0 solved)
                   </option>
                 ))}
               </select>
@@ -940,6 +1076,65 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
           </div>
         )}
 
+        {selectedPlatform === 'geeksforgeeks' && (
+          <div
+            ref={chipsScrollRef}
+            style={{
+              display: 'flex',
+              gap: '8px',
+              overflowX: 'auto',
+              paddingBottom: '4px',
+              scrollbarWidth: 'thin',
+            }}
+          >
+            {geeksforgeeksKingdoms.map((k) => {
+              const isSelected = (selectedKingdomSlug || activeGeeksforgeeksKingdom.id) === k.id;
+              return (
+                <button
+                  key={k.id}
+                  type="button"
+                  onClick={() => setSelectedKingdomSlug(k.id)}
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: '10px',
+                    background: isSelected
+                      ? isLight ? '#F0FDF4' : 'rgba(47, 158, 68, 0.2)'
+                      : isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
+                    border: isSelected
+                      ? '1.5px solid #2F9E44'
+                      : isLight ? '1px solid #E2E8F0' : '1px solid rgba(255, 255, 255, 0.08)',
+                    color: isSelected ? (isLight ? '#2F9E44' : '#40C057') : 'var(--text-secondary)',
+                    fontSize: '11px',
+                    fontWeight: isSelected ? 800 : 600,
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    flexShrink: 0,
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
+                  <span>{k.name}</span>
+                  <span
+                    style={{
+                      fontSize: '9px',
+                      padding: '1px 5px',
+                      borderRadius: '4px',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      color: 'var(--text-muted)',
+                      fontWeight: 800,
+                    }}
+                  >
+                    0/0
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         {selectedPlatform === 'codeforces' && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
             {codeforcesDivisions.map((d) => {
@@ -991,7 +1186,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
         )}
 
         {/* Secondary Filter Controls Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px', alignItems: 'center' }}>
           {/* Search */}
           <div style={{ position: 'relative', gridColumn: 'span 2' }}>
             <Search size={14} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
@@ -1014,6 +1209,24 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             />
           </div>
 
+          {/* Subtopic */}
+          <select
+            aria-label="Filter by subtopic"
+            value={selectedSubtopicSlug}
+            onChange={(e) => {
+              setSelectedSubtopicSlug(e.target.value);
+              setPatternFilter('all');
+            }}
+            style={selectControlSt}
+          >
+            <option value="all">Subtopic: All Subtopics</option>
+            {availableSubtopics.map((s) => (
+              <option key={s.slug} value={s.slug}>
+                {s.title}
+              </option>
+            ))}
+          </select>
+
           {/* Difficulty */}
           <select
             value={difficultyFilter}
@@ -1033,7 +1246,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             style={selectControlSt}
           >
             <option value="all">Pattern: All Patterns</option>
-            {ALL_PATTERNS.map((p) => (
+            {availablePatterns.map((p) => (
               <option key={p.slug} value={p.slug}>
                 {p.title}
               </option>
@@ -1286,6 +1499,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                       ? activeCodeforcesDivision.name
                       : selectedPlatform === 'codechef'
                       ? activeCodechefKingdom.name
+                      : selectedPlatform === 'geeksforgeeks'
+                      ? activeGeeksforgeeksKingdom.name
                       : activeLeetcodeKingdom.name}
                   </strong>
                 </span>
@@ -1462,13 +1677,18 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
               {paginatedProblems.length === 0 && (
                 <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
-                  <p style={{ margin: 0, fontSize: '14px', fontWeight: 600 }}>No problems match the current filter criteria.</p>
+                  <p style={{ margin: 0, fontSize: '14px', fontWeight: 600 }}>
+                    {selectedPlatform === 'geeksforgeeks'
+                      ? `No mapped problems yet for GeeksForGeeks in ${activeGeeksforgeeksKingdom?.name || 'this Learning Area'}.`
+                      : 'No problems match the current filter criteria.'}
+                  </p>
                   <button
                     type="button"
                     onClick={() => {
                       setSearch('');
                       setDifficultyFilter('all');
                       setPatternFilter('all');
+                      setSelectedSubtopicSlug('all');
                       setStatusFilter('all');
                     }}
                     style={{
@@ -1542,6 +1762,8 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
               {selectedPlatform === 'codeforces'
                 ? `You are currently in ${activeCodeforcesDivision.name}. Master each rating tier to elevate your contest rating.`
+                : selectedPlatform === 'geeksforgeeks'
+                ? `You are exploring ${activeGeeksforgeeksKingdom.name}. Mapped GeeksForGeeks problems will appear here.`
                 : `You are exploring ${selectedPlatform === 'codechef' ? activeCodechefKingdom.name : activeLeetcodeKingdom.name}. Master all 25 learning areas in sequential progression.`}
             </p>
           </div>

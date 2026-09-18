@@ -27,6 +27,15 @@ import { ADVANCED_ALGORITHMS_PROBLEMS } from './advanced-algorithms';
 import { CODEFORCES_PROBLEM_MODELS } from '../../repository/codeforces-db';
 import { CODECHEF_PROBLEM_MODELS } from '../../repository/codechef-rating-db';
 
+import { getSubtopicForPattern } from '../subtopics';
+
+function detectPlatform(url: string): 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks' {
+  if (url.includes('codechef.com')) return 'codechef';
+  if (url.includes('codeforces.com')) return 'codeforces';
+  if (url.includes('geeksforgeeks.org')) return 'geeksforgeeks';
+  return 'leetcode';
+}
+
 export const ALL_PROBLEMS: ProblemModel[] = [
   ...BASIC_ARRAYS_PROBLEMS,
   ...PREFIX_SUM_PROBLEMS,
@@ -55,7 +64,16 @@ export const ALL_PROBLEMS: ProblemModel[] = [
   ...ADVANCED_ALGORITHMS_PROBLEMS,
   ...CODEFORCES_PROBLEM_MODELS,
   ...CODECHEF_PROBLEM_MODELS,
-].map((p, index) => ({
-  ...p,
-  order: p.order ?? index + 1,
-}));
+].map((p, index) => {
+  const subtopic = getSubtopicForPattern(p.patternSlug) || getSubtopicForPattern(p.patternId);
+  return {
+    ...p,
+    order: p.order ?? index + 1,
+    learningAreaId: p.categoryId,
+    subtopicId: p.subtopicId || subtopic?.id,
+    subtopicSlug: p.subtopicSlug || subtopic?.slug,
+    subtopicTitle: p.subtopicTitle || subtopic?.title,
+    platform: p.platform || detectPlatform(p.url),
+  };
+});
+

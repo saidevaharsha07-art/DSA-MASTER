@@ -38,6 +38,11 @@ export interface ProblemModel {
   questTitle: string;
   /** @deprecated Use categoryTitle for learner-facing display. Kingdom names replaced by DSA concept names. */
   kingdomTitle: string;
+  subtopicId?: string;
+  subtopicSlug?: string;
+  subtopicTitle?: string;
+  learningAreaId?: string;
+  platform?: 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks';
   bruteForceIdea?: string;
   optimalIdea?: string;
   hints?: string[];
@@ -57,6 +62,9 @@ export interface PatternModel {
   /** @deprecated Use categoryTitle for learner-facing display. Kingdom names replaced by DSA concept names. */
   kingdomTitle: string;
   questTitle: string;
+  subtopicId?: string;
+  subtopicSlug?: string;
+  subtopicTitle?: string;
   order: number;
   difficulty: Difficulty;
   estimatedHours: number;
@@ -73,6 +81,18 @@ export interface PatternModel {
   relatedPatternIds: string[];
   commonMistakes: string[];
   interviewTips: string[];
+}
+
+export interface SubtopicModel {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  categoryId: string;
+  categorySlug: string;
+  categoryTitle: string;
+  order: number;
+  patternIds: string[];
 }
 
 export interface CategoryModel {
@@ -112,8 +132,10 @@ export interface QuestModel {
 
 export interface FilterOptions {
   categorySlug?: string;
+  subtopicSlug?: string;
   patternSlug?: string;
   difficulty?: Difficulty;
+  platform?: 'leetcode' | 'codechef' | 'codeforces' | 'geeksforgeeks' | 'all';
   company?: string;
   frequency?: FrequencyLevel;
   isPremium?: boolean;

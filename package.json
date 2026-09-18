@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "validate-content": "tsx scripts/validate-content.ts",
-    "build:indexes": "tsx scripts/generate-indexes.ts"
+    "build:indexes": "tsx scripts/generate-indexes.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

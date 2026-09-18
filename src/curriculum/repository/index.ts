@@ -1,14 +1,43 @@
-import { ALL_CATEGORIES, ALL_KINGDOMS, ALL_PATTERNS, ALL_PROBLEMS } from '../models';
-import { CategoryModel, KingdomModel, PatternModel, ProblemModel, FilterOptions } from '../types';
+import { ALL_CATEGORIES, ALL_KINGDOMS, ALL_PATTERNS, ALL_PROBLEMS, ALL_SUBTOPICS } from '../models';
+import { CategoryModel, KingdomModel, PatternModel, ProblemModel, SubtopicModel, FilterOptions } from '../types';
+
+const CATEGORY_ALIASES: Record<string, string> = {
+  array: 'basic-arrays',
+  arrays: 'basic-arrays',
+  'basic-array': 'basic-arrays',
+  math: 'math-number-theory',
+  'number-theory': 'math-number-theory',
+  queue: 'queue-deque',
+  deque: 'queue-deque',
+  bst: 'binary-search-trees',
+  dp: 'dynamic-programming',
+  mst: 'minimum-spanning-tree',
+  bit: 'bit-manipulation',
+  bits: 'bit-manipulation',
+  'shortest-paths': 'shortest-path',
+  matrix: 'matrix',
+  strings: 'strings',
+  string: 'strings',
+  tree: 'binary-trees',
+  trees: 'binary-trees',
+};
 
 export const CurriculumRepository = {
   // Categories & Kingdoms
   getAllCategories: (): CategoryModel[] => ALL_CATEGORIES,
-  getCategoryBySlug: (slug: string): CategoryModel | undefined => ALL_CATEGORIES.find(c => c.slug === slug || c.id === slug),
+  getCategoryBySlug: (slug: string): CategoryModel | undefined => {
+    const normalized = slug.toLowerCase();
+    const resolvedSlug = CATEGORY_ALIASES[normalized] || normalized;
+    return ALL_CATEGORIES.find(c => c.slug === resolvedSlug || c.id === resolvedSlug || c.slug === normalized || c.id === normalized);
+  },
   getCategoryById: (id: string): CategoryModel | undefined => ALL_CATEGORIES.find(c => c.id === id),
 
   getAllKingdoms: (): KingdomModel[] => ALL_KINGDOMS,
-  getKingdomBySlug: (slug: string): KingdomModel | undefined => ALL_KINGDOMS.find(k => k.categorySlug === slug || k.slug === slug),
+  getKingdomBySlug: (slug: string): KingdomModel | undefined => {
+    const normalized = slug.toLowerCase();
+    const resolvedSlug = CATEGORY_ALIASES[normalized] || normalized;
+    return ALL_KINGDOMS.find(k => k.categorySlug === resolvedSlug || k.slug === resolvedSlug || k.slug === normalized);
+  },
 
   /**
    * Returns the legacy fantasy Kingdom name for a given categorySlug.
@@ -16,8 +45,20 @@ export const CurriculumRepository = {
    * NEVER display this to learners — use getCategoryBySlug(slug)?.title instead.
    */
   getLegacyKingdomTitle: (categorySlug: string): string | undefined => {
-    const cat = ALL_CATEGORIES.find(c => c.slug === categorySlug);
+    const normalized = categorySlug.toLowerCase();
+    const resolvedSlug = CATEGORY_ALIASES[normalized] || normalized;
+    const cat = ALL_CATEGORIES.find(c => c.slug === resolvedSlug || c.slug === normalized);
     return cat?.kingdomTitle;
+  },
+
+  // Subtopics
+  getAllSubtopics: (): SubtopicModel[] => ALL_SUBTOPICS,
+  getSubtopicBySlug: (slug: string): SubtopicModel | undefined => ALL_SUBTOPICS.find(s => s.slug === slug || s.id === slug),
+  getSubtopicById: (id: string): SubtopicModel | undefined => ALL_SUBTOPICS.find(s => s.id === id),
+  getSubtopicsByCategory: (categorySlug: string): SubtopicModel[] => {
+    const normalized = categorySlug.toLowerCase();
+    const resolvedSlug = CATEGORY_ALIASES[normalized] || normalized;
+    return ALL_SUBTOPICS.filter(s => s.categorySlug === resolvedSlug || s.categoryId === resolvedSlug || s.categorySlug === normalized);
   },
 
   // Patterns
@@ -39,16 +80,12 @@ export const CurriculumRepository = {
 
   // Platform Catalog & Totals
   getProblemsByPlatform: (platform: string): ProblemModel[] => {
-    if (platform === 'geeksforgeeks' || platform === 'mentorpick') return [];
-    if (platform === 'codechef') return ALL_PROBLEMS.filter(p => p.url.includes('codechef.com'));
-    if (platform === 'codeforces') return ALL_PROBLEMS.filter(p => p.url.includes('codeforces.com'));
-    return ALL_PROBLEMS.filter(p => !p.url.includes('codeforces.com') && !p.url.includes('codechef.com') && !p.url.includes('geeksforgeeks.org'));
+    if (platform === 'mentorpick') return [];
+    return ALL_PROBLEMS.filter(p => p.platform === platform);
   },
   getPlatformCount: (platform: string): number => {
-    if (platform === 'geeksforgeeks' || platform === 'mentorpick') return 0;
-    if (platform === 'codechef') return ALL_PROBLEMS.filter(p => p.url.includes('codechef.com')).length;
-    if (platform === 'codeforces') return ALL_PROBLEMS.filter(p => p.url.includes('codeforces.com')).length;
-    return ALL_PROBLEMS.filter(p => !p.url.includes('codeforces.com') && !p.url.includes('codechef.com') && !p.url.includes('geeksforgeeks.org')).length;
+    if (platform === 'mentorpick') return 0;
+    return ALL_PROBLEMS.filter(p => p.platform === platform).length;
   },
   getTotalCanonicalProblems: (): number => {
     return ALL_PROBLEMS.length;
@@ -88,7 +125,13 @@ export const CurriculumRepository = {
       if (options.categorySlug && problem.categorySlug !== options.categorySlug && problem.categoryId !== options.categorySlug) {
         return false;
       }
+      if (options.subtopicSlug && problem.subtopicSlug !== options.subtopicSlug && problem.subtopicId !== options.subtopicSlug) {
+        return false;
+      }
       if (options.patternSlug && problem.patternSlug !== options.patternSlug && problem.patternId !== options.patternSlug) {
+        return false;
+      }
+      if (options.platform && options.platform !== 'all' && problem.platform !== options.platform) {
         return false;
       }
       if (options.difficulty && problem.difficulty.toLowerCase() !== options.difficulty.toLowerCase()) {

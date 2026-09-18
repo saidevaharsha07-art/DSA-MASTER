@@ -1,5 +1,6 @@
 import { PatternModel } from '../types';
 import { ALL_PROBLEMS } from './problems';
+import { getSubtopicForPattern } from './subtopics';
 
 const BASE_PATTERNS: Omit<PatternModel, 'learnProblemIds' | 'practiceProblemIds' | 'masterProblemIds' | 'problemIds'>[] = [
   // 1. Basic Arrays
@@ -176,8 +177,13 @@ export const ALL_PATTERNS: PatternModel[] = BASE_PATTERNS.map((pattern) => {
   const masterProblemIds = patternProblems.filter((p) => p.level === 'Master').map((p) => p.id);
   const problemIds = patternProblems.map((p) => p.id);
 
+  const subtopic = getSubtopicForPattern(pattern.id) || getSubtopicForPattern(pattern.slug);
+
   return {
     ...pattern,
+    subtopicId: subtopic?.id,
+    subtopicSlug: subtopic?.slug,
+    subtopicTitle: subtopic?.title,
     learnProblemIds,
     practiceProblemIds,
     masterProblemIds,
