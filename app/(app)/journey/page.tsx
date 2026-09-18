@@ -37,7 +37,7 @@ export default function AdaptiveJourneyPage() {
   const isLight = settings.appearance.theme === 'light';
 
   const [mounted, setMounted] = useState(false);
-  const [viewMode, setViewMode] = useState<'graph' | 'campaign'>('graph');
+  const [viewMode, setViewMode] = useState<'graph' | 'areas'>('graph');
   const [selectedTopic, setSelectedTopic] = useState<RoadmapTopicNode | null>(null);
   const [refreshCount, setRefreshCount] = useState(0);
 
@@ -131,14 +131,14 @@ export default function AdaptiveJourneyPage() {
             <Layers size={14} /> Adaptive Graph & Timeline
           </button>
           <button
-            onClick={() => setViewMode('campaign')}
+            onClick={() => setViewMode('areas')}
             className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-              viewMode === 'campaign'
+              viewMode === 'areas'
                 ? 'bg-indigo-600 text-white shadow-sm'
                 : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
             }`}
           >
-            <Map size={14} /> Kingdoms Campaign
+            <Map size={14} /> Learning Areas
           </button>
         </div>
       </div>

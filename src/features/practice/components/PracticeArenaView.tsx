@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import {
   Swords,
   CheckCircle2,
@@ -147,10 +147,31 @@ function getPlatformId(problem: ProblemModel): 'leetcode' | 'codechef' | 'codefo
 }
 
 export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: PlatformId }) {
+  const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  // Read initial query parameters with legacy fallback
   const initialPlatform = (searchParams?.get('platform') as PlatformId) || defaultPlatform || 'leetcode';
-  const initialKingdom = searchParams?.get('kingdom') || null;
+  const initialAreaParam = searchParams?.get('area') || searchParams?.get('kingdom') || null;
   const initialDivision = searchParams?.get('division') || null;
+  const initialPattern = searchParams?.get('pattern') || 'all';
+  const initialDifficulty = (searchParams?.get('difficulty') as 'all' | 'Easy' | 'Medium' | 'Hard') || 'all';
+  const initialStatus = (searchParams?.get('status') as 'all' | 'unsolved' | 'solved') || 'all';
+  const initialSearch = searchParams?.get('search') || '';
+
+  // Topic parameter fallback (e.g. from adaptive recommendation deep-links)
+  const topicParam = searchParams?.get('topic');
+  const resolvedInitialArea = useMemo(() => {
+    if (initialAreaParam) return initialAreaParam;
+    if (topicParam) {
+      const match = ALL_CATEGORIES.find(
+        (c) => c.slug === topicParam || c.title.toLowerCase() === topicParam.toLowerCase()
+      );
+      if (match) return match.slug;
+    }
+    return null;
+  }, [initialAreaParam, topicParam]);
 
   const { state: roadmapState, toggle } = useRoadmap();
   const { userId } = useActiveUser();
@@ -185,14 +206,14 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
   // ── Platform & Progression Selection State ───────────────────────
   const [selectedPlatform, setSelectedPlatform] = useState<PlatformId>(initialPlatform);
-  const [selectedKingdomSlug, setSelectedKingdomSlug] = useState<string | null>(initialKingdom);
+  const [selectedKingdomSlug, setSelectedKingdomSlug] = useState<string | null>(resolvedInitialArea);
   const [selectedDivisionId, setSelectedDivisionId] = useState<string | null>(initialDivision);
 
   // ── Secondary Filters & Controls State ───────────────────────────
-  const [search, setSearch] = useState('');
-  const [difficultyFilter, setDifficultyFilter] = useState<'all' | 'Easy' | 'Medium' | 'Hard'>('all');
-  const [patternFilter, setPatternFilter] = useState('all');
-  const [statusFilter, setStatusFilter] = useState<'all' | 'unsolved' | 'solved'>('all');
+  const [search, setSearch] = useState(initialSearch);
+  const [difficultyFilter, setDifficultyFilter] = useState<'all' | 'Easy' | 'Medium' | 'Hard'>(initialDifficulty);
+  const [patternFilter, setPatternFilter] = useState(initialPattern);
+  const [statusFilter, setStatusFilter] = useState<'all' | 'unsolved' | 'solved'>(initialStatus);
   const [sortBy, setSortBy] = useState<'order' | 'number' | 'difficulty' | 'xp'>('order');
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 25;
@@ -204,7 +225,37 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     setCurrentPage(1);
   }, [selectedPlatform, selectedKingdomSlug, selectedDivisionId, search, difficultyFilter, patternFilter, statusFilter, sortBy]);
 
-  // ── 1. LEETCODE KINGDOMS (25 Kingdoms) ───────────────────────────
+  // Sync state to URL for shareable & bookmarkable queries
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedPlatform && selectedPlatform !== 'leetcode') {
+      params.set('platform', selectedPlatform);
+    }
+    if (selectedKingdomSlug && selectedKingdomSlug !== 'all') {
+      params.set('area', selectedKingdomSlug);
+    }
+    if (selectedDivisionId && selectedDivisionId !== 'all') {
+      params.set('division', selectedDivisionId);
+    }
+    if (patternFilter && patternFilter !== 'all') {
+      params.set('pattern', patternFilter);
+    }
+    if (difficultyFilter && difficultyFilter !== 'all') {
+      params.set('difficulty', difficultyFilter);
+    }
+    if (statusFilter && statusFilter !== 'all') {
+      params.set('status', statusFilter);
+    }
+    if (search.trim()) {
+      params.set('search', search.trim());
+    }
+
+    const queryString = params.toString();
+    const targetUrl = queryString ? `${pathname}?${queryString}` : pathname;
+    window.history.replaceState(null, '', targetUrl);
+  }, [selectedPlatform, selectedKingdomSlug, selectedDivisionId, patternFilter, difficultyFilter, statusFilter, search, pathname]);
+
+  // ── 1. LEETCODE LEARNING AREAS (25 Areas) ──────────────────────────
   const leetcodeKingdoms = useMemo(() => {
     const lcProblems = ALL_PROBLEMS.filter(
       (p) => !p.url.includes('codechef.com') && !p.url.includes('codeforces.com') && !p.url.includes('geeksforgeeks.org')
@@ -212,7 +263,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = lcProblems.filter(
-        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title || p.kingdomTitle === cat.kingdomTitle
+        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
       );
       const solvedCount = kProblems.filter((p) => isProblemChecked(p)).length;
       const totalCount = kProblems.length;
@@ -222,7 +273,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       return {
         id: cat.slug,
         number: idx + 1,
-        name: cat.kingdomTitle || cat.title,
+        name: cat.title,
         topic: cat.title,
         description: cat.description,
         problems: kProblems,
@@ -235,13 +286,13 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
     });
   }, [isProblemChecked]);
 
-  // ── 2. CODECHEF KINGDOMS (25 Kingdoms) ───────────────────────────
+  // ── 2. CODECHEF LEARNING AREAS (25 Areas) ──────────────────────────
   const codechefKingdoms = useMemo(() => {
     const ccProblems = ALL_PROBLEMS.filter((p) => p.url.includes('codechef.com'));
 
     return ALL_CATEGORIES.map((cat, idx) => {
       const kProblems = ccProblems.filter(
-        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title || p.kingdomTitle === cat.kingdomTitle
+        (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
       );
       const solvedCount = kProblems.filter((p) => isProblemChecked(p)).length;
       const totalCount = kProblems.length;
@@ -251,7 +302,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
       return {
         id: cat.slug,
         number: idx + 1,
-        name: cat.kingdomTitle || cat.title,
+        name: cat.title,
         topic: cat.title,
         description: cat.description,
         problems: kProblems,
@@ -604,7 +655,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
               <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500 }}>
                 {selectedPlatform === 'codeforces'
                   ? 'Master rated competitive problem solving structured by division rating bands.'
-                  : 'Master algorithmic problem solving structured by canonical progression kingdoms.'}
+                  : 'Master algorithmic problem solving structured by canonical DSA learning areas.'}
               </span>
             </div>
           </div>
@@ -714,16 +765,16 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             </div>
           </div>
 
-          {/* Quick Dropdown Jump for Kingdoms / Divisions */}
+          {/* Quick Dropdown Jump for Learning Areas / Divisions */}
           {selectedPlatform === 'leetcode' && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Kingdom:</span>
+              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
               <select
                 value={selectedKingdomSlug || activeLeetcodeKingdom.id}
                 onChange={(e) => setSelectedKingdomSlug(e.target.value)}
                 style={selectControlSt}
               >
-                <option value="all">👑 All 25 Kingdoms ({platformProblems.length} problems)</option>
+                <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
                 {leetcodeKingdoms.map((k) => (
                   <option key={k.id} value={k.id}>
                     {k.number}. {k.name} ({k.solvedCount}/{k.totalCount} solved)
@@ -735,13 +786,13 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
 
           {selectedPlatform === 'codechef' && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Kingdom:</span>
+              <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>Jump Learning Area:</span>
               <select
                 value={selectedKingdomSlug || activeCodechefKingdom.id}
                 onChange={(e) => setSelectedKingdomSlug(e.target.value)}
                 style={selectControlSt}
               >
-                <option value="all">👑 All 25 Kingdoms ({platformProblems.length} problems)</option>
+                <option value="all">📚 All 25 Learning Areas ({platformProblems.length} problems)</option>
                 {codechefKingdoms.map((k) => (
                   <option key={k.id} value={k.id}>
                     {k.number}. {k.name} ({k.solvedCount}/{k.totalCount} solved)
@@ -810,7 +861,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                     transition: 'all 0.15s ease',
                   }}
                 >
-                  <span style={{ fontSize: '10px', opacity: 0.7 }}>K{k.number < 10 ? `0${k.number}` : k.number}</span>
+                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
                   <span>{k.name}</span>
                   <span
                     style={{
@@ -869,7 +920,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                     transition: 'all 0.15s ease',
                   }}
                 >
-                  <span style={{ fontSize: '10px', opacity: 0.7 }}>K{k.number < 10 ? `0${k.number}` : k.number}</span>
+                  <span style={{ fontSize: '10px', opacity: 0.7 }}>#{k.number < 10 ? `0${k.number}` : k.number}</span>
                   <span>{k.name}</span>
                   <span
                     style={{
@@ -1026,7 +1077,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
         {/* ── LEFT MAIN: ACTIVE PROGRESSION HERO & PROBLEM QUEUE ───── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: 0 }}>
           
-          {/* Active Kingdom / Division Campaign Hero Banner */}
+          {/* Active Learning Area / Division Progression Hero Banner */}
           {selectedPlatform !== 'geeksforgeeks' && (
             <div
               style={{
@@ -1123,7 +1174,7 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                         <span>
                           {selectedPlatform === 'codeforces'
                             ? 'Solve Division'
-                            : 'Solve Kingdom'}
+                            : 'Solve Area'}
                         </span>
                         <ArrowRight size={14} />
                       </Link>
@@ -1485,13 +1536,13 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Compass size={16} style={{ color: currentPlatformMeta.color }} />
               <strong style={{ fontSize: '13px', color: 'var(--text-primary)' }}>
-                {selectedPlatform === 'codeforces' ? 'Division Ranking' : 'Kingdom Campaign'}
+                {selectedPlatform === 'codeforces' ? 'Division Ranking' : 'Learning Area Progression'}
               </strong>
             </div>
             <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
               {selectedPlatform === 'codeforces'
                 ? `You are currently in ${activeCodeforcesDivision.name}. Master each rating tier to elevate your contest rating.`
-                : `You are exploring ${selectedPlatform === 'codechef' ? activeCodechefKingdom.name : activeLeetcodeKingdom.name}. Conquer all 25 kingdoms in sequential mastery.`}
+                : `You are exploring ${selectedPlatform === 'codechef' ? activeCodechefKingdom.name : activeLeetcodeKingdom.name}. Master all 25 learning areas in sequential progression.`}
             </p>
           </div>
 

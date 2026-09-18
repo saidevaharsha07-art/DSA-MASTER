@@ -10,6 +10,16 @@ export const CurriculumRepository = {
   getAllKingdoms: (): KingdomModel[] => ALL_KINGDOMS,
   getKingdomBySlug: (slug: string): KingdomModel | undefined => ALL_KINGDOMS.find(k => k.categorySlug === slug || k.slug === slug),
 
+  /**
+   * Returns the legacy fantasy Kingdom name for a given categorySlug.
+   * For backwards-compatibility and migration documentation only.
+   * NEVER display this to learners — use getCategoryBySlug(slug)?.title instead.
+   */
+  getLegacyKingdomTitle: (categorySlug: string): string | undefined => {
+    const cat = ALL_CATEGORIES.find(c => c.slug === categorySlug);
+    return cat?.kingdomTitle;
+  },
+
   // Patterns
   getAllPatterns: (): PatternModel[] => ALL_PATTERNS,
   getPatternBySlug: (slug: string): PatternModel | undefined => ALL_PATTERNS.find(p => p.slug === slug || p.id === slug),

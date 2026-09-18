@@ -45,7 +45,7 @@ export class AdaptiveRoadmapService {
     {
       id: 'arrays-hashing',
       title: 'Arrays & Hashing',
-      slug: 'beginnings',
+      slug: 'basic-arrays',
       category: 'Fundamentals',
       tier: 'Beginner',
       order: 1,
@@ -501,7 +501,7 @@ export class AdaptiveRoadmapService {
     let nextActionType: NextActionType = targetNode.recommendedAction;
     let urgency: 'Immediate' | 'Recommended' | 'Optional' = targetNode.status === 'NEEDS_REVIEW' ? 'Immediate' : 'Recommended';
     let actionReason = targetNode.statusReason;
-    let actionUrl = `/practice?topic=${encodeURIComponent(targetNode.title)}`;
+    let actionUrl = `/practice?area=${encodeURIComponent(targetNode.slug || targetNode.id)}`;
 
     if (nextActionType === 'INTERVIEW') {
       actionUrl = '/interview';
@@ -558,7 +558,7 @@ export class AdaptiveRoadmapService {
           blockerType: 'MISSING_PREREQUISITE',
           explanation: t.blockerReason,
           unlockAction: t.unlockRequirement,
-          unlockUrl: `/practice?topic=${encodeURIComponent(topicNodesMap.get(t.prerequisites[0])?.title || 'Arrays & Hashing')}`,
+          unlockUrl: `/practice?area=${encodeURIComponent(topicNodesMap.get(t.prerequisites[0])?.slug || topicNodesMap.get(t.prerequisites[0])?.id || 'basic-arrays')}`,
         });
       } else if (t.status === 'NEEDS_REVIEW') {
         blockers.push({
@@ -568,7 +568,7 @@ export class AdaptiveRoadmapService {
           blockerType: 'REPEATED_MISTAKE_PATTERN',
           explanation: `Struggles detected on ${t.title} (${t.evidence.failedAttemptsCount} failed attempts).`,
           unlockAction: 'Solve 2 foundational problems without hints or run a revision drill.',
-          unlockUrl: `/practice?topic=${encodeURIComponent(t.title)}`,
+          unlockUrl: `/practice?area=${encodeURIComponent(t.slug || t.id)}`,
         });
       }
     });
@@ -586,7 +586,7 @@ export class AdaptiveRoadmapService {
       let estMins = 25;
       let diff: 'Easy' | 'Medium' | 'Hard' = 'Easy';
       let reason = `Targeted practice on ${topic.title}.`;
-      let url = `/practice?topic=${encodeURIComponent(topic.title)}`;
+      let url = `/practice?area=${encodeURIComponent(topic.slug || topic.id)}`;
 
       if (dayNum === 1) {
         action = 'LEARN';
@@ -615,7 +615,7 @@ export class AdaptiveRoadmapService {
         topic = secondaryTopic;
         diff = 'Medium';
         reason = `Cross-train on ${secondaryTopic.title}.`;
-        url = `/practice?topic=${encodeURIComponent(secondaryTopic.title)}`;
+        url = `/practice?area=${encodeURIComponent(secondaryTopic.slug || secondaryTopic.id)}`;
       } else if (dayNum === 6) {
         action = 'INTERVIEW';
         topic = primaryTopic;

@@ -44,7 +44,8 @@ export const ALL_CATEGORIES: CategoryModel[] = BASE_CATEGORIES.map((cat) => {
 export const ALL_KINGDOMS: KingdomModel[] = ALL_CATEGORIES.map((cat, idx) => ({
   id: `kingdom-${idx + 1}`,
   slug: cat.slug,
-  title: cat.kingdomTitle,
+  /** Display title is now the DSA concept name (e.g. "Arrays") — kingdom fantasy names removed. */
+  title: cat.title,
   categoryTitle: cat.title,
   categorySlug: cat.slug,
   description: cat.description,

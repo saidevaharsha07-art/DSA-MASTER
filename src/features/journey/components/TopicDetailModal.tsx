@@ -226,7 +226,7 @@ Please explain how I can address my weak areas in this topic and guide me throug
           </Link>
 
           <Link
-            href={`/practice?topic=${encodeURIComponent(topic.title)}`}
+            href={`/practice?area=${encodeURIComponent(topic.slug || topic.id)}`}
             className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs text-white bg-pink-600 hover:bg-pink-700 transition-all flex items-center justify-center gap-1.5 shadow-md"
           >
             Practice {topic.title} <ArrowRight size={14} />

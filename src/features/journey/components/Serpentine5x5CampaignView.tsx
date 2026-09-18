@@ -627,7 +627,7 @@ export function Serpentine5x5CampaignView({ onSwitchLayout }: { onSwitchLayout?:
             THE ALGORITHMIC JOURNEY (5 × 5 SERPENTINE CAMPAIGN MAP)
           </h1>
           <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.06em' }}>
-            ALL 25 KINGDOMS VISIBLE AT A GLANCE • DYNAMIC IMAGE LOAD FROM /assets/journey/kingdoms/
+            ALL 25 LEARNING AREAS VISIBLE AT A GLANCE • DYNAMIC IMAGE LOAD FROM /assets/journey/kingdoms/
           </span>
         </div>
 

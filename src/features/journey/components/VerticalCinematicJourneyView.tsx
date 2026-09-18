@@ -82,7 +82,7 @@ export function VerticalCinematicJourneyView() {
     );
   }, [allProblems]);
 
-  const leetcodeKingdoms = useMemo(() => {
+  const leetcodeAreas = useMemo(() => {
     return allCategories.map((cat, idx) => {
       const catProblems = leetcodeProblems.filter(
         (p) => p.categorySlug === cat.slug || p.categoryId === cat.id || p.categoryTitle === cat.title
@@ -95,7 +95,8 @@ export function VerticalCinematicJourneyView() {
       return {
         id: idx + 1,
         slug: cat.slug,
-        title: cat.kingdomTitle || `Kingdom of ${cat.title}`,
+        /** DSA concept name (e.g. "Arrays") — no Kingdom fantasy names */
+        title: cat.title,
         topic: cat.title,
         description: cat.description,
         solvedCount,
@@ -104,10 +105,13 @@ export function VerticalCinematicJourneyView() {
         isCompleted,
         xpReward: cat.totalXp || 500 + idx * 50,
         difficulty: idx < 6 ? 'Novice' : idx < 14 ? 'Apprentice' : idx < 21 ? 'Adept' : 'Master',
-        url: `/practice/${cat.slug}`,
+        url: `/practice?area=${cat.slug}`,
       };
     });
   }, [allCategories, leetcodeProblems, canonicalSolvedSet, refreshKey]);
+
+  // Keep legacy name for internal use only
+  const leetcodeKingdoms = leetcodeAreas;
 
   const lcTotalSolved = leetcodeKingdoms.reduce((sum, k) => sum + k.solvedCount, 0);
   const lcTotalProblems = leetcodeProblems.length;
@@ -118,14 +122,13 @@ export function VerticalCinematicJourneyView() {
     return allProblems.filter((p) => p.url?.includes('codechef.com'));
   }, [allProblems]);
 
-  const codechefKingdoms = useMemo(() => {
+  const codechefAreas = useMemo(() => {
     return allCategories.map((cat, idx) => {
       const catProblems = codechefProblems.filter(
         (p) =>
           p.categorySlug === cat.slug ||
           p.categoryId === cat.id ||
-          p.categoryTitle === cat.title ||
-          p.kingdomTitle === cat.kingdomTitle
+          p.categoryTitle === cat.title
       );
       const solvedCount = catProblems.filter((p) => isProblemSolved(p)).length;
       const totalCount = catProblems.length;
@@ -135,7 +138,8 @@ export function VerticalCinematicJourneyView() {
       return {
         id: idx + 1,
         slug: cat.slug,
-        title: cat.kingdomTitle || `Kingdom of ${cat.title}`,
+        /** DSA concept name (e.g. "Prefix Sum") — no Kingdom fantasy names */
+        title: cat.title,
         topic: cat.title,
         description: cat.description,
         solvedCount,
@@ -144,10 +148,13 @@ export function VerticalCinematicJourneyView() {
         isCompleted,
         xpReward: 600 + idx * 40,
         difficulty: idx < 6 ? 'Novice' : idx < 14 ? 'Apprentice' : idx < 21 ? 'Adept' : 'Master',
-        url: `/practice/codechef?kingdom=${cat.slug}`,
+        url: `/practice?platform=codechef&area=${cat.slug}`,
       };
     });
   }, [allCategories, codechefProblems, canonicalSolvedSet, refreshKey]);
+
+  // Keep legacy name for internal use only
+  const codechefKingdoms = codechefAreas;
 
   const ccTotalSolved = codechefKingdoms.reduce((sum, k) => sum + k.solvedCount, 0);
   const ccTotalProblems = codechefProblems.length;
@@ -468,7 +475,7 @@ export function VerticalCinematicJourneyView() {
                       border: '1px solid rgba(16, 185, 129, 0.3)',
                     }}
                   >
-                    25 KINGDOMS
+                    25 LEARNING AREAS
                   </span>
                 </div>
                 <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>
@@ -525,6 +532,7 @@ export function VerticalCinematicJourneyView() {
               <CurriculumCard
                 key={k.slug}
                 id={k.id}
+                slug={k.slug}
                 title={k.title}
                 topic={k.topic}
                 description={k.description}
@@ -536,7 +544,7 @@ export function VerticalCinematicJourneyView() {
                 xpReward={k.xpReward}
                 accentColor="#10B981"
                 actionUrl={k.url}
-                actionText="Enter Realm >"
+                actionText="Practice Area ›"
               />
             ))}
           </div>
@@ -595,7 +603,7 @@ export function VerticalCinematicJourneyView() {
                       border: '1px solid rgba(249, 115, 22, 0.3)',
                     }}
                   >
-                    25 REALMS
+                    25 LEARNING AREAS
                   </span>
                 </div>
                 <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: 'var(--text-secondary)' }}>
@@ -652,6 +660,7 @@ export function VerticalCinematicJourneyView() {
               <CurriculumCard
                 key={`cc-${k.slug}`}
                 id={k.id}
+                slug={k.slug}
                 title={k.title}
                 topic={k.topic}
                 description={k.description}
@@ -663,7 +672,7 @@ export function VerticalCinematicJourneyView() {
                 xpReward={k.xpReward}
                 accentColor="#F97316"
                 actionUrl={k.url}
-                actionText="Enter Realm >"
+                actionText="Practice Area ›"
               />
             ))}
           </div>
@@ -917,6 +926,7 @@ export function VerticalCinematicJourneyView() {
 // ── REUSABLE CURRICULUM CARD COMPONENT (LEETCODE / CODECHEF) ───────────
 interface CurriculumCardProps {
   id: number;
+  slug?: string;
   title: string;
   topic: string;
   description: string;
@@ -933,6 +943,7 @@ interface CurriculumCardProps {
 
 function CurriculumCard({
   id,
+  slug,
   title,
   topic,
   description,
@@ -994,7 +1005,7 @@ function CurriculumCard({
               textTransform: 'uppercase',
             }}
           >
-            REALM #{id} • {topic}
+            AREA #{id} • {topic}
           </span>
 
           <span
@@ -1016,7 +1027,7 @@ function CurriculumCard({
           </span>
         </div>
 
-        {/* Kingdom Title & Description */}
+        {/* Learning Area Title & Description */}
         <h3
           style={{
             margin: '0 0 6px 0',
@@ -1027,7 +1038,20 @@ function CurriculumCard({
             lineHeight: 1.2,
           }}
         >
-          {title}
+          {slug ? (
+            <Link
+              href={`/journey/${slug}`}
+              style={{
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+              className="hover:underline"
+            >
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
         </h3>
         <p
           style={{

@@ -36,6 +36,7 @@ export interface ProblemModel {
   patternSlug: string;
   patternTitle: string;
   questTitle: string;
+  /** @deprecated Use categoryTitle for learner-facing display. Kingdom names replaced by DSA concept names. */
   kingdomTitle: string;
   bruteForceIdea?: string;
   optimalIdea?: string;
@@ -53,6 +54,7 @@ export interface PatternModel {
   categoryId: string;
   categorySlug: string;
   categoryTitle: string;
+  /** @deprecated Use categoryTitle for learner-facing display. Kingdom names replaced by DSA concept names. */
   kingdomTitle: string;
   questTitle: string;
   order: number;
@@ -77,6 +79,7 @@ export interface CategoryModel {
   id: string;
   slug: string;
   title: string;
+  /** @deprecated Use title for learner-facing display. Kingdom names replaced by DSA concept names. */
   kingdomTitle: string;
   description: string;
   order: number;

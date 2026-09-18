@@ -105,7 +105,7 @@ export function LearnRoadmapView() {
         number: idx + 1,
         slug: cat.slug,
         title: cat.title,
-        kingdomTitle: cat.kingdomTitle || `Kingdom of ${cat.title}`,
+        kingdomTitle: cat.title,
         description: cat.description,
         patternsCount: cat.patternIds?.length || 4,
         solvedCount: solved,
@@ -114,7 +114,7 @@ export function LearnRoadmapView() {
         isCompleted,
         isCurrent,
         difficulty: idx < 6 ? 'Novice' : idx < 14 ? 'Intermediate' : idx < 21 ? 'Advanced' : 'Expert',
-        url: idx === 0 ? '/learn/beginnings' : `/practice/${cat.slug}`,
+        url: idx === 0 ? '/learn/beginnings' : `/practice?area=${cat.slug}`,
       };
     });
   }, [allCategories, leetcodeProblems, canonicalSolvedSet, refreshKey]);
@@ -151,7 +151,7 @@ export function LearnRoadmapView() {
         number: idx + 1,
         slug: cat.slug,
         title: cat.title,
-        kingdomTitle: cat.kingdomTitle || `Kingdom of ${cat.title}`,
+        kingdomTitle: cat.title,
         description: cat.description,
         patternsCount: cat.patternIds?.length || 4,
         solvedCount: solved,
@@ -160,7 +160,7 @@ export function LearnRoadmapView() {
         isCompleted,
         isCurrent,
         difficulty: idx < 6 ? '1-Star Novice' : idx < 14 ? '2-Star Practice' : idx < 21 ? '3-Star Expert' : '4-Star Master',
-        url: `/practice/codechef?kingdom=${cat.slug}`,
+        url: `/practice?platform=codechef&area=${cat.slug}`,
       };
     });
   }, [allCategories, codechefProblems, canonicalSolvedSet, refreshKey]);
