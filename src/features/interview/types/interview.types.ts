@@ -192,7 +192,7 @@ export interface InterviewProgressSummary {
 }
 
 // ==================================================
-// PHASE 12 — INTERVIEW ARENA LIVE MODELS
+// PHASE 12 & INTERVIEW ARENA 2.0 LIVE MODELS
 // ==================================================
 
 export type InterviewTopicType =
@@ -200,20 +200,86 @@ export type InterviewTopicType =
   | 'Arrays & Hashing'
   | 'Trees & Graphs'
   | 'Dynamic Programming'
-  | 'Mixed Patterns';
+  | 'Mixed Patterns'
+  | 'Company Style'
+  | 'Topic Focused';
+
+export type InterviewSimulatorMode =
+  | 'quick'
+  | '30m'
+  | '45m'
+  | '60m'
+  | 'custom'
+  | 'topic'
+  | 'company'
+  | 'mixed';
 
 export type InterviewArenaDifficulty = 'Easy' | 'Medium' | 'Hard' | 'Mixed';
-export type InterviewDurationMinutes = 20 | 30 | 45 | 60;
-export type InterviewProblemCount = 1 | 2 | 3 | 4;
+export type InterviewDurationMinutes = 15 | 20 | 30 | 45 | 60 | 90;
+export type InterviewProblemCount = 1 | 2 | 3 | 4 | 5;
 export type InterviewLanguage = 'java' | 'python' | 'cpp' | 'javascript' | 'typescript';
 
+export type InterviewReadinessLevel =
+  | 'Building Evidence'
+  | 'Developing'
+  | 'Strong Evidence'
+  | 'Needs Practice';
+
+export interface InterviewReadinessData {
+  readonly level: InterviewReadinessLevel;
+  readonly headline?: string;
+  readonly description?: string;
+  readonly totalSessionsCompleted?: number;
+  readonly totalCompletedSessions: number;
+  readonly overallAccuracy?: number;
+  readonly historicalAccuracyPercent: number;
+  readonly confidenceScore: number;
+  readonly speedPacingScore: number;
+  readonly averageTimePerProblemMinutes: number;
+  readonly patternCoverageCount: number;
+  readonly strongestAreas: string[];
+  readonly weakestAreas: string[];
+  readonly recommendedFocus: string;
+  readonly recommendedSession: {
+    readonly mode: InterviewSimulatorMode;
+    readonly durationMinutes: InterviewDurationMinutes;
+    readonly problemCount: InterviewProblemCount;
+    readonly difficulty: InterviewArenaDifficulty;
+    readonly targetArea?: string;
+    readonly reason: string;
+    readonly title: string;
+  };
+  readonly areasWithEvidence?: ReadonlyArray<{
+    readonly slug: string;
+    readonly title: string;
+    readonly solvedCount: number;
+    readonly accuracy: number;
+  }>;
+  readonly areasNeedingPractice?: ReadonlyArray<{
+    readonly slug: string;
+    readonly title: string;
+    readonly reason: string;
+  }>;
+  readonly patternsMissed?: ReadonlyArray<{
+    readonly slug: string;
+    readonly title: string;
+    readonly failCount: number;
+  }>;
+  readonly recentPerformanceConsistency?: number; // 0-100
+}
+
 export interface InterviewConfig {
-  type: InterviewTopicType;
+  mode?: InterviewSimulatorMode;
+  type?: InterviewTopicType | string;
   difficulty: InterviewArenaDifficulty;
-  durationMinutes: InterviewDurationMinutes;
-  problemCount: InterviewProblemCount;
+  durationMinutes: number;
+  problemCount: number;
   language: InterviewLanguage;
   useWeakness: boolean;
+  targetCompany?: string;
+  targetArea?: string;
+  targetSubtopic?: string;
+  targetPattern?: string;
 }
 
 export interface InterviewArenaProblemAttempt {
@@ -221,7 +287,11 @@ export interface InterviewArenaProblemAttempt {
   title: string;
   difficulty: string;
   pattern: string;
+  patternSlug?: string;
+  areaSlug?: string;
+  subtopicSlug?: string;
   categorySlug: string;
+  categoryTitle?: string;
   description: string;
   examples: Array<{ input: string; output: string; explanation?: string }>;
   constraints: string[];
@@ -238,6 +308,28 @@ export interface InterviewArenaProblemAttempt {
   memoryMb?: number;
   testcasesPassed?: number;
   totalTestcases?: number;
+
+  // Thinking / Explanation Phase (Requirement 8)
+  approachNotes?: string;
+  timeComplexityEstimate?: string;
+  spaceComplexityEstimate?: string;
+  identifiedEdgeCases?: string;
+
+  // Interviewer Guidance & Tracking (Requirement 7)
+  hintsUsedCount: number;
+  guidanceChecksCompleted: string[];
+  companyTags: string[];
+}
+
+export interface PatternEncounterRecord {
+  readonly patternSlug: string;
+  readonly patternTitle?: string;
+  readonly patternName?: string;
+  readonly areaSlug?: string;
+  readonly subtopicSlug?: string;
+  readonly areaTitle?: string;
+  readonly solved?: boolean;
+  readonly attempts?: number;
 }
 
 export interface InterviewArenaReport {
@@ -245,38 +337,74 @@ export interface InterviewArenaReport {
   sessionId: string;
   userId: string;
   date: string;
-  interviewType: InterviewTopicType;
-  difficulty: InterviewArenaDifficulty;
+  mode?: InterviewSimulatorMode;
+  interviewType: InterviewTopicType | string;
+  difficulty: InterviewArenaDifficulty | string;
   durationSeconds: number;
   timeUsedSeconds: number;
+  status?: 'completed' | 'expired';
   overallScore: number;
-  grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
+  grade?: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F' | string;
   verdict: string;
+
+  // Factual Performance Breakdown (Requirement 10)
+  problemsAttempted: number;
+  problemsSolved: number;
+  accuracyPercent: number;
+  averageTimePerProblemMinutes?: number;
+  averageTimePerProblemSeconds?: number;
+  failedAttemptsCount: number;
+  hintsUsedCount: number;
+  patternsEncountered: PatternEncounterRecord[];
+  areasEncountered: string[];
+  readinessState: InterviewReadinessLevel;
+
   metrics: {
     accuracy: number; // 0-100
-    problemSolving: number; // 0-100
+    problemSolving?: number; // 0-100
     timeManagement: number; // 0-100
     patternRecognition: number; // 0-100
     consistency: number; // 0-100
+    codeQuality?: number;
   };
-  problemBreakdown: Array<{
+
+  problems: InterviewArenaProblemAttempt[];
+
+  problemBreakdown?: Array<{
     problemId: string;
     title: string;
     difficulty: string;
     pattern: string;
+    patternSlug?: string;
+    categorySlug?: string;
     result: 'Passed' | 'Incomplete' | 'Failed';
     attempts: number;
     timeSpentMinutes: number;
     testcasesPassed: number;
     totalTestcases: number;
+    submittedCode?: string;
+    language?: InterviewLanguage;
+    approachNotes?: string;
   }>;
-  whatWentWell: string[];
-  whatNeedsWork: string[];
-  recommendedNextSteps: Array<{
+
+  whatWentWell?: string[];
+  whatNeedsWork?: string[];
+  strengths?: string[];
+  weaknesses?: string[];
+  actionItems?: string[];
+  recommendedNextSteps?: Array<{
     title: string;
     type: 'practice' | 'revision';
     url: string;
     reason: string;
+  }>;
+  recommendedPracticePatterns?: string[];
+  recommendedPracticeProblems?: Array<{
+    id: string;
+    title: string;
+    difficulty: string;
+    pattern: string;
+    categorySlug: string;
   }>;
   mentorQueryContext: string;
 }
@@ -288,6 +416,10 @@ export interface InterviewArenaSession {
   startedAt: string;
   expiresAt: string;
   durationSeconds: number;
+  isPaused?: boolean;
+  pausedAt?: string;
+  remainingSecondsAtPause?: number;
+  totalPausedSeconds?: number;
   problems: InterviewArenaProblemAttempt[];
   activeProblemIndex: number;
   status: 'in_progress' | 'completed' | 'expired';
@@ -299,13 +431,16 @@ export interface InterviewHistoryRecord {
   id: string;
   userId: string;
   date: string;
+  mode?: InterviewSimulatorMode;
   type: InterviewTopicType;
   difficulty: InterviewArenaDifficulty;
   score: number;
-  grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
+  grade?: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F';
   durationMinutes: number;
   timeUsedMinutes: number;
   problemsCompleted: number;
   totalProblems: number;
+  accuracy?: number;
+  recurringPatterns?: string[];
   report: InterviewArenaReport;
 }

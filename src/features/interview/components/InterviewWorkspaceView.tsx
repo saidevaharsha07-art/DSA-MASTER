@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Timer,
   Play,
+  Pause,
   CheckCircle2,
   AlertCircle,
   XCircle,
@@ -25,6 +26,12 @@ import {
   Maximize2,
   Minimize2,
   HelpCircle,
+  Eye,
+  EyeOff,
+  Brain,
+  ListChecks,
+  CheckSquare,
+  Square,
 } from 'lucide-react';
 import {
   InterviewArenaSession,
@@ -45,6 +52,51 @@ const Editor = dynamic(() => import('@monaco-editor/react'), {
   ),
 });
 
+const INTERVIEW_GUIDANCE_MILESTONES = [
+  {
+    id: 'clarify',
+    title: '1. Clarify Constraints & I/O',
+    desc: 'Verify input types, bounds, return shape, duplicates, and empty/null scenarios with the interviewer.',
+  },
+  {
+    id: 'verbalize',
+    title: '2. Verbalize Naive vs Optimal Approach',
+    desc: 'Explain the straightforward brute force approach first, then explain the pattern intuition for optimal solution.',
+  },
+  {
+    id: 'complexity',
+    title: '3. State Big-O Bounds Upfront',
+    desc: 'State target Time and Space complexity before writing code to validate algorithmic alignment.',
+  },
+  {
+    id: 'edge_cases',
+    title: '4. Brainstorm Critical Edge Cases',
+    desc: 'List single-element, sorted/reverse, duplicates, negative numbers, and boundary capacity cases.',
+  },
+  {
+    id: 'dry_run',
+    title: '5. Dry-Run & Clean Code',
+    desc: 'Manually trace step-by-step through a concrete example before running tests.',
+  },
+];
+
+const TIME_COMPLEXITY_OPTIONS = [
+  'O(1)',
+  'O(log N)',
+  'O(N)',
+  'O(N log N)',
+  'O(N^2)',
+  'O(2^N)',
+  'O(N!)',
+];
+
+const SPACE_COMPLEXITY_OPTIONS = [
+  'O(1)',
+  'O(log N)',
+  'O(N)',
+  'O(N^2)',
+];
+
 interface InterviewWorkspaceViewProps {
   isLight: boolean;
   session: InterviewArenaSession;
@@ -61,13 +113,21 @@ export function InterviewWorkspaceView({
   onSessionUpdate,
 }: InterviewWorkspaceViewProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [mobileTab, setMobileTab] = useState<'problem' | 'editor'>('editor');
+  const [leftTab, setLeftTab] = useState<'specs' | 'thinking' | 'guidance'>('specs');
+  const [mobileTab, setMobileTab] = useState<'specs' | 'thinking' | 'guidance' | 'editor' | 'console'>('editor');
+
+  const [isPaused, setIsPaused] = useState<boolean>(session.isPaused || false);
 
   const [remainingSeconds, setRemainingSeconds] = useState<number>(() => {
+    if (session.remainingSecondsAtPause !== undefined && session.isPaused) {
+      return session.remainingSecondsAtPause;
+    }
     const expires = new Date(session.expiresAt).getTime();
     const now = Date.now();
     return Math.max(0, Math.round((expires - now) / 1000));
   });
+
+  const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
 
   const [currentCode, setCurrentCode] = useState<string>(
     session.problems[0]?.userCode || session.problems[0]?.starterCode || ''
@@ -75,6 +135,15 @@ export function InterviewWorkspaceView({
   const [currentLanguage, setCurrentLanguage] = useState<InterviewLanguage>(
     session.problems[0]?.language || session.config.language || 'javascript'
   );
+
+  // Thinking notes states
+  const [approachNotes, setApproachNotes] = useState<string>(session.problems[0]?.approachNotes || '');
+  const [timeComplexity, setTimeComplexity] = useState<string>(session.problems[0]?.timeComplexityEstimate || '');
+  const [spaceComplexity, setSpaceComplexity] = useState<string>(session.problems[0]?.spaceComplexityEstimate || '');
+  const [edgeCases, setEdgeCases] = useState<string>(session.problems[0]?.identifiedEdgeCases || '');
+  const [notesSavedIndicator, setNotesSavedIndicator] = useState<boolean>(false);
+
+  const [revealedPattern, setRevealedPattern] = useState<boolean>(false);
 
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -97,12 +166,17 @@ export function InterviewWorkspaceView({
 
   const currentProblem: InterviewArenaProblemAttempt = session.problems[activeIndex] || session.problems[0];
 
-  // Sync code state when switching active problem
+  // Sync state when switching active problem
   useEffect(() => {
     const prob = session.problems[activeIndex];
     if (prob) {
       setCurrentCode(prob.userCode);
-      setCurrentLanguage(prob.language || session.config.language);
+      setCurrentLanguage(prob.language || session.config.language || 'javascript');
+      setApproachNotes(prob.approachNotes || '');
+      setTimeComplexity(prob.timeComplexityEstimate || '');
+      setSpaceComplexity(prob.spaceComplexityEstimate || '');
+      setEdgeCases(prob.identifiedEdgeCases || '');
+      setRevealedPattern(false);
       setExecutionOutput(
         prob.lastVerdict
           ? {
@@ -119,9 +193,12 @@ export function InterviewWorkspaceView({
     }
   }, [activeIndex, session.problems, session.config.language]);
 
-  // Real countdown timer with safe auto-expiration
+  // Real countdown timer with pause support & auto-expiration
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
+      setElapsedSeconds((prev) => prev + 1);
       setRemainingSeconds((prev) => {
         if (prev <= 1) {
           clearInterval(interval);
@@ -136,7 +213,7 @@ export function InterviewWorkspaceView({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [onFinishInterview]);
+  }, [isPaused, onFinishInterview]);
 
   // Format Timer string MM:SS
   const formatTime = (seconds: number) => {
@@ -153,11 +230,63 @@ export function InterviewWorkspaceView({
       ? 'warning'
       : 'normal';
 
+  // Toggle Pause
+  const handleTogglePause = () => {
+    if (isPaused) {
+      const resumed = InterviewArenaService.resumeSession(session.id, userId);
+      if (resumed) {
+        setIsPaused(false);
+        onSessionUpdate(resumed);
+      }
+    } else {
+      const paused = InterviewArenaService.pauseSession(session.id, userId);
+      if (paused) {
+        setIsPaused(true);
+        onSessionUpdate(paused);
+      }
+    }
+  };
+
   // Handle Code Change
   const handleCodeChange = (newCode: string | undefined) => {
     const val = newCode || '';
     setCurrentCode(val);
     InterviewArenaService.updateProblemCode(session.id, activeIndex, val, currentLanguage);
+  };
+
+  // Handle Notes change & auto-save
+  const handleSaveNotes = (
+    notes: string,
+    timeComp: string,
+    spaceComp: string,
+    cases: string
+  ) => {
+    InterviewArenaService.updateProblemNotes(
+      session.id,
+      activeIndex,
+      {
+        approachNotes: notes,
+        timeComplexityEstimate: timeComp,
+        spaceComplexityEstimate: spaceComp,
+        identifiedEdgeCases: cases,
+      },
+      userId
+    );
+    setNotesSavedIndicator(true);
+    setTimeout(() => setNotesSavedIndicator(false), 1500);
+  };
+
+  // Handle Guidance Check toggle
+  const handleToggleGuidance = (milestoneId: string) => {
+    const updated = InterviewArenaService.toggleGuidanceCheck(
+      session.id,
+      activeIndex,
+      milestoneId,
+      userId
+    );
+    if (updated) {
+      onSessionUpdate(updated);
+    }
   };
 
   // Handle Language Change
@@ -180,9 +309,15 @@ export function InterviewWorkspaceView({
     setShowResetConfirm(false);
   };
 
+  // Handle Reveal Pattern Hint
+  const handleRevealPattern = () => {
+    setRevealedPattern(true);
+    InterviewArenaService.recordHintUsed(session.id, activeIndex, userId);
+  };
+
   // Handle Run Code (Sample testcases)
   const handleRunCode = async () => {
-    if (isRunning || isSubmitting) return;
+    if (isRunning || isSubmitting || isPaused) return;
     setIsRunning(true);
     setExecutionOutput(null);
     try {
@@ -201,6 +336,9 @@ export function InterviewWorkspaceView({
         totalTestcases: res.totalTestcases,
         isSubmit: false,
       });
+      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+        setMobileTab('console');
+      }
     } catch (err: any) {
       setExecutionOutput({
         status: 'Runtime Error',
@@ -214,7 +352,7 @@ export function InterviewWorkspaceView({
 
   // Handle Submit Code (Full evaluation)
   const handleSubmitCode = async () => {
-    if (isRunning || isSubmitting) return;
+    if (isRunning || isSubmitting || isPaused) return;
     setIsSubmitting(true);
     setExecutionOutput(null);
     try {
@@ -235,6 +373,9 @@ export function InterviewWorkspaceView({
         totalTestcases: res.totalTestcases,
         isSubmit: true,
       });
+      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+        setMobileTab('console');
+      }
     } catch (err: any) {
       setExecutionOutput({
         status: 'Runtime Error',
@@ -246,8 +387,6 @@ export function InterviewWorkspaceView({
     }
   };
 
-  const passedCount = session.problems.filter((p) => p.status === 'passed').length;
-
   // Map language to Monaco language mode
   const monacoLang =
     currentLanguage === 'cpp'
@@ -256,10 +395,22 @@ export function InterviewWorkspaceView({
       ? 'python'
       : currentLanguage === 'java'
       ? 'java'
+      : currentLanguage === 'typescript'
+      ? 'typescript'
       : 'javascript';
 
+  // Determine if pattern should be concealed
+  const isRealisticMode =
+    session.config.mode !== 'topic' && session.config.type !== 'Topic Focused';
+  const shouldConcealPattern = isRealisticMode && !revealedPattern;
+
+  const guidanceCompleted = currentProblem.guidanceChecksCompleted || [];
+
   return (
-    <div className="flex flex-col h-[calc(100vh-4.5rem)] max-w-full mx-auto overflow-hidden rounded-2xl border shadow-xl border-slate-200 dark:border-slate-800">
+    <div
+      className="flex flex-col h-[calc(100vh-4.5rem)] max-w-full mx-auto overflow-hidden rounded-2xl border shadow-xl border-slate-200 dark:border-slate-800 relative"
+      data-testid="interview-workspace-view"
+    >
       {/* 1. TOP HEADER & TIMER BAR */}
       <header
         className={`px-4 py-2.5 border-b flex flex-wrap items-center justify-between gap-3 shrink-0 ${
@@ -269,28 +420,38 @@ export function InterviewWorkspaceView({
         {/* Left: Branding & Config Metadata */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+            <span
+              className={`w-2.5 h-2.5 rounded-full ${
+                isPaused ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'
+              }`}
+            />
             <h2 className={`font-black text-xs sm:text-sm tracking-wide ${isLight ? 'text-slate-900' : 'text-white'}`}>
               INTERVIEW ARENA
             </h2>
           </div>
           <span className="hidden sm:inline text-slate-500">•</span>
           <span className="hidden sm:inline-flex text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-            {session.config.type}
+            {session.config.type || session.config.mode}
           </span>
+          {session.config.targetCompany && (
+            <span className="hidden md:inline-flex text-[11px] font-bold px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-500 dark:text-purple-400 border border-purple-500/20">
+              {session.config.targetCompany}
+            </span>
+          )}
           <span className="hidden md:inline-flex text-[11px] font-semibold px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-500 dark:text-amber-400 border border-amber-500/20">
             {session.config.difficulty}
           </span>
         </div>
 
         {/* Middle: Problem Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 max-w-full">
+        <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 max-w-full" data-testid="problem-tabs-container">
           {session.problems.map((p, idx) => {
             const isCurrent = idx === activeIndex;
             return (
               <button
                 key={p.problemId}
                 onClick={() => setActiveIndex(idx)}
+                data-testid={`problem-tab-${idx + 1}`}
                 className={`px-3 py-1 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 border shrink-0 ${
                   isCurrent
                     ? isLight
@@ -310,14 +471,33 @@ export function InterviewWorkspaceView({
           })}
         </div>
 
-        {/* Right: Real Countdown Timer & Finish Button */}
-        <div className="flex items-center gap-2.5">
+        {/* Right: Real Countdown Timer & Controls */}
+        <div className="flex items-center gap-2">
+          {/* Pause / Resume Button */}
+          <button
+            onClick={handleTogglePause}
+            data-testid="pause-resume-btn"
+            className={`p-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1 ${
+              isPaused
+                ? 'bg-amber-500/20 border-amber-500/40 text-amber-500 dark:text-amber-400'
+                : isLight
+                ? 'bg-slate-100 hover:bg-slate-200 border-slate-200 text-slate-700'
+                : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-300'
+            }`}
+            title={isPaused ? 'Resume Interview' : 'Pause Interview'}
+          >
+            {isPaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
+            <span className="hidden sm:inline">{isPaused ? 'Resume' : 'Pause'}</span>
+          </button>
+
+          {/* Timer Display */}
           <div
+            data-testid="interview-timer"
             className={`px-3 py-1 rounded-xl border flex items-center gap-1.5 font-mono font-black text-xs sm:text-sm tracking-wider transition-all ${
               timerState === 'critical'
                 ? 'bg-rose-500/20 text-rose-400 border-rose-500/40 animate-pulse ring-2 ring-rose-500/30'
                 : timerState === 'warning'
-                ? 'bg-amber-500/20 text-amber-500 dark:text-amber-400 border-amber-500/40'
+                ? 'bg-amber-500/20 text-amber-500 dark:text-amber-400 border-amber-500/40 animate-pulse'
                 : isLight
                 ? 'bg-slate-100 text-slate-800 border-slate-200'
                 : 'bg-slate-800/80 text-cyan-400 border-slate-700'
@@ -327,8 +507,10 @@ export function InterviewWorkspaceView({
             <span>{formatTime(remainingSeconds)}</span>
           </div>
 
+          {/* Finish Button */}
           <button
             onClick={() => setShowFinishConfirm(true)}
+            data-testid="finish-interview-btn"
             className="px-3 py-1.5 rounded-xl text-xs font-bold bg-rose-500/10 text-rose-500 dark:text-rose-400 border border-rose-500/20 hover:bg-rose-500/20 transition-all shrink-0"
           >
             Finish
@@ -336,151 +518,480 @@ export function InterviewWorkspaceView({
         </div>
       </header>
 
-      {/* MOBILE TAB CONTROLS (<1024px) */}
-      <div className="flex lg:hidden border-b border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 shrink-0">
+      {/* MOBILE VIEWPORT TAB SWITCHER (<1024px) */}
+      <div className="flex lg:hidden border-b border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 shrink-0 text-xs overflow-x-auto">
         <button
-          onClick={() => setMobileTab('problem')}
-          className={`flex-1 py-2 text-xs font-bold text-center border-b-2 transition-all ${
-            mobileTab === 'problem'
-              ? 'border-cyan-500 text-cyan-500 dark:text-cyan-400 bg-white dark:bg-slate-950'
-              : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+          onClick={() => setMobileTab('specs')}
+          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+            mobileTab === 'specs'
+              ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
+              : 'border-transparent text-slate-500'
           }`}
         >
-          <span className="flex items-center justify-center gap-1.5">
-            <FileText className="w-3.5 h-3.5" />
-            Problem Specs
-          </span>
+          Problem Specs
+        </button>
+        <button
+          onClick={() => setMobileTab('thinking')}
+          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+            mobileTab === 'thinking'
+              ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
+              : 'border-transparent text-slate-500'
+          }`}
+        >
+          Thinking & Notes
+        </button>
+        <button
+          onClick={() => setMobileTab('guidance')}
+          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+            mobileTab === 'guidance'
+              ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
+              : 'border-transparent text-slate-500'
+          }`}
+        >
+          Guidance ({guidanceCompleted.length}/5)
         </button>
         <button
           onClick={() => setMobileTab('editor')}
-          className={`flex-1 py-2 text-xs font-bold text-center border-b-2 transition-all ${
+          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'editor'
-              ? 'border-cyan-500 text-cyan-500 dark:text-cyan-400 bg-white dark:bg-slate-950'
-              : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+              ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
+              : 'border-transparent text-slate-500'
           }`}
         >
-          <span className="flex items-center justify-center gap-1.5">
-            <Code2 className="w-3.5 h-3.5" />
-            Editor & Console
-          </span>
+          Code Editor
+        </button>
+        <button
+          onClick={() => setMobileTab('console')}
+          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+            mobileTab === 'console'
+              ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
+              : 'border-transparent text-slate-500'
+          }`}
+        >
+          Console
         </button>
       </div>
 
       {/* 2. MAIN SPLIT WORKSPACE */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
-        {/* LEFT PANEL: PROBLEM STATEMENT & SPECS */}
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+        {/* PAUSED OVERLAY IF PAUSED (PREVENT CHEATING) */}
+        {isPaused && (
+          <div
+            data-testid="interview-paused-overlay"
+            className="absolute inset-0 z-40 bg-slate-950/80 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center space-y-4"
+          >
+            <div className="p-4 rounded-3xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
+              <Pause className="w-10 h-10" />
+            </div>
+            <h3 className="text-2xl font-black text-white">Interview Paused</h3>
+            <p className="text-xs sm:text-sm text-slate-400 max-w-md">
+              The countdown timer and editor are suspended. Resume when you are ready to continue under exam conditions.
+            </p>
+            <button
+              onClick={handleTogglePause}
+              data-testid="resume-overlay-btn"
+              className="px-6 py-2.5 rounded-xl font-black text-sm bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25 flex items-center gap-2"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              <span>Resume Interview</span>
+            </button>
+          </div>
+        )}
+
+        {/* LEFT PANEL: PROBLEM / THINKING / GUIDANCE */}
         <div
-          className={`lg:w-1/2 flex flex-col border-b lg:border-b-0 lg:border-r overflow-y-auto ${
-            mobileTab === 'problem' ? 'flex' : 'hidden lg:flex'
+          className={`lg:w-1/2 flex flex-col border-b lg:border-b-0 lg:border-r overflow-hidden ${
+            mobileTab === 'specs' || mobileTab === 'thinking' || mobileTab === 'guidance'
+              ? 'flex'
+              : 'hidden lg:flex'
           } ${isLight ? 'bg-slate-50 border-slate-200 text-slate-900' : 'bg-slate-950 border-slate-800 text-slate-100'}`}
         >
-          <div className="p-5 sm:p-6 space-y-6 max-w-2xl mx-auto w-full">
-            {/* Title & Metadata */}
-            <div className="space-y-2">
-              <div className="flex flex-wrap items-center gap-2 text-xs">
-                <span className="font-bold text-cyan-500 dark:text-cyan-400">
-                  Problem {activeIndex + 1} of {session.problems.length}
+          {/* Sub-Header Tabs (Desktop) */}
+          <div
+            className={`hidden lg:flex px-4 py-2 border-b items-center justify-between shrink-0 ${
+              isLight ? 'bg-white border-slate-200' : 'bg-slate-900/60 border-slate-800'
+            }`}
+          >
+            <div className="flex items-center gap-1 text-xs">
+              <button
+                onClick={() => setLeftTab('specs')}
+                data-testid="tab-specs"
+                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                  leftTab === 'specs'
+                    ? isLight
+                      ? 'bg-slate-200 text-slate-900'
+                      : 'bg-slate-800 text-cyan-400'
+                    : 'text-slate-500 hover:text-slate-300'
+                }`}
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Problem Specs</span>
+              </button>
+
+              <button
+                onClick={() => setLeftTab('thinking')}
+                data-testid="tab-thinking"
+                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                  leftTab === 'thinking'
+                    ? isLight
+                      ? 'bg-slate-200 text-slate-900'
+                      : 'bg-slate-800 text-cyan-400'
+                    : 'text-slate-500 hover:text-slate-300'
+                }`}
+              >
+                <Brain className="w-3.5 h-3.5" />
+                <span>Approach & Notes</span>
+                {(approachNotes || timeComplexity || edgeCases) && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                )}
+              </button>
+
+              <button
+                onClick={() => setLeftTab('guidance')}
+                data-testid="tab-guidance"
+                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                  leftTab === 'guidance'
+                    ? isLight
+                      ? 'bg-slate-200 text-slate-900'
+                      : 'bg-slate-800 text-cyan-400'
+                    : 'text-slate-500 hover:text-slate-300'
+                }`}
+              >
+                <ListChecks className="w-3.5 h-3.5" />
+                <span>Interviewer Guidance</span>
+                <span className="text-[10px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-400 font-mono">
+                  {guidanceCompleted.length}/5
                 </span>
-                <span className="text-slate-400">•</span>
-                <span
-                  className={`font-bold px-2 py-0.5 rounded text-[11px] ${
-                    currentProblem.difficulty === 'Easy'
-                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
-                      : currentProblem.difficulty === 'Hard'
-                      ? 'bg-rose-500/10 text-rose-600 dark:text-rose-400'
-                      : 'bg-amber-500/10 text-amber-600 dark:text-amber-400'
-                  }`}
-                >
-                  {currentProblem.difficulty}
-                </span>
-                <span className="text-slate-400">•</span>
-                <span className="text-slate-500 dark:text-slate-400 font-medium">{currentProblem.pattern}</span>
-              </div>
-              <h1 className={`text-xl sm:text-2xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                {currentProblem.title}
-              </h1>
+              </button>
             </div>
 
-            {/* Description */}
-            <div className={`text-xs sm:text-sm leading-relaxed whitespace-pre-wrap ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-              {currentProblem.description}
-            </div>
+            {notesSavedIndicator && (
+              <span className="text-[10px] text-emerald-400 font-bold flex items-center gap-1">
+                <Check className="w-3 h-3" /> Saved
+              </span>
+            )}
+          </div>
 
-            {/* Examples */}
-            {currentProblem.examples && currentProblem.examples.length > 0 && (
-              <div className="space-y-3">
-                <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
-                  Examples
-                </h4>
-                {currentProblem.examples.map((ex, idx) => (
-                  <div
-                    key={idx}
-                    className={`p-3.5 rounded-xl border text-xs font-mono space-y-1.5 ${
-                      isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'
-                    }`}
-                  >
-                    <div>
-                      <span className="text-cyan-500 dark:text-cyan-400 font-bold">Input:</span> {ex.input}
-                    </div>
-                    <div>
-                      <span className="text-emerald-500 dark:text-emerald-400 font-bold">Output:</span> {ex.output}
-                    </div>
-                    {ex.explanation && (
-                      <div className="text-slate-500 dark:text-slate-400 font-sans text-xs pt-1">
-                        <strong>Explanation:</strong> {ex.explanation}
+          {/* LEFT CONTENT AREA */}
+          <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-6">
+            {/* 1. PROBLEM SPECS VIEW */}
+            {(leftTab === 'specs' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'specs')) && (
+              <div className="space-y-6 max-w-2xl mx-auto w-full">
+                {/* Title & Pattern Concealment Banner */}
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center gap-2 text-xs">
+                    <span className="font-bold text-cyan-500 dark:text-cyan-400">
+                      Problem {activeIndex + 1} of {session.problems.length}
+                    </span>
+                    <span className="text-slate-400">•</span>
+                    <span
+                      className={`font-bold px-2 py-0.5 rounded text-[11px] ${
+                        currentProblem.difficulty === 'Easy'
+                          ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                          : currentProblem.difficulty === 'Hard'
+                          ? 'bg-rose-500/10 text-rose-600 dark:text-rose-400'
+                          : 'bg-amber-500/10 text-amber-600 dark:text-amber-400'
+                      }`}
+                    >
+                      {currentProblem.difficulty}
+                    </span>
+                    <span className="text-slate-400">•</span>
+
+                    {/* REALISTIC PATTERN CONCEALMENT */}
+                    {shouldConcealPattern ? (
+                      <div className="flex items-center gap-1.5" data-testid="pattern-concealed-badge">
+                        <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center gap-1">
+                          <EyeOff className="w-3 h-3" />
+                          Pattern Concealed (Realistic Mode)
+                        </span>
+                        <button
+                          onClick={handleRevealPattern}
+                          data-testid="reveal-pattern-btn"
+                          className="text-[10px] font-bold text-amber-500 hover:underline"
+                        >
+                          Reveal Hint
+                        </button>
                       </div>
+                    ) : (
+                      <span
+                        className="text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1"
+                        data-testid="revealed-pattern-tag"
+                      >
+                        <Eye className="w-3 h-3 text-cyan-400" />
+                        {currentProblem.pattern}
+                      </span>
                     )}
                   </div>
-                ))}
-              </div>
-            )}
 
-            {/* Constraints */}
-            {currentProblem.constraints && currentProblem.constraints.length > 0 && (
-              <div className="space-y-2">
-                <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
-                  Constraints
-                </h4>
-                <ul className="list-disc list-inside space-y-1 text-xs text-slate-500 dark:text-slate-400 font-mono">
-                  {currentProblem.constraints.map((c, idx) => (
-                    <li key={idx}>{c}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+                  <h1 className={`text-xl sm:text-2xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                    {currentProblem.title}
+                  </h1>
+                </div>
 
-            {/* Hints Section */}
-            {currentProblem.hints && currentProblem.hints.length > 0 && (
-              <div className="pt-2">
-                <button
-                  onClick={() => setShowHints(!showHints)}
-                  className="flex items-center gap-1.5 text-xs font-bold text-amber-500 dark:text-amber-400 hover:underline transition-colors"
-                >
-                  <Lightbulb className="w-3.5 h-3.5" />
-                  {showHints ? 'Hide Hints' : 'Need a hint?'}
-                </button>
-                {showHints && (
-                  <div
-                    className={`mt-2 p-3.5 rounded-xl border text-xs leading-relaxed space-y-1.5 ${
-                      isLight
-                        ? 'bg-amber-50/80 border-amber-200 text-amber-900'
-                        : 'bg-amber-950/20 border-amber-800/40 text-amber-300'
-                    }`}
-                  >
-                    {currentProblem.hints.map((h, i) => (
-                      <p key={i}>• {h}</p>
+                {/* Description */}
+                <div className={`text-xs sm:text-sm leading-relaxed whitespace-pre-wrap ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                  {currentProblem.description}
+                </div>
+
+                {/* Examples */}
+                {currentProblem.examples && currentProblem.examples.length > 0 && (
+                  <div className="space-y-3">
+                    <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+                      Examples
+                    </h4>
+                    {currentProblem.examples.map((ex, idx) => (
+                      <div
+                        key={idx}
+                        className={`p-3.5 rounded-xl border text-xs font-mono space-y-1.5 ${
+                          isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'
+                        }`}
+                      >
+                        <div>
+                          <span className="text-cyan-500 dark:text-cyan-400 font-bold">Input:</span> {ex.input}
+                        </div>
+                        <div>
+                          <span className="text-emerald-500 dark:text-emerald-400 font-bold">Output:</span> {ex.output}
+                        </div>
+                        {ex.explanation && (
+                          <div className="text-slate-500 dark:text-slate-400 font-sans text-xs pt-1">
+                            <strong>Explanation:</strong> {ex.explanation}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
+
+                {/* Constraints */}
+                {currentProblem.constraints && currentProblem.constraints.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+                      Constraints
+                    </h4>
+                    <ul className="list-disc list-inside space-y-1 text-xs text-slate-500 dark:text-slate-400 font-mono">
+                      {currentProblem.constraints.map((c, idx) => (
+                        <li key={idx}>{c}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Hints Section */}
+                {currentProblem.hints && currentProblem.hints.length > 0 && (
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        setShowHints(!showHints);
+                        if (!showHints) {
+                          InterviewArenaService.recordHintUsed(session.id, activeIndex, userId);
+                        }
+                      }}
+                      className="flex items-center gap-1.5 text-xs font-bold text-amber-500 dark:text-amber-400 hover:underline transition-colors"
+                    >
+                      <Lightbulb className="w-3.5 h-3.5" />
+                      {showHints ? 'Hide Hints' : 'Request Interviewer Hint'}
+                    </button>
+                    {showHints && (
+                      <div
+                        className={`mt-2 p-3.5 rounded-xl border text-xs leading-relaxed space-y-1.5 ${
+                          isLight
+                            ? 'bg-amber-50/80 border-amber-200 text-amber-900'
+                            : 'bg-amber-950/20 border-amber-800/40 text-amber-300'
+                        }`}
+                      >
+                        {currentProblem.hints.map((h, i) => (
+                          <p key={i}>• {h}</p>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* 2. APPROACH & NOTES (THINKING PHASE) VIEW */}
+            {(leftTab === 'thinking' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'thinking')) && (
+              <div className="space-y-5 max-w-2xl mx-auto w-full" data-testid="thinking-phase-container">
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className={`text-sm font-black flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                      <Brain className="w-4 h-4 text-cyan-400" />
+                      Thinking & Approach Phase
+                    </h3>
+                    <span className="text-[10px] text-slate-500">Auto-saved to session scorecard</span>
+                  </div>
+                  <p className={`text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                    Outline your mental model, Big-O bounds, and boundary edge cases before diving into implementation.
+                  </p>
+                </div>
+
+                {/* Big-O Selectors */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                      Estimated Time Complexity
+                    </label>
+                    <select
+                      value={timeComplexity}
+                      data-testid="time-complexity-select"
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        setTimeComplexity(val);
+                        handleSaveNotes(approachNotes, val, spaceComplexity, edgeCases);
+                      }}
+                      className={`w-full p-2 rounded-xl text-xs font-mono font-bold border outline-none cursor-pointer ${
+                        isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900 border-slate-700 text-cyan-400'
+                      }`}
+                    >
+                      <option value="">Select Expected Big-O Time...</option>
+                      {TIME_COMPLEXITY_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                      Estimated Space Complexity
+                    </label>
+                    <select
+                      value={spaceComplexity}
+                      data-testid="space-complexity-select"
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        setSpaceComplexity(val);
+                        handleSaveNotes(approachNotes, timeComplexity, val, edgeCases);
+                      }}
+                      className={`w-full p-2 rounded-xl text-xs font-mono font-bold border outline-none cursor-pointer ${
+                        isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900 border-slate-700 text-cyan-400'
+                      }`}
+                    >
+                      <option value="">Select Expected Big-O Space...</option>
+                      {SPACE_COMPLEXITY_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Strategy Notes Textarea */}
+                <div>
+                  <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                    Algorithmic Approach & Invariant Notes
+                  </label>
+                  <textarea
+                    value={approachNotes}
+                    data-testid="approach-notes-input"
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setApproachNotes(val);
+                      handleSaveNotes(val, timeComplexity, spaceComplexity, edgeCases);
+                    }}
+                    placeholder="e.g. Use a two-pointer window [left, right]. Expand right until duplicate found, then contract left..."
+                    rows={6}
+                    className={`w-full p-3 rounded-xl text-xs font-mono border outline-none leading-relaxed resize-y ${
+                      isLight
+                        ? 'bg-white border-slate-300 text-slate-900 placeholder:text-slate-400'
+                        : 'bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-600'
+                    }`}
+                  />
+                </div>
+
+                {/* Edge Cases Textarea */}
+                <div>
+                  <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                    Critical Edge Cases to Handle
+                  </label>
+                  <textarea
+                    value={edgeCases}
+                    data-testid="edge-cases-input"
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setEdgeCases(val);
+                      handleSaveNotes(approachNotes, timeComplexity, spaceComplexity, val);
+                    }}
+                    placeholder="e.g. Empty string, single character, all identical characters, alternating pattern..."
+                    rows={3}
+                    className={`w-full p-3 rounded-xl text-xs font-mono border outline-none leading-relaxed resize-y ${
+                      isLight
+                        ? 'bg-white border-slate-300 text-slate-900 placeholder:text-slate-400'
+                        : 'bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-600'
+                    }`}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* 3. INTERVIEWER GUIDANCE MILESTONES VIEW */}
+            {(leftTab === 'guidance' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'guidance')) && (
+              <div className="space-y-4 max-w-2xl mx-auto w-full" data-testid="interviewer-guidance-container">
+                <div>
+                  <h3 className={`text-sm font-black flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                    <ListChecks className="w-4 h-4 text-cyan-400" />
+                    Simulated Interviewer Milestones
+                  </h3>
+                  <p className={`text-xs mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                    Check off each communication milestone as you progress through this problem to mirror top-tier onsite evaluation.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  {INTERVIEW_GUIDANCE_MILESTONES.map((m) => {
+                    const isChecked = guidanceCompleted.includes(m.id);
+                    return (
+                      <div
+                        key={m.id}
+                        onClick={() => handleToggleGuidance(m.id)}
+                        data-testid={`guidance-item-${m.id}`}
+                        className={`p-3.5 rounded-2xl border cursor-pointer transition-all flex items-start gap-3 ${
+                          isChecked
+                            ? isLight
+                              ? 'bg-emerald-50/70 border-emerald-300'
+                              : 'bg-emerald-950/20 border-emerald-800/40'
+                            : isLight
+                            ? 'bg-white border-slate-200 hover:border-slate-300'
+                            : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
+                        }`}
+                      >
+                        <button
+                          type="button"
+                          className={`mt-0.5 shrink-0 ${isChecked ? 'text-emerald-500' : 'text-slate-400'}`}
+                        >
+                          {isChecked ? <CheckSquare className="w-4 h-4" /> : <Square className="w-4 h-4" />}
+                        </button>
+                        <div className="flex-1 min-w-0">
+                          <div
+                            className={`text-xs font-bold ${
+                              isChecked
+                                ? 'text-emerald-600 dark:text-emerald-400 line-through'
+                                : isLight
+                                ? 'text-slate-900'
+                                : 'text-slate-200'
+                            }`}
+                          >
+                            {m.title}
+                          </div>
+                          <div className={`text-[11px] mt-0.5 leading-relaxed ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                            {m.desc}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
         </div>
 
-        {/* RIGHT PANEL: CODE EDITOR & EXECUTION CONSOLE */}
+        {/* RIGHT PANEL: CODE EDITOR & CONSOLE */}
         <div
           className={`lg:w-1/2 flex flex-col ${
-            mobileTab === 'editor' ? 'flex' : 'hidden lg:flex'
+            mobileTab === 'editor' || mobileTab === 'console' ? 'flex' : 'hidden lg:flex'
           } ${isLight ? 'bg-white' : 'bg-slate-900'}`}
         >
           {/* Editor Header Bar */}
@@ -504,6 +1015,7 @@ export function InterviewWorkspaceView({
                 <option value="python">Python</option>
                 <option value="java">Java</option>
                 <option value="cpp">C++</option>
+                <option value="typescript">TypeScript</option>
               </select>
             </div>
 
@@ -523,7 +1035,7 @@ export function InterviewWorkspaceView({
             </div>
           </div>
 
-          {/* Monaco Editor Container with Textarea Fallback */}
+          {/* Monaco Editor Container */}
           <div className="flex-1 relative overflow-hidden min-h-[220px]">
             <Editor
               height="100%"
@@ -548,7 +1060,8 @@ export function InterviewWorkspaceView({
           {/* Execution Output Console */}
           {executionOutput && (
             <div
-              className={`max-h-48 border-t overflow-y-auto p-3.5 font-mono text-xs ${
+              data-testid="execution-console-output"
+              className={`max-h-52 border-t overflow-y-auto p-3.5 font-mono text-xs ${
                 isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950 border-slate-800'
               }`}
             >
@@ -594,148 +1107,91 @@ export function InterviewWorkspaceView({
             </div>
           )}
 
-          {/* Bottom Controls Bar */}
+          {/* Bottom Action Controls Bar */}
           <footer
             className={`px-4 py-3 border-t flex items-center justify-between shrink-0 gap-3 ${
               isLight ? 'bg-slate-100 border-slate-200' : 'bg-slate-900 border-slate-800'
             }`}
           >
-            {/* Prev / Next navigation */}
-            <div className="flex items-center gap-2">
-              <button
-                disabled={activeIndex === 0}
-                onClick={() => setActiveIndex((prev) => Math.max(0, prev - 1))}
-                className={`p-2 rounded-xl text-xs font-bold border transition-all disabled:opacity-30 disabled:cursor-not-allowed ${
-                  isLight
-                    ? 'bg-white border-slate-300 text-slate-700 hover:bg-slate-200'
-                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
-                }`}
-                title="Previous problem"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                disabled={activeIndex === session.problems.length - 1}
-                onClick={() => setActiveIndex((prev) => Math.min(session.problems.length - 1, prev + 1))}
-                className={`p-2 rounded-xl text-xs font-bold border transition-all disabled:opacity-30 disabled:cursor-not-allowed ${
-                  isLight
-                    ? 'bg-white border-slate-300 text-slate-700 hover:bg-slate-200'
-                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
-                }`}
-                title="Next problem"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
+            <div className="flex items-center gap-2 text-xs text-slate-500">
+              <span>
+                Elapsed: <strong>{formatTime(elapsedSeconds)}</strong>
+              </span>
             </div>
 
-            {/* Run & Submit Actions */}
             <div className="flex items-center gap-2.5">
               <button
-                disabled={isRunning || isSubmitting}
                 onClick={handleRunCode}
-                className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed ${
-                  isLight
-                    ? 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50'
-                    : 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
+                disabled={isRunning || isSubmitting || isPaused}
+                data-testid="run-code-btn"
+                className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all flex items-center gap-1.5 ${
+                  isRunning
+                    ? 'opacity-60 cursor-not-allowed'
+                    : isLight
+                    ? 'bg-white hover:bg-slate-100 border-slate-300 text-slate-800'
+                    : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-200'
                 }`}
               >
-                {isRunning ? (
-                  <Loader2 className="w-3.5 h-3.5 animate-spin text-cyan-400" />
-                ) : (
-                  <Play className="w-3.5 h-3.5 text-cyan-400 fill-cyan-400" />
-                )}
-                <span>{isRunning ? 'Running...' : 'Run Code'}</span>
+                {isRunning ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Play className="w-3.5 h-3.5" />}
+                <span>Run Code</span>
               </button>
 
               <button
-                disabled={isRunning || isSubmitting}
                 onClick={handleSubmitCode}
-                className="px-5 py-2 rounded-xl text-xs font-black bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all shadow-md shadow-cyan-500/20 flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isRunning || isSubmitting || isPaused}
+                data-testid="submit-code-btn"
+                className={`px-5 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+                  isSubmitting
+                    ? 'opacity-60 cursor-not-allowed bg-emerald-600 text-white'
+                    : 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-md shadow-emerald-500/20'
+                }`}
               >
-                {isSubmitting ? (
-                  <Loader2 className="w-3.5 h-3.5 animate-spin text-slate-950" />
-                ) : (
-                  <Send className="w-3.5 h-3.5" />
-                )}
-                <span>{isSubmitting ? 'Evaluating...' : 'Submit'}</span>
+                {isSubmitting ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Send className="w-3.5 h-3.5" />}
+                <span>Submit Solution</span>
               </button>
             </div>
           </footer>
         </div>
       </div>
 
-      {/* RESET CODE CONFIRMATION MODAL */}
+      {/* CONFIRM FINISH MODAL */}
       <AnimatePresence>
-        {showResetConfirm && (
-          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        {showFinishConfirm && (
+          <div
+            data-testid="finish-confirm-modal"
+            className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4"
+          >
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className={`w-full max-w-sm p-5 rounded-2xl border shadow-2xl space-y-4 ${
-                isLight ? 'bg-white border-slate-200 text-slate-900' : 'bg-slate-900 border-slate-800 text-white'
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className={`max-w-md w-full p-6 rounded-3xl border shadow-2xl space-y-4 ${
+                isLight ? 'bg-white border-slate-200' : 'bg-slate-900 border-slate-800'
               }`}
             >
-              <div className="space-y-1.5">
-                <h3 className="text-base font-bold flex items-center gap-2">
-                  <RotateCcw className="w-4 h-4 text-amber-400" />
-                  Reset Code Template?
-                </h3>
-                <p className={`text-xs ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                  This will revert the current editor code back to the default starter template for {currentProblem.title}.
-                </p>
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-2xl bg-rose-500/20 text-rose-500">
+                  <AlertTriangle className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className={`font-black text-base ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                    Finish Interview Round?
+                  </h3>
+                  <p className="text-xs text-slate-500">
+                    Remaining time: {formatTime(remainingSeconds)}
+                  </p>
+                </div>
               </div>
+
+              <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
+                Are you ready to submit your code and generate your performance scorecard? All completed problems and thinking notes will be evaluated immediately.
+              </p>
 
               <div className="flex items-center justify-end gap-2.5 pt-2">
                 <button
-                  onClick={() => setShowResetConfirm(false)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold border ${
-                    isLight ? 'bg-slate-100 border-slate-300 text-slate-700' : 'bg-slate-800 border-slate-700 text-slate-300'
-                  }`}
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleResetCode}
-                  className="px-4 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 hover:bg-amber-400 transition-all"
-                >
-                  Reset Code
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
-      {/* FINISH INTERVIEW CONFIRMATION MODAL */}
-      <AnimatePresence>
-        {showFinishConfirm && (
-          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className={`w-full max-w-md p-6 rounded-2xl border shadow-2xl space-y-5 ${
-                isLight ? 'bg-white border-slate-200 text-slate-900' : 'bg-slate-900 border-slate-800 text-white'
-              }`}
-            >
-              <div className="space-y-2">
-                <h3 className="text-lg font-black flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-amber-400" />
-                  Finish Interview Session?
-                </h3>
-                <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                  You have completed <strong>{passedCount} of {session.problems.length}</strong> problems with{' '}
-                  <strong>{formatTime(remainingSeconds)}</strong> remaining on the clock.
-                  Finishing now will calculate your final evaluation scorecard and diagnostic report.
-                </p>
-              </div>
-
-              <div className="flex items-center justify-end gap-3 pt-2">
-                <button
                   onClick={() => setShowFinishConfirm(false)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold border ${
-                    isLight ? 'bg-slate-100 border-slate-300 text-slate-700' : 'bg-slate-800 border-slate-700 text-slate-300'
+                    isLight ? 'border-slate-300 text-slate-700' : 'border-slate-700 text-slate-300'
                   }`}
                 >
                   Continue Interview
@@ -745,9 +1201,59 @@ export function InterviewWorkspaceView({
                     setShowFinishConfirm(false);
                     onFinishInterview('completed');
                   }}
-                  className="px-5 py-2 rounded-xl text-xs font-black bg-rose-500 text-white hover:bg-rose-400 transition-all shadow-md shadow-rose-500/20"
+                  data-testid="confirm-finish-btn"
+                  className="px-5 py-2 rounded-xl text-xs font-black bg-rose-500 hover:bg-rose-400 text-white shadow-md shadow-rose-500/20"
                 >
-                  Yes, Finish & Generate Report
+                  Finish & Generate Report
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* CONFIRM RESET MODAL */}
+      <AnimatePresence>
+        {showResetConfirm && (
+          <div className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className={`max-w-md w-full p-6 rounded-3xl border shadow-2xl space-y-4 ${
+                isLight ? 'bg-white border-slate-200' : 'bg-slate-900 border-slate-800'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-2xl bg-amber-500/20 text-amber-500">
+                  <RotateCcw className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className={`font-black text-base ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                    Reset Code to Template?
+                  </h3>
+                  <p className="text-xs text-slate-500">Problem {activeIndex + 1}</p>
+                </div>
+              </div>
+
+              <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
+                Your current code for this problem will be cleared and replaced with the clean starter template.
+              </p>
+
+              <div className="flex items-center justify-end gap-2.5 pt-2">
+                <button
+                  onClick={() => setShowResetConfirm(false)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold border ${
+                    isLight ? 'border-slate-300 text-slate-700' : 'border-slate-700 text-slate-300'
+                  }`}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleResetCode}
+                  className="px-5 py-2 rounded-xl text-xs font-black bg-amber-500 hover:bg-amber-400 text-slate-950"
+                >
+                  Confirm Reset
                 </button>
               </div>
             </motion.div>
@@ -757,4 +1263,3 @@ export function InterviewWorkspaceView({
     </div>
   );
 }
-

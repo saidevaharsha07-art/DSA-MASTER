@@ -27,6 +27,7 @@ import {
   TrendingUp,
   FolderTree,
   ChevronRight,
+  Timer,
 } from 'lucide-react';
 import {
   PatternLearningAdapterService,
@@ -939,13 +940,24 @@ export function PatternConceptAcademyView({
               </div>
             </div>
 
-            <Link
-              href={detail.practiceUrl}
-              className="py-3 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-md transition-all self-start sm:self-auto"
-            >
-              <span>Practice All in Arena</span>
-              <ArrowRight size={14} />
-            </Link>
+            <div className="flex items-center gap-2.5 flex-wrap self-start sm:self-auto">
+              <Link
+                href={`/interview?mode=topic&area=${encodeURIComponent(areaSlug)}&subtopic=${encodeURIComponent(subtopicSlug)}&pattern=${encodeURIComponent(patternSlug)}`}
+                data-testid="interview-this-pattern-btn"
+                className="py-3 px-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-md transition-all"
+              >
+                <Timer size={15} />
+                <span>Interview This Pattern</span>
+              </Link>
+
+              <Link
+                href={detail.practiceUrl}
+                className="py-3 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-md transition-all"
+              >
+                <span>Practice All in Arena</span>
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </div>
 
           {/* Quick 5 Sprint Generator Bar */}

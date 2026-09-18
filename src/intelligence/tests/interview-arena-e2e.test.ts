@@ -44,9 +44,9 @@ export async function runInterviewArenaE2ETest(): Promise<boolean> {
   const sampleReport = InterviewArenaService.getSampleReport();
   assert(sampleReport !== null && sampleReport !== undefined, 'Sample report is generated for public preview');
   assert(sampleReport.overallScore > 0, 'Sample report has valid score');
-  assert(sampleReport.problemBreakdown.length >= 3, 'Sample report displays full 3-problem breakdown');
-  assert(sampleReport.whatWentWell.length > 0, 'Sample report includes grounded strengths');
-  assert(sampleReport.whatNeedsWork.length > 0, 'Sample report includes grounded areas for improvement');
+  assert((sampleReport.problemBreakdown || []).length >= 3, 'Sample report displays full 3-problem breakdown');
+  assert((sampleReport.whatWentWell || []).length > 0, 'Sample report includes grounded strengths');
+  assert((sampleReport.whatNeedsWork || []).length > 0, 'Sample report includes grounded areas for improvement');
 
   const freshHistory = InterviewArenaService.getHistory(testUserIdA);
   assert(Array.isArray(freshHistory) && freshHistory.length === 0, 'Fresh user starts with authentic 0 past interviews');
@@ -164,20 +164,20 @@ export async function runInterviewArenaE2ETest(): Promise<boolean> {
 
   assert(finalReport.id.startsWith('report_'), 'Report generated with unique ID');
   assert(finalReport.overallScore >= 0 && finalReport.overallScore <= 100, 'Overall score computed in range 0-100');
-  assert(['A+', 'A', 'B', 'C', 'D', 'F'].includes(finalReport.grade), 'Valid letter grade assigned');
+  assert(['A+', 'A', 'B', 'C', 'D', 'F'].includes(finalReport.grade as any), 'Valid letter grade assigned');
   assert(finalReport.metrics.accuracy >= 0, 'Accuracy metric computed');
-  assert(finalReport.metrics.problemSolving >= 0, 'Problem Solving metric computed');
+  assert((finalReport.metrics.problemSolving ?? 0) >= 0, 'Problem Solving metric computed');
   assert(finalReport.metrics.timeManagement >= 0, 'Time Management metric computed');
   assert(finalReport.metrics.patternRecognition >= 0, 'Pattern Recognition metric computed');
-  assert(finalReport.problemBreakdown.length === 3, 'Breakdown includes all 3 interview problems');
+  assert((finalReport.problemBreakdown || []).length === 3, 'Breakdown includes all 3 interview problems');
 
-  const prob1Breakdown = finalReport.problemBreakdown[0];
-  assert(prob1Breakdown.result === 'Passed', 'Problem 1 recorded as Passed in breakdown');
-  assert(prob1Breakdown.attempts === 1, 'Problem 1 recorded with exactly 1 attempt');
+  const prob1Breakdown = (finalReport.problemBreakdown || [])[0];
+  assert(prob1Breakdown && prob1Breakdown.result === 'Passed', 'Problem 1 recorded as Passed in breakdown');
+  assert(prob1Breakdown && prob1Breakdown.attempts === 1, 'Problem 1 recorded with exactly 1 attempt');
 
-  assert(finalReport.whatWentWell.length > 0, 'Report produces grounded "What Went Well" feedback');
-  assert(finalReport.whatNeedsWork.length > 0, 'Report produces grounded "What Needs Work" feedback');
-  assert(finalReport.recommendedNextSteps.length > 0, 'Report produces actionable next steps');
+  assert((finalReport.whatWentWell || []).length > 0, 'Report produces grounded "What Went Well" feedback');
+  assert((finalReport.whatNeedsWork || []).length > 0, 'Report produces grounded "What Needs Work" feedback');
+  assert((finalReport.recommendedNextSteps || []).length > 0, 'Report produces actionable next steps');
   assert(finalReport.mentorQueryContext.includes('DSA MASTER'), 'AI Mentor context string is pre-formatted');
 
   // ──────────────────────────────────────────────────────────────────────────

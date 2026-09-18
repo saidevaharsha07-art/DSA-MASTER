@@ -23,8 +23,9 @@ const CATEGORY_ALIASES: Record<string, string> = {
 };
 
 export const CurriculumRepository = {
-  // Categories & Kingdoms
+  // Categories & Learning Areas
   getAllCategories: (): CategoryModel[] => ALL_CATEGORIES,
+  getLearningAreas: (): CategoryModel[] => ALL_CATEGORIES,
   getCategoryBySlug: (slug: string): CategoryModel | undefined => {
     const normalized = slug.toLowerCase();
     const resolvedSlug = CATEGORY_ALIASES[normalized] || normalized;

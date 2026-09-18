@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -27,9 +27,11 @@ import {
   StopCircle,
   ShieldCheck,
   CheckCircle,
+  Timer,
 } from 'lucide-react';
 import { DashboardAdapterService, DashboardSummary } from '@/src/features/dashboard/services/dashboard-adapter.service';
 import { PracticeEngineService } from '@/src/features/practice/services/practice-engine.service';
+import { InterviewArenaService } from '@/src/features/interview/services/interview-arena.service';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
@@ -46,6 +48,10 @@ export function CommandCenterView() {
   const [summary, setSummary] = useState<DashboardSummary>(() =>
     DashboardAdapterService.getDashboardSummary(userId)
   );
+
+  const interviewReadiness = useMemo(() => {
+    return InterviewArenaService.getInterviewReadiness(userId);
+  }, [userId, summary]);
 
   // Drilldown state for Mastery Overview
   const [isDrilldownOpen, setIsDrilldownOpen] = useState(false);
@@ -1159,6 +1165,113 @@ export function CommandCenterView() {
               ))}
             </div>
           )}
+        </div>
+      </div>
+
+      {/* ── INTERVIEW ARENA 2.0 SNAPSHOT CARD ── */}
+      <div
+        data-testid="interview-snapshot-card"
+        style={{
+          padding: '22px 24px',
+          borderRadius: '16px',
+          background: isLight
+            ? 'linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%)'
+            : 'linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%)',
+          border: isLight ? '1.5px solid #CFFAFE' : '1px solid rgba(6, 182, 212, 0.25)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div
+              style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: '10px',
+                background: 'rgba(6, 182, 212, 0.15)',
+                color: '#06B6D4',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Timer size={20} />
+            </div>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 900 }}>Technical Interview Simulator</h3>
+                <span
+                  data-testid="dashboard-interview-readiness-badge"
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    padding: '2px 8px',
+                    borderRadius: '20px',
+                    background: 'rgba(6, 182, 212, 0.15)',
+                    color: '#06B6D4',
+                    border: '1px solid rgba(6, 182, 212, 0.3)',
+                  }}
+                >
+                  {interviewReadiness.level}
+                </span>
+              </div>
+              <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                Timed rounds under realistic exam pressure with pattern concealment and factual performance diagnostics
+              </span>
+            </div>
+          </div>
+
+          <Link href="/interview">
+            <button
+              data-testid="start-mock-interview-btn"
+              style={{
+                padding: '9px 18px',
+                borderRadius: '10px',
+                background: '#06B6D4',
+                color: '#020617',
+                fontSize: '12px',
+                fontWeight: 900,
+                border: 'none',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                boxShadow: '0 2px 10px rgba(6, 182, 212, 0.3)',
+              }}
+            >
+              <Play size={13} fill="currentColor" />
+              <span>Start Mock Interview</span>
+            </button>
+          </Link>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
+          <div style={{ padding: '10px 14px', borderRadius: '10px', background: isLight ? '#FFFFFF' : 'rgba(0,0,0,0.2)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Sessions Completed</span>
+            <div style={{ fontSize: '16px', fontWeight: 900, color: 'var(--text-primary)', marginTop: '2px' }}>
+              {interviewReadiness.totalCompletedSessions} Rounds
+            </div>
+          </div>
+          <div style={{ padding: '10px 14px', borderRadius: '10px', background: isLight ? '#FFFFFF' : 'rgba(0,0,0,0.2)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Historical Accuracy</span>
+            <div style={{ fontSize: '16px', fontWeight: 900, color: '#10B981', marginTop: '2px' }}>
+              {interviewReadiness.historicalAccuracyPercent}%
+            </div>
+          </div>
+          <div style={{ padding: '10px 14px', borderRadius: '10px', background: isLight ? '#FFFFFF' : 'rgba(0,0,0,0.2)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Speed Pacing</span>
+            <div style={{ fontSize: '16px', fontWeight: 900, color: '#06B6D4', marginTop: '2px' }}>
+              {interviewReadiness.speedPacingScore > 0 ? `${interviewReadiness.speedPacingScore}m / prob` : 'No data'}
+            </div>
+          </div>
+          <div style={{ padding: '10px 14px', borderRadius: '10px', background: isLight ? '#FFFFFF' : 'rgba(0,0,0,0.2)', border: isLight ? '1px solid #E2E8F0' : '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Pattern Coverage</span>
+            <div style={{ fontSize: '16px', fontWeight: 900, color: '#A855F7', marginTop: '2px' }}>
+              {interviewReadiness.patternCoverageCount} / 113
+            </div>
+          </div>
         </div>
       </div>
 

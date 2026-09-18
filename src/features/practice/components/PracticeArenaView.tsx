@@ -1994,6 +1994,27 @@ export function PracticeArenaView({ defaultPlatform }: { defaultPlatform?: Platf
                 >
                   Generate & Start Interview Set
                 </button>
+
+                <Link
+                  href="/interview"
+                  data-testid="launch-interview-arena-btn"
+                  style={{
+                    padding: '10px 24px',
+                    borderRadius: '10px',
+                    background: '#06B6D4',
+                    color: '#020617',
+                    fontSize: '13px',
+                    fontWeight: 900,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    boxShadow: '0 4px 14px rgba(6, 182, 212, 0.3)',
+                  }}
+                >
+                  <Trophy size={14} />
+                  <span>Launch Interview Arena 2.0 Simulator ›</span>
+                </Link>
               </div>
             </div>
           )}

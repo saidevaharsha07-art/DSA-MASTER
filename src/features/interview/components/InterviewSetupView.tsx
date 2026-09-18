@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Timer,
@@ -22,6 +22,12 @@ import {
   Calendar,
   Clock,
   Layers,
+  Building2,
+  Shuffle,
+  ChevronRight,
+  Sliders,
+  Check,
+  TrendingUp,
 } from 'lucide-react';
 import {
   InterviewConfig,
@@ -32,30 +38,126 @@ import {
   InterviewLanguage,
   InterviewHistoryRecord,
   InterviewArenaReport,
+  InterviewSimulatorMode,
+  InterviewReadinessData,
 } from '../types/interview.types';
+import { InterviewArenaService } from '../services/interview-arena.service';
+import { CurriculumRepository } from '@/src/curriculum/repository';
 
 interface InterviewSetupViewProps {
   isLight: boolean;
   isAuthenticated: boolean;
+  userId?: string;
   history: InterviewHistoryRecord[];
   onStartInterview: (config: InterviewConfig) => void;
   onViewReport: (report: InterviewArenaReport) => void;
   sampleReport: InterviewArenaReport;
+  initialMode?: InterviewSimulatorMode;
+  initialArea?: string;
+  initialSubtopic?: string;
+  initialPattern?: string;
+  initialCompany?: string;
 }
 
-const TOPIC_TYPES: Array<{ id: InterviewTopicType; title: string; desc: string; icon: any }> = [
-  { id: 'General DSA', title: 'General DSA', desc: 'Comprehensive mix across arrays, strings, trees & graphs', icon: Target },
-  { id: 'Arrays & Hashing', title: 'Arrays & Hashing', desc: 'Two pointers, sliding window, prefix sums, hash tables', icon: Zap },
-  { id: 'Trees & Graphs', title: 'Trees & Graphs', desc: 'BFS, DFS, binary search trees, topological sorting', icon: BookOpen },
-  { id: 'Dynamic Programming', title: 'Dynamic Programming', desc: 'Memoization, tabulation, state transitions, optimization', icon: Brain },
-  { id: 'Mixed Patterns', title: 'Mixed Patterns', desc: 'Multi-topic algorithmic reasoning under real clock pressure', icon: Sparkles },
+const MODES: Array<{
+  id: InterviewSimulatorMode;
+  label: string;
+  duration: InterviewDurationMinutes;
+  count: InterviewProblemCount;
+  desc: string;
+  badge?: string;
+  icon: any;
+}> = [
+  {
+    id: 'quick',
+    label: 'Quick Screen',
+    duration: 20,
+    count: 1,
+    desc: '1 problem • 20 mins. Fast warmup or single algorithmic deep-dive.',
+    badge: '15-20 min',
+    icon: Zap,
+  },
+  {
+    id: '30m',
+    label: '30m Technical',
+    duration: 30,
+    count: 2,
+    desc: '2 problems • 30 mins. Classic standard technical interview screen.',
+    badge: 'Standard',
+    icon: Clock,
+  },
+  {
+    id: '45m',
+    label: '45m Onsite Round',
+    duration: 45,
+    count: 3,
+    desc: '3 problems • 45 mins. Escalating difficulty (Easy → Medium → Hard).',
+    badge: 'Realistic',
+    icon: Target,
+  },
+  {
+    id: '60m',
+    label: '60m Comprehensive',
+    duration: 60,
+    count: 4,
+    desc: '4 problems • 60 mins. High-intensity session testing endurance.',
+    badge: 'Intense',
+    icon: Flame,
+  },
+  {
+    id: 'company',
+    label: 'Company Style',
+    duration: 45,
+    count: 3,
+    desc: 'Curated sets strictly from documented company interview archives.',
+    badge: 'Targeted',
+    icon: Building2,
+  },
+  {
+    id: 'topic',
+    label: 'Topic Focused',
+    duration: 30,
+    count: 2,
+    desc: 'Drill down into a specific learning area, subtopic, or pattern.',
+    badge: 'Focused',
+    icon: BookOpen,
+  },
+  {
+    id: 'mixed',
+    label: 'Mixed DSA',
+    duration: 45,
+    count: 3,
+    desc: 'Comprehensive multi-pattern challenge covering broad curriculum.',
+    badge: 'Adaptive',
+    icon: Shuffle,
+  },
+  {
+    id: 'custom',
+    label: 'Custom Session',
+    duration: 45,
+    count: 2,
+    desc: 'Fine-tune exact duration, problem count, difficulty, and language.',
+    badge: 'Custom',
+    icon: Sliders,
+  },
+];
+
+const COMPANIES = [
+  'Google',
+  'Amazon',
+  'Meta',
+  'Microsoft',
+  'Apple',
+  'Uber',
+  'Netflix',
+  'Bloomberg',
 ];
 
 const DIFFICULTIES: Array<{ id: InterviewArenaDifficulty; label: string; color: string }> = [
   { id: 'Easy', label: 'Easy', color: '#10B981' },
   { id: 'Medium', label: 'Medium', color: '#F59E0B' },
   { id: 'Hard', label: 'Hard', color: '#EF4444' },
-  { id: 'Mixed', label: 'Mixed', color: '#06B6D4' },
+  { id: 'Mixed', label: 'Mixed (Escalating)', color: '#06B6D4' },
 ];
 
 const DURATIONS: Array<{ minutes: InterviewDurationMinutes; label: string }> = [
@@ -72,40 +174,109 @@ const LANGUAGES: Array<{ id: InterviewLanguage; label: string }> = [
   { id: 'python', label: 'Python' },
   { id: 'java', label: 'Java' },
   { id: 'cpp', label: 'C++' },
+  { id: 'typescript', label: 'TypeScript' },
 ];
 
 export function InterviewSetupView({
   isLight,
   isAuthenticated,
+  userId = 'default_user',
   history,
   onStartInterview,
   onViewReport,
   sampleReport,
+  initialMode,
+  initialArea,
+  initialSubtopic,
+  initialPattern,
+  initialCompany,
 }: InterviewSetupViewProps) {
-  const [selectedType, setSelectedType] = useState<InterviewTopicType>('Mixed Patterns');
-  const [selectedDifficulty, setSelectedDifficulty] = useState<InterviewArenaDifficulty>('Medium');
+  // Mode selection
+  const [selectedMode, setSelectedMode] = useState<InterviewSimulatorMode>(initialMode || '45m');
+
+  // Custom configuration parameters
+  const [selectedDifficulty, setSelectedDifficulty] = useState<InterviewArenaDifficulty>('Mixed');
   const [selectedDuration, setSelectedDuration] = useState<InterviewDurationMinutes>(45);
-  const [selectedCount, setSelectedCount] = useState<InterviewProblemCount>(2);
+  const [selectedCount, setSelectedCount] = useState<InterviewProblemCount>(3);
   const [selectedLanguage, setSelectedLanguage] = useState<InterviewLanguage>('javascript');
   const [useWeakness, setUseWeakness] = useState<boolean>(true);
   const [showSampleReport, setShowSampleReport] = useState<boolean>(false);
 
+  // Company and Topic filters
+  const [targetCompany, setTargetCompany] = useState<string>(initialCompany || 'Google');
+  const [targetArea, setTargetArea] = useState<string>(initialArea || 'all');
+  const [targetSubtopic, setTargetSubtopic] = useState<string>(initialSubtopic || 'all');
+  const [targetPattern, setTargetPattern] = useState<string>(initialPattern || 'all');
+
+  // Load curriculum areas for topic filtering
+  const learningAreas = useMemo(() => CurriculumRepository.getLearningAreas(), []);
+
+  // Compute Evidence-based Interview Readiness
+  const readiness: InterviewReadinessData = useMemo(() => {
+    return InterviewArenaService.getInterviewReadiness(userId);
+  }, [userId, history]);
+
+  // Handle Mode Change and preset updates
+  const handleSelectMode = (mode: InterviewSimulatorMode) => {
+    setSelectedMode(mode);
+    const preset = MODES.find((m) => m.id === mode);
+    if (preset) {
+      if (mode !== 'custom') {
+        setSelectedDuration(preset.duration);
+        setSelectedCount(preset.count);
+      }
+      if (mode === 'quick') {
+        setSelectedDifficulty('Medium');
+      } else if (mode === '30m' || mode === '45m' || mode === '60m' || mode === 'mixed') {
+        setSelectedDifficulty('Mixed');
+      }
+    }
+  };
+
+  // Launch interview with active configuration
   const handleStart = () => {
-    onStartInterview({
-      type: selectedType,
+    const config: InterviewConfig = {
+      mode: selectedMode,
       difficulty: selectedDifficulty,
       durationMinutes: selectedDuration,
       problemCount: selectedCount,
       language: selectedLanguage,
       useWeakness,
-    });
+      targetCompany: selectedMode === 'company' ? targetCompany : undefined,
+      targetArea: selectedMode === 'topic' && targetArea !== 'all' ? targetArea : undefined,
+      targetSubtopic: selectedMode === 'topic' && targetSubtopic !== 'all' ? targetSubtopic : undefined,
+      targetPattern: selectedMode === 'topic' && targetPattern !== 'all' ? targetPattern : undefined,
+      type:
+        selectedMode === 'company'
+          ? 'Company Style'
+          : selectedMode === 'topic'
+          ? 'Topic Focused'
+          : 'Mixed Patterns',
+    };
+    onStartInterview(config);
+  };
+
+  // Launch recommended session directly
+  const handleStartRecommended = () => {
+    const rec = readiness.recommendedSession;
+    const config: InterviewConfig = {
+      mode: rec.mode,
+      difficulty: rec.difficulty,
+      durationMinutes: rec.durationMinutes,
+      problemCount: rec.problemCount,
+      language: selectedLanguage,
+      useWeakness: true,
+      targetArea: rec.targetArea,
+      type: rec.targetArea ? 'Topic Focused' : 'Mixed Patterns',
+    };
+    onStartInterview(config);
   };
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8 pb-16">
+    <div className="max-w-6xl mx-auto space-y-8 pb-16" data-testid="interview-setup-view">
       {/* 1. HERO HEADER CARD */}
       <div
-        className={`p-6 sm:p-8 md:p-10 rounded-3xl border transition-all ${
+        className={`p-6 sm:p-8 md:p-10 rounded-3xl border transition-all relative overflow-hidden ${
           isLight
             ? 'bg-gradient-to-br from-white via-slate-50 to-slate-100 border-slate-200 shadow-sm'
             : 'bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border-slate-800'
@@ -115,13 +286,13 @@ export function InterviewSetupView({
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 border border-cyan-500/20">
               <Timer className="w-3.5 h-3.5" />
-              AUTHENTIC TIMED INTERVIEWS
+              AUTHENTIC CODING INTERVIEW SIMULATOR
             </div>
             <h1 className={`text-3xl sm:text-4xl font-black tracking-tight ${isLight ? 'text-slate-900' : 'text-white'}`}>
               Interview Arena
             </h1>
             <p className={`text-xs sm:text-sm max-w-2xl leading-relaxed font-medium ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-              Simulate technical coding rounds under strict clock pressure. Receive a comprehensive, data-grounded performance diagnostic report with 5-pillar scoring and AI Mentor feedback.
+              Simulate realistic technical rounds under clock pressure. Features authentic pattern concealment, thinking/approach notes, simulated interviewer guidance checkpoints, and factual post-interview diagnostics.
             </p>
           </div>
 
@@ -139,10 +310,11 @@ export function InterviewSetupView({
             </button>
             <button
               onClick={handleStart}
+              data-testid="start-interview-btn"
               className="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2"
             >
               <Zap className="w-4 h-4 fill-current" />
-              <span>Start Round ({selectedDuration}m • {selectedCount}P)</span>
+              <span>Start Interview ({selectedDuration}m • {selectedCount}P)</span>
             </button>
           </div>
         </div>
@@ -165,7 +337,7 @@ export function InterviewSetupView({
                   SAMPLE SCORECARD
                 </span>
                 <h3 className={`text-sm font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                  What Your Post-Interview Diagnostic Looks Like
+                  Factual Post-Interview Performance Diagnostic
                 </h3>
               </div>
               <button
@@ -177,317 +349,470 @@ export function InterviewSetupView({
               </button>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
               <div className={`p-3 rounded-xl border ${isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'}`}>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Overall Score</div>
-                <div className="text-base sm:text-lg font-black text-cyan-500 dark:text-cyan-400">{sampleReport.overallScore}% ({sampleReport.grade})</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Problems Solved</div>
+                <div className="text-base sm:text-lg font-black text-cyan-500 dark:text-cyan-400">
+                  {sampleReport.problemsSolved} / {sampleReport.problemsAttempted}
+                </div>
               </div>
               <div className={`p-3 rounded-xl border ${isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'}`}>
                 <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Accuracy</div>
-                <div className="text-base sm:text-lg font-black text-emerald-500 dark:text-emerald-400">{sampleReport.metrics.accuracy}%</div>
+                <div className="text-base sm:text-lg font-black text-emerald-500 dark:text-emerald-400">{sampleReport.accuracyPercent}%</div>
               </div>
               <div className={`p-3 rounded-xl border ${isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'}`}>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Time Mgmt</div>
-                <div className="text-base sm:text-lg font-black text-amber-500 dark:text-amber-400">{sampleReport.metrics.timeManagement}%</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Avg Time/Problem</div>
+                <div className="text-base sm:text-lg font-black text-amber-500 dark:text-amber-400">{sampleReport.averageTimePerProblemMinutes}m</div>
               </div>
               <div className={`p-3 rounded-xl border ${isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'}`}>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Pattern Rec</div>
-                <div className="text-base sm:text-lg font-black text-blue-500 dark:text-blue-400">{sampleReport.metrics.patternRecognition}%</div>
-              </div>
-              <div className={`p-3 rounded-xl border col-span-2 sm:col-span-1 ${isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'}`}>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Consistency</div>
-                <div className="text-base sm:text-lg font-black text-indigo-500 dark:text-indigo-400">{sampleReport.metrics.consistency}%</div>
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Readiness State</div>
+                <div className="text-base sm:text-lg font-black text-indigo-500 dark:text-indigo-400">{sampleReport.readinessState}</div>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* 2. CONFIGURATION MATRIX */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-        {/* LEFT 2 COLUMNS: CONFIGURATION CONTROLS */}
-        <div className="lg:col-span-2 space-y-6 sm:space-y-8">
-          {/* A. TOPIC SELECTION */}
+      {/* 2. EVIDENCE-BASED READINESS HUD & RECOMMENDED SESSION */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-testid="interview-readiness-hud">
+        {/* Readiness Level & Telemetry */}
+        <div
+          className={`lg:col-span-2 p-6 rounded-3xl border flex flex-col justify-between gap-5 ${
+            isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/60 border-slate-800'
+          }`}
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <ShieldCheck className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Evidence-Based Interview Readiness
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <h2 className={`text-xl sm:text-2xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                  {readiness.level}
+                </h2>
+                <span
+                  className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${
+                    readiness.level === 'Strong Evidence'
+                      ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/30'
+                      : readiness.level === 'Developing'
+                      ? 'bg-cyan-500/10 text-cyan-500 border-cyan-500/30'
+                      : readiness.level === 'Needs Practice'
+                      ? 'bg-rose-500/10 text-rose-500 border-rose-500/30'
+                      : 'bg-amber-500/10 text-amber-500 border-amber-500/30'
+                  }`}
+                >
+                  {readiness.totalCompletedSessions} Rounds Completed
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Confidence Metric:</span>
+              <div className="text-sm font-black text-cyan-500 dark:text-cyan-400">{readiness.confidenceScore}%</div>
+            </div>
+          </div>
+
+          {/* 4 Telemetry Badges */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className={`p-3 rounded-2xl border text-center ${isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950/50 border-slate-800'}`}>
+              <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Historical Accuracy</div>
+              <div className="text-base font-black text-emerald-500 dark:text-emerald-400 mt-0.5">
+                {readiness.historicalAccuracyPercent}%
+              </div>
+            </div>
+            <div className={`p-3 rounded-2xl border text-center ${isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950/50 border-slate-800'}`}>
+              <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Speed Pacing</div>
+              <div className="text-base font-black text-cyan-500 dark:text-cyan-400 mt-0.5">
+                {readiness.speedPacingScore > 0 ? `${readiness.speedPacingScore}m / prob` : 'No data'}
+              </div>
+            </div>
+            <div className={`p-3 rounded-2xl border text-center ${isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950/50 border-slate-800'}`}>
+              <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Pattern Coverage</div>
+              <div className="text-base font-black text-purple-500 dark:text-purple-400 mt-0.5">
+                {readiness.patternCoverageCount} / 113
+              </div>
+            </div>
+            <div className={`p-3 rounded-2xl border text-center ${isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950/50 border-slate-800'}`}>
+              <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Recommended Focus</div>
+              <div className="text-xs font-bold text-amber-500 dark:text-amber-400 mt-1 truncate" title={readiness.recommendedFocus}>
+                {readiness.recommendedFocus}
+              </div>
+            </div>
+          </div>
+
+          {/* Weak Areas & Strong Areas Chips */}
+          <div className="flex flex-wrap items-center gap-2 text-xs pt-1">
+            <span className="font-bold text-slate-500 dark:text-slate-400">Weak Spots:</span>
+            {readiness.weakestAreas.length > 0 ? (
+              readiness.weakestAreas.map((area, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 py-0.5 rounded-lg font-semibold bg-rose-500/10 text-rose-500 dark:text-rose-400 border border-rose-500/20"
+                >
+                  {area}
+                </span>
+              ))
+            ) : (
+              <span className="text-slate-400">None detected yet</span>
+            )}
+
+            <span className="text-slate-400 mx-1">•</span>
+            <span className="font-bold text-slate-500 dark:text-slate-400">Solid:</span>
+            {readiness.strongestAreas.length > 0 ? (
+              readiness.strongestAreas.map((area, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 py-0.5 rounded-lg font-semibold bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 border border-emerald-500/20"
+                >
+                  {area}
+                </span>
+              ))
+            ) : (
+              <span className="text-slate-400">Building baseline</span>
+            )}
+          </div>
+        </div>
+
+        {/* Recommended Interview Session Card */}
+        <div
+          className={`p-6 rounded-3xl border flex flex-col justify-between gap-4 relative overflow-hidden ${
+            isLight
+              ? 'bg-gradient-to-br from-cyan-50/60 to-white border-cyan-200 shadow-sm'
+              : 'bg-gradient-to-br from-cyan-950/30 to-slate-900 border-cyan-900/40'
+          }`}
+          data-testid="recommended-interview-card"
+        >
           <div className="space-y-3">
-            <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-              1. Choose Topic Focus
-            </label>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {TOPIC_TYPES.map((t) => {
-                const isSelected = selectedType === t.id;
-                const Icon = t.icon;
+            <div className="flex items-center justify-between gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30 flex items-center gap-1">
+                <Sparkles className="w-3 h-3" />
+                RECOMMENDED SESSION
+              </span>
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                {readiness.recommendedSession.durationMinutes} min
+              </span>
+            </div>
+
+            <h3 className={`text-base sm:text-lg font-black leading-snug ${isLight ? 'text-slate-900' : 'text-white'}`}>
+              {readiness.recommendedSession.title}
+            </h3>
+
+            <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
+              {readiness.recommendedSession.reason}
+            </p>
+          </div>
+
+          <button
+            onClick={handleStartRecommended}
+            data-testid="start-recommended-interview-btn"
+            className="w-full py-2.5 rounded-xl font-bold text-xs bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all flex items-center justify-center gap-2 shadow-md shadow-cyan-500/20"
+          >
+            <span>Start Recommended Session</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* 3. INTERVIEW SIMULATOR MODES GRID */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+            1. Select Interview Simulator Mode
+          </label>
+          <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+            Active: <strong className="text-cyan-500 dark:text-cyan-400">{MODES.find((m) => m.id === selectedMode)?.label}</strong>
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+          {MODES.map((m) => {
+            const isSelected = selectedMode === m.id;
+            const Icon = m.icon;
+            return (
+              <button
+                key={m.id}
+                onClick={() => handleSelectMode(m.id)}
+                data-testid={`mode-btn-${m.id}`}
+                className={`p-4 rounded-2xl text-left border transition-all relative overflow-hidden flex flex-col justify-between ${
+                  isSelected
+                    ? isLight
+                      ? 'bg-cyan-50/90 border-cyan-500 shadow-sm ring-2 ring-cyan-500/40'
+                      : 'bg-cyan-950/40 border-cyan-500 ring-2 ring-cyan-500/40'
+                    : isLight
+                    ? 'bg-white border-slate-200 hover:border-slate-300'
+                    : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div
+                      className={`p-2 rounded-xl shrink-0 ${
+                        isSelected
+                          ? 'bg-cyan-500/20 text-cyan-500 dark:text-cyan-400'
+                          : isLight
+                          ? 'bg-slate-100 text-slate-600'
+                          : 'bg-slate-800 text-slate-400'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    {m.badge && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                        {m.badge}
+                      </span>
+                    )}
+                  </div>
+                  <h4 className={`font-bold text-sm ${isLight ? 'text-slate-900' : 'text-white'}`}>{m.label}</h4>
+                  <p className={`text-xs mt-1 leading-relaxed ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                    {m.desc}
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs">
+                  <span className="font-semibold text-slate-500 dark:text-slate-400">
+                    {m.duration}m • {m.count} {m.count === 1 ? 'prob' : 'probs'}
+                  </span>
+                  {isSelected && <Check className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 4. MODE SPECIFIC CONFIGURATION CONTROLS */}
+      <div
+        className={`p-6 rounded-3xl border space-y-6 ${
+          isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/60 border-slate-800'
+        }`}
+      >
+        {/* A. COMPANY STYLE SELECTION (IF COMPANY MODE SELECTED) */}
+        {selectedMode === 'company' && (
+          <div className="space-y-3" data-testid="company-style-selector">
+            <div className="flex items-center gap-2">
+              <Building2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
+              <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                Target Company Interview Archive (Strict Real Metadata)
+              </label>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              {COMPANIES.map((comp) => {
+                const isSelected = targetCompany.toLowerCase() === comp.toLowerCase();
                 return (
                   <button
-                    key={t.id}
-                    onClick={() => setSelectedType(t.id)}
-                    className={`p-3.5 sm:p-4 rounded-2xl text-left border transition-all relative overflow-hidden ${
+                    key={comp}
+                    onClick={() => setTargetCompany(comp)}
+                    data-testid={`company-btn-${comp.toLowerCase()}`}
+                    className={`p-3 rounded-xl text-center font-bold text-xs sm:text-sm border transition-all ${
                       isSelected
                         ? isLight
-                          ? 'bg-cyan-50/90 border-cyan-500 shadow-sm ring-1 ring-cyan-500/50'
-                          : 'bg-cyan-950/30 border-cyan-500 ring-1 ring-cyan-500/50'
+                          ? 'bg-slate-900 text-white border-slate-900 shadow-md'
+                          : 'bg-cyan-500 text-slate-950 border-cyan-500 font-extrabold shadow-lg shadow-cyan-500/20'
                         : isLight
-                        ? 'bg-white border-slate-200 hover:border-slate-300'
-                        : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
+                        ? 'bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300'
+                        : 'bg-slate-900/50 text-slate-300 border-slate-800 hover:border-slate-700'
                     }`}
                   >
-                    <div className="flex items-start gap-3">
-                      <div
-                        className={`p-2 rounded-xl shrink-0 ${
-                          isSelected
-                            ? 'bg-cyan-500/20 text-cyan-500 dark:text-cyan-400'
-                            : isLight
-                            ? 'bg-slate-100 text-slate-600'
-                            : 'bg-slate-800 text-slate-400'
-                        }`}
-                      >
-                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className={`font-bold text-xs sm:text-sm ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                          {t.title}
-                        </div>
-                        <div className={`text-[11px] sm:text-xs mt-0.5 line-clamp-2 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                          {t.desc}
-                        </div>
-                      </div>
-                    </div>
+                    {comp}
                   </button>
                 );
               })}
             </div>
           </div>
+        )}
 
-          {/* B. DIFFICULTY & DURATION */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {/* Difficulty */}
-            <div className="space-y-3">
+        {/* B. TOPIC FOCUSED SELECTION (IF TOPIC MODE SELECTED) */}
+        {selectedMode === 'topic' && (
+          <div className="space-y-3" data-testid="topic-focused-selector">
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
               <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                2. Difficulty Level
+                Focus Learning Area & Pattern
               </label>
-              <div className="grid grid-cols-2 gap-2.5">
-                {DIFFICULTIES.map((d) => {
-                  const isSelected = selectedDifficulty === d.id;
-                  return (
-                    <button
-                      key={d.id}
-                      onClick={() => setSelectedDifficulty(d.id)}
-                      className={`py-2.5 sm:py-3 px-3 rounded-xl text-center font-bold text-xs sm:text-sm border transition-all ${
-                        isSelected
-                          ? isLight
-                            ? 'bg-slate-900 text-white border-slate-900 shadow-md'
-                            : 'bg-cyan-500 text-slate-950 border-cyan-500 font-extrabold shadow-lg shadow-cyan-500/20'
-                          : isLight
-                          ? 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
-                          : 'bg-slate-900/50 text-slate-300 border-slate-800 hover:border-slate-700'
-                      }`}
-                    >
-                      {d.label}
-                    </button>
-                  );
-                })}
-              </div>
             </div>
-
-            {/* Duration */}
-            <div className="space-y-3">
-              <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                3. Total Duration
-              </label>
-              <div className="grid grid-cols-2 gap-2.5">
-                {DURATIONS.map((dur) => {
-                  const isSelected = selectedDuration === dur.minutes;
-                  return (
-                    <button
-                      key={dur.minutes}
-                      onClick={() => setSelectedDuration(dur.minutes)}
-                      className={`py-2.5 sm:py-3 px-3 rounded-xl text-center font-bold text-xs sm:text-sm border transition-all ${
-                        isSelected
-                          ? isLight
-                            ? 'bg-slate-900 text-white border-slate-900 shadow-md'
-                            : 'bg-cyan-500 text-slate-950 border-cyan-500 font-extrabold shadow-lg shadow-cyan-500/20'
-                          : isLight
-                          ? 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
-                          : 'bg-slate-900/50 text-slate-300 border-slate-800 hover:border-slate-700'
-                      }`}
-                    >
-                      {dur.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* C. PROBLEM COUNT & LANGUAGE */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {/* Number of Problems */}
-            <div className="space-y-3">
-              <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                4. Problem Count
-              </label>
-              <div className="grid grid-cols-4 gap-2">
-                {PROBLEM_COUNTS.map((cnt) => {
-                  const isSelected = selectedCount === cnt;
-                  return (
-                    <button
-                      key={cnt}
-                      onClick={() => setSelectedCount(cnt)}
-                      className={`py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm border transition-all text-center ${
-                        isSelected
-                          ? isLight
-                            ? 'bg-slate-900 text-white border-slate-900 shadow-md'
-                            : 'bg-cyan-500 text-slate-950 border-cyan-500 font-extrabold'
-                          : isLight
-                          ? 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
-                          : 'bg-slate-900/50 text-slate-300 border-slate-800 hover:border-slate-700'
-                      }`}
-                    >
-                      {cnt}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Language */}
-            <div className="space-y-3">
-              <label className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                5. Primary Language
-              </label>
-              <div className="grid grid-cols-2 gap-2">
-                {LANGUAGES.map((lang) => {
-                  const isSelected = selectedLanguage === lang.id;
-                  return (
-                    <button
-                      key={lang.id}
-                      onClick={() => setSelectedLanguage(lang.id)}
-                      className={`py-2.5 sm:py-3 px-2 rounded-xl font-bold text-xs border transition-all text-center ${
-                        isSelected
-                          ? isLight
-                            ? 'bg-slate-900 text-white border-slate-900 shadow-md'
-                            : 'bg-cyan-500 text-slate-950 border-cyan-500 font-extrabold'
-                          : isLight
-                          ? 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
-                          : 'bg-slate-900/50 text-slate-300 border-slate-800 hover:border-slate-700'
-                      }`}
-                    >
-                      {lang.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* D. WEAKNESS TARGETING TOGGLE */}
-          <div
-            onClick={() => setUseWeakness(!useWeakness)}
-            className={`p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between gap-4 ${
-              useWeakness
-                ? isLight
-                  ? 'bg-emerald-50/80 border-emerald-300 shadow-sm'
-                  : 'bg-emerald-950/20 border-emerald-800/40'
-                : isLight
-                ? 'bg-white border-slate-200 hover:border-slate-300'
-                : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className={`p-2 rounded-xl shrink-0 ${
-                  useWeakness
-                    ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
-                }`}
-              >
-                <ShieldCheck className="w-5 h-5" />
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <div className={`font-bold text-xs sm:text-sm ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                  Target My Weak Areas
-                </div>
-                <div className={`text-[11px] sm:text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                  Prioritize problem selection based on your personal Mistake Intelligence history
-                </div>
+                <label className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mb-1">
+                  Learning Area
+                </label>
+                <select
+                  value={targetArea}
+                  onChange={(e) => setTargetArea(e.target.value)}
+                  className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none cursor-pointer ${
+                    isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
+                  }`}
+                >
+                  <option value="all">All Learning Areas</option>
+                  {learningAreas.map((area) => (
+                    <option key={area.id} value={area.id}>
+                      {area.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mb-1">
+                  Pattern Filter (Optional)
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. two-pointers, sliding-window"
+                  value={targetPattern === 'all' ? '' : targetPattern}
+                  onChange={(e) => setTargetPattern(e.target.value || 'all')}
+                  className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none ${
+                    isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
+                  }`}
+                />
               </div>
             </div>
+          </div>
+        )}
 
-            <div
-              className={`w-11 h-6 flex items-center rounded-full p-1 transition-colors shrink-0 ${
-                useWeakness ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700'
+        {/* C. CUSTOM & GENERAL PARAMETERS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          {/* Difficulty */}
+          <div>
+            <label className={`text-[11px] font-bold uppercase tracking-wider block mb-1.5 ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+              Difficulty
+            </label>
+            <select
+              value={selectedDifficulty}
+              onChange={(e) => setSelectedDifficulty(e.target.value as InterviewArenaDifficulty)}
+              className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none cursor-pointer ${
+                isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
               }`}
             >
-              <div
-                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                  useWeakness ? 'translate-x-5' : 'translate-x-0'
-                }`}
-              />
-            </div>
+              {DIFFICULTIES.map((d) => (
+                <option key={d.id} value={d.id}>
+                  {d.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Duration */}
+          <div>
+            <label className={`text-[11px] font-bold uppercase tracking-wider block mb-1.5 ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+              Total Time
+            </label>
+            <select
+              value={selectedDuration}
+              onChange={(e) => setSelectedDuration(Number(e.target.value) as InterviewDurationMinutes)}
+              className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none cursor-pointer ${
+                isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
+              }`}
+            >
+              {DURATIONS.map((dur) => (
+                <option key={dur.minutes} value={dur.minutes}>
+                  {dur.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Problem Count */}
+          <div>
+            <label className={`text-[11px] font-bold uppercase tracking-wider block mb-1.5 ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+              Problem Count
+            </label>
+            <select
+              value={selectedCount}
+              onChange={(e) => setSelectedCount(Number(e.target.value) as InterviewProblemCount)}
+              className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none cursor-pointer ${
+                isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
+              }`}
+            >
+              {PROBLEM_COUNTS.map((cnt) => (
+                <option key={cnt} value={cnt}>
+                  {cnt} {cnt === 1 ? 'Problem' : 'Problems'}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Primary Language */}
+          <div>
+            <label className={`text-[11px] font-bold uppercase tracking-wider block mb-1.5 ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+              Primary Language
+            </label>
+            <select
+              value={selectedLanguage}
+              onChange={(e) => setSelectedLanguage(e.target.value as InterviewLanguage)}
+              className={`w-full p-2.5 rounded-xl text-xs font-semibold border outline-none cursor-pointer ${
+                isLight ? 'bg-slate-50 border-slate-300 text-slate-800' : 'bg-slate-800 border-slate-700 text-slate-200'
+              }`}
+            >
+              {LANGUAGES.map((lang) => (
+                <option key={lang.id} value={lang.id}>
+                  {lang.label}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
-        {/* RIGHT COLUMN: RULES & START BUTTON */}
-        <div className="space-y-6">
+        {/* D. WEAKNESS TARGETING TOGGLE */}
+        <div
+          onClick={() => setUseWeakness(!useWeakness)}
+          className={`p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between gap-4 ${
+            useWeakness
+              ? isLight
+                ? 'bg-emerald-50/80 border-emerald-300 shadow-sm'
+                : 'bg-emerald-950/20 border-emerald-800/40'
+              : isLight
+              ? 'bg-slate-50 border-slate-200 hover:border-slate-300'
+              : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <div
+              className={`p-2 rounded-xl shrink-0 ${
+                useWeakness
+                  ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400'
+                  : 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+              }`}
+            >
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <div className={`font-bold text-xs sm:text-sm ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                Adaptive Weakness Prioritization
+              </div>
+              <div className={`text-[11px] sm:text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                Surface problems matching your mistake history & unmastered patterns to accelerate real exam readiness
+              </div>
+            </div>
+          </div>
+
           <div
-            className={`p-6 rounded-3xl border ${
-              isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/60 border-slate-800'
+            className={`w-11 h-6 flex items-center rounded-full p-1 transition-colors shrink-0 ${
+              useWeakness ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700'
             }`}
           >
-            <h3 className={`text-sm sm:text-base font-bold mb-4 flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-              <ShieldCheck className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
-              Interview Arena Rules
-            </h3>
-            <ul className="space-y-3.5 text-xs leading-relaxed">
-              <li className={`flex items-start gap-2.5 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Strict Clock:</strong> Timer runs continuously. Once time expires, code is evaluated and finalized automatically.
-                </span>
-              </li>
-              <li className={`flex items-start gap-2.5 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Real Sandboxed Judge:</strong> Solutions are validated against extensive hidden edge case test suites.
-                </span>
-              </li>
-              <li className={`flex items-start gap-2.5 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Telemetry Metrics:</strong> Attempt patterns, runtime pacing, and failure recovery feed into your scorecard.
-                </span>
-              </li>
-              <li className={`flex items-start gap-2.5 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Ecosystem Sync:</strong> Identified weak patterns link to your Adaptive Roadmap and AI Mentor for targeted revision.
-                </span>
-              </li>
-            </ul>
-
-            <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800">
-              <button
-                onClick={handleStart}
-                className="w-full py-3.5 rounded-2xl font-extrabold text-sm bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2"
-              >
-                <Zap className="w-4 h-4 fill-current" />
-                Start Interview Now
-              </button>
-            </div>
+            <div
+              className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                useWeakness ? 'translate-x-5' : 'translate-x-0'
+              }`}
+            />
           </div>
         </div>
       </div>
 
-      {/* 3. PAST INTERVIEWS HISTORY */}
-      <div className="space-y-4 pt-6">
+      {/* 5. PAST INTERVIEWS HISTORY */}
+      <div className="space-y-4 pt-4" data-testid="interview-history-section">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <History className="w-5 h-5 text-cyan-500 dark:text-cyan-400" />
             <h2 className={`text-lg sm:text-xl font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>
-              Past Interviews
+              Interview History & Diagnostics
             </h2>
           </div>
           <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-            {history.length} {history.length === 1 ? 'round' : 'rounds'} completed
+            {history.length} {history.length === 1 ? 'round recorded' : 'rounds recorded'}
           </span>
         </div>
 
@@ -512,6 +837,7 @@ export function InterviewSetupView({
             {history.map((item) => (
               <div
                 key={item.id}
+                data-testid={`history-card-${item.id}`}
                 className={`p-5 rounded-3xl border transition-all ${
                   isLight
                     ? 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
@@ -528,7 +854,7 @@ export function InterviewSetupView({
                     </h4>
                   </div>
                   <div className="px-2.5 py-1 rounded-xl text-xs font-black bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 border border-cyan-500/20">
-                    {item.score}% ({item.grade})
+                    {item.report?.accuracyPercent ?? item.score}% Acc
                   </div>
                 </div>
 
@@ -540,6 +866,7 @@ export function InterviewSetupView({
 
                 <button
                   onClick={() => onViewReport(item.report)}
+                  data-testid={`view-report-btn-${item.id}`}
                   className={`w-full py-2.5 rounded-xl text-xs font-bold border transition-all flex items-center justify-center gap-1.5 ${
                     isLight
                       ? 'bg-slate-100 hover:bg-slate-200 border-slate-300 text-slate-800'
@@ -547,7 +874,7 @@ export function InterviewSetupView({
                   }`}
                 >
                   <BarChart3 className="w-3.5 h-3.5" />
-                  <span>View Detailed Report</span>
+                  <span>View Factual Scorecard</span>
                 </button>
               </div>
             ))}
