@@ -2,186 +2,209 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Github, Twitter, Linkedin, Youtube } from 'lucide-react';
-import { useSettings } from '@/src/context/SettingsContext';
+import { radius, colors } from '@/src/design';
+import { Badge } from '@/src/components/ui/Badge';
 
 export function LandingFooter() {
-  const { settings } = useSettings();
-  const isLight = settings?.appearance?.theme === 'light';
-
   return (
-    <footer className={`border-t text-xs transition-colors duration-200 ${
-      isLight 
-        ? 'border-slate-200 bg-slate-50 text-slate-600' 
-        : 'border-slate-800/80 bg-[#06090F] text-slate-400'
-    }`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-          
-          {/* Brand Col */}
-          <div className="md:col-span-4 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className={`flex h-7 w-7 items-center justify-center rounded-lg border ${
-                isLight 
-                  ? 'bg-sky-50 border-sky-200 text-sky-600' 
-                  : 'bg-sky-500/10 border-sky-500/30 text-sky-400'
-              }`}>
-                <span className="text-xs font-bold">▲</span>
-              </div>
-              <span className={`text-sm font-extrabold tracking-wider ${
-                isLight ? 'text-slate-900' : 'text-white'
-              }`}>
-                DSA <span className={isLight ? 'text-sky-600' : 'text-sky-400'}>MASTER</span>
+    <footer
+      style={{
+        borderTop: '1px solid var(--border)',
+        backgroundColor: 'var(--bg)',
+        padding: '56px 20px 36px 20px',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '40px',
+        }}
+      >
+        {/* Top footer grid */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '32px',
+          }}
+        >
+          {/* Brand & Platform Status */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <Link
+              href="/"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                textDecoration: 'none',
+              }}
+            >
+              <span
+                style={{
+                  fontSize: '15px',
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em',
+                  color: 'var(--text-primary)',
+                  fontFamily: 'var(--font-sans)',
+                }}
+              >
+                DSA <span style={{ color: 'var(--accent)' }}>MASTER</span>
               </span>
             </Link>
-            <div className={`text-xs leading-relaxed space-y-1.5 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-              <p className={`font-semibold ${isLight ? 'text-slate-800' : 'text-slate-300'}`}>LEARN · PRACTICE · TRACK · CRACK</p>
-              <p className={`italic ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>&ldquo;You don&apos;t have to figure it all out alone.&rdquo;</p>
-              <p className={`text-[11px] pt-1 ${isLight ? 'text-slate-500' : 'text-slate-500'}`}>A companion for your daily problem-solving journey.</p>
+
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: 0, lineHeight: 1.5 }}>
+              The developer-grade platform for mastering Data Structures & Algorithms one pattern at a time.
+            </p>
+
+            <div style={{ marginTop: '4px' }}>
+              <Badge variant="success" dot size="sm">
+                Systems Operational • 4,000 Problems
+              </Badge>
             </div>
           </div>
 
-          {/* Product Col */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-900' : 'text-white'}`}>Product</h4>
-            <ul className="space-y-2">
+          {/* Column 1: Platform Navigation */}
+          <div>
+            <span
+              style={{
+                fontSize: '11px',
+                fontWeight: 700,
+                color: 'var(--text-muted)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                display: 'block',
+                marginBottom: '14px',
+              }}
+            >
+              Core Platform
+            </span>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px' }}>
               <li>
-                <Link href="/learn" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Structured Roadmap
+                <Link href="/dashboard" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Command Center
                 </Link>
               </li>
               <li>
-                <Link href="/practice" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
+                <Link href="/journey" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Curriculum Journey
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
                   Practice Arena
                 </Link>
               </li>
               <li>
-                <Link href="/analytics" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Intelligent Analytics
+                <Link href="/interview" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Interview Arena
                 </Link>
               </li>
               <li>
-                <Link href="/revision" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Smart Revision
-                </Link>
-              </li>
-              <li>
-                <Link href="/mentor" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  AI Mentor
+                <Link href="/study-plan" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Daily Study Planner
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Platform / Account Col */}
-          <div className="md:col-span-2 space-y-3">
-            <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-900' : 'text-white'}`}>Platform</h4>
-            <ul className="space-y-2">
+          {/* Column 2: Supported Sources */}
+          <div>
+            <span
+              style={{
+                fontSize: '11px',
+                fontWeight: 700,
+                color: 'var(--text-muted)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                display: 'block',
+                marginBottom: '14px',
+              }}
+            >
+              Curriculum Sources
+            </span>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px' }}>
               <li>
-                <a href="#features" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#how-it-works" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  How It Works
-                </a>
-              </li>
-              <li>
-                <a href="#why-dsa-master" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Why DSA Master
-                </a>
-              </li>
-              <li>
-                <Link href="/login" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Login
+                <Link href="/practice" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  LeetCode (1,000 problems)
                 </Link>
               </li>
               <li>
-                <Link href="/signup" className={`transition-colors ${isLight ? 'hover:text-sky-600' : 'hover:text-sky-400'}`}>
-                  Sign Up
+                <Link href="/practice" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Codeforces (1,000 problems)
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  CodeChef (1,000 problems)
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  GeeksForGeeks (1,000 problems)
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Community / Legal Col */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-900' : 'text-white'}`}>Connect & Trust</h4>
-            <p className={`text-xs ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-              Build problem-solving ability with consistency and clarity.
-            </p>
-            <div className="flex items-center gap-3 pt-1">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className={`flex h-8 w-8 items-center justify-center rounded-lg border transition ${
-                  isLight
-                    ? 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
-                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
-                }`}
-                aria-label="GitHub"
-              >
-                <Github className="h-4 w-4" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                className={`flex h-8 w-8 items-center justify-center rounded-lg border transition ${
-                  isLight
-                    ? 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
-                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
-                }`}
-                aria-label="Twitter"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                className={`flex h-8 w-8 items-center justify-center rounded-lg border transition ${
-                  isLight
-                    ? 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
-                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
-                }`}
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                className={`flex h-8 w-8 items-center justify-center rounded-lg border transition ${
-                  isLight
-                    ? 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
-                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
-                }`}
-                aria-label="YouTube"
-              >
-                <Youtube className="h-4 w-4" />
-              </a>
-            </div>
-            <div className={`pt-2 flex items-center gap-4 text-[11px] ${isLight ? 'text-slate-500' : 'text-slate-500'}`}>
-              <a href="#privacy" className="hover:underline">Privacy Policy</a>
-              <span>·</span>
-              <a href="#terms" className="hover:underline">Terms of Service</a>
-            </div>
+          {/* Column 3: Developer Resources */}
+          <div>
+            <span
+              style={{
+                fontSize: '11px',
+                fontWeight: 700,
+                color: 'var(--text-muted)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                display: 'block',
+                marginBottom: '14px',
+              }}
+            >
+              Developer Resources
+            </span>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px' }}>
+              <li>
+                <Link href="/design-system" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Design System Catalog
+                </Link>
+              </li>
+              <li>
+                <Link href="/login" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Developer Sign In
+                </Link>
+              </li>
+              <li>
+                <Link href="/signup" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+                  Create Account
+                </Link>
+              </li>
+            </ul>
           </div>
-
         </div>
 
-        {/* Bottom Sub-bar */}
-        <div className={`mt-12 flex flex-col sm:flex-row items-center justify-between border-t pt-6 text-[11px] gap-3 ${
-          isLight 
-            ? 'border-slate-200 text-slate-500' 
-            : 'border-slate-800/80 text-slate-500'
-        }`}>
-          <div>© 2026 DSA Master. All rights reserved.</div>
-          <div className={`font-medium ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>Code Today. A Better Tomorrow.</div>
+        {/* Bottom copyright & attribution */}
+        <div
+          style={{
+            borderTop: '1px solid var(--border)',
+            paddingTop: '24px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '12px',
+            fontSize: '12px',
+            color: 'var(--text-muted)',
+          }}
+        >
+          <span>
+            © {new Date().getFullYear()} DSA MASTER. High-performance developer platform.
+          </span>
+
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
+            v2.0-RELEASE // 25 AREAS // 113 PATTERNS
+          </span>
         </div>
       </div>
     </footer>
