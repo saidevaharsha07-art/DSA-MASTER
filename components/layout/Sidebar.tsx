@@ -64,6 +64,7 @@ export function Sidebar({
   if (!mounted) {
     return (
       <aside
+        className="hidden md:block"
         style={{
           width: collapsedWidth,
           flexShrink: 0,
@@ -79,6 +80,7 @@ export function Sidebar({
     <>
       {/* Outer fixed placeholder on desktop so main page layout NEVER jumps or compresses */}
       <div
+        className={isMobileOpen ? "block" : "hidden md:block"}
         style={{
           width: isMobileOpen ? 0 : collapsedWidth,
           flexShrink: 0,
