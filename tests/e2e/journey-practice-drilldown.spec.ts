@@ -167,4 +167,163 @@ test.describe('DSA MASTER — Curriculum Taxonomy & Cross-Module Verification', 
     await page.waitForTimeout(400);
   });
 
+  // ── 4. VERIFY /journey MAIN CURRICULUM KNOWLEDGE MAP & 25 AREAS ────────────
+  test('4. /journey renders hero, telemetry HUD, 5-step hierarchy, and all 5 curriculum bands covering 25 areas', async ({ page }) => {
+    await page.goto('/journey');
+    await page.waitForLoadState('networkidle');
+
+    // Verify Hero title & subtitle
+    await expect(page.locator('h1')).toContainText(/Your DSA Journey/i);
+    await expect(page.getByText(/25 learning areas\. 113 patterns/i)).toBeVisible();
+
+    // Verify Telemetry HUD
+    await expect(page.getByText(/Solved/i).first()).toBeVisible();
+    await expect(page.getByText(/Patterns/i).first()).toBeVisible();
+    await expect(page.getByText(/Areas Active/i).first()).toBeVisible();
+    await expect(page.getByText(/Curriculum/i).first()).toBeVisible();
+
+    // Verify 5-Step Progressive Navigation Hierarchy Strip
+    await expect(page.getByText(/Curriculum Navigation Hierarchy/i)).toBeVisible();
+    await expect(page.getByText(/Learning Area/i).first()).toBeVisible();
+    await expect(page.getByText(/Subtopic/i).first()).toBeVisible();
+    await expect(page.getByText(/Pattern/i).first()).toBeVisible();
+    await expect(page.getByText(/Learn/i).first()).toBeVisible();
+    await expect(page.getByText(/Practice/i).first()).toBeVisible();
+
+    // Verify All 5 Curriculum Bands Exist
+    await expect(page.getByRole('heading', { name: /Foundations/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Pattern Building/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Data Structures/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Algorithmic Thinking/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Advanced Algorithms/i })).toBeVisible();
+
+    // Verify 25 Area Cards exist across the page
+    const areaLinks = page.locator('a[href^="/journey/"]');
+    const count = await areaLinks.count();
+    expect(count).toBeGreaterThanOrEqual(25);
+  });
+
+  // ── 5. VERIFY /journey SEARCH & FILTER MECHANICS ───────────────────────────
+  test('5. /journey search filters areas, subtopics, and patterns with shortcut support', async ({ page }) => {
+    await page.goto('/journey');
+    await page.waitForLoadState('networkidle');
+
+    const searchInput = page.locator('input[placeholder*="Search 25 areas"]');
+    await expect(searchInput).toBeVisible();
+
+    // 1. Search by Area name: "Array"
+    await searchInput.fill('Array');
+    await page.waitForTimeout(300);
+    await expect(page.locator('text=Showing').first()).toBeVisible();
+    await expect(page.locator('a[href="/journey/basic-arrays"]').first()).toBeVisible();
+
+    // 2. Clear search
+    await page.locator('button[aria-label="Clear search query"]').click();
+    await page.waitForTimeout(200);
+
+    // 3. Search by Subtopic name: "array-traversal"
+    await searchInput.fill('traversal');
+    await page.waitForTimeout(300);
+    await expect(page.locator('a[href="/journey/basic-arrays"]').first()).toBeVisible();
+
+    // 4. Search by Pattern name: "Kadane"
+    await searchInput.fill('Kadane');
+    await page.waitForTimeout(300);
+    await expect(page.locator('a[href="/journey/basic-arrays"]').first()).toBeVisible();
+
+    // 5. Test band filter button: "Foundations"
+    await page.locator('button[aria-label="Clear search query"]').click();
+    const foundationsTab = page.locator('button', { hasText: 'Foundations' });
+    await foundationsTab.click();
+    await page.waitForTimeout(300);
+    await expect(page.locator('text=Showing 5 of 25 areas')).toBeVisible();
+    await expect(page.locator('a[href="/journey/basic-arrays"]').first()).toBeVisible();
+    await expect(page.locator('a[href="/journey/strings"]').first()).toBeVisible();
+  });
+
+  // ── 6. VERIFY DRILLDOWN, PROGRESSIVE DISCLOSURE, & PATTERN CTAS ─────────────
+  test('6. /journey to /journey/[area] navigation with accordions, Learn and Practice CTAs', async ({ page }) => {
+    await page.goto('/journey');
+    await page.waitForLoadState('networkidle');
+
+    // Click into Array area
+    const exploreArray = page.locator('a[href="/journey/basic-arrays"]').first();
+    await exploreArray.click();
+    await page.waitForURL('**/journey/basic-arrays');
+    expect(page.url()).toContain('/journey/basic-arrays');
+
+    // Verify breadcrumb back link
+    const backLink = page.getByText(/Back to Learning Areas/i);
+    await expect(backLink).toBeVisible();
+
+    // Verify subtopic accordion toggle
+    const subtopicHeader = page.locator('text=Subtopic #1').first();
+    await expect(subtopicHeader).toBeVisible();
+
+    // Verify pattern actions exist in subtopic
+    const learnBtn = page.locator('a:has-text("Learn Pattern")').first();
+    await expect(learnBtn).toBeVisible();
+    const practiceBtn = page.locator('a:has-text("Practice")').first();
+    await expect(practiceBtn).toBeVisible();
+
+    // Click "Learn Pattern" and verify it navigates to Academy
+    await learnBtn.click();
+    await page.waitForURL((url) => url.pathname.startsWith('/journey/basic-arrays/'));
+    expect(page.url()).toMatch(/\/journey\/basic-arrays\/[^/]+\/[^/]+/);
+  });
+
+  // ── 7. VERIFY VIEW MODE TOGGLE (Curriculum vs Adaptive Graph) ──────────────
+  test('7. /journey view mode toggles between Curriculum Map and Adaptive Graph', async ({ page }) => {
+    await page.goto('/journey');
+    await page.waitForLoadState('networkidle');
+
+    // Initially in Curriculum mode
+    await expect(page.getByRole('heading', { name: /Foundations/i })).toBeVisible();
+
+    // Switch to Adaptive Graph mode
+    const adaptiveBtn = page.locator('button', { hasText: 'Adaptive Graph' });
+    await adaptiveBtn.click();
+    await page.waitForTimeout(400);
+
+    // Verify Adaptive components rendered (Momentum / 7-Day Plan)
+    await expect(page.getByText(/Learning Momentum/i).or(page.getByText(/Personal 7-Day Learning Plan/i)).first()).toBeVisible();
+
+    // Switch back to Curriculum mode
+    const curriculumBtn = page.locator('button', { hasText: 'Curriculum' });
+    await curriculumBtn.click();
+    await page.waitForTimeout(400);
+    await expect(page.getByRole('heading', { name: /Foundations/i })).toBeVisible();
+  });
+
+  // ── 8. RESPONSIVE LAYOUT & ZERO HORIZONTAL OVERFLOW ACROSS VIEWPORTS ────────
+  test('8. /journey and /journey/[area] responsive layout with zero horizontal overflow', async ({ page }) => {
+    const viewports = [
+      { width: 375, height: 812, name: 'Mobile' },
+      { width: 768, height: 1024, name: 'Tablet Portrait' },
+      { width: 1024, height: 768, name: 'Tablet Landscape' },
+      { width: 1440, height: 900, name: 'Desktop' },
+    ];
+
+    for (const vp of viewports) {
+      await page.setViewportSize({ width: vp.width, height: vp.height });
+
+      // 1. Test /journey
+      await page.goto('/journey');
+      await page.waitForLoadState('networkidle');
+      const journeyOverflow = await page.evaluate(() => {
+        return document.documentElement.scrollWidth > window.innerWidth;
+      });
+      expect(journeyOverflow, `/journey has horizontal overflow on ${vp.name} (${vp.width}x${vp.height})`).toBe(false);
+
+      // 2. Test /journey/basic-arrays
+      await page.goto('/journey/basic-arrays');
+      await page.waitForLoadState('networkidle');
+      const areaOverflow = await page.evaluate(() => {
+        return document.documentElement.scrollWidth > window.innerWidth;
+      });
+      expect(areaOverflow, `/journey/basic-arrays has horizontal overflow on ${vp.name} (${vp.width}x${vp.height})`).toBe(false);
+    }
+  });
+
 });
+
