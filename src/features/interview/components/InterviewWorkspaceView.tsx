@@ -2,36 +2,23 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
-  Timer,
-  Play,
-  Pause,
-  CheckCircle2,
-  AlertCircle,
-  XCircle,
-  ChevronLeft,
-  ChevronRight,
-  RotateCcw,
-  Send,
-  Code2,
   FileText,
-  Lightbulb,
-  AlertTriangle,
-  Zap,
-  Terminal,
-  Clock,
-  Loader2,
-  Check,
-  Maximize2,
-  Minimize2,
-  HelpCircle,
-  Eye,
-  EyeOff,
   Brain,
   ListChecks,
-  CheckSquare,
-  Square,
+  Code2,
+  Terminal,
+  Play,
+  Send,
+  RotateCcw,
+  Lightbulb,
+  Eye,
+  EyeOff,
+  Pause,
+  AlertTriangle,
+  Loader2,
+  Check,
 } from 'lucide-react';
 import {
   InterviewArenaSession,
@@ -40,62 +27,20 @@ import {
 } from '../types/interview.types';
 import { InterviewArenaService } from '../services/interview-arena.service';
 import { TemplateService } from '@/src/problems/services/template.service';
+import { InterviewWorkspaceHeader } from './InterviewWorkspaceHeader';
+import { InterviewThinkingPanel } from './InterviewThinkingPanel';
+import { InterviewerChecklist } from './InterviewerChecklist';
 
-// Dynamically import Monaco Editor with fallback for SSR
+// Dynamically import Monaco Editor
 const Editor = dynamic(() => import('@monaco-editor/react'), {
   ssr: false,
   loading: () => (
-    <div className="h-full w-full flex flex-col items-center justify-center text-xs text-slate-400 gap-2 bg-slate-950">
+    <div className="h-full w-full flex flex-col items-center justify-center text-xs text-slate-400 gap-2 bg-slate-950 font-mono">
       <Loader2 className="w-5 h-5 animate-spin text-cyan-400" />
-      <span>Initializing Code Editor...</span>
+      <span>Loading Code Editor...</span>
     </div>
   ),
 });
-
-const INTERVIEW_GUIDANCE_MILESTONES = [
-  {
-    id: 'clarify',
-    title: '1. Clarify Constraints & I/O',
-    desc: 'Verify input types, bounds, return shape, duplicates, and empty/null scenarios with the interviewer.',
-  },
-  {
-    id: 'verbalize',
-    title: '2. Verbalize Naive vs Optimal Approach',
-    desc: 'Explain the straightforward brute force approach first, then explain the pattern intuition for optimal solution.',
-  },
-  {
-    id: 'complexity',
-    title: '3. State Big-O Bounds Upfront',
-    desc: 'State target Time and Space complexity before writing code to validate algorithmic alignment.',
-  },
-  {
-    id: 'edge_cases',
-    title: '4. Brainstorm Critical Edge Cases',
-    desc: 'List single-element, sorted/reverse, duplicates, negative numbers, and boundary capacity cases.',
-  },
-  {
-    id: 'dry_run',
-    title: '5. Dry-Run & Clean Code',
-    desc: 'Manually trace step-by-step through a concrete example before running tests.',
-  },
-];
-
-const TIME_COMPLEXITY_OPTIONS = [
-  'O(1)',
-  'O(log N)',
-  'O(N)',
-  'O(N log N)',
-  'O(N^2)',
-  'O(2^N)',
-  'O(N!)',
-];
-
-const SPACE_COMPLEXITY_OPTIONS = [
-  'O(1)',
-  'O(log N)',
-  'O(N)',
-  'O(N^2)',
-];
 
 interface InterviewWorkspaceViewProps {
   isLight: boolean;
@@ -215,20 +160,12 @@ export function InterviewWorkspaceView({
     return () => clearInterval(interval);
   }, [isPaused, onFinishInterview]);
 
-  // Format Timer string MM:SS
+  // Format Time MM:SS
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
-
-  // Timer State classification: normal, warning, critical
-  const timerState =
-    remainingSeconds <= 60
-      ? 'critical'
-      : remainingSeconds <= 300
-      ? 'warning'
-      : 'normal';
 
   // Toggle Pause
   const handleTogglePause = () => {
@@ -411,118 +348,24 @@ export function InterviewWorkspaceView({
       className="flex flex-col h-[calc(100vh-4.5rem)] max-w-full mx-auto overflow-hidden rounded-2xl border shadow-xl border-slate-200 dark:border-slate-800 relative"
       data-testid="interview-workspace-view"
     >
-      {/* 1. TOP HEADER & TIMER BAR */}
-      <header
-        className={`px-4 py-2.5 border-b flex flex-wrap items-center justify-between gap-3 shrink-0 ${
-          isLight ? 'bg-white border-slate-200' : 'bg-slate-900 border-slate-800'
-        }`}
-      >
-        {/* Left: Branding & Config Metadata */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2">
-            <span
-              className={`w-2.5 h-2.5 rounded-full ${
-                isPaused ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'
-              }`}
-            />
-            <h2 className={`font-black text-xs sm:text-sm tracking-wide ${isLight ? 'text-slate-900' : 'text-white'}`}>
-              INTERVIEW ARENA
-            </h2>
-          </div>
-          <span className="hidden sm:inline text-slate-500">•</span>
-          <span className="hidden sm:inline-flex text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-            {session.config.type || session.config.mode}
-          </span>
-          {session.config.targetCompany && (
-            <span className="hidden md:inline-flex text-[11px] font-bold px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-500 dark:text-purple-400 border border-purple-500/20">
-              {session.config.targetCompany}
-            </span>
-          )}
-          <span className="hidden md:inline-flex text-[11px] font-semibold px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-500 dark:text-amber-400 border border-amber-500/20">
-            {session.config.difficulty}
-          </span>
-        </div>
+      {/* 1. TOP RESTRAINED INTERVIEW HEADER */}
+      <InterviewWorkspaceHeader
+        isLight={isLight}
+        session={session}
+        activeIndex={activeIndex}
+        onSelectProblem={setActiveIndex}
+        remainingSeconds={remainingSeconds}
+        isPaused={isPaused}
+        onTogglePause={handleTogglePause}
+        onOpenFinishModal={() => setShowFinishConfirm(true)}
+      />
 
-        {/* Middle: Problem Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 max-w-full" data-testid="problem-tabs-container">
-          {session.problems.map((p, idx) => {
-            const isCurrent = idx === activeIndex;
-            return (
-              <button
-                key={p.problemId}
-                onClick={() => setActiveIndex(idx)}
-                data-testid={`problem-tab-${idx + 1}`}
-                className={`px-3 py-1 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 border shrink-0 ${
-                  isCurrent
-                    ? isLight
-                      ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                      : 'bg-cyan-500 text-slate-950 border-cyan-500 font-black'
-                    : isLight
-                    ? 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
-                    : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:bg-slate-700'
-                }`}
-              >
-                <span>P{idx + 1}</span>
-                {p.status === 'passed' && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400/20" />}
-                {p.status === 'failed' && <XCircle className="w-3.5 h-3.5 text-rose-400 fill-rose-400/20" />}
-                {p.status === 'unattempted' && <span className="w-1.5 h-1.5 rounded-full bg-slate-500" />}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Right: Real Countdown Timer & Controls */}
-        <div className="flex items-center gap-2">
-          {/* Pause / Resume Button */}
-          <button
-            onClick={handleTogglePause}
-            data-testid="pause-resume-btn"
-            className={`p-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1 ${
-              isPaused
-                ? 'bg-amber-500/20 border-amber-500/40 text-amber-500 dark:text-amber-400'
-                : isLight
-                ? 'bg-slate-100 hover:bg-slate-200 border-slate-200 text-slate-700'
-                : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-300'
-            }`}
-            title={isPaused ? 'Resume Interview' : 'Pause Interview'}
-          >
-            {isPaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5" />}
-            <span className="hidden sm:inline">{isPaused ? 'Resume' : 'Pause'}</span>
-          </button>
-
-          {/* Timer Display */}
-          <div
-            data-testid="interview-timer"
-            className={`px-3 py-1 rounded-xl border flex items-center gap-1.5 font-mono font-black text-xs sm:text-sm tracking-wider transition-all ${
-              timerState === 'critical'
-                ? 'bg-rose-500/20 text-rose-400 border-rose-500/40 animate-pulse ring-2 ring-rose-500/30'
-                : timerState === 'warning'
-                ? 'bg-amber-500/20 text-amber-500 dark:text-amber-400 border-amber-500/40 animate-pulse'
-                : isLight
-                ? 'bg-slate-100 text-slate-800 border-slate-200'
-                : 'bg-slate-800/80 text-cyan-400 border-slate-700'
-            }`}
-          >
-            <Timer className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>{formatTime(remainingSeconds)}</span>
-          </div>
-
-          {/* Finish Button */}
-          <button
-            onClick={() => setShowFinishConfirm(true)}
-            data-testid="finish-interview-btn"
-            className="px-3 py-1.5 rounded-xl text-xs font-bold bg-rose-500/10 text-rose-500 dark:text-rose-400 border border-rose-500/20 hover:bg-rose-500/20 transition-all shrink-0"
-          >
-            Finish
-          </button>
-        </div>
-      </header>
-
-      {/* MOBILE VIEWPORT TAB SWITCHER (<1024px) */}
+      {/* MOBILE TAB CONTROLS (<1024px) */}
       <div className="flex lg:hidden border-b border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 shrink-0 text-xs overflow-x-auto">
         <button
+          type="button"
           onClick={() => setMobileTab('specs')}
-          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+          className={`px-3 py-2 font-mono font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'specs'
               ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
               : 'border-transparent text-slate-500'
@@ -531,18 +374,20 @@ export function InterviewWorkspaceView({
           Problem Specs
         </button>
         <button
+          type="button"
           onClick={() => setMobileTab('thinking')}
-          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+          className={`px-3 py-2 font-mono font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'thinking'
               ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
               : 'border-transparent text-slate-500'
           }`}
         >
-          Thinking & Notes
+          Approach & Notes
         </button>
         <button
+          type="button"
           onClick={() => setMobileTab('guidance')}
-          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+          className={`px-3 py-2 font-mono font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'guidance'
               ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
               : 'border-transparent text-slate-500'
@@ -551,8 +396,9 @@ export function InterviewWorkspaceView({
           Guidance ({guidanceCompleted.length}/5)
         </button>
         <button
+          type="button"
           onClick={() => setMobileTab('editor')}
-          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+          className={`px-3 py-2 font-mono font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'editor'
               ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
               : 'border-transparent text-slate-500'
@@ -561,8 +407,9 @@ export function InterviewWorkspaceView({
           Code Editor
         </button>
         <button
+          type="button"
           onClick={() => setMobileTab('console')}
-          className={`px-3 py-2 font-bold border-b-2 whitespace-nowrap ${
+          className={`px-3 py-2 font-mono font-bold border-b-2 whitespace-nowrap ${
             mobileTab === 'console'
               ? 'border-cyan-500 text-cyan-500 bg-white dark:bg-slate-950'
               : 'border-transparent text-slate-500'
@@ -572,25 +419,26 @@ export function InterviewWorkspaceView({
         </button>
       </div>
 
-      {/* 2. MAIN SPLIT WORKSPACE */}
+      {/* 2. TWO-PANE INTERVIEW WORKSPACE */}
       <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
-        {/* PAUSED OVERLAY IF PAUSED (PREVENT CHEATING) */}
+        {/* PAUSED OVERLAY IF PAUSED (PREVENTS CHEATING) */}
         {isPaused && (
           <div
             data-testid="interview-paused-overlay"
-            className="absolute inset-0 z-40 bg-slate-950/80 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center space-y-4"
+            className="absolute inset-0 z-40 bg-slate-950/85 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center space-y-4 select-none"
           >
-            <div className="p-4 rounded-3xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
-              <Pause className="w-10 h-10" />
+            <div className="p-4 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
+              <Pause className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-black text-white">Interview Paused</h3>
+            <h3 className="text-2xl font-black text-white font-mono tracking-wide">Interview Paused</h3>
             <p className="text-xs sm:text-sm text-slate-400 max-w-md">
-              The countdown timer and editor are suspended. Resume when you are ready to continue under exam conditions.
+              The clock and code editor are suspended. Resume when you are ready to continue under exam conditions.
             </p>
             <button
+              type="button"
               onClick={handleTogglePause}
               data-testid="resume-overlay-btn"
-              className="px-6 py-2.5 rounded-xl font-black text-sm bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25 flex items-center gap-2"
+              className="px-6 py-2.5 rounded-xl font-mono font-bold text-sm bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/25 flex items-center gap-2"
             >
               <Play className="w-4 h-4 fill-current" />
               <span>Resume Interview</span>
@@ -598,25 +446,26 @@ export function InterviewWorkspaceView({
           </div>
         )}
 
-        {/* LEFT PANEL: PROBLEM / THINKING / GUIDANCE */}
+        {/* LEFT PANE: PROBLEM STATEMENT / THINKING / GUIDANCE */}
         <div
           className={`lg:w-1/2 flex flex-col border-b lg:border-b-0 lg:border-r overflow-hidden ${
             mobileTab === 'specs' || mobileTab === 'thinking' || mobileTab === 'guidance'
               ? 'flex'
               : 'hidden lg:flex'
-          } ${isLight ? 'bg-slate-50 border-slate-200 text-slate-900' : 'bg-slate-950 border-slate-800 text-slate-100'}`}
+          } ${isLight ? 'bg-slate-50/60 border-slate-200 text-slate-900' : 'bg-slate-950 border-slate-800 text-slate-100'}`}
         >
           {/* Sub-Header Tabs (Desktop) */}
           <div
             className={`hidden lg:flex px-4 py-2 border-b items-center justify-between shrink-0 ${
-              isLight ? 'bg-white border-slate-200' : 'bg-slate-900/60 border-slate-800'
+              isLight ? 'bg-white border-slate-200' : 'bg-slate-900/70 border-slate-800'
             }`}
           >
-            <div className="flex items-center gap-1 text-xs">
+            <div className="flex items-center gap-1 text-xs font-mono">
               <button
+                type="button"
                 onClick={() => setLeftTab('specs')}
                 data-testid="tab-specs"
-                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                className={`px-3 py-1.5 rounded-lg font-bold transition-colors flex items-center gap-1.5 ${
                   leftTab === 'specs'
                     ? isLight
                       ? 'bg-slate-200 text-slate-900'
@@ -629,9 +478,10 @@ export function InterviewWorkspaceView({
               </button>
 
               <button
+                type="button"
                 onClick={() => setLeftTab('thinking')}
                 data-testid="tab-thinking"
-                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                className={`px-3 py-1.5 rounded-lg font-bold transition-colors flex items-center gap-1.5 ${
                   leftTab === 'thinking'
                     ? isLight
                       ? 'bg-slate-200 text-slate-900'
@@ -647,9 +497,10 @@ export function InterviewWorkspaceView({
               </button>
 
               <button
+                type="button"
                 onClick={() => setLeftTab('guidance')}
                 data-testid="tab-guidance"
-                className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+                className={`px-3 py-1.5 rounded-lg font-bold transition-colors flex items-center gap-1.5 ${
                   leftTab === 'guidance'
                     ? isLight
                       ? 'bg-slate-200 text-slate-900'
@@ -666,20 +517,20 @@ export function InterviewWorkspaceView({
             </div>
 
             {notesSavedIndicator && (
-              <span className="text-[10px] text-emerald-400 font-bold flex items-center gap-1">
+              <span className="text-[10px] text-emerald-400 font-bold font-mono flex items-center gap-1">
                 <Check className="w-3 h-3" /> Saved
               </span>
             )}
           </div>
 
-          {/* LEFT CONTENT AREA */}
+          {/* LEFT CONTENT CONTAINER */}
           <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-6">
             {/* 1. PROBLEM SPECS VIEW */}
             {(leftTab === 'specs' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'specs')) && (
-              <div className="space-y-6 max-w-2xl mx-auto w-full">
-                {/* Title & Pattern Concealment Banner */}
-                <div className="space-y-2">
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
+              <div className="space-y-5 max-w-2xl mx-auto w-full">
+                {/* Problem Header with Pattern Concealment */}
+                <div className="space-y-1.5">
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
                     <span className="font-bold text-cyan-500 dark:text-cyan-400">
                       Problem {activeIndex + 1} of {session.problems.length}
                     </span>
@@ -700,16 +551,17 @@ export function InterviewWorkspaceView({
                     {/* REALISTIC PATTERN CONCEALMENT */}
                     {shouldConcealPattern ? (
                       <div className="flex items-center gap-1.5" data-testid="pattern-concealed-badge">
-                        <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center gap-1">
+                        <span className="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center gap-1">
                           <EyeOff className="w-3 h-3" />
-                          Pattern Concealed (Realistic Mode)
+                          Pattern Concealed
                         </span>
                         <button
+                          type="button"
                           onClick={handleRevealPattern}
                           data-testid="reveal-pattern-btn"
-                          className="text-[10px] font-bold text-amber-500 hover:underline"
+                          className="text-[11px] font-bold text-amber-500 hover:underline"
                         >
-                          Reveal Hint
+                          Need a hint?
                         </button>
                       </div>
                     ) : (
@@ -728,22 +580,22 @@ export function InterviewWorkspaceView({
                   </h1>
                 </div>
 
-                {/* Description */}
-                <div className={`text-xs sm:text-sm leading-relaxed whitespace-pre-wrap ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
+                {/* Problem Description */}
+                <div className={`text-xs sm:text-sm leading-relaxed whitespace-pre-wrap font-normal ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
                   {currentProblem.description}
                 </div>
 
                 {/* Examples */}
                 {currentProblem.examples && currentProblem.examples.length > 0 && (
-                  <div className="space-y-3">
-                    <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+                  <div className="space-y-2.5">
+                    <h4 className={`text-xs font-mono font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
                       Examples
                     </h4>
                     {currentProblem.examples.map((ex, idx) => (
                       <div
                         key={idx}
-                        className={`p-3.5 rounded-xl border text-xs font-mono space-y-1.5 ${
-                          isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-slate-900/80 border-slate-800'
+                        className={`p-3 rounded-xl border text-xs font-mono space-y-1 ${
+                          isLight ? 'bg-white border-slate-200/80 shadow-sm' : 'bg-slate-900/70 border-slate-800'
                         }`}
                       >
                         <div>
@@ -753,7 +605,7 @@ export function InterviewWorkspaceView({
                           <span className="text-emerald-500 dark:text-emerald-400 font-bold">Output:</span> {ex.output}
                         </div>
                         {ex.explanation && (
-                          <div className="text-slate-500 dark:text-slate-400 font-sans text-xs pt-1">
+                          <div className="text-slate-500 dark:text-slate-400 font-sans text-xs pt-0.5">
                             <strong>Explanation:</strong> {ex.explanation}
                           </div>
                         )}
@@ -765,7 +617,7 @@ export function InterviewWorkspaceView({
                 {/* Constraints */}
                 {currentProblem.constraints && currentProblem.constraints.length > 0 && (
                   <div className="space-y-2">
-                    <h4 className={`text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
+                    <h4 className={`text-xs font-mono font-bold uppercase tracking-wider ${isLight ? 'text-slate-700' : 'text-slate-400'}`}>
                       Constraints
                     </h4>
                     <ul className="list-disc list-inside space-y-1 text-xs text-slate-500 dark:text-slate-400 font-mono">
@@ -778,8 +630,9 @@ export function InterviewWorkspaceView({
 
                 {/* Hints Section */}
                 {currentProblem.hints && currentProblem.hints.length > 0 && (
-                  <div className="pt-2">
+                  <div className="pt-2 border-t border-slate-200/60 dark:border-slate-800/60">
                     <button
+                      type="button"
                       onClick={() => {
                         setShowHints(!showHints);
                         if (!showHints) {
@@ -789,11 +642,11 @@ export function InterviewWorkspaceView({
                       className="flex items-center gap-1.5 text-xs font-bold text-amber-500 dark:text-amber-400 hover:underline transition-colors"
                     >
                       <Lightbulb className="w-3.5 h-3.5" />
-                      {showHints ? 'Hide Hints' : 'Request Interviewer Hint'}
+                      <span>{showHints ? 'Hide Hints' : 'Request Interviewer Hint'}</span>
                     </button>
                     {showHints && (
                       <div
-                        className={`mt-2 p-3.5 rounded-xl border text-xs leading-relaxed space-y-1.5 ${
+                        className={`mt-2 p-3 rounded-xl border text-xs leading-relaxed space-y-1 ${
                           isLight
                             ? 'bg-amber-50/80 border-amber-200 text-amber-900'
                             : 'bg-amber-950/20 border-amber-800/40 text-amber-300'
@@ -809,203 +662,63 @@ export function InterviewWorkspaceView({
               </div>
             )}
 
-            {/* 2. APPROACH & NOTES (THINKING PHASE) VIEW */}
+            {/* 2. APPROACH & NOTES (THINKING PHASE) */}
             {(leftTab === 'thinking' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'thinking')) && (
-              <div className="space-y-5 max-w-2xl mx-auto w-full" data-testid="thinking-phase-container">
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <h3 className={`text-sm font-black flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                      <Brain className="w-4 h-4 text-cyan-400" />
-                      Thinking & Approach Phase
-                    </h3>
-                    <span className="text-[10px] text-slate-500">Auto-saved to session scorecard</span>
-                  </div>
-                  <p className={`text-xs ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                    Outline your mental model, Big-O bounds, and boundary edge cases before diving into implementation.
-                  </p>
-                </div>
-
-                {/* Big-O Selectors */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                      Estimated Time Complexity
-                    </label>
-                    <select
-                      value={timeComplexity}
-                      data-testid="time-complexity-select"
-                      onChange={(e) => {
-                        const val = e.target.value;
-                        setTimeComplexity(val);
-                        handleSaveNotes(approachNotes, val, spaceComplexity, edgeCases);
-                      }}
-                      className={`w-full p-2 rounded-xl text-xs font-mono font-bold border outline-none cursor-pointer ${
-                        isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900 border-slate-700 text-cyan-400'
-                      }`}
-                    >
-                      <option value="">Select Expected Big-O Time...</option>
-                      {TIME_COMPLEXITY_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                      Estimated Space Complexity
-                    </label>
-                    <select
-                      value={spaceComplexity}
-                      data-testid="space-complexity-select"
-                      onChange={(e) => {
-                        const val = e.target.value;
-                        setSpaceComplexity(val);
-                        handleSaveNotes(approachNotes, timeComplexity, val, edgeCases);
-                      }}
-                      className={`w-full p-2 rounded-xl text-xs font-mono font-bold border outline-none cursor-pointer ${
-                        isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900 border-slate-700 text-cyan-400'
-                      }`}
-                    >
-                      <option value="">Select Expected Big-O Space...</option>
-                      {SPACE_COMPLEXITY_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Strategy Notes Textarea */}
-                <div>
-                  <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                    Algorithmic Approach & Invariant Notes
-                  </label>
-                  <textarea
-                    value={approachNotes}
-                    data-testid="approach-notes-input"
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      setApproachNotes(val);
-                      handleSaveNotes(val, timeComplexity, spaceComplexity, edgeCases);
-                    }}
-                    placeholder="e.g. Use a two-pointer window [left, right]. Expand right until duplicate found, then contract left..."
-                    rows={6}
-                    className={`w-full p-3 rounded-xl text-xs font-mono border outline-none leading-relaxed resize-y ${
-                      isLight
-                        ? 'bg-white border-slate-300 text-slate-900 placeholder:text-slate-400'
-                        : 'bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-600'
-                    }`}
-                  />
-                </div>
-
-                {/* Edge Cases Textarea */}
-                <div>
-                  <label className={`text-[11px] font-bold block mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                    Critical Edge Cases to Handle
-                  </label>
-                  <textarea
-                    value={edgeCases}
-                    data-testid="edge-cases-input"
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      setEdgeCases(val);
-                      handleSaveNotes(approachNotes, timeComplexity, spaceComplexity, val);
-                    }}
-                    placeholder="e.g. Empty string, single character, all identical characters, alternating pattern..."
-                    rows={3}
-                    className={`w-full p-3 rounded-xl text-xs font-mono border outline-none leading-relaxed resize-y ${
-                      isLight
-                        ? 'bg-white border-slate-300 text-slate-900 placeholder:text-slate-400'
-                        : 'bg-slate-900 border-slate-800 text-slate-100 placeholder:text-slate-600'
-                    }`}
-                  />
-                </div>
-              </div>
+              <InterviewThinkingPanel
+                isLight={isLight}
+                approachNotes={approachNotes}
+                onApproachNotesChange={(val) => {
+                  setApproachNotes(val);
+                  handleSaveNotes(val, timeComplexity, spaceComplexity, edgeCases);
+                }}
+                timeComplexity={timeComplexity}
+                onTimeComplexityChange={(val) => {
+                  setTimeComplexity(val);
+                  handleSaveNotes(approachNotes, val, spaceComplexity, edgeCases);
+                }}
+                spaceComplexity={spaceComplexity}
+                onSpaceComplexityChange={(val) => {
+                  setSpaceComplexity(val);
+                  handleSaveNotes(approachNotes, timeComplexity, val, edgeCases);
+                }}
+                edgeCases={edgeCases}
+                onEdgeCasesChange={(val) => {
+                  setEdgeCases(val);
+                  handleSaveNotes(approachNotes, timeComplexity, spaceComplexity, val);
+                }}
+                notesSavedIndicator={notesSavedIndicator}
+              />
             )}
 
-            {/* 3. INTERVIEWER GUIDANCE MILESTONES VIEW */}
+            {/* 3. INTERVIEWER GUIDANCE CHECKLIST */}
             {(leftTab === 'guidance' || (typeof window !== 'undefined' && window.innerWidth < 1024 && mobileTab === 'guidance')) && (
-              <div className="space-y-4 max-w-2xl mx-auto w-full" data-testid="interviewer-guidance-container">
-                <div>
-                  <h3 className={`text-sm font-black flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                    <ListChecks className="w-4 h-4 text-cyan-400" />
-                    Simulated Interviewer Milestones
-                  </h3>
-                  <p className={`text-xs mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                    Check off each communication milestone as you progress through this problem to mirror top-tier onsite evaluation.
-                  </p>
-                </div>
-
-                <div className="space-y-3">
-                  {INTERVIEW_GUIDANCE_MILESTONES.map((m) => {
-                    const isChecked = guidanceCompleted.includes(m.id);
-                    return (
-                      <div
-                        key={m.id}
-                        onClick={() => handleToggleGuidance(m.id)}
-                        data-testid={`guidance-item-${m.id}`}
-                        className={`p-3.5 rounded-2xl border cursor-pointer transition-all flex items-start gap-3 ${
-                          isChecked
-                            ? isLight
-                              ? 'bg-emerald-50/70 border-emerald-300'
-                              : 'bg-emerald-950/20 border-emerald-800/40'
-                            : isLight
-                            ? 'bg-white border-slate-200 hover:border-slate-300'
-                            : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
-                        }`}
-                      >
-                        <button
-                          type="button"
-                          className={`mt-0.5 shrink-0 ${isChecked ? 'text-emerald-500' : 'text-slate-400'}`}
-                        >
-                          {isChecked ? <CheckSquare className="w-4 h-4" /> : <Square className="w-4 h-4" />}
-                        </button>
-                        <div className="flex-1 min-w-0">
-                          <div
-                            className={`text-xs font-bold ${
-                              isChecked
-                                ? 'text-emerald-600 dark:text-emerald-400 line-through'
-                                : isLight
-                                ? 'text-slate-900'
-                                : 'text-slate-200'
-                            }`}
-                          >
-                            {m.title}
-                          </div>
-                          <div className={`text-[11px] mt-0.5 leading-relaxed ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                            {m.desc}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <InterviewerChecklist
+                isLight={isLight}
+                guidanceCompleted={guidanceCompleted}
+                onToggleGuidance={handleToggleGuidance}
+              />
             )}
           </div>
         </div>
 
-        {/* RIGHT PANEL: CODE EDITOR & CONSOLE */}
+        {/* RIGHT PANE: CODE EDITOR & CONSOLE OUTPUT */}
         <div
           className={`lg:w-1/2 flex flex-col ${
             mobileTab === 'editor' || mobileTab === 'console' ? 'flex' : 'hidden lg:flex'
           } ${isLight ? 'bg-white' : 'bg-slate-900'}`}
         >
-          {/* Editor Header Bar */}
+          {/* Editor Sub-Header Bar */}
           <div
             className={`px-4 py-2 border-b flex items-center justify-between shrink-0 ${
               isLight ? 'bg-slate-100 border-slate-200' : 'bg-slate-900/90 border-slate-800'
             }`}
           >
             <div className="flex items-center gap-2">
-              <Code2 className="w-4 h-4 text-cyan-400" />
+              <Code2 className="w-3.5 h-3.5 text-cyan-400" />
               <select
                 value={currentLanguage}
                 onChange={(e) => handleLanguageChange(e.target.value as InterviewLanguage)}
-                className={`text-xs font-bold rounded-lg px-2.5 py-1 border outline-none cursor-pointer ${
+                className={`text-xs font-mono font-bold rounded-lg px-2.5 py-1 border outline-none cursor-pointer ${
                   isLight
                     ? 'bg-white border-slate-300 text-slate-800'
                     : 'bg-slate-800 border-slate-700 text-slate-200'
@@ -1019,23 +732,22 @@ export function InterviewWorkspaceView({
               </select>
             </div>
 
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setShowResetConfirm(true)}
-                title="Reset to starter template"
-                className={`p-1.5 rounded-lg text-xs font-medium border transition-colors flex items-center gap-1 ${
-                  isLight
-                    ? 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
-                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'
-                }`}
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Reset</span>
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setShowResetConfirm(true)}
+              title="Reset code to clean starter template"
+              className={`px-2.5 py-1 rounded-lg text-xs font-mono font-medium border transition-colors flex items-center gap-1 ${
+                isLight
+                  ? 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'
+              }`}
+            >
+              <RotateCcw className="w-3 h-3" />
+              <span className="hidden sm:inline">Reset</span>
+            </button>
           </div>
 
-          {/* Monaco Editor Container */}
+          {/* Monaco Editor */}
           <div className="flex-1 relative overflow-hidden min-h-[220px]">
             <Editor
               height="100%"
@@ -1057,22 +769,23 @@ export function InterviewWorkspaceView({
             />
           </div>
 
-          {/* Execution Output Console */}
+          {/* Execution Output Console (Bottom) */}
           {executionOutput && (
             <div
               data-testid="execution-console-output"
-              className={`max-h-52 border-t overflow-y-auto p-3.5 font-mono text-xs ${
+              className={`max-h-48 border-t overflow-y-auto p-3 font-mono text-xs ${
                 isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-950 border-slate-800'
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <Terminal className="w-3.5 h-3.5 text-cyan-400" />
                   <span className="font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-[11px]">
                     {executionOutput.isSubmit ? 'Submission Verdict' : 'Run Output'}
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5">
+
+                <div className="flex items-center gap-2">
                   {executionOutput.runtimeMs !== undefined && (
                     <span className="text-slate-400 text-[11px]">{executionOutput.runtimeMs}ms</span>
                   )}
@@ -1107,24 +820,23 @@ export function InterviewWorkspaceView({
             </div>
           )}
 
-          {/* Bottom Action Controls Bar */}
+          {/* Bottom Actions Bar */}
           <footer
-            className={`px-4 py-3 border-t flex items-center justify-between shrink-0 gap-3 ${
+            className={`px-4 py-2.5 border-t flex items-center justify-between shrink-0 gap-3 ${
               isLight ? 'bg-slate-100 border-slate-200' : 'bg-slate-900 border-slate-800'
             }`}
           >
-            <div className="flex items-center gap-2 text-xs text-slate-500">
-              <span>
-                Elapsed: <strong>{formatTime(elapsedSeconds)}</strong>
-              </span>
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-500">
+              <span>Elapsed: <strong>{formatTime(elapsedSeconds)}</strong></span>
             </div>
 
             <div className="flex items-center gap-2.5">
               <button
+                type="button"
                 onClick={handleRunCode}
                 disabled={isRunning || isSubmitting || isPaused}
                 data-testid="run-code-btn"
-                className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all flex items-center gap-1.5 ${
+                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold border transition-all flex items-center gap-1.5 ${
                   isRunning
                     ? 'opacity-60 cursor-not-allowed'
                     : isLight
@@ -1137,10 +849,11 @@ export function InterviewWorkspaceView({
               </button>
 
               <button
+                type="button"
                 onClick={handleSubmitCode}
                 disabled={isRunning || isSubmitting || isPaused}
                 data-testid="submit-code-btn"
-                className={`px-5 py-2 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+                className={`px-5 py-2 rounded-xl text-xs font-mono font-black transition-all flex items-center gap-1.5 ${
                   isSubmitting
                     ? 'opacity-60 cursor-not-allowed bg-emerald-600 text-white'
                     : 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-md shadow-emerald-500/20'
@@ -1165,30 +878,31 @@ export function InterviewWorkspaceView({
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className={`max-w-md w-full p-6 rounded-3xl border shadow-2xl space-y-4 ${
+              className={`max-w-md w-full p-6 rounded-2xl border shadow-2xl space-y-4 ${
                 isLight ? 'bg-white border-slate-200' : 'bg-slate-900 border-slate-800'
               }`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-rose-500/20 text-rose-500">
-                  <AlertTriangle className="w-6 h-6" />
+                <div className="p-2.5 rounded-xl bg-rose-500/20 text-rose-500">
+                  <AlertTriangle className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className={`font-black text-base ${isLight ? 'text-slate-900' : 'text-white'}`}>
                     Finish Interview Round?
                   </h3>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs font-mono text-slate-500">
                     Remaining time: {formatTime(remainingSeconds)}
                   </p>
                 </div>
               </div>
 
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                Are you ready to submit your code and generate your performance scorecard? All completed problems and thinking notes will be evaluated immediately.
+                Are you ready to submit your solutions and generate your performance scorecard? Completed problems and approach notes will be evaluated immediately.
               </p>
 
               <div className="flex items-center justify-end gap-2.5 pt-2">
                 <button
+                  type="button"
                   onClick={() => setShowFinishConfirm(false)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold border ${
                     isLight ? 'border-slate-300 text-slate-700' : 'border-slate-700 text-slate-300'
@@ -1197,6 +911,7 @@ export function InterviewWorkspaceView({
                   Continue Interview
                 </button>
                 <button
+                  type="button"
                   onClick={() => {
                     setShowFinishConfirm(false);
                     onFinishInterview('completed');
@@ -1220,19 +935,19 @@ export function InterviewWorkspaceView({
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className={`max-w-md w-full p-6 rounded-3xl border shadow-2xl space-y-4 ${
+              className={`max-w-md w-full p-6 rounded-2xl border shadow-2xl space-y-4 ${
                 isLight ? 'bg-white border-slate-200' : 'bg-slate-900 border-slate-800'
               }`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-amber-500/20 text-amber-500">
-                  <RotateCcw className="w-6 h-6" />
+                <div className="p-2.5 rounded-xl bg-amber-500/20 text-amber-500">
+                  <RotateCcw className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className={`font-black text-base ${isLight ? 'text-slate-900' : 'text-white'}`}>
                     Reset Code to Template?
                   </h3>
-                  <p className="text-xs text-slate-500">Problem {activeIndex + 1}</p>
+                  <p className="text-xs font-mono text-slate-500">Problem {activeIndex + 1}</p>
                 </div>
               </div>
 
@@ -1242,6 +957,7 @@ export function InterviewWorkspaceView({
 
               <div className="flex items-center justify-end gap-2.5 pt-2">
                 <button
+                  type="button"
                   onClick={() => setShowResetConfirm(false)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold border ${
                     isLight ? 'border-slate-300 text-slate-700' : 'border-slate-700 text-slate-300'
@@ -1250,6 +966,7 @@ export function InterviewWorkspaceView({
                   Cancel
                 </button>
                 <button
+                  type="button"
                   onClick={handleResetCode}
                   className="px-5 py-2 rounded-xl text-xs font-black bg-amber-500 hover:bg-amber-400 text-slate-950"
                 >
