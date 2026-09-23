@@ -14,7 +14,7 @@ export default function SessionSummaryPage() {
   const reflectionEvents = timeline.filter(e => e.type === 'ReflectionAdded');
 
   return (
-    <div className="layout-stack" style={{ maxWidth: '800px', margin: '48px auto', width: '100%' }}>
+    <div className="layout-stack p-4 sm:p-6 md:p-8" style={{ maxWidth: '800px', margin: '32px auto', width: '100%' }}>
       <div style={{ textAlign: 'center', marginBottom: '32px' }}>
         <CheckCircle2 size={64} style={{ color: '#10b981', margin: '0 auto 16px' }} />
         <h1 className="title" style={{ fontSize: '36px' }}>Session Complete</h1>
@@ -23,7 +23,7 @@ export default function SessionSummaryPage() {
         </p>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <div className="card layout-row" style={{ padding: '24px', gap: '16px' }}>
           <div style={{ padding: '12px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '12px' }}>
             <Clock size={24} />
@@ -65,7 +65,7 @@ export default function SessionSummaryPage() {
         </div>
       </div>
 
-      <div className="card layout-row-between" style={{ padding: '32px', marginTop: '16px', background: 'var(--primary-bg)', borderColor: 'var(--primary)' }}>
+      <div className="card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 sm:p-8 mt-4" style={{ background: 'var(--primary-bg)', borderColor: 'var(--primary)' }}>
         <div>
           <h3 className="title" style={{ margin: '0 0 8px 0', fontSize: '20px' }}>Up Next: Two Pointers</h3>
           <p className="muted" style={{ margin: 0 }}>You&apos;ve mastered Sliding Window. It&apos;s time to move on.</p>

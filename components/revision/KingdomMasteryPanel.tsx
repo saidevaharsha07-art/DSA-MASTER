@@ -33,8 +33,8 @@ export function KingdomMasteryPanel({ kingdoms, onSelectKingdom }: KingdomMaster
             <Compass size={18} style={{ color: '#C084FC' }} />
           </div>
           <div>
-            <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#FFFFFF' }}>Kingdom Mastery Panel</h2>
-            <span style={{ fontSize: '11px', color: '#94A3B8' }}>25 Kingdoms • Live Average Problem Retention</span>
+            <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#FFFFFF' }}>Topic Mastery Panel</h2>
+            <span style={{ fontSize: '11px', color: '#94A3B8' }}>25 Topic Areas • Live Average Problem Retention</span>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export function KingdomMasteryPanel({ kingdoms, onSelectKingdom }: KingdomMaster
             <Search size={14} style={{ position: 'absolute', left: '10px', color: '#94A3B8' }} />
             <input
               type="text"
-              placeholder="Search kingdoms..."
+              placeholder="Search topics..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{ padding: '6px 12px 6px 30px', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#FFF', fontSize: '12px', outline: 'none', width: '150px' }}

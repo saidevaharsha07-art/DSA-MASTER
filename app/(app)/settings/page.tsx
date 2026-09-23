@@ -193,20 +193,7 @@ export default function SettingsPage() {
   return (
     <AuthGuard>
       <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          width: '100%',
-          minHeight: 'calc(100vh - 64px)',
-          background: 'var(--background)',
-          color: 'var(--text-primary)',
-          padding: '24px 32px 0 32px',
-          boxSizing: 'border-box',
-          fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
-          overflowX: 'hidden',
-          transition: 'background-color 0.2s ease, color 0.2s ease',
-        }}
+        className="flex flex-col justify-between w-full min-h-[calc(100vh-64px)] bg-[var(--background)] text-[var(--text-primary)] p-4 sm:p-6 md:p-8 box-border font-sans overflow-x-hidden transition-colors"
       >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }}>
         {/* ── TOP HEADER ─────────────────────────────────────────────── */}
@@ -239,17 +226,10 @@ export default function SettingsPage() {
 
         {/* ── 2-COLUMN FULL-WIDTH SETTINGS LAYOUT ───────────────────── */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '230px minmax(0, 1fr)',
-            gap: '32px',
-            alignItems: 'start',
-            width: '100%',
-            boxSizing: 'border-box',
-          }}
+          className="grid grid-cols-1 md:grid-cols-[230px_minmax(0,1fr)] gap-6 md:gap-8 items-start w-full box-border"
         >
           {/* Left Settings Sidebar (230px) */}
-          <div style={{ width: '230px', flexShrink: 0 }}>
+          <div className="w-full md:w-[230px] flex-shrink-0">
             <SettingsSidebar
               activeTab={activeTab}
               onSelectTab={handleSelectTab}
@@ -257,7 +237,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Main Settings Content Area (Fills remaining space completely) */}
-          <div style={{ width: '100%', minWidth: 0, paddingBottom: '32px' }}>
+          <div className="w-full min-w-0 pb-8">
             {renderContent()}
           </div>
         </div>

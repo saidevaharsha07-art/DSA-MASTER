@@ -647,7 +647,7 @@ export default function AnalyticsPage() {
                 <Activity size={18} style={{ color: "#3B82F6" }} />
               </div>
               <div>
-                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Connected Realms</span>
+                <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block", fontWeight: 600 }}>Connected Platforms</span>
                 <strong style={{ fontSize: "14px", color: "#3B82F6", display: "block" }}>{connectedPlatformsCount} Active</strong>
                 <span style={{ fontSize: "10px", color: "var(--text-muted)" }}>Real-time telemetry</span>
               </div>

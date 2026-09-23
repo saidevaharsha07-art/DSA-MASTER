@@ -156,6 +156,7 @@ export function PatternPracticeSection({
               type="button"
               onClick={onLaunchSprint}
               disabled={isGeneratingSprint}
+              data-testid="start-smart-sprint-btn"
               className="py-2 px-3.5 rounded-xl bg-[var(--accent)] hover:opacity-90 text-white text-xs font-bold flex items-center gap-1.5 shadow-xs transition-all cursor-pointer disabled:opacity-50"
             >
               <Play size={12} className="fill-white" />

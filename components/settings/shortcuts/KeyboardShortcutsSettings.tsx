@@ -11,7 +11,7 @@ interface Shortcut {
 }
 
 const SHORTCUTS: Shortcut[] = [
-  { action: 'Open Command Palette', keys: ['Ctrl', 'K'], description: 'Quick jump to any problem, realm, or action' },
+  { action: 'Open Command Palette', keys: ['Ctrl', 'K'], description: 'Quick jump to any problem, topic, or action' },
   { action: 'Go to Dashboard', keys: ['G', 'D'], description: 'Navigate directly to your Developer Command Center' },
   { action: 'Go to Journey', keys: ['G', 'J'], description: 'Navigate to platform railway journeys' },
   { action: 'Go to Practice Arena', keys: ['G', 'P'], description: 'Open problem workspace & code editor' },

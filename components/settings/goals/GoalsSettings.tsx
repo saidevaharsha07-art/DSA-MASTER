@@ -26,7 +26,7 @@ export function GoalsSettings() {
   const milestones = [
     { title: 'Novice Solver', threshold: 10, status: solvedCount >= 10 ? 'Completed' : 'Current', icon: Shield, color: '#10B981' },
     { title: 'Apprentice Coder', threshold: 50, status: solvedCount >= 50 ? 'Completed' : solvedCount >= 10 ? 'Current' : 'Locked', icon: Zap, color: '#0284C7' },
-    { title: 'Explorer of Realms', threshold: 150, status: solvedCount >= 150 ? 'Completed' : solvedCount >= 50 ? 'Current' : 'Locked', icon: Star, color: 'var(--primary)' },
+    { title: 'Pattern Explorer', threshold: 150, status: solvedCount >= 150 ? 'Completed' : solvedCount >= 50 ? 'Current' : 'Locked', icon: Star, color: 'var(--primary)' },
     { title: 'Master Strategist', threshold: 300, status: solvedCount >= 300 ? 'Completed' : solvedCount >= 150 ? 'Current' : 'Locked', icon: Trophy, color: '#F59E0B' },
     { title: 'Grandmaster Legend', threshold: 500, status: solvedCount >= 500 ? 'Completed' : 'Locked', icon: Award, color: '#EC4899' },
   ];

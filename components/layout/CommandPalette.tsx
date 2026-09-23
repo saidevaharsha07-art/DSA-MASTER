@@ -42,7 +42,7 @@ export function CommandPalette() {
     { id: 'nav-journey', title: 'Open Learning Journey', type: 'Command', icon: <Map size={16} />, action: () => router.push('/journey') },
     { id: 'nav-practice', title: 'Start Practice Session', type: 'Command', icon: <Terminal size={16} />, action: () => router.push('/practice') },
     { id: 'nav-revision', title: 'Review Due Items', type: 'Command', icon: <RotateCcw size={16} />, action: () => router.push('/revision') },
-    { id: 'nav-knowledge', title: 'Search Notes', type: 'Command', icon: <BookOpen size={16} />, action: () => router.push('/knowledge') },
+    { id: 'nav-knowledge', title: 'Curriculum & Notes', type: 'Command', icon: <BookOpen size={16} />, action: () => router.push('/journey') },
     { id: 'nav-analytics', title: 'View Analytics', type: 'Command', icon: <BarChart3 size={16} />, action: () => router.push('/analytics') },
   ];
 
@@ -51,8 +51,8 @@ export function CommandPalette() {
   
   // Mock some notes for search
   const notes = [
-    { id: 'note-1', title: 'My notes on Sliding Window', type: 'Note', icon: <FileText size={16} />, action: () => router.push('/knowledge') },
-    { id: 'note-2', title: 'How to handle Edge Cases in Hash Maps', type: 'Note', icon: <FileText size={16} />, action: () => router.push('/knowledge') }
+    { id: 'note-1', title: 'My notes on Sliding Window', type: 'Note', icon: <FileText size={16} />, action: () => router.push('/journey') },
+    { id: 'note-2', title: 'How to handle Edge Cases in Hash Maps', type: 'Note', icon: <FileText size={16} />, action: () => router.push('/journey') }
   ];
 
   const allItems = [

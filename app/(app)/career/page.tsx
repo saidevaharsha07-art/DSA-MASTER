@@ -20,10 +20,10 @@ export default function CareerDashboardPage() {
   }, [selectedCompanyId]);
 
   return (
-    <div style={{ padding: '32px', maxWidth: '1200px', margin: '0 auto', color: '#FFF' }}>
+    <div className="p-4 sm:p-6 md:p-8 max-w-[1200px] mx-auto text-white">
       
       {/* HEADER STRIP */}
-      <div style={{ marginBottom: '28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div className="mb-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h1 style={{ margin: 0, fontSize: '28px', fontWeight: 900, color: '#FFF' }}>
             Career Intelligence & Interview Preparation Command Center

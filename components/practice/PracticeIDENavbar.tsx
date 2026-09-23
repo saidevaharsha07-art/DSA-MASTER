@@ -45,7 +45,7 @@ export function PracticeIDENavbar({
   const category = CurriculumRepository.getCategoryBySlug(problem.categorySlug);
   const pattern = CurriculumRepository.getPatternBySlug(problem.patternSlug);
 
-  const kingdomTitle = category ? category.kingdomTitle : (problem.kingdomTitle || 'Kingdom of Beginnings');
+  const categoryTitle = category ? category.title : (problem.categoryTitle || 'Algorithms');
   const patternTitle = pattern ? pattern.title : (problem.patternTitle || 'Array Fundamentals');
 
   // Dynamic Previous and Next problem calculation across CurriculumRepository
@@ -131,8 +131,8 @@ export function PracticeIDENavbar({
           </Link>
           <ChevronRight size={12} />
 
-          <Link href={`/knowledge/${problem.categorySlug}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
-            {kingdomTitle}
+          <Link href={`/journey/${problem.categorySlug}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>
+            {categoryTitle}
           </Link>
           <ChevronRight size={12} />
 
@@ -199,7 +199,7 @@ export function PracticeIDENavbar({
           borderRadius: '6px',
           border: '1px solid var(--border)',
         }}>
-          🏰 {kingdomTitle}
+          📁 {categoryTitle}
         </span>
 
         {/* XP Reward */}
