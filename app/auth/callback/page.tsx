@@ -69,40 +69,33 @@ function AuthCallbackContent() {
   }, [router, searchParams, handleOAuthCallback]);
 
   return (
-    <div className="min-h-screen w-full bg-[#0B0E14] text-slate-100 flex items-center justify-center p-4 sm:p-6 relative overflow-hidden font-sans">
-      {/* Ambient background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293d0f_1px,transparent_1px),linear-gradient(to_bottom,#1f293d0f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
-
-      {/* Glowing background spots */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
-
-      {/* Glass transition card */}
-      <div className="relative w-full max-w-[440px] bg-[#121620]/90 backdrop-blur-2xl border border-slate-800/90 rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/80 z-10 text-center transition-all duration-300">
+    <div className="min-h-screen w-full bg-[var(--background)] text-[var(--text-primary)] flex items-center justify-center p-4 sm:p-6 font-sans transition-colors duration-200">
+      {/* Centered Transition Card */}
+      <div className="relative w-full max-w-[440px] bg-[var(--surface)] border border-[var(--border)] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-xl shadow-black/5 z-10 text-center transition-all duration-300">
         
         {/* Branding header */}
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-0.5 mb-4 shadow-lg shadow-indigo-500/25">
-          <div className="w-full h-full bg-[#0B0E14] rounded-[14px] flex items-center justify-center">
-            <Shield className="w-7 h-7 text-indigo-400" />
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-400 via-blue-500 to-indigo-600 p-[2px] mb-4 shadow-lg shadow-sky-500/20">
+          <div className="w-full h-full bg-[var(--surface)] rounded-[14px] flex items-center justify-center">
+            <Shield className="w-7 h-7 text-[var(--accent-primary)]" />
           </div>
         </div>
 
-        <h1 className="text-2xl font-extrabold tracking-tight text-white flex items-center justify-center gap-2 mb-6">
-          DSA <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">MASTER</span>
+        <h1 className="text-2xl font-extrabold tracking-tight text-[var(--text-primary)] flex items-center justify-center gap-2 mb-6">
+          DSA <span className="text-[var(--accent-primary)]">MASTER</span>
         </h1>
 
         {error ? (
           /* Error State */
           <div className="space-y-4">
-            <div className="p-4 bg-red-950/50 border border-red-800/60 rounded-xl text-red-300 text-xs flex flex-col items-center gap-2">
-              <AlertCircle className="w-6 h-6 text-red-400" />
-              <p className="font-semibold text-sm text-red-200">Sign-in could not be completed.</p>
-              <p className="text-center text-red-300/90">{error}</p>
+            <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-500 text-xs flex flex-col items-center gap-2">
+              <AlertCircle className="w-6 h-6 text-red-500" />
+              <p className="font-semibold text-sm">Sign-in could not be completed.</p>
+              <p className="text-center opacity-90">{error}</p>
             </div>
             <button
               type="button"
               onClick={() => router.replace('/login')}
-              className="w-full h-12 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm rounded-xl transition-all border border-slate-700 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full h-11 sm:h-12 bg-[var(--surface-secondary)] hover:bg-[var(--surface)] text-[var(--text-primary)] font-semibold text-sm rounded-xl transition-all border border-[var(--border)] flex items-center justify-center gap-2 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Login</span>
@@ -111,34 +104,34 @@ function AuthCallbackContent() {
         ) : isDone ? (
           /* Success State */
           <div className="space-y-3 py-2">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mb-1 animate-bounce">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-500 mb-1 animate-bounce">
               <CheckCircle2 className="w-6 h-6" />
             </div>
-            <h2 className="text-lg font-bold text-white">Sign in complete!</h2>
-            <p className="text-xs text-slate-400">Directing to dashboard...</p>
+            <h2 className="text-lg font-bold text-[var(--text-primary)]">Sign in complete!</h2>
+            <p className="text-xs text-[var(--text-muted)]">Directing to dashboard...</p>
           </div>
         ) : (
           /* Loading Transition State */
           <div className="space-y-5 py-2">
             <div className="relative inline-flex items-center justify-center">
-              <div className="w-14 h-14 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
-              <Sparkles className="w-6 h-6 text-indigo-400 absolute" />
+              <div className="w-14 h-14 border-4 border-[var(--accent-primary)]/20 border-t-[var(--accent-primary)] rounded-full animate-spin" />
+              <Sparkles className="w-6 h-6 text-[var(--accent-primary)] absolute" />
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-white mb-1">Authenticating</h2>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <h2 className="text-lg font-bold text-[var(--text-primary)] mb-1">Authenticating</h2>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
                 Verifying secure session with Supabase...
               </p>
             </div>
 
             <div className="flex items-center justify-center gap-1.5 pt-2">
-              <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
-              <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse delay-150" />
-              <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse delay-300" />
+              <span className="w-2 h-2 rounded-full bg-[var(--accent-primary)] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[var(--accent-primary)]/70 animate-pulse delay-150" />
+              <span className="w-2 h-2 rounded-full bg-[var(--accent-primary)]/40 animate-pulse delay-300" />
             </div>
 
-            <p className="text-[11px] text-slate-500 font-mono pt-1">
+            <p className="text-[11px] text-[var(--text-muted)] font-mono pt-1">
               Please wait a moment.
             </p>
           </div>

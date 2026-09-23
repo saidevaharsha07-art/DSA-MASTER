@@ -198,111 +198,111 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[var(--background)] text-[var(--text-primary)] flex flex-col items-center pt-8 sm:pt-10 pb-16 font-sans transition-colors duration-200">
+    <div className="min-h-screen w-full bg-[var(--background)] text-[var(--text-primary)] flex flex-col items-center justify-center px-4 py-10 sm:py-16 font-sans transition-colors duration-200">
       
       {/* Brand Header */}
-      <div className="mb-8 flex flex-col items-center">
+      <div className="mb-6 sm:mb-8 flex flex-col items-center">
         <Link href="/" className="flex flex-col items-center group">
-          <div className="w-12 h-12 rounded-xl p-[2px] bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 shadow-md shadow-sky-500/20 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+          <div className="w-12 h-12 rounded-xl p-[2px] bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 shadow-md shadow-sky-500/20 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
             <div className="w-full h-full rounded-[10px] bg-[var(--surface)] flex items-center justify-center">
               <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
                 <path
                   d="M12 2L2 22H22L12 2Z"
-                  stroke="#0284C7"
+                  stroke="currentColor"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  fill="url(#auth-logo-grad)"
-                  fillOpacity="0.25"
+                  className="text-[var(--accent-primary)]"
                 />
                 <path
                   d="M12 9L7 19H17L12 9Z"
-                  fill="#38BDF8"
+                  fill="currentColor"
+                  className="text-[var(--accent-primary)] opacity-80"
                 />
-                <defs>
-                  <linearGradient id="auth-logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#38BDF8" />
-                    <stop offset="1" stopColor="#6366F1" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>
-          <span className="text-xl font-black tracking-tight text-[var(--text-primary)]">
-            DSA <span style={{ color: 'var(--accent-primary)' }}>MASTER</span>
+          <span className="text-xl sm:text-2xl font-black tracking-tight text-[var(--text-primary)]">
+            DSA <span className="text-[var(--accent-primary)]">MASTER</span>
           </span>
         </Link>
-        <span className="text-[9px] font-extrabold tracking-widest text-[var(--text-muted)] uppercase mt-0.5">
-          LEARN • PRACTICE • MASTER
-        </span>
-      </div>
-
-      {/* Top Segmented Navigation Toggle (Sign up / Login) */}
-      <div className="w-full flex justify-center px-4 mb-6">
-        <div className="inline-flex items-center p-1 rounded-full border border-[var(--border)] bg-[var(--surface)] shadow-sm">
-          <button
-            type="button"
-            onClick={() => switchTab('signup')}
-            style={{
-              backgroundColor: tab === 'signup' ? 'var(--accent-primary)' : 'transparent',
-              color: tab === 'signup' ? '#FFFFFF' : 'var(--text-muted)',
-            }}
-            className="px-7 py-2 text-sm font-semibold rounded-full transition-all duration-200 cursor-pointer"
-          >
-            Sign up
-          </button>
-
-          <button
-            type="button"
-            onClick={() => switchTab('signin')}
-            style={{
-              backgroundColor: tab === 'signin' || tab === 'forgot' ? 'var(--accent-primary)' : 'transparent',
-              color: tab === 'signin' || tab === 'forgot' ? '#FFFFFF' : 'var(--text-muted)',
-            }}
-            className="px-7 py-2 text-sm font-semibold rounded-full transition-all duration-200 cursor-pointer"
-          >
-            Login
-          </button>
+        <div className="mt-1.5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-[10px] font-mono font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          Technical Interview & Algorithmic Workspace
         </div>
       </div>
 
-      {/* Full-width Top Horizontal Divider */}
-      <div className="w-full border-b border-[var(--border)] mb-10 sm:mb-14" />
-
-      {/* Main Centered Form Shell */}
-      <div className="w-full max-w-[420px] px-5 sm:px-0 flex flex-col items-center">
+      {/* Main Centered Form Card Shell */}
+      <div className="w-full max-w-[440px] bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/5 flex flex-col items-center transition-colors">
         
+        {/* Top Segmented Navigation Toggle (Sign up / Login) */}
+        <div className="w-full flex justify-center mb-6" role="tablist" aria-label="Authentication modes">
+          <div className="inline-flex items-center p-1 rounded-xl border border-[var(--border)] bg-[var(--surface-secondary)] w-full">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={tab === 'signup'}
+              onClick={() => switchTab('signup')}
+              className={`flex-1 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer text-center ${
+                tab === 'signup'
+                  ? 'bg-[var(--accent-primary)] text-white shadow-sm font-bold'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+              }`}
+            >
+              Sign up
+            </button>
+
+            <button
+              type="button"
+              role="tab"
+              aria-selected={tab === 'signin' || tab === 'forgot'}
+              onClick={() => switchTab('signin')}
+              className={`flex-1 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer text-center ${
+                tab === 'signin' || tab === 'forgot'
+                  ? 'bg-[var(--accent-primary)] text-white shadow-sm font-bold'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+              }`}
+            >
+              Login
+            </button>
+          </div>
+        </div>
+
         {/* Main Heading */}
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[var(--text-primary)] text-center tracking-tight mb-8">
-          {tab === 'signin'
-            ? 'Log in to your existing profile'
-            : tab === 'signup'
-            ? 'Create your new profile'
-            : 'Reset your password'}
-        </h1>
+        <div className="w-full text-center mb-6">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
+            {tab === 'signin'
+              ? 'Log in to your existing profile'
+              : tab === 'signup'
+              ? 'Create your new profile'
+              : 'Reset your password'}
+          </h1>
+          <p className="text-xs text-[var(--text-secondary)] mt-1.5">
+            {tab === 'signin'
+              ? 'Enter your credentials to continue your algorithmic practice.'
+              : tab === 'signup'
+              ? 'Get an adaptive roadmap, curated pattern sprints, and tracked mastery.'
+              : 'Enter your account email to receive recovery instructions.'}
+          </p>
+        </div>
 
         {/* Google OAuth Button */}
         {tab !== 'forgot' && (
-          <div className="w-full mb-7">
+          <div className="w-full mb-5">
             <button
               type="button"
               onClick={handleGoogleSignIn}
               disabled={isSubmitting || isGoogleLoading}
-              style={{
-                backgroundColor: 'var(--surface-secondary)',
-                border: '1px solid var(--border)',
-                color: 'var(--text-primary)',
-              }}
-              className="w-full h-[52px] rounded-xl hover:opacity-90 active:scale-[0.99] font-semibold text-sm flex items-center justify-center gap-3 transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+              className="w-full h-12 bg-[var(--surface-secondary)] hover:bg-[var(--surface-hover,var(--surface))] active:scale-[0.99] border border-[var(--border)] text-[var(--text-primary)] font-semibold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-3 transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
             >
               {isGoogleLoading ? (
                 <>
-                  <div style={{ borderColor: 'var(--accent-primary)', borderTopColor: 'transparent' }} className="w-4 h-4 border-2 rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-[var(--accent-primary)] border-t-transparent rounded-full animate-spin" />
                   <span>Connecting to Google...</span>
                 </>
               ) : (
                 <>
-                  <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z" />
                     <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.25 21.3 7.31 24 12 24z" />
                     <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2.0 10.05.0 12s.46 3.8 1.27 5.42l4.01-3.15z" />
@@ -317,9 +317,9 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
 
         {/* OR Divider */}
         {tab !== 'forgot' && (
-          <div className="relative flex items-center justify-center w-full mb-7">
+          <div className="relative flex items-center justify-center w-full mb-5">
             <div className="border-t border-[var(--border)] w-full" />
-            <span className="bg-[var(--background)] px-3 text-[12px] font-medium text-[var(--text-muted)] uppercase tracking-widest flex-shrink-0">
+            <span className="bg-[var(--surface)] px-3 text-[11px] font-mono font-medium text-[var(--text-muted)] uppercase tracking-widest flex-shrink-0">
               OR
             </span>
             <div className="border-t border-[var(--border)] w-full" />
@@ -328,91 +328,105 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
 
         {/* Feedback Messages */}
         {formError && (
-          <div className="w-full mb-6 p-3.5 bg-red-500/10 border border-red-500/30 rounded-xl flex items-start gap-3 text-red-500 text-xs">
+          <div className="w-full mb-5 p-3.5 bg-red-500/10 border border-red-500/30 rounded-xl flex items-start gap-2.5 text-red-500 text-xs animate-in fade-in duration-200">
             <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-            <span>{formError}</span>
+            <span className="leading-relaxed">{formError}</span>
           </div>
         )}
 
         {formSuccess && (
-          <div className="w-full mb-6 p-3.5 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-start gap-3 text-emerald-500 text-xs">
+          <div className="w-full mb-5 p-3.5 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-start gap-2.5 text-emerald-500 text-xs animate-in fade-in duration-200">
             <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
-            <span>{formSuccess}</span>
+            <span className="leading-relaxed">{formSuccess}</span>
           </div>
         )}
 
         {/* Form Container */}
-        <form onSubmit={handleSubmit} className="w-full space-y-5">
+        <form onSubmit={handleSubmit} className="w-full space-y-4">
           
           {/* Sign Up Mode: Full Name */}
           {tab === 'signup' && (
             <div>
+              <label className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5">
+                Full Name
+              </label>
               <input
                 type="text"
                 required
                 placeholder="Full Name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full h-[52px] bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[var(--accent-glow)] rounded-xl px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
+                className="w-full h-11 sm:h-12 bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-1 focus:ring-[var(--accent-primary)] rounded-xl px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
               />
             </div>
           )}
 
           {/* Username or Email Input */}
           <div>
+            <label className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5">
+              Username or Email
+            </label>
             <input
               type="text"
               required
               placeholder="Username or Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full h-[52px] bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[var(--accent-glow)] rounded-xl px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
+              className="w-full h-11 sm:h-12 bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-1 focus:ring-[var(--accent-primary)] rounded-xl px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
             />
           </div>
 
           {/* Password Input */}
           {tab !== 'forgot' && (
-            <div className="relative w-full">
-              <input
-                type={showPassword ? 'text' : 'password'}
-                required
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full h-[52px] bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[var(--accent-glow)] rounded-xl pl-4 pr-12 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? 'Hide password' : 'Show password'}
-                style={{ color: 'var(--accent-primary)' }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-80 hover:opacity-100 transition-opacity p-1 flex items-center justify-center cursor-pointer"
-              >
-                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-              </button>
+            <div>
+              <label className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5">
+                Password
+              </label>
+              <div className="relative w-full">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full h-11 sm:h-12 bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-1 focus:ring-[var(--accent-primary)] rounded-xl pl-4 pr-11 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors p-1 flex items-center justify-center cursor-pointer"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
           )}
 
           {/* Confirm Password Input (Sign Up) */}
           {tab === 'signup' && (
-            <div className="relative w-full">
-              <input
-                type={showConfirmPassword ? 'text' : 'password'}
-                required
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full h-[52px] bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[var(--accent-glow)] rounded-xl pl-4 pr-12 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
-              />
-              <button
-                type="button"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
-                style={{ color: 'var(--accent-primary)' }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 opacity-80 hover:opacity-100 transition-opacity p-1 flex items-center justify-center cursor-pointer"
-              >
-                {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-              </button>
+            <div>
+              <label className="block text-xs font-semibold text-[var(--text-secondary)] mb-1.5">
+                Confirm Password
+              </label>
+              <div className="relative w-full">
+                <input
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  required
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="w-full h-11 sm:h-12 bg-[var(--surface-secondary)] border border-[var(--border)] focus:border-[var(--accent-primary)] focus:ring-1 focus:ring-[var(--accent-primary)] rounded-xl pl-4 pr-11 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] transition-all outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors p-1 flex items-center justify-center cursor-pointer"
+                >
+                  {showConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
           )}
 
@@ -424,11 +438,10 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
                 id="terms"
                 checked={agreeTerms}
                 onChange={(e) => setAgreeTerms(e.target.checked)}
-                style={{ accentColor: 'var(--accent-primary)' }}
-                className="w-4 h-4 mt-0.5 rounded cursor-pointer"
+                className="w-4 h-4 mt-0.5 rounded border-[var(--border)] text-[var(--accent-primary)] focus:ring-[var(--accent-primary)] cursor-pointer"
               />
-              <label htmlFor="terms" style={{ color: 'var(--text-secondary)' }} className="text-xs cursor-pointer select-none leading-relaxed">
-                I agree to the <span style={{ color: 'var(--accent-primary)' }} className="hover:underline font-medium">Terms and Privacy Policy</span>.
+              <label htmlFor="terms" className="text-xs text-[var(--text-secondary)] cursor-pointer select-none leading-relaxed">
+                I agree to the <span className="text-[var(--accent-primary)] hover:underline font-medium">Terms and Privacy Policy</span>.
               </label>
             </div>
           )}
@@ -438,10 +451,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
             <button
               type="submit"
               disabled={isSubmitting}
-              style={{
-                backgroundColor: 'var(--accent-primary)',
-              }}
-              className="w-full h-[52px] hover:opacity-95 active:opacity-90 text-white font-bold text-sm tracking-wider uppercase rounded-xl transition-all shadow-md shadow-[var(--accent-glow)] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full h-11 sm:h-12 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-xl transition-all shadow-md shadow-[var(--accent-glow)] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
             >
               {isSubmitting ? (
                 <>
@@ -459,24 +469,22 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
         </form>
 
         {/* Links below Form */}
-        <div className="w-full flex items-center justify-between mt-4 text-xs font-medium">
+        <div className="w-full flex items-center justify-between mt-5 pt-4 border-t border-[var(--border)] text-xs font-medium">
           {tab === 'signin' && (
             <>
               <button
                 type="button"
                 onClick={() => switchTab('forgot')}
-                style={{ color: 'var(--accent-primary)' }}
-                className="hover:underline transition-colors cursor-pointer"
+                className="text-[var(--accent-primary)] hover:underline transition-colors cursor-pointer"
               >
                 Forgot Password?
               </button>
               <button
                 type="button"
                 onClick={() => switchTab('signup')}
-                style={{ color: 'var(--text-muted)' }}
-                className="hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+                className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
               >
-                Don&apos;t have an account? <span style={{ color: 'var(--accent-primary)' }} className="font-semibold">Sign up</span>
+                Don&apos;t have an account? <span className="text-[var(--accent-primary)] font-semibold">Sign up</span>
               </button>
             </>
           )}
@@ -486,10 +494,9 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
               <button
                 type="button"
                 onClick={() => switchTab('signin')}
-                style={{ color: 'var(--text-muted)' }}
-                className="hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+                className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
               >
-                Already have an account? <span style={{ color: 'var(--accent-primary)' }} className="font-semibold">Login</span>
+                Already have an account? <span className="text-[var(--accent-primary)] font-semibold">Login</span>
               </button>
             </div>
           )}
@@ -499,8 +506,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
               <button
                 type="button"
                 onClick={() => switchTab('signin')}
-                style={{ color: 'var(--accent-primary)' }}
-                className="hover:underline font-semibold transition-colors cursor-pointer"
+                className="text-[var(--accent-primary)] hover:underline font-semibold transition-colors cursor-pointer"
               >
                 ← Back to Login
               </button>
@@ -509,6 +515,15 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
         </div>
 
       </div>
+
+      {/* Trust & Privacy Micro-Footer */}
+      <div className="mt-8 flex items-center gap-2 text-[11px] font-mono text-[var(--text-muted)]">
+        <svg className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        <span>Encrypted session • Secure Supabase persistence • 100% privacy</span>
+      </div>
+
     </div>
   );
 }

@@ -10,9 +10,9 @@ export default function LoginPage() {
   return (
     <Suspense
       fallback={
-        <div style={{ background: 'var(--background)', color: 'var(--text-primary)' }} className="min-h-screen w-full flex flex-col items-center justify-center">
-          <div style={{ borderColor: 'var(--accent-primary)', borderTopColor: 'transparent' }} className="w-10 h-10 border-4 rounded-full animate-spin mb-4" />
-          <p style={{ color: 'var(--text-muted)' }} className="text-sm font-medium tracking-wide">Loading DSA MASTER...</p>
+        <div className="min-h-screen w-full bg-[var(--background)] text-[var(--text-primary)] flex flex-col items-center justify-center">
+          <div className="w-8 h-8 border-2 border-[var(--accent-primary)] border-t-transparent rounded-full animate-spin mb-3" />
+          <p className="text-xs font-mono text-[var(--text-muted)] tracking-wider uppercase">Loading DSA MASTER...</p>
         </div>
       }
     >

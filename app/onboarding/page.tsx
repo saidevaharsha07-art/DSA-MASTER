@@ -10,6 +10,10 @@ import {
   CheckCircle2,
   Clock,
   ShieldCheck,
+  Compass,
+  Target,
+  Zap,
+  HelpCircle,
 } from 'lucide-react';
 import { useAuth } from '@/src/lib/auth/hooks/useAuth';
 import { useSettings } from '@/src/context/SettingsContext';
@@ -99,19 +103,21 @@ export default function OnboardingPage() {
     setQuestionStartTime(Date.now());
 
     // Asynchronously synchronize with server/Supabase
-    OnboardingService.loadProfileAsync(userId).then((synced) => {
-      if (synced && synced.userId === userId) {
-        setProfile(synced);
-        if (synced.currentStep && synced.currentStep > (currentProfile.currentStep || 1)) {
-          setStep(synced.currentStep);
+    OnboardingService.loadProfileAsync(userId)
+      .then((synced) => {
+        if (synced && synced.userId === userId) {
+          setProfile(synced);
+          if (synced.currentStep && synced.currentStep > (currentProfile.currentStep || 1)) {
+            setStep(synced.currentStep);
+          }
+          if (synced.selfReportedLevel) setSelectedLevel(synced.selfReportedLevel);
+          if (synced.learningGoal) setSelectedGoal(synced.learningGoal);
+          if (synced.selectedTopics && synced.selectedTopics.length > 0) {
+            setSelectedTopics([...synced.selectedTopics]);
+          }
         }
-        if (synced.selfReportedLevel) setSelectedLevel(synced.selfReportedLevel);
-        if (synced.learningGoal) setSelectedGoal(synced.learningGoal);
-        if (synced.selectedTopics && synced.selectedTopics.length > 0) {
-          setSelectedTopics([...synced.selectedTopics]);
-        }
-      }
-    }).catch(() => {});
+      })
+      .catch(() => {});
   }, [userId]);
 
   const goToStep = (nextStep: number, partialUpdate: Partial<OnboardingProfile> = {}) => {
@@ -152,7 +158,7 @@ export default function OnboardingPage() {
 
     const answer: AssessmentAnswer = {
       questionId: q.id,
-      selectedOptionId: skipped ? undefined : (selectedOptionId || undefined),
+      selectedOptionId: skipped ? undefined : selectedOptionId || undefined,
       isCorrect,
       skipped,
       timeSpentMs: timeSpent,
@@ -180,45 +186,17 @@ export default function OnboardingPage() {
     router.push(destination);
   };
 
-  const cardBg = 'var(--card)';
-  const borderCol = isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.08)';
-  const textPrimary = 'var(--text-primary)';
-  const textSecondary = 'var(--text-secondary)';
-  const textMuted = 'var(--text-muted)';
-  const accentPrimary = 'var(--accent-primary)';
-
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        background: 'var(--background)',
-        color: textPrimary,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '24px 16px',
-        overflowX: 'hidden',
-      }}
-    >
-      {/* Top Header & Progress Indicator */}
-      <div style={{ width: '100%', maxWidth: '680px', marginBottom: '24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div
-              style={{
-                width: '28px',
-                height: '28px',
-                borderRadius: '8px',
-                background: 'rgba(99, 102, 241, 0.15)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: accentPrimary,
-              }}
-            >
-              <Sparkles size={16} />
+    <div className="min-h-screen w-full bg-[var(--background)] text-[var(--text-primary)] flex flex-col items-center justify-start py-8 sm:py-12 px-4 sm:px-6 transition-colors duration-200 overflow-x-hidden">
+      
+      {/* ── Top Header & Progress HUD ── */}
+      <div className="w-full max-w-2xl mb-6 sm:mb-8">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-lg bg-[var(--accent-primary)]/15 flex items-center justify-center text-[var(--accent-primary)]">
+              <Sparkles className="w-4 h-4" />
             </div>
-            <span style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: textSecondary }}>
+            <span className="text-xs font-mono font-bold tracking-wider uppercase text-[var(--text-secondary)]">
               DSA MASTER Personalized Setup
             </span>
           </div>
@@ -227,30 +205,21 @@ export default function OnboardingPage() {
             <button
               onClick={handleSkip}
               aria-label="Skip onboarding for now"
-              style={{
-                background: 'none',
-                border: 'none',
-                color: textMuted,
-                fontSize: '12px',
-                fontWeight: 600,
-                cursor: 'pointer',
-                padding: '6px 10px',
-                borderRadius: '6px',
-              }}
+              className="text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text-primary)] px-2.5 py-1 rounded-md transition-colors cursor-pointer"
             >
               Skip for now
             </button>
           )}
         </div>
 
-        {/* Steps Bar */}
+        {/* Steps Progress Track */}
         <div
           role="progressbar"
           aria-valuenow={step}
           aria-valuemin={1}
           aria-valuemax={6}
           aria-label={`Onboarding Step ${step} of 6: ${STEPS_NAV[step - 1]?.label}`}
-          style={{ display: 'flex', gap: '6px', width: '100%' }}
+          className="flex gap-1.5 sm:gap-2 w-full"
         >
           {STEPS_NAV.map((s) => {
             const isCurrent = step === s.num;
@@ -258,132 +227,95 @@ export default function OnboardingPage() {
             return (
               <div
                 key={s.num}
-                style={{
-                  flex: 1,
-                  height: '4px',
-                  borderRadius: '2px',
-                  background: isDone
-                    ? accentPrimary
+                className={`flex-1 h-1.5 rounded-full transition-all duration-300 ${
+                  isDone
+                    ? 'bg-[var(--accent-primary)]'
                     : isCurrent
-                    ? 'rgba(99, 102, 241, 0.6)'
-                    : isLight
-                    ? '#E2E8F0'
-                    : 'rgba(255, 255, 255, 0.1)',
-                  transition: 'all 0.2s ease',
-                }}
+                    ? 'bg-[var(--accent-primary)]/80 ring-2 ring-[var(--accent-primary)]/20'
+                    : 'bg-[var(--border)]'
+                }`}
                 title={s.label}
               />
             );
           })}
         </div>
+
+        {/* Step Indicator Label */}
+        <div className="flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)] mt-2">
+          <span>STEP {step.toString().padStart(2, '0')} OF 06</span>
+          <span className="uppercase">{STEPS_NAV[step - 1]?.label}</span>
+        </div>
       </div>
 
-      {/* Main Container Card */}
-      <div
-        style={{
-          width: '100%',
-          maxWidth: '680px',
-          background: cardBg,
-          border: '1px solid ' + borderCol,
-          borderRadius: '24px',
-          padding: '32px 28px',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '24px',
-        }}
-      >
-        {/* STEP 1: WELCOME */}
+      {/* ── Main Container Card ── */}
+      <div className="w-full max-w-2xl bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/5 flex flex-col gap-6 transition-colors">
+        
+        {/* ── STEP 1: WELCOME ── */}
         {step === 1 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: accentPrimary, fontSize: '12px', fontWeight: 700, textTransform: 'uppercase' }}>
-                <Clock size={14} /> Estimated time: 2–4 minutes
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[var(--accent-primary)] uppercase tracking-wider">
+                <Clock className="w-3.5 h-3.5" /> Estimated time: 2–4 minutes
               </div>
-              <h1 style={{ fontSize: '28px', fontWeight: 800, margin: 0, letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]">
                 Let&apos;s build your DSA path.
               </h1>
-              <p style={{ fontSize: '15px', color: textSecondary, margin: 0, lineHeight: 1.6 }}>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                 You don&apos;t need to know where to start. We&apos;ll figure that out from where you are.
               </p>
             </div>
 
-            <div
-              style={{
-                background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid ' + borderCol,
-                borderRadius: '16px',
-                padding: '20px',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-                gap: '16px',
-              }}
-            >
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 700, color: textMuted, textTransform: 'uppercase' }}>01 Baseline</span>
-                <span style={{ fontSize: '13px', fontWeight: 600 }}>Adaptive Diagnostic</span>
+            {/* Overview Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)]">
+              <div className="flex flex-col gap-1">
+                <span className="text-[10px] font-mono font-bold text-[var(--text-muted)] uppercase tracking-wider">01 Baseline</span>
+                <span className="text-sm font-semibold text-[var(--text-primary)]">Adaptive Diagnostic</span>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 700, color: textMuted, textTransform: 'uppercase' }}>02 Prior</span>
-                <span style={{ fontSize: '13px', fontWeight: 600 }}>Goal & Background</span>
+              <div className="flex flex-col gap-1">
+                <span className="text-[10px] font-mono font-bold text-[var(--text-muted)] uppercase tracking-wider">02 Prior</span>
+                <span className="text-sm font-semibold text-[var(--text-primary)]">Goal & Background</span>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 700, color: textMuted, textTransform: 'uppercase' }}>03 Action</span>
-                <span style={{ fontSize: '13px', fontWeight: 600 }}>First Mission Handoff</span>
+              <div className="flex flex-col gap-1">
+                <span className="text-[10px] font-mono font-bold text-[var(--text-muted)] uppercase tracking-wider">03 Action</span>
+                <span className="text-sm font-semibold text-[var(--text-primary)]">First Mission Handoff</span>
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-2">
               <button
                 onClick={handleSkip}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textSecondary,
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  padding: '10px 16px',
-                }}
+                className="text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] px-3 py-2 rounded-lg transition-colors cursor-pointer"
               >
                 Skip for now
               </button>
               <button
                 onClick={() => goToStep(2)}
-                style={{
-                  background: accentPrimary,
-                  color: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '14px',
-                  padding: '12px 24px',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                }}
+                className="h-11 sm:h-12 px-6 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-xs sm:text-sm rounded-xl flex items-center gap-2 transition-all shadow-md shadow-[var(--accent-glow)] cursor-pointer"
               >
-                Get Started <ArrowRight size={16} />
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* STEP 2: CURRENT LEVEL */}
+        {/* ── STEP 2: CURRENT LEVEL ── */}
         {step === 2 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
             <div>
-              <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: accentPrimary }}>Step 02 · Self-Reported Level</span>
-              <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '4px 0 6px 0' }}>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent-primary)]">
+                Step 02 · Self-Reported Level
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[var(--text-primary)] mt-1 mb-1.5">
                 How comfortable are you with DSA?
               </h2>
-              <p style={{ fontSize: '13px', color: textSecondary, margin: 0 }}>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
                 This helps shape your starting recommendations. Real verified mastery develops as you solve problems.
               </p>
             </div>
 
-            <div role="radiogroup" aria-label="Self-reported DSA level" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Self-reported DSA level" className="flex flex-col gap-2.5">
               {LEVEL_OPTIONS.map((opt) => {
                 const isSelected = selectedLevel === opt.id;
                 return (
@@ -392,82 +324,60 @@ export default function OnboardingPage() {
                     role="radio"
                     aria-checked={isSelected}
                     onClick={() => setSelectedLevel(opt.id)}
-                    style={{
-                      background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
-                      border: '1.5px solid ' + (isSelected ? accentPrimary : borderCol),
-                      borderRadius: '14px',
-                      padding: '14px 18px',
-                      textAlign: 'left',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      color: textPrimary,
-                    }}
+                    className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between cursor-pointer ${
+                      isSelected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-primary)]/10 ring-1 ring-[var(--accent-primary)]'
+                        : 'border-[var(--border)] bg-[var(--surface-secondary)] hover:border-[var(--text-muted)]'
+                    }`}
                   >
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700 }}>{opt.title}</div>
-                      <div style={{ fontSize: '12px', color: textSecondary, marginTop: '2px' }}>{opt.desc}</div>
+                      <div className="text-sm font-bold text-[var(--text-primary)]">{opt.title}</div>
+                      <div className="text-xs text-[var(--text-secondary)] mt-0.5 leading-relaxed">{opt.desc}</div>
                     </div>
-                    {isSelected && <CheckCircle2 size={18} style={{ color: accentPrimary, flexShrink: 0 }} />}
+                    {isSelected && (
+                      <CheckCircle2 className="w-5 h-5 text-[var(--accent-primary)] flex-shrink-0 ml-3" />
+                    )}
                   </button>
                 );
               })}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-2">
               <button
                 onClick={() => setStep(1)}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textSecondary,
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
+                className="text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors cursor-pointer"
               >
-                <ArrowLeft size={16} /> Back
+                <ArrowLeft className="w-4 h-4" />
+                <span>Back</span>
               </button>
               <button
                 onClick={() => goToStep(3, { selfReportedLevel: selectedLevel })}
-                style={{
-                  background: accentPrimary,
-                  color: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '14px',
-                  padding: '12px 24px',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                }}
+                className="h-11 sm:h-12 px-6 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-xs sm:text-sm rounded-xl flex items-center gap-2 transition-all shadow-md shadow-[var(--accent-glow)] cursor-pointer"
               >
-                Continue <ArrowRight size={16} />
+                <span>Continue</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* STEP 3: EXPERIENCE / TOPICS */}
+        {/* ── STEP 3: EXPERIENCE / TOPICS ── */}
         {step === 3 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
             <div>
-              <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: accentPrimary }}>Step 03 · Prior Exposure</span>
-              <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '4px 0 6px 0' }}>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent-primary)]">
+                Step 03 · Prior Exposure
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[var(--text-primary)] mt-1 mb-1.5">
                 What have you already worked with?
               </h2>
-              <p style={{ fontSize: '13px', color: textSecondary, margin: 0 }}>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
                 Select any topics you have studied or solved before (or select None yet).
               </p>
             </div>
 
-            <div role="group" aria-label="Prior DSA topic exposure" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            <div role="group" aria-label="Prior DSA topic exposure" className="flex flex-wrap gap-2">
               {TOPIC_LIST.map((t) => {
                 const isSelected = selectedTopics.includes(t.label);
                 return (
@@ -476,16 +386,11 @@ export default function OnboardingPage() {
                     role="checkbox"
                     aria-checked={isSelected}
                     onClick={() => handleToggleTopic(t.label)}
-                    style={{
-                      background: isSelected ? 'rgba(99, 102, 241, 0.12)' : 'transparent',
-                      border: '1.5px solid ' + (isSelected ? accentPrimary : borderCol),
-                      borderRadius: '12px',
-                      padding: '8px 14px',
-                      fontSize: '13px',
-                      fontWeight: isSelected ? 700 : 500,
-                      color: isSelected ? accentPrimary : textPrimary,
-                      cursor: 'pointer',
-                    }}
+                    className={`px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
+                      isSelected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-primary)]/15 text-[var(--accent-primary)] ring-1 ring-[var(--accent-primary)]/50'
+                        : 'border-[var(--border)] bg-[var(--surface-secondary)] text-[var(--text-primary)] hover:border-[var(--text-muted)]'
+                    }`}
                   >
                     {t.label}
                   </button>
@@ -495,74 +400,52 @@ export default function OnboardingPage() {
                 role="checkbox"
                 aria-checked={noneTopicsSelected}
                 onClick={handleSelectNoneTopics}
-                style={{
-                  background: noneTopicsSelected ? 'rgba(239, 68, 68, 0.12)' : 'transparent',
-                  border: '1.5px solid ' + (noneTopicsSelected ? '#EF4444' : borderCol),
-                  borderRadius: '12px',
-                  padding: '8px 14px',
-                  fontSize: '13px',
-                  fontWeight: noneTopicsSelected ? 700 : 500,
-                  color: noneTopicsSelected ? '#EF4444' : textMuted,
-                  cursor: 'pointer',
-                }}
+                className={`px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
+                  noneTopicsSelected
+                    ? 'border-red-500 bg-red-500/15 text-red-500 ring-1 ring-red-500/50'
+                    : 'border-[var(--border)] bg-[var(--surface-secondary)] text-[var(--text-muted)] hover:border-[var(--text-muted)]'
+                }`}
               >
                 None yet
               </button>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-2">
               <button
                 onClick={() => setStep(2)}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textSecondary,
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
+                className="text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors cursor-pointer"
               >
-                <ArrowLeft size={16} /> Back
+                <ArrowLeft className="w-4 h-4" />
+                <span>Back</span>
               </button>
               <button
                 onClick={() => goToStep(4, { selectedTopics })}
-                style={{
-                  background: accentPrimary,
-                  color: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '14px',
-                  padding: '12px 24px',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                }}
+                className="h-11 sm:h-12 px-6 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-xs sm:text-sm rounded-xl flex items-center gap-2 transition-all shadow-md shadow-[var(--accent-glow)] cursor-pointer"
               >
-                Continue <ArrowRight size={16} />
+                <span>Continue</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* STEP 4: LEARNING GOAL */}
+        {/* ── STEP 4: LEARNING GOAL ── */}
         {step === 4 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
             <div>
-              <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: accentPrimary }}>Step 04 · Purpose & Focus</span>
-              <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '4px 0 6px 0' }}>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent-primary)]">
+                Step 04 · Purpose & Focus
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[var(--text-primary)] mt-1 mb-1.5">
                 What are you preparing for?
               </h2>
-              <p style={{ fontSize: '13px', color: textSecondary, margin: 0 }}>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
                 Your goal influences problem recommendation sequences and interview simulation modes.
               </p>
             </div>
 
-            <div role="radiogroup" aria-label="Learning goals" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Learning goals" className="flex flex-col gap-2.5">
               {GOAL_OPTIONS.map((g) => {
                 const isSelected = selectedGoal === g.id;
                 return (
@@ -571,100 +454,71 @@ export default function OnboardingPage() {
                     role="radio"
                     aria-checked={isSelected}
                     onClick={() => setSelectedGoal(g.id)}
-                    style={{
-                      background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
-                      border: '1.5px solid ' + (isSelected ? accentPrimary : borderCol),
-                      borderRadius: '14px',
-                      padding: '14px 18px',
-                      textAlign: 'left',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      color: textPrimary,
-                    }}
+                    className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between cursor-pointer ${
+                      isSelected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-primary)]/10 ring-1 ring-[var(--accent-primary)]'
+                        : 'border-[var(--border)] bg-[var(--surface-secondary)] hover:border-[var(--text-muted)]'
+                    }`}
                   >
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700 }}>{g.title}</div>
-                      <div style={{ fontSize: '12px', color: textSecondary, marginTop: '2px' }}>{g.desc}</div>
+                      <div className="text-sm font-bold text-[var(--text-primary)]">{g.title}</div>
+                      <div className="text-xs text-[var(--text-secondary)] mt-0.5 leading-relaxed">{g.desc}</div>
                     </div>
-                    {isSelected && <CheckCircle2 size={18} style={{ color: accentPrimary, flexShrink: 0 }} />}
+                    {isSelected && (
+                      <CheckCircle2 className="w-5 h-5 text-[var(--accent-primary)] flex-shrink-0 ml-3" />
+                    )}
                   </button>
                 );
               })}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-2">
               <button
                 onClick={() => setStep(3)}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textSecondary,
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
+                className="text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors cursor-pointer"
               >
-                <ArrowLeft size={16} /> Back
+                <ArrowLeft className="w-4 h-4" />
+                <span>Back</span>
               </button>
               <button
                 onClick={() => goToStep(5, { learningGoal: selectedGoal })}
-                style={{
-                  background: accentPrimary,
-                  color: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '14px',
-                  padding: '12px 24px',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                }}
+                className="h-11 sm:h-12 px-6 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-xs sm:text-sm rounded-xl flex items-center gap-2 transition-all shadow-md shadow-[var(--accent-glow)] cursor-pointer"
               >
-                Start Diagnostic <ArrowRight size={16} />
+                <span>Start Diagnostic</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* STEP 5: MICRO ASSESSMENT */}
+        {/* ── STEP 5: MICRO ASSESSMENT ── */}
         {step === 5 && questions.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
+            <div className="flex items-center justify-between">
               <div>
-                <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: accentPrimary }}>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent-primary)]">
                   Diagnostic Question {currentQuestionIndex + 1} of {questions.length}
                 </span>
-                <h2 style={{ fontSize: '20px', fontWeight: 800, margin: '4px 0 0 0' }}>
+                <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--text-primary)] mt-1">
                   {questions[currentQuestionIndex].title}
                 </h2>
               </div>
               <button
                 onClick={() => handleAnswerQuestion(true)}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textMuted,
-                  fontSize: '12px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                }}
+                className="text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
               >
                 Skip question
               </button>
             </div>
 
-            <p style={{ fontSize: '14px', color: textSecondary, margin: 0, lineHeight: 1.6 }}>
-              {questions[currentQuestionIndex].question}
-            </p>
+            <div className="p-4 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)]">
+              <p className="text-xs sm:text-sm text-[var(--text-primary)] leading-relaxed font-medium">
+                {questions[currentQuestionIndex].question}
+              </p>
+            </div>
 
-            <div role="radiogroup" aria-label="Diagnostic question options" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div role="radiogroup" aria-label="Diagnostic question options" className="flex flex-col gap-2.5">
               {questions[currentQuestionIndex].options.map((opt) => {
                 const isSelected = selectedOptionId === opt.id;
                 return (
@@ -673,190 +527,140 @@ export default function OnboardingPage() {
                     role="radio"
                     aria-checked={isSelected}
                     onClick={() => setSelectedOptionId(opt.id)}
-                    style={{
-                      background: isSelected ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
-                      border: '1.5px solid ' + (isSelected ? accentPrimary : borderCol),
-                      borderRadius: '14px',
-                      padding: '14px 18px',
-                      textAlign: 'left',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      color: textPrimary,
-                    }}
+                    className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between cursor-pointer ${
+                      isSelected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-primary)]/10 ring-1 ring-[var(--accent-primary)]'
+                        : 'border-[var(--border)] bg-[var(--surface-secondary)] hover:border-[var(--text-muted)]'
+                    }`}
                   >
-                    <span style={{ fontSize: '13.5px', fontWeight: 600, lineHeight: 1.4 }}>{opt.text}</span>
-                    {isSelected && <CheckCircle2 size={18} style={{ color: accentPrimary, flexShrink: 0 }} />}
+                    <span className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] leading-relaxed">
+                      {opt.text}
+                    </span>
+                    {isSelected && (
+                      <CheckCircle2 className="w-5 h-5 text-[var(--accent-primary)] flex-shrink-0 ml-3" />
+                    )}
                   </button>
                 );
               })}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+            {/* Actions */}
+            <div className="flex items-center justify-between pt-2">
               <button
                 onClick={handleSkip}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: textMuted,
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                }}
+                className="text-xs sm:text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
               >
                 Skip entire diagnostic
               </button>
               <button
                 onClick={() => handleAnswerQuestion(false)}
                 disabled={!selectedOptionId}
-                style={{
-                  background: selectedOptionId ? accentPrimary : (isLight ? '#E2E8F0' : 'rgba(255, 255, 255, 0.1)'),
-                  color: selectedOptionId ? '#FFFFFF' : textMuted,
-                  border: 'none',
-                  borderRadius: '14px',
-                  padding: '12px 24px',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  cursor: selectedOptionId ? 'pointer' : 'not-allowed',
-                }}
+                className={`h-11 sm:h-12 px-6 font-bold text-xs sm:text-sm rounded-xl flex items-center gap-2 transition-all cursor-pointer ${
+                  selectedOptionId
+                    ? 'bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white shadow-md shadow-[var(--accent-glow)]'
+                    : 'bg-[var(--border)] text-[var(--text-muted)] cursor-not-allowed opacity-60'
+                }`}
               >
-                {currentQuestionIndex + 1 === questions.length ? 'See My Path' : 'Next Question'} <ArrowRight size={16} />
+                <span>{currentQuestionIndex + 1 === questions.length ? 'See My Path' : 'Next Question'}</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* STEP 6: PERSONALIZATION RESULT & FIRST MISSION */}
+        {/* ── STEP 6: PERSONALIZATION RESULT & FIRST MISSION ── */}
         {step === 6 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-200">
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#10B981', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase' }}>
-                <ShieldCheck size={16} /> Baseline established
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-emerald-500">
+                <ShieldCheck className="w-4 h-4" /> Baseline established
               </div>
-              <h1 style={{ fontSize: '26px', fontWeight: 800, margin: '4px 0 6px 0', letterSpacing: '-0.02em' }}>
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)] mt-1 mb-1.5">
                 Here&apos;s where we&apos;ll start.
               </h1>
-              <p style={{ fontSize: '14px', color: textSecondary, margin: 0, lineHeight: 1.5 }}>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
                 Your baseline prior is configured. Real verified mastery will unlock step-by-step as you complete solves.
               </p>
             </div>
 
             {/* Baseline Diagnostic Summary */}
-            <div
-              style={{
-                background: isLight ? '#F8FAFC' : 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid ' + borderCol,
-                borderRadius: '16px',
-                padding: '18px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '10px',
-              }}
-            >
-              <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: textMuted }}>
+            <div className="p-4 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)] flex flex-col gap-2.5">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--text-muted)]">
                 Why this starting point:
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                {(profile?.assessmentEvidence || [
-                  'Foundational prerequisite for all 14 canonical DSA topics',
-                  'Self-reported level: ' + selectedLevel,
-                  'Zero verified practice solves recorded (Clean baseline)',
-                ]).map((ev, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '12.5px', color: textSecondary }}>
-                    <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: accentPrimary, marginTop: '7px', flexShrink: 0 }} />
+              <div className="flex flex-col gap-2">
+                {(
+                  profile?.assessmentEvidence || [
+                    'Foundational prerequisite for all 14 canonical DSA topics',
+                    'Self-reported level: ' + selectedLevel,
+                    'Zero verified practice solves recorded (Clean baseline)',
+                  ]
+                ).map((ev, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-primary)] mt-1.5 flex-shrink-0" />
                     <span>{ev}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* FIRST MISSION CARD */}
-            <div
-              style={{
-                background: isLight ? '#EEF2FF' : 'rgba(99, 102, 241, 0.08)',
-                border: '1.5px solid ' + accentPrimary,
-                borderRadius: '20px',
-                padding: '22px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '14px',
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', color: accentPrimary }}>
+            {/* First Mission Card */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[var(--accent-primary)]/10 border-2 border-[var(--accent-primary)] flex flex-col gap-3.5 shadow-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono font-extrabold tracking-wider uppercase text-[var(--accent-primary)]">
                   YOUR FIRST MISSION
                 </span>
-                <span style={{ fontSize: '11px', fontWeight: 700, color: textSecondary, display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <Clock size={12} /> {profile?.firstMission?.estimatedMinutes || 15} min
+                <span className="text-xs font-semibold text-[var(--text-secondary)] flex items-center gap-1">
+                  <Clock className="w-3.5 h-3.5" /> {profile?.firstMission?.estimatedMinutes || 15} min
                 </span>
               </div>
 
               <div>
-                <h3 style={{ fontSize: '18px', fontWeight: 800, margin: '0 0 6px 0', color: textPrimary }}>
+                <h3 className="text-base sm:text-lg font-bold text-[var(--text-primary)] mb-1">
                   {profile?.firstMission?.title || 'Build Arrays & Hashing Foundation'}
                 </h3>
-                <p style={{ fontSize: '13px', color: textSecondary, margin: 0, lineHeight: 1.5 }}>
-                  {profile?.firstMission?.description || 'Establish solid algorithmic intuition with fundamental frequency maps, prefix structures, and lookup patterns.'}
+                <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {profile?.firstMission?.description ||
+                    'Establish solid algorithmic intuition with fundamental frequency maps, prefix structures, and lookup patterns.'}
                 </p>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '4px' }}>
-                {(profile?.firstMission?.steps || [
-                  'Understand Big-O time and space complexity trade-offs for Hash Maps vs Arrays',
-                  'Solve your first foundational problem: Contains Duplicate or Two Sum',
-                  'Observe your Adaptive Roadmap unlock subsequent graph nodes based on genuine solves',
-                ]).map((st, sIdx) => (
-                  <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: textPrimary }}>
-                    <CheckCircle2 size={14} style={{ color: accentPrimary, flexShrink: 0 }} />
-                    <span>{st}</span>
+              <div className="flex flex-col gap-2 pt-1 border-t border-[var(--border)]">
+                {(
+                  profile?.firstMission?.steps || [
+                    'Understand Big-O time and space complexity trade-offs for Hash Maps vs Arrays',
+                    'Solve your first foundational problem: Contains Duplicate or Two Sum',
+                    'Observe your Adaptive Roadmap unlock subsequent graph nodes based on genuine solves',
+                  ]
+                ).map((st, sIdx) => (
+                  <div key={sIdx} className="flex items-start gap-2 text-xs text-[var(--text-primary)]">
+                    <CheckCircle2 className="w-4 h-4 text-[var(--accent-primary)] flex-shrink-0 mt-0.5" />
+                    <span className="leading-relaxed">{st}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* ACTION CTAs */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '8px' }}>
+            {/* Action CTAs */}
+            <div className="flex flex-col gap-3 pt-2">
               <button
                 onClick={handleFinishAndStartMission}
-                style={{
-                  background: accentPrimary,
-                  color: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '16px',
-                  padding: '14px 28px',
-                  fontSize: '15px',
-                  fontWeight: 800,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 14px rgba(99, 102, 241, 0.35)',
-                }}
+                className="w-full h-12 bg-[var(--accent-primary)] hover:opacity-90 active:scale-[0.99] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-[var(--accent-glow)] cursor-pointer"
               >
-                Start My First Mission <ArrowRight size={18} />
+                <span>Start My First Mission</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
 
               <Link
                 href="/journey"
-                style={{
-                  textAlign: 'center',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: textSecondary,
-                  textDecoration: 'none',
-                  padding: '8px',
-                }}
+                className="text-center text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] py-2 transition-colors"
               >
                 View Full Adaptive Roadmap →
               </Link>
             </div>
           </div>
         )}
+
       </div>
     </div>
   );
