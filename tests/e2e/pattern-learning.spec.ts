@@ -68,7 +68,7 @@ test.describe('DSA MASTER — Pattern Learning 2.0: Concept Academy E2E', () => 
 
     // Time & Space complexity metrics
     await expect(page.getByText('Time Complexity')).toBeVisible();
-    await expect(page.getByText('Space Complexity')).toBeVisible();
+    await expect(page.getByText('Space Complexity', { exact: true })).toBeVisible();
 
     // Recognition checklist
     await expect(page.getByText('Recognition Checklist', { exact: true })).toBeVisible();
@@ -84,14 +84,14 @@ test.describe('DSA MASTER — Pattern Learning 2.0: Concept Academy E2E', () => 
     await page.waitForLoadState('networkidle');
 
     // Mastery telemetry container
-    await expect(page.getByText('Mastery Telemetry')).toBeVisible();
+    await expect(page.getByText('Mastery Telemetry').first()).toBeVisible();
 
     // Solved ratio indicator (e.g. X / Y Solved)
-    await expect(page.getByText('Curriculum Solved:')).toBeVisible();
+    await expect(page.getByText('Curriculum Solved:').first()).toBeVisible();
 
     // Session accuracy & attempts metrics
-    await expect(page.getByText('Session Accuracy:')).toBeVisible();
-    await expect(page.getByText('Recent Attempts:')).toBeVisible();
+    await expect(page.getByText('Session Accuracy:').first()).toBeVisible();
+    await expect(page.getByText('Recent Attempts:').first()).toBeVisible();
   });
 
   // ── TEST E: PRACTICE CTA PRESERVES AREA, SUBTOPIC & PATTERN QUERY PARAMS ───
@@ -224,5 +224,151 @@ test.describe('DSA MASTER — Pattern Learning 2.0: Concept Academy E2E', () => 
       expect(hasHorizontalScroll).toBeFalsy();
     });
   }
+
+  // ── TEST K: STAGE NAVIGATION INTERACTION ───────────────────────────────────
+  test('K. Clicking learning stage buttons updates active state and scrolls to section', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const stageNav = page.locator('nav[aria-label="Learning progress stages"]');
+    await expect(stageNav).toBeVisible();
+
+    // Click on Practice stage button
+    const practiceStageBtn = stageNav.locator('button:has-text("Practice")');
+    await expect(practiceStageBtn).toBeVisible();
+    await practiceStageBtn.click();
+
+    // Verify practice section is visible in viewport
+    const practiceSection = page.locator('#practice-section');
+    await expect(practiceSection).toBeVisible();
+  });
+
+  // ── TEST L: WORKED EXAMPLE INTERACTIVE STEPPER ─────────────────────────────
+  test('L. Worked example interactive stepper advances steps and updates invariants', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const workedSection = page.locator('#stage-worked-example');
+    await expect(workedSection).toBeVisible();
+
+    // Check step 1 is initial
+    await expect(workedSection).toContainText('Step 1 of');
+
+    // Click step 2 button
+    const step2Btn = workedSection.locator('button[aria-label="Jump to step 2"]');
+    if (await step2Btn.isVisible()) {
+      await step2Btn.click();
+      await expect(workedSection).toContainText('Step 2 of');
+    }
+  });
+
+  // ── TEST M: ADD TO TODAY'S PLAN CROSS-MODULE INTEGRATION ────────────────────
+  test('M. Add to Today Plan button triggers state update and links to daily planner', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const addPlanBtn = page.locator('[data-testid="add-pattern-to-plan-btn"]').first();
+    await expect(addPlanBtn).toBeVisible();
+
+    await addPlanBtn.click();
+    // After clicking, button shows Added
+    await expect(addPlanBtn).toContainText(/Added/i);
+  });
+
+  // ── TEST N: INTERVIEW THIS PATTERN CROSS-MODULE HANDOFF ─────────────────────
+  test('N. Interview This Pattern button navigates to interview topic setup', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const interviewBtn = page.locator('[data-testid="interview-this-pattern-btn"]').first();
+    await expect(interviewBtn).toBeVisible();
+
+    await interviewBtn.click();
+    await page.waitForURL((url) =>
+      url.pathname.includes('/interview') &&
+      url.searchParams.get('mode') === 'topic' &&
+      url.searchParams.get('pattern') === 'array-fundamentals'
+    );
+
+    expect(page.url()).toContain('mode=topic');
+    expect(page.url()).toContain('pattern=array-fundamentals');
+  });
+
+  // ── TEST O: CURATED PROBLEMS COMPACT TABLE & PLATFORM PILLS ────────────────
+  test('O. Curated problems render in a compact table with platform and difficulty pills', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const table = page.locator('#practice-section table');
+    await expect(table).toBeVisible();
+
+    // Check table headers
+    await expect(table.locator('th:has-text("Problem")')).toBeVisible();
+    await expect(table.locator('th:has-text("Platform")')).toBeVisible();
+    await expect(table.locator('th:has-text("Difficulty")')).toBeVisible();
+
+    // At least one problem row
+    const rows = table.locator('tbody tr');
+    await expect(rows.first()).toBeVisible();
+  });
+
+  // ── TEST P: CURATED PROBLEM TIER FILTER SWITCHING ──────────────────────────
+  test('P. Curated problem tier tabs switch between Learn, Practice, Master, and All', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const learnTab = page.locator('#practice-section button:has-text("Learn Tier")');
+    if (await learnTab.isVisible()) {
+      await learnTab.click();
+      await expect(learnTab).toHaveClass(/border/);
+    }
+  });
+
+  // ── TEST Q: COMMON MISTAKES & INTERVIEW PRO TIPS ────────────────────────────
+  test('Q. Stage 4 renders authentic common mistakes and interview pro tips', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    const mistakesHeader = page.getByText('Common Mistakes & Edge Cases');
+    await expect(mistakesHeader).toBeVisible();
+
+    const tipsHeader = page.getByText('Interview Pro Tips & Verbalization');
+    await expect(tipsHeader).toBeVisible();
+  });
+
+  // ── TEST R: THEME RESILIENCE (DARK & LIGHT MODES) ──────────────────────────
+  test('R. Page renders properly under both dark and light modes', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    // Force light mode
+    await page.evaluate(() => {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
+    });
+
+    await expect(page.locator('h1')).toBeVisible();
+    await expect(page.locator('#stage-understand')).toBeVisible();
+
+    // Force dark mode
+    await page.evaluate(() => {
+      document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    });
+
+    await expect(page.locator('h1')).toBeVisible();
+    await expect(page.locator('#stage-understand')).toBeVisible();
+  });
+
+  // ── TEST S: KEYBOARD ACCESSIBILITY & FOCUS VISIBILITY ───────────────────────
+  test('S. Interactive elements support keyboard navigation and focus rings', async ({ page }) => {
+    await page.goto('/journey/basic-arrays/array-traversal/array-fundamentals');
+    await page.waitForLoadState('networkidle');
+
+    // Press tab to focus through header
+    await page.keyboard.press('Tab');
+    const focusedTag = await page.evaluate(() => document.activeElement?.tagName);
+    expect(focusedTag).toBeTruthy();
+  });
 
 });

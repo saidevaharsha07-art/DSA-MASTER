@@ -91,7 +91,7 @@ test.describe('Design System & Global App Shell', () => {
     await page.waitForLoadState('networkidle');
 
     // Breadcrumbs in header
-    const header = page.locator('header');
+    const header = page.locator('header').first();
     await expect(header).toBeVisible();
     await expect(header.getByText('DSA Master')).toBeVisible();
     await expect(header.getByText('Study Plan')).toBeVisible();
