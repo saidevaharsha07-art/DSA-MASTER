@@ -74,16 +74,30 @@ test.describe('Design System & Global App Shell', () => {
     await page.waitForLoadState('networkidle');
 
     // Hover over sidebar to expand it and reveal full labels
-    await page.locator('aside').hover();
+    await page.locator('aside[aria-label="Main Navigation"]').hover();
+    await page.waitForTimeout(300);
 
-    // Brand
+    // Brand link to dashboard
     await expect(page.locator('aside').getByText('DSA', { exact: false })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: /DSA Master Dashboard|DSA MASTER/i })).toBeVisible();
+
+    // Section headers
+    await expect(page.locator('aside').getByText('LEARN', { exact: true })).toBeVisible();
+    await expect(page.locator('aside').getByText('MASTERY', { exact: true })).toBeVisible();
+    await expect(page.locator('aside').getByText('SYSTEM', { exact: true })).toBeVisible();
 
     // Navigation links in sidebar
-    await expect(page.locator('aside').getByText('Dashboard')).toBeVisible();
-    await expect(page.locator('aside').getByText('Study Plan')).toBeVisible();
-    await expect(page.locator('aside').getByText('Practice')).toBeVisible();
-    await expect(page.locator('aside').getByText('Interview')).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Journey' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Practice' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Interview' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Study Plan' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: /Revision/i })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Contests' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Progress' })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: 'Settings' })).toBeVisible();
+
+    // AI Mentor should not be a standalone sidebar destination
+    expect(await page.locator('aside').getByText('AI Mentor').count()).toBe(0);
   });
 
   test('Global App Shell: Navbar dynamic breadcrumbs, search, and theme toggle', async ({ page }) => {

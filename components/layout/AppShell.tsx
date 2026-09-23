@@ -2,38 +2,13 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import {
-  LayoutDashboard,
-  Code2,
-  RotateCcw,
-  BarChart3,
-  Settings,
-  Compass,
-  Sparkles,
-  Timer,
-  Trophy,
-  CalendarCheck,
-} from "lucide-react";
 import { useRoadmap } from "@/hooks/use-roadmap";
 import { useCodeforces } from "@/hooks/use-codeforces";
-import { Sidebar } from "./Sidebar";
+import { Sidebar, NAV_SECTIONS } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { CommandPalette } from "./CommandPalette";
 import { OracleMentorModal } from "@/components/ai/oracle/OracleMentorModal";
 import { useSettings } from "@/src/context/SettingsContext";
-
-const nav = [
-  ["Dashboard", "/dashboard", LayoutDashboard],
-  ["Study Plan", "/study-plan", CalendarCheck],
-  ["Journey", "/journey", Compass],
-  ["Practice", "/practice", Code2],
-  ["Interview", "/interview", Timer],
-  ["Contest", "/contest", Trophy],
-  ["Revision", "/revision", RotateCcw],
-  ["Analytics", "/analytics", BarChart3],
-  ["AI Mentor", "/mentor", Sparkles],
-  ["Settings", "/settings", Settings],
-] as const;
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -130,7 +105,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         isExpanded={sidebarExpanded}
         onToggleExpand={toggleSidebarExpand}
         pathname={pathname ?? ""}
-        nav={nav}
+        navSections={NAV_SECTIONS}
       />
 
       <div

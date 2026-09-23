@@ -1,11 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { X, ChevronLeft } from "lucide-react";
+import { X, ChevronLeft, Compass, Code2, Timer, CalendarCheck, RotateCcw, Trophy, BarChart3, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { radius, animations, colors } from "@/src/design";
+import { radius, animations } from "@/src/design";
 import { Button } from "@/src/components/ui/Button";
+import { RevisionAdapterService } from "@/src/features/revision/services/revision-adapter.service";
+import { useActiveUser } from "@/src/hooks/useActiveUser";
+import { EventBus } from "@/src/core/events/event-bus";
+
+export interface NavItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
+  badgeKey?: "revision";
+}
+
+export interface NavSection {
+  title: string;
+  items: NavItem[];
+}
+
+export const NAV_SECTIONS: NavSection[] = [
+  {
+    title: "LEARN",
+    items: [
+      { name: "Journey", href: "/journey", icon: Compass },
+      { name: "Practice", href: "/practice", icon: Code2 },
+      { name: "Interview", href: "/interview", icon: Timer },
+    ],
+  },
+  {
+    title: "MASTERY",
+    items: [
+      { name: "Study Plan", href: "/study-plan", icon: CalendarCheck },
+      { name: "Revision", href: "/revision", icon: RotateCcw, badgeKey: "revision" },
+      { name: "Contests", href: "/contest", icon: Trophy },
+      { name: "Progress", href: "/analytics", icon: BarChart3 },
+    ],
+  },
+  {
+    title: "SYSTEM",
+    items: [
+      { name: "Settings", href: "/settings", icon: Settings },
+    ],
+  },
+];
 
 interface SidebarProps {
   isMobileOpen: boolean;
@@ -13,12 +54,8 @@ interface SidebarProps {
   isExpanded: boolean;
   onToggleExpand: () => void;
   pathname: string;
-  nav: readonly (readonly [string, string, any])[];
-}
-
-interface NavGroup {
-  title: string;
-  items: (readonly [string, string, any])[];
+  nav?: readonly (readonly [string, string, any])[];
+  navSections?: NavSection[];
 }
 
 export function Sidebar({
@@ -27,39 +64,50 @@ export function Sidebar({
   isExpanded: isPinned,
   onToggleExpand,
   pathname,
-  nav,
+  navSections = NAV_SECTIONS,
 }: SidebarProps) {
   const [mounted, setMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const { userId } = useActiveUser();
+  const [pendingReviews, setPendingReviews] = useState<number>(0);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Subscribe to live revision queue changes for authentic pending review badge
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const updatePending = () => {
+      try {
+        const summary = RevisionAdapterService.getRevisionSummary(userId);
+        setPendingReviews(summary.dueTodayProblems?.length || 0);
+      } catch {
+        setPendingReviews(0);
+      }
+    };
+
+    updatePending();
+    const unsubSolve = EventBus.subscribe("ProblemSolved", updatePending);
+    const unsubMemory = EventBus.subscribe("MemoryReviewed", updatePending);
+
+    return () => {
+      unsubSolve();
+      unsubMemory();
+    };
+  }, [userId]);
 
   const isExpanded = isMobileOpen || isPinned || isHovered;
   const collapsedWidth = 64;
   const expandedWidth = 230;
   const currentWidth = isMobileOpen ? 260 : isExpanded ? expandedWidth : collapsedWidth;
 
-  // Categorize nav items into Core, Mastery, and System groups
-  const coreHrefs = new Set(["/dashboard", "/study-plan", "/journey", "/practice", "/interview"]);
-  const masteryHrefs = new Set(["/contest", "/revision", "/analytics", "/mentor"]);
-  const systemHrefs = new Set(["/settings", "/profile"]);
-
-  const groups: NavGroup[] = [
-    {
-      title: "Core",
-      items: nav.filter(([, href]) => coreHrefs.has(href)),
-    },
-    {
-      title: "Mastery",
-      items: nav.filter(([, href]) => masteryHrefs.has(href)),
-    },
-    {
-      title: "System",
-      items: nav.filter(([, href]) => systemHrefs.has(href) || (!coreHrefs.has(href) && !masteryHrefs.has(href))),
-    },
-  ].filter((g) => g.items.length > 0);
+  const isRouteActive = (href: string) => {
+    if (!pathname) return false;
+    if (pathname === href) return true;
+    if (href === "/" || href === "/dashboard") return false;
+    return pathname.startsWith(href + "/") || pathname === href;
+  };
 
   if (!mounted) {
     return (
@@ -91,9 +139,13 @@ export function Sidebar({
         onMouseLeave={() => setIsHovered(false)}
       >
         <motion.aside
+          data-testid="app-sidebar"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onFocus={() => setIsHovered(true)}
           animate={{
             width: currentWidth,
-            x: isMobileOpen ? 0 : 0,
+            x: 0,
           }}
           transition={{ type: "spring", stiffness: 420, damping: 35 }}
           style={{
@@ -119,8 +171,11 @@ export function Sidebar({
           }}
           aria-label="Main Navigation"
         >
-          <div style={{ overflowY: "auto", overflowX: "hidden", flex: 1 }}>
-            {/* Top Brand Header */}
+          <div
+            style={{ overflowY: "auto", overflowX: "hidden", flex: 1 }}
+            onMouseEnter={() => setIsHovered(true)}
+          >
+            {/* Top Brand Header (Links directly to Dashboard / Command Center) */}
             <div
               style={{
                 padding: "12px 14px",
@@ -134,9 +189,12 @@ export function Sidebar({
             >
               <Link
                 href="/dashboard"
+                aria-label="DSA Master Dashboard"
+                title="Dashboard"
                 onClick={() => {
                   if (isMobileOpen) onMobileClose();
                 }}
+                className="outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded-lg"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -222,6 +280,7 @@ export function Sidebar({
                   variant="ghost"
                   size="icon"
                   onClick={onMobileClose}
+                  aria-label="Close navigation drawer"
                   style={{ padding: "4px", color: "var(--text-primary)" }}
                 >
                   <X size={18} />
@@ -229,27 +288,36 @@ export function Sidebar({
               )}
             </div>
 
-            {/* Categorized Navigation Groups */}
+            {/* Task-Oriented Navigation Groups (LEARN, MASTERY, SYSTEM) */}
             <nav
               style={{
-                padding: "12px 8px",
+                padding: "8px 6px",
                 display: "flex",
                 flexDirection: "column",
-                gap: "14px",
+                gap: "2px",
               }}
             >
-              {groups.map((group, groupIdx) => (
-                <div key={group.title} style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+              {navSections.map((group, groupIdx) => (
+                <div
+                  key={group.title}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "2px",
+                    marginTop: groupIdx === 0 ? "4px" : "10px",
+                  }}
+                >
                   {isExpanded ? (
                     <span
                       style={{
-                        padding: "4px 10px 6px 10px",
+                        padding: "6px 10px 4px 10px",
                         fontSize: "10px",
-                        fontWeight: 700,
+                        fontWeight: 600,
                         letterSpacing: "0.08em",
                         color: "var(--text-muted)",
                         textTransform: "uppercase",
                         userSelect: "none",
+                        opacity: 0.8,
                       }}
                     >
                       {group.title}
@@ -258,28 +326,30 @@ export function Sidebar({
                     <div
                       style={{
                         height: "1px",
-                        background: "var(--border-subtle)",
-                        margin: "4px 8px 6px 8px",
+                        background: "var(--border-subtle, rgba(255, 255, 255, 0.06))",
+                        margin: "6px 8px 6px 8px",
                       }}
                     />
                   ) : null}
 
-                  {group.items.map(([name, href, Icon]) => {
-                    const active =
-                      pathname === href ||
-                      (href !== "/" && href !== "/dashboard" && pathname.startsWith(href + "/"));
+                  {group.items.map((item) => {
+                    const active = isRouteActive(item.href);
+                    const Icon = item.icon;
+                    const hasRevisionBadge = item.badgeKey === "revision" && pendingReviews > 0;
 
                     return (
-                      <div key={href} style={{ position: "relative" }}>
+                      <div key={item.href} style={{ position: "relative" }}>
                         <Link
-                          href={href}
+                          href={item.href}
                           onClick={() => {
                             if (isMobileOpen) onMobileClose();
                           }}
+                          className="h-11 min-h-[44px] md:h-10 md:min-h-[40px] box-border outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--bg)]"
                           style={{
                             display: "flex",
                             alignItems: "center",
-                            padding: isExpanded ? "8px 10px" : "8px 0",
+                            boxSizing: "border-box",
+                            padding: isExpanded ? "0 10px" : "0",
                             borderRadius: radius.md,
                             color: active
                               ? "var(--text-primary)"
@@ -288,7 +358,7 @@ export function Sidebar({
                               ? "var(--accent-subtle)"
                               : "transparent",
                             border: active
-                              ? "1px solid var(--border-strong)"
+                              ? "1px solid var(--accent-subtle)"
                               : "1px solid transparent",
                             textDecoration: "none",
                             transition: `background-color ${animations.transition.fast}, color ${animations.transition.fast}`,
@@ -298,7 +368,7 @@ export function Sidebar({
                           }}
                           onMouseEnter={(e) => {
                             if (!active) {
-                              e.currentTarget.style.backgroundColor = "var(--surface-elevated)";
+                              e.currentTarget.style.backgroundColor = "var(--surface-elevated, rgba(255, 255, 255, 0.04))";
                               e.currentTarget.style.color = "var(--text-primary)";
                             }
                           }}
@@ -309,8 +379,8 @@ export function Sidebar({
                             }
                           }}
                         >
-                          {/* Active Pill Indicator for collapsed mode */}
-                          {active && !isExpanded && (
+                          {/* Thin Active Indicator on the Left */}
+                          {active && (
                             <div
                               style={{
                                 position: "absolute",
@@ -318,13 +388,14 @@ export function Sidebar({
                                 top: "50%",
                                 transform: "translateY(-50%)",
                                 width: "3px",
-                                height: "16px",
-                                borderRadius: radius.full,
+                                height: "18px",
+                                borderRadius: "2px",
                                 backgroundColor: "var(--accent)",
                               }}
                             />
                           )}
 
+                          {/* Icon Container */}
                           <div
                             style={{
                               width: "20px",
@@ -336,7 +407,7 @@ export function Sidebar({
                             }}
                           >
                             <Icon
-                              size={17}
+                              size={18}
                               style={{
                                 color: active ? "var(--accent)" : "inherit",
                                 transition: "color 0.15s ease",
@@ -344,23 +415,68 @@ export function Sidebar({
                             />
                           </div>
 
+                          {/* Collapsed dot indicator for authentic pending revision */}
+                          {!isExpanded && hasRevisionBadge && (
+                            <span
+                              style={{
+                                position: "absolute",
+                                top: "9px",
+                                right: "12px",
+                                width: "6px",
+                                height: "6px",
+                                borderRadius: "50%",
+                                backgroundColor: "var(--accent)",
+                              }}
+                            />
+                          )}
+
+                          {/* Expanded Label & Optional Badge */}
                           {isExpanded && (
-                            <motion.span
+                            <motion.div
                               initial={{ opacity: 0, x: -4 }}
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: -4 }}
                               transition={{ duration: 0.12, ease: "easeOut" }}
                               style={{
-                                whiteSpace: "nowrap",
-                                fontSize: "13px",
-                                fontWeight: active ? 600 : 500,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                width: "100%",
                                 overflow: "hidden",
-                                display: "inline-block",
-                                letterSpacing: "-0.01em",
                               }}
                             >
-                              {name}
-                            </motion.span>
+                              <span
+                                style={{
+                                  whiteSpace: "nowrap",
+                                  fontSize: "13px",
+                                  fontWeight: active ? 600 : 500,
+                                  overflow: "hidden",
+                                  letterSpacing: "-0.01em",
+                                }}
+                              >
+                                {item.name}
+                              </span>
+
+                              {hasRevisionBadge && (
+                                <span
+                                  data-testid="revision-badge"
+                                  style={{
+                                    padding: "1px 6px",
+                                    fontSize: "10px",
+                                    fontWeight: 700,
+                                    fontFamily: "var(--font-mono, monospace)",
+                                    borderRadius: "9999px",
+                                    backgroundColor: "var(--accent-subtle)",
+                                    color: "var(--accent)",
+                                    border: "1px solid var(--border-strong)",
+                                    marginLeft: "auto",
+                                    lineHeight: "1.2",
+                                  }}
+                                >
+                                  {pendingReviews}
+                                </span>
+                              )}
+                            </motion.div>
                           )}
                         </Link>
                       </div>
@@ -381,17 +497,19 @@ export function Sidebar({
             <Button
               onClick={onToggleExpand}
               variant="ghost"
-              className="desktop-only"
+              className="desktop-only outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
               style={{
                 width: "100%",
                 justifyContent: isExpanded ? "flex-start" : "center",
-                padding: "8px 10px",
+                minHeight: "40px",
+                height: "40px",
+                padding: "0 10px",
                 color: "var(--text-muted)",
                 gap: "8px",
                 borderRadius: radius.md,
-                background: isPinned ? "var(--surface-elevated)" : "transparent",
+                background: isPinned ? "var(--surface-elevated, rgba(255, 255, 255, 0.04))" : "transparent",
               }}
-              title={isPinned ? "Unpin sidebar" : "Pin sidebar open"}
+              title={isPinned ? "Collapse sidebar" : "Expand sidebar"}
             >
               <motion.div
                 animate={{ rotate: isPinned ? 0 : 180 }}
