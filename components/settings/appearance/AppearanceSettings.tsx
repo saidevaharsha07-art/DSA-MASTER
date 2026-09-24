@@ -30,8 +30,8 @@ export function AppearanceSettings() {
       {/* ── HEADER ─────────────────────────────────────────────────── */}
       <SettingsHeader
         icon={<Palette size={18} />}
-        title="Appearance & Themes"
-        subtitle="Customize the visual appearance of your workspace."
+        title="Appearance"
+        subtitle="Customize themes, accents, and interface density."
       />
 
       {/* ── CARD 1: THEMES & ACCENTS ───────────────────────────────── */}

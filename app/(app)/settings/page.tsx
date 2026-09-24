@@ -3,18 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, RotateCcw, Save, X, Settings as SettingsIcon, Layout } from 'lucide-react';
 import { SettingsSidebar, SettingsTabKey } from '@/components/settings/SettingsSidebar';
-import { SettingsHeader } from '@/components/settings/SettingsHeader';
 import { AppearanceSettings } from '@/components/settings/appearance/AppearanceSettings';
-import { InterfaceCard } from '@/components/settings/appearance/InterfaceCard';
 import { DeveloperProfileSettings } from '@/components/settings/profile/DeveloperProfileSettings';
 import { LearningEngineSettings } from '@/components/settings/learning/LearningEngineSettings';
-import { PracticeSettings } from '@/components/settings/practice/PracticeSettings';
 import { GoalsSettings } from '@/components/settings/goals/GoalsSettings';
-import { RevisionSettings } from '@/components/settings/revision/RevisionSettings';
-import { NotificationsSettings } from '@/components/settings/notifications/NotificationsSettings';
 import { IntegrationsSettings } from '@/components/settings/integrations/IntegrationsSettings';
-import { CloudSyncSettings } from '@/components/settings/cloud/CloudSyncSettings';
-import { PrivacySettings } from '@/components/settings/privacy/PrivacySettings';
+import { AccountSecuritySettings } from '@/components/settings/security/AccountSecuritySettings';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
 import { AuthGuard } from '@/src/lib/auth/guards/AuthGuard';
@@ -26,35 +20,42 @@ export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<SettingsTabKey>('appearance');
   const [savedSnapshot, setSavedSnapshot] = useState<string>('');
 
-  const VALID_TABS: SettingsTabKey[] = [
-    'profile',
-    'appearance',
-    'interface',
-    'learning',
-    'practice',
-    'goals',
-    'revision',
-    'integrations',
-    'notifications',
-    'privacy',
-    'cloud',
-  ];
+  const normalizeTab = (rawTab: string | null): SettingsTabKey => {
+    if (!rawTab) return 'appearance';
+    if (
+      rawTab === 'profile' ||
+      rawTab === 'appearance' ||
+      rawTab === 'learning' ||
+      rawTab === 'goals' ||
+      rawTab === 'integrations' ||
+      rawTab === 'security'
+    ) {
+      return rawTab as SettingsTabKey;
+    }
+    // Backwards compatibility mappings for legacy URLs
+    if (rawTab === 'interface') return 'appearance';
+    if (rawTab === 'practice' || rawTab === 'revision') return 'learning';
+    if (rawTab === 'privacy' || rawTab === 'notifications' || rawTab === 'account') return 'security';
+    if (rawTab === 'cloud') return 'integrations';
+    return 'appearance';
+  };
 
   // Restore saved active tab on mount (URL query param takes priority)
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
         const params = new URLSearchParams(window.location.search);
-        const urlTab = params.get('tab') as SettingsTabKey;
-        if (urlTab && VALID_TABS.includes(urlTab)) {
-          setActiveTab(urlTab);
-          localStorage.setItem('journey-settings-active-tab', urlTab);
+        const urlTab = params.get('tab');
+        if (urlTab) {
+          const resolved = normalizeTab(urlTab);
+          setActiveTab(resolved);
+          localStorage.setItem('journey-settings-active-tab', resolved);
           return;
         }
       }
-      const savedTab = localStorage.getItem('journey-settings-active-tab') as SettingsTabKey;
-      if (savedTab && VALID_TABS.includes(savedTab)) {
-        setActiveTab(savedTab);
+      const savedTab = localStorage.getItem('journey-settings-active-tab');
+      if (savedTab) {
+        setActiveTab(normalizeTab(savedTab));
       }
     } catch {
       // ignore
@@ -71,12 +72,13 @@ export default function SettingsPage() {
   const hasUnsavedChanges = Boolean(savedSnapshot && JSON.stringify(settings) !== savedSnapshot);
 
   const handleSelectTab = (tab: SettingsTabKey) => {
-    setActiveTab(tab);
+    const resolved = normalizeTab(tab);
+    setActiveTab(resolved);
     try {
-      localStorage.setItem('journey-settings-active-tab', tab);
+      localStorage.setItem('journey-settings-active-tab', resolved);
       if (typeof window !== 'undefined' && window.history) {
         const url = new URL(window.location.href);
-        url.searchParams.set('tab', tab);
+        url.searchParams.set('tab', resolved);
         window.history.replaceState({}, '', url.toString());
       }
     } catch {
@@ -87,20 +89,15 @@ export default function SettingsPage() {
   const handleResetSection = () => {
     if (activeTab === 'appearance' || activeTab === 'interface') {
       resetSection('appearance');
-    } else if (activeTab === 'learning') {
+    } else if (activeTab === 'learning' || activeTab === 'practice' || activeTab === 'revision') {
       resetSection('learningEngine');
-    } else if (activeTab === 'practice') {
-      resetSection('practice');
+      resetSection('revision');
     } else if (activeTab === 'goals') {
       resetSection('goals');
-    } else if (activeTab === 'revision') {
-      resetSection('revision');
-    } else if (activeTab === 'notifications') {
-      resetSection('notifications');
-    } else if (activeTab === 'privacy') {
+    } else if (activeTab === 'integrations' || activeTab === 'cloud') {
+      resetSection('integrations');
+    } else if (activeTab === 'security' || activeTab === 'privacy' || activeTab === 'notifications') {
       resetSection('privacy');
-    } else if (activeTab === 'cloud') {
-      resetSection('cloud');
     } else {
       resetSection('appearance');
     }
@@ -134,57 +131,21 @@ export default function SettingsPage() {
     switch (activeTab) {
       case 'profile':
         return <DeveloperProfileSettings />;
-      case 'interface':
-        return (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
-            <SettingsHeader
-              icon={<Layout size={18} />}
-              title="Layout & Interface"
-              subtitle="Control spacing, motion, and navigation behavior."
-            />
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '20px',
-                background: 'var(--card)',
-                border: '1px solid var(--border)',
-                borderRadius: '20px',
-                padding: '24px',
-                boxShadow: 'var(--card-shadow)',
-                width: '100%',
-                boxSizing: 'border-box',
-              }}
-            >
-              <div>
-                <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
-                  Interface Geometry &amp; Motion Controls
-                </h3>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-                  Corner radius, animation speed, UI density, and sidebar preferences.
-                </span>
-              </div>
-              <InterfaceCard />
-            </div>
-          </div>
-        );
       case 'learning':
-        return <LearningEngineSettings />;
       case 'practice':
-        return <PracticeSettings />;
+      case 'revision':
+        return <LearningEngineSettings />;
       case 'goals':
         return <GoalsSettings />;
-      case 'revision':
-        return <RevisionSettings />;
       case 'integrations':
-        return <IntegrationsSettings />;
-      case 'notifications':
-        return <NotificationsSettings />;
-      case 'privacy':
-        return <PrivacySettings />;
       case 'cloud':
-        return <CloudSyncSettings />;
+        return <IntegrationsSettings />;
+      case 'security':
+      case 'privacy':
+      case 'notifications':
+        return <AccountSecuritySettings />;
       case 'appearance':
+      case 'interface':
       default:
         return <AppearanceSettings />;
     }

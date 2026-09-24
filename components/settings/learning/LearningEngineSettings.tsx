@@ -203,6 +203,72 @@ export function LearningEngineSettings() {
         </div>
       </div>
 
+      {/* ── 2B. SRS CADENCE & MEMORY PARAMETERS ───────────────────── */}
+      <div
+        style={{
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          borderRadius: '16px',
+          padding: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
+        <div>
+          <h3 style={{ margin: 0, fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
+            Spaced Repetition &amp; Memory Parameters
+          </h3>
+          <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+            Configure daily review repetition cadence and cognitive retention thresholds.
+          </span>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '6px' }}>
+              <span style={{ color: 'var(--text-secondary)', fontWeight: 700 }}>REVIEWS PER DAY</span>
+              <strong style={{ color: 'var(--primary)' }}>{settings.revision?.revisionPerDay || 5} Problems</strong>
+            </div>
+            <input
+              type="range"
+              min="2"
+              max="20"
+              value={settings.revision?.revisionPerDay || 5}
+              onChange={(e) => updateSetting('revision', 'revisionPerDay', Number(e.target.value))}
+              style={{ width: '100%', accentColor: 'var(--primary)', cursor: 'pointer' }}
+            />
+          </div>
+
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', marginBottom: '6px' }}>
+              <span style={{ color: 'var(--text-secondary)', fontWeight: 700 }}>MEMORY STABILITY CADENCE</span>
+              <strong style={{ color: '#10B981' }}>{settings.revision?.memoryStrength || 'Standard'}</strong>
+            </div>
+            <select
+              value={settings.revision?.memoryStrength || 'Standard'}
+              onChange={(e) => updateSetting('revision', 'memoryStrength', e.target.value as any)}
+              style={{
+                width: '100%',
+                padding: '8px 12px',
+                borderRadius: '8px',
+                background: isLight ? '#FFFFFF' : 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid var(--border)',
+                color: 'var(--text-primary)',
+                fontSize: '12px',
+                outline: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <option value="Standard">Standard (Forgetting Curve: 3d / 7d / 14d)</option>
+              <option value="Aggressive">Aggressive (Active Recall: 1d / 3d / 7d)</option>
+              <option value="Relaxed">Relaxed (Spaced: 5d / 14d / 30d)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       {/* ── 3. ROW: TODAY'S LEARNING & MEMORY HEALTH ───────────────── */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
         {/* Today's Learning Action Card */}

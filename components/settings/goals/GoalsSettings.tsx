@@ -126,7 +126,7 @@ export function GoalsSettings() {
             Mastery Milestones
           </h3>
           <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-            Achieve milestone badges through sustained problem solving and kingdom progression.
+            Achieve milestone badges through sustained problem solving and mastery progression.
           </span>
         </div>
 
