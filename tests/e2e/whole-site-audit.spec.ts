@@ -120,7 +120,7 @@ test.describe('DSA MASTER — UI/UX Phase 10 Whole-Site Visual & UX Audit E2E', 
   test('3A. /dashboard renders developer command center', async ({ page }) => {
     await page.goto('/dashboard');
     await page.waitForLoadState('domcontentloaded');
-    await expect(page.getByText('DSA MASTER', { exact: false }).first()).toBeVisible();
+    await expect(page.getByText('DSA Magna', { exact: false }).first()).toBeVisible();
   });
 
   test('3B. /study-plan renders daily execution workspace', async ({ page }) => {
@@ -321,7 +321,7 @@ test.describe('DSA MASTER — UI/UX Phase 10 Whole-Site Visual & UX Audit E2E', 
     // 3. Dashboard / Command Center
     await page.goto('/dashboard');
     await page.waitForLoadState('domcontentloaded');
-    await expect(page.getByText('DSA MASTER', { exact: false }).first()).toBeVisible();
+    await expect(page.getByText('DSA Magna', { exact: false }).first()).toBeVisible();
 
     // 4. Navigate to Study Plan
     await page.goto('/study-plan');
@@ -371,7 +371,7 @@ test.describe('DSA MASTER — UI/UX Phase 10 Whole-Site Visual & UX Audit E2E', 
     // 4. Return to Command Center
     await page.goto('/dashboard');
     await page.waitForLoadState('domcontentloaded');
-    await expect(page.getByText('DSA MASTER', { exact: false }).first()).toBeVisible();
+    await expect(page.getByText('DSA Magna', { exact: false }).first()).toBeVisible();
   });
 
   // ── 8. SCREENSHOT QA CAPTURES (INDIVIDUAL FOCUSED TESTS) ───────────────────

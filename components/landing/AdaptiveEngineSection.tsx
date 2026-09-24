@@ -84,7 +84,7 @@ export function AdaptiveEngineSection() {
               marginBottom: '28px',
             }}
           >
-            Solving 500 random problems does not guarantee interview readiness. DSA MASTER synthesizes
+            Solving 500 random problems does not guarantee interview readiness. DSA Magna synthesizes
             five real-time telemetry inputs to deliver the single most optimal problem for your exact skill edge.
           </p>
 

@@ -223,7 +223,7 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
             </div>
           </div>
           <span className="text-xl sm:text-2xl font-black tracking-tight text-[var(--text-primary)]">
-            DSA <span className="text-[var(--accent-primary)]">MASTER</span>
+            DSA <span className="text-[var(--accent-primary)]">Magna</span>
           </span>
         </Link>
         <div className="mt-1.5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-[10px] font-mono font-semibold tracking-wider text-[var(--text-muted)] uppercase">

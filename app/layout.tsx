@@ -5,8 +5,8 @@ import { ToastProvider } from "@/src/context/ToastContext";
 import { AuthProvider } from "@/src/lib/auth/context/AuthContext";
 
 export const metadata = {
-  title: "DSA MASTER — Learn • Practice • Track • Master",
-  description: "Master Data Structures & Algorithms with DSA MASTER",
+  title: "DSA Magna — Learn • Practice • Track • Master",
+  description: "Master Data Structures & Algorithms with DSA Magna",
   manifest: "/manifest.json",
 };
 

@@ -1,7 +1,7 @@
 export function ComingSoon({ title, detail }: { title: string; detail: string }) {
   return (
     <>
-      <div className="eyebrow">DSA MASTER</div>
+      <div className="eyebrow">DSA Magna</div>
       <h1 className="title">{title}</h1>
       <div className="card" style={{ maxWidth: 760 }}>
         <p className="muted">{detail}</p>

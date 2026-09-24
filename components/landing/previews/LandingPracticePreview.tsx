@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { Search, ChevronDown, CheckCircle2 } from 'lucide-react';
@@ -21,7 +21,7 @@ export function LandingPracticePreview() {
       }`}>
         <div className="flex items-center gap-2">
           <div className={`text-xs font-bold tracking-wider flex items-center gap-1 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-            <span className="text-sky-500">▲</span> DSA MASTER
+            <span className="text-sky-500">▲</span> DSA Magna
           </div>
           <span className="text-xs text-slate-400">|</span>
           <span className={`text-xs font-semibold ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>Practice Arena</span>

@@ -116,7 +116,7 @@ test.describe('DSA MASTER — Interview Arena UI/UX Phase 6: Simulated Technical
 
     // Verify Header
     const workspace = page.locator('[data-testid="interview-workspace-view"]');
-    await expect(workspace.getByText('DSA MASTER')).toBeVisible();
+    await expect(workspace.getByText('DSA Magna')).toBeVisible();
     await expect(workspace.getByText('Technical Interview')).toBeVisible();
 
     // Verify Timer

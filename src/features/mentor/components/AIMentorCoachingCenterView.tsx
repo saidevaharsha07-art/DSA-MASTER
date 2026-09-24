@@ -355,7 +355,7 @@ export function AIMentorCoachingCenterView() {
       {!isAuthenticated && (
         <GuestPreviewBanner
           featureName="AI Mentor"
-          description="Explore the DSA Master intelligent AI Mentor in demo mode. Create a free account or log in to receive personalized problem coaching, tailored hints, and weakness elimination based on your actual coding history."
+          description="Explore the DSA Magna intelligent AI Mentor in demo mode. Create a free account or log in to receive personalized problem coaching, tailored hints, and weakness elimination based on your actual coding history."
           redirectPath="/mentor"
         />
       )}

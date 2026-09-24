@@ -58,7 +58,7 @@ export function InterviewWorkspaceHeader({
           />
           <div className="flex items-center gap-1.5 font-mono">
             <span className={`font-black text-xs tracking-wider ${isLight ? 'text-slate-900' : 'text-white'}`}>
-              DSA MASTER
+              DSA Magna
             </span>
             <span className="text-slate-400 text-xs">/</span>
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">

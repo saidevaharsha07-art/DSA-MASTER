@@ -212,7 +212,7 @@ export default function AnalyticsPage() {
       {!isAuthenticated && (
         <GuestPreviewBanner
           featureName="Intelligent Analytics"
-          description="You are exploring the live DSA Master Analytics dashboard. Create a free account or log in to record your solves, compute personal accuracy, and sync platform activity."
+          description="You are exploring the live DSA Magna Analytics dashboard. Create a free account or log in to record your solves, compute personal accuracy, and sync platform activity."
           redirectPath="/analytics"
         />
       )}

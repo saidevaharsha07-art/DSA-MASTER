@@ -82,7 +82,7 @@ export function LearningLoopSection() {
             lineHeight: 1.5,
           }}
         >
-          Traditional DSA prep fractures learning across random question lists. DSA MASTER connects
+          Traditional DSA prep fractures learning across random question lists. DSA Magna connects
           concepts, drills, interviews, and retention into one closed feedback loop.
         </p>
       </div>

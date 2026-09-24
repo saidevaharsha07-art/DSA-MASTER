@@ -8,10 +8,10 @@ test.describe('DSA MASTER — UI/UX Phase 2: Premium Public Landing Page E2E', (
     await page.waitForLoadState('networkidle');
 
     // Verify main brand in header
-    await expect(page.locator('header').getByText('DSA MASTER')).toBeVisible();
+    await expect(page.locator('header').getByText('DSA Magna')).toBeVisible();
 
     // Verify eyebrow
-    await expect(page.getByText('DSA MASTER 2.0 • DEVELOPER PLATFORM')).toBeVisible();
+    await expect(page.getByText('DSA Magna 2.0 • DEVELOPER PLATFORM')).toBeVisible();
 
     // Verify main headline
     const h1 = page.locator('h1');

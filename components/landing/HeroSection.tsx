@@ -34,7 +34,7 @@ export function HeroSection() {
           {/* Eyebrow */}
           <div>
             <Badge variant="primary" dot size="md">
-              DSA MASTER 2.0 • DEVELOPER PLATFORM
+              DSA Magna 2.0 • DEVELOPER PLATFORM
             </Badge>
           </div>
 

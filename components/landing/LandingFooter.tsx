@@ -51,7 +51,7 @@ export function LandingFooter() {
                   fontFamily: 'var(--font-sans)',
                 }}
               >
-                DSA <span style={{ color: 'var(--accent)' }}>MASTER</span>
+                DSA <span style={{ color: 'var(--accent)' }}>Magna</span>
               </span>
             </Link>
 
@@ -199,7 +199,7 @@ export function LandingFooter() {
           }}
         >
           <span>
-            © {new Date().getFullYear()} DSA MASTER. High-performance developer platform.
+            © {new Date().getFullYear()} DSA Magna. High-performance developer platform.
           </span>
 
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>

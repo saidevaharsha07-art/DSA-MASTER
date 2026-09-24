@@ -69,7 +69,7 @@ export function PhilosophySection() {
           <h3 className={`text-xs font-mono font-bold tracking-widest uppercase text-center mb-6 ${
             isLight ? 'text-sky-700' : 'text-sky-400'
           }`}>
-            THE DSA MASTER EQUATION
+            THE DSA MAGNA EQUATION
           </h3>
 
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-center">
@@ -118,7 +118,7 @@ export function PhilosophySection() {
             </h3>
             
             <p className={`text-sm sm:text-base leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-              We designed DSA Master from the ground up to eliminate the friction points that derail learners. Every feature connects directly into your personal growth loop.
+              We designed DSA Magna from the ground up to eliminate the friction points that derail learners. Every feature connects directly into your personal growth loop.
             </p>
 
             <div className="pt-2">
@@ -140,7 +140,7 @@ export function PhilosophySection() {
                 <thead>
                   <tr className={`border-b pb-3 ${isLight ? 'border-slate-200' : 'border-slate-800'}`}>
                     <th className="pb-3 text-slate-400 font-semibold">Traditional Practice</th>
-                    <th className="pb-3 text-right sm:text-left text-sky-500 font-bold">The DSA Master Way</th>
+                    <th className="pb-3 text-right sm:text-left text-sky-500 font-bold">The DSA Magna Way</th>
                   </tr>
                 </thead>
                 <tbody className={`divide-y font-medium ${isLight ? 'divide-slate-100' : 'divide-slate-800/60'}`}>

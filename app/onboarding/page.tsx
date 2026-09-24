@@ -197,7 +197,7 @@ export default function OnboardingPage() {
               <Sparkles className="w-4 h-4" />
             </div>
             <span className="text-xs font-mono font-bold tracking-wider uppercase text-[var(--text-secondary)]">
-              DSA MASTER Personalized Setup
+              DSA Magna Personalized Setup
             </span>
           </div>
 

@@ -292,7 +292,7 @@ export function MemoryCommandCenterView() {
       {!isAuthenticated && (
         <GuestPreviewBanner
           featureName="Smart Revision"
-          description="You are exploring the DSA Master Spaced Repetition engine. Create a free account or log in to track your personal forgetting curves and scheduled reviews."
+          description="You are exploring the DSA Magna Spaced Repetition engine. Create a free account or log in to track your personal forgetting curves and scheduled reviews."
           redirectPath="/revision"
         />
       )}

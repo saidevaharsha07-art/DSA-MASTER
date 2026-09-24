@@ -52,7 +52,7 @@ export default function DesignSystemPage() {
       <div style={{ marginBottom: '36px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
           <Badge variant="primary" dot>
-            DSA MASTER 2.0
+            DSA Magna 2.0
           </Badge>
           <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
             Production Design System
@@ -327,7 +327,7 @@ export default function DesignSystemPage() {
                   </span>
                   <Breadcrumbs
                     items={[
-                      { label: 'DSA Master', href: '/dashboard' },
+                      { label: 'DSA Magna', href: '/dashboard' },
                       { label: 'Curriculum', href: '/journey' },
                       { label: 'Binary Search', href: '/practice' },
                       { label: 'Search in Rotated Sorted Array' },

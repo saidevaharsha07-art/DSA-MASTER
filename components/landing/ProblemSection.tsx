@@ -115,7 +115,7 @@ export function ProblemSection() {
             <div className={`mt-8 pt-4 border-t flex items-center justify-between text-xs font-semibold ${
               isLight ? 'border-rose-100 text-rose-700' : 'border-rose-500/20 text-rose-400'
             }`}>
-              <span>DSA Master breaks this cycle</span>
+              <span>DSA Magna breaks this cycle</span>
               <ArrowRight className="h-4 w-4" />
             </div>
           </div>

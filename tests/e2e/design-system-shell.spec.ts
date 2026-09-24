@@ -79,7 +79,7 @@ test.describe('Design System & Global App Shell', () => {
 
     // Brand link to dashboard
     await expect(page.locator('aside').getByText('DSA', { exact: false })).toBeVisible();
-    await expect(page.locator('aside').getByRole('link', { name: /DSA Master Dashboard|DSA MASTER/i })).toBeVisible();
+    await expect(page.locator('aside').getByRole('link', { name: /DSA Magna Dashboard|DSA Magna/i })).toBeVisible();
 
     // Section headers
     await expect(page.locator('aside').getByText('LEARN', { exact: true })).toBeVisible();
@@ -107,7 +107,7 @@ test.describe('Design System & Global App Shell', () => {
     // Breadcrumbs in header
     const header = page.locator('header').first();
     await expect(header).toBeVisible();
-    await expect(header.getByText('DSA Master')).toBeVisible();
+    await expect(header.getByText('DSA Magna')).toBeVisible();
     await expect(header.getByText('Study Plan')).toBeVisible();
 
     // Search bar with ⌘K

@@ -189,7 +189,7 @@ export function Sidebar({
             >
               <Link
                 href="/dashboard"
-                aria-label="DSA Master Dashboard"
+                aria-label="DSA Magna Dashboard"
                 title="Dashboard"
                 onClick={() => {
                   if (isMobileOpen) onMobileClose();
@@ -259,7 +259,7 @@ export function Sidebar({
                       fontFamily: "var(--font-sans)",
                     }}
                   >
-                    DSA <span style={{ color: "var(--accent)" }}>MASTER</span>
+                    DSA <span style={{ color: "var(--accent)" }}>Magna</span>
                   </span>
                   <span
                     style={{

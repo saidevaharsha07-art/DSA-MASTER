@@ -100,7 +100,7 @@ export function LandingNavbar() {
               fontFamily: 'var(--font-sans)',
             }}
           >
-            DSA <span style={{ color: 'var(--accent)' }}>MASTER</span>
+            DSA <span style={{ color: 'var(--accent)' }}>Magna</span>
           </span>
         </Link>
 

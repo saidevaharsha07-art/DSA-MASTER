@@ -98,7 +98,7 @@ export function SolutionPipelineSection() {
           <p className={`text-base sm:text-lg leading-relaxed pt-2 ${
             isLight ? 'text-slate-600' : 'text-slate-300'
           }`}>
-            Instead of treating learning, coding, tracking, and revision as isolated tasks, DSA Master unifies them into a single continuous feedback loop.
+            Instead of treating learning, coding, tracking, and revision as isolated tasks, DSA Magna unifies them into a single continuous feedback loop.
           </p>
         </div>
 

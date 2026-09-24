@@ -42,7 +42,7 @@ export function TopicDetailModal({ topic, onClose }: TopicDetailModalProps) {
 
   if (!topic) return null;
 
-  const mentorQuery = `I'm working on the "${topic.title}" topic on DSA MASTER.
+  const mentorQuery = `I'm working on the "${topic.title}" topic on DSA Magna.
 Current Mastery: ${topic.masteryScore}% (Status: ${topic.status}).
 Evidence: ${topic.evidence.practiceSolved} solved, ${topic.evidence.failedAttemptsCount} failed attempts, Accuracy: ${topic.evidence.recentAccuracyPercent}%, Revision Retention: ${topic.evidence.revisionRetentionPercent}%.
 Reason: ${topic.statusReason}

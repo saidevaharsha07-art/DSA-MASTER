@@ -9,7 +9,7 @@ test.describe('DSA MASTER — Auth & Onboarding UI/UX Phase 9 E2E', () => {
 
     // Brand header
     await expect(page.locator('h1')).toContainText(/Log in to your existing profile/i);
-    await expect(page.getByText('DSA MASTER', { exact: false }).first()).toBeVisible();
+    await expect(page.getByText('DSA Magna', { exact: false }).first()).toBeVisible();
     await expect(page.getByText('Technical Interview & Algorithmic Workspace')).toBeVisible();
 
     // Mode tabs

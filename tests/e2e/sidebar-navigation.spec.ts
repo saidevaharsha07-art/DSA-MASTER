@@ -54,6 +54,10 @@ test.describe('DSA MASTER — Sidebar Information Architecture & UX', () => {
     // Verification: Renamed items are present with valid destinations
     await expect(aside.getByRole('link', { name: 'Contests' })).toHaveAttribute('href', '/contest');
     await expect(aside.getByRole('link', { name: 'Progress' })).toHaveAttribute('href', '/analytics');
+
+    // Regression check: Primary App Shell displays DSA Magna and does NOT display DSA MASTER
+    await expect(aside.getByText('DSA Magna')).toBeVisible();
+    expect(await aside.getByText('DSA MASTER').count()).toBe(0);
   });
 
   test('2. Navigation rows adhere to 40-44px height and consistent icon sizing', async ({ page }) => {

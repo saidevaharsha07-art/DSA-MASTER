@@ -291,7 +291,7 @@ export default function AdaptiveJourneyPage() {
       {!isAuthenticated && (
         <GuestPreviewBanner
           featureName="DSA Curriculum Knowledge Map"
-          description="You are exploring DSA Master's 25-area curriculum in preview mode. Your progress tracks dynamically as you practice. Sign in to synchronize cross-platform solves, contest ladders, and persistent mastery telemetry."
+          description="You are exploring DSA Magna's 25-area curriculum in preview mode. Your progress tracks dynamically as you practice. Sign in to synchronize cross-platform solves, contest ladders, and persistent mastery telemetry."
           redirectPath="/journey"
         />
       )}

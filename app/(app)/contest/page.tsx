@@ -155,7 +155,7 @@ export default function ContestPage() {
       {!isAuthenticated && view !== 'workspace' && (
         <GuestPreviewBanner
           featureName="Tournament & Contest Arena"
-          description="You are exploring DSA Master Contest Arena. You can take practice contests and preview competitive leaderboards freely. Log in or create an account to record your official rating, track history, and sync mistake signals."
+          description="You are exploring DSA Magna Contest Arena. You can take practice contests and preview competitive leaderboards freely. Log in or create an account to record your official rating, track history, and sync mistake signals."
           redirectPath="/contest"
         />
       )}

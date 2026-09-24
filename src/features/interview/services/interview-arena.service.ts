@@ -794,7 +794,7 @@ export class InterviewArenaService {
       });
     }
 
-    const mentorContext = `I just completed a ${session.config.durationMinutes}-minute ${session.config.type} interview round on DSA MASTER. I solved ${passedProblems} of ${totalProblems} problems with ${accuracyPercent}% accuracy. What should I drill next?`;
+    const mentorContext = `I just completed a ${session.config.durationMinutes}-minute ${session.config.type} interview round on DSA Magna. I solved ${passedProblems} of ${totalProblems} problems with ${accuracyPercent}% accuracy. What should I drill next?`;
 
     const grade: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F' =
       overallScore >= 95

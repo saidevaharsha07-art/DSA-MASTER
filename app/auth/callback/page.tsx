@@ -147,7 +147,7 @@ export default function AuthCallbackPage() {
     <Suspense fallback={
       <div className="min-h-screen w-full bg-[#0B0E14] text-slate-100 flex items-center justify-center p-4">
         <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4" />
-        <p className="text-xs text-slate-400 font-mono tracking-wider uppercase animate-pulse">Connecting to DSA MASTER...</p>
+        <p className="text-xs text-slate-400 font-mono tracking-wider uppercase animate-pulse">Connecting to DSA Magna...</p>
       </div>
     }>
       <AuthCallbackContent />

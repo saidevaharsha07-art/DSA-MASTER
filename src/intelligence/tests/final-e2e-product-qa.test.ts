@@ -280,7 +280,7 @@ export async function runFinalEndToEndProductQA() {
   // 8. BRANDING INTEGRITY
   // ──────────────────────────────────────────────────────────────────────────
   console.log('\n--- 8. BRANDING INTEGRITY ---');
-  assert(APP_NAME === 'DSA MASTER', 'System configuration constant is exactly DSA MASTER');
+  assert(APP_NAME === 'DSA Magna', 'System configuration constant is exactly DSA Magna');
 
   console.log('\n======================================================================');
   console.log(`✓ ALL ${passedTests} / ${totalTests} END-TO-END QA CHECKS PASSED SUCCESSFULLY!`);

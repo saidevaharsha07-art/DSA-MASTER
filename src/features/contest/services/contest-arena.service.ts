@@ -631,7 +631,7 @@ export class ContestArenaService {
     const percentile = Math.max(1, Math.round(((totalParticipants - rank) / totalParticipants) * 100));
 
     // Mentor Context Prompt
-    const mentorPromptContext = `I just finished the "${session.config.title}" contest on DSA MASTER.
+    const mentorPromptContext = `I just finished the "${session.config.title}" contest on DSA Magna.
 Score: ${session.score}/${maxScore} (${solvedCount}/${totalProblems} solved).
 Total Time: ${totalTimeMinutes} min, Penalty: ${session.penaltyMinutes} min, Rank: ${rank}/${totalParticipants} (Top ${percentile}%).
 Breakdown:
@@ -730,7 +730,7 @@ Please analyze my contest performance, explain how I could optimize my solving s
     const userEntry: LeaderboardEntry = {
       rank: 1,
       userId: session?.userId || 'you',
-      displayName: 'You (DSA Master)',
+      displayName: 'You (DSA Magna)',
       solvedCount: userSolved,
       totalProblems,
       score: userScore,

@@ -123,7 +123,7 @@ export function Navbar({
   // Generate dynamic breadcrumb segments from pathname safely
   const segments = pathname.split("/").filter(Boolean);
   const breadcrumbItems = [
-    { label: "DSA Master", href: "/dashboard" },
+    { label: "DSA Magna", href: "/dashboard" },
     ...segments.map((seg, idx) => {
       const fullPath = "/" + segments.slice(0, idx + 1).join("/");
       const formatted = seg
@@ -443,7 +443,7 @@ export function Navbar({
                           textOverflow: "ellipsis",
                         }}
                       >
-                        {user?.email || "developer@dsamaster.com"}
+                        {user?.email || "developer@dsamagna.com"}
                       </span>
                     </div>
 

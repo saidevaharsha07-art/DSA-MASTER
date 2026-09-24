@@ -178,7 +178,7 @@ export async function runInterviewArenaE2ETest(): Promise<boolean> {
   assert((finalReport.whatWentWell || []).length > 0, 'Report produces grounded "What Went Well" feedback');
   assert((finalReport.whatNeedsWork || []).length > 0, 'Report produces grounded "What Needs Work" feedback');
   assert((finalReport.recommendedNextSteps || []).length > 0, 'Report produces actionable next steps');
-  assert(finalReport.mentorQueryContext.includes('DSA MASTER'), 'AI Mentor context string is pre-formatted');
+  assert(finalReport.mentorQueryContext.includes('DSA Magna'), 'AI Mentor context string is pre-formatted');
 
   // ──────────────────────────────────────────────────────────────────────────
   // 7. USER ISOLATION & HISTORY PERSISTENCE
