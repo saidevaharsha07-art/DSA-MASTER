@@ -197,7 +197,14 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
         passedTestcases: result.passedTestcases,
       });
 
-      if (result.status === 'accepted') {
+      const isUnavailable =
+        result.stderr?.includes('coming soon') ||
+        result.stderr?.includes('temporarily unavailable') ||
+        result.stderr?.includes('Execution unavailable');
+
+      if (isUnavailable) {
+        toast('Live code execution is coming soon. Problem solving, learning, and study plans are fully available.', 'info');
+      } else if (result.status === 'accepted') {
         toast(`All ${result.passedTestcases || 0} sample tests passed!`, 'success');
       } else if (result.status === 'compile_error') {
         toast('Compilation Error: See compiler output in console', 'error');
@@ -210,11 +217,23 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
       }
     } catch (err: any) {
       setIsRunning(false);
+      const isUnavailable =
+        err?.message?.includes('coming soon') ||
+        err?.message?.includes('temporarily unavailable') ||
+        err?.message?.includes('Execution unavailable');
+
       setEvaluationResult({
         status: 'runtime_error',
-        outputDetails: err?.message || 'Sandbox execution runtime error.',
+        outputDetails: isUnavailable
+          ? 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.'
+          : (err?.message || 'Sandbox execution runtime error.'),
       });
-      toast('Execution failed to run in sandbox', 'error');
+      toast(
+        isUnavailable
+          ? 'Live code execution is coming soon. Problem solving, learning, and study plans are fully available.'
+          : 'Execution failed to run in sandbox',
+        isUnavailable ? 'info' : 'error'
+      );
     }
   };
 
@@ -233,6 +252,23 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
       });
 
       setIsRunning(false);
+
+      const isUnavailable =
+        result.errorLog?.includes('coming soon') ||
+        result.errorLog?.includes('temporarily unavailable') ||
+        result.errorLog?.includes('Execution unavailable');
+
+      if (isUnavailable) {
+        setEvaluationResult({
+          status: 'runtime_error',
+          outputDetails: 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.',
+          totalTestcases: 0,
+          passedTestcases: 0,
+          testcaseResults: [],
+        });
+        toast('Live code execution is coming soon. Problem solving, learning, and study plans are fully available.', 'info');
+        return;
+      }
 
       const isAccepted = result.verdict === 'Accepted';
       const xpToEarn = isAccepted ? (problem.xp || 50) : 0;
@@ -301,7 +337,24 @@ export function PracticeIDELayout({ problem }: PracticeIDELayoutProps) {
       }
     } catch (err: any) {
       setIsRunning(false);
-      toast('Submission server error', 'error');
+      const isUnavailable =
+        err?.message?.includes('coming soon') ||
+        err?.message?.includes('temporarily unavailable') ||
+        err?.message?.includes('Execution unavailable');
+
+      setEvaluationResult({
+        status: 'runtime_error',
+        outputDetails: isUnavailable
+          ? 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.'
+          : (err?.message || 'Submission server error'),
+      });
+
+      toast(
+        isUnavailable
+          ? 'Live code execution is coming soon. Problem solving, learning, and study plans are fully available.'
+          : 'Submission server error',
+        isUnavailable ? 'info' : 'error'
+      );
     }
   };
 

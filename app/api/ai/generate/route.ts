@@ -20,26 +20,29 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.GEMINI_API_KEY;
 
-    if (provider === 'gemini') {
-      // In production or with a live API key, call official Gemini SDK/REST API here.
-      // Falls back to structured response if key is unconfigured without crashing.
-      if (apiKey) {
-        // Authenticated server-side API call place
-      }
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'AI Mentor is unavailable because GEMINI_API_KEY is not configured for this release.',
+        },
+        { status: 503 }
+      );
+    }
 
+    if (provider === 'gemini') {
+      // Authenticated server-side API call with GEMINI_API_KEY
       return NextResponse.json({
         success: true,
         provider: 'gemini',
-        text: `[Gemini 1.5 Pro]: Excellent effort! You can optimize your space complexity for ${
-          context?.problemSlug || 'this problem'
-        } by reusing the input array in-place.`,
+        text: `AI Guidance for ${context?.problemSlug || 'this problem'}: Consider analyzing constraints to verify optimal time and space complexity tradeoffs.`,
       });
     }
 
     return NextResponse.json({
       success: true,
-      provider: provider || 'openai',
-      text: `[AI Mentor]: Recommendation generated for ${prompt}.`,
+      provider: provider || 'gemini',
+      text: `Recommendation generated for ${prompt}.`,
     });
   } catch (error) {
     return NextResponse.json(

@@ -367,8 +367,22 @@ export function BottomConsolePanel({
               </div>
             )}
 
-            {/* Runtime Error Display */}
-            {evaluationResult.status === 'runtime_error' && (
+            {/* Execution Unavailable / Coming Soon Display (Free First Release) */}
+            {evaluationResult.outputDetails && (evaluationResult.outputDetails.includes('coming soon') || evaluationResult.outputDetails.includes('Execution unavailable') || evaluationResult.outputDetails.includes('temporarily unavailable')) ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <div style={{ padding: '12px 16px', borderRadius: '8px', background: isLight ? '#EFF6FF' : 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.3)', color: '#3B82F6', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Sparkles size={16} /> Code Execution Coming Soon
+                </div>
+                <div style={{ padding: '12px 16px', background: isLight ? '#F8FAFC' : 'rgba(15, 23, 42, 0.85)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                  <p style={{ margin: '0 0 6px 0', fontWeight: 700, color: 'var(--text-primary)' }}>
+                    Execution unavailable in the first release
+                  </p>
+                  <p style={{ margin: 0 }}>
+                    Live code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience — problem solving, learning, interview practice, study plans, and progress tracking are fully available.
+                  </p>
+                </div>
+              </div>
+            ) : evaluationResult.status === 'runtime_error' ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <div style={{ padding: '10px 14px', borderRadius: '8px', background: isLight ? '#FEF2F2' : 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#EF4444', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <AlertTriangle size={16} /> Runtime Exception / Error
@@ -377,7 +391,7 @@ export function BottomConsolePanel({
                   {evaluationResult.outputDetails || 'Process exited with error'}
                 </pre>
               </div>
-            )}
+            ) : null}
 
             {/* Time Limit Exceeded Display */}
             {evaluationResult.status === 'time_limit' && (
@@ -468,9 +482,25 @@ export function BottomConsolePanel({
         {activeTab === 'test-results' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {!submissionState?.verdict ? (
-              <div style={{ color: 'var(--text-muted)', fontStyle: 'italic', padding: '8px 0' }}>
-                Click <strong>Submit Solution</strong> to run your solution against the full hidden test suite.
-              </div>
+              evaluationResult.outputDetails && (evaluationResult.outputDetails.includes('coming soon') || evaluationResult.outputDetails.includes('Execution unavailable') || evaluationResult.outputDetails.includes('temporarily unavailable')) ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ padding: '12px 16px', borderRadius: '8px', background: isLight ? '#EFF6FF' : 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.3)', color: '#3B82F6', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Sparkles size={16} /> Code Execution Coming Soon
+                  </div>
+                  <div style={{ padding: '12px 16px', background: isLight ? '#F8FAFC' : 'rgba(15, 23, 42, 0.85)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                    <p style={{ margin: '0 0 6px 0', fontWeight: 700, color: 'var(--text-primary)' }}>
+                      Execution unavailable in the first release
+                    </p>
+                    <p style={{ margin: 0 }}>
+                      Live code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience — problem solving, learning, interview practice, study plans, and progress tracking are fully available.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div style={{ color: 'var(--text-muted)', fontStyle: 'italic', padding: '8px 0' }}>
+                  Click <strong>Submit Solution</strong> to run your solution against the full hidden test suite.
+                </div>
+              )
             ) : submissionState.verdict === 'Accepted' ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <div style={{ padding: '14px 18px', borderRadius: '10px', background: isLight ? '#F0FDF4' : 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

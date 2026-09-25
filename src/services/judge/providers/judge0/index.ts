@@ -20,8 +20,6 @@ export class Judge0Provider implements JudgeProvider {
   }
 
   public async run(request: ExecutionRequest, signal?: AbortSignal): Promise<ExecutionResponse> {
-    const startTime = performance.now();
-
     try {
       const response = await fetch('/api/judge/run', {
         method: 'POST',
@@ -36,20 +34,34 @@ export class Judge0Provider implements JudgeProvider {
         signal,
       });
 
+      const data = await response.json().catch(() => null);
+
       if (!response.ok) {
-        throw new Error(`Execution error: ${response.statusText}`);
+        return {
+          status: 'runtime_error',
+          stdout: '',
+          stderr: data?.stderr || data?.error || 'Code execution is temporarily unavailable. Please try again shortly.',
+          runtimeMs: 0,
+          memoryMb: 0,
+          exitCode: 1,
+          providerUsed: this.name,
+          totalTestcases: 0,
+          passedTestcases: 0,
+          testcaseResults: [],
+        };
       }
 
-      const data = await response.json();
       return data;
     } catch (error: any) {
       if (signal?.aborted) {
         throw new Error('Execution cancelled by user');
       }
       return {
-        status: 'compile_error',
+        status: 'runtime_error',
         stdout: '',
-        stderr: error.message || 'Execution error',
+        stderr: error.message?.includes('temporarily unavailable')
+          ? 'Code execution is temporarily unavailable. Please try again shortly.'
+          : error.message || 'Code execution is temporarily unavailable. Please try again shortly.',
         runtimeMs: 0,
         memoryMb: 0,
         exitCode: 1,
@@ -75,12 +87,31 @@ export class Judge0Provider implements JudgeProvider {
         signal,
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        return {
+          submissionId: `sub-${Date.now()}`,
+          verdict: 'Runtime Error',
+          testcasesPassed: 0,
+          totalTestcases: 1,
+          runtimeMs: 0,
+          memoryMb: 0,
+          xpEarned: 0,
+          beatsRuntimePct: 0,
+          beatsMemoryPct: 0,
+          testcaseDetails: [],
+          errorLog: data?.errorLog || data?.error || 'Code execution is temporarily unavailable. Please try again shortly.',
+          providerUsed: this.name,
+          timestamp: new Date().toISOString(),
+        };
+      }
+
       return data;
     } catch (error: any) {
       return {
         submissionId: `sub-${Date.now()}`,
-        verdict: 'Compilation Error',
+        verdict: 'Runtime Error',
         testcasesPassed: 0,
         totalTestcases: 1,
         runtimeMs: 0,
@@ -89,7 +120,9 @@ export class Judge0Provider implements JudgeProvider {
         beatsRuntimePct: 0,
         beatsMemoryPct: 0,
         testcaseDetails: [],
-        errorLog: error.message || 'Submission error',
+        errorLog: error.message?.includes('temporarily unavailable')
+          ? 'Code execution is temporarily unavailable. Please try again shortly.'
+          : error.message || 'Code execution is temporarily unavailable. Please try again shortly.',
         providerUsed: this.name,
         timestamp: new Date().toISOString(),
       };

@@ -1,5 +1,5 @@
 import { LanguageId, ExecutionRequest, ExecutionResponse, SubmissionRequest, SubmissionResponse, TestcaseResult } from './types';
-import { sandboxRunner } from './sandbox/runner';
+import { getServerJudgeProvider } from './server/provider-factory';
 import { driverGenerator, DriverSpec, DriverTestCase } from './drivers';
 import { getProblemTestSuite } from './testcases';
 import { CurriculumRepository } from '@/src/curriculum/repository';
@@ -31,11 +31,33 @@ export class JudgeEvaluator {
     const spec = this.getDriverSpec(problemId);
     const harnessCode = driverGenerator.generateHarness(language, code, spec, testcasesToRun);
 
-    const execResult = await sandboxRunner.execute({
+    const provider = getServerJudgeProvider();
+    const execResult = await provider.execute({
       language,
       code: harnessCode,
       timeoutMs: 3000,
     });
+
+    const isUnavailable =
+      execResult.status === 'runtime_error' &&
+      (execResult.stderr?.includes('coming soon') ||
+        execResult.stderr?.includes('temporarily unavailable') ||
+        execResult.stderr?.includes('Execution unavailable'));
+
+    if (isUnavailable) {
+      return {
+        status: 'runtime_error',
+        stdout: '',
+        stderr: execResult.stderr || 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.',
+        runtimeMs: 0,
+        memoryMb: 0,
+        exitCode: 1,
+        providerUsed: provider.name,
+        totalTestcases: testcasesToRun.length,
+        passedTestcases: 0,
+        testcaseResults: [],
+      };
+    }
 
     if (execResult.status === 'compile_error') {
       return {
@@ -46,7 +68,7 @@ export class JudgeEvaluator {
         runtimeMs: 0,
         memoryMb: 0,
         exitCode: 1,
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         totalTestcases: testcasesToRun.length,
         passedTestcases: 0,
         testcaseResults: [],
@@ -61,7 +83,7 @@ export class JudgeEvaluator {
         runtimeMs: execResult.runtimeMs || 3000,
         memoryMb: execResult.memoryMb || 25,
         exitCode: 124,
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         totalTestcases: testcasesToRun.length,
         passedTestcases: 0,
         testcaseResults: [],
@@ -79,7 +101,7 @@ export class JudgeEvaluator {
         runtimeMs: execResult.runtimeMs,
         memoryMb: execResult.memoryMb,
         exitCode: 1,
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         totalTestcases: testcasesToRun.length,
         passedTestcases: 0,
         testcaseResults: [],
@@ -96,7 +118,7 @@ export class JudgeEvaluator {
       runtimeMs: execResult.runtimeMs,
       memoryMb: execResult.memoryMb,
       exitCode: allPassed ? 0 : 1,
-      providerUsed: 'DSA Sandboxed Engine',
+      providerUsed: provider.name,
       totalTestcases: parsedResults.length,
       passedTestcases: passedCount,
       testcaseResults: parsedResults,
@@ -117,7 +139,8 @@ export class JudgeEvaluator {
     const spec = this.getDriverSpec(problemId);
     const harnessCode = driverGenerator.generateHarness(language, code, spec, hiddenTests);
 
-    const execResult = await sandboxRunner.execute({
+    const provider = getServerJudgeProvider();
+    const execResult = await provider.execute({
       language,
       code: harnessCode,
       timeoutMs: 4000,
@@ -125,6 +148,30 @@ export class JudgeEvaluator {
 
     const submissionId = `sub_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
     const timestamp = new Date().toISOString();
+
+    const isUnavailable =
+      execResult.status === 'runtime_error' &&
+      (execResult.stderr?.includes('coming soon') ||
+        execResult.stderr?.includes('temporarily unavailable') ||
+        execResult.stderr?.includes('Execution unavailable'));
+
+    if (isUnavailable) {
+      return {
+        submissionId,
+        verdict: 'Runtime Error',
+        testcasesPassed: 0,
+        totalTestcases: hiddenTests.length,
+        runtimeMs: 0,
+        memoryMb: 0,
+        xpEarned: 0,
+        beatsRuntimePct: 0,
+        beatsMemoryPct: 0,
+        testcaseDetails: [],
+        errorLog: execResult.stderr || 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.',
+        providerUsed: provider.name,
+        timestamp,
+      };
+    }
 
     if (execResult.status === 'compile_error') {
       return {
@@ -139,7 +186,7 @@ export class JudgeEvaluator {
         beatsMemoryPct: 0,
         testcaseDetails: [],
         errorLog: execResult.compileOutput || execResult.stderr || 'Compilation Failed',
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         timestamp,
       };
     }
@@ -157,7 +204,7 @@ export class JudgeEvaluator {
         beatsMemoryPct: 0,
         testcaseDetails: [],
         errorLog: 'Execution exceeded 4000ms time limit.',
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         timestamp,
       };
     }
@@ -177,7 +224,7 @@ export class JudgeEvaluator {
         beatsMemoryPct: 0,
         testcaseDetails: [],
         errorLog: execResult.stderr || 'Runtime Exception during test execution.',
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: provider.name,
         timestamp,
       };
     }
@@ -222,7 +269,7 @@ export class JudgeEvaluator {
           }
         : undefined,
       errorLog: firstFailed?.error || (!allPassed ? `Failed on testcase ${firstFailed ? firstFailed.testcaseIndex + 1 : 1}` : undefined),
-      providerUsed: 'DSA Sandboxed Engine',
+      providerUsed: provider.name,
       timestamp,
     };
   }

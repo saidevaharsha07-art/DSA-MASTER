@@ -22,6 +22,26 @@ export interface SandboxRunOptions {
   memoryLimitMb?: number;
 }
 
+export function isLocalExecutionAllowed(): boolean {
+  // 1. Strict production rule: host execution is NEVER allowed in production
+  if (process.env.NODE_ENV === 'production') {
+    return false;
+  }
+  // 2. Server-side explicit override
+  if (process.env.ENABLE_LOCAL_RUNNER === 'false') {
+    return false;
+  }
+  // 3. Client-synced environment flag
+  if (process.env.NEXT_PUBLIC_ENABLE_LOCAL_RUNNER === 'false') {
+    return false;
+  }
+  // 4. Must be explicitly enabled in non-production
+  return (
+    process.env.ENABLE_LOCAL_RUNNER === 'true' ||
+    process.env.NEXT_PUBLIC_ENABLE_LOCAL_RUNNER === 'true'
+  );
+}
+
 export class SandboxRunner {
   private defaultTimeoutMs = 3000;
 
@@ -29,6 +49,10 @@ export class SandboxRunner {
    * Executes source code inside an isolated temporary directory sandbox.
    */
   public async execute(options: SandboxRunOptions): Promise<SandboxExecutionResult> {
+    if (!isLocalExecutionAllowed()) {
+      throw new Error('Unsafe host code execution is disabled in production. A dedicated isolated judge is required.');
+    }
+
     const timeoutMs = options.timeoutMs || this.defaultTimeoutMs;
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'dsa-sandbox-'));
 
@@ -356,15 +380,20 @@ export class SandboxRunner {
       let timedOut = false;
       let isResolved = false;
 
-      const cleanEnv = {
-        ...process.env,
+      // Sanitize environment: never leak server secrets or credentials to spawned host processes
+      const cleanEnv: Record<string, string> = {
+        PATH: process.env.PATH || '',
+        SystemRoot: process.env.SystemRoot || '',
         TEMP: cwd,
         TMP: cwd,
+        HOME: cwd,
+        USERPROFILE: cwd,
+        NODE_ENV: process.env.NODE_ENV || 'development',
       };
 
       const proc: any = spawn(command, args, {
         cwd,
-        env: cleanEnv,
+        env: cleanEnv as NodeJS.ProcessEnv,
         shell: process.platform === 'win32',
       });
 
