@@ -1,5 +1,5 @@
 import "./globals.css";
-import { RoadmapProvider } from "@/hooks/use-roadmap";
+import { RoadmapProvider } from "@frontend/hooks/use-roadmap";
 import { SettingsProvider } from "@/src/context/SettingsContext";
 import { ToastProvider } from "@/src/context/ToastContext";
 import { AuthProvider } from "@/src/lib/auth/context/AuthContext";

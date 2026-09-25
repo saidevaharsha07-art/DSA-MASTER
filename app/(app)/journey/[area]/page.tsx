@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { useSettings } from '@/src/context/SettingsContext';
-import { useRoadmap } from '@/hooks/use-roadmap';
+import { useRoadmap } from '@frontend/hooks/use-roadmap';
 
 export default function JourneyAreaDetailPage() {
   const params = useParams();

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Problem } from "@/types";
-import { pct } from "@/lib/utils";
+import { Problem } from "@frontend/types";
+import { pct } from "@frontend/lib/utils";
 export function TopicCard({
   topic,
   problems,

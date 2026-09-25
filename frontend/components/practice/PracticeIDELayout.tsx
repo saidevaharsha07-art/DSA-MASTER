@@ -12,7 +12,7 @@ import { ThinkingPhaseModal } from './ThinkingPhaseModal';
 import { SubmissionResultModal } from './SubmissionResultModal';
 import { getStarterCode, StarterCodeMap } from '@/src/engines/judge/starterCode';
 import { judgeEngine, ThinkingPrediction, SubmissionRecord } from '@/src/engines/judge';
-import { runCode, submitSolution, cancelActiveExecution, LanguageId } from '@/src/services/judge';
+import { runCode, submitSolution, cancelActiveExecution, LanguageId } from '@backend/judge';
 import { useToast } from '@/src/context/ToastContext';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useActiveUser } from '@/src/hooks/useActiveUser';

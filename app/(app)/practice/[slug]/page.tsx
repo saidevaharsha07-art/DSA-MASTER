@@ -3,7 +3,7 @@
 import React, { use } from 'react';
 import { notFound } from 'next/navigation';
 import { CurriculumRepository } from '@/src/curriculum/repository';
-import { PracticeIDELayout } from '@/components/practice/PracticeIDELayout';
+import { PracticeIDELayout } from '@frontend/components/practice/PracticeIDELayout';
 
 interface ProblemPageProps {
   params: Promise<{ slug: string }>;

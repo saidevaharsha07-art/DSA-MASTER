@@ -531,7 +531,7 @@ export class InterviewArenaService {
       });
       res = await response.json();
     } else {
-      const { judgeEvaluator } = await import('@/src/services/judge/evaluator');
+      const { judgeEvaluator } = await import('@backend/judge/evaluator');
       res = await judgeEvaluator.evaluateRun({
         problemId,
         language: language as any,
@@ -590,7 +590,7 @@ export class InterviewArenaService {
       });
       evalResult = await response.json();
     } else {
-      const { judgeEvaluator } = await import('@/src/services/judge/evaluator');
+      const { judgeEvaluator } = await import('@backend/judge/evaluator');
       evalResult = await judgeEvaluator.evaluateSubmit({
         problemId: currentAttempt.problemId,
         language: language as any,

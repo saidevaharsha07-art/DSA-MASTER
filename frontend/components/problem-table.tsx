@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { Check, ExternalLink, RotateCcw, Star } from "lucide-react";
 import { useMemo, useState } from "react";
-import { useRoadmap } from "@/hooks/use-roadmap";
-import { difficultyRank, minutes } from "@/lib/utils";
-import type { Problem } from "@/types";
+import { useRoadmap } from "@frontend/hooks/use-roadmap";
+import { difficultyRank, minutes } from "@frontend/lib/utils";
+import type { Problem } from "@frontend/types";
 
 export function ProblemTable({
   items,

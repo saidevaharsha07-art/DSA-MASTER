@@ -28,7 +28,7 @@ import {
 import { judgeEngine, SubmissionRecord } from '@/src/engines/judge';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { getProblemDetailInfo } from '@/src/problems/services/problem-detail.service';
-import { TestcaseResult } from '@/src/services/judge/types';
+import { TestcaseResult } from '@backend/judge/types';
 import { useToast } from '@/src/context/ToastContext';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useActiveUser } from '@/src/hooks/useActiveUser';

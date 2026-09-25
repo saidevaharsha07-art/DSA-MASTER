@@ -4,7 +4,7 @@ import React from 'react';
 import { Target, Award, Flame, Zap, Trophy, Shield, CheckCircle2, Star } from 'lucide-react';
 import { SettingsHeader } from '../SettingsHeader';
 import { useSettings } from '@/src/context/SettingsContext';
-import { useRoadmap } from '@/hooks/use-roadmap';
+import { useRoadmap } from '@frontend/hooks/use-roadmap';
 
 export function GoalsSettings() {
   const { settings, updateSetting } = useSettings();

@@ -24,11 +24,11 @@ import {
   Terminal,
   Zap,
 } from "lucide-react";
-import { useRoadmap } from "@/hooks/use-roadmap";
-import { useCodeforces } from "@/hooks/use-codeforces";
+import { useRoadmap } from "@frontend/hooks/use-roadmap";
+import { useCodeforces } from "@frontend/hooks/use-codeforces";
 import { useSettings } from "@/src/context/SettingsContext";
 import { useToast } from "@/src/context/ToastContext";
-import { CommandPaletteModal } from "@/components/ui/CommandPaletteModal";
+import { CommandPaletteModal } from "@frontend/components/ui/CommandPaletteModal";
 
 const nav = [
   ["Dashboard", "/dashboard", LayoutDashboard],

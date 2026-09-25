@@ -1,4 +1,4 @@
-import { Problem } from "@/types";
+import { Problem } from "@frontend/types";
 export const difficultyRank = (d: string) => ({ Easy: 1, Medium: 2, Hard: 3 })[d] ?? 4;
 export const minutes = (v: string) => Number.parseInt(v) || 0;
 export const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0);

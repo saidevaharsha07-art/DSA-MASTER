@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { LandingPage } from '@/components/landing/LandingPage';
+import { LandingPage } from '@frontend/components/landing/LandingPage';
 
 export const metadata: Metadata = {
   title: 'DSA Magna — Master DSA. Build the Mindset.',

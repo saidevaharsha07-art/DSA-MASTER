@@ -6,7 +6,7 @@ import { useSettings } from '@/src/context/SettingsContext';
 import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';
 import { EventBus } from '@/src/core/events/event-bus';
 import { CurriculumRepository } from '@/src/curriculum/repository';
-import { useRoadmap } from '@/hooks/use-roadmap';
+import { useRoadmap } from '@frontend/hooks/use-roadmap';
 import { AdaptiveRoadmapService } from '@/src/features/journey/services/adaptive-roadmap.service';
 import {
   AdaptiveRoadmapState,
@@ -21,7 +21,7 @@ import { JourneyHero } from '@/src/features/journey/components/JourneyHero';
 import { JourneyToolbar, BandFilterOption, StatusFilterOption } from '@/src/features/journey/components/JourneyToolbar';
 import { CurriculumBandSection, CurriculumBandData } from '@/src/features/journey/components/CurriculumBandSection';
 import { MasteryState } from '@/src/features/journey/components/LearningAreaCard';
-import { EmptyState } from '@/components/ui/EmptyState';
+import { EmptyState } from '@frontend/components/ui/EmptyState';
 import { Layers } from 'lucide-react';
 
 const CURRICULUM_BANDS: CurriculumBandData[] = [

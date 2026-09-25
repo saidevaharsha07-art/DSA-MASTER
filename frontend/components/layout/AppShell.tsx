@@ -2,12 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useRoadmap } from "@/hooks/use-roadmap";
-import { useCodeforces } from "@/hooks/use-codeforces";
+import { useRoadmap } from "@frontend/hooks/use-roadmap";
+import { useCodeforces } from "@frontend/hooks/use-codeforces";
 import { Sidebar, NAV_SECTIONS } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { CommandPalette } from "./CommandPalette";
-import { OracleMentorModal } from "@/components/ai/oracle/OracleMentorModal";
+import { OracleMentorModal } from "@frontend/components/ai/oracle/OracleMentorModal";
 import { useSettings } from "@/src/context/SettingsContext";
 
 export function AppShell({ children }: { children: React.ReactNode }) {

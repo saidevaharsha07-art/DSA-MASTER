@@ -1,6 +1,6 @@
 // components/homepage/KingdomMarkers.tsx
 import React from "react";
-import { worlds } from "@/components/journey/worldData";
+import { worlds } from "@frontend/components/journey/worldData";
 import styles from "../../styles/homepage.module.css";
 
 export default function KingdomMarkers() {

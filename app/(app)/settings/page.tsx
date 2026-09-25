@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, RotateCcw, Save, X, Settings as SettingsIcon, Layout } from 'lucide-react';
-import { SettingsSidebar, SettingsTabKey } from '@/components/settings/SettingsSidebar';
-import { AppearanceSettings } from '@/components/settings/appearance/AppearanceSettings';
-import { DeveloperProfileSettings } from '@/components/settings/profile/DeveloperProfileSettings';
-import { LearningEngineSettings } from '@/components/settings/learning/LearningEngineSettings';
-import { GoalsSettings } from '@/components/settings/goals/GoalsSettings';
-import { IntegrationsSettings } from '@/components/settings/integrations/IntegrationsSettings';
-import { AccountSecuritySettings } from '@/components/settings/security/AccountSecuritySettings';
+import { SettingsSidebar, SettingsTabKey } from '@frontend/components/settings/SettingsSidebar';
+import { AppearanceSettings } from '@frontend/components/settings/appearance/AppearanceSettings';
+import { DeveloperProfileSettings } from '@frontend/components/settings/profile/DeveloperProfileSettings';
+import { LearningEngineSettings } from '@frontend/components/settings/learning/LearningEngineSettings';
+import { GoalsSettings } from '@frontend/components/settings/goals/GoalsSettings';
+import { IntegrationsSettings } from '@frontend/components/settings/integrations/IntegrationsSettings';
+import { AccountSecuritySettings } from '@frontend/components/settings/security/AccountSecuritySettings';
 import { useSettings } from '@/src/context/SettingsContext';
 import { useToast } from '@/src/context/ToastContext';
 import { AuthGuard } from '@/src/lib/auth/guards/AuthGuard';

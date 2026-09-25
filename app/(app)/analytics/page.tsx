@@ -39,7 +39,7 @@ import { PlatformTelemetryService } from '@/src/features/platform/services/platf
 import { PlatformTelemetryCard } from '@/src/features/platform/types/platform-telemetry.types';
 import { PatternOrbMetric } from '@/src/features/analytics/services/analytics-adapter.service';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
-import { JourneyCalendarHeatmap } from '@/components/analytics/JourneyCalendarHeatmap';
+import { JourneyCalendarHeatmap } from '@frontend/components/analytics/JourneyCalendarHeatmap';
 import { EventBus } from '@/src/core/events/event-bus';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { GuestPreviewBanner } from '@/src/lib/auth/components/GuestPreviewBanner';

@@ -25,5 +25,5 @@ frontend/
 
 ## Architectural Guidelines
 1. **Server/Client Separation**: Interactive UI components declare `'use client'` at the top.
-2. **Next.js Routing**: Page entrypoints and layouts reside under `app/` at repository root, importing components from `@frontend/components` or `@/components`.
+2. **Next.js Routing**: Page entrypoints and layouts reside under `app/` at repository root, importing components from `@frontend/components`.
 3. **Theming**: Dark and Light modes are styled via CSS variables defined in `app/globals.css` and managed dynamically via `SettingsContext` and `data-theme`.

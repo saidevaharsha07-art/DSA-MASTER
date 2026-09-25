@@ -33,7 +33,7 @@ import {
 import { CurriculumRepository } from '@/src/curriculum/repository';
 import { getPlatformMeta } from '@/src/curriculum/services';
 import { ProblemModel } from '@/src/curriculum/types';
-import { useRoadmap } from '@/hooks/use-roadmap';
+import { useRoadmap } from '@frontend/hooks/use-roadmap';
 import { EventBus } from '@/src/core/events/event-bus';
 import { useActiveUser } from '@/src/hooks/useActiveUser';
 import { progressService, ActivityRecord } from '@/src/services/progress/progress.service';

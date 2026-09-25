@@ -3,7 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import { z } from "zod";
-import type { Problem, UserState } from "@/types";
+import type { Problem, UserState } from "@frontend/types";
 import { progressService } from "@/src/services/progress/progress.service";
 import { EventBus } from "@/src/core/events/event-bus";
 

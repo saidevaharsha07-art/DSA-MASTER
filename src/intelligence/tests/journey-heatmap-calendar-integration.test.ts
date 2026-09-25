@@ -5,7 +5,7 @@
  * single selected-day activity summary panel calculation, user isolation, and anti-fabrication rules.
  */
 
-import { PLATFORM_CONFIG, resolvePlatform } from '@/components/analytics/JourneyCalendarHeatmap';
+import { PLATFORM_CONFIG, resolvePlatform } from '@frontend/components/analytics/JourneyCalendarHeatmap';
 import { activityStoreService } from '@/src/services/activity/activity-store.service';
 import { CurriculumRepository } from '@/src/curriculum/repository';
 
