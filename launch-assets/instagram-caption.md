@@ -1,39 +1,39 @@
-# Instagram / Threads / Developer Social Post
+# Instagram / Social Post
 
-**Recommended Visual**: 
-- Slide 1: High-contrast screenshot of the DSA Magna Landing Page / Dark Mode Dashboard.
-- Slide 2: The Practice IDE showing Monaco Editor with the "Thinking Phase" modal active.
-- Slide 3: Vertical Cinematic Journey showing 7 Bands and 13 Kingdoms.
-- Slide 4: Real-time Algorithm Visualizer in action (Two Pointers / Tree traversal).
-- Slide 5: Memory Command Center (SM-2 Spaced Repetition Queue).
-- Slide 6: Call to Action — "Try it free at dsa-master-7boq.vercel.app (Link in bio)".
+**Recommended Visuals**:
+- Slide 1: Clean screenshot of the DSA Magna dashboard (Dark mode)
+- Slide 2: Practice editor showing the "Thinking Phase" modal
+- Slide 3: Interactive Journey curriculum view
+- Slide 4: Algorithm visualizer in action
+- Slide 5: Memory command center (spaced repetition review)
+- Slide 6: Live demo URL and GitHub link
 
 ---
 
 ### Caption
 
-Level up your algorithmic intuition without the burnout 🔥
+I built a free DSA practice platform to help prepare for technical interviews 🚀
 
-Most DSA prep feels like mindless memorization: grind 500 problems, burn out, forget everything before interview day.
+Meet **DSA Magna** — a web app designed to make practicing data structures and algorithms more structured and effective.
 
-Meet **DSA Magna** ⚡ The Sovereign Platform for Engineering Mastery.
+Why I built it:
+I wanted a tool that doesn't just throw problems at you, but helps you actually retain the patterns and plan your solutions properly before coding.
 
-What makes it different?
-🗺️ **4,000+ Problem Roadmap**: 7 mastery bands, 13 kingdoms, from Arrays to Advanced DP.
-🧠 **Thinking & Reflection Phases**: Learn to deconstruct complexity and edge cases before you code.
-🕹️ **Interactive Algorithm Visualizer**: Step through pointer shifts, sorting, and graph traversals in real-time.
-⏱️ **Spaced Repetition Memory Center**: Beat the forgetting curve with automated review scheduling.
-🎙️ **Mock Interview Simulator**: Realistic timed sessions with audio-synthesized interviewer questions.
-🌙 **12 Gorgeous Themes**: OLED Dark, Cyberpunk, Nord, Moonlight, Monokai, and more.
-⚡ **Offline-first & 100% Free**: No mandatory login to start.
+Here is what's inside:
+📚 4,000 problems organized across 25 learning areas and 5 curriculum bands
+🧠 Thinking Phase modal to plan edge cases and complexity before typing code
+🔁 Spaced repetition review queue (SM-2) so you don't forget solved problems
+🎬 Step-by-step algorithm visualizer
+🤖 AI mentor for hints and timed mock interviews
+🎨 Dark & Light themes with 5 accent color options
+⚡ Offline-first — practice immediately without needing to sign up
 
-Built with Next.js 15, TypeScript, Tailwind, Monaco Editor & Supabase.
+⚠️ Note: Live code execution is not enabled in the first free release. The Run/Submit interface is present, but real code execution infrastructure is planned for a future release.
 
-Try it right now (no signup required):
-🔗 Link in bio (or visit: https://dsa-master-7boq.vercel.app)
+Try it out here:
+🔗 https://dsa-master-7boq.vercel.app
+Code on GitHub: https://github.com/saidevaharsha07-art/DSA-MASTER
 
-Drop a ⚡ if you're grinding DSA this season!
+Let me know what you think in the comments! 💻✨
 
----
-
-#coding #programming #developer #softwareengineer #webdev #computerscience #leetcode #datastructures #algorithms #codinginterview #nextjs #techlife #fullstack
+#coding #developer #softwareengineer #webdev #computerscience #leetcode #datastructures #algorithms #codinginterview #nextjs #typescript #buildinpublic

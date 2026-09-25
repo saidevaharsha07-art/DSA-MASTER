@@ -5,16 +5,22 @@ Welcome to the official launch assets kit for **DSA Magna**. This package contai
 ## Package Contents
 
 1. [Launch Checklist](file:///./launch-checklist.md) — Step-by-step verification checklist covering production health, responsive design, analytics, and security.
-2. [LinkedIn Announcement](file:///./linkedin-post.md) — Long-form professional announcement geared towards software engineers, recruiters, and engineering leaders.
-3. [Instagram / Social Visual Post](file:///./instagram-caption.md) — Visual-first carousel captions with hook, value proposition, and hashtags for developer communities.
-4. [WhatsApp / Community Message](file:///./whatsapp-message.md) — Direct, conversational broadcast copy for developer groups, Discord channels, and university WhatsApp chats.
-5. [5-Day Social Content Sequence](file:///./social-content-plan.md) — Strategic campaign plan outlining post themes, formats, and talking points across the launch week.
+2. [LinkedIn Announcement](file:///./linkedin-post.md) — Professional announcement written from a student/developer builder perspective.
+3. [Instagram / Social Visual Post](file:///./instagram-caption.md) — Visual carousel post caption with features, clear notes, and developer hashtags.
+4. [WhatsApp / Community Message](file:///./whatsapp-message.md) — Direct, natural message for developer groups, Discord channels, and student chats.
+5. [5-Day Social Content Sequence](file:///./social-content-plan.md) — Sequential launch plan outlining post themes, formats, and talking points.
+
+---
+
+## ⚡ Important Note on Code Execution
+
+Live code execution is not enabled in the first free release. The Run/Submit interface is present, but real code execution infrastructure is planned for a future release. All launch copy accurately reflects this limitation.
 
 ---
 
 ## 🌐 Custom Domain Roadmap (`dsamagna.com`)
 
-While the initial public release is live on Vercel at `https://dsa-master-7boq.vercel.app`, the roadmap for provisioning the sovereign domain `dsamagna.com` is detailed below.
+The initial public release is live on Vercel at `https://dsa-master-7boq.vercel.app`. The roadmap for connecting the custom domain `dsamagna.com` in a future step is outlined below:
 
 ### Phase 1: Domain Registration
 - **Registrar**: Cloudflare Registrar, Namecheap, or Google Domains (Squarespace).
@@ -25,7 +31,7 @@ While the initial public release is live on Vercel at `https://dsa-master-7boq.v
 1. Navigate to the project on **Vercel Dashboard** > **Settings** > **Domains**.
 2. Click **Add Domain** and enter:
    - `dsamagna.com`
-   - `www.dsamagna.com` (recommended to redirect to apex `dsamagna.com` or vice-versa).
+   - `www.dsamagna.com` (recommended to redirect to apex `dsamagna.com`).
 3. Vercel will generate the required DNS records (A Record and CNAME).
 
 ### Phase 3: DNS Records Setup
@@ -39,7 +45,7 @@ In your domain registrar's DNS Management console, add the following records:
 *(If using Cloudflare DNS, set Proxy status to **DNS Only (Grey Cloud)** during verification to allow Vercel's automated Let's Encrypt SSL issuance).*
 
 ### Phase 4: Environment Variable Updates
-Once DNS propagates (typically 2 to 30 minutes), update environment variables:
+Once DNS propagates, update environment variables:
 1. In Vercel Project Settings > Environment Variables:
    - `NEXT_PUBLIC_SITE_URL` = `https://dsamagna.com`
 2. In Supabase Dashboard > Authentication > URL Configuration:

@@ -1,7 +1,7 @@
 # DSA Magna
 
-> **The Sovereign Platform for Engineering Mastery**  
-> A production-grade, offline-first, cinematic platform unifying 4,000+ data structures and algorithms problems into a cohesive, gamified mastery curriculum with spaced repetition, real-time algorithm visualization, and AI-powered coaching.
+> An interactive, offline-first platform for mastering Data Structures & Algorithms.  
+> Unifies 4,000 algorithmic problems across 25 learning areas and 5 curriculum bands, featuring structured problem-solving phases, step-by-step visualizers, spaced repetition review, and an AI mentor.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
@@ -9,23 +9,24 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Database%20%26%20Auth-3ECF8E?style=flat&logo=supabase)](https://supabase.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Live Production URL**: [https://dsa-master-7boq.vercel.app](https://dsa-master-7boq.vercel.app)
+**Live Production URL**: [https://dsa-master-7boq.vercel.app](https://dsa-master-7boq.vercel.app)  
+**GitHub Repository**: [https://github.com/saidevaharsha07-art/DSA-MASTER](https://github.com/saidevaharsha07-art/DSA-MASTER)
 
 ---
 
 ## 🏛️ System Architecture
 
-DSA Magna is architected into clean, decoupled domains following modern software engineering best practices:
+DSA Magna is organized into decoupled domains:
 
 ```
 dsa-magna/
 ├── app/                  # Next.js App Router (pages, layouts, thin route handlers)
 │   ├── (app)/            # Authenticated product application shell
-│   │   ├── dashboard/    # Sovereign command center & analytics
-│   │   ├── journey/      # Vertical cinematic curriculum map
+│   │   ├── dashboard/    # Learner command center & analytics
+│   │   ├── journey/      # Vertical interactive curriculum map
 │   │   ├── practice/     # Problem solving & IDE experience
 │   │   ├── interview/    # AI mock interview simulator
-│   │   ├── visualizer/   # Real-time algorithm visualizer
+│   │   ├── visualizer/   # Step-by-step algorithm visualizer
 │   │   ├── mentor/       # AI mentor coaching center
 │   │   ├── revision/     # Spaced repetition memory command center
 │   │   ├── contests/     # Competitive programming tracker
@@ -45,15 +46,17 @@ dsa-magna/
 │   ├── judge/            # Isolated code evaluation and sandbox architecture
 │   ├── utils/            # Authentication guards and server-side utilities
 │   └── types/            # Backend domain contracts and API payloads
-├── database/             # Relational data layer
-│   ├── schema/           # Canonical PostgreSQL schema with Row-Level Security (RLS)
+├── database/             # Relational data documentation & reference
+│   ├── schema/           # Architectural reference mirror of the schema
 │   ├── migrations/       # Versioned migration baselines
 │   ├── docs/             # Data dictionary and entity-relationship documentation
 │   ├── types/            # Strongly-typed TypeScript database entities
 │   └── seeds/            # Initial dataset definitions and seed instructions
-├── src/                  # Feature slices, curriculum data, and shared state
+├── supabase/             # Canonical Supabase CLI operational directory
+│   └── schema.sql        # Active source of truth applied to live Supabase database
+├── src/                  # Feature slices, curriculum catalog, and shared state
 │   ├── features/         # Modular feature views and controllers
-│   ├── curriculum/       # 4,000+ problem catalog, 7 bands, and 13 kingdoms
+│   ├── curriculum/       # 4,000 problem catalog across 25 learning areas and 5 bands
 │   └── services/         # Client-side storage and audio services
 └── public/               # Static assets, branding logos, and service worker manifests
 ```
@@ -62,31 +65,38 @@ dsa-magna/
 
 ## ✨ Features
 
-- **4,000+ Problem Unified Curriculum**: Structured into 7 progressive Mastery Bands across 13 Kingdom domains (Arrays, Two Pointers, Trees, Graphs, Dynamic Programming, and more) with exact difficulty ratings and topic tags.
-- **Vertical Cinematic Journey Map**: Visual roadmap navigating learners through progressive milestones with animated checkpoints, kingdom locks, and completion rings.
-- **Monaco-Powered Practice IDE**: Rich multi-language code editor supporting C++, Java, and Python with customizable keyboard shortcuts, syntax highlighting, and theme support.
-- **Cognitive Metacognition (Thinking & Reflection Phases)**:
-  - *Thinking Phase*: Forces problem deconstruction, constraint verification, and brute-force to optimal complexity planning before writing code.
-  - *Reflection Phase*: Post-solution review capturing lessons learned, alternative patterns, and personal pitfalls.
-- **Interactive Algorithm Visualizer**: Step-by-step visual animation across 7 core algorithmic patterns (Two Pointers, Binary Search, Sorting, Tree Traversals, Graph BFS/DFS, etc.).
-- **AI Mentor Coaching Center**: Interactive problem guidance powered by Google Gemini API with intelligent offline fallback heuristics when disconnected or API keys are omitted.
-- **Mock Interview Simulator**: Realistic technical and behavioral interview sessions featuring audio synthesis questions, real-time timer pressure, and deep post-interview competency scorecards.
-- **Spaced Repetition Memory Command Center**: SM-2 spaced repetition algorithm tracking retention decay, scheduling optimal review dates, and ensuring long-term concept permanence.
+- **4,000 Problem Unified Curriculum**: Structured into 5 Curriculum Bands across 25 Learning Areas (Arrays, Two Pointers, Trees, Graphs, Dynamic Programming, and more) with exact difficulty ratings and topic tags.
+- **Vertical Interactive Journey Map**: Visual roadmap navigating learners through progressive milestones with checkpoints, learning area progress, and completion indicators.
+- **Monaco-Powered Practice IDE**: Multi-language code editor supporting C++, Java, and Python with customizable keyboard shortcuts, syntax highlighting, and theme support.
+- **Structured Problem-Solving (Thinking & Reflection Phases)**:
+  - *Thinking Phase*: Guided step to deconstruct constraints, identify edge cases, and commit to time/space bounds before coding.
+  - *Reflection Phase*: Post-solution review capturing lessons learned, key takeaways, and personal pitfalls.
+- **Step-by-Step Algorithm Visualizer**: Interactive animation to step through array and pointer movements visually.
+- **AI Mentor Coaching Center**: Contextual problem hints powered by Google Gemini API with built-in offline guidance when disconnected or when API keys are omitted.
+- **Mock Interview Simulator**: Timed technical and behavioral interview sessions featuring audio-synthesized question delivery and post-interview evaluation scorecards.
+- **Spaced Repetition Memory Command Center**: Built on the SM-2 algorithm to schedule targeted problem reviews so you retain concepts over time.
 - **Contest Performance Hub**: Live profile tracking across CodeChef, Codeforces, and LeetCode with submission history and contest rating trajectories.
-- **Career Readiness Engine**: Target company pattern packs (Google, Meta, Amazon, Microsoft) and role readiness assessments evaluating readiness against benchmark standards.
-- **Complete Customization & Theming**: 12 precision themes (OLED Dark, Cyberpunk, Nord, Solarized, Monokai, Moonlight, etc.) and 5 accent palettes with full light/dark mode support.
-- **Offline-First Resilience**: Zero required login to start practicing. All state is maintained locally in browser storage with instant one-click Supabase cloud backup when authenticated.
+- **Career Readiness Engine**: Target company pattern packs and role readiness assessments evaluating readiness against benchmark standards.
+- **Customizable Themes & Accents**: High-contrast Dark and Light modes with 5 custom accent color choices (Emerald, Ocean Blue, Royal Purple, Golden, Rose Pink).
+- **Offline-First Resilience**: Practice immediately with zero login friction. State is stored locally in the browser with one-click Supabase cloud backup when authenticated.
 
 ---
 
-## 🛡️ Code Execution Policy (Production Release)
+## ⚡ Code Execution Policy (First Free Release)
 
-DSA Magna is built with a pluggable code evaluation architecture designed for isolated multi-tenant execution via Judge0.
+> **Important**: Live code execution is not enabled in the first free release. The Run/Submit interface is present, but real code execution infrastructure is planned for a future release.
 
-For the initial **\$0 Free Release**:
-- Public server-side arbitrary code execution is intentionally held in an **explicit, safe `unavailable` state**.
-- The platform does not execute untrusted user code locally in production and does not spin up unauthenticated child processes.
-- The UI gracefully communicates that sandbox execution is coming soon in an upcoming dedicated cluster deployment, allowing users to write, solve, test thinking phases, and track progress risk-free.
+- The platform does not execute untrusted user code on the host server and does not spawn unauthenticated local processes in production.
+- When selecting "Run", the UI displays an explicit notification that execution is held in an unavailable state until dedicated sandbox infrastructure is provisioned.
+- Learners can safely explore problems, write solutions, test the Thinking Phase, and track progress risk-free.
+
+---
+
+## 🗄️ Database Architecture & Source of Truth
+
+- **Operational Source of Truth**: **`supabase/schema.sql`** at the repository root is the active schema executed by the Supabase CLI (`supabase db reset`, `supabase db push`) and applied to the production database.
+- **Documentation Mirror**: **`database/schema/schema.sql`** and **`database/docs/SCHEMA.md`** provide the architectural reference, entity-relationship descriptions, and TypeScript definitions (`database/types/index.ts`).
+- All user tables enforce strict PostgreSQL **Row-Level Security (RLS)** ensuring users only access their own data.
 
 ---
 
@@ -153,9 +163,9 @@ npm run build
 
 ## 🚢 Vercel Deployment
 
-DSA Magna deploys out-of-the-box on Vercel with zero configuration:
+DSA Magna deploys out-of-the-box on Vercel:
 
-1. Push your changes to GitHub `main` branch.
+1. Push changes to GitHub `main` branch.
 2. Link the repository in the [Vercel Dashboard](https://vercel.com).
 3. Set the required Environment Variables:
    - `NEXT_PUBLIC_SITE_URL` = `https://your-deployment-name.vercel.app`

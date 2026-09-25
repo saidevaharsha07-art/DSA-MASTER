@@ -1,7 +1,15 @@
 # DSA Magna — Database Schema Documentation
 
+## Canonical Schema Source of Truth
+
+> **Operational Source of Truth**: The active database schema applied to the live database is **`supabase/schema.sql`** at the repository root. This file is directly integrated with the Supabase CLI (`supabase db reset`, `supabase db push`).
+>
+> The file **`database/schema/schema.sql`** is an architectural documentation mirror for developer reference and data modeling.
+
+---
+
 ## Database Overview
-DSA Magna uses a relational PostgreSQL schema deployed on Supabase.
+DSA Magna uses a relational PostgreSQL schema hosted on Supabase.
 All client-accessible tables strictly enforce **Row Level Security (RLS)**, ensuring that authenticated users can only query, modify, or insert their own records (`auth.uid() = user_id`).
 
 ---
@@ -11,7 +19,7 @@ All client-accessible tables strictly enforce **Row Level Security (RLS)**, ensu
 | Table | Relationship | Description | RLS Policy |
 | :--- | :--- | :--- | :--- |
 | `public.profiles` | 1:1 with `auth.users(id)` | Public learner identity, username, and avatar | `auth.uid() = id` |
-| `public.progress` | 1:1 with `auth.users(id)` | Gamification, level, XP, streaks, and solved IDs | `auth.uid() = user_id` |
+| `public.progress` | 1:1 with `auth.users(id)` | User level, XP, streaks, and solved problem IDs | `auth.uid() = user_id` |
 | `public.submissions` | 1:N with `auth.users(id)` | Solution execution submissions & audit records | `auth.uid() = user_id` |
 | `public.drafts` | 1:N with `auth.users(id)` | In-progress code editor drafts per problem/language | `auth.uid() = user_id` |
 | `public.activities` | 1:N with `auth.users(id)` | Append-only activity stream for heatmap & stats | `auth.uid() = user_id` |

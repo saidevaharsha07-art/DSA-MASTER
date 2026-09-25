@@ -8,27 +8,27 @@ Use this operational checklist before publicly announcing DSA Magna across socia
 - [ ] **HTTPS Certificate**: Verify valid SSL/TLS certificate at [https://dsa-master-7boq.vercel.app](https://dsa-master-7boq.vercel.app).
 - [ ] **HTTP Response Status**: Verify root URL returns `200 OK` in `< 500ms`.
 - [ ] **Assets & Static Bundles**: Confirm static CSS/JS chunks load without `404` or MIME-type warnings in browser console.
-- [ ] **Favicon & Web App Manifest**: Ensure browser tab renders the DSA Magna gold glyph and manifest loads cleanly.
+- [ ] **Favicon & Web App Manifest**: Ensure browser tab renders the DSA Magna logo and manifest loads cleanly.
 
 ---
 
 ## 2. Core Feature Smoke Verification
 - [ ] **Landing Page**:
-  - Hero section renders typography, CTA buttons ("Enter Kingdom", "Explore Curriculum"), and preview graphics.
-  - Interactive feature cards respond to mouse hover and click events.
+  - Hero section renders clean typography, CTA buttons ("Start Learning" / "Explore Journey"), and preview graphics.
+  - Interactive feature preview cards respond to mouse hover and click events.
 - [ ] **Curriculum & Journey**:
-  - `/journey` renders 7 Mastery Bands and 13 Kingdom domains without visual clipping.
-  - Band progress indicators and problem counts match the 4,000+ catalog.
+  - `/journey` renders 5 Curriculum Bands and 25 Learning Areas without visual clipping.
+  - Band progress indicators and problem counts match the 4,000 problem catalog.
 - [ ] **Practice IDE**:
   - `/practice` loads Monaco Editor cleanly with syntax highlighting for C++, Java, and Python.
-  - "Run" triggers the safe modal: *"Code execution is coming soon"*.
-  - No synthetic XP, streak updates, or fake passes occur on unavailable run.
-  - "Submit" requires authentication (returns `401` or prompts sign-in for anonymous users).
-- [ ] **Cognitive Phases**:
-  - Thinking Phase modal opens on demand and captures complexity analysis.
-  - Reflection Phase modal saves post-mortem notes locally.
-- [ ] **Visualizer**:
-  - `/visualizer` opens algorithmic playback controls (play, pause, step forward/backward, speed slider).
+  - "Run" triggers the safe notification modal: *"Code execution is coming soon. Live code execution is not enabled in the first free release. The Run/Submit interface is present, but real code execution infrastructure is planned for a future release."*
+  - No synthetic XP, streak updates, or fake test case passes occur on unavailable run.
+  - "Submit" requires authentication (returns `401 Unauthorized` for unauthenticated requests).
+- [ ] **Structured Problem-Solving**:
+  - Thinking Phase modal opens on demand and captures constraints and complexity analysis.
+  - Reflection Phase modal saves post-solution notes locally.
+- [ ] **Algorithm Visualizer**:
+  - `/visualizer` opens playback controls (play, pause, step forward/backward, speed control).
 - [ ] **AI Mentor**:
   - `/mentor` accepts prompts and provides grounded algorithmic hints with offline fallback if Gemini API key is unset.
 - [ ] **Mock Interview**:
@@ -36,8 +36,8 @@ Use this operational checklist before publicly announcing DSA Magna across socia
 - [ ] **Memory Command Center**:
   - `/revision` loads SM-2 review queue and retention metrics without throwing runtime errors.
 - [ ] **Settings & Themes**:
-  - Switching between all 12 themes changes CSS custom properties immediately.
-  - Light/Dark mode toggles correctly and persists in `localStorage`.
+  - Switching between Dark and Light modes applies theme updates immediately.
+  - Selecting any of the 5 accent colors (Emerald, Ocean Blue, Royal Purple, Golden, Rose Pink) persists in `localStorage`.
 
 ---
 

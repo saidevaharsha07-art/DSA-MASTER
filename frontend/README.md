@@ -6,11 +6,11 @@ This directory houses the client-side user interface, design system components, 
 
 ```text
 frontend/
-├── components/     # Reusable UI widgets and application shells
-│   ├── ai/         # AI mentor visualizer and oracle cards
-│   ├── analytics/  # Visual activity graphs and calendar heatmaps
+├── components/     # UI widgets and application surfaces
+│   ├── ai/         # AI mentor visualizer and advice cards
+│   ├── analytics/  # Activity statistics and calendar heatmaps
 │   ├── homepage/   # Landing and hero components
-│   ├── journey/    # Interactive curriculum map and timeline views
+│   ├── journey/    # Interactive curriculum map and band views
 │   ├── layout/     # AppShell, headers, sidebar navigation, and drawers
 │   ├── practice/   # Monaco editor IDE, problem panels, and console
 │   ├── settings/   # Profile, goals, integrations, and preferences
@@ -24,6 +24,6 @@ frontend/
 ```
 
 ## Architectural Guidelines
-1. **Server/Client Separation**: All interactive UI components declare `'use client'` at the top.
-2. **Next.js Routing**: Page entrypoints and layouts reside under `app/` at root, importing components from `@frontend/components` or `@/components`.
-3. **Theming**: Dark/Light mode is enforced via CSS variables defined in `app/globals.css` and managed dynamically via `SettingsContext` and `data-theme`.
+1. **Server/Client Separation**: Interactive UI components declare `'use client'` at the top.
+2. **Next.js Routing**: Page entrypoints and layouts reside under `app/` at repository root, importing components from `@frontend/components` or `@/components`.
+3. **Theming**: Dark and Light modes are styled via CSS variables defined in `app/globals.css` and managed dynamically via `SettingsContext` and `data-theme`.

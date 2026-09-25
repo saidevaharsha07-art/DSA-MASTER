@@ -1,6 +1,12 @@
 # DSA Magna — Database Architecture
 
-This directory contains the database schema, migration tracking, type definitions, and documentation for the DSA Magna platform.
+This directory contains the database documentation, migration baselines, and TypeScript type contracts for the DSA Magna platform.
+
+## Canonical Database Source of Truth
+
+> **Important**: The operational source of truth for the database schema is **`supabase/schema.sql`** located at the repository root. This is the exact schema executed by the Supabase CLI (`supabase db reset`, `supabase db push`) and applied in the live Supabase project.
+>
+> The file **`database/schema/schema.sql`** is an architectural documentation mirror and reference copy maintained for data engineering clarity.
 
 ## Directory Structure
 
@@ -8,17 +14,16 @@ This directory contains the database schema, migration tracking, type definition
 database/
 ├── docs/           # Database schema, entity relationships, and RLS documentation
 │   └── SCHEMA.md
-├── migrations/     # Versioned SQL migration scripts
+├── migrations/     # Versioned SQL migration baselines
 │   └── 001_initial_schema.sql
-├── schema/         # Canonical PostgreSQL schema definition
+├── schema/         # Architectural reference mirror of the schema
 │   └── schema.sql
 ├── seeds/          # Seed data and dataset initialization guidelines
 │   └── README.md
-├── types/          # TypeScript definitions for database entities
+├── types/          # TypeScript definitions matching database entities
 │   └── index.ts
 └── README.md
 ```
 
-## Supabase CLI Compatibility
-The root `supabase/schema.sql` file is retained to preserve 100% compatibility with native Supabase CLI commands (`supabase db reset`, `supabase db push`).
-The `database/schema/schema.sql` file provides the architectural reference and schema definition.
+## Security & Row Level Security (RLS)
+All client-facing tables enforce strict PostgreSQL Row-Level Security policies ensuring that authenticated users can only read, insert, and update rows where `auth.uid() = user_id`.

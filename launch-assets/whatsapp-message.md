@@ -1,25 +1,21 @@
-# WhatsApp / Telegram / Discord Community Broadcast Message
+# WhatsApp / Community Broadcast Message
 
-**Tone**: Concise, authentic, peer-to-peer developer share.
+Hey guys! 👋
 
----
+I built a free DSA practice platform called **DSA Magna** to help with technical interview prep, and I just deployed the first release:
 
-### Message Copy
+🔗 Live: https://dsa-master-7boq.vercel.app  
+📦 GitHub: https://github.com/saidevaharsha07-art/DSA-MASTER
 
-Hey everyone! 👋
+What it includes:
+- 4,000 problems structured across 25 topics and 5 curriculum bands
+- A "Thinking Phase" tool to break down constraints and complexity before writing code
+- Built-in spaced repetition (SM-2) to help remember patterns
+- Step-by-step algorithm visualizer
+- AI mentor hints and mock interview simulator
+- Dark and Light modes with 5 accent colors
+- Works offline-first (no sign-up required to use)
 
-I just published **DSA Magna** — a completely free, cinematic platform designed for mastering Data Structures & Algorithms and technical interview prep:
+(Quick note: Live code execution is not enabled in the first free release. The Run/Submit interface is present, but real code execution infrastructure is planned for a future release.)
 
-🔗 **Try it live**: https://dsa-master-7boq.vercel.app  
-📦 **GitHub**: https://github.com/saidevaharsha07-art/DSA-MASTER
-
-A few things that make it unique compared to standard problem lists:
-- 🗺️ **4,000+ Problem Unified Curriculum**: 7 progressive bands across 13 topics (from Two Pointers to Segment Trees & Dynamic Programming).
-- 🧠 **Metacognitive Thinking Phase**: Helps you plan time/space complexity and edge cases before writing code.
-- 🎬 **Algorithm Visualizers**: Interactive animations for sorting, trees, two-pointers, graphs, and binary search.
-- 🔁 **Built-in Spaced Repetition**: SM-2 review scheduler so you never forget solved problems before interviews.
-- 🎙️ **Mock Interview Simulator**: Realistic timed sessions with audio-synthesized question delivery and post-interview reports.
-- 🎨 **12 Themes**: OLED Dark, Cyberpunk, Nord, and full light/dark toggle.
-- ⚡ **Offline-first**: No login needed to start solving; instant state persistence.
-
-Would love to get your thoughts, bug reports, and feedback! Check it out and let me know what you think. 🚀
+Would love to get your feedback or bug reports if you try it out! 🚀

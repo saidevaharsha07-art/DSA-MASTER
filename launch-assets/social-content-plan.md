@@ -1,6 +1,6 @@
 # DSA Magna — 5-Day Launch Social Content Sequence
 
-A structured 5-post content roadmap designed to maximize initial developer interest, showcase core product features, and drive sustained engagement.
+A structured 5-post content schedule designed to introduce the platform, showcase key features, and gather early feedback.
 
 ---
 
@@ -8,50 +8,51 @@ A structured 5-post content roadmap designed to maximize initial developer inter
 
 | Day | Campaign Theme | Core Feature Focus | Primary Format | CTA Target |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 1** | **The Launch** | Sovereign Platform Overview & 4,000+ Curriculum | Long-form Post + Landing Page Carousel | Live Demo Link |
-| **Day 2** | **Cognitive Engineering** | Thinking Phase & Reflection Phase | Video / GIF Demo of Metacognition Modal | Try Thinking Phase |
-| **Day 3** | **Beating the Forgetting Curve** | SM-2 Spaced Repetition Memory Command Center | Infographic / Screenshot Comparison | Setup Revision Queue |
-| **Day 4** | **Under Pressure** | Mock Interview Simulator with Audio Synthesis | Audio-enabled Video Snippet | Try a Mock Interview |
-| **Day 5** | **The Vision & Open Source** | Offline-First Architecture, Themes & Community | Architecture Diagram & GitHub Link | Star on GitHub |
+| **Day 1** | **The Launch** | Platform Overview & 4,000 Problem Curriculum | Long-form Post + Dashboard Screenshot | Live Demo Link |
+| **Day 2** | **Structured Thinking** | Thinking Phase & Edge Case Planning | Short Video / GIF of Thinking Modal | Try Practice IDE |
+| **Day 3** | **Memory Retention** | SM-2 Spaced Repetition Review Queue | Screenshot of Revision Queue & Intervals | Setup Revision Queue |
+| **Day 4** | **Interview Practice** | Mock Interview Simulator with Audio Synthesis | Audio-enabled Video Snippet | Try a Mock Interview |
+| **Day 5** | **Architecture & Code** | Offline-First Design & Open Source Tech Stack | Code/Architecture Snippet & GitHub Link | Star on GitHub |
 
 ---
 
 ## 📝 Day-by-Day Post Blueprints
 
-### Day 1: The Launch — Unifying 4,000+ Problems
-- **Hook**: "Why do 90% of engineers feel unprepared for technical interviews even after solving hundreds of problems?"
-- **Narrative**: The fragmentation problem. Jumping between spreadsheets, random YouTube solutions, and disjointed platforms. Announcing DSA Magna as a single sovereign operating system.
-- **Key Visuals**: Cinematic dark-mode landing page, vertical kingdom map, and sleek command center.
-- **Call to Action**: Visit [https://dsa-master-7boq.vercel.app](https://dsa-master-7boq.vercel.app).
+### Day 1: The Launch — 4,000 Problems Across 25 Topics
+- **Hook**: "Why do so many of us feel unprepared for coding interviews even after grinding hundreds of problems?"
+- **Narrative**: It's easy to jump between random problem lists without a clear learning structure. Introducing DSA Magna — a structured curriculum of 4,000 problems organized across 25 core learning areas and 5 curriculum bands.
+- **Key Visuals**: Dark-mode dashboard and journey curriculum map.
+- **Note on Code Execution**: Mention clearly that live code execution is coming in a future release, but learners can write solutions, plan complexity, and track progress right now.
+- **Call to Action**: Try it at [https://dsa-master-7boq.vercel.app](https://dsa-master-7boq.vercel.app).
 
 ---
 
-### Day 2: Cognitive Engineering — Thinking Before Coding
-- **Hook**: "Writing code before formulating your approach is the #1 interview rejection reason."
-- **Narrative**: Introduce the *Thinking Phase*. Walk through how DSA Magna guides the engineer through input constraints, edge cases, brute-force intuition, and optimal complexity commitment before opening the Monaco Editor.
-- **Key Visuals**: Screen capture showing the Thinking Phase modal stepping through constraints to code transition.
-- **Call to Action**: Try solving an array problem using the Thinking Phase modal.
+### Day 2: Thinking Before Coding — The Thinking Phase
+- **Hook**: "Jumping straight into code without clarifying constraints is the fastest way to get stuck in an interview."
+- **Narrative**: Walk through the *Thinking Phase* modal. Explain how taking 3 minutes to deconstruct constraints, write down edge cases, and commit to a time/space complexity target leads to cleaner code.
+- **Key Visuals**: Screenshot/GIF of the Thinking Phase modal stepping through constraints to the Monaco Editor.
+- **Call to Action**: Try solving a problem using the Thinking Phase modal.
 
 ---
 
 ### Day 3: Beating the Forgetting Curve — Spaced Repetition
-- **Hook**: "Ever solved a hard dynamic programming problem only to draw a blank on the exact same pattern 3 weeks later?"
-- **Narrative**: Human memory decays along the Ebbinghaus curve. DSA Magna implements the SuperMemo SM-2 algorithm directly into your practice workflow, queuing up problems right before your memory retention slips below 80%.
-- **Key Visuals**: Screenshot of the Memory Command Center, retention curves, and scheduled revision calendar.
-- **Call to Action**: Queue your first revision topic at [https://dsa-master-7boq.vercel.app/revision](https://dsa-master-7boq.vercel.app/revision).
+- **Hook**: "Ever solved a problem only to completely forget how you did it a month later?"
+- **Narrative**: Human memory naturally fades over time. DSA Magna integrates the SuperMemo SM-2 algorithm directly into the practice workflow, queuing up problems for review right before the pattern slips from memory.
+- **Key Visuals**: Screenshot of the Revision Queue, retention metrics, and scheduled review calendar.
+- **Call to Action**: Check out the revision system at [https://dsa-master-7boq.vercel.app/revision](https://dsa-master-7boq.vercel.app/revision).
 
 ---
 
-### Day 4: Under Pressure — The AI Mock Interview Simulator
-- **Hook**: "Solving problems in your pajamas with music playing is nothing like an actual technical interview."
-- **Narrative**: Highlighting the behavioral and technical interview simulator. Synthesized voice prompts questions, enforces realistic time constraints, and grades responses across communication, algorithmic correctness, and complexity analysis.
-- **Key Visuals**: Video with sound showing the interviewer delivering a prompt and the post-interview scorecard.
-- **Call to Action**: Run a 20-minute mock session at [https://dsa-master-7boq.vercel.app/interview](https://dsa-master-7boq.vercel.app/interview).
+### Day 4: Interview Mode — Timed Simulations
+- **Hook**: "Solving problems casually is completely different from talking through a solution under interview time constraints."
+- **Narrative**: Showcase the mock interview simulator. It delivers voice-synthesized prompts, enforces a countdown timer, and produces an evaluation report on communication, approach, and code structure.
+- **Key Visuals**: Quick video demonstrating an interview prompt being read aloud and the resulting evaluation scorecard.
+- **Call to Action**: Run a mock interview at [https://dsa-master-7boq.vercel.app/interview](https://dsa-master-7boq.vercel.app/interview).
 
 ---
 
-### Day 5: The Architecture — Offline-First, Zero-Friction, Open Source
-- **Hook**: "How we built a production-grade educational platform that runs offline-first with zero mandatory signups."
-- **Narrative**: Behind-the-scenes engineering deep dive. Discussing the Next.js 15 App Router architecture, clean separation of `frontend/`, `backend/`, and `database/`, Supabase cloud sync, and the pluggable Judge0 execution engine.
-- **Key Visuals**: Architecture block diagram and GitHub repository showcase.
-- **Call to Action**: Star and contribute on GitHub at [https://github.com/saidevaharsha07-art/DSA-MASTER](https://github.com/saidevaharsha07-art/DSA-MASTER).
+### Day 5: Under the Hood — Offline-First & Open Source
+- **Hook**: "How we built a full DSA practice app that works offline-first with zero mandatory signups."
+- **Narrative**: Technical overview for other developers. Built with Next.js 15 App Router, TypeScript, Tailwind CSS, Monaco Editor, Supabase, and Google Gemini API. All state is maintained locally in browser storage with one-click Supabase cloud backup when authenticated.
+- **Key Visuals**: Clean repository architecture layout and GitHub repo link.
+- **Call to Action**: Check out the code and contribute on GitHub at [https://github.com/saidevaharsha07-art/DSA-MASTER](https://github.com/saidevaharsha07-art/DSA-MASTER).
