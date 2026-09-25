@@ -117,7 +117,7 @@ export async function POST(req: NextRequest) {
         beatsMemoryPct: 0,
         testcaseDetails: [],
         errorLog: 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.',
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: 'unavailable',
         timestamp: new Date().toISOString(),
       },
       { status: 200 }

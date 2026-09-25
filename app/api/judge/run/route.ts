@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
         totalTestcases: 0,
         passedTestcases: 0,
         testcaseResults: [],
-        providerUsed: 'DSA Sandboxed Engine',
+        providerUsed: 'unavailable',
       },
       { status: 200 }
     );

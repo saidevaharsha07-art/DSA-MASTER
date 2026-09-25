@@ -82,6 +82,7 @@ test.describe('DSA Magna — Free First Release ($0 Hosting & Unprovisioned Judg
       expect(runJson.status).toBe('runtime_error');
       expect(runJson.stderr).toContain('coming soon');
       expect(runJson.passedTestcases).toBe(0);
+      expect(runJson.providerUsed).toBe('unavailable');
 
       // API route /api/judge/submit returns HTTP 200 with graceful coming soon payload
       const submitRes = await request.post('/api/judge/submit', {
@@ -98,6 +99,7 @@ test.describe('DSA Magna — Free First Release ($0 Hosting & Unprovisioned Judg
       expect(submitJson.errorLog).toContain('coming soon');
       expect(submitJson.testcasesPassed).toBe(0);
       expect(submitJson.xpEarned).toBe(0); // Never fakes XP
+      expect(submitJson.providerUsed).toBe('unavailable');
     } finally {
       process.env.NEXT_PUBLIC_ENABLE_LOCAL_RUNNER = originalNextPublic;
       process.env.ENABLE_LOCAL_RUNNER = originalEnable;

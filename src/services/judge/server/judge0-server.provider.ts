@@ -90,7 +90,7 @@ export class Judge0ServerProvider implements IServerJudgeProvider {
         runtimeMs: 0,
         memoryMb: 0,
         exitCode: 1,
-        providerUsed: this.name,
+        providerUsed: 'unavailable',
         error: 'Code execution is coming soon.',
       };
     }
@@ -228,7 +228,7 @@ export class Judge0ServerProvider implements IServerJudgeProvider {
         runtimeMs: 0,
         memoryMb: 0,
         exitCode: 1,
-        providerUsed: this.name,
+        providerUsed: 'unavailable',
         error: 'Network connectivity failure to judge service',
       };
     }

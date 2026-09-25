@@ -237,6 +237,7 @@ test.describe('DSA Magna — Production Isolated Judge & Safety Verification', (
 
     expect(runResult.status).toBe('runtime_error');
     expect(runResult.stderr).toBe('Code execution is temporarily unavailable. Please try again shortly.');
+    expect(runResult.providerUsed).toBe('unavailable');
 
     const submitResult = await judgeEvaluator.evaluateSubmit({
       problemId: 'two-sum',
@@ -247,6 +248,7 @@ test.describe('DSA Magna — Production Isolated Judge & Safety Verification', (
 
     expect(submitResult.verdict).toBe('Runtime Error');
     expect(submitResult.errorLog).toBe('Code execution is temporarily unavailable. Please try again shortly.');
+    expect(submitResult.providerUsed).toBe('unavailable');
   });
 
   // ── TEST I: Provider malformed response → safely handled ──

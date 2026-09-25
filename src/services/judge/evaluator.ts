@@ -52,7 +52,7 @@ export class JudgeEvaluator {
         runtimeMs: 0,
         memoryMb: 0,
         exitCode: 1,
-        providerUsed: provider.name,
+        providerUsed: 'unavailable',
         totalTestcases: testcasesToRun.length,
         passedTestcases: 0,
         testcaseResults: [],
@@ -168,7 +168,7 @@ export class JudgeEvaluator {
         beatsMemoryPct: 0,
         testcaseDetails: [],
         errorLog: execResult.stderr || 'Code execution is coming soon.\nExecution unavailable in the first release.\nLive code execution is coming soon. You can still explore problems, build solutions, and use the full DSA Magna learning experience.',
-        providerUsed: provider.name,
+        providerUsed: 'unavailable',
         timestamp,
       };
     }
