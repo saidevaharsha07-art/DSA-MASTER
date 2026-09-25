@@ -49,7 +49,7 @@ export function CurriculumBandSection({ band, areas }: CurriculumBandSectionProp
         <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
           <div className="flex items-center gap-2">
             <span className="font-mono text-xs font-bold text-[var(--accent)] tracking-wider">
-              {band.order} //
+              {band.order} {'//'}
             </span>
             <h2 id={`band-heading-${band.id}`} className="text-lg font-bold tracking-tight text-[var(--text-primary)]">
               {band.name}

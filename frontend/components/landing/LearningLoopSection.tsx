@@ -122,7 +122,7 @@ export function LearningLoopSection() {
                     color: item.accent,
                   }}
                 >
-                  {item.step} //
+                  {item.step} {'//'}
                 </span>
                 <div
                   style={{

@@ -1,0 +1,20 @@
+.roadsOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.roadPath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawRoad 3s ease-in-out forwards;
+}
+
+@keyframes drawRoad {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

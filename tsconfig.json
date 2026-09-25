@@ -15,6 +15,16 @@
       }
     ],
     "paths": {
+      "@frontend/*": ["./frontend/*"],
+      "@backend/*": ["./backend/*"],
+      "@database/*": ["./database/*"],
+      "@/components/*": ["./frontend/components/*"],
+      "@/hooks/*": ["./frontend/hooks/*"],
+      "@/styles/*": ["./frontend/styles/*"],
+      "@/lib/*": ["./frontend/lib/*", "./src/lib/*"],
+      "@/lib": ["./frontend/lib/utils.ts"],
+      "@/types/*": ["./frontend/types/*"],
+      "@/types": ["./frontend/types/index.ts"],
       "@/*": ["./*"]
     },
     "allowJs": true,

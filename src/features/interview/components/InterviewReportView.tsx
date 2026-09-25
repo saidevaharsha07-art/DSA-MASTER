@@ -395,7 +395,7 @@ export function InterviewReportView({
               </h2>
             </div>
             <p className={`text-xs mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-              Reinforce patterns from today's simulation with recommended problems from our 4,000 problem curriculum.
+              Reinforce patterns from today&apos;s simulation with recommended problems from our 4,000 problem curriculum.
             </p>
           </div>
 

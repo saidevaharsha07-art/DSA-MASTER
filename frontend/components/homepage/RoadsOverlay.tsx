@@ -1,7 +1,7 @@
 // components/homepage/RoadsOverlay.tsx
 import React from "react";
-import { roadPath } from "../../src/design/worldData";
-import styles from "../../styles/homepage.module.css";
+import { roadPath } from "@/src/design/worldData";
+import styles from "@/frontend/styles/homepage.module.css";
 
 export default function RoadsOverlay() {
   // The road is drawn as an SVG path that we animate using CSS keyframes.

@@ -1,10 +1,10 @@
 import { test, expect } from 'playwright/test';
-import { isLocalExecutionAllowed, sandboxRunner } from '../../src/services/judge/sandbox/runner';
-import { Judge0ServerProvider } from '../../src/services/judge/server/judge0-server.provider';
-import { LocalServerProvider } from '../../src/services/judge/server/local-server.provider';
-import { MockServerProvider } from '../../src/services/judge/server/mock-server.provider';
-import { getServerJudgeProvider, setTestJudgeProvider } from '../../src/services/judge/server/provider-factory';
-import { judgeEvaluator } from '../../src/services/judge/evaluator';
+import { isLocalExecutionAllowed, sandboxRunner } from '../../backend/judge/sandbox/runner';
+import { Judge0ServerProvider } from '../../backend/judge/server/judge0-server.provider';
+import { LocalServerProvider } from '../../backend/judge/server/local-server.provider';
+import { MockServerProvider } from '../../backend/judge/server/mock-server.provider';
+import { getServerJudgeProvider, setTestJudgeProvider } from '../../backend/judge/server/provider-factory';
+import { judgeEvaluator } from '../../backend/judge/evaluator';
 
 test.describe('DSA Magna — Production Isolated Judge & Safety Verification', () => {
 

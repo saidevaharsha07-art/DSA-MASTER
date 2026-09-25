@@ -1,6 +1,6 @@
 import { test, expect } from 'playwright/test';
-import { isLocalExecutionAllowed, sandboxRunner } from '../../src/services/judge/sandbox/runner';
-import { getServerJudgeProvider } from '../../src/services/judge/server/provider-factory';
+import { isLocalExecutionAllowed, sandboxRunner } from '../../backend/judge/sandbox/runner';
+import { getServerJudgeProvider } from '../../backend/judge/server/provider-factory';
 
 test.describe('DSA Magna — Free First Release ($0 Hosting & Unprovisioned Judge Guard)', () => {
 

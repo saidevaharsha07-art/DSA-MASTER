@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { judgeEvaluator } from '@/src/services/judge/evaluator';
-import { SUPPORTED_LANGUAGES } from '@/src/services/judge/languages';
-import { LanguageId } from '@/src/services/judge/types';
+import { judgeEvaluator } from '@backend/judge/evaluator';
+import { SUPPORTED_LANGUAGES } from '@backend/judge/languages';
+import { LanguageId } from '@backend/judge/types';
 
 const MAX_PAYLOAD_BYTES = 64 * 1024; // 64KB max request payload
 const MAX_CODE_CHARS = 50 * 1000;    // 50,000 chars code limit
