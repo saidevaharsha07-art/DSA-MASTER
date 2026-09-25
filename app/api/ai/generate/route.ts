@@ -10,6 +10,14 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { prompt, context, provider = 'gemini' } = body || {};
 
+    if (!prompt || typeof prompt !== 'string' || prompt.trim().length === 0) {
+      return NextResponse.json({ success: false, error: 'Prompt is required and must be non-empty.' }, { status: 400 });
+    }
+
+    if (prompt.length > 5000) {
+      return NextResponse.json({ success: false, error: 'Prompt payload exceeds maximum allowed size (5000 characters).' }, { status: 400 });
+    }
+
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (provider === 'gemini') {

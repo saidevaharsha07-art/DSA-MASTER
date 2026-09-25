@@ -4,10 +4,62 @@ import { SettingsProvider } from "@/src/context/SettingsContext";
 import { ToastProvider } from "@/src/context/ToastContext";
 import { AuthProvider } from "@/src/lib/auth/context/AuthContext";
 
-export const metadata = {
-  title: "DSA Magna — Learn • Practice • Track • Master",
-  description: "Master Data Structures & Algorithms with DSA Magna",
+import type { Metadata } from "next";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.NEXT_PUBLIC_APP_URL ||
+  "https://dsa-magna.vercel.app";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "DSA Magna — Learn • Practice • Track • Master",
+    template: "%s | DSA Magna",
+  },
+  description:
+    "Master Data Structures & Algorithms one pattern at a time. 4,000+ curated problems, adaptive recommendations, spaced repetition, and real-time interview simulations.",
+  applicationName: "DSA Magna",
+  authors: [{ name: "DSA Magna Engineering Team" }],
+  keywords: [
+    "Data Structures",
+    "Algorithms",
+    "DSA",
+    "LeetCode",
+    "Codeforces",
+    "CodeChef",
+    "GeeksForGeeks",
+    "Coding Interview",
+    "Spaced Repetition",
+  ],
   manifest: "/manifest.json",
+  icons: {
+    icon: "/brand/dsa-magna-logo.png",
+    apple: "/brand/icon-192.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "DSA Magna",
+    title: "DSA Magna — Learn • Practice • Track • Master",
+    description:
+      "Master Data Structures & Algorithms one pattern at a time. Curated curriculum across LeetCode, Codeforces, CodeChef, and GeeksForGeeks.",
+    images: [
+      {
+        url: "/brand/dsa-magna-logo.png",
+        width: 512,
+        height: 512,
+        alt: "DSA Magna Platform Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "DSA Magna — Learn • Practice • Track • Master",
+    description: "Master Data Structures & Algorithms with DSA Magna.",
+    images: ["/brand/dsa-magna-logo.png"],
+  },
 };
 
 const themeScript = `

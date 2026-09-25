@@ -15,7 +15,7 @@
 
 import { chromium, Browser, BrowserContext, Page, Request, Response } from 'playwright';
 
-const PROD_URL = 'https://dsa-master-7boq.vercel.app';
+const PROD_URL = process.env.PROD_URL || process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
 
 interface QARecord {
   category: string;

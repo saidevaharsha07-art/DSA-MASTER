@@ -14,6 +14,13 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'userId parameter is required' }, { status: 400 });
     }
 
+    const authHeader = req.headers.get('authorization');
+
+    // Security Check: Enforce authentication even when identifying header is absent
+    if (!headerUserId && !authHeader) {
+      return NextResponse.json({ error: 'Unauthorized: Authentication credentials required' }, { status: 401 });
+    }
+
     // Security Check: Cross-user read authorization
     if (headerUserId && headerUserId !== userId && !headerUserId.startsWith('admin')) {
       return NextResponse.json({ error: 'Unauthorized: Cross-user access denied' }, { status: 403 });
@@ -55,6 +62,11 @@ export async function POST(req: NextRequest) {
 
     if (!domain || typeof domain !== 'string') {
       return NextResponse.json({ error: 'domain is required' }, { status: 400 });
+    }
+
+    // Security Authorization Check: Enforce authentication even when identifying header is absent
+    if (!headerUserId && !authHeader) {
+      return NextResponse.json({ error: 'Unauthorized: Authentication credentials required for mutation' }, { status: 401 });
     }
 
     // Security Authorization Check: Prevent user spoofing between headerUserId and body userId
