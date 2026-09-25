@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { radius, colors } from '@/src/design';
 import { Badge } from '@/src/components/ui/Badge';
 
@@ -38,10 +39,38 @@ export function LandingFooter() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '10px',
                 textDecoration: 'none',
               }}
             >
+              <div
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: radius.sm,
+                  background: '#000000',
+                  border: '1px solid var(--border-strong)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  overflow: 'hidden',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.2)',
+                }}
+              >
+                <Image
+                  src="/brand/dsa-magna-logo.png"
+                  alt=""
+                  aria-hidden="true"
+                  width={22}
+                  height={22}
+                  style={{
+                    width: '22px',
+                    height: '22px',
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
               <span
                 style={{
                   fontSize: '15px',

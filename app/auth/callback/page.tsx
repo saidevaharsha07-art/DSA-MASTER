@@ -145,8 +145,16 @@ function AuthCallbackContent() {
 export default function AuthCallbackPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen w-full bg-[#0B0E14] text-slate-100 flex items-center justify-center p-4">
-        <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4" />
+      <div className="min-h-screen w-full bg-[#0B0E14] text-slate-100 flex flex-col items-center justify-center p-4">
+        <div className="w-12 h-12 rounded-xl bg-black border border-slate-700 flex items-center justify-center overflow-hidden mb-4 shadow-xl">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/dsa-magna-logo.png"
+            alt="DSA Magna"
+            className="w-10 h-10 object-contain"
+          />
+        </div>
+        <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin mb-3" />
         <p className="text-xs text-slate-400 font-mono tracking-wider uppercase animate-pulse">Connecting to DSA Magna...</p>
       </div>
     }>

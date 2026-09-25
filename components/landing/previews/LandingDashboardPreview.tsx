@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Flame, Star, Play, Send, ChevronDown } from 'lucide-react';
 import { useSettings } from '@/src/context/SettingsContext';
 import { LANDING_PREVIEW_DATA } from '../preview-constants';
@@ -28,7 +29,17 @@ export function LandingDashboardPreview() {
             <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
           </div>
           <div className="ml-3 flex items-center gap-1.5 text-[11px] font-bold tracking-wider">
-            <span className="text-sky-500">▲</span> DSA Magna
+            <div className="w-4 h-4 rounded bg-black border border-slate-700 flex items-center justify-center overflow-hidden shrink-0">
+              <Image
+                src="/brand/dsa-magna-logo.png"
+                alt=""
+                aria-hidden="true"
+                width={14}
+                height={14}
+                style={{ objectFit: 'contain', width: '14px', height: '14px' }}
+              />
+            </div>
+            <span>DSA Magna</span>
           </div>
           <span className={`ml-2 hidden sm:inline-flex items-center rounded px-1.5 py-0.5 text-[9px] font-medium border ${
             isLight ? 'bg-slate-200/80 text-slate-600 border-slate-300' : 'bg-slate-800/80 text-slate-400 border-slate-700/50'

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useAuth } from '../hooks/useAuth';
 import { Eye, EyeOff, CheckCircle2, AlertCircle } from 'lucide-react';
 
@@ -203,23 +204,16 @@ export function AuthForm({ initialMode = 'signin' }: AuthFormProps) {
       {/* Brand Header */}
       <div className="mb-6 sm:mb-8 flex flex-col items-center">
         <Link href="/" className="flex flex-col items-center group">
-          <div className="w-12 h-12 rounded-xl p-[2px] bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 shadow-md shadow-sky-500/20 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <div className="w-full h-full rounded-[10px] bg-[var(--surface)] flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <path
-                  d="M12 2L2 22H22L12 2Z"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-[var(--accent-primary)]"
-                />
-                <path
-                  d="M12 9L7 19H17L12 9Z"
-                  fill="currentColor"
-                  className="text-[var(--accent-primary)] opacity-80"
-                />
-              </svg>
+          <div className="w-12 h-12 rounded-xl p-[2px] bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 shadow-md shadow-sky-500/20 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform overflow-hidden">
+            <div className="w-full h-full rounded-[10px] bg-[#000000] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/brand/dsa-magna-logo.png"
+                alt="DSA Magna"
+                width={40}
+                height={40}
+                priority
+                style={{ objectFit: 'contain', width: '40px', height: '40px' }}
+              />
             </div>
           </div>
           <span className="text-xl sm:text-2xl font-black tracking-tight text-[var(--text-primary)]">

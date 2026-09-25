@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useAuth } from '@/src/lib/auth/hooks/useAuth';
 import { useSettings } from '@/src/context/SettingsContext';
 import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
@@ -71,25 +72,29 @@ export function LandingNavbar() {
               width: '32px',
               height: '32px',
               borderRadius: radius.md,
-              background: 'var(--accent-subtle)',
+              background: '#000000',
               border: '1px solid var(--border-strong)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
+              overflow: 'hidden',
+              boxShadow: '0 1px 3px rgba(0, 0, 0, 0.25)',
             }}
           >
-            <svg viewBox="0 0 24 24" fill="none" style={{ width: '18px', height: '18px' }}>
-              <path
-                d="M12 2L2 22H22L12 2Z"
-                stroke="var(--accent)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="var(--accent-subtle)"
-              />
-              <path d="M12 9L7 19H17L12 9Z" fill="var(--accent)" />
-            </svg>
+            <Image
+              src="/brand/dsa-magna-logo.png"
+              alt=""
+              aria-hidden="true"
+              width={28}
+              height={28}
+              priority
+              style={{
+                width: '28px',
+                height: '28px',
+                objectFit: 'contain',
+              }}
+            />
           </div>
           <span
             style={{

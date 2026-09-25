@@ -15,6 +15,7 @@ import {
   Palette,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { radius, animations, colors } from "@/src/design";
@@ -157,7 +158,7 @@ export function Navbar({
       }}
     >
       {/* ── ZONE 1 (LEFT): MOBILE MENU & DESKTOP BREADCRUMBS ── */}
-      <div style={{ display: "flex", alignItems: "center", gap: "12px", minWidth: 0 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "12px", minWidth: 0, flexShrink: 0, position: "relative", zIndex: 10 }}>
         <Button
           variant="ghost"
           size="icon"
@@ -171,6 +172,8 @@ export function Navbar({
             height: "32px",
             borderRadius: radius.md,
             color: "var(--text-primary)",
+            position: "relative",
+            zIndex: 10,
           }}
         >
           <Menu size={17} />
@@ -184,11 +187,11 @@ export function Navbar({
 
       {/* ── ZONE 2 (CENTER): BALANCED SEARCH BAR ── */}
       <div
+        className="hidden sm:flex"
         style={{
           flex: "1 1 auto",
           maxWidth: "420px",
           minWidth: "140px",
-          display: "flex",
           alignItems: "center",
           justifyContent: "center",
           margin: "0 auto",

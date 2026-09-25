@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Sparkles,
   ArrowRight,
@@ -193,8 +194,16 @@ export default function OnboardingPage() {
       <div className="w-full max-w-2xl mb-6 sm:mb-8">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-[var(--accent-primary)]/15 flex items-center justify-center text-[var(--accent-primary)]">
-              <Sparkles className="w-4 h-4" />
+            <div className="w-7 h-7 rounded-md bg-[#000000] border border-[var(--border)] flex items-center justify-center overflow-hidden shrink-0">
+              <Image
+                src="/brand/dsa-magna-logo.png"
+                alt=""
+                aria-hidden="true"
+                width={22}
+                height={22}
+                priority
+                style={{ objectFit: 'contain', width: '22px', height: '22px' }}
+              />
             </div>
             <span className="text-xs font-mono font-bold tracking-wider uppercase text-[var(--text-secondary)]">
               DSA Magna Personalized Setup

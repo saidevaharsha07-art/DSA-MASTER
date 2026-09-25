@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Search, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { useSettings } from '@/src/context/SettingsContext';
 import { LANDING_PREVIEW_DATA } from '../preview-constants';
@@ -20,8 +21,18 @@ export function LandingPracticePreview() {
         isLight ? 'border-slate-200' : 'border-slate-800/80'
       }`}>
         <div className="flex items-center gap-2">
-          <div className={`text-xs font-bold tracking-wider flex items-center gap-1 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-            <span className="text-sky-500">▲</span> DSA Magna
+          <div className={`text-xs font-bold tracking-wider flex items-center gap-1.5 ${isLight ? 'text-slate-900' : 'text-white'}`}>
+            <div className="w-4 h-4 rounded bg-black border border-slate-700 flex items-center justify-center overflow-hidden shrink-0">
+              <Image
+                src="/brand/dsa-magna-logo.png"
+                alt=""
+                aria-hidden="true"
+                width={14}
+                height={14}
+                style={{ objectFit: 'contain', width: '14px', height: '14px' }}
+              />
+            </div>
+            <span>DSA Magna</span>
           </div>
           <span className="text-xs text-slate-400">|</span>
           <span className={`text-xs font-semibold ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>Practice Arena</span>

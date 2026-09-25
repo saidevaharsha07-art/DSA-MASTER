@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { AppBackendProvider, useAppBackend } from '@/src/components/providers/AppBackendProvider';
 import { AuthProvider } from '@/src/lib/auth/context/AuthContext';
@@ -30,8 +31,17 @@ function ProductionNavigationHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-6">
-            <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-wider bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
-              <span>🎯</span> DSA Magna
+            <Link href="/dashboard" className="flex items-center gap-2.5 text-lg font-extrabold tracking-wider bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+              <div className="w-7 h-7 rounded-md bg-black border border-slate-700 flex items-center justify-center overflow-hidden shrink-0">
+                <Image
+                  src="/brand/dsa-magna-logo.png"
+                  alt="DSA Magna"
+                  width={24}
+                  height={24}
+                  style={{ objectFit: 'contain', width: '24px', height: '24px' }}
+                />
+              </div>
+              <span>DSA Magna</span>
             </Link>
             <nav className="hidden md:flex items-center gap-1">
               {navItems.map((item) => {

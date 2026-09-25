@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Timer, Play, Pause, CheckCircle2, XCircle, ChevronRight } from 'lucide-react';
 import { InterviewArenaSession, InterviewArenaProblemAttempt } from '../types/interview.types';
 
@@ -50,6 +51,16 @@ export function InterviewWorkspaceHeader({
       {/* Left: Quiet Brand & Round Meta */}
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
+          <div className="w-5 h-5 rounded bg-black border border-slate-700/80 flex items-center justify-center overflow-hidden shrink-0">
+            <Image
+              src="/brand/dsa-magna-logo.png"
+              alt=""
+              aria-hidden="true"
+              width={16}
+              height={16}
+              style={{ objectFit: 'contain', width: '16px', height: '16px' }}
+            />
+          </div>
           <span
             className={`w-2 h-2 rounded-full ${
               isPaused ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'
